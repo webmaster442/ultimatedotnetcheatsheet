@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="Graphs.Collections.IEnumerable">
+    <Position X="10" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IEnumerable&lt;T&gt;">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.ICollection&lt;T&gt;">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAQAAAABAQAAAAAAAAAAAAAAABQIAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IReadOnlyCollection&lt;T&gt;">
+    <Position X="12" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IList&lt;T&gt;">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAEAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IReadOnlyList&lt;T&gt;">
+    <Position X="15" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IDictionary&lt;TKey, TValue&gt;">
+    <Position X="8" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAAAAAAEAAAACAAABAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IReadOnlyDictionary&lt;TKey, TValue&gt;">
+    <Position X="14.75" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.ISet&lt;T&gt;">
+    <Position X="10.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAABBAACBAQABAAAAAAAAAAAAAACAAAgAAAAAAAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Graphs.Collections.IReadOnlySet&lt;T&gt;">
+    <Position X="12.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAABAAACBAAABAAAAAAAAAAAAAAAAAAgAAAAAQAAA=</HashCode>
+      <FileName>Collections\Collections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
