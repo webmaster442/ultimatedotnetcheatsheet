@@ -10,6 +10,12 @@ table {
     white-space: normal;
 }
 
+nav {
+	max-width: 1200px;
+    margin: 0px auto;
+	border-bottom: 1px solid black;
+}
+
 @media print {
     nav {
         display: none;
