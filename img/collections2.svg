@@ -1,0 +1,153 @@
+<svg version="1.1" baseProfile="full" width="971.0" height="220.0" viewbox="0 0 971 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	[IDisposable|
+		void Dispose()] &lt;:- [IEnumerator]
+		
+		[IEnumerator|
+		object Current { get }
+		bool MoveNext()
+		void Reset()]
+		
+		[IEnumerator&lt;out T&gt;|
+		IEnumerator&lt;T&gt; GetEnumerator()]
+		
+		[IEnumerator] &lt;:- [IEnumerator&lt;out T&gt;]
+		
+		[IEnumerator] &lt;--[IEnumerable]
+		[IEnumerator&lt;out T&gt;] &lt;-- [IEnumerable&lt;T&gt;]
+		
+		[IEnumerable|
+		IEnumerator GetEnumerator()] &lt;:- [IEnumerable&lt;T&gt;]
+		
+		[IEnumerable&lt;T&gt;|
+		IEnumerator&lt;T&gt; GetEnumerator()]
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="220.0" width="971.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M131.3 82.0 L138 82 L158 82 L158.0 82.0 " fill="none"></path>
+					<path d="M131.3 76.7 L131.3 82.0 L131.3 87.3 L118.0 82.0 Z"></path>
+					<path d="M332.9 35.1 L341 31 L361 31 L361.0 31.0 " fill="none"></path>
+					<path d="M330.5 30.3 L332.9 35.1 L335.3 39.8 L321.0 41.0 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M327.0 125.9 L341 133 L375 133 L375.0 133.0 " fill="none"></path>
+						</g>
+					<path d="M335.3 124.2 L327.0 125.9 L330.5 133.7 L321.0 123.0 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M624.7 31.0 L638 31 L696.2352941176471 51 L696.2 51.0 " fill="none"></path>
+						</g>
+					<path d="M631.3 25.7 L624.7 31.0 L631.3 36.3 L618.0 31.0 Z"></path>
+					<path d="M617.3 133.0 L638 133 L696.2352941176471 113 L696.2 113.0 " fill="none"></path>
+					<path d="M617.3 127.7 L617.3 133.0 L617.3 138.3 L604.0 133.0 Z"></path>
+					<g data-name="IDisposable">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+								<rect x="0.0" y="51.0" height="62.0" width="118.0" data-name="IDisposable"></rect>
+							<path d="M0.0 82.0 L118.0 82.0" fill="none" data-name="IDisposable"></path>
+							</g>
+						<g transform="translate(0, 51)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+									<text x="51.0" y="13.5" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 82)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
+									<text x="0.0" y="13.5" stroke="none" data-name="IDisposable">void Dispose()</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IEnumerator">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator">
+								<rect x="158.0" y="36.0" height="92.0" width="163.0" data-name="IEnumerator"></rect>
+							<path d="M158.0 67.0 L321.0 67.0" fill="none" data-name="IEnumerator"></path>
+							</g>
+						<g transform="translate(158, 36)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator">
+									<text x="73.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerator">IEnumerator</text>
+								
+								</g>
+							</g>
+						<g transform="translate(158, 67)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator">
+									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerator">object Current { get }</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IEnumerator">bool MoveNext()</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IEnumerator">void Reset()</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IEnumerator&lt;out T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
+								<rect x="361.0" y="0.0" height="62.0" width="257.0" data-name="IEnumerator&lt;out T&gt;"></rect>
+							<path d="M361.0 31.0 L618.0 31.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
+							</g>
+						<g transform="translate(361, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;">
+									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;out T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(361, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IEnumerable">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
+								<rect x="375.0" y="102.0" height="62.0" width="229.0" data-name="IEnumerable"></rect>
+							<path d="M375.0 133.0 L604.0 133.0" fill="none" data-name="IEnumerable"></path>
+							</g>
+						<g transform="translate(375, 102)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
+									<text x="106.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
+								
+								</g>
+							</g>
+						<g transform="translate(375, 133)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
+									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator()</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IEnumerable&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;T&gt;">
+								<rect x="658.0" y="51.0" height="62.0" width="257.0" data-name="IEnumerable&lt;T&gt;"></rect>
+							<path d="M658.0 82.0 L915.0 82.0" fill="none" data-name="IEnumerable&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(658, 51)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;T&gt;">
+									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;T&gt;">IEnumerable&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(658, 82)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable&lt;T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

@@ -83,6 +83,10 @@ Globaly means that the tool is installed to the users profile, instead of the cu
 
     A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports intellisense, installing NuGet packages, and referencing local 
     .NET projects and assemblies. Install with: `dotnet tool install -g csharprepl`
+	
+* **IronPython**
+
+	IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily. Install with: `dotnet tool install -g IronPython.Console`
 
 # Project file XML settings
 
@@ -168,6 +172,24 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 * **System.Numerics.Vector3** : Represents a vector with three single-precision floating-point values.
 * **System.Numerics.Vector4** : Represents a vector with four single-precision floating-point values.
 
+# Operator Precedence
+
+1. parentheses: `()`
+2. Postfix Increment and Decrement: `++`, `--`
+3. Prefix Increment, Decrement and Unary: `++`, `--`, `+`, `-`, `!`, `~`
+4. Multiplicative: `*`, `/`, `%`
+5. Additive: `+`, `-`
+6. Shift: `<<`, `>>`, `>>>`
+7. Relational: `<`, `<=`, `>`, `>=`
+8. Equality: `==`, `!=`
+9. Bitwise AND: `&`
+10. Bitwise XOR: `^`
+11. Bitwise OR: `|`
+12. Logical AND: `&&`
+13. Logical OR: `||`
+14. Ternary: `? :`
+15. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+
 # Strings
 
 ## String escape sequences
@@ -252,7 +274,7 @@ To produce this behavior, a custom format string can contain up to three section
 
 ## Standard date and time format strings
 
-| Format specifier |              Desription               |      Example (en-Us culture)      |
+| Format specifier |              Description              |      Example (en-Us culture)      |
 | :--------------: | :-----------------------------------: | :-------------------------------: |
 |       `d`        |          Short date pattern           |             6/15/2009             |
 |       `D`        |           Long date pattern           |       Monday, June 15, 2009       |
@@ -271,7 +293,7 @@ To produce this behavior, a custom format string can contain up to three section
 
 ## Custom date and time format strings
 
-| Format specifier |                             Desription                              |
+| Format specifier |                             Description                             |
 | :--------------: | :-----------------------------------------------------------------: |
 |       `d`        |              The day of the month, from 1 through 31.               |
 |       `dd`       |              The day of the month, from 01 through 31               |
@@ -331,7 +353,13 @@ The need for throwing `NotSupportedException` usally indicates the violation of 
 
 # Collections
 
-![collection interfaces](img/collection-interfaces.png)
+^^^
+![collection interfaces](img/collections2.svg)
+^^^
+
+^^^
+![collection interfaces](img/collections1.svg)
+^^^
 
 |                 Type                 |                                Description                                |                                Is                                |
 | :----------------------------------: | :-----------------------------------------------------------------------: | :--------------------------------------------------------------: |
@@ -343,6 +371,17 @@ The need for throwing `NotSupportedException` usally indicates the violation of 
 | `PriorityQueue<TElement, TPriority>` |       On Dequeue the item with the lowest priority value is removed       |                                --                                |
 |              `Stack<T>`              |      Represents a variable size last-in-first-out (LIFO) collection       |            `ICollection<T>`, `IReadOnlyCollection<T>`            |
 |           `LinkedList<T>`            |                      Represents a doubly linked list                      |            `ICollection<T>`, `IReadOnlyCollection<T>`            |
+
+
+## Concurent Collections
+
+|                Type                 |                               Description                               |                                Is                                 |
+| :---------------------------------: | :---------------------------------------------------------------------: | :---------------------------------------------------------------: |
+|       `BlockingCollection<T>`       | Provides blocking and bounding capabilities for thread-safe collections |                     `IReadOnlyCollection<T>`                      |
+|         `ConcurrentBag<T>`          |        Represents a thread-safe, unordered collection of objects        |    `IReadOnlyCollection<T>`, `IProducerConsumerCollection<T>`     |
+| `ConcurrentDictionary<TKey,TValue>` |         Represents a thread-safe collection of key/value pairs          | `IReadOnlyDictionary<TKey,TValue>`,  ` IDictionary<TKey,TValue> ` |
+|        `ConcurrentQueue<T>`         |      Represents a thread-safe first in-first out (FIFO) collection      |    `IReadOnlyCollection<T>`, `IProducerConsumerCollection<T>`     |
+|        `ConcurrentStack<T>`         |      Represents a thread-safe last in-first out (LIFO) collection       |    `IReadOnlyCollection<T>`, `IProducerConsumerCollection<T>`     |
 
 # LINQ
 

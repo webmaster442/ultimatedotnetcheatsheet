@@ -1,0 +1,358 @@
+<svg version="1.1" baseProfile="full" width="1243.0" height="971.0" viewbox="0 0 1243 971" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	#spacing: 15
+	[IEnumerable|
+		IEnumerator GetEnumerator()] &lt;:- [IEnumerable&lt;T&gt;]
+		
+		[IEnumerable&lt;T&gt;|
+		IEnumerator&lt;T&gt; GetEnumerator()]
+		
+		[IReadOnlyCollection&lt;T&gt;|
+		int Count \{ get \}]
+		
+		[IReadOnlyList&lt;T&gt;|
+		T this\[int index\]]
+		
+		[IReadOnlySet&lt;T&gt;|
+		bool Contains(T item);
+		bool IsProperSubsetOf(IEnumerable&lt;T&gt; other)
+		bool IsProperSupersetOf(IEnumerable&lt;T&gt; other)
+		bool IsSubsetOf(IEnumerable&lt;T&gt; other)
+		bool IsSupersetOf(IEnumerable&lt;T&gt; other)
+		bool Overlaps(IEnumerable&lt;T&gt; other)
+		bool SetEquals(IEnumerable&lt;T&gt; other)]
+		
+		[IReadOnlyDictionary&lt;TKey, TValue&gt;|
+		TValue this\[TKey key\] \{ get \}
+		IEnumerable&lt;TKey&gt; Keys \{ get \}
+		IEnumerable&lt;TValue&gt; Values \{ get \}|
+		bool ContainsKey(TKey key)
+		bool TryGetValue(TKey key, out TValue value)]
+		
+		[ICollection&lt;T&gt;|
+		int Count \{ get \}
+		bool IsReadOnly \{ get \}|
+		void Add(T item)
+		void Clear()
+		bool Contains(T item)
+		void CopyTo(T\[\] array, int arrayIndex);
+		bool Remove(T item)]
+		
+		[IList&lt;T&gt;|
+		T this\[int index\] { get set }|
+		int IndexOf(T item)
+		void Insert(int index, T item)
+		void RemoveAt(int index)]
+		
+		[ISet&lt;T&gt;|
+		void ExceptWith(IEnumerable&lt;T&gt; other)
+		void IntersectWith(IEnumerable&lt;T&gt; other)
+		bool IsProperSubsetOf(IEnumerable&lt;T&gt; other)
+		bool IsProperSupersetOf(IEnumerable&lt;T&gt; other)
+		bool IsSubsetOf(IEnumerable&lt;T&gt; other)
+		bool IsSupersetOf(IEnumerable&lt;T&gt; other)
+		bool Overlaps(IEnumerable&lt;T&gt; other)
+		bool SetEquals(IEnumerable&lt;T&gt; other)
+		void SymmetricExceptWith(IEnumerable&lt;T&gt; other)
+		void UnionWith(IEnumerable&lt;T&gt; other)]
+		
+		[IDictionary&lt;TKey, TValue&gt;|
+		TValue this\[TKey key\] { get set }
+		ICollection&lt;TKey&gt; Keys { get }
+		ICollection&lt;TValue&gt; Values { get }|
+		void Add(TKey key, TValue value)
+		bool ContainsKey(TKey key)
+		bool Remove(TKey key)
+		bool TryGetValue(TKey key, out TValue value)]
+		
+		[IEnumerable&lt;T&gt;] &lt;:- [IReadOnlyCollection&lt;T&gt;]
+		[IEnumerable&lt;T&gt;] &lt;:- [ICollection&lt;T&gt;]
+		[ICollection&lt;T&gt;] &lt;:- [IList&lt;T&gt;]
+		[ICollection&lt;T&gt;] &lt;:- [ISet&lt;T&gt;]
+		[ICollection&lt;T&gt;] &lt;:- [IDictionary&lt;TKey, TValue&gt;]
+		
+		[IReadOnlyCollection&lt;T&gt;] &lt;:- [IReadOnlyList&lt;T&gt;]
+		[IReadOnlyCollection&lt;T&gt;] &lt;:- [IReadOnlySet&lt;T&gt;]
+		[IReadOnlyCollection&lt;T&gt;] &lt;:- [IReadOnlyDictionary&lt;TKey, TValue&gt;]
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="971.0" width="1243.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M234.0 393.3 L236.5 393.25 L244 393.25 L244.0 393.3 " fill="none"></path>
+					<path d="M234.0 391.3 L234.0 393.3 L234.0 395.3 L229.0 393.3 Z"></path>
+					<path d="M392.5 357.9 L508.5 153 L555 153 L555.0 153.0 " fill="none"></path>
+					<path d="M390.8 356.9 L392.5 357.9 L394.3 358.9 L390.0 362.3 Z"></path>
+					<path d="M392.5 428.6 L508.5 633.5 L516 633.5 L516.0 633.5 " fill="none"></path>
+					<path d="M394.3 427.6 L392.5 428.6 L390.8 429.6 L390.0 424.3 Z"></path>
+					<path d="M729.3 545.7 L802.5 458.5 L892 458.5 L892.0 458.5 " fill="none"></path>
+					<path d="M727.7 544.4 L729.3 545.7 L730.8 547.0 L726.1 549.5 Z"></path>
+					<path d="M800.0 633.5 L802.5 633.5 L810 633.5 L810.0 633.5 " fill="none"></path>
+					<path d="M800.0 631.5 L800.0 633.5 L800.0 635.5 L795.0 633.5 Z"></path>
+					<path d="M721.0 721.5 L802.5 831 L827 831 L827.0 831.0 " fill="none"></path>
+					<path d="M722.6 720.3 L721.0 721.5 L719.4 722.7 L718.0 717.5 Z"></path>
+					<path d="M696.7 118.8 L802.5 31 L922.5 31 L922.5 31.0 " fill="none"></path>
+					<path d="M695.4 117.3 L696.7 118.8 L698.0 120.3 L692.9 122.0 Z"></path>
+					<path d="M761.0 153.0 L802.5 153 L817 153 L817.0 153.0 " fill="none"></path>
+					<path d="M761.0 151.0 L761.0 153.0 L761.0 155.0 L756.0 153.0 Z"></path>
+					<path d="M687.4 187.7 L802.5 313 L827 313 L827.0 313.0 " fill="none"></path>
+					<path d="M688.8 186.3 L687.4 187.7 L685.9 189.0 L684.0 184.0 Z"></path>
+					<g data-name="IEnumerable">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
+								<rect x="0.0" y="362.3" height="62.0" width="229.0" data-name="IEnumerable"></rect>
+							<path d="M0.0 393.3 L229.0 393.3" fill="none" data-name="IEnumerable"></path>
+							</g>
+						<g transform="translate(0, 362.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
+									<text x="106.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 393.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
+									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator()</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IEnumerable&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;T&gt;">
+								<rect x="244.0" y="362.3" height="62.0" width="257.0" data-name="IEnumerable&lt;T&gt;"></rect>
+							<path d="M244.0 393.3 L501.0 393.3" fill="none" data-name="IEnumerable&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(244, 362.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;T&gt;">
+									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;T&gt;">IEnumerable&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(244, 393.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable&lt;T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IReadOnlyCollection&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IReadOnlyCollection&lt;T&gt;">
+								<rect x="555.0" y="122.0" height="62.0" width="201.0" data-name="IReadOnlyCollection&lt;T&gt;"></rect>
+							<path d="M555.0 153.0 L756.0 153.0" fill="none" data-name="IReadOnlyCollection&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(555, 122)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IReadOnlyCollection&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IReadOnlyCollection&lt;T&gt;">
+									<text x="92.5" y="13.5" stroke="none" text-anchor="middle" data-name="IReadOnlyCollection&lt;T&gt;">IReadOnlyCollection&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(555, 153)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IReadOnlyCollection&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IReadOnlyCollection&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IReadOnlyCollection&lt;T&gt;">int Count { get }</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IReadOnlyList&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IReadOnlyList&lt;T&gt;">
+								<rect x="922.5" y="0.0" height="62.0" width="152.0" data-name="IReadOnlyList&lt;T&gt;"></rect>
+							<path d="M922.5 31.0 L1074.5 31.0" fill="none" data-name="IReadOnlyList&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(922.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IReadOnlyList&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IReadOnlyList&lt;T&gt;">
+									<text x="68.0" y="13.5" stroke="none" text-anchor="middle" data-name="IReadOnlyList&lt;T&gt;">IReadOnlyList&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(922.5, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IReadOnlyList&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IReadOnlyList&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IReadOnlyList&lt;T&gt;">T this[int index]</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IReadOnlySet&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IReadOnlySet&lt;T&gt;">
+								<rect x="817.0" y="77.0" height="152.0" width="363.0" data-name="IReadOnlySet&lt;T&gt;"></rect>
+							<path d="M817.0 108.0 L1180.0 108.0" fill="none" data-name="IReadOnlySet&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(817, 77)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IReadOnlySet&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IReadOnlySet&lt;T&gt;">
+									<text x="173.5" y="13.5" stroke="none" text-anchor="middle" data-name="IReadOnlySet&lt;T&gt;">IReadOnlySet&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(817, 108)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IReadOnlySet&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IReadOnlySet&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool Contains(T item)</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool IsProperSubsetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool IsProperSupersetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool IsSubsetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="73.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool IsSupersetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="88.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool Overlaps(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="103.5" stroke="none" data-name="IReadOnlySet&lt;T&gt;">bool SetEquals(IEnumerable&lt;T&gt; other)</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+								<rect x="827.0" y="244.0" height="138.0" width="343.0" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;"></rect>
+							<path d="M827.0 275.0 L1170.0 275.0" fill="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;"></path>
+							<path d="M827.0 336.0 L1170.0 336.0" fill="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;"></path>
+							</g>
+						<g transform="translate(827, 244)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+									<text x="163.5" y="13.5" stroke="none" text-anchor="middle" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">IReadOnlyDictionary&lt;TKey, TValue&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(827, 275)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">TValue this[TKey key] { get }</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">IEnumerable&lt;TKey&gt; Keys { get }</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">IEnumerable&lt;TValue&gt; Values { get }</text>
+								
+								</g>
+							</g>
+						<g transform="translate(827, 336)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">bool ContainsKey(TKey key)</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IReadOnlyDictionary&lt;TKey, TValue&gt;">bool TryGetValue(TKey key, out TValue value)</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ICollection&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ICollection&lt;T&gt;">
+								<rect x="516.0" y="549.5" height="168.0" width="279.0" data-name="ICollection&lt;T&gt;"></rect>
+							<path d="M516.0 580.5 L795.0 580.5" fill="none" data-name="ICollection&lt;T&gt;"></path>
+							<path d="M516.0 626.5 L795.0 626.5" fill="none" data-name="ICollection&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(516, 549.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICollection&lt;T&gt;">
+									<text x="131.5" y="13.5" stroke="none" text-anchor="middle" data-name="ICollection&lt;T&gt;">ICollection&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(516, 580.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICollection&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ICollection&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="ICollection&lt;T&gt;">int Count { get }</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ICollection&lt;T&gt;">bool IsReadOnly { get }</text>
+								
+								</g>
+							</g>
+						<g transform="translate(516, 626.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICollection&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ICollection&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="ICollection&lt;T&gt;">void Add(T item)</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ICollection&lt;T&gt;">void Clear()</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="ICollection&lt;T&gt;">bool Contains(T item)</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="ICollection&lt;T&gt;">void CopyTo(T[] array, int arrayIndex)</text>
+								<text x="0.0" y="73.5" stroke="none" data-name="ICollection&lt;T&gt;">bool Remove(T item)</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IList&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IList&lt;T&gt;">
+								<rect x="892.0" y="397.0" height="123.0" width="213.0" data-name="IList&lt;T&gt;"></rect>
+							<path d="M892.0 428.0 L1105.0 428.0" fill="none" data-name="IList&lt;T&gt;"></path>
+							<path d="M892.0 459.0 L1105.0 459.0" fill="none" data-name="IList&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(892, 397)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IList&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IList&lt;T&gt;">
+									<text x="98.5" y="13.5" stroke="none" text-anchor="middle" data-name="IList&lt;T&gt;">IList&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(892, 428)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IList&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IList&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IList&lt;T&gt;">T this[int index] { get set }</text>
+								
+								</g>
+							</g>
+						<g transform="translate(892, 459)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IList&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IList&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IList&lt;T&gt;">int IndexOf(T item)</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IList&lt;T&gt;">void Insert(int index, T item)</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IList&lt;T&gt;">void RemoveAt(int index)</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ISet&lt;T&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ISet&lt;T&gt;">
+								<rect x="810.0" y="535.0" height="197.0" width="377.0" data-name="ISet&lt;T&gt;"></rect>
+							<path d="M810.0 566.0 L1187.0 566.0" fill="none" data-name="ISet&lt;T&gt;"></path>
+							</g>
+						<g transform="translate(810, 535)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ISet&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ISet&lt;T&gt;">
+									<text x="180.5" y="13.5" stroke="none" text-anchor="middle" data-name="ISet&lt;T&gt;">ISet&lt;T&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(810, 566)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ISet&lt;T&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ISet&lt;T&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="ISet&lt;T&gt;">void ExceptWith(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ISet&lt;T&gt;">void IntersectWith(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="ISet&lt;T&gt;">bool IsProperSubsetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="ISet&lt;T&gt;">bool IsProperSupersetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="73.5" stroke="none" data-name="ISet&lt;T&gt;">bool IsSubsetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="88.5" stroke="none" data-name="ISet&lt;T&gt;">bool IsSupersetOf(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="103.5" stroke="none" data-name="ISet&lt;T&gt;">bool Overlaps(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="118.5" stroke="none" data-name="ISet&lt;T&gt;">bool SetEquals(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="133.5" stroke="none" data-name="ISet&lt;T&gt;">void SymmetricExceptWith(IEnumerable&lt;T&gt; other)</text>
+								<text x="0.0" y="148.5" stroke="none" data-name="ISet&lt;T&gt;">void UnionWith(IEnumerable&lt;T&gt; other)</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IDictionary&lt;TKey, TValue&gt;">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IDictionary&lt;TKey, TValue&gt;">
+								<rect x="827.0" y="747.0" height="168.0" width="343.0" data-name="IDictionary&lt;TKey, TValue&gt;"></rect>
+							<path d="M827.0 778.0 L1170.0 778.0" fill="none" data-name="IDictionary&lt;TKey, TValue&gt;"></path>
+							<path d="M827.0 839.0 L1170.0 839.0" fill="none" data-name="IDictionary&lt;TKey, TValue&gt;"></path>
+							</g>
+						<g transform="translate(827, 747)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDictionary&lt;TKey, TValue&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDictionary&lt;TKey, TValue&gt;">
+									<text x="163.5" y="13.5" stroke="none" text-anchor="middle" data-name="IDictionary&lt;TKey, TValue&gt;">IDictionary&lt;TKey, TValue&gt;</text>
+								
+								</g>
+							</g>
+						<g transform="translate(827, 778)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDictionary&lt;TKey, TValue&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDictionary&lt;TKey, TValue&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">TValue this[TKey key] { get set }</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">ICollection&lt;TKey&gt; Keys { get }</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">ICollection&lt;TValue&gt; Values { get }</text>
+								
+								</g>
+							</g>
+						<g transform="translate(827, 839)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDictionary&lt;TKey, TValue&gt;">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDictionary&lt;TKey, TValue&gt;">
+									<text x="0.0" y="13.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">void Add(TKey key, TValue value)</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">bool ContainsKey(TKey key)</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">bool Remove(TKey key)</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="IDictionary&lt;TKey, TValue&gt;">bool TryGetValue(TKey key, out TValue value)</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

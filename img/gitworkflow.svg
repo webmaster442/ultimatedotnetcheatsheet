@@ -1,0 +1,517 @@
+<svg version="1.1" baseProfile="full" width="1322.8" height="1099.0" viewbox="0 0 1322.75 1099" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<title >gitworkflow</title>
+	<desc >#align: center
+	#title: gitworkflow
+	#spacing: 25
+	#arrowSize: 2
+		
+	#.input: fill=#000000 visual=input stroke=#e0e0e0
+	#.class: body=center title=bold
+	#.note: body=center title=bold visual=note
+	    
+	    [Remote Branch Tracking] -- [&lt;input&gt; git merge] --&gt; [Working Directory]
+		[Remote] -- [&lt;input&gt; git fetch] --&gt; [Remote Branch Tracking]
+	    
+		[Remote] -- [&lt;input&gt;git pull] --&gt; [Working Directory]
+		[Remote] &lt;--[&lt;input&gt; git push] -- [Local Repository] &lt;--[&lt;input&gt; git commit] -- [Staging] &lt;-- [&lt;input&gt; git add] -- [Working Directory]
+		[Staging] -- [&lt;input&gt; git reset] --&gt; [Working Directory]
+		
+		[Remote Branch Tracking] -- [&lt;input&gt;git checkout branch_name] --&gt;[Working Directory]
+		
+		[Stash] &lt;-- [&lt;input&gt; git stash] -- [Working Directory]
+		[Stash] -- [&lt;input&gt; git stash apply] --&gt; [Working Directory]
+		[Stash] -- [&lt;input&gt; git stash pop] --&gt; [Working Directory]
+		
+		[Working Directory] -- [&lt;input&gt; git diff &gt; patchfile.patch] --&gt; [&lt;input&gt;Patch file]
+		[Working Directory] &lt;-- [&lt;input&gt; git apply patchfile.patch] -- [&lt;input&gt;Patch file]
+		[Staging] -- [&lt;input&gt;git diff --cached] --&gt;[&lt;input&gt;Patch file]
+	    
+	[&lt;input&gt;git pull|
+	equivalent with:
+	git fetch
+	git merge]
+	    
+	 [Working Directory|
+	 Refers to the main folder on your computer
+	where you keep all your project files. 
+	It&apos;s the place where you make changes 
+	and edits to your files. ]
+	
+	[&lt;database&gt;Stash|
+	It is like a secret hiding place where you
+	can temporarily store changes you made to
+	your files without committing them. It&apos;s
+	useful when you want to switch to a different
+	branch or work on something else without 
+	losing your current changes.]
+	
+	[&lt;database&gt;Remote|A copy of the repository that is hosted 
+	on a different server or location.
+	It serves as a central place where multiple
+	people can collaborate on the same project
+	and exchange changes]
+	
+	[&lt;database&gt;Local Repository|A special folder where Git stores 
+	all the files and the history of changes
+	for a project. It acts as a centralized 
+	database that keeps track of every modification
+	made to the project&apos;s files over time.]
+	
+	[Staging|An intermediate step between the working
+	directory and the repository. It&apos;s where 
+	changes made to files in the working directory
+	are selected and prepared to be included 
+	in the next commit]
+	
+	[Remote Branch Tracking|Allows your local branches to stay 
+	in sync with branches on the remote
+	repository. When you clone a remote
+	repository, Git automatically sets
+	up tracking for the remote branches]
+	
+	
+	[&lt;note&gt;Patch file|A text file that contains the differences
+	between two sets of files. It shows the
+	changes made to the original files 
+	and can be used to update or modify
+	those files accordingly.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="1099.0" width="1322.8" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<g stroke-dasharray="6 6">
+							<path d="M92.8 575.5 L72 603.5 L72 646.5 L72.0 646.5 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M72.0 677.5 L72 720.5 L504.2165479435972 768.0042334126185 L504.2 768.0 " fill="none"></path>
+						</g>
+					<path d="M495.2 773.7 L504.2 768.0 L496.7 760.5 L512.5 768.9 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M263.8 114.8 L138 150.5 L138 178.5 L138 178.5 L138 206.5 L138 206.5 L138 288 L138 288 L138 369.5 L138 369.5 L138 382 L138.0 382.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M138.0 413.0 L138 425.5 L138 445.1666666666667 L138.0 445.2 " fill="none"></path>
+						</g>
+					<path d="M131.3 436.8 L138.0 445.2 L144.7 436.8 L138.0 453.5 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M444.4 138.0 L448 150.5 L448 178.5 L448 178.5 L448 206.5 L448 206.5 L448 288 L448 288 L448 369.5 L448 369.5 L448 397.5 L448 397.5 L448 425.5 L448 425.5 L448 514.5 L448 514.5 L448 603.5 L448 603.5 L448 616 L448.0 616.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M448.0 708.0 L448 720.5 L504.50500400638026 737.1117160998713 L504.5 737.1 " fill="none"></path>
+						</g>
+					<path d="M494.6 741.2 L504.5 737.1 L498.4 728.4 L512.5 739.5 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M594.0 89.7 L1091.25 150.5 L1091.25 163 L1091.3 163.0 " fill="none"></path>
+						</g>
+					<path d="M603.1 84.1 L594.0 89.7 L601.5 97.3 L585.8 88.7 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M1091.3 194.0 L1091.25 206.5 L1091.25 219 L1091.3 219.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M1091.3 365.3 L1091.25 369.5 L1091.25 382 L1091.3 382.0 " fill="none"></path>
+						</g>
+					<path d="M1097.9 373.7 L1091.3 365.3 L1084.6 373.7 L1091.3 357.0 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M1091.3 413.0 L1091.25 425.5 L1091.25 453.5 L1091.3 453.5 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M1002.1 580.5 L971 603.5 L971 646.5 L971.0 646.5 " fill="none"></path>
+						</g>
+					<path d="M999.4 590.8 L1002.1 580.5 L991.5 580.1 L1008.8 575.5 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M971.0 677.5 L971 720.5 L832.5 751.1231155778894 L832.5 751.1 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M1076.0 575.5 L1069 603.5 L1069 646.5 L1069.0 646.5 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M1069.0 677.5 L1069 720.5 L840.720229355257 758.4986503469181 L840.7 758.5 " fill="none"></path>
+						</g>
+					<path d="M847.8 750.6 L840.7 758.5 L850.0 763.7 L832.5 759.9 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M215.1 575.5 L250.5 603.5 L250.5 646.5 L250.5 646.5 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M250.5 677.5 L250.5 720.5 L504.26675245872656 760.1886390101326 L504.3 760.2 " fill="none"></path>
+						</g>
+					<path d="M495.0 765.5 L504.3 760.2 L497.1 752.3 L512.5 761.5 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M589.2 595.6 L577 603.5 L577 646.5 L577.0 646.5 " fill="none"></path>
+						</g>
+					<path d="M585.8 605.7 L589.2 595.6 L578.5 594.5 L596.1 591.0 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M577.0 677.5 L577 720.5 L595.0871212121212 733 L595.1 733.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M707.9 591.0 L707 603.5 L707 646.5 L707.0 646.5 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M707.0 677.5 L707 720.5 L704.3263608354398 725.6147879669846 L704.3 725.6 " fill="none"></path>
+						</g>
+					<path d="M702.3 715.1 L704.3 725.6 L714.1 721.3 L700.5 733.0 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M834.2 591.0 L854 603.5 L854 646.5 L854.0 646.5 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M854.0 677.5 L854 720.5 L827.4566118624036 730.1521411409441 L827.5 730.2 " fill="none"></path>
+						</g>
+					<path d="M833.0 721.0 L827.5 730.2 L837.6 733.6 L819.6 733.0 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M582.3 840.0 L561.25 852.5 L561.25 865 L561.3 865.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M561.3 896.0 L561.25 908.5 L703.4166967117903 944.1325736003976 L703.4 944.1 " fill="none"></path>
+						</g>
+					<path d="M693.7 948.6 L703.4 944.1 L697.0 935.6 L711.5 946.2 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M840.6 822.4 L981.75 852.5 L981.75 865 L981.8 865.0 " fill="none"></path>
+						</g>
+					<path d="M850.2 817.6 L840.6 822.4 L847.4 830.6 L832.5 820.6 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M981.8 896.0 L981.75 908.5 L960.1088435374149 921 L960.1 921.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M1147.8 575.5 L1173.75 603.5 L1173.75 662 L1173.75 662 L1173.75 720.5 L1173.75 720.5 L1173.75 786.5 L1173.75 786.5 L1173.75 852.5 L1173.75 852.5 L1173.75 865 L1173.8 865.0 " fill="none"></path>
+						</g>
+					<g stroke-dasharray="6 6">
+							<path d="M1173.8 896.0 L1173.75 908.5 L1005.6208901754129 947.2078764983779 L1005.6 947.2 " fill="none"></path>
+						</g>
+					<path d="M1012.2 938.8 L1005.6 947.2 L1015.2 951.8 L997.5 949.1 Z"></path>
+					<g data-name="Remote Branch Tracking">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Remote Branch Tracking">
+								<rect x="0.0" y="453.5" height="122.0" width="276.0" data-name="Remote Branch Tracking"></rect>
+							<path d="M0.0 484.5 L276.0 484.5" fill="none" data-name="Remote Branch Tracking"></path>
+							</g>
+						<g transform="translate(0, 453.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Remote Branch Tracking">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Remote Branch Tracking">
+									<text x="130.0" y="13.5" stroke="none" text-anchor="middle" data-name="Remote Branch Tracking">Remote Branch Tracking</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 484.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Remote Branch Tracking">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Remote Branch Tracking">
+									<text x="130.0" y="13.5" stroke="none" text-anchor="middle" data-name="Remote Branch Tracking">Allows your local branches to stay</text>
+								<text x="130.0" y="28.5" stroke="none" text-anchor="middle" data-name="Remote Branch Tracking">in sync with branches on the remote</text>
+								<text x="130.0" y="43.5" stroke="none" text-anchor="middle" data-name="Remote Branch Tracking">repository. When you clone a remote</text>
+								<text x="130.0" y="58.5" stroke="none" text-anchor="middle" data-name="Remote Branch Tracking">repository, Git automatically sets</text>
+								<text x="130.0" y="73.5" stroke="none" text-anchor="middle" data-name="Remote Branch Tracking">up tracking for the remote branches</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git merge">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git merge">
+								<path d="M36.0 646.5 L116.0 646.5 L108.0 677.5 L28.0 677.5 Z" data-name="git merge"></path>
+							</g>
+						<g transform="translate(28, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git merge">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git merge">
+									<text x="36.0" y="13.5" stroke="none" text-anchor="middle" data-name="git merge">git merge</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Working Directory">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Working Directory">
+								<rect x="512.5" y="733.0" height="107.0" width="320.0" data-name="Working Directory"></rect>
+							<path d="M512.5 764.0 L832.5 764.0" fill="none" data-name="Working Directory"></path>
+							</g>
+						<g transform="translate(512.5, 733)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Working Directory">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Working Directory">
+									<text x="152.0" y="13.5" stroke="none" text-anchor="middle" data-name="Working Directory">Working Directory</text>
+								
+								</g>
+							</g>
+						<g transform="translate(512.5, 764)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Working Directory">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Working Directory">
+									<text x="152.0" y="13.5" stroke="none" text-anchor="middle" data-name="Working Directory">Refers to the main folder on your computer</text>
+								<text x="152.0" y="28.5" stroke="none" text-anchor="middle" data-name="Working Directory">where you keep all your project files.</text>
+								<text x="152.0" y="43.5" stroke="none" text-anchor="middle" data-name="Working Directory">It&apos;s the place where you make changes</text>
+								<text x="152.0" y="58.5" stroke="none" text-anchor="middle" data-name="Working Directory">and edits to your files.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Remote">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Remote">
+								<rect x="263.8" y="8.0" height="122.0" width="322.0" stroke="none" data-name="Remote"></rect>
+							<path d="M263.8 8.0 L263.8 130.0" fill="none" data-name="Remote"></path>
+							<path d="M585.8 8.0 L585.8 130.0" fill="none" data-name="Remote"></path>
+							<ellipse cx="424.8" cy="8.0" rx="161.0" ry="6.0" data-name="Remote"></ellipse>
+							<path d="M585.8 130.0 L585.5 130.3 L584.9 130.6 L584.0 130.9 L582.6 131.2 L580.8 131.5 L578.6 131.8 L576.0 132.1 L573.1 132.3 L569.8 132.6 L566.1 132.9 L562.1 133.1 L557.8 133.4 L553.1 133.6 L548.1 133.9 L542.8 134.1 L537.2 134.3 L531.3 134.5 L525.1 134.7 L518.7 134.9 L512.1 135.0 L505.2 135.2 L498.2 135.3 L491.0 135.5 L483.6 135.6 L476.0 135.7 L468.4 135.8 L460.6 135.8 L452.7 135.9 L444.8 136.0 L436.8 136.0 L428.8 136.0 L420.7 136.0 L412.7 136.0 L404.7 136.0 L396.8 135.9 L388.9 135.8 L381.1 135.8 L373.5 135.7 L365.9 135.6 L358.5 135.5 L351.3 135.3 L344.2 135.2 L337.4 135.0 L330.8 134.9 L324.4 134.7 L318.2 134.5 L312.3 134.3 L306.7 134.1 L301.4 133.9 L296.4 133.6 L291.7 133.4 L287.4 133.1 L283.4 132.9 L279.7 132.6 L276.4 132.3 L273.5 132.1 L270.9 131.8 L268.7 131.5 L266.9 131.2 L265.5 130.9 L264.5 130.6 L264.0 130.3 L263.8 130.0" data-name="Remote"></path>
+							<path d="M263.8 39.0 L267.3 40.2 L277.7 41.4 L294.5 42.5 L317.0 43.5 L344.3 44.2 L375.0 44.7 L407.9 45.0 L441.6 45.0 L474.5 44.7 L505.3 44.2 L532.5 43.5 L555.0 42.5 L571.8 41.4 L582.2 40.2 L585.8 39.0" fill="none" data-name="Remote"></path>
+							</g>
+						<g transform="translate(263.75, 12)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Remote">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Remote">
+									<text x="153.0" y="13.5" stroke="none" text-anchor="middle" data-name="Remote">Remote</text>
+								
+								</g>
+							</g>
+						<g transform="translate(263.75, 43)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Remote">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Remote">
+									<text x="153.0" y="13.5" stroke="none" text-anchor="middle" data-name="Remote">A copy of the repository that is hosted</text>
+								<text x="153.0" y="28.5" stroke="none" text-anchor="middle" data-name="Remote">on a different server or location.</text>
+								<text x="153.0" y="43.5" stroke="none" text-anchor="middle" data-name="Remote">It serves as a central place where multiple</text>
+								<text x="153.0" y="58.5" stroke="none" text-anchor="middle" data-name="Remote">people can collaborate on the same project</text>
+								<text x="153.0" y="73.5" stroke="none" text-anchor="middle" data-name="Remote">and exchange changes</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git fetch">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git fetch">
+								<path d="M107.0 382.0 L177.0 382.0 L169.0 413.0 L99.0 413.0 Z" data-name="git fetch"></path>
+							</g>
+						<g transform="translate(99, 382)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git fetch">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git fetch">
+									<text x="31.0" y="13.5" stroke="none" text-anchor="middle" data-name="git fetch">git fetch</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git pull">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git pull">
+								<path d="M393.0 616.0 L511.0 616.0 L503.0 708.0 L385.0 708.0 Z" data-name="git pull"></path>
+							<path d="M385.0 647.0 L511.0 647.0" fill="none" data-name="git pull"></path>
+							</g>
+						<g transform="translate(385, 616)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git pull">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git pull">
+									<text x="55.0" y="13.5" stroke="none" text-anchor="middle" data-name="git pull">git pull</text>
+								
+								</g>
+							</g>
+						<g transform="translate(385, 647)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git pull">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="left" data-name="git pull">
+									<text x="0.0" y="13.5" stroke="none" data-name="git pull">equivalent with:</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="git pull">git fetch</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="git pull">git merge</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git push">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git push">
+								<path d="M1060.3 163.0 L1130.3 163.0 L1122.3 194.0 L1052.3 194.0 Z" data-name="git push"></path>
+							</g>
+						<g transform="translate(1052.25, 163)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git push">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git push">
+									<text x="31.0" y="13.5" stroke="none" text-anchor="middle" data-name="git push">git push</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Local Repository">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Local Repository">
+								<rect x="915.8" y="227.0" height="122.0" width="351.0" stroke="none" data-name="Local Repository"></rect>
+							<path d="M915.8 227.0 L915.8 349.0" fill="none" data-name="Local Repository"></path>
+							<path d="M1266.8 227.0 L1266.8 349.0" fill="none" data-name="Local Repository"></path>
+							<ellipse cx="1091.3" cy="227.0" rx="175.5" ry="6.0" data-name="Local Repository"></ellipse>
+							<path d="M1266.8 349.0 L1266.5 349.3 L1265.9 349.6 L1264.8 349.9 L1263.3 350.2 L1261.3 350.5 L1259.0 350.8 L1256.2 351.1 L1253.0 351.3 L1249.4 351.6 L1245.4 351.9 L1241.0 352.1 L1236.3 352.4 L1231.1 352.6 L1225.7 352.9 L1219.9 353.1 L1213.8 353.3 L1207.4 353.5 L1200.7 353.7 L1193.7 353.9 L1186.5 354.0 L1179.0 354.2 L1171.3 354.3 L1163.4 354.5 L1155.4 354.6 L1147.1 354.7 L1138.8 354.8 L1130.3 354.8 L1121.7 354.9 L1113.1 355.0 L1104.4 355.0 L1095.6 355.0 L1086.9 355.0 L1078.1 355.0 L1069.4 355.0 L1060.8 354.9 L1052.2 354.8 L1043.7 354.8 L1035.4 354.7 L1027.1 354.6 L1019.1 354.5 L1011.2 354.3 L1003.5 354.2 L996.0 354.0 L988.8 353.9 L981.8 353.7 L975.1 353.5 L968.7 353.3 L962.6 353.1 L956.8 352.9 L951.4 352.6 L946.2 352.4 L941.5 352.1 L937.1 351.9 L933.1 351.6 L929.5 351.3 L926.3 351.1 L923.5 350.8 L921.2 350.5 L919.2 350.2 L917.7 349.9 L916.6 349.6 L916.0 349.3 L915.8 349.0" data-name="Local Repository"></path>
+							<path d="M915.8 258.0 L919.6 259.2 L930.9 260.4 L949.3 261.5 L973.8 262.5 L1003.5 263.2 L1037.0 263.7 L1072.9 264.0 L1109.6 264.0 L1145.5 263.7 L1179.0 263.2 L1208.7 262.5 L1233.2 261.5 L1251.6 260.4 L1262.9 259.2 L1266.8 258.0" fill="none" data-name="Local Repository"></path>
+							</g>
+						<g transform="translate(915.75, 231)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Local Repository">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Local Repository">
+									<text x="167.5" y="13.5" stroke="none" text-anchor="middle" data-name="Local Repository">Local Repository</text>
+								
+								</g>
+							</g>
+						<g transform="translate(915.75, 262)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Local Repository">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Local Repository">
+									<text x="167.5" y="13.5" stroke="none" text-anchor="middle" data-name="Local Repository">A special folder where Git stores</text>
+								<text x="167.5" y="28.5" stroke="none" text-anchor="middle" data-name="Local Repository">all the files and the history of changes</text>
+								<text x="167.5" y="43.5" stroke="none" text-anchor="middle" data-name="Local Repository">for a project. It acts as a centralized</text>
+								<text x="167.5" y="58.5" stroke="none" text-anchor="middle" data-name="Local Repository">database that keeps track of every modification</text>
+								<text x="167.5" y="73.5" stroke="none" text-anchor="middle" data-name="Local Repository">made to the project&apos;s files over time.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git commit">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git commit">
+								<path d="M1050.8 382.0 L1139.8 382.0 L1131.8 413.0 L1042.8 413.0 Z" data-name="git commit"></path>
+							</g>
+						<g transform="translate(1042.75, 382)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git commit">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git commit">
+									<text x="40.5" y="13.5" stroke="none" text-anchor="middle" data-name="git commit">git commit</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Staging">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Staging">
+								<rect x="920.8" y="453.5" height="122.0" width="341.0" data-name="Staging"></rect>
+							<path d="M920.8 484.5 L1261.8 484.5" fill="none" data-name="Staging"></path>
+							</g>
+						<g transform="translate(920.75, 453.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Staging">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Staging">
+									<text x="162.5" y="13.5" stroke="none" text-anchor="middle" data-name="Staging">Staging</text>
+								
+								</g>
+							</g>
+						<g transform="translate(920.75, 484.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Staging">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Staging">
+									<text x="162.5" y="13.5" stroke="none" text-anchor="middle" data-name="Staging">An intermediate step between the working</text>
+								<text x="162.5" y="28.5" stroke="none" text-anchor="middle" data-name="Staging">directory and the repository. It&apos;s where</text>
+								<text x="162.5" y="43.5" stroke="none" text-anchor="middle" data-name="Staging">changes made to files in the working directory</text>
+								<text x="162.5" y="58.5" stroke="none" text-anchor="middle" data-name="Staging">are selected and prepared to be included</text>
+								<text x="162.5" y="73.5" stroke="none" text-anchor="middle" data-name="Staging">in the next commit</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git add">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git add">
+								<path d="M945.0 646.5 L1005.0 646.5 L997.0 677.5 L937.0 677.5 Z" data-name="git add"></path>
+							</g>
+						<g transform="translate(937, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git add">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git add">
+									<text x="26.0" y="13.5" stroke="none" text-anchor="middle" data-name="git add">git add</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git reset">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git reset">
+								<path d="M1038.0 646.5 L1108.0 646.5 L1100.0 677.5 L1030.0 677.5 Z" data-name="git reset"></path>
+							</g>
+						<g transform="translate(1030, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git reset">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git reset">
+									<text x="31.0" y="13.5" stroke="none" text-anchor="middle" data-name="git reset">git reset</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git checkout branch_name">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git checkout branch_name">
+								<path d="M149.0 646.5 L360.0 646.5 L352.0 677.5 L141.0 677.5 Z" data-name="git checkout branch_name"></path>
+							</g>
+						<g transform="translate(141, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git checkout branch_name">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git checkout branch_name">
+									<text x="101.5" y="13.5" stroke="none" text-anchor="middle" data-name="git checkout branch_name">git checkout branch_name</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Stash">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Stash">
+								<rect x="548.3" y="446.0" height="137.0" width="330.0" stroke="none" data-name="Stash"></rect>
+							<path d="M548.3 446.0 L548.3 583.0" fill="none" data-name="Stash"></path>
+							<path d="M878.3 446.0 L878.3 583.0" fill="none" data-name="Stash"></path>
+							<ellipse cx="713.3" cy="446.0" rx="165.0" ry="6.0" data-name="Stash"></ellipse>
+							<path d="M878.3 583.0 L878.0 583.3 L877.4 583.6 L876.4 583.9 L875.0 584.2 L873.1 584.5 L870.9 584.8 L868.3 585.1 L865.3 585.3 L861.9 585.6 L858.2 585.9 L854.0 586.1 L849.6 586.4 L844.8 586.6 L839.6 586.9 L834.2 587.1 L828.5 587.3 L822.4 587.5 L816.1 587.7 L809.6 587.9 L802.8 588.0 L795.7 588.2 L788.5 588.3 L781.1 588.5 L773.5 588.6 L765.8 588.7 L757.9 588.8 L750.0 588.8 L741.9 588.9 L733.8 589.0 L725.6 589.0 L717.4 589.0 L709.1 589.0 L700.9 589.0 L692.7 589.0 L684.6 588.9 L676.5 588.8 L668.6 588.8 L660.7 588.7 L653.0 588.6 L645.4 588.5 L638.0 588.3 L630.7 588.2 L623.7 588.0 L616.9 587.9 L610.4 587.7 L604.1 587.5 L598.0 587.3 L592.3 587.1 L586.9 586.9 L581.7 586.6 L576.9 586.4 L572.5 586.1 L568.3 585.9 L564.6 585.6 L561.2 585.3 L558.2 585.1 L555.6 584.8 L553.4 584.5 L551.5 584.2 L550.1 583.9 L549.1 583.6 L548.5 583.3 L548.3 583.0" data-name="Stash"></path>
+							<path d="M548.3 477.0 L551.9 478.2 L562.5 479.4 L579.8 480.5 L602.8 481.5 L630.8 482.2 L662.3 482.7 L696.0 483.0 L730.5 483.0 L764.2 482.7 L795.8 482.2 L823.7 481.5 L846.7 480.5 L864.0 479.4 L874.6 478.2 L878.3 477.0" fill="none" data-name="Stash"></path>
+							</g>
+						<g transform="translate(548.25, 450)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Stash">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Stash">
+									<text x="157.0" y="13.5" stroke="none" text-anchor="middle" data-name="Stash">Stash</text>
+								
+								</g>
+							</g>
+						<g transform="translate(548.25, 481)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Stash">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Stash">
+									<text x="157.0" y="13.5" stroke="none" text-anchor="middle" data-name="Stash">It is like a secret hiding place where you</text>
+								<text x="157.0" y="28.5" stroke="none" text-anchor="middle" data-name="Stash">can temporarily store changes you made to</text>
+								<text x="157.0" y="43.5" stroke="none" text-anchor="middle" data-name="Stash">your files without committing them. It&apos;s</text>
+								<text x="157.0" y="58.5" stroke="none" text-anchor="middle" data-name="Stash">useful when you want to switch to a different</text>
+								<text x="157.0" y="73.5" stroke="none" text-anchor="middle" data-name="Stash">branch or work on something else without</text>
+								<text x="157.0" y="88.5" stroke="none" text-anchor="middle" data-name="Stash">losing your current changes.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git stash">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git stash">
+								<path d="M544.0 646.5 L618.0 646.5 L610.0 677.5 L536.0 677.5 Z" data-name="git stash"></path>
+							</g>
+						<g transform="translate(536, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git stash">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git stash">
+									<text x="33.0" y="13.5" stroke="none" text-anchor="middle" data-name="git stash">git stash</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git stash apply">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git stash apply">
+								<path d="M651.0 646.5 L771.0 646.5 L763.0 677.5 L643.0 677.5 Z" data-name="git stash apply"></path>
+							</g>
+						<g transform="translate(643, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git stash apply">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git stash apply">
+									<text x="56.0" y="13.5" stroke="none" text-anchor="middle" data-name="git stash apply">git stash apply</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git stash pop">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git stash pop">
+								<path d="M804.0 646.5 L912.0 646.5 L904.0 677.5 L796.0 677.5 Z" data-name="git stash pop"></path>
+							</g>
+						<g transform="translate(796, 646.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git stash pop">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git stash pop">
+									<text x="50.0" y="13.5" stroke="none" text-anchor="middle" data-name="git stash pop">git stash pop</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git diff &gt; patchfile.patch">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git diff &gt; patchfile.patch">
+								<path d="M471.3 865.0 L659.3 865.0 L651.3 896.0 L463.3 896.0 Z" data-name="git diff &gt; patchfile.patch"></path>
+							</g>
+						<g transform="translate(463.25, 865)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git diff &gt; patchfile.patch">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git diff &gt; patchfile.patch">
+									<text x="90.0" y="13.5" stroke="none" text-anchor="middle" data-name="git diff &gt; patchfile.patch">git diff &gt; patchfile.patch</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Patch file">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Patch file">
+								<path d="M711.5 921.0 L989.5 921.0 L997.5 929.0 L997.5 1043.0 L711.5 1043.0 L711.5 921.0 Z" data-name="Patch file"></path>
+							<path d="M989.5 921.0 L989.5 929.0 L997.5 929.0" fill="none" data-name="Patch file"></path>
+							<path d="M711.5 952.0 L997.5 952.0" fill="none" data-name="Patch file"></path>
+							</g>
+						<g transform="translate(711.5, 921)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Patch file">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Patch file">
+									<text x="135.0" y="13.5" stroke="none" text-anchor="middle" data-name="Patch file">Patch file</text>
+								
+								</g>
+							</g>
+						<g transform="translate(711.5, 952)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Patch file">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Patch file">
+									<text x="135.0" y="13.5" stroke="none" text-anchor="middle" data-name="Patch file">A text file that contains the differences</text>
+								<text x="135.0" y="28.5" stroke="none" text-anchor="middle" data-name="Patch file">between two sets of files. It shows the</text>
+								<text x="135.0" y="43.5" stroke="none" text-anchor="middle" data-name="Patch file">changes made to the original files</text>
+								<text x="135.0" y="58.5" stroke="none" text-anchor="middle" data-name="Patch file">and can be used to update or modify</text>
+								<text x="135.0" y="73.5" stroke="none" text-anchor="middle" data-name="Patch file">those files accordingly.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git apply patchfile.patch">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git apply patchfile.patch">
+								<path d="M890.3 865.0 L1081.3 865.0 L1073.3 896.0 L882.3 896.0 Z" data-name="git apply patchfile.patch"></path>
+							</g>
+						<g transform="translate(882.25, 865)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git apply patchfile.patch">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git apply patchfile.patch">
+									<text x="91.5" y="13.5" stroke="none" text-anchor="middle" data-name="git apply patchfile.patch">git apply patchfile.patch</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="git diff --cached">
+							<g fill="#000000" stroke="#e0e0e0" data-name="git diff --cached">
+								<path d="M1114.3 865.0 L1241.3 865.0 L1233.3 896.0 L1106.3 896.0 Z" data-name="git diff --cached"></path>
+							</g>
+						<g transform="translate(1106.25, 865)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="git diff --cached">
+								<g transform="translate(8, 8)" fill="#e0e0e0" text-align="center" data-name="git diff --cached">
+									<text x="59.5" y="13.5" stroke="none" text-anchor="middle" data-name="git diff --cached">git diff --cached</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>
