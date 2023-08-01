@@ -9,3 +9,13 @@ table {
     margin-right: auto;
     white-space: normal;
 }
+
+@media print {
+    nav {
+        display: none;
+    }
+
+    #content {
+        max-width: 100%;
+    }
+}
