@@ -353,13 +353,9 @@ The need for throwing `NotSupportedException` usally indicates the violation of 
 
 # Collections
 
-^^^
 ![collection interfaces](img/collections2.svg)
-^^^
 
-^^^
 ![collection interfaces](img/collections1.svg)
-^^^
 
 |                 Type                 |                                Description                                |                                Is                                |
 | :----------------------------------: | :-----------------------------------------------------------------------: | :--------------------------------------------------------------: |
