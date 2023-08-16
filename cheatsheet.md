@@ -174,45 +174,46 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 ## Geneeric Math Interfaces
 
-|              Interface / Type              | Sbyte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half, Single, Double | Decimal | Complex | BigInteger |
-| :----------------------------------------: | :------------------------: | :----: | :--------------------------: | :-----: | :------------------: | :-----: | :-----: | :--------: |
-|  `IAdditionOperators<TSelf,TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|      `IAdditiveIdentity<TSelf,TSelf>`      |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|      `IBinaryFloatingPointIeee754<T>`      |                            |        |                              |         |          X           |         |         |            |
-|            `IBinaryInteger<T>`             |             X              |   X    |              X               |    X    |          X           |         |         |            |
-|             `IBinaryNumber<T>`             |             X              |   X    |              X               |    X    |          X           |    X    |         |            |
-|   `IBitwiseOperators<TSelf,TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |         |            |
-|              `IComparable<T>`              |             X              |   X    |              X               |    X    |          X           |    X    |    X    |            |
-|  `IComparisonOperators<TSelf,TSelf,bool>`  |             X              |   X    |              X               |    X    |          X           |    X    |    X    |            |
-|               `IConvertible`               |             X              |        |              X               |         |          X           |    X    |         |            |
-|          `IDecrementOperators<T>`          |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|  `IDivisionOperators<TSelf,TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|   `IEqualityOperators<TSelf,TSelf,bool>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|              `IEquatable<T>`               |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|         `IExponentialFunctions<T>`         |                            |        |                              |         |          X           |    X    |         |            |
-|            `IFloatingPoint<T>`             |             X              |   X    |                              |         |          X           |    X    |         |            |
-|        `IFloatingPointConstants<T>`        |             X              |   X    |                              |         |          X           |    X    |         |            |
-|         `IFloatingPointIeee754<T>`         |                            |        |                              |         |                      |    X    |         |            |
-|         `IHyperbolicFunctions<T>`          |                            |        |                              |         |                      |    X    |         |            |
-|          `IIncrementOperators<T>`          |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|         `ILogarithmicFunctions<T>`         |                            |        |                              |         |                      |    X    |         |            |
-|             `IMinMaxValue<T>`              |             X              |   X    |              X               |    X    |          X           |    X    |         |            |
-|   `IModulusOperators<TSelf,TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |            |
-|   `IMultiplicativeIdentity<TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|  `IMultiplyOperators<TSelf,TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|                `INumber<T>`                |             X              |   X    |              X               |    X    |          X           |    X    |    X    |            |
-|              `INumberBase<T>`              |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|               `IParsable<T>`               |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|            `IPowerFunctions<T>`            |                            |        |                              |         |                      |    X    |         |            |
-|            `IRootFunctions<T>`             |                            |        |                              |         |                      |    X    |         |            |
-|     `IShiftOperators<ulong,int,ulong>`     |             X              |   X    |              X               |    X    |          X           |    X    |         |            |
-|             `ISignedNumber<T>`             |             X              |   X    |              X               |    X    |          X           |    X    |         |            |
-|             `ISpanParsable<T>`             |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-| `ISubtractionOperators<TSelf,TSelf,TSelf>` |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|        `ITrigonometricFunctions<T>`        |                            |        |                              |         |                      |    X    |         |            |
-|   `IUnaryNegationOperators<TSelf,TSelf>`   |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|     `IUnaryPlusOperators<TSelf,TSelf>`     |             X              |   X    |              X               |    X    |          X           |    X    |    X    |     X      |
-|            `IUnsignedNumber<T>`            |                            |        |              X               |    X    |                      |         |         |            |
+|            Interfaces / Types            | SByte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half  | Single, Double | Decimal | Comple√ | BigInteger |
+| :--------------------------------------: | :------------------------: | :----: | :--------------------------: | :-----: | :---: | :------------: | :-----: | :-----: | :--------: |
+|              INumberBase<T>              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|                INumber<T>                |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |     √      |
+|             ISignedNumber<T>             |             √              |   √    |                              |         |   √   |       √        |    √    |    √    |     √      |
+|          IUnsignedNumber<Tself>          |                            |        |              √               |    √    |       |                |         |         |            |
+|             IBinaryNumber<T>             |             √              |   √    |              √               |    √    |   √   |       √        |         |         |     √      |
+|            IBinaryInteger<T>             |             √              |   √    |              √               |    √    |       |                |         |         |     √      |
+|            IFloatingPoint<T>             |                            |        |                              |         |   √   |       √        |    √    |         |            |
+|         IFloatingPointIeee754<T>         |                            |        |                              |         |   √   |       √        |         |         |            |
+|      IBinaryFloatingPointIeee754<T>      |                            |        |                              |         |   √   |       √        |         |         |            |
+|              IComparable<T>              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |     √      |
+|               IConvertible               |             √              |        |              √               |         |       |       √        |    √    |         |            |
+|              IEquatable<T>               |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|               IParsable<T>               |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|             ISpanParsable<T>             |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|  IAdditionOperators<TSelf,TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|   IBitwiseOperators<TSelf,TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |         |         |     √      |
+|  IComparisonOperators<TSelf,TSelf,bool>  |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |     √      |
+|          IDecrementOperators<T>          |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|  IDivisionOperators<TSelf,TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|   IEqualityOperators<TSelf,TSelf,bool>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|          IIncrementOperators<T>          |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|   IModulusOperators<TSelf,TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |     √      |
+|  IMultiplyOperators<TSelf,TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|     IShiftOperators<TSelf,int,TSelf>     |             √              |   √    |              √               |    √    |       |                |         |         |     √      |
+| ISubtractionOperators<TSelf,TSelf,TSelf> |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|   IUnaryNegationOperators<TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|     IUnaryPlusOperators<TSelf,TSelf>     |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|      IAdditiveIdentity<TSelf,TSelf>      |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|   IMultiplicativeIdentity<TSelf,TSelf>   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
+|             IMinMa√Value<T>              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |            |
+|         IE√ponentialFunctions<T>         |                            |        |                              |         |   √   |       √        |         |         |            |
+|        IFloatingPointConstants<T>        |                            |        |                              |         |   √   |       √        |    √    |         |            |
+|         IHyperbolicFunctions<T>          |                            |        |                              |         |   √   |       √        |         |         |            |
+|         ILogarithmicFunctions<T>         |                            |        |                              |         |   √   |       √        |         |         |            |
+|            IPowerFunctions<T>            |                            |        |                              |         |   √   |       √        |         |         |            |
+|            IRootFunctions<T>             |                            |        |                              |         |   √   |       √        |         |         |            |
+|        ITrigonometricFunctions<T>        |                            |        |                              |         |   √   |       √        |         |         |            |
+
 
 # Operator Precedence
 
@@ -231,6 +232,16 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 13. Logical OR: `||`
 14. Ternary: `? :`
 15. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+
+# Access modifiers
+
+|           Caller's location            | `public` | `protected  internal` | `protected` | `internal` | `private protected` | `private` |
+| :------------------------------------: | :------: | :-------------------: | :---------: | :--------: | :-----------------: | :-------: |
+|            Within the class            |    √     |           √           |      √      |     √      |          √          |     √     |
+|     Derived class (same assembly)      |    √     |           √           |      √      |     √      |          √          |     X     |
+|   Non-derived class (same assembly)    |    √     |           √           |      X      |     √      |          X          |     X     |
+|   Derived class (different assembly)   |    √     |           √           |      √      |     X      |          X          |     X     |
+| Non-derived class (different assembly) |    √     |           X           |      X      |     X      |          X          |     X     |
 
 # Strings
 
