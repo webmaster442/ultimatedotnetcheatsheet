@@ -712,3 +712,7 @@ numbers is [1, 2, 4]; //false
 numbers is [1, 2, 3, 4]; //false
 numbers is [0 or 1, <= 2, >= 3]; //true
 ```
+
+# Common Exceptions
+
+![Common Exceptions](img/common_exceptions.svg)
