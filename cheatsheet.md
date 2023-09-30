@@ -382,27 +382,7 @@ To produce this behavior, a custom format string can contain up to three section
 
 # Common exceptions
 
-|               Type               |                                  Description                                   | Trhow it? |
-| :------------------------------: | :----------------------------------------------------------------------------: | :-------: |
-|           `Exception`            |                         Base class for all exceptions.                         |    No     |
-|    `IndexOutOfRangeException`    |        Thrown by the runtime only when an array is indexed improperly.         |    No     |
-|     `NullReferenceException`     |          Thrown by the runtime only when a null object is referenced.          |    No     |
-|   `InvalidOperationException`    |                  Thrown by methods when in an invalid state.                   |    Yes    |
-|       `ArgumentException`        |                    Base class for all argument exceptions.                     |    No     |
-|     `ArgumentNullException`      |          Thrown by methods that do not allow an argument to be null.           |    Yes    |
-|  `ArgumentOutOfRangeException`   |       Thrown by methods that verify that arguments are in a given range.       |    Yes    |
-|          `IOException`           |                        Thrown when an I/O error occurs.                        |    No     |
-|      `OutOfMemoryException`      | Thrown when there is not enough memory to continue the execution of a program. |    No     |
-| `PlatformNotSupportedException ` |          Thrown when a feature does not run on a particular platform.          |    Yes    |
-|     `NotSupportedException`      |                 Thrown when an invoked method is not supported                 |    Yes    |
-
-
-Note: The "Trhow it" column indicates whether you should or shouldn't throw that specific exception. An exception handler that cathes
-every type of `Exception` should only exist at one place in your program: In the main method as the last barier, to log & report application crashes.
-Please also note that, you shouldn't specifically catch any of the exceptions featured in the table above, because they usually denote programming errors.
-
-You can throw the `NotSupportedException` from your code, but if you need to do this, then there might be some other problem with your object model abstraction. 
-The need for throwing `NotSupportedException` usally indicates the violation of the Liskov substitution principle.
+![Common Exceptions](img/common_exceptions.svg)
 
 # Collections
 
@@ -712,7 +692,3 @@ numbers is [1, 2, 4]; //false
 numbers is [1, 2, 3, 4]; //false
 numbers is [0 or 1, <= 2, >= 3]; //true
 ```
-
-# Common Exceptions
-
-![Common Exceptions](img/common_exceptions.svg)

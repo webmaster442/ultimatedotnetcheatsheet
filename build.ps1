@@ -1,0 +1,1 @@
+bookgen md2html -i .\cheatsheet.md --css style.css -o output\cheatsheet.html
