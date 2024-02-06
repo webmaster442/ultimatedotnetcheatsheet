@@ -1,0 +1,389 @@
+<svg version="1.1" baseProfile="full" width="1202.0" height="1393.0" viewbox="0 0 1202 1393" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	[MarshalByRefObject|Enables access to objects across application
+	domain boundaries in applications 
+	that support remoting.]
+	
+	[Stream|Provides a generic view of a sequence of bytes.
+	This is an abstract class.]
+	
+	[BufferedStream|Adds a buffering layer to 
+	read and write operations on another stream.
+	This class cannot be inherited.]
+	
+	[BrotliStream|Provides methods and properties used to 
+	compress and decompress streams by using 
+	the Brotli data format specification.]
+	
+	[DeflateStream |Provides methods and properties for 
+	compressing and decompressing streams 
+	by using the Deflate algorithm.]
+	
+	[GZipStream|Provides methods and properties 
+	used to compress and decompress streams by 
+	using the GZip data format specification.]
+	
+	[ZLibStream|Provides methods and properties used
+	to compress and decompress streams
+	by using the zlib data format specification.]
+	
+	[FileStream|Provides a Stream for a file,
+	supporting both synchronous and
+	asynchronous read and write operations.]
+	
+	[MemoryStream|Creates a stream whose
+	backing store is memory]
+	
+	[PipeStream|Exposes a Stream object around a pipe, 
+	which supports both anonymous and named pipes.]
+	
+	[UnmanagedMemoryStream|Provides access to unmanaged 
+	blocks of memory from managed code.]
+	
+	[NetworkStream|Provides the underlying stream 
+	of data for network access.]
+	
+	[CryptoStream|Defines a stream that links data
+	streams to cryptographic transformations.]
+	
+	[MarshalByRefObject] &lt;:- [Stream]
+	
+	[IAsyncDisposable] &lt;:-- [Stream]
+	[IDisposable] &lt;:-- [Stream]
+	
+	[Stream] &lt;:- [BufferedStream]
+	[Stream] &lt;:- [BrotliStream]
+	[Stream] &lt;:- [DeflateStream]
+	[Stream] &lt;:- [GZipStream]
+	[Stream] &lt;:- [ZLibStream]
+	[Stream] &lt;:- [FileStream]
+	[Stream] &lt;:- [MemoryStream]
+	[Stream] &lt;:- [PipeStream]
+	[Stream] &lt;:- [UnmanagedMemoryStream]
+	[Stream] &lt;:- [NetworkStream]
+	[Stream] &lt;:- [CryptoStream]
+	
+	
+	
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="1393.0" width="1202.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M347.3 619.8 L354 619.75 L463.34057971014494 667.5 L463.3 667.5 " fill="none"></path>
+					<path d="M347.3 614.4 L347.3 619.8 L347.3 625.1 L334.0 619.8 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M257.3 721.3 L354 721.25 L374 719.7056962025316 L374.0 719.7 " fill="none"></path>
+						</g>
+					<path d="M257.3 715.9 L257.3 721.3 L257.3 726.6 L244.0 721.3 Z"></path>
+					<g stroke-dasharray="6 6">
+							<path d="M233.3 792.3 L354 792.25 L463.34057971014494 744.5 L463.3 744.5 " fill="none"></path>
+						</g>
+					<path d="M233.3 786.9 L233.3 792.3 L233.3 797.6 L220.0 792.3 Z"></path>
+					<path d="M566.8 654.7 L749 46 L790 46 L790.0 46.0 " fill="none"></path>
+					<path d="M561.7 653.2 L566.8 654.7 L572.0 656.3 L563.0 667.5 Z"></path>
+					<path d="M570.6 655.0 L749 178 L790.5 178 L790.5 178.0 " fill="none"></path>
+					<path d="M565.6 653.1 L570.6 655.0 L575.6 656.9 L565.9 667.5 Z"></path>
+					<path d="M576.7 655.6 L749 310 L801.5 310 L801.5 310.0 " fill="none"></path>
+					<path d="M571.9 653.2 L576.7 655.6 L581.4 657.9 L570.7 667.5 Z"></path>
+					<path d="M588.3 656.8 L749 442 L783.5 442 L783.5 442.0 " fill="none"></path>
+					<path d="M584.0 653.6 L588.3 656.8 L592.6 660.0 L580.3 667.5 Z"></path>
+					<path d="M620.2 660.1 L749 574 L801 574 L801.0 574.0 " fill="none"></path>
+					<path d="M617.2 655.7 L620.2 660.1 L623.2 664.5 L609.1 667.5 Z"></path>
+					<path d="M742.3 706.0 L749 706 L805 706 L805.0 706.0 " fill="none"></path>
+					<path d="M742.3 700.7 L742.3 706.0 L742.3 711.3 L729.0 706.0 Z"></path>
+					<path d="M623.9 751.6 L749 830.5 L863 830.5 L863.0 830.5 " fill="none"></path>
+					<path d="M626.7 747.1 L623.9 751.6 L621.0 756.1 L612.6 744.5 Z"></path>
+					<path d="M591.4 754.8 L749 947.5 L769 947.5 L769.0 947.5 " fill="none"></path>
+					<path d="M595.6 751.4 L591.4 754.8 L587.3 758.2 L583.0 744.5 Z"></path>
+					<path d="M579.1 756.2 L749 1064.5 L811 1064.5 L811.0 1064.5 " fill="none"></path>
+					<path d="M583.8 753.6 L579.1 756.2 L574.5 758.8 L572.7 744.5 Z"></path>
+					<path d="M572.6 756.8 L749 1181.5 L839 1181.5 L839.0 1181.5 " fill="none"></path>
+					<path d="M577.5 754.8 L572.6 756.8 L567.7 758.9 L567.5 744.5 Z"></path>
+					<path d="M568.5 757.1 L749 1298.5 L802.5 1298.5 L802.5 1298.5 " fill="none"></path>
+					<path d="M573.6 755.5 L568.5 757.1 L563.5 758.8 L564.3 744.5 Z"></path>
+					<g data-name="MarshalByRefObject">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MarshalByRefObject">
+								<rect x="0.0" y="573.8" height="92.0" width="334.0" data-name="MarshalByRefObject"></rect>
+							<path d="M0.0 604.8 L334.0 604.8" fill="none" data-name="MarshalByRefObject"></path>
+							</g>
+						<g transform="translate(0, 573.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject">
+									<text x="159.0" y="13.5" stroke="none" text-anchor="middle" data-name="MarshalByRefObject">MarshalByRefObject</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 604.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MarshalByRefObject">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MarshalByRefObject">
+									<text x="0.0" y="13.5" stroke="none" data-name="MarshalByRefObject">Enables access to objects across application</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="MarshalByRefObject">domain boundaries in applications</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="MarshalByRefObject">that support remoting.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Stream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Stream">
+								<rect x="374.0" y="667.5" height="77.0" width="355.0" data-name="Stream"></rect>
+							<path d="M374.0 698.5 L729.0 698.5" fill="none" data-name="Stream"></path>
+							</g>
+						<g transform="translate(374, 667.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Stream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Stream">
+									<text x="169.5" y="13.5" stroke="none" text-anchor="middle" data-name="Stream">Stream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(374, 698.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Stream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Stream">
+									<text x="0.0" y="13.5" stroke="none" data-name="Stream">Provides a generic view of a sequence of bytes.</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Stream">This is an abstract class.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="BufferedStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="BufferedStream">
+								<rect x="790.0" y="0.0" height="92.0" width="335.0" data-name="BufferedStream"></rect>
+							<path d="M790.0 31.0 L1125.0 31.0" fill="none" data-name="BufferedStream"></path>
+							</g>
+						<g transform="translate(790, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BufferedStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BufferedStream">
+									<text x="159.5" y="13.5" stroke="none" text-anchor="middle" data-name="BufferedStream">BufferedStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(790, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BufferedStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BufferedStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="BufferedStream">Adds a buffering layer to</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="BufferedStream">read and write operations on another stream.</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="BufferedStream">This class cannot be inherited.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="BrotliStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="BrotliStream">
+								<rect x="790.5" y="132.0" height="92.0" width="334.0" data-name="BrotliStream"></rect>
+							<path d="M790.5 163.0 L1124.5 163.0" fill="none" data-name="BrotliStream"></path>
+							</g>
+						<g transform="translate(790.5, 132)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BrotliStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BrotliStream">
+									<text x="159.0" y="13.5" stroke="none" text-anchor="middle" data-name="BrotliStream">BrotliStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(790.5, 163)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BrotliStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BrotliStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="BrotliStream">Provides methods and properties used to</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="BrotliStream">compress and decompress streams by using</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="BrotliStream">the Brotli data format specification.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DeflateStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DeflateStream">
+								<rect x="801.5" y="264.0" height="92.0" width="312.0" data-name="DeflateStream"></rect>
+							<path d="M801.5 295.0 L1113.5 295.0" fill="none" data-name="DeflateStream"></path>
+							</g>
+						<g transform="translate(801.5, 264)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeflateStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DeflateStream">
+									<text x="148.0" y="13.5" stroke="none" text-anchor="middle" data-name="DeflateStream">DeflateStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(801.5, 295)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeflateStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DeflateStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="DeflateStream">Provides methods and properties for</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DeflateStream">compressing and decompressing streams</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="DeflateStream">by using the Deflate algorithm.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="GZipStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="GZipStream">
+								<rect x="783.5" y="396.0" height="92.0" width="348.0" data-name="GZipStream"></rect>
+							<path d="M783.5 427.0 L1131.5 427.0" fill="none" data-name="GZipStream"></path>
+							</g>
+						<g transform="translate(783.5, 396)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GZipStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GZipStream">
+									<text x="166.0" y="13.5" stroke="none" text-anchor="middle" data-name="GZipStream">GZipStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(783.5, 427)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="GZipStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="GZipStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="GZipStream">Provides methods and properties</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="GZipStream">used to compress and decompress streams by</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="GZipStream">using the GZip data format specification.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ZLibStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ZLibStream">
+								<rect x="801.0" y="528.0" height="92.0" width="313.0" data-name="ZLibStream"></rect>
+							<path d="M801.0 559.0 L1114.0 559.0" fill="none" data-name="ZLibStream"></path>
+							</g>
+						<g transform="translate(801, 528)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ZLibStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ZLibStream">
+									<text x="148.5" y="13.5" stroke="none" text-anchor="middle" data-name="ZLibStream">ZLibStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(801, 559)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ZLibStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ZLibStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="ZLibStream">Provides methods and properties used</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ZLibStream">to compress and decompress streams</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="ZLibStream">by using the zlib data format specification.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FileStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FileStream">
+								<rect x="805.0" y="660.0" height="92.0" width="305.0" data-name="FileStream"></rect>
+							<path d="M805.0 691.0 L1110.0 691.0" fill="none" data-name="FileStream"></path>
+							</g>
+						<g transform="translate(805, 660)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileStream">
+									<text x="144.5" y="13.5" stroke="none" text-anchor="middle" data-name="FileStream">FileStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(805, 691)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="FileStream">Provides a Stream for a file,</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FileStream">supporting both synchronous and</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="FileStream">asynchronous read and write operations.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MemoryStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MemoryStream">
+								<rect x="863.0" y="792.0" height="77.0" width="189.0" data-name="MemoryStream"></rect>
+							<path d="M863.0 823.0 L1052.0 823.0" fill="none" data-name="MemoryStream"></path>
+							</g>
+						<g transform="translate(863, 792)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MemoryStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MemoryStream">
+									<text x="86.5" y="13.5" stroke="none" text-anchor="middle" data-name="MemoryStream">MemoryStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(863, 823)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MemoryStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MemoryStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="MemoryStream">Creates a stream whose</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="MemoryStream">backing store is memory</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PipeStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PipeStream">
+								<rect x="769.0" y="909.0" height="77.0" width="377.0" data-name="PipeStream"></rect>
+							<path d="M769.0 940.0 L1146.0 940.0" fill="none" data-name="PipeStream"></path>
+							</g>
+						<g transform="translate(769, 909)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PipeStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PipeStream">
+									<text x="180.5" y="13.5" stroke="none" text-anchor="middle" data-name="PipeStream">PipeStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(769, 940)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="PipeStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PipeStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="PipeStream">Exposes a Stream object around a pipe,</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="PipeStream">which supports both anonymous and named pipes.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="UnmanagedMemoryStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="UnmanagedMemoryStream">
+								<rect x="811.0" y="1026.0" height="77.0" width="293.0" data-name="UnmanagedMemoryStream"></rect>
+							<path d="M811.0 1057.0 L1104.0 1057.0" fill="none" data-name="UnmanagedMemoryStream"></path>
+							</g>
+						<g transform="translate(811, 1026)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UnmanagedMemoryStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UnmanagedMemoryStream">
+									<text x="138.5" y="13.5" stroke="none" text-anchor="middle" data-name="UnmanagedMemoryStream">UnmanagedMemoryStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(811, 1057)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="UnmanagedMemoryStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UnmanagedMemoryStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="UnmanagedMemoryStream">Provides access to unmanaged</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="UnmanagedMemoryStream">blocks of memory from managed code.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NetworkStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NetworkStream">
+								<rect x="839.0" y="1143.0" height="77.0" width="237.0" data-name="NetworkStream"></rect>
+							<path d="M839.0 1174.0 L1076.0 1174.0" fill="none" data-name="NetworkStream"></path>
+							</g>
+						<g transform="translate(839, 1143)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NetworkStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NetworkStream">
+									<text x="110.5" y="13.5" stroke="none" text-anchor="middle" data-name="NetworkStream">NetworkStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(839, 1174)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NetworkStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NetworkStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="NetworkStream">Provides the underlying stream</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="NetworkStream">of data for network access.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="CryptoStream">
+							<g fill="#eee8d5" stroke="#33322E" data-name="CryptoStream">
+								<rect x="802.5" y="1260.0" height="77.0" width="310.0" data-name="CryptoStream"></rect>
+							<path d="M802.5 1291.0 L1112.5 1291.0" fill="none" data-name="CryptoStream"></path>
+							</g>
+						<g transform="translate(802.5, 1260)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CryptoStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CryptoStream">
+									<text x="147.0" y="13.5" stroke="none" text-anchor="middle" data-name="CryptoStream">CryptoStream</text>
+								
+								</g>
+							</g>
+						<g transform="translate(802.5, 1291)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CryptoStream">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CryptoStream">
+									<text x="0.0" y="13.5" stroke="none" data-name="CryptoStream">Defines a stream that links data</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="CryptoStream">streams to cryptographic transformations.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IAsyncDisposable">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IAsyncDisposable">
+								<rect x="90.0" y="705.8" height="31.0" width="154.0" data-name="IAsyncDisposable"></rect>
+							</g>
+						<g transform="translate(90, 705.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncDisposable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncDisposable">
+									<text x="69.0" y="13.5" stroke="none" text-anchor="middle" data-name="IAsyncDisposable">IAsyncDisposable</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IDisposable">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+								<rect x="114.0" y="776.8" height="31.0" width="106.0" data-name="IDisposable"></rect>
+							</g>
+						<g transform="translate(114, 776.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+									<text x="45.0" y="13.5" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

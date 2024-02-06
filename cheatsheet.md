@@ -1,7 +1,9 @@
+[[toc]]
+
+:::content
 # Ultimate .NET Cheat sheet
 
 ![cheat sheet header](img/header.svg)
-
 
 ## Authors
 
@@ -77,7 +79,7 @@ Note: solution file name can be ignored if folder only contains one sln file.
 
 Globaly means that the tool is installed to the users profile, instead of the current project/solution.
 
-## Usefull tools:
+## Usefull tools
 
 * **csharprepl**
 
@@ -692,3 +694,10 @@ numbers is [1, 2, 4]; //false
 numbers is [1, 2, 3, 4]; //false
 numbers is [0 or 1, <= 2, >= 3]; //true
 ```
+
+# I/O
+
+![Stream types](img/streamtypes.svg)
+
+![Reader and writer types](img/streamwriters.svg)
+:::
