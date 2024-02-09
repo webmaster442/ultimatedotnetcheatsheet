@@ -1,1 +1,1 @@
-bookgen md2html -i .\cheatsheet.md --css style.css -o output\cheatsheet.html
+bookgen md2html --svg --title "Ultimate .NET Cheat sheet" -i .\cheatsheet.md --css style.css -o output\cheatsheet.html

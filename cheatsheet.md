@@ -1,4 +1,6 @@
-[[toc]]
+:::parent
+
+[[toc]] Contents
 
 :::content
 # Ultimate .NET Cheat sheet
@@ -19,7 +21,7 @@ The .NET copyright of the .NET authors. - https://github.com/dotnet/brand
 
 ## Changelog
 
-* 2023.04.11 - Initial release 
+* 2024.02.09 - Initial release
 
 # Dotnet basic commands
 
@@ -80,6 +82,10 @@ Note: solution file name can be ignored if folder only contains one sln file.
 Globaly means that the tool is installed to the users profile, instead of the current project/solution.
 
 ## Usefull tools
+
+* **dotnet-ef**
+
+	The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects. Install with: `dotnet tool install --global dotnet-ef`
 
 * **csharprepl**
 
@@ -700,4 +706,5 @@ numbers is [0 or 1, <= 2, >= 3]; //true
 ![Stream types](img/streamtypes.svg)
 
 ![Reader and writer types](img/streamwriters.svg)
+:::
 :::

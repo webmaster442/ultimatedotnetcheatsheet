@@ -1,2513 +1,792 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   version="1.1"
-   width="1200"
-   height="1142.929"
-   viewbox="0 0 1487 1418.75"
-   id="svg258"
-   sodipodi:docname="common_exceptions.svg"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs258" />
-  <sodipodi:namedview
-     id="namedview258"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.86058638"
-     inkscape:cx="716.37201"
-     inkscape:cy="682.67406"
-     inkscape:window-width="3345"
-     inkscape:window-height="1417"
-     inkscape:window-x="87"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg258" />
-  <desc
-     id="desc1">#direction: right&#10;	#spacing: 8&#10;	#gravity: .8&#10;	&#10;	[ArithmeticException|The exception that is thrown &#10;	for errors in an arithmetic, &#10;	casting, or conversion operation]&#10;	&#10;	[Exception|Represents errors that &#10;	occur during application execution.]&#10;	&#10;	[RuntimeBinderException|Represents an error that occurs &#10;	when a dynamic bind in the C#&#10;	runtime binder is processed.]&#10;	&#10;	[AggregateException|Represents one or more errors&#10;	that occur during application execution.]&#10;	&#10;	[ApplicationException|Serves as the base class&#10;	for application-defined exceptions]&#10;	&#10;	[JsonException|Defines a custom exception&#10;	object that is thrown when&#10;	invalid JSON text is encountered]&#10;	&#10;	[SystemException|Serves as the base class for system exceptions]&#10;	&#10;	[AccessViolationException|An access violation occurs &#10;	in unmanaged or unsafe code when the code attempts&#10;	to read or write to memory that has not been allocated, &#10;	or to which it does not have access.&#10;	This usually occurs because a pointer has a bad value.]&#10;	&#10;	[DivideByZeroException|The exception that is thrown &#10;	when there is an attempt to divide an &#10;	integral or Decimal value by zero.]&#10;	&#10;	[OverflowException|The exception that is thrown &#10;	when an arithmetic, casting, &#10;	or conversion operation in a checked &#10;	context results in an overflow.]&#10;	&#10;	[NotFiniteNumberException|The exception that is thrown&#10;	when a floating-point value is&#10;	positive infinity, &#10;	negative infinity,&#10;	or Not-a-Number (NaN).|&#10;	Available for programming languages &#10;	that do not support the concepts &#10;	of infinity and Not-a-Number &#10;	in floating-point operations.]&#10;	&#10;	[FormatException|The exception that is thrown when &#10;	the format of an argument is invalid,&#10;	or when a composite format &#10;	string is not well formed.]&#10;	&#10;	[StackOverflowException|The exception that is thrown when the execution &#10;	stack exceeds the stack size. This class cannot be inherited.]&#10;	&#10;	[InvalidCastException|The exception that is thrown &#10;	for invalid casting or explicit conversion.]&#10;	&#10;	[InvalidOperationException|The exception that is thrown when a method&#10;	call is invalid for the object's current state.]&#10;	&#10;	[OutOfMemoryException|The exception that is thrown when&#10;	there is not enough memory to continue&#10;	the execution of a program.]&#10;	&#10;	[IOException|he exception that is thrown&#10;	when an I/O error occurs.]&#10;	&#10;	[IndexOutOfRangeException|The exception that is thrown when &#10;	an attempt is made to access an element &#10;	of an array or collection with an &#10;	index that is outside its bounds.]&#10;	&#10;	[DirectoryNotFoundException|The exception that is thrown &#10;	when part of a file or directory cannot be found.]&#10;	&#10;	[DriveNotFoundException|The exception that is thrown&#10;	when trying to access a drive &#10;	or share that is not available.]&#10;	&#10;	[EndOfStreamException|The exception that is thrown &#10;	when reading is attempted&#10;	past the end of a stream.]&#10;	&#10;	[FileLoadException|The exception that is thrown &#10;	when a managed assembly is found&#10;	but cannot be loaded.]&#10;	&#10;	[FileNotFoundException|The exception that is thrown &#10;	when an attempt to access a file that&#10;	doesnot exist on disk fails.]&#10;	&#10;	[NullReferenceException|The exception that is thrown when there &#10;	is an attempt to dereference &#10;	a null object reference.]&#10;	&#10;	[PathTooLongException|The exception that is thrown when &#10;	a path or fully qualified file name is longer&#10;	than the system-defined maximum length.]&#10;	&#10;	[NotImplementedException|The exception that is thrown &#10;	when a requested method or&#10;	operation is not implemented.]&#10;	&#10;	[NotSupportedException|The exception that is thrown when &#10;	an invoked method is not supported,&#10;	or when there is an attempt to read, &#10;	seek, or write to a stream that does&#10;	not support the invoked functionality.]&#10;	&#10;	[PlatformNotSupportedException|The exception that is thrown&#10;	when a feature does not run&#10;	on a particular platform.]&#10;	&#10;	[Exception] &lt;- [RuntimeBinderException]&#10;	[Exception] &lt;- [SystemException]&#10;	[Exception] &lt;- [AggregateException]&#10;	[Exception] &lt;- [ApplicationException]&#10;	[Exception] &lt;- [JsonException]&#10;	&#10;	[SystemException] &lt;- [ArithmeticException]&#10;	[SystemException] &lt;- [AccessViolationException]&#10;	[SystemException] &lt;- [FormatException]&#10;	[SystemException] &lt;- [InvalidOperationException]&#10;	[SystemException] &lt;- [StackOverflowException]&#10;	[SystemException] &lt;- [OutOfMemoryException]&#10;	[SystemException] &lt;- [IOException]&#10;	[SystemException] &lt;- [IndexOutOfRangeException]&#10;	[SystemException] &lt;- [NullReferenceException]&#10;	[SystemException] &lt;- [NotImplementedException]&#10;	[SystemException] &lt;- [NotSupportedException] &lt;- [PlatformNotSupportedException]&#10;	&#10;	[IOException] &lt;- [DirectoryNotFoundException]&#10;	[IOException] &lt;- [DriveNotFoundException]&#10;	[IOException] &lt;- [EndOfStreamException]&#10;	[IOException] &lt;- [FileLoadException]&#10;	[IOException] &lt;- [FileNotFoundException]&#10;	[IOException] &lt;- [PathTooLongException]&#10;	&#10;	[ArithmeticException] &lt;- [DivideByZeroException]&#10;	[ArithmeticException] &lt;- [NotFiniteNumberException]&#10;	[ArithmeticException] &lt;- [InvalidCastException]&#10;	[ArithmeticException] &lt;- [OverflowException]</desc>
-  <g
-     stroke-width="1"
-     text-align="left"
-     font="12pt Helvetica, Arial, sans-serif"
-     font-size="16px"
-     font-family="Helvetica"
-     font-weight="normal"
-     font-style="normal"
-     id="g258"
-     transform="matrix(0.83682008,0,0,0.83682008,-22.175732,-22.175732)">
-    <g
-       font-family="Helvetica"
-       font-size="16px"
-       font-weight="bold"
-       font-style="normal"
-       stroke-width="3"
-       stroke-linejoin="round"
-       stroke-linecap="round"
-       stroke="#33322e"
-       id="g257">
-      <g
-         transform="translate(8,8)"
-         fill="#33322e"
-         id="g256">
-        <g
-           transform="translate(20,20)"
-           fill="#33322e"
-           font-family="Helvetica"
-           font-size="16px"
-           font-weight="normal"
-           font-style="normal"
-           id="g255">
-          <path
-             d="M 161.1,569.7 266,431.75 h 60 v 0.05"
-             fill="none"
-             id="path1" />
-          <path
-             d="m 161,568 0.1,1.7 1.6,-0.4 -2.4,1.5 z"
-             id="path2" />
-          <path
-             d="M 161.1,648.8 266,786.75 h 4 v 0.05"
-             fill="none"
-             id="path3" />
-          <path
-             d="m 162.7,649.2 -1.6,-0.4 -0.1,1.7 -0.7,-2.7 z"
-             id="path4" />
-          <path
-             d="M 193.3,570 266,524.25 h 33.5 v 0.05"
-             fill="none"
-             id="path5" />
-          <path
-             d="m 193.8,568.4 -0.5,1.6 1.7,0.2 -2.9,0.6 z"
-             id="path6" />
-          <path
-             d="m 263.3,609.3 2.7,-0.05 h 53 v 0.05"
-             fill="none"
-             id="path7" />
-          <path
-             d="m 264.7,608.2 -1.4,1.1 1.4,1 -2.7,-1 z"
-             id="path8" />
-          <path
-             d="m 188.3,648.5 77.7,53.25 h 56 v 0.05"
-             fill="none"
-             id="path9" />
-          <path
-             d="m 190,648.4 -1.7,0.1 0.5,1.6 -1.6,-2.3 z"
-             id="path10" />
-          <path
-             d="M 457.3,754.5 626,271.75 h 104.5 v 0.05"
-             fill="none"
-             id="path11" />
-          <path
-             d="m 456.7,752.9 0.6,1.6 1.4,-0.9 -1.9,2.2 z"
-             id="path12" />
-          <path
-             d="M 460.5,754.5 626,386.75 h 23 v 0.05"
-             fill="none"
-             id="path13" />
-          <path
-             d="m 460.1,752.9 0.4,1.6 1.5,-0.7 -2.1,2 z"
-             id="path14" />
-          <path
-             d="M 466.8,754.6 626,509.25 h 90.5 v 0.05"
-             fill="none"
-             id="path15" />
-          <path
-             d="m 466.7,752.9 0.1,1.7 1.7,-0.5 -2.4,1.7 z"
-             id="path16" />
-          <path
-             d="M 507.5,755.1 626,694.25 h 61 v 0.05"
-             fill="none"
-             id="path17" />
-          <path
-             d="m 508.2,753.6 -0.7,1.5 1.7,0.4 -2.9,0.3 z"
-             id="path18" />
-          <path
-             d="M 478.4,754.8 626,609.25 h 4 v 0.05"
-             fill="none"
-             id="path19" />
-          <path
-             d="m 478.6,753.1 -0.2,1.7 1.7,-0.2 -2.7,1.2 z"
-             id="path20" />
-          <path
-             d="m 623.3,786.8 2.7,-0.05 h 77 v 0.05"
-             fill="none"
-             id="path21" />
-          <path
-             d="m 624.7,785.7 -1.4,1.1 1.4,1 -2.7,-1 z"
-             id="path22" />
-          <path
-             d="M 507.5,818.4 626,879.25 h 122.5 v 0.05"
-             fill="none"
-             id="path23" />
-          <path
-             d="m 509.2,818 -1.7,0.4 0.7,1.5 -1.9,-2.1 z"
-             id="path24" />
-          <path
-             d="M 475.9,818.7 626,979.25 h 72 v 0.05"
-             fill="none"
-             id="path25" />
-          <path
-             d="m 477.6,819 -1.7,-0.3 0.1,1.7 -1,-2.6 z"
-             id="path26" />
-          <path
-             d="M 465.3,818.9 626,1086.75 h 76 v 0.05"
-             fill="none"
-             id="path27" />
-          <path
-             d="m 466.9,819.5 -1.6,-0.6 -0.2,1.7 -0.5,-2.8 z"
-             id="path28" />
-          <path
-             d="M 460.5,819 626,1186.75 h 113 v 0.05"
-             fill="none"
-             id="path29" />
-          <path
-             d="m 462,819.7 -1.5,-0.7 -0.4,1.6 -0.2,-2.8 z"
-             id="path30" />
-          <path
-             d="M 457.3,819 626,1301.75 h 88.5 v 0.05"
-             fill="none"
-             id="path31" />
-          <path
-             d="m 458.7,819.9 -1.4,-0.9 -0.6,1.6 0.1,-2.8 z"
-             id="path32" />
-          <path
-             d="m 989.8,1301.8 87.2,-0.05 h 47.5 v 0.05"
-             fill="none"
-             id="path33" />
-          <path
-             d="m 991.2,1300.7 -1.4,1.1 1.4,1 -2.7,-1 z"
-             id="path34" />
-          <path
-             d="M 881.2,839.7 1077,579.25 h 4 v 0.05"
-             fill="none"
-             id="path35" />
-          <path
-             d="m 881.2,838 v 1.7 l 1.7,-0.4 -2.5,1.5 z"
-             id="path36" />
-          <path
-             d="M 894.3,839.8 1077,671.75 h 68 v 0.05"
-             fill="none"
-             id="path37" />
-          <path
-             d="m 894.6,838.2 -0.3,1.6 1.7,-0.1 -2.7,1.1 z"
-             id="path38" />
-          <path
-             d="M 933.5,840.2 1077,771.75 h 71 v 0.05"
-             fill="none"
-             id="path39" />
-          <path
-             d="m 934.2,838.6 -0.7,1.6 1.6,0.4 -2.8,0.2 z"
-             id="path40" />
-          <path
-             d="m 955.8,907.6 121.2,32.9 h 43.5 v 0"
-             fill="none"
-             id="path41" />
-          <path
-             d="m 957.4,906.9 -1.6,0.7 1,1.4 -2.3,-1.8 z"
-             id="path42" />
-          <path
-             d="m 906.4,918.5 170.6,122 h 41.5 v 0"
-             fill="none"
-             id="path43" />
-          <path
-             d="m 908.1,918.4 -1.7,0.1 0.5,1.7 -1.6,-2.4 z"
-             id="path44" />
-          <path
-             d="m 885.6,918.8 191.4,221.7 h 23 v 0"
-             fill="none"
-             id="path45" />
-          <path
-             d="m 887.3,919.1 -1.7,-0.3 0.1,1.7 -1,-2.7 z"
-             id="path46" />
-          <path
-             d="M 898.4,224.8 1077,46 h 40.5 v 0"
-             fill="none"
-             id="path47" />
-          <path
-             d="m 898.6,223.1 -0.2,1.7 1.7,-0.2 -2.7,1.2 z"
-             id="path48" />
-          <path
-             d="M 973.8,232.3 1077,199 h 39 v 0"
-             fill="none"
-             id="path49" />
-          <path
-             d="m 974.7,230.9 -0.9,1.4 1.6,0.6 -2.9,-0.2 z"
-             id="path50" />
-          <path
-             d="m 949.2,318.3 127.8,60.95 h 30.5 v 0.05"
-             fill="none"
-             id="path51" />
-          <path
-             d="m 950.9,317.9 -1.7,0.4 0.7,1.6 -1.9,-2.1 z"
-             id="path52" />
-          <path
-             d="M 902.5,318.7 1077,479.25 h 40.5 v 0.05"
-             fill="none"
-             id="path53" />
-          <path
-             d="m 904.2,318.8 -1.7,-0.1 0.2,1.6 -1.2,-2.5 z"
-             id="path54" />
-          <g
-             data-name="ArithmeticException"
-             id="g61">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="ArithmeticException"
-               id="g55">
-              <rect
-                 x="730.5"
-                 y="225.8"
-                 height="92"
-                 width="242"
-                 data-name="ArithmeticException"
-                 id="rect54" />
-              <path
-                 d="m 730.5,256.8 h 242"
-                 fill="none"
-                 data-name="ArithmeticException"
-                 id="path55" />
-            </g>
-            <g
-               transform="translate(730.5,225.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="ArithmeticException"
-               id="g57">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="ArithmeticException"
-                 id="g56">
-                <text
-                   x="113"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="ArithmeticException"
-                   id="text55">ArithmeticException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(730.5,256.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="ArithmeticException"
-               id="g60">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="ArithmeticException"
-                 id="g59">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="ArithmeticException"
-                   id="text57">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="ArithmeticException"
-                   id="text58">for errors in an arithmetic,</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="ArithmeticException"
-                   id="text59">casting, or conversion operation</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="Exception"
-             id="g67">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="Exception"
-               id="g62">
-              <rect
-                 x="0"
-                 y="570.79999"
-                 height="77"
-                 width="262"
-                 data-name="Exception"
-                 id="rect61" />
-              <path
-                 d="M 0,601.8 H 262"
-                 fill="none"
-                 data-name="Exception"
-                 id="path61" />
-            </g>
-            <g
-               transform="translate(0,570.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="Exception"
-               id="g64">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="Exception"
-                 id="g63">
-                <text
-                   x="123"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="Exception"
-                   id="text62">Exception</text>
-              </g>
-            </g>
-            <g
-               transform="translate(0,601.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="Exception"
-               id="g66">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="Exception"
-                 id="g65">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="Exception"
-                   id="text64">Represents errors that</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="Exception"
-                   id="text65">occur during application execution.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="RuntimeBinderException"
-             id="g74">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="RuntimeBinderException"
-               id="g68">
-              <rect
-                 x="326"
-                 y="385.79999"
-                 height="92"
-                 width="240"
-                 data-name="RuntimeBinderException"
-                 id="rect67" />
-              <path
-                 d="M 326,416.8 H 566"
-                 fill="none"
-                 data-name="RuntimeBinderException"
-                 id="path67" />
-            </g>
-            <g
-               transform="translate(326,385.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="RuntimeBinderException"
-               id="g70">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="RuntimeBinderException"
-                 id="g69">
-                <text
-                   x="112"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="RuntimeBinderException"
-                   id="text68">RuntimeBinderException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(326,416.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="RuntimeBinderException"
-               id="g73">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="RuntimeBinderException"
-                 id="g72">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="RuntimeBinderException"
-                   id="text70">Represents an error that occurs</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="RuntimeBinderException"
-                   id="text71">when a dynamic bind in the C#</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="RuntimeBinderException"
-                   id="text72">runtime binder is processed.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="AggregateException"
-             id="g80">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="AggregateException"
-               id="g75">
-              <rect
-                 x="299.5"
-                 y="485.79999"
-                 height="77"
-                 width="293"
-                 data-name="AggregateException"
-                 id="rect74" />
-              <path
-                 d="m 299.5,516.8 h 293"
-                 fill="none"
-                 data-name="AggregateException"
-                 id="path74" />
-            </g>
-            <g
-               transform="translate(299.5,485.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="AggregateException"
-               id="g77">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="AggregateException"
-                 id="g76">
-                <text
-                   x="138.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="AggregateException"
-                   id="text75">AggregateException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(299.5,516.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="AggregateException"
-               id="g79">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="AggregateException"
-                 id="g78">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="AggregateException"
-                   id="text77">Represents one or more errors</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="AggregateException"
-                   id="text78">that occur during application execution.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="ApplicationException"
-             id="g86">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="ApplicationException"
-               id="g81">
-              <rect
-                 x="319"
-                 y="570.79999"
-                 height="77"
-                 width="254"
-                 data-name="ApplicationException"
-                 id="rect80" />
-              <path
-                 d="M 319,601.8 H 573"
-                 fill="none"
-                 data-name="ApplicationException"
-                 id="path80" />
-            </g>
-            <g
-               transform="translate(319,570.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="ApplicationException"
-               id="g83">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="ApplicationException"
-                 id="g82">
-                <text
-                   x="119"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="ApplicationException"
-                   id="text81">ApplicationException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(319,601.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="ApplicationException"
-               id="g85">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="ApplicationException"
-                 id="g84">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="ApplicationException"
-                   id="text83">Serves as the base class</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="ApplicationException"
-                   id="text84">for application-defined exceptions</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="JsonException"
-             id="g93">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="JsonException"
-               id="g87">
-              <rect
-                 x="322"
-                 y="655.79999"
-                 height="92"
-                 width="248"
-                 data-name="JsonException"
-                 id="rect86" />
-              <path
-                 d="M 322,686.8 H 570"
-                 fill="none"
-                 data-name="JsonException"
-                 id="path86" />
-            </g>
-            <g
-               transform="translate(322,655.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="JsonException"
-               id="g89">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="JsonException"
-                 id="g88">
-                <text
-                   x="116"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="JsonException"
-                   id="text87">JsonException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(322,686.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="JsonException"
-               id="g92">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="JsonException"
-                 id="g91">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="JsonException"
-                   id="text89">Defines a custom exception</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="JsonException"
-                   id="text90">object that is thrown when</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="JsonException"
-                   id="text91">invalid JSON text is encountered</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="SystemException"
-             id="g99">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="SystemException"
-               id="g94">
-              <rect
-                 x="270"
-                 y="755.79999"
-                 height="62"
-                 width="352"
-                 data-name="SystemException"
-                 id="rect93" />
-              <path
-                 d="M 270,786.8 H 622"
-                 fill="none"
-                 data-name="SystemException"
-                 id="path93" />
-            </g>
-            <g
-               transform="translate(270,755.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="SystemException"
-               id="g96">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="SystemException"
-                 id="g95">
-                <text
-                   x="168"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="SystemException"
-                   id="text94">SystemException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(270,786.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="SystemException"
-               id="g98">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="SystemException"
-                 id="g97">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="SystemException"
-                   id="text96">Serves as the base class for system exceptions</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="AccessViolationException"
-             id="g108">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="AccessViolationException"
-               id="g100">
-              <rect
-                 x="649"
-                 y="325.79999"
-                 height="122"
-                 width="405"
-                 data-name="AccessViolationException"
-                 id="rect99" />
-              <path
-                 d="m 649,356.8 h 405"
-                 fill="none"
-                 data-name="AccessViolationException"
-                 id="path99" />
-            </g>
-            <g
-               transform="translate(649,325.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="AccessViolationException"
-               id="g102">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="AccessViolationException"
-                 id="g101">
-                <text
-                   x="194.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="AccessViolationException"
-                   id="text100">AccessViolationException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(649,356.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="AccessViolationException"
-               id="g107">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="AccessViolationException"
-                 id="g106">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="AccessViolationException"
-                   id="text102">An access violation occurs</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="AccessViolationException"
-                   id="text103">in unmanaged or unsafe code when the code attempts</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="AccessViolationException"
-                   id="text104">to read or write to memory that has not been allocated,</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="AccessViolationException"
-                   id="text105">or to which it does not have access.</text>
-                <text
-                   x="0"
-                   y="73.5"
-                   stroke="none"
-                   data-name="AccessViolationException"
-                   id="text106">This usually occurs because a pointer has a bad value.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="DivideByZeroException"
-             id="g115">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="DivideByZeroException"
-               id="g109">
-              <rect
-                 x="1117.5"
-                 y="0"
-                 height="92"
-                 width="277"
-                 data-name="DivideByZeroException"
-                 id="rect108" />
-              <path
-                 d="m 1117.5,31 h 277"
-                 fill="none"
-                 data-name="DivideByZeroException"
-                 id="path108" />
-            </g>
-            <g
-               transform="translate(1117.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="DivideByZeroException"
-               id="g111">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="DivideByZeroException"
-                 id="g110">
-                <text
-                   x="130.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="DivideByZeroException"
-                   id="text109">DivideByZeroException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1117.5,31)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="DivideByZeroException"
-               id="g114">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="DivideByZeroException"
-                 id="g113">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="DivideByZeroException"
-                   id="text111">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="DivideByZeroException"
-                   id="text112">when there is an attempt to divide an</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="DivideByZeroException"
-                   id="text113">integral or Decimal value by zero.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="OverflowException"
-             id="g123">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="OverflowException"
-               id="g116">
-              <rect
-                 x="1117.5"
-                 y="425.79999"
-                 height="107"
-                 width="277"
-                 data-name="OverflowException"
-                 id="rect115" />
-              <path
-                 d="m 1117.5,456.8 h 277"
-                 fill="none"
-                 data-name="OverflowException"
-                 id="path115" />
-            </g>
-            <g
-               transform="translate(1117.5,425.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="OverflowException"
-               id="g118">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="OverflowException"
-                 id="g117">
-                <text
-                   x="130.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="OverflowException"
-                   id="text116">OverflowException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1117.5,456.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="OverflowException"
-               id="g122">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="OverflowException"
-                 id="g121">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="OverflowException"
-                   id="text118">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="OverflowException"
-                   id="text119">when an arithmetic, casting,</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="OverflowException"
-                   id="text120">or conversion operation in a checked</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="OverflowException"
-                   id="text121">context results in an overflow.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="NotFiniteNumberException"
-             id="g136">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="NotFiniteNumberException"
-               id="g124">
-              <rect
-                 x="1116"
-                 y="100"
-                 height="198"
-                 width="280"
-                 data-name="NotFiniteNumberException"
-                 id="rect123" />
-              <path
-                 d="m 1116,131 h 280"
-                 fill="none"
-                 data-name="NotFiniteNumberException"
-                 id="path123" />
-              <path
-                 d="m 1116,222 h 280"
-                 fill="none"
-                 data-name="NotFiniteNumberException"
-                 id="path124" />
-            </g>
-            <g
-               transform="translate(1116,100)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="NotFiniteNumberException"
-               id="g126">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="NotFiniteNumberException"
-                 id="g125">
-                <text
-                   x="132"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="NotFiniteNumberException"
-                   id="text124">NotFiniteNumberException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1116,131)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="NotFiniteNumberException"
-               id="g131">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="NotFiniteNumberException"
-                 id="g130">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text126">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text127">when a floating-point value is</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text128">positive infinity,</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text129">negative infinity,</text>
-                <text
-                   x="0"
-                   y="73.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text130">or Not-a-Number (NaN).</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1116,222)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="NotFiniteNumberException"
-               id="g135">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="NotFiniteNumberException"
-                 id="g134">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text131">Available for programming languages</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text132">that do not support the concepts</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text133">of infinity and Not-a-Number</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="NotFiniteNumberException"
-                   id="text134">in floating-point operations.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="FormatException"
-             id="g144">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="FormatException"
-               id="g137">
-              <rect
-                 x="716.5"
-                 y="455.79999"
-                 height="107"
-                 width="270"
-                 data-name="FormatException"
-                 id="rect136" />
-              <path
-                 d="m 716.5,486.8 h 270"
-                 fill="none"
-                 data-name="FormatException"
-                 id="path136" />
-            </g>
-            <g
-               transform="translate(716.5,455.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="FormatException"
-               id="g139">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="FormatException"
-                 id="g138">
-                <text
-                   x="127"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="FormatException"
-                   id="text137">FormatException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(716.5,486.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="FormatException"
-               id="g143">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="FormatException"
-                 id="g142">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="FormatException"
-                   id="text139">The exception that is thrown when</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="FormatException"
-                   id="text140">the format of an argument is invalid,</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="FormatException"
-                   id="text141">or when a composite format</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="FormatException"
-                   id="text142">string is not well formed.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="StackOverflowException"
-             id="g150">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="StackOverflowException"
-               id="g145">
-              <rect
-                 x="630"
-                 y="570.79999"
-                 height="77"
-                 width="443"
-                 data-name="StackOverflowException"
-                 id="rect144" />
-              <path
-                 d="m 630,601.8 h 443"
-                 fill="none"
-                 data-name="StackOverflowException"
-                 id="path144" />
-            </g>
-            <g
-               transform="translate(630,570.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="StackOverflowException"
-               id="g147">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="StackOverflowException"
-                 id="g146">
-                <text
-                   x="213.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="StackOverflowException"
-                   id="text145">StackOverflowException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(630,601.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="StackOverflowException"
-               id="g149">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="StackOverflowException"
-                 id="g148">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="StackOverflowException"
-                   id="text147">The exception that is thrown when the execution</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="StackOverflowException"
-                   id="text148">stack exceeds the stack size. This class cannot be inherited.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="InvalidCastException"
-             id="g156">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="InvalidCastException"
-               id="g151">
-              <rect
-                 x="1107.5"
-                 y="340.79999"
-                 height="77"
-                 width="297"
-                 data-name="InvalidCastException"
-                 id="rect150" />
-              <path
-                 d="m 1107.5,371.8 h 297"
-                 fill="none"
-                 data-name="InvalidCastException"
-                 id="path150" />
-            </g>
-            <g
-               transform="translate(1107.5,340.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="InvalidCastException"
-               id="g153">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="InvalidCastException"
-                 id="g152">
-                <text
-                   x="140.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="InvalidCastException"
-                   id="text151">InvalidCastException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1107.5,371.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="InvalidCastException"
-               id="g155">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="InvalidCastException"
-                 id="g154">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="InvalidCastException"
-                   id="text153">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="InvalidCastException"
-                   id="text154">for invalid casting or explicit conversion.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="InvalidOperationException"
-             id="g162">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="InvalidOperationException"
-               id="g157">
-              <rect
-                 x="687"
-                 y="655.79999"
-                 height="77"
-                 width="329"
-                 data-name="InvalidOperationException"
-                 id="rect156" />
-              <path
-                 d="m 687,686.8 h 329"
-                 fill="none"
-                 data-name="InvalidOperationException"
-                 id="path156" />
-            </g>
-            <g
-               transform="translate(687,655.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="InvalidOperationException"
-               id="g159">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="InvalidOperationException"
-                 id="g158">
-                <text
-                   x="156.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="InvalidOperationException"
-                   id="text157">InvalidOperationException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(687,686.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="InvalidOperationException"
-               id="g161">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="InvalidOperationException"
-                 id="g160">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="InvalidOperationException"
-                   id="text159">The exception that is thrown when a method</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="InvalidOperationException"
-                   id="text160">call is invalid for the object's current state.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="OutOfMemoryException"
-             id="g169">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="OutOfMemoryException"
-               id="g163">
-              <rect
-                 x="703"
-                 y="740.79999"
-                 height="92"
-                 width="297"
-                 data-name="OutOfMemoryException"
-                 id="rect162" />
-              <path
-                 d="m 703,771.8 h 297"
-                 fill="none"
-                 data-name="OutOfMemoryException"
-                 id="path162" />
-            </g>
-            <g
-               transform="translate(703,740.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="OutOfMemoryException"
-               id="g165">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="OutOfMemoryException"
-                 id="g164">
-                <text
-                   x="140.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="OutOfMemoryException"
-                   id="text163">OutOfMemoryException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(703,771.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="OutOfMemoryException"
-               id="g168">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="OutOfMemoryException"
-                 id="g167">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="OutOfMemoryException"
-                   id="text165">The exception that is thrown when</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="OutOfMemoryException"
-                   id="text166">there is not enough memory to continue</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="OutOfMemoryException"
-                   id="text167">the execution of a program.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="IOException"
-             id="g175">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="IOException"
-               id="g170">
-              <rect
-                 x="748.5"
-                 y="840.79999"
-                 height="77"
-                 width="206"
-                 data-name="IOException"
-                 id="rect169" />
-              <path
-                 d="m 748.5,871.8 h 206"
-                 fill="none"
-                 data-name="IOException"
-                 id="path169" />
-            </g>
-            <g
-               transform="translate(748.5,840.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="IOException"
-               id="g172">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="IOException"
-                 id="g171">
-                <text
-                   x="95"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="IOException"
-                   id="text170">IOException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(748.5,871.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="IOException"
-               id="g174">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="IOException"
-                 id="g173">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="IOException"
-                   id="text172">he exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="IOException"
-                   id="text173">when an I/O error occurs.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="IndexOutOfRangeException"
-             id="g183">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="IndexOutOfRangeException"
-               id="g176">
-              <rect
-                 x="698"
-                 y="925.79999"
-                 height="107"
-                 width="307"
-                 data-name="IndexOutOfRangeException"
-                 id="rect175" />
-              <path
-                 d="m 698,956.8 h 307"
-                 fill="none"
-                 data-name="IndexOutOfRangeException"
-                 id="path175" />
-            </g>
-            <g
-               transform="translate(698,925.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="IndexOutOfRangeException"
-               id="g178">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="IndexOutOfRangeException"
-                 id="g177">
-                <text
-                   x="145.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="IndexOutOfRangeException"
-                   id="text176">IndexOutOfRangeException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(698,956.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="IndexOutOfRangeException"
-               id="g182">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="IndexOutOfRangeException"
-                 id="g181">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="IndexOutOfRangeException"
-                   id="text178">The exception that is thrown when</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="IndexOutOfRangeException"
-                   id="text179">an attempt is made to access an element</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="IndexOutOfRangeException"
-                   id="text180">of an array or collection with an</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="IndexOutOfRangeException"
-                   id="text181">index that is outside its bounds.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="DirectoryNotFoundException"
-             id="g189">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="DirectoryNotFoundException"
-               id="g184">
-              <rect
-                 x="1081"
-                 y="540.79999"
-                 height="77"
-                 width="350"
-                 data-name="DirectoryNotFoundException"
-                 id="rect183" />
-              <path
-                 d="m 1081,571.8 h 350"
-                 fill="none"
-                 data-name="DirectoryNotFoundException"
-                 id="path183" />
-            </g>
-            <g
-               transform="translate(1081,540.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="DirectoryNotFoundException"
-               id="g186">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="DirectoryNotFoundException"
-                 id="g185">
-                <text
-                   x="167"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="DirectoryNotFoundException"
-                   id="text184">DirectoryNotFoundException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1081,571.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="DirectoryNotFoundException"
-               id="g188">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="DirectoryNotFoundException"
-                 id="g187">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="DirectoryNotFoundException"
-                   id="text186">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="DirectoryNotFoundException"
-                   id="text187">when part of a file or directory cannot be found.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="DriveNotFoundException"
-             id="g196">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="DriveNotFoundException"
-               id="g190">
-              <rect
-                 x="1145"
-                 y="625.79999"
-                 height="92"
-                 width="222"
-                 data-name="DriveNotFoundException"
-                 id="rect189" />
-              <path
-                 d="m 1145,656.8 h 222"
-                 fill="none"
-                 data-name="DriveNotFoundException"
-                 id="path189" />
-            </g>
-            <g
-               transform="translate(1145,625.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="DriveNotFoundException"
-               id="g192">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="DriveNotFoundException"
-                 id="g191">
-                <text
-                   x="103"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="DriveNotFoundException"
-                   id="text190">DriveNotFoundException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1145,656.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="DriveNotFoundException"
-               id="g195">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="DriveNotFoundException"
-                 id="g194">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="DriveNotFoundException"
-                   id="text192">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="DriveNotFoundException"
-                   id="text193">when trying to access a drive</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="DriveNotFoundException"
-                   id="text194">or share that is not available.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="EndOfStreamException"
-             id="g203">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="EndOfStreamException"
-               id="g197">
-              <rect
-                 x="1148"
-                 y="725.79999"
-                 height="92"
-                 width="216"
-                 data-name="EndOfStreamException"
-                 id="rect196" />
-              <path
-                 d="m 1148,756.8 h 216"
-                 fill="none"
-                 data-name="EndOfStreamException"
-                 id="path196" />
-            </g>
-            <g
-               transform="translate(1148,725.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="EndOfStreamException"
-               id="g199">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="EndOfStreamException"
-                 id="g198">
-                <text
-                   x="100"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="EndOfStreamException"
-                   id="text197">EndOfStreamException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1148,756.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="EndOfStreamException"
-               id="g202">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="EndOfStreamException"
-                 id="g201">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="EndOfStreamException"
-                   id="text199">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="EndOfStreamException"
-                   id="text200">when reading is attempted</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="EndOfStreamException"
-                   id="text201">past the end of a stream.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="FileLoadException"
-             id="g210">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="FileLoadException"
-               id="g204">
-              <rect
-                 x="1120.5"
-                 y="894.5"
-                 height="92"
-                 width="271"
-                 data-name="FileLoadException"
-                 id="rect203" />
-              <path
-                 d="m 1120.5,925.5 h 271"
-                 fill="none"
-                 data-name="FileLoadException"
-                 id="path203" />
-            </g>
-            <g
-               transform="translate(1120.5,894.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="FileLoadException"
-               id="g206">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="FileLoadException"
-                 id="g205">
-                <text
-                   x="127.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="FileLoadException"
-                   id="text204">FileLoadException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1120.5,925.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="FileLoadException"
-               id="g209">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="FileLoadException"
-                 id="g208">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="FileLoadException"
-                   id="text206">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="FileLoadException"
-                   id="text207">when a managed assembly is found</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="FileLoadException"
-                   id="text208">but cannot be loaded.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="FileNotFoundException"
-             id="g217">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="FileNotFoundException"
-               id="g211">
-              <rect
-                 x="1118.5"
-                 y="994.5"
-                 height="92"
-                 width="275"
-                 data-name="FileNotFoundException"
-                 id="rect210" />
-              <path
-                 d="m 1118.5,1025.5 h 275"
-                 fill="none"
-                 data-name="FileNotFoundException"
-                 id="path210" />
-            </g>
-            <g
-               transform="translate(1118.5,994.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="FileNotFoundException"
-               id="g213">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="FileNotFoundException"
-                 id="g212">
-                <text
-                   x="129.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="FileNotFoundException"
-                   id="text211">FileNotFoundException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1118.5,1025.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="FileNotFoundException"
-               id="g216">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="FileNotFoundException"
-                 id="g215">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="FileNotFoundException"
-                   id="text213">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="FileNotFoundException"
-                   id="text214">when an attempt to access a file that</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="FileNotFoundException"
-                   id="text215">doesnot exist on disk fails.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="NullReferenceException"
-             id="g224">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="NullReferenceException"
-               id="g218">
-              <rect
-                 x="702"
-                 y="1040.8"
-                 height="92"
-                 width="299"
-                 data-name="NullReferenceException"
-                 id="rect217" />
-              <path
-                 d="m 702,1071.8 h 299"
-                 fill="none"
-                 data-name="NullReferenceException"
-                 id="path217" />
-            </g>
-            <g
-               transform="translate(702,1040.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="NullReferenceException"
-               id="g220">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="NullReferenceException"
-                 id="g219">
-                <text
-                   x="141.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="NullReferenceException"
-                   id="text218">NullReferenceException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(702,1071.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="NullReferenceException"
-               id="g223">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="NullReferenceException"
-                 id="g222">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="NullReferenceException"
-                   id="text220">The exception that is thrown when there</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="NullReferenceException"
-                   id="text221">is an attempt to dereference</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="NullReferenceException"
-                   id="text222">a null object reference.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="PathTooLongException"
-             id="g231">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="PathTooLongException"
-               id="g225">
-              <rect
-                 x="1100"
-                 y="1094.5"
-                 height="92"
-                 width="312"
-                 data-name="PathTooLongException"
-                 id="rect224" />
-              <path
-                 d="m 1100,1125.5 h 312"
-                 fill="none"
-                 data-name="PathTooLongException"
-                 id="path224" />
-            </g>
-            <g
-               transform="translate(1100,1094.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="PathTooLongException"
-               id="g227">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="PathTooLongException"
-                 id="g226">
-                <text
-                   x="148"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="PathTooLongException"
-                   id="text225">PathTooLongException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1100,1125.5)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="PathTooLongException"
-               id="g230">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="PathTooLongException"
-                 id="g229">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="PathTooLongException"
-                   id="text227">The exception that is thrown when</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="PathTooLongException"
-                   id="text228">a path or fully qualified file name is longer</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="PathTooLongException"
-                   id="text229">than the system-defined maximum length.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="NotImplementedException"
-             id="g238">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="NotImplementedException"
-               id="g232">
-              <rect
-                 x="739"
-                 y="1140.8"
-                 height="92"
-                 width="225"
-                 data-name="NotImplementedException"
-                 id="rect231" />
-              <path
-                 d="M 739,1171.8 H 964"
-                 fill="none"
-                 data-name="NotImplementedException"
-                 id="path231" />
-            </g>
-            <g
-               transform="translate(739,1140.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="NotImplementedException"
-               id="g234">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="NotImplementedException"
-                 id="g233">
-                <text
-                   x="104.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="NotImplementedException"
-                   id="text232">NotImplementedException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(739,1171.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="NotImplementedException"
-               id="g237">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="NotImplementedException"
-                 id="g236">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="NotImplementedException"
-                   id="text234">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="NotImplementedException"
-                   id="text235">when a requested method or</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="NotImplementedException"
-                   id="text236">operation is not implemented.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="NotSupportedException"
-             id="g247">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="NotSupportedException"
-               id="g239">
-              <rect
-                 x="714.5"
-                 y="1240.8"
-                 height="122"
-                 width="274"
-                 data-name="NotSupportedException"
-                 id="rect238" />
-              <path
-                 d="m 714.5,1271.8 h 274"
-                 fill="none"
-                 data-name="NotSupportedException"
-                 id="path238" />
-            </g>
-            <g
-               transform="translate(714.5,1240.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="NotSupportedException"
-               id="g241">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="NotSupportedException"
-                 id="g240">
-                <text
-                   x="129"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="NotSupportedException"
-                   id="text239">NotSupportedException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(714.5,1271.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="NotSupportedException"
-               id="g246">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="NotSupportedException"
-                 id="g245">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="NotSupportedException"
-                   id="text241">The exception that is thrown when</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="NotSupportedException"
-                   id="text242">an invoked method is not supported,</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="NotSupportedException"
-                   id="text243">or when there is an attempt to read,</text>
-                <text
-                   x="0"
-                   y="58.5"
-                   stroke="none"
-                   data-name="NotSupportedException"
-                   id="text244">seek, or write to a stream that does</text>
-                <text
-                   x="0"
-                   y="73.5"
-                   stroke="none"
-                   data-name="NotSupportedException"
-                   id="text245">not support the invoked functionality.</text>
-              </g>
-            </g>
-          </g>
-          <g
-             data-name="PlatformNotSupportedException"
-             id="g254">
-            <g
-               fill="#eee8d5"
-               stroke="#33322e"
-               data-name="PlatformNotSupportedException"
-               id="g248">
-              <rect
-                 x="1124.5"
-                 y="1255.8"
-                 height="92"
-                 width="263"
-                 data-name="PlatformNotSupportedException"
-                 id="rect247" />
-              <path
-                 d="m 1124.5,1286.8 h 263"
-                 fill="none"
-                 data-name="PlatformNotSupportedException"
-                 id="path247" />
-            </g>
-            <g
-               transform="translate(1124.5,1255.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="bold"
-               font-style="normal"
-               data-name="PlatformNotSupportedException"
-               id="g250">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="center"
-                 data-name="PlatformNotSupportedException"
-                 id="g249">
-                <text
-                   x="123.5"
-                   y="13.5"
-                   stroke="none"
-                   text-anchor="middle"
-                   data-name="PlatformNotSupportedException"
-                   id="text248">PlatformNotSupportedException</text>
-              </g>
-            </g>
-            <g
-               transform="translate(1124.5,1286.75)"
-               font-family="Helvetica"
-               font-size="16px"
-               font-weight="normal"
-               font-style="normal"
-               data-name="PlatformNotSupportedException"
-               id="g253">
-              <g
-                 transform="translate(8,8)"
-                 fill="#33322e"
-                 text-align="left"
-                 data-name="PlatformNotSupportedException"
-                 id="g252">
-                <text
-                   x="0"
-                   y="13.5"
-                   stroke="none"
-                   data-name="PlatformNotSupportedException"
-                   id="text250">The exception that is thrown</text>
-                <text
-                   x="0"
-                   y="28.5"
-                   stroke="none"
-                   data-name="PlatformNotSupportedException"
-                   id="text251">when a feature does not run</text>
-                <text
-                   x="0"
-                   y="43.5"
-                   stroke="none"
-                   data-name="PlatformNotSupportedException"
-                   id="text252">on a particular platform.</text>
-              </g>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg version="1.1" baseProfile="full" width="1278.0" height="1433.8" viewbox="0 0 1278 1433.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	#spacing: 8
+	#gravity: .8
+		
+		[ArithmeticException|The exception that is thrown 
+		for errors in an arithmetic, 
+		casting, or conversion operation]
+		
+		[Exception|Represents errors that 
+		occur during application
+	    execution.]
+		
+		[RuntimeBinderException|Represents an error that occurs 
+		when a dynamic bind in the C#
+		runtime binder is processed.]
+		
+		[AggregateException|Represents one or more errors
+		that occur during application execution.]
+		
+		[ApplicationException|Serves as the base class
+		for application-defined exceptions]
+		
+		[JsonException|Defines a custom exception
+		object that is thrown when
+		invalid JSON text is encountered]
+		
+		[SystemException|Serves as the base class
+	    for system exceptions]
+		
+		[AccessViolationException|An access violation occurs 
+		in unmanaged or unsafe code when the code attempts
+		to read or write to memory that has not been allocated, 
+		or to which it does not have access.
+		This usually occurs because a pointer has a bad value.]
+		
+		[DivideByZeroException|The exception that is thrown 
+		when there is an attempt to divide an 
+		integral or Decimal value by zero.]
+		
+		[OverflowException|The exception that is thrown 
+		when an arithmetic, casting, 
+		or conversion operation in a checked 
+		context results in an overflow.]
+		
+		[NotFiniteNumberException|The exception that is thrown
+		when a floating-point value is
+		positive infinity, 
+		negative infinity,
+		or Not-a-Number (NaN).|
+		Available for programming languages 
+		that do not support the concepts 
+		of infinity and Not-a-Number 
+		in floating-point operations.]
+		
+		[FormatException|The exception that is thrown when 
+		the format of an argument is invalid,
+		or when a composite format 
+		string is not well formed.]
+		
+		[StackOverflowException|The exception that is thrown when
+	    the execution stack exceeds the stack size. 
+	    This class cannot be inherited.]
+		
+		[InvalidCastException|The exception that is thrown 
+		for invalid casting or explicit conversion.]
+		
+		[InvalidOperationException|The exception that is thrown when a method
+		call is invalid for the object&apos;s current state.]
+		
+		[OutOfMemoryException|The exception that is thrown when
+		there is not enough memory to continue
+		the execution of a program.]
+		
+		[IOException|he exception that is thrown
+		when an I/O error occurs.]
+		
+		[IndexOutOfRangeException|The exception that is thrown when 
+		an attempt is made to access an element 
+		of an array or collection with an 
+		index that is outside its bounds.]
+		
+		[DirectoryNotFoundException|The exception that is thrown 
+		when part of a file or directory 
+	    cannot be found.]
+		
+		[DriveNotFoundException|The exception that is thrown
+		when trying to access a drive 
+		or share that is not available.]
+		
+		[EndOfStreamException|The exception that is thrown 
+		when reading is attempted
+		past the end of a stream.]
+		
+		[FileLoadException|The exception that is thrown 
+		when a managed assembly is found
+		but cannot be loaded.]
+		
+		[FileNotFoundException|The exception that is thrown 
+		when an attempt to access a file that
+		doesnot exist on disk fails.]
+		
+		[NullReferenceException|The exception that is thrown when there 
+		is an attempt to dereference 
+		a null object reference.]
+		
+		[PathTooLongException|The exception that is thrown when 
+		a path or fully qualified file name is longer
+		than the system-defined maximum length.]
+		
+		[NotImplementedException|The exception that is thrown 
+		when a requested method or
+		operation is not implemented.]
+		
+		[NotSupportedException|The exception that is thrown when 
+		an invoked method is not supported,
+		or when there is an attempt to read, 
+		seek, or write to a stream that does
+		not support the invoked functionality.]
+		
+		[PlatformNotSupportedException|The exception that is thrown
+		when a feature does not run
+		on a particular platform.]
+		
+		[Exception] &lt;- [RuntimeBinderException]
+		[Exception] &lt;- [SystemException]
+		[Exception] &lt;- [AggregateException]
+		[Exception] &lt;- [ApplicationException]
+		[Exception] &lt;- [JsonException]
+		
+		[SystemException] &lt;- [ArithmeticException]
+		[SystemException] &lt;- [AccessViolationException]
+		[SystemException] &lt;- [FormatException]
+		[SystemException] &lt;- [InvalidOperationException]
+		[SystemException] &lt;- [StackOverflowException]
+		[SystemException] &lt;- [OutOfMemoryException]
+		[SystemException] &lt;- [IOException]
+		[SystemException] &lt;- [IndexOutOfRangeException]
+		[SystemException] &lt;- [NullReferenceException]
+		[SystemException] &lt;- [NotImplementedException]
+		[SystemException] &lt;- [NotSupportedException] &lt;- [PlatformNotSupportedException]
+		
+		[IOException] &lt;- [DirectoryNotFoundException]
+		[IOException] &lt;- [DriveNotFoundException]
+		[IOException] &lt;- [EndOfStreamException]
+		[IOException] &lt;- [FileLoadException]
+		[IOException] &lt;- [FileNotFoundException]
+		[IOException] &lt;- [PathTooLongException]
+		
+		[ArithmeticException] &lt;- [DivideByZeroException]
+		[ArithmeticException] &lt;- [NotFiniteNumberException]
+		[ArithmeticException] &lt;- [InvalidCastException]
+		[ArithmeticException] &lt;- [OverflowException]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="1433.8" width="1278.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M118.1 569.6 L189 439.25 L219.5 439.25 L219.5 439.3 " fill="none"></path>
+					<path d="M117.8 567.9 L118.1 569.6 L119.7 568.9 L117.5 570.8 Z"></path>
+					<path d="M117.1 663.9 L189 801.75 L243 801.75 L243.0 801.8 " fill="none"></path>
+					<path d="M118.7 664.6 L117.1 663.9 L116.8 665.6 L116.5 662.8 Z"></path>
+					<path d="M145.7 569.9 L189 531.75 L193 531.75 L193.0 531.8 " fill="none"></path>
+					<path d="M146.0 568.2 L145.7 569.9 L147.4 569.8 L144.7 570.8 Z"></path>
+					<path d="M186.3 616.8 L189 616.75 L213 616.75 L213.0 616.8 " fill="none"></path>
+					<path d="M187.7 615.7 L186.3 616.8 L187.7 617.8 L185.0 616.8 Z"></path>
+					<path d="M141.5 663.7 L189 709.25 L216 709.25 L216.0 709.3 " fill="none"></path>
+					<path d="M143.2 663.8 L141.5 663.7 L141.7 665.4 L140.5 662.8 Z"></path>
+					<path d="M351.3 762.0 L491 271.75 L576.5 271.75 L576.5 271.8 " fill="none"></path>
+					<path d="M350.7 760.4 L351.3 762.0 L352.7 761.0 L351.0 763.3 Z"></path>
+					<path d="M354.5 762.0 L491 386.75 L495 386.75 L495.0 386.8 " fill="none"></path>
+					<path d="M353.9 760.4 L354.5 762.0 L355.9 761.1 L354.0 763.3 Z"></path>
+					<path d="M360.5 762.1 L491 509.25 L563 509.25 L563.0 509.3 " fill="none"></path>
+					<path d="M360.2 760.4 L360.5 762.1 L362.0 761.4 L359.9 763.3 Z"></path>
+					<path d="M404.0 762.6 L491 709.25 L533 709.25 L533.0 709.3 " fill="none"></path>
+					<path d="M404.6 760.9 L404.0 762.6 L405.7 762.8 L402.8 763.3 Z"></path>
+					<path d="M372.3 762.2 L491 616.75 L536.5 616.75 L536.5 616.8 " fill="none"></path>
+					<path d="M372.3 760.5 L372.3 762.2 L373.9 761.9 L371.4 763.3 Z"></path>
+					<path d="M438.3 801.8 L491 801.75 L549 801.75 L549.0 801.8 " fill="none"></path>
+					<path d="M439.7 800.7 L438.3 801.8 L439.7 802.8 L437.0 801.8 Z"></path>
+					<path d="M404.0 840.9 L491 894.25 L595 894.25 L595.0 894.3 " fill="none"></path>
+					<path d="M405.7 840.7 L404.0 840.9 L404.6 842.6 L402.8 840.3 Z"></path>
+					<path d="M371.0 841.3 L491 994.25 L544 994.25 L544.0 994.3 " fill="none"></path>
+					<path d="M372.7 841.7 L371.0 841.3 L371.0 843.0 L370.2 840.3 Z"></path>
+					<path d="M360.0 841.4 L491 1101.75 L548 1101.75 L548.0 1101.8 " fill="none"></path>
+					<path d="M361.5 842.2 L360.0 841.4 L359.6 843.1 L359.4 840.3 Z"></path>
+					<path d="M355.0 841.5 L491 1201.75 L585 1201.75 L585.0 1201.8 " fill="none"></path>
+					<path d="M356.5 842.4 L355.0 841.5 L354.5 843.1 L354.5 840.3 Z"></path>
+					<path d="M351.7 841.5 L491 1316.75 L560.5 1316.75 L560.5 1316.8 " fill="none"></path>
+					<path d="M353.1 842.5 L351.7 841.5 L351.0 843.1 L351.3 840.3 Z"></path>
+					<path d="M836.8 1316.8 L905 1316.75 L933.5 1316.75 L933.5 1316.8 " fill="none"></path>
+					<path d="M838.2 1315.7 L836.8 1316.8 L838.2 1317.8 L835.5 1316.8 Z"></path>
+					<path d="M724.7 854.6 L905 586.75 L946.5 586.75 L946.5 586.8 " fill="none"></path>
+					<path d="M724.5 852.9 L724.7 854.6 L726.3 854.1 L723.9 855.8 Z"></path>
+					<path d="M737.3 854.8 L905 686.75 L954.5 686.75 L954.5 686.8 " fill="none"></path>
+					<path d="M737.5 853.1 L737.3 854.8 L739.0 854.6 L736.4 855.8 Z"></path>
+					<path d="M773.3 855.1 L905 786.75 L957.5 786.75 L957.5 786.8 " fill="none"></path>
+					<path d="M774.0 853.6 L773.3 855.1 L775.0 855.5 L772.1 855.8 Z"></path>
+					<path d="M802.3 925.1 L905 955.5 L930 955.5 L930.0 955.5 " fill="none"></path>
+					<path d="M803.9 924.5 L802.3 925.1 L803.3 926.5 L801.0 924.7 Z"></path>
+					<path d="M748.5 933.6 L905 1055.5 L927.5 1055.5 L927.5 1055.5 " fill="none"></path>
+					<path d="M750.2 933.5 L748.5 933.6 L748.9 935.2 L747.4 932.8 Z"></path>
+					<path d="M729.3 933.8 L905 1155.5 L909 1155.5 L909.0 1155.5 " fill="none"></path>
+					<path d="M731.0 934.2 L729.3 933.8 L729.3 935.5 L728.5 932.8 Z"></path>
+					<path d="M741.1 224.8 L905 46 L926.5 46 L926.5 46.0 " fill="none"></path>
+					<path d="M741.2 223.1 L741.1 224.8 L742.8 224.5 L740.2 225.8 Z"></path>
+					<path d="M820.8 228.6 L905 199 L925 199 L925.0 199.0 " fill="none"></path>
+					<path d="M821.7 227.2 L820.8 228.6 L822.4 229.2 L819.5 229.0 Z"></path>
+					<path d="M787.8 318.4 L905 379.25 L916.5 379.25 L916.5 379.3 " fill="none"></path>
+					<path d="M789.4 318.0 L787.8 318.4 L788.5 319.9 L786.6 317.8 Z"></path>
+					<path d="M744.8 318.7 L905 479.25 L926.5 479.25 L926.5 479.3 " fill="none"></path>
+					<path d="M746.5 318.9 L744.8 318.7 L745.0 320.4 L743.9 317.8 Z"></path>
+					<g data-name="ArithmeticException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ArithmeticException">
+								<rect x="576.5" y="225.8" height="92.0" width="243.0" data-name="ArithmeticException"></rect>
+							<path d="M576.5 256.8 L819.5 256.8" fill="none" data-name="ArithmeticException"></path>
+							</g>
+						<g transform="translate(576.5, 225.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ArithmeticException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ArithmeticException">
+									<text x="113.5" y="13.5" stroke="none" text-anchor="middle" data-name="ArithmeticException">ArithmeticException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(576.5, 256.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ArithmeticException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ArithmeticException">
+									<text x="0.0" y="13.5" stroke="none" data-name="ArithmeticException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ArithmeticException">for errors in an arithmetic,</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="ArithmeticException">casting, or conversion operation</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Exception">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Exception">
+								<rect x="0.0" y="570.8" height="92.0" width="185.0" data-name="Exception"></rect>
+							<path d="M0.0 601.8 L185.0 601.8" fill="none" data-name="Exception"></path>
+							</g>
+						<g transform="translate(0, 570.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Exception">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Exception">
+									<text x="84.5" y="13.5" stroke="none" text-anchor="middle" data-name="Exception">Exception</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 601.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Exception">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Exception">
+									<text x="0.0" y="13.5" stroke="none" data-name="Exception">Represents errors that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Exception">occur during application</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="Exception">execution.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="RuntimeBinderException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="RuntimeBinderException">
+								<rect x="219.5" y="393.3" height="92.0" width="241.0" data-name="RuntimeBinderException"></rect>
+							<path d="M219.5 424.3 L460.5 424.3" fill="none" data-name="RuntimeBinderException"></path>
+							</g>
+						<g transform="translate(219.5, 393.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RuntimeBinderException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RuntimeBinderException">
+									<text x="112.5" y="13.5" stroke="none" text-anchor="middle" data-name="RuntimeBinderException">RuntimeBinderException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(219.5, 424.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RuntimeBinderException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RuntimeBinderException">
+									<text x="0.0" y="13.5" stroke="none" data-name="RuntimeBinderException">Represents an error that occurs</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="RuntimeBinderException">when a dynamic bind in the C#</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="RuntimeBinderException">runtime binder is processed.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="AggregateException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="AggregateException">
+								<rect x="193.0" y="493.3" height="77.0" width="294.0" data-name="AggregateException"></rect>
+							<path d="M193.0 524.3 L487.0 524.3" fill="none" data-name="AggregateException"></path>
+							</g>
+						<g transform="translate(193, 493.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AggregateException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AggregateException">
+									<text x="139.0" y="13.5" stroke="none" text-anchor="middle" data-name="AggregateException">AggregateException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(193, 524.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="AggregateException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AggregateException">
+									<text x="0.0" y="13.5" stroke="none" data-name="AggregateException">Represents one or more errors</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="AggregateException">that occur during application execution.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ApplicationException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ApplicationException">
+								<rect x="213.0" y="578.3" height="77.0" width="254.0" data-name="ApplicationException"></rect>
+							<path d="M213.0 609.3 L467.0 609.3" fill="none" data-name="ApplicationException"></path>
+							</g>
+						<g transform="translate(213, 578.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ApplicationException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ApplicationException">
+									<text x="119.0" y="13.5" stroke="none" text-anchor="middle" data-name="ApplicationException">ApplicationException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(213, 609.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ApplicationException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ApplicationException">
+									<text x="0.0" y="13.5" stroke="none" data-name="ApplicationException">Serves as the base class</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ApplicationException">for application-defined exceptions</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="JsonException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="JsonException">
+								<rect x="216.0" y="663.3" height="92.0" width="248.0" data-name="JsonException"></rect>
+							<path d="M216.0 694.3 L464.0 694.3" fill="none" data-name="JsonException"></path>
+							</g>
+						<g transform="translate(216, 663.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="JsonException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="JsonException">
+									<text x="116.0" y="13.5" stroke="none" text-anchor="middle" data-name="JsonException">JsonException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(216, 694.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="JsonException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="JsonException">
+									<text x="0.0" y="13.5" stroke="none" data-name="JsonException">Defines a custom exception</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="JsonException">object that is thrown when</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="JsonException">invalid JSON text is encountered</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="SystemException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="SystemException">
+								<rect x="243.0" y="763.3" height="77.0" width="194.0" data-name="SystemException"></rect>
+							<path d="M243.0 794.3 L437.0 794.3" fill="none" data-name="SystemException"></path>
+							</g>
+						<g transform="translate(243, 763.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SystemException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SystemException">
+									<text x="89.0" y="13.5" stroke="none" text-anchor="middle" data-name="SystemException">SystemException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(243, 794.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="SystemException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SystemException">
+									<text x="0.0" y="13.5" stroke="none" data-name="SystemException">Serves as the base class</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="SystemException">for system exceptions</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="AccessViolationException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="AccessViolationException">
+								<rect x="495.0" y="325.8" height="122.0" width="406.0" data-name="AccessViolationException"></rect>
+							<path d="M495.0 356.8 L901.0 356.8" fill="none" data-name="AccessViolationException"></path>
+							</g>
+						<g transform="translate(495, 325.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AccessViolationException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AccessViolationException">
+									<text x="195.0" y="13.5" stroke="none" text-anchor="middle" data-name="AccessViolationException">AccessViolationException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(495, 356.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="AccessViolationException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AccessViolationException">
+									<text x="0.0" y="13.5" stroke="none" data-name="AccessViolationException">An access violation occurs</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="AccessViolationException">in unmanaged or unsafe code when the code attempts</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="AccessViolationException">to read or write to memory that has not been allocated,</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="AccessViolationException">or to which it does not have access.</text>
+								<text x="0.0" y="73.5" stroke="none" data-name="AccessViolationException">This usually occurs because a pointer has a bad value.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DivideByZeroException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DivideByZeroException">
+								<rect x="926.5" y="0.0" height="92.0" width="278.0" data-name="DivideByZeroException"></rect>
+							<path d="M926.5 31.0 L1204.5 31.0" fill="none" data-name="DivideByZeroException"></path>
+							</g>
+						<g transform="translate(926.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DivideByZeroException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DivideByZeroException">
+									<text x="131.0" y="13.5" stroke="none" text-anchor="middle" data-name="DivideByZeroException">DivideByZeroException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(926.5, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DivideByZeroException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DivideByZeroException">
+									<text x="0.0" y="13.5" stroke="none" data-name="DivideByZeroException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DivideByZeroException">when there is an attempt to divide an</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="DivideByZeroException">integral or Decimal value by zero.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="OverflowException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="OverflowException">
+								<rect x="926.5" y="425.8" height="107.0" width="278.0" data-name="OverflowException"></rect>
+							<path d="M926.5 456.8 L1204.5 456.8" fill="none" data-name="OverflowException"></path>
+							</g>
+						<g transform="translate(926.5, 425.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OverflowException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OverflowException">
+									<text x="131.0" y="13.5" stroke="none" text-anchor="middle" data-name="OverflowException">OverflowException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(926.5, 456.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="OverflowException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="OverflowException">
+									<text x="0.0" y="13.5" stroke="none" data-name="OverflowException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="OverflowException">when an arithmetic, casting,</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="OverflowException">or conversion operation in a checked</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="OverflowException">context results in an overflow.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NotFiniteNumberException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NotFiniteNumberException">
+								<rect x="925.0" y="100.0" height="198.0" width="281.0" data-name="NotFiniteNumberException"></rect>
+							<path d="M925.0 131.0 L1206.0 131.0" fill="none" data-name="NotFiniteNumberException"></path>
+							<path d="M925.0 222.0 L1206.0 222.0" fill="none" data-name="NotFiniteNumberException"></path>
+							</g>
+						<g transform="translate(925, 100)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NotFiniteNumberException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NotFiniteNumberException">
+									<text x="132.5" y="13.5" stroke="none" text-anchor="middle" data-name="NotFiniteNumberException">NotFiniteNumberException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(925, 131)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NotFiniteNumberException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NotFiniteNumberException">
+									<text x="0.0" y="13.5" stroke="none" data-name="NotFiniteNumberException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="NotFiniteNumberException">when a floating-point value is</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="NotFiniteNumberException">positive infinity,</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="NotFiniteNumberException">negative infinity,</text>
+								<text x="0.0" y="73.5" stroke="none" data-name="NotFiniteNumberException">or Not-a-Number (NaN).</text>
+								
+								</g>
+							</g>
+						<g transform="translate(925, 222)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NotFiniteNumberException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NotFiniteNumberException">
+									<text x="0.0" y="13.5" stroke="none" data-name="NotFiniteNumberException">Available for programming languages</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="NotFiniteNumberException">that do not support the concepts</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="NotFiniteNumberException">of infinity and Not-a-Number</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="NotFiniteNumberException">in floating-point operations.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FormatException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FormatException">
+								<rect x="563.0" y="455.8" height="107.0" width="270.0" data-name="FormatException"></rect>
+							<path d="M563.0 486.8 L833.0 486.8" fill="none" data-name="FormatException"></path>
+							</g>
+						<g transform="translate(563, 455.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FormatException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FormatException">
+									<text x="127.0" y="13.5" stroke="none" text-anchor="middle" data-name="FormatException">FormatException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(563, 486.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FormatException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FormatException">
+									<text x="0.0" y="13.5" stroke="none" data-name="FormatException">The exception that is thrown when</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FormatException">the format of an argument is invalid,</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="FormatException">or when a composite format</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="FormatException">string is not well formed.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="StackOverflowException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="StackOverflowException">
+								<rect x="536.5" y="570.8" height="92.0" width="323.0" data-name="StackOverflowException"></rect>
+							<path d="M536.5 601.8 L859.5 601.8" fill="none" data-name="StackOverflowException"></path>
+							</g>
+						<g transform="translate(536.5, 570.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StackOverflowException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StackOverflowException">
+									<text x="153.5" y="13.5" stroke="none" text-anchor="middle" data-name="StackOverflowException">StackOverflowException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(536.5, 601.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StackOverflowException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StackOverflowException">
+									<text x="0.0" y="13.5" stroke="none" data-name="StackOverflowException">The exception that is thrown when</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="StackOverflowException">the execution stack exceeds the stack size.</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="StackOverflowException">This class cannot be inherited.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="InvalidCastException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="InvalidCastException">
+								<rect x="916.5" y="340.8" height="77.0" width="298.0" data-name="InvalidCastException"></rect>
+							<path d="M916.5 371.8 L1214.5 371.8" fill="none" data-name="InvalidCastException"></path>
+							</g>
+						<g transform="translate(916.5, 340.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="InvalidCastException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="InvalidCastException">
+									<text x="141.0" y="13.5" stroke="none" text-anchor="middle" data-name="InvalidCastException">InvalidCastException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(916.5, 371.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="InvalidCastException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="InvalidCastException">
+									<text x="0.0" y="13.5" stroke="none" data-name="InvalidCastException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="InvalidCastException">for invalid casting or explicit conversion.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="InvalidOperationException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="InvalidOperationException">
+								<rect x="533.0" y="670.8" height="77.0" width="330.0" data-name="InvalidOperationException"></rect>
+							<path d="M533.0 701.8 L863.0 701.8" fill="none" data-name="InvalidOperationException"></path>
+							</g>
+						<g transform="translate(533, 670.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="InvalidOperationException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="InvalidOperationException">
+									<text x="157.0" y="13.5" stroke="none" text-anchor="middle" data-name="InvalidOperationException">InvalidOperationException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(533, 701.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="InvalidOperationException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="InvalidOperationException">
+									<text x="0.0" y="13.5" stroke="none" data-name="InvalidOperationException">The exception that is thrown when a method</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="InvalidOperationException">call is invalid for the object&apos;s current state.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="OutOfMemoryException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="OutOfMemoryException">
+								<rect x="549.0" y="755.8" height="92.0" width="298.0" data-name="OutOfMemoryException"></rect>
+							<path d="M549.0 786.8 L847.0 786.8" fill="none" data-name="OutOfMemoryException"></path>
+							</g>
+						<g transform="translate(549, 755.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OutOfMemoryException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OutOfMemoryException">
+									<text x="141.0" y="13.5" stroke="none" text-anchor="middle" data-name="OutOfMemoryException">OutOfMemoryException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(549, 786.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="OutOfMemoryException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="OutOfMemoryException">
+									<text x="0.0" y="13.5" stroke="none" data-name="OutOfMemoryException">The exception that is thrown when</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="OutOfMemoryException">there is not enough memory to continue</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="OutOfMemoryException">the execution of a program.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IOException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IOException">
+								<rect x="595.0" y="855.8" height="77.0" width="206.0" data-name="IOException"></rect>
+							<path d="M595.0 886.8 L801.0 886.8" fill="none" data-name="IOException"></path>
+							</g>
+						<g transform="translate(595, 855.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOException">
+									<text x="95.0" y="13.5" stroke="none" text-anchor="middle" data-name="IOException">IOException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(595, 886.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IOException">
+									<text x="0.0" y="13.5" stroke="none" data-name="IOException">he exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IOException">when an I/O error occurs.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="IndexOutOfRangeException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="IndexOutOfRangeException">
+								<rect x="544.0" y="940.8" height="107.0" width="308.0" data-name="IndexOutOfRangeException"></rect>
+							<path d="M544.0 971.8 L852.0 971.8" fill="none" data-name="IndexOutOfRangeException"></path>
+							</g>
+						<g transform="translate(544, 940.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IndexOutOfRangeException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IndexOutOfRangeException">
+									<text x="146.0" y="13.5" stroke="none" text-anchor="middle" data-name="IndexOutOfRangeException">IndexOutOfRangeException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(544, 971.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IndexOutOfRangeException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IndexOutOfRangeException">
+									<text x="0.0" y="13.5" stroke="none" data-name="IndexOutOfRangeException">The exception that is thrown when</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="IndexOutOfRangeException">an attempt is made to access an element</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="IndexOutOfRangeException">of an array or collection with an</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="IndexOutOfRangeException">index that is outside its bounds.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DirectoryNotFoundException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DirectoryNotFoundException">
+								<rect x="946.5" y="540.8" height="92.0" width="238.0" data-name="DirectoryNotFoundException"></rect>
+							<path d="M946.5 571.8 L1184.5 571.8" fill="none" data-name="DirectoryNotFoundException"></path>
+							</g>
+						<g transform="translate(946.5, 540.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DirectoryNotFoundException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DirectoryNotFoundException">
+									<text x="111.0" y="13.5" stroke="none" text-anchor="middle" data-name="DirectoryNotFoundException">DirectoryNotFoundException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(946.5, 571.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DirectoryNotFoundException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DirectoryNotFoundException">
+									<text x="0.0" y="13.5" stroke="none" data-name="DirectoryNotFoundException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DirectoryNotFoundException">when part of a file or directory</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="DirectoryNotFoundException">cannot be found.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DriveNotFoundException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DriveNotFoundException">
+								<rect x="954.5" y="640.8" height="92.0" width="222.0" data-name="DriveNotFoundException"></rect>
+							<path d="M954.5 671.8 L1176.5 671.8" fill="none" data-name="DriveNotFoundException"></path>
+							</g>
+						<g transform="translate(954.5, 640.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DriveNotFoundException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DriveNotFoundException">
+									<text x="103.0" y="13.5" stroke="none" text-anchor="middle" data-name="DriveNotFoundException">DriveNotFoundException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(954.5, 671.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DriveNotFoundException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DriveNotFoundException">
+									<text x="0.0" y="13.5" stroke="none" data-name="DriveNotFoundException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DriveNotFoundException">when trying to access a drive</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="DriveNotFoundException">or share that is not available.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="EndOfStreamException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="EndOfStreamException">
+								<rect x="957.5" y="740.8" height="92.0" width="216.0" data-name="EndOfStreamException"></rect>
+							<path d="M957.5 771.8 L1173.5 771.8" fill="none" data-name="EndOfStreamException"></path>
+							</g>
+						<g transform="translate(957.5, 740.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EndOfStreamException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EndOfStreamException">
+									<text x="100.0" y="13.5" stroke="none" text-anchor="middle" data-name="EndOfStreamException">EndOfStreamException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(957.5, 771.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EndOfStreamException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EndOfStreamException">
+									<text x="0.0" y="13.5" stroke="none" data-name="EndOfStreamException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="EndOfStreamException">when reading is attempted</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="EndOfStreamException">past the end of a stream.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FileLoadException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FileLoadException">
+								<rect x="930.0" y="909.5" height="92.0" width="271.0" data-name="FileLoadException"></rect>
+							<path d="M930.0 940.5 L1201.0 940.5" fill="none" data-name="FileLoadException"></path>
+							</g>
+						<g transform="translate(930, 909.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileLoadException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileLoadException">
+									<text x="127.5" y="13.5" stroke="none" text-anchor="middle" data-name="FileLoadException">FileLoadException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(930, 940.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileLoadException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileLoadException">
+									<text x="0.0" y="13.5" stroke="none" data-name="FileLoadException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FileLoadException">when a managed assembly is found</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="FileLoadException">but cannot be loaded.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FileNotFoundException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FileNotFoundException">
+								<rect x="927.5" y="1009.5" height="92.0" width="276.0" data-name="FileNotFoundException"></rect>
+							<path d="M927.5 1040.5 L1203.5 1040.5" fill="none" data-name="FileNotFoundException"></path>
+							</g>
+						<g transform="translate(927.5, 1009.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileNotFoundException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileNotFoundException">
+									<text x="130.0" y="13.5" stroke="none" text-anchor="middle" data-name="FileNotFoundException">FileNotFoundException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(927.5, 1040.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileNotFoundException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileNotFoundException">
+									<text x="0.0" y="13.5" stroke="none" data-name="FileNotFoundException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FileNotFoundException">when an attempt to access a file that</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="FileNotFoundException">doesnot exist on disk fails.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NullReferenceException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NullReferenceException">
+								<rect x="548.0" y="1055.8" height="92.0" width="300.0" data-name="NullReferenceException"></rect>
+							<path d="M548.0 1086.8 L848.0 1086.8" fill="none" data-name="NullReferenceException"></path>
+							</g>
+						<g transform="translate(548, 1055.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NullReferenceException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NullReferenceException">
+									<text x="142.0" y="13.5" stroke="none" text-anchor="middle" data-name="NullReferenceException">NullReferenceException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(548, 1086.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NullReferenceException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NullReferenceException">
+									<text x="0.0" y="13.5" stroke="none" data-name="NullReferenceException">The exception that is thrown when there</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="NullReferenceException">is an attempt to dereference</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="NullReferenceException">a null object reference.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PathTooLongException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PathTooLongException">
+								<rect x="909.0" y="1109.5" height="92.0" width="313.0" data-name="PathTooLongException"></rect>
+							<path d="M909.0 1140.5 L1222.0 1140.5" fill="none" data-name="PathTooLongException"></path>
+							</g>
+						<g transform="translate(909, 1109.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PathTooLongException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PathTooLongException">
+									<text x="148.5" y="13.5" stroke="none" text-anchor="middle" data-name="PathTooLongException">PathTooLongException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(909, 1140.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="PathTooLongException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PathTooLongException">
+									<text x="0.0" y="13.5" stroke="none" data-name="PathTooLongException">The exception that is thrown when</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="PathTooLongException">a path or fully qualified file name is longer</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="PathTooLongException">than the system-defined maximum length.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NotImplementedException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NotImplementedException">
+								<rect x="585.0" y="1155.8" height="92.0" width="226.0" data-name="NotImplementedException"></rect>
+							<path d="M585.0 1186.8 L811.0 1186.8" fill="none" data-name="NotImplementedException"></path>
+							</g>
+						<g transform="translate(585, 1155.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NotImplementedException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NotImplementedException">
+									<text x="105.0" y="13.5" stroke="none" text-anchor="middle" data-name="NotImplementedException">NotImplementedException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(585, 1186.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NotImplementedException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NotImplementedException">
+									<text x="0.0" y="13.5" stroke="none" data-name="NotImplementedException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="NotImplementedException">when a requested method or</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="NotImplementedException">operation is not implemented.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NotSupportedException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NotSupportedException">
+								<rect x="560.5" y="1255.8" height="122.0" width="275.0" data-name="NotSupportedException"></rect>
+							<path d="M560.5 1286.8 L835.5 1286.8" fill="none" data-name="NotSupportedException"></path>
+							</g>
+						<g transform="translate(560.5, 1255.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NotSupportedException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NotSupportedException">
+									<text x="129.5" y="13.5" stroke="none" text-anchor="middle" data-name="NotSupportedException">NotSupportedException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(560.5, 1286.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NotSupportedException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NotSupportedException">
+									<text x="0.0" y="13.5" stroke="none" data-name="NotSupportedException">The exception that is thrown when</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="NotSupportedException">an invoked method is not supported,</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="NotSupportedException">or when there is an attempt to read,</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="NotSupportedException">seek, or write to a stream that does</text>
+								<text x="0.0" y="73.5" stroke="none" data-name="NotSupportedException">not support the invoked functionality.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PlatformNotSupportedException">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PlatformNotSupportedException">
+								<rect x="933.5" y="1270.8" height="92.0" width="264.0" data-name="PlatformNotSupportedException"></rect>
+							<path d="M933.5 1301.8 L1197.5 1301.8" fill="none" data-name="PlatformNotSupportedException"></path>
+							</g>
+						<g transform="translate(933.5, 1270.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PlatformNotSupportedException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PlatformNotSupportedException">
+									<text x="124.0" y="13.5" stroke="none" text-anchor="middle" data-name="PlatformNotSupportedException">PlatformNotSupportedException</text>
+								
+								</g>
+							</g>
+						<g transform="translate(933.5, 1301.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="PlatformNotSupportedException">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PlatformNotSupportedException">
+									<text x="0.0" y="13.5" stroke="none" data-name="PlatformNotSupportedException">The exception that is thrown</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="PlatformNotSupportedException">when a feature does not run</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="PlatformNotSupportedException">on a particular platform.</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>
