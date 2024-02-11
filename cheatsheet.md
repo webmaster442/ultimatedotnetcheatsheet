@@ -131,9 +131,18 @@ Globaly means that the tool is installed to the users profile, instead of the cu
 
     ```xml
     <PropertyGroup>
-        <Version>$([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM")).$([System.DateTime]::UtcNow.ToString("dd")).0</Version>
-        <AssemblyVersion>$([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM")).$([System.DateTime]::UtcNow.ToString("dd")).0</AssemblyVersion>
-        <FileVersion>$([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM")).$([System.DateTime]::UtcNow.ToString("dd")).0</FileVersion>
+        <Version>
+            $([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM"))
+            .$([System.DateTime]::UtcNow.ToString("dd")).0
+        </Version>
+        <AssemblyVersion>
+            $([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM"))
+            .$([System.DateTime]::UtcNow.ToString("dd")).0
+            </AssemblyVersion>
+        <FileVersion>
+            $([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM"))
+            .$([System.DateTime]::UtcNow.ToString("dd")).0
+        </FileVersion>
     </PropertyGroup>
     ```
 
@@ -182,7 +191,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 ## Geneeric Math Interfaces
 
-|             Interfaces / Types             | SByte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half  | Single, Double | Decimal | Comple√ | BigInteger |
+|             Interfaces / Types             | SByte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half  | Single, Double | Decimal | Complex | BigInteger |
 | :----------------------------------------: | :------------------------: | :----: | :--------------------------: | :-----: | :---: | :------------: | :-----: | :-----: | :--------: |
 |              `INumberBase<T>`              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
 |                `INumber<T>`                |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |     √      |

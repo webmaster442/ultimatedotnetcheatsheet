@@ -14,7 +14,7 @@
         background-color: #F7F9F5;
     }
 
-    @media all and (min-width: 1000px) {
+    @media screen and (min-width: 1000px) {
         .parent {
             display: grid;
             grid-template-columns: 0.1fr 0.9fr;
@@ -38,7 +38,14 @@
 
     }
 
-    @media all and (min-width: 1200px) {
+    #navigate-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        display: none;
+        width: 2%;
+        min-width: 80px;
+        transition: opacity 0.3s;
     }
 
     .toc-title {
@@ -65,13 +72,6 @@
         text-decoration: underline;
     }
 
-
-
-    svg {
-        display: inherit;
-        margin: 0 auto;
-    }
-
     h1 {
         border-bottom: 1px solid var(--color1);
     }
@@ -90,8 +90,12 @@
 
     img {
         margin: 0px auto;
-        max-width: 1200px;
         display: block;
+    }
+
+    svg {
+        display: inherit;
+        margin: 0px auto;
     }
 
     table {
@@ -130,9 +134,41 @@
 }
 
 @media print {
+
+    body,
+    html {
+        width: 250mm;
+        height: 353mm;
+    }
+
     body {
         color: black;
         background: white;
+    }
+
+    #toc {
+        visibility: collapse;
+        display: none;
+    }
+
+    #navigate-top {
+        visibility: collapse;
+        display: none;
+    }
+
+    h1 {
+        page-break-before: always;
+    }
+
+    img,
+    svg {
+        max-width: 235mm;
+        max-height: 345mm;
+        margin: 0 auto;
+    }
+
+    svg {
+        display: block;
     }
 
     p,
@@ -140,5 +176,10 @@
     code,
     table {
         break-inside: avoid;
+    }
+
+    pre code {
+        line-break: anywhere;
+        overflow: hidden;
     }
 }
