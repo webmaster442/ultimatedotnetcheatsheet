@@ -21,7 +21,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 ## Changelog
 
-* 2024.02.11 - Initial release
+* 2024.02.14 - Initial release
 
 # Dotnet basic commands
 
@@ -45,7 +45,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 * Add project to solution: `dotnet sln [solution.sln] add [project.csproj]`
 * Remove project from solution: `dotnet sln [solution.sln] remove [project.csproj]`  
 
-Note: solution file name can be ignored if folder only contains one sln file.
+Note: solution file name can be ignored if folder only contains one `.sln` file.
 
 ## Package management
 
@@ -89,7 +89,7 @@ Globaly means that the tool is installed to the users profile, instead of the cu
 
 * **csharprepl**
 
-    A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports intellisense, installing NuGet packages, and referencing local 
+    A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local 
     .NET projects and assemblies. Install with: `dotnet tool install -g csharprepl`
 	
 * **IronPython**
@@ -283,7 +283,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 ## Numeric format strings
 
-| Format specifier |    Name     |         Supported          |                                             Desription                                              |
+| Format specifier |    Name     |         Supported          |                                             Description                                             |
 | :--------------: | :---------: | :------------------------: | :-------------------------------------------------------------------------------------------------: |
 |    `C` or `c`    |  Currency   |     All numeric types      |                                      Formats value as currency                                      |
 |    `D` or `d`    |   Decimal   |       Integral types       |                             Integer digits with optional negative sign.                             |
@@ -298,7 +298,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 ## Custom numeric format strings
 
-| Format specifier |                     Name                     |                                                        Desription                                                         |
+| Format specifier |                     Name                     |                                                        Description                                                        |
 | :--------------: | :------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
 |       `0`        |               Zero placeholder               |      Replaces the zero with the corresponding digit if one is present; otherwise, zero appears in the result string.      |
 |       `#`        |              Digit placeholder               | Replaces the "#" symbol with the corresponding digit if one is present; otherwise, no digit appears in the result string. |
@@ -323,7 +323,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 Depending on their position in a custom format string, the uppercase and lowercase "E" as well as the + and - symbols may also be interpreted as format specifiers.
 
 **IV**: The semicolon (;) is a conditional format specifier that applies different formatting to a number depending on whether its value is positive, negative, or zero. 
-To produce this behavior, a custom format string can contain up to three sections separated by semicolons. These sections are:
+To produce this behaviour, a custom format string can contain up to three sections separated by semicolons. These sections are:
 
 * One section:
   The format string applies to all values.
@@ -337,9 +337,9 @@ To produce this behavior, a custom format string can contain up to three section
 * Three sections:
   The first section applies to positive values, the second section applies to negative values, and the third section applies to zeros.
 
-  The second section can be left empty (by having nothing between the semicolons), in which case the first section applies to all nonzero values.
+  The second section can be left empty (by having nothing between the semicolons), in which case the first section applies to all non-zero values.
 
-  If the number to be formatted is nonzero, but becomes zero after rounding according to the format in the first or second section,
+  If the number to be formatted is non-zero, but becomes zero after rounding according to the format in the first or second section,
   the resulting zero is formatted according to the third section.
 
 ## Standard date and time format strings
@@ -715,5 +715,14 @@ numbers is [0 or 1, <= 2, >= 3]; //true
 ![Stream types](img/streamtypes.svg)
 
 ![Reader and writer types](img/streamwriters.svg)
+
+# Attributes
+
+![Common Attributes](img/attributes.svg)
+
+## Data annotation
+
+![Data annotation Attributes](img/attributes-dataannotation.svg)
+
 :::
 :::
