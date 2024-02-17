@@ -1,6 +1,6 @@
 :::parent
 
-[[toc]] Contents
+[toc maxlevel="2"] Contents
 
 :::content
 # Ultimate .NET Cheat sheet
@@ -21,7 +21,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 ## Changelog
 
-* 2024.02.14 - Initial release
+* 2024.02.17 - Initial release
 
 # Dotnet basic commands
 
@@ -85,16 +85,33 @@ Globaly means that the tool is installed to the users profile, instead of the cu
 
 * **dotnet-ef**
 
-	The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects. Install with: `dotnet tool install --global dotnet-ef`
+	The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects. 
+    
+    Install with: `dotnet tool install --global dotnet-ef`
 
 * **csharprepl**
 
-    A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local 
-    .NET projects and assemblies. Install with: `dotnet tool install -g csharprepl`
+    A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local .NET projects and assemblies. 
+    
+    Install with: `dotnet tool install -g csharprepl`
 	
 * **IronPython**
 
-	IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily. Install with: `dotnet tool install -g IronPython.Console`
+	IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily.
+    
+    Install with: `dotnet tool install -g IronPython.Console`
+
+* **dotnet-format**
+
+    Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an .editorconfig file, if present, otherwise a default set of preferences will be used.
+    
+    Install with: `dotnet tool install -g dotnet-format`
+
+* **.NET Upgrade Assistant**
+  
+	The .NET Upgrade Assistant is a Visual Studio extension and command-line tool that's designed to assist with upgrading apps to the latest version of .NET.
+    
+    Install with: `dotnet tool install -g upgrade-assistant`
 
 # Project file XML settings
 
@@ -189,7 +206,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 * **System.Numerics.Vector3** : Represents a vector with three single-precision floating-point values.
 * **System.Numerics.Vector4** : Represents a vector with four single-precision floating-point values.
 
-## Geneeric Math Interfaces
+## Generic Math Interfaces
 
 |             Interfaces / Types             | SByte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half  | Single, Double | Decimal | Complex | BigInteger |
 | :----------------------------------------: | :------------------------: | :----: | :--------------------------: | :-----: | :---: | :------------: | :-----: | :-----: | :--------: |
@@ -489,7 +506,6 @@ var next3 = orders.Skip(3).Take(3);
 //throws exception if element not found
 var firstCustomer = customers.First(customer => customer.Id == 63);
 var lastCustomer = customers.Last(customer => customer.Id == 63);
-
 //returns default value if element not found
 var firstCustomer = customers.FirstOrDefault(customer => customer.Id == 63);
 var lastCustomer = customers.LastOrDefault(customer => customer.Id == 63);
@@ -501,7 +517,8 @@ var lastCustomer = customers.LastOrDefault(customer => customer.Id == 63);
 Order[] orders = Orders.Where(order => order.CustomerId == 66).ToArray();
 List<Order> orders = Orders.Where(order => order.CustomerId == 66).ToList();
 HashSet<Order> orders = Orders.Where(order => order.CustomerId == 66).ToHashSet();
-Dictionary<int, string> customerDictionary = Customers.ToDictionary(customer => customer.Id, customer => customer.Name);
+Dictionary<int, string> customerDictionary
+     = Customers.ToDictionary(customer => customer.Id, customer => customer.Name);
 ```
 
 # Pattern matching
@@ -580,16 +597,12 @@ public static decimal GetGroupTicketPrice(int visitorCount) => visitorCount swit
     1 => 12.0m,
     2 => 20.0m,
     3 => 27.0m,
-    4 => 32.0m,
     0 => 0.0m,
     _ => throw new ArgumentException($"Not supported number of visitors: {visitorCount}", nameof(visitorCount)),
 };
 ```
 
-In a constant pattern, you can use any constant expression, such as integers, floating-point numbers, char, string, boolean, enums, 
-name of a declared const field or local and null.
-
-Note: `Span<char>` or `ReadOnlySpan<char>` can also be matched in the constant pattern, but in C# 11 and later versions
+In a constant pattern, you can use any constant expression, such as integers, floating-point numbers, char, string, boolean, enums, name of a declared const field or local and null. Note: `Span<char>` or `ReadOnlySpan<char>` can also be matched in the constant pattern, but in C# 11 and later versions
 
 ## Relational patterns
 
@@ -603,8 +616,7 @@ static string Classify(double measurement) => measurement switch
 };
 ```
 
-In a relational pattern, you can use any of the relational operators `<`, `>`, `<=`, or `>=`. The right-hand part of a relational pattern must be
-a constant expression. For the constant expression, the constant pattern limitations apply.
+In a relational pattern, you can use any of the relational operators `<`, `>`, `<=`, or `>=`. The right-hand part of a relational pattern must be a constant expression. For the constant expression, the constant pattern limitations apply.
 
 ## Logical patterns
 
@@ -618,7 +630,9 @@ static string Classify(double measurement) => measurement switch
     >= 20.0 => "Too high",
     double.NaN => "Unknown",
 };
+```
 
+```csharp
 static string GetCalendarSeason(DateTime date) => date.Month switch
 {
     3 or 4 or 5 => "spring",
@@ -641,8 +655,7 @@ static bool IsLetter(char c) => c is (>= 'a' and <= 'z') or (>= 'A' and <= 'Z');
 static bool IsConferenceDay(DateTime date) => date is { Year: 2020, Month: 5, Day: 19 or 20 or 21 };
 ```
 
-A property pattern matches an expression when an expression result is non-null and every nested pattern matches the corresponding property or field 
-of the expression result. It can be combined with run-time type check and variable declaration:
+A property pattern matches an expression when an expression result is non-null and every nested pattern matches the corresponding property or field of the expression result. It can be combined with run-time type check and variable declaration:
 
 ```csharp
 static string TakeFive(object input) => input switch
@@ -669,7 +682,6 @@ public readonly struct Point
     public int Y { get; }
 
     public Point(int x, int y) => (X, Y) = (x, y);
-
     public void Deconstruct(out int x, out int y) => (x, y) = (X, Y);
 }
 
@@ -682,8 +694,7 @@ static string Classify(Point point) => point switch
 };
 ```
 
-At the preceding example, the type of an expression contains the Deconstruct method, which is used to deconstruct an expression result. 
-You can also match expressions of tuple types against positional patterns. In that way, you can match multiple inputs against various patterns:
+At the preceding example, the type of an expression contains the Deconstruct method, which is used to deconstruct an expression result. You can also match expressions of tuple types against positional patterns. In that way, you can match multiple inputs against various patterns:
 
 ```csharp
 static decimal GetGroupTicketPriceDiscount(int groupSize, DateTime visitDate)
@@ -708,6 +719,23 @@ numbers is [1, 2, 3]; //true
 numbers is [1, 2, 4]; //false
 numbers is [1, 2, 3, 4]; //false
 numbers is [0 or 1, <= 2, >= 3]; //true
+```
+
+To match elements only at the start or/and the end of an input sequence, use the slice pattern (`..`);  A slice pattern matches zero or more elements. You can use at most one slice pattern in a list pattern. The slice pattern can only appear in a list pattern.
+
+```csharp
+new[] { 1, 2, 3, 4, 5 } is [> 0, > 0, ..];  // True
+new[] { 1, 1 } is [_, _, ..];  // True
+new[] { 0, 1, 2, 3, 4 } is [> 0, > 0, ..];  // False
+new[] { 1 } is [1, 2, ..];  // False
+
+new[] { 1, 2, 3, 4 } is [.., > 0, > 0];  // True
+new[] { 2, 4 } is [.., > 0, 2, 4];  // False
+new[] { 2, 4 } is [.., 2, 4];  // True
+
+new[] { 1, 2, 3, 4 } is [>= 0, .., 2 or 4];  // True
+new[] { 1, 0, 0, 1 } is [1, 0, .., 0, 1];  // True
+new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 ```
 
 # I/O

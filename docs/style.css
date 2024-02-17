@@ -182,4 +182,41 @@
         line-break: anywhere;
         overflow: hidden;
     }
+
+    /*Manual page break adjustments*/
+    #usefull-tools {
+        page-break-before: always;
+    }
+
+    #generic-math-interfaces {
+        page-break-before: always;
+    }
+
+    #access-modifiers {
+        page-break-before: avoid;
+    }
+
+    #custom-numeric-format-strings {
+        page-break-before: always;
+    }
+
+    #standard-date-and-time-format-strings {
+        page-break-before: always;
+    }
+
+    #constant-pattern {
+        page-break-before: always;
+    }
+
+    #property-pattern {
+        page-break-before: always;
+    }
+
+    #list-patterns {
+        page-break-before: always;
+    }
+
+    #data-annotation {
+        page-break-before: always;
+    }
 }
