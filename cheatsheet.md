@@ -21,7 +21,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 ## Changelog
 
-* 2024.02.17 - Initial release
+* 2024.02.25 - Initial release
 
 # Dotnet basic commands
 
@@ -89,11 +89,15 @@ Globaly means that the tool is installed to the users profile, instead of the cu
     
     Install with: `dotnet tool install --global dotnet-ef`
 
+    More info: https://learn.microsoft.com/en-us/ef/core/cli/dotnet
+
 * **csharprepl**
 
     A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local .NET projects and assemblies. 
     
     Install with: `dotnet tool install -g csharprepl`
+
+    More info: https://github.com/waf/CSharpRepl
 	
 * **IronPython**
 
@@ -101,17 +105,23 @@ Globaly means that the tool is installed to the users profile, instead of the cu
     
     Install with: `dotnet tool install -g IronPython.Console`
 
+    More info: https://ironpython.net/
+
 * **dotnet-format**
 
     Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an .editorconfig file, if present, otherwise a default set of preferences will be used.
     
     Install with: `dotnet tool install -g dotnet-format`
 
+    More info: https://github.com/dotnet/format
+
 * **.NET Upgrade Assistant**
   
 	The .NET Upgrade Assistant is a Visual Studio extension and command-line tool that's designed to assist with upgrading apps to the latest version of .NET.
     
     Install with: `dotnet tool install -g upgrade-assistant`
+
+    More info: https://dotnet.microsoft.com/en-us/platform/upgrade-assistant
 
 # Project file XML settings
 
@@ -251,21 +261,29 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 # Operator Precedence
 
-1. parentheses: `()`
-2. Postfix Increment and Decrement: `++`, `--`
-3. Prefix Increment, Decrement and Unary: `++`, `--`, `+`, `-`, `!`, `~`
-4. Multiplicative: `*`, `/`, `%`
-5. Additive: `+`, `-`
-6. Shift: `<<`, `>>`, `>>>`
-7. Relational: `<`, `<=`, `>`, `>=`
-8. Equality: `==`, `!=`
-9. Bitwise AND: `&`
-10. Bitwise XOR: `^`
-11. Bitwise OR: `|`
-12. Logical AND: `&&`
-13. Logical OR: `||`
-14. Ternary: `? :`
-15. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`
+1. Primary:
+
+    `x.y`, `f(x)`, `a[i]`, `x?.y`, `x?[y]`, `x++`, `x--`, `x!`, `new`, `typeof`, `checked`, `unchecked`, `default`, `nameof`, `delegate`, `sizeof`, `stackalloc`, `x->y`
+2. Unary: `+x, -x, !x, ~x, ++x, --x, ^x, (T)x, await, &x, *x, true and false`
+3. Range: `x..y`
+4. Switch and with expressions: `switch, with`
+5. Multiplicative: `x * y, x / y, x % y`
+6. Additive: `x + y`, `x – y`
+7. Shift: `x << y`, `x >> y`, `x >>> y`
+8. Relational and type-testing: `x < y`, `x > y`, `x <= y`, `x >= y`, `is`, `as`
+9. Equality: `x == y`, `x != y`
+10. Boolean logical AND or bitwise logical AND: x & y`
+11. Boolean logical XOR or bitwise logical XOR: `x ^ y`
+12. Boolean logical OR or bitwise logical OR: `x | y`
+13. Conditional AND: `x && y`
+14. Conditional OR: `x || y`
+15. Null-coalescing operator: `x ?? y`
+16. Conditional operator: `c ? t : f`
+17. Assignment and lambda declaration: 
+
+    `x = y`, `x += y`, `x -= y`, `x *= y`, `x /= y`, `x %= y`, `x &= y`, `x |= y`, `x ^= y`, `x <<= y`, `x >>= y`, `x >>>= y`, `x ??= y`, `=>`
+
+More info: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/
 
 # Access modifiers
 
@@ -276,6 +294,9 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 |   Non-derived class (same assembly)    |    √     |           √           |      X      |     √      |          X          |     X     |
 |   Derived class (different assembly)   |    √     |           √           |      √      |     X      |          X          |     X     |
 | Non-derived class (different assembly) |    √     |           X           |      X      |     X      |          X          |     X     |
+
+
+More info: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
 
 # Strings
 
@@ -297,6 +318,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 |      `\u`       |      Unicode escape sequence (UTF-16) followed by 4 hex digits      |
 |      `\U`       |      Unicode escape sequence (UTF-32) followed by 8 hex digits      |
 |      `\x`       | Unicode escape sequence similar to "\u" except with variable length |
+
 
 ## Numeric format strings
 
@@ -413,6 +435,13 @@ To produce this behaviour, a custom format string can contain up to three sectio
 |       `:`        |                         The time separator                          |
 |       `/`        |                         The date separator                          |
 |       `\`        |                        The escape character                         |
+
+
+More infos:
+
+* https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+
 
 # Common exceptions
 

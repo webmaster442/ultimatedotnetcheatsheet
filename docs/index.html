@@ -1500,7 +1500,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 </svg></p>
 <h2 id="changelog">Changelog</h2>
 <ul>
-<li>2024.02.17 - Initial release</li>
+<li>2024.02.25 - Initial release</li>
 </ul>
 <h1 id="dotnet-basic-commands">Dotnet basic commands</h1>
 <ul>
@@ -1563,22 +1563,27 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li><p><strong>dotnet-ef</strong></p>
 <p>The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects.</p>
 <p>Install with: <code>dotnet tool install --global dotnet-ef</code></p>
+<p>More info: <a href="https://learn.microsoft.com/en-us/ef/core/cli/dotnet">https://learn.microsoft.com/en-us/ef/core/cli/dotnet</a></p>
 </li>
 <li><p><strong>csharprepl</strong></p>
 <p>A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local .NET projects and assemblies.</p>
 <p>Install with: <code>dotnet tool install -g csharprepl</code></p>
+<p>More info: <a href="https://github.com/waf/CSharpRepl">https://github.com/waf/CSharpRepl</a></p>
 </li>
 <li><p><strong>IronPython</strong></p>
 <p>IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily.</p>
 <p>Install with: <code>dotnet tool install -g IronPython.Console</code></p>
+<p>More info: <a href="https://ironpython.net/">https://ironpython.net/</a></p>
 </li>
 <li><p><strong>dotnet-format</strong></p>
 <p>Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an .editorconfig file, if present, otherwise a default set of preferences will be used.</p>
 <p>Install with: <code>dotnet tool install -g dotnet-format</code></p>
+<p>More info: <a href="https://github.com/dotnet/format">https://github.com/dotnet/format</a></p>
 </li>
 <li><p><strong>.NET Upgrade Assistant</strong></p>
 <p>The .NET Upgrade Assistant is a Visual Studio extension and command-line tool that's designed to assist with upgrading apps to the latest version of .NET.</p>
 <p>Install with: <code>dotnet tool install -g upgrade-assistant</code></p>
+<p>More info: <a href="https://dotnet.microsoft.com/en-us/platform/upgrade-assistant">https://dotnet.microsoft.com/en-us/platform/upgrade-assistant</a></p>
 </li>
 </ul>
 <h1 id="project-file-xml-settings">Project file XML settings</h1>
@@ -2224,22 +2229,44 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </table>
 <h1 id="operator-precedence">Operator Precedence</h1>
 <ol>
-<li>parentheses: <code>()</code></li>
-<li>Postfix Increment and Decrement: <code>++</code>, <code>--</code></li>
-<li>Prefix Increment, Decrement and Unary: <code>++</code>, <code>--</code>, <code>+</code>, <code>-</code>, <code>!</code>, <code>~</code></li>
-<li>Multiplicative: <code>*</code>, <code>/</code>, <code>%</code></li>
-<li>Additive: <code>+</code>, <code>-</code></li>
-<li>Shift: <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code></li>
-<li>Relational: <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
-<li>Equality: <code>==</code>, <code>!=</code></li>
-<li>Bitwise AND: <code>&amp;</code></li>
-<li>Bitwise XOR: <code>^</code></li>
-<li>Bitwise OR: <code>|</code></li>
-<li>Logical AND: <code>&amp;&amp;</code></li>
-<li>Logical OR: <code>||</code></li>
-<li>Ternary: <code>? :</code></li>
-<li>Assignment: <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&amp;=</code>, <code>|=</code>, <code>^=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code></li>
+<li><p>Primary:</p>
+<p><code>x.y</code>, <code>f(x)</code>, <code>a[i]</code>, <code>x?.y</code>, <code>x?[y]</code>, <code>x++</code>, <code>x--</code>, <code>x!</code>, <code>new</code>, <code>typeof</code>, <code>checked</code>, <code>unchecked</code>, <code>default</code>, <code>nameof</code>, <code>delegate</code>, <code>sizeof</code>, <code>stackalloc</code>, <code>x-&gt;y</code></p>
+</li>
+<li><p>Unary: <code>+x, -x, !x, ~x, ++x, --x, ^x, (T)x, await, &amp;x, *x, true and false</code></p>
+</li>
+<li><p>Range: <code>x..y</code></p>
+</li>
+<li><p>Switch and with expressions: <code>switch, with</code></p>
+</li>
+<li><p>Multiplicative: <code>x * y, x / y, x % y</code></p>
+</li>
+<li><p>Additive: <code>x + y</code>, <code>x – y</code></p>
+</li>
+<li><p>Shift: <code>x &lt;&lt; y</code>, <code>x &gt;&gt; y</code>, <code>x &gt;&gt;&gt; y</code></p>
+</li>
+<li><p>Relational and type-testing: <code>x &lt; y</code>, <code>x &gt; y</code>, <code>x &lt;= y</code>, <code>x &gt;= y</code>, <code>is</code>, <code>as</code></p>
+</li>
+<li><p>Equality: <code>x == y</code>, <code>x != y</code></p>
+</li>
+<li><p>Boolean logical AND or bitwise logical AND: x &amp; y`</p>
+</li>
+<li><p>Boolean logical XOR or bitwise logical XOR: <code>x ^ y</code></p>
+</li>
+<li><p>Boolean logical OR or bitwise logical OR: <code>x | y</code></p>
+</li>
+<li><p>Conditional AND: <code>x &amp;&amp; y</code></p>
+</li>
+<li><p>Conditional OR: <code>x || y</code></p>
+</li>
+<li><p>Null-coalescing operator: <code>x ?? y</code></p>
+</li>
+<li><p>Conditional operator: <code>c ? t : f</code></p>
+</li>
+<li><p>Assignment and lambda declaration:</p>
+<p><code>x = y</code>, <code>x += y</code>, <code>x -= y</code>, <code>x *= y</code>, <code>x /= y</code>, <code>x %= y</code>, <code>x &amp;= y</code>, <code>x |= y</code>, <code>x ^= y</code>, <code>x &lt;&lt;= y</code>, <code>x &gt;&gt;= y</code>, <code>x &gt;&gt;&gt;= y</code>, <code>x ??= y</code>, <code>=&gt;</code></p>
+</li>
 </ol>
+<p>More info: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/</a></p>
 <h1 id="access-modifiers">Access modifiers</h1>
 <table>
 <thead>
@@ -2301,6 +2328,7 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </tr>
 </tbody>
 </table>
+<p>More info: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers</a></p>
 <h1 id="strings">Strings</h1>
 <h2 id="string-escape-sequences">String escape sequences</h2>
 <table>
@@ -2746,6 +2774,11 @@ the resulting zero is formatted according to the third section.</p>
 </tr>
 </tbody>
 </table>
+<p>More infos:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
+</ul>
 <h1 id="common-exceptions">Common exceptions</h1>
 <p><svg version="1.1" baseProfile="full" width="1278.0" height="1433.8" viewbox="0 0 1278 1433.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
