@@ -300,6 +300,12 @@ More info: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/cla
 
 # Strings
 
+More infos:
+
+* https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+
+
 ## String escape sequences
 
 | Escape sequence |                           Character name                            |
@@ -435,13 +441,6 @@ To produce this behaviour, a custom format string can contain up to three sectio
 |       `:`        |                         The time separator                          |
 |       `/`        |                         The date separator                          |
 |       `\`        |                        The escape character                         |
-
-
-More infos:
-
-* https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
-* https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
-
 
 # Common exceptions
 
