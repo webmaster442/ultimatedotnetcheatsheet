@@ -3,7 +3,6 @@
 [toc maxlevel="2"] Contents
 
 :::content
-# Ultimate .NET Cheat sheet
 
 ![cheat sheet header](img/header.svg)
 
