@@ -20,7 +20,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 ## Changelog
 
-* 2024.02.27 - Initial release
+* 2024.02.29 - Initial release
 
 # Dotnet basic commands
 
