@@ -1,8 +1,8 @@
-# Ultimate C# Cheatsheet
+# Ultimate .NET Cheatsheet
 
 ![Logo](https://raw.githubusercontent.com/webmaster442/ultimatecharpcheatsheet/main/img/header.svg)
 
-Welcome to the Ultimate C# Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.
+Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.
 
 ## Website
 
