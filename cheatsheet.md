@@ -217,6 +217,120 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 ## Generic Math Interfaces
 
+![Generic Math Interfaces](img/genericmath1.svg)
+
+* `IComparable<T>` 
+
+    Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.
+
+* `IConvertible`
+
+    Defines methods that convert the value of the implementing reference or value type to a common language runtime type that has an equivalent value.
+
+* `IEquatable<T>`
+
+    Defines a generalized method that a value type or class implements to create a type-specific method for determining equality of instances.
+
+* `IParsable<T>`
+
+    Defines a mechanism for parsing a string to a value.
+
+* `ISpanParsable<T>`
+
+    Defines a mechanism for parsing a span of characters to a value.
+
+* `IAdditionOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the sum of two values. Provides operators: `+`
+
+* `IBitwiseOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for performing bitwise operations over two values. Provides operators: `&`, `|`, `^`, `~`
+
+* `IComparisonOperators<TSelf,TSelf,bool>`
+
+    Defines a mechanism for comparing two values to determine relative order. Provides operators: `>`, `>=`, `<`, `<=` 
+
+* `IDecrementOperators<T>`
+
+    Defines a mechanism for decrementing a given value. Provides operators: `--`
+
+* `IDivisionOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the quotient of two values. Provides operators: `/`
+
+* `IEqualityOperators<TSelf,TSelf,bool>`
+
+    Defines a mechanism for comparing two values to determine equality. Provides operators: `==`, `!=`
+
+* `IIncrementOperators<T>`
+
+    Defines a mechanism for incrementing a given value. Provides operators: `++`
+
+* `IModulusOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the modulus or remainder of two values. Provides operators: `%`
+
+* `IMultiplyOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the product of two values. Provides operators: `*`
+
+* `IShiftOperators<TSelf,int,TSelf>`
+
+    Defines a mechanism for shifting a value by another value. Provides operators: `<<`, `>>`, `<<<`
+
+* `ISubtractionOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the difference of two values. Provides operators: `-`
+
+* `IUnaryNegationOperators<TSelf,TSelf>`
+
+    Defines a mechanism for computing the unary negation of a value. Provides operators: `-`
+
+* `IUnaryPlusOperators<TSelf,TSelf>`
+
+    Defines a mechanism for computing the unary plus of a value. Provides operators: `+`
+
+* `IAdditiveIdentity<TSelf,TSelf>`
+
+    Defines a mechanism for getting the additive identity of a given type.
+
+* `IMultiplicativeIdentity<TSelf,TSelf>`
+
+    Defines a mechanism for getting the multiplicative identity of a given type.
+
+* `IMinMaxValue<T>`
+
+    Defines a mechanism for getting the minimum and maximum value of a type.
+
+* `IExponentialFunctions<T>`
+
+    Defines support for exponential functions.
+
+* `IFloatingPointConstants<T>`
+
+    Defines support for floating-point constants, like `E`, `Pi`, `Tau`
+
+* `IHyperbolicFunctions<T>`
+
+    Defines support for hyperbolic functions.
+
+* `ILogarithmicFunctions<T>`
+
+    Defines support for logarithmic functions.
+
+* `IPowerFunctions<T>`
+
+    Defines support for power functions.
+
+* `IRootFunctions<T>`
+
+    Defines support for root functions.
+
+* `ITrigonometricFunctions<T>`
+
+    Defines support for trigonometric functions.
+
 |             Interfaces / Types             | SByte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half  | Single, Double | Decimal | Complex | BigInteger |
 | :----------------------------------------: | :------------------------: | :----: | :--------------------------: | :-----: | :---: | :------------: | :-----: | :-----: | :--------: |
 |              `INumberBase<T>`              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
