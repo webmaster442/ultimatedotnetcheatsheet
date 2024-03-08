@@ -21,6 +21,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 ## Changelog
 
 * 2024.02.29 - Initial release
+* 2024.03.08 - Generic math interfaces extended & various small improvements
 
 # Dotnet basic commands
 
@@ -122,6 +123,22 @@ Globaly means that the tool is installed to the users profile, instead of the cu
 
     More info: https://dotnet.microsoft.com/en-us/platform/upgrade-assistant
 
+* **SlnGen**
+
+    SlnGen is a Visual Studio solution file generator. Visual Studio solutions generally do not scale well for large project trees. They are scoped views of a set of projects. Enterprise-level builds use custom logic like traversal to convey how they should be built by a hosted build environment. Maintaining Visual Studio solutions becomes hard because you have to keep them in sync with the other build logic. Instead, SlnGen reads the project references of a given project to create a Visual Studio solution on demand. For example, you can run it against a unit test project and be presented with a Visual Studio solution containing the unit test project and all of its project references.
+
+    Install with: `dotnet tool install --global Microsoft.VisualStudio.SlnGen.Tool --add-source https://api.nuget.org/v3/index.json --ignore-failed-sources`
+
+    More info: https://github.com/microsoft/slngen
+
+* **Roslynator Cli**
+
+    Roslynator is a set of code analysis tools for C#, powered by Roslyn.
+
+    Install with: `dotnet tool install -g roslynator.dotnet.cli`
+
+    More info: https://josefpihrt.github.io/docs/roslynator/cli
+
 # Project file XML settings
 
 * Enable implicit usings:
@@ -172,26 +189,36 @@ Globaly means that the tool is installed to the users profile, instead of the cu
     </PropertyGroup>
     ```
 
+* Disable Source Link Source Revision including in Assembly info:
+
+    ```xml
+    <PropertyGroup>
+      <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    </PropertyGroup>
+    ```
+
 # Basic type system
 
 ## Numerical types
 
-|  Type   | bytes  |   Bits   |             Minimum value              |            Maximum  Value             |
-| :-----: | :----: | :------: | :------------------------------------: | :-----------------------------------: |
-|  byte   |   1    |    8     |                   0                    |                  255                  |
-|  sbyte  |   1    |    8     |                  -127                  |                  127                  |
-|  short  |   2    |    16    |                -32 768                 |                32 767                 |
-| ushort  |   2    |    16    |                   0                    |                65 535                 |
-|   int   |   4    |    32    |             -2 147 483 648             |             2 147 483 647             |
-|  uint   |   4    |    32    |                   0                    |             4 294 967 295             |
-|  long   |   8    |    64    |       -9 223 372 036 854 775 808       |       9 223 372 036 854 775 807       |
-|  ulong  |   8    |    64    |                   0                    |      18 446 744 073 709 551 615       |
-|  float  |   4    |    32    |      -3.4028235 x 10<sup>38</sup>      |      3.4028235 x 10<sup>38</sup>      |
-| double  |   8    |    64    | -1.7976931348623157 x 10<sup>308</sup> | 1.7976931348623157 x 10<sup>308</sup> |
-| decimal |   16   |   128    |        -7.92 x 10 <sup>28</sup>        |        7.92 x 10 <sup>28</sup>        |
-|  Half   |   2    |    16    |                -65 504                 |                65 504                 |
-|  nint   | 4 or 8 | 32 or 64 |   platform dependent signed integer    |   platform dependent signed integer   |
-|  nuint  | 4 or 8 | 32 or 64 |  platform dependent unsigned integer   |  platform dependent unsigned integer  |
+|  Type   | bytes  |   Bits   |                    Minimum value                     |                   Maximum  Value                    |
+| :-----: | :----: | :------: | :--------------------------------------------------: | :-------------------------------------------------: |
+|  byte   |   1    |    8     |                          0                           |                         255                         |
+|  sbyte  |   1    |    8     |                         -127                         |                         127                         |
+|  short  |   2    |    16    |                       -32 768                        |                       32 767                        |
+| ushort  |   2    |    16    |                          0                           |                       65 535                        |
+|   int   |   4    |    32    |                    -2 147 483 648                    |                    2 147 483 647                    |
+|  uint   |   4    |    32    |                          0                           |                    4 294 967 295                    |
+|  long   |   8    |    64    |              -9 223 372 036 854 775 808              |              9 223 372 036 854 775 807              |
+|  ulong  |   8    |    64    |                          0                           |             18 446 744 073 709 551 615              |
+| Int128  |   16   |   128    | -170 141 183 460 469 231 731 687 303 715 884 105 728 | 170 141 183 460 469 231 731 687 303 715 884 105 727 |
+| UInt128 |   16   |   128    |                          0                           | 340 282 366 920 938 463 463 374 607 431 768 211 455 |
+|  nint   | 4 or 8 | 32 or 64 |          platform dependent signed integer           |          platform dependent signed integer          |
+|  nuint  | 4 or 8 | 32 or 64 |         platform dependent unsigned integer          |         platform dependent unsigned integer         |
+|  float  |   4    |    32    |             -3.4028235 x 10<sup>38</sup>             |             3.4028235 x 10<sup>38</sup>             |
+| double  |   8    |    64    |        -1.7976931348623157 x 10<sup>308</sup>        |        1.7976931348623157 x 10<sup>308</sup>        |
+| decimal |   16   |   128    |               -7.92 x 10 <sup>28</sup>               |               7.92 x 10 <sup>28</sup>               |
+|  Half   |   2    |    16    |                       -65 504                        |                       65 504                        |
 
 Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit systems this will be a 32 bit integer, so the limitations and properties of `int`
  or `uint` aplies. On 64 bit systems the limitations and properties of `long` and `ulong` applies.
@@ -216,6 +243,120 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 * **System.Numerics.Vector4** : Represents a vector with four single-precision floating-point values.
 
 ## Generic Math Interfaces
+
+![Generic Math Interfaces](img/genericmath1.svg)
+
+* `IComparable<T>` 
+
+    Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.
+
+* `IConvertible`
+
+    Defines methods that convert the value of the implementing reference or value type to a common language runtime type that has an equivalent value.
+
+* `IEquatable<T>`
+
+    Defines a generalized method that a value type or class implements to create a type-specific method for determining equality of instances.
+
+* `IParsable<T>`
+
+    Defines a mechanism for parsing a string to a value.
+
+* `ISpanParsable<T>`
+
+    Defines a mechanism for parsing a span of characters to a value.
+
+* `IAdditionOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the sum of two values. Provides operators: `+`
+
+* `IBitwiseOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for performing bitwise operations over two values. Provides operators: `&`, `|`, `^`, `~`
+
+* `IComparisonOperators<TSelf,TSelf,bool>`
+
+    Defines a mechanism for comparing two values to determine relative order. Provides operators: `>`, `>=`, `<`, `<=` 
+
+* `IDecrementOperators<T>`
+
+    Defines a mechanism for decrementing a given value. Provides operators: `--`
+
+* `IDivisionOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the quotient of two values. Provides operators: `/`
+
+* `IEqualityOperators<TSelf,TSelf,bool>`
+
+    Defines a mechanism for comparing two values to determine equality. Provides operators: `==`, `!=`
+
+* `IIncrementOperators<T>`
+
+    Defines a mechanism for incrementing a given value. Provides operators: `++`
+
+* `IModulusOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the modulus or remainder of two values. Provides operators: `%`
+
+* `IMultiplyOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the product of two values. Provides operators: `*`
+
+* `IShiftOperators<TSelf,int,TSelf>`
+
+    Defines a mechanism for shifting a value by another value. Provides operators: `<<`, `>>`, `<<<`
+
+* `ISubtractionOperators<TSelf,TSelf,TSelf>`
+
+    Defines a mechanism for computing the difference of two values. Provides operators: `-`
+
+* `IUnaryNegationOperators<TSelf,TSelf>`
+
+    Defines a mechanism for computing the unary negation of a value. Provides operators: `-`
+
+* `IUnaryPlusOperators<TSelf,TSelf>`
+
+    Defines a mechanism for computing the unary plus of a value. Provides operators: `+`
+
+* `IAdditiveIdentity<TSelf,TSelf>`
+
+    Defines a mechanism for getting the additive identity of a given type.
+
+* `IMultiplicativeIdentity<TSelf,TSelf>`
+
+    Defines a mechanism for getting the multiplicative identity of a given type.
+
+* `IMinMaxValue<T>`
+
+    Defines a mechanism for getting the minimum and maximum value of a type.
+
+* `IExponentialFunctions<T>`
+
+    Defines support for exponential functions.
+
+* `IFloatingPointConstants<T>`
+
+    Defines support for floating-point constants, like `E`, `Pi`, `Tau`
+
+* `IHyperbolicFunctions<T>`
+
+    Defines support for hyperbolic functions.
+
+* `ILogarithmicFunctions<T>`
+
+    Defines support for logarithmic functions.
+
+* `IPowerFunctions<T>`
+
+    Defines support for power functions.
+
+* `IRootFunctions<T>`
+
+    Defines support for root functions.
+
+* `ITrigonometricFunctions<T>`
+
+    Defines support for trigonometric functions.
 
 |             Interfaces / Types             | SByte, Int16, Int32, Int64 | Int128 | Byte, UInt16, UInt32, UInt64 | UInt128 | Half  | Single, Double | Decimal | Complex | BigInteger |
 | :----------------------------------------: | :------------------------: | :----: | :--------------------------: | :-----: | :---: | :------------: | :-----: | :-----: | :--------: |
@@ -248,7 +389,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 |     `IUnaryPlusOperators<TSelf,TSelf>`     |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
 |      `IAdditiveIdentity<TSelf,TSelf>`      |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
 |   `IMultiplicativeIdentity<TSelf,TSelf>`   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
-|             `IMinMa√Value<T>`              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |            |
+|             `IMinMaxValue<T>`              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |            |
 |         `IExponentialFunctions<T>`         |                            |        |                              |         |   √   |       √        |         |         |            |
 |        `IFloatingPointConstants<T>`        |                            |        |                              |         |   √   |       √        |    √    |         |            |
 |         `IHyperbolicFunctions<T>`          |                            |        |                              |         |   √   |       √        |         |         |            |
