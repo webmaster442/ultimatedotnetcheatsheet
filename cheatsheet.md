@@ -21,6 +21,7 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 ## Changelog
 
 * 2024.02.29 - Initial release
+* 2024.03.08 - Generic math interfaces extended & various small improvements
 
 # Dotnet basic commands
 
@@ -388,7 +389,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 |     `IUnaryPlusOperators<TSelf,TSelf>`     |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
 |      `IAdditiveIdentity<TSelf,TSelf>`      |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
 |   `IMultiplicativeIdentity<TSelf,TSelf>`   |             √              |   √    |              √               |    √    |   √   |       √        |    √    |    √    |     √      |
-|             `IMinMa√Value<T>`              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |            |
+|             `IMinMaxValue<T>`              |             √              |   √    |              √               |    √    |   √   |       √        |    √    |         |            |
 |         `IExponentialFunctions<T>`         |                            |        |                              |         |   √   |       √        |         |         |            |
 |        `IFloatingPointConstants<T>`        |                            |        |                              |         |   √   |       √        |    √    |         |            |
 |         `IHyperbolicFunctions<T>`          |                            |        |                              |         |   √   |       √        |         |         |            |
