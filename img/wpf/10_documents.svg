@@ -1,0 +1,204 @@
+<svg version="1.1" baseProfile="full" width="1560.0" height="580.0" viewbox="0 0 1560 580" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	
+	[DocumentViewer|Represents a document viewing control 
+	that can host paginated FixedDocument 
+	content such as an XpsDocument.]
+	
+	[FlowDocumentPageViewer|Represents a control for viewing flow 
+	content in a fixed viewing mode that
+	shows content one page at a time.]
+	
+	[FlowDocumentReader|Provides a control for viewing flow content, 
+	with built-in support for multiple viewing modes.]
+	
+	[FlowDocumentScrollViewer|Provides a control for viewing
+	flow content in a continuous scrolling mode.]
+	
+	[StickyNoteControl|Represents a control that lets users 
+	attach typed text or handwritten 
+	annotations to documents.]
+	
+	[Control|Represents the base class for user interface (UI) elements
+	that use a ControlTemplate to define their appearance.]
+	
+	[DocumentViewerBase|Provides a base class for viewers that
+	are intended to display fixed or flow content 
+	(represented by a FixedDocument or FlowDocument, respectively).]
+	
+	[FrameworkElement] &lt;:- [Control] &lt;:- [DocumentViewerBase] &lt;:- [DocumentViewer]
+	[DocumentViewerBase] &lt;:-[FlowDocumentPageViewer]
+	[Control] &lt;:- [FlowDocumentReader]
+	[Control] &lt;:- [FlowDocumentScrollViewer]
+	[Control] &lt;:- [StickyNoteControl]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M177.3 217.8 L184 217.75 L204 217.75 L204.0 217.8 " fill="none"></path>
+					<path d="M177.3 212.4 L177.3 217.8 L177.3 223.1 L164.0 217.8 Z"></path>
+					<path d="M475.9 264.7 L654 412 L674 412 L674.0 412.0 " fill="none"></path>
+					<path d="M479.3 260.6 L475.9 264.7 L472.5 268.9 L465.6 256.3 Z"></path>
+					<path d="M1117.5 362.8 L1185 346 L1205 346 L1205.0 346.0 " fill="none"></path>
+					<path d="M1116.2 357.6 L1117.5 362.8 L1118.8 368.0 L1104.5 366.0 Z"></path>
+					<path d="M1117.5 461.2 L1185 478 L1215.5 478 L1215.5 478.0 " fill="none"></path>
+					<path d="M1118.8 456.0 L1117.5 461.2 L1116.2 466.4 L1104.5 458.0 Z"></path>
+					<path d="M480.1 171.2 L654 38.5 L744 38.5 L744.0 38.5 " fill="none"></path>
+					<path d="M476.8 166.9 L480.1 171.2 L483.3 175.4 L469.5 179.3 Z"></path>
+					<path d="M577.2 175.8 L654 155.5 L756.5 155.5 L756.5 155.5 " fill="none"></path>
+					<path d="M575.9 170.7 L577.2 175.8 L578.6 181.0 L564.3 179.3 Z"></path>
+					<path d="M577.2 259.7 L654 280 L785.5 280 L785.5 280.0 " fill="none"></path>
+					<path d="M578.6 254.5 L577.2 259.7 L575.9 264.8 L564.3 256.3 Z"></path>
+					<g data-name="DocumentViewer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DocumentViewer">
+								<rect x="1205.0" y="300.0" height="92.0" width="299.0" data-name="DocumentViewer"></rect>
+							<path d="M1205.0 331.0 L1504.0 331.0" fill="none" data-name="DocumentViewer"></path>
+							</g>
+						<g transform="translate(1205, 300)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DocumentViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DocumentViewer">
+									<text x="141.5" y="13.5" stroke="none" text-anchor="middle" data-name="DocumentViewer">DocumentViewer</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1205, 331)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DocumentViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DocumentViewer">
+									<text x="0.0" y="13.5" stroke="none" data-name="DocumentViewer">Represents a document viewing control</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DocumentViewer">that can host paginated FixedDocument</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="DocumentViewer">content such as an XpsDocument.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FlowDocumentPageViewer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FlowDocumentPageViewer">
+								<rect x="1215.5" y="432.0" height="92.0" width="278.0" data-name="FlowDocumentPageViewer"></rect>
+							<path d="M1215.5 463.0 L1493.5 463.0" fill="none" data-name="FlowDocumentPageViewer"></path>
+							</g>
+						<g transform="translate(1215.5, 432)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FlowDocumentPageViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FlowDocumentPageViewer">
+									<text x="131.0" y="13.5" stroke="none" text-anchor="middle" data-name="FlowDocumentPageViewer">FlowDocumentPageViewer</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1215.5, 463)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FlowDocumentPageViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FlowDocumentPageViewer">
+									<text x="0.0" y="13.5" stroke="none" data-name="FlowDocumentPageViewer">Represents a control for viewing flow</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FlowDocumentPageViewer">content in a fixed viewing mode that</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="FlowDocumentPageViewer">shows content one page at a time.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FlowDocumentReader">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FlowDocumentReader">
+								<rect x="744.0" y="0.0" height="77.0" width="351.0" data-name="FlowDocumentReader"></rect>
+							<path d="M744.0 31.0 L1095.0 31.0" fill="none" data-name="FlowDocumentReader"></path>
+							</g>
+						<g transform="translate(744, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FlowDocumentReader">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FlowDocumentReader">
+									<text x="167.5" y="13.5" stroke="none" text-anchor="middle" data-name="FlowDocumentReader">FlowDocumentReader</text>
+								
+								</g>
+							</g>
+						<g transform="translate(744, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FlowDocumentReader">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FlowDocumentReader">
+									<text x="0.0" y="13.5" stroke="none" data-name="FlowDocumentReader">Provides a control for viewing flow content,</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FlowDocumentReader">with built-in support for multiple viewing modes.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FlowDocumentScrollViewer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FlowDocumentScrollViewer">
+								<rect x="756.5" y="117.0" height="77.0" width="326.0" data-name="FlowDocumentScrollViewer"></rect>
+							<path d="M756.5 148.0 L1082.5 148.0" fill="none" data-name="FlowDocumentScrollViewer"></path>
+							</g>
+						<g transform="translate(756.5, 117)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FlowDocumentScrollViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FlowDocumentScrollViewer">
+									<text x="155.0" y="13.5" stroke="none" text-anchor="middle" data-name="FlowDocumentScrollViewer">FlowDocumentScrollViewer</text>
+								
+								</g>
+							</g>
+						<g transform="translate(756.5, 148)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FlowDocumentScrollViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FlowDocumentScrollViewer">
+									<text x="0.0" y="13.5" stroke="none" data-name="FlowDocumentScrollViewer">Provides a control for viewing</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FlowDocumentScrollViewer">flow content in a continuous scrolling mode.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="StickyNoteControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="StickyNoteControl">
+								<rect x="785.5" y="234.0" height="92.0" width="268.0" data-name="StickyNoteControl"></rect>
+							<path d="M785.5 265.0 L1053.5 265.0" fill="none" data-name="StickyNoteControl"></path>
+							</g>
+						<g transform="translate(785.5, 234)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StickyNoteControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StickyNoteControl">
+									<text x="126.0" y="13.5" stroke="none" text-anchor="middle" data-name="StickyNoteControl">StickyNoteControl</text>
+								
+								</g>
+							</g>
+						<g transform="translate(785.5, 265)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StickyNoteControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StickyNoteControl">
+									<text x="0.0" y="13.5" stroke="none" data-name="StickyNoteControl">Represents a control that lets users</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="StickyNoteControl">attach typed text or handwritten</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="StickyNoteControl">annotations to documents.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Control">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Control">
+								<rect x="204.0" y="179.3" height="77.0" width="430.0" data-name="Control"></rect>
+							<path d="M204.0 210.3 L634.0 210.3" fill="none" data-name="Control"></path>
+							</g>
+						<g transform="translate(204, 179.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Control">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control">
+									<text x="207.0" y="13.5" stroke="none" text-anchor="middle" data-name="Control">Control</text>
+								
+								</g>
+							</g>
+						<g transform="translate(204, 210.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Control">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Control">
+									<text x="0.0" y="13.5" stroke="none" data-name="Control">Represents the base class for user interface (UI) elements</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Control">that use a ControlTemplate to define their appearance.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DocumentViewerBase">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DocumentViewerBase">
+								<rect x="674.0" y="366.0" height="92.0" width="491.0" data-name="DocumentViewerBase"></rect>
+							<path d="M674.0 397.0 L1165.0 397.0" fill="none" data-name="DocumentViewerBase"></path>
+							</g>
+						<g transform="translate(674, 366)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DocumentViewerBase">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DocumentViewerBase">
+									<text x="237.5" y="13.5" stroke="none" text-anchor="middle" data-name="DocumentViewerBase">DocumentViewerBase</text>
+								
+								</g>
+							</g>
+						<g transform="translate(674, 397)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DocumentViewerBase">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DocumentViewerBase">
+									<text x="0.0" y="13.5" stroke="none" data-name="DocumentViewerBase">Provides a base class for viewers that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DocumentViewerBase">are intended to display fixed or flow content</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="DocumentViewerBase">(represented by a FixedDocument or FlowDocument, respectively).</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FrameworkElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+								<rect x="0.0" y="202.3" height="31.0" width="164.0" data-name="FrameworkElement"></rect>
+							</g>
+						<g transform="translate(0, 202.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement">
+									<text x="74.0" y="13.5" stroke="none" text-anchor="middle" data-name="FrameworkElement">FrameworkElement</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

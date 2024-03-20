@@ -1,0 +1,176 @@
+<svg version="1.1" baseProfile="full" width="1535.0" height="403.0" viewbox="0 0 1535 403" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	
+	[Image|Represents a control that displays an image.]
+	[MediaElement|Represents a control that contains audio and/or video.]
+	
+	[HwndHost|Hosts a Win32 window as an element 
+	within Windows Presentation Foundation (WPF) content.]
+	
+	[ActiveXHost|Hosts an ActiveX control as an element
+	within Windows Presentation Foundation (WPF) content.
+	This API supports the product infrastructure 
+	and is not intended to be used directly from your code.]
+	
+	[WebBrowser|Hosts and navigates between HTML documents.
+	Enables interoperability between 
+	WPF managed code and HTML script.]
+	
+	[WindowsFormsHost|An element that allows you to host
+	a Windows Forms control on a WPF page.]
+	
+	[FrameworkElement] &lt;:- [MediaElement]
+	[FrameworkElement] &lt;:- [Image]
+	[FrameworkElement] &lt;:- [HwndHost] &lt;:- [ActiveXHost] &lt;:- [WebBrowser]
+	[HwndHost] &lt;:- [WindowsFormsHost]
+	
+	
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M177.3 133.0 L184 133 L213 133 L213.0 133.0 " fill="none"></path>
+					<path d="M177.3 127.7 L177.3 133.0 L177.3 138.3 L164.0 133.0 Z"></path>
+					<path d="M106.9 108.1 L184 31 L246.5 31 L246.5 31.0 " fill="none"></path>
+					<path d="M103.2 104.3 L106.9 108.1 L110.7 111.8 L97.5 117.5 Z"></path>
+					<path d="M105.5 158.3 L184 242.5 L204 242.5 L204.0 242.5 " fill="none"></path>
+					<path d="M109.4 154.6 L105.5 158.3 L101.6 161.9 L96.4 148.5 Z"></path>
+					<path d="M558.6 200.3 L641 176.5 L661 176.5 L661.0 176.5 " fill="none"></path>
+					<path d="M557.1 195.2 L558.6 200.3 L560.1 205.4 L545.8 204.0 Z"></path>
+					<path d="M1091.3 176.5 L1098 176.5 L1118 176.5 L1118.0 176.5 " fill="none"></path>
+					<path d="M1091.3 171.2 L1091.3 176.5 L1091.3 181.8 L1078.0 176.5 Z"></path>
+					<path d="M558.6 284.7 L641 308.5 L711 308.5 L711.0 308.5 " fill="none"></path>
+					<path d="M560.1 279.6 L558.6 284.7 L557.1 289.8 L545.8 281.0 Z"></path>
+					<g data-name="Image">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Image">
+								<rect x="246.5" y="0.0" height="62.0" width="332.0" data-name="Image"></rect>
+							<path d="M246.5 31.0 L578.5 31.0" fill="none" data-name="Image"></path>
+							</g>
+						<g transform="translate(246.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Image">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Image">
+									<text x="158.0" y="13.5" stroke="none" text-anchor="middle" data-name="Image">Image</text>
+								
+								</g>
+							</g>
+						<g transform="translate(246.5, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Image">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Image">
+									<text x="0.0" y="13.5" stroke="none" data-name="Image">Represents a control that displays an image.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MediaElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MediaElement">
+								<rect x="213.0" y="102.0" height="62.0" width="399.0" data-name="MediaElement"></rect>
+							<path d="M213.0 133.0 L612.0 133.0" fill="none" data-name="MediaElement"></path>
+							</g>
+						<g transform="translate(213, 102)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MediaElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MediaElement">
+									<text x="191.5" y="13.5" stroke="none" text-anchor="middle" data-name="MediaElement">MediaElement</text>
+								
+								</g>
+							</g>
+						<g transform="translate(213, 133)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MediaElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MediaElement">
+									<text x="0.0" y="13.5" stroke="none" data-name="MediaElement">Represents a control that contains audio and/or video.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="HwndHost">
+							<g fill="#eee8d5" stroke="#33322E" data-name="HwndHost">
+								<rect x="204.0" y="204.0" height="77.0" width="417.0" data-name="HwndHost"></rect>
+							<path d="M204.0 235.0 L621.0 235.0" fill="none" data-name="HwndHost"></path>
+							</g>
+						<g transform="translate(204, 204)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HwndHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HwndHost">
+									<text x="200.5" y="13.5" stroke="none" text-anchor="middle" data-name="HwndHost">HwndHost</text>
+								
+								</g>
+							</g>
+						<g transform="translate(204, 235)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HwndHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HwndHost">
+									<text x="0.0" y="13.5" stroke="none" data-name="HwndHost">Hosts a Win32 window as an element</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="HwndHost">within Windows Presentation Foundation (WPF) content.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ActiveXHost">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ActiveXHost">
+								<rect x="661.0" y="123.0" height="107.0" width="417.0" data-name="ActiveXHost"></rect>
+							<path d="M661.0 154.0 L1078.0 154.0" fill="none" data-name="ActiveXHost"></path>
+							</g>
+						<g transform="translate(661, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ActiveXHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ActiveXHost">
+									<text x="200.5" y="13.5" stroke="none" text-anchor="middle" data-name="ActiveXHost">ActiveXHost</text>
+								
+								</g>
+							</g>
+						<g transform="translate(661, 154)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ActiveXHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ActiveXHost">
+									<text x="0.0" y="13.5" stroke="none" data-name="ActiveXHost">Hosts an ActiveX control as an element</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ActiveXHost">within Windows Presentation Foundation (WPF) content.</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="ActiveXHost">This API supports the product infrastructure</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="ActiveXHost">and is not intended to be used directly from your code.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="WebBrowser">
+							<g fill="#eee8d5" stroke="#33322E" data-name="WebBrowser">
+								<rect x="1118.0" y="130.5" height="92.0" width="361.0" data-name="WebBrowser"></rect>
+							<path d="M1118.0 161.5 L1479.0 161.5" fill="none" data-name="WebBrowser"></path>
+							</g>
+						<g transform="translate(1118, 130.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WebBrowser">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WebBrowser">
+									<text x="172.5" y="13.5" stroke="none" text-anchor="middle" data-name="WebBrowser">WebBrowser</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1118, 161.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="WebBrowser">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="WebBrowser">
+									<text x="0.0" y="13.5" stroke="none" data-name="WebBrowser">Hosts and navigates between HTML documents.</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="WebBrowser">Enables interoperability between</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="WebBrowser">WPF managed code and HTML script.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="WindowsFormsHost">
+							<g fill="#eee8d5" stroke="#33322E" data-name="WindowsFormsHost">
+								<rect x="711.0" y="270.0" height="77.0" width="317.0" data-name="WindowsFormsHost"></rect>
+							<path d="M711.0 301.0 L1028.0 301.0" fill="none" data-name="WindowsFormsHost"></path>
+							</g>
+						<g transform="translate(711, 270)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WindowsFormsHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WindowsFormsHost">
+									<text x="150.5" y="13.5" stroke="none" text-anchor="middle" data-name="WindowsFormsHost">WindowsFormsHost</text>
+								
+								</g>
+							</g>
+						<g transform="translate(711, 301)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="WindowsFormsHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="WindowsFormsHost">
+									<text x="0.0" y="13.5" stroke="none" data-name="WindowsFormsHost">An element that allows you to host</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="WindowsFormsHost">a Windows Forms control on a WPF page.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FrameworkElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+								<rect x="0.0" y="117.5" height="31.0" width="164.0" data-name="FrameworkElement"></rect>
+							</g>
+						<g transform="translate(0, 117.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement">
+									<text x="74.0" y="13.5" stroke="none" text-anchor="middle" data-name="FrameworkElement">FrameworkElement</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

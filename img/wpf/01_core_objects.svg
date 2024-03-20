@@ -1,0 +1,163 @@
+<svg version="1.1" baseProfile="full" width="619.0" height="778.0" viewbox="0 0 619 778" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >[Object|Supports all classes in the .NET class
+	hierarchy and provides low-level services to derived classes.
+	This is the ultimate base class of all .NET classes; 
+	it is the root of the type hierarchy.]
+	
+	[DispatcherObject|Represents an object that is associated with a Dispatcher.]
+	
+	[DependencyObject|Represents an object that participates in the dependency property system.]
+	
+	[Visual|Provides rendering support in WPF, 
+	which includes hit testing, coordinate 
+	transformation, and bounding box calculations.]
+	
+	[UIElement|UIElement is a base class for WPF core level implementations 
+	building on Windows Presentation Foundation (WPF) 
+	elements and basic presentation characteristics.]
+	
+	[FrameworkElement|Provides a WPF framework-level set of properties, events, and methods 
+	for Windows Presentation Foundation (WPF) elements. This class represents 
+	the provided WPF framework-level implementation that is built 
+	on the WPF core-level APIs that are defined by UIElement.]
+	
+	[Object ]&lt;:- [DispatcherObject] &lt;:- [DependencyObject] &lt;:- [Visual] &lt;:- [UIElement]&lt;:- [FrameworkElement]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M281.5 120.3 L281.5 127 L281.5 147 L281.5 147.0 " fill="none"></path>
+					<path d="M286.8 120.3 L281.5 120.3 L276.2 120.3 L281.5 107.0 Z"></path>
+					<path d="M281.5 222.3 L281.5 229 L281.5 249 L281.5 249.0 " fill="none"></path>
+					<path d="M286.8 222.3 L281.5 222.3 L276.2 222.3 L281.5 209.0 Z"></path>
+					<path d="M281.5 324.3 L281.5 331 L281.5 351 L281.5 351.0 " fill="none"></path>
+					<path d="M286.8 324.3 L281.5 324.3 L276.2 324.3 L281.5 311.0 Z"></path>
+					<path d="M281.5 456.3 L281.5 463 L281.5 483 L281.5 483.0 " fill="none"></path>
+					<path d="M286.8 456.3 L281.5 456.3 L276.2 456.3 L281.5 443.0 Z"></path>
+					<path d="M281.5 588.3 L281.5 595 L281.5 615 L281.5 615.0 " fill="none"></path>
+					<path d="M286.8 588.3 L281.5 588.3 L276.2 588.3 L281.5 575.0 Z"></path>
+					<g data-name="Object">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Object">
+								<rect x="59.0" y="0.0" height="107.0" width="445.0" data-name="Object"></rect>
+							<path d="M59.0 31.0 L504.0 31.0" fill="none" data-name="Object"></path>
+							</g>
+						<g transform="translate(59, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object">
+									<text x="214.5" y="13.5" stroke="none" text-anchor="middle" data-name="Object">Object</text>
+								
+								</g>
+							</g>
+						<g transform="translate(59, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object">
+									<text x="0.0" y="13.5" stroke="none" data-name="Object">Supports all classes in the .NET class</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Object">hierarchy and provides low-level services to derived classes.</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="Object">This is the ultimate base class of all .NET classes</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="Object">it is the root of the type hierarchy.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DispatcherObject">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DispatcherObject">
+								<rect x="68.5" y="147.0" height="62.0" width="426.0" data-name="DispatcherObject"></rect>
+							<path d="M68.5 178.0 L494.5 178.0" fill="none" data-name="DispatcherObject"></path>
+							</g>
+						<g transform="translate(68.5, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DispatcherObject">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DispatcherObject">
+									<text x="205.0" y="13.5" stroke="none" text-anchor="middle" data-name="DispatcherObject">DispatcherObject</text>
+								
+								</g>
+							</g>
+						<g transform="translate(68.5, 178)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DispatcherObject">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DispatcherObject">
+									<text x="0.0" y="13.5" stroke="none" data-name="DispatcherObject">Represents an object that is associated with a Dispatcher.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DependencyObject">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DependencyObject">
+								<rect x="10.0" y="249.0" height="62.0" width="543.0" data-name="DependencyObject"></rect>
+							<path d="M10.0 280.0 L553.0 280.0" fill="none" data-name="DependencyObject"></path>
+							</g>
+						<g transform="translate(10, 249)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DependencyObject">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DependencyObject">
+									<text x="263.5" y="13.5" stroke="none" text-anchor="middle" data-name="DependencyObject">DependencyObject</text>
+								
+								</g>
+							</g>
+						<g transform="translate(10, 280)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DependencyObject">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DependencyObject">
+									<text x="0.0" y="13.5" stroke="none" data-name="DependencyObject">Represents an object that participates in the dependency property system.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Visual">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Visual">
+								<rect x="108.0" y="351.0" height="92.0" width="347.0" data-name="Visual"></rect>
+							<path d="M108.0 382.0 L455.0 382.0" fill="none" data-name="Visual"></path>
+							</g>
+						<g transform="translate(108, 351)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Visual">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Visual">
+									<text x="165.5" y="13.5" stroke="none" text-anchor="middle" data-name="Visual">Visual</text>
+								
+								</g>
+							</g>
+						<g transform="translate(108, 382)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Visual">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Visual">
+									<text x="0.0" y="13.5" stroke="none" data-name="Visual">Provides rendering support in WPF,</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Visual">which includes hit testing, coordinate</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="Visual">transformation, and bounding box calculations.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="UIElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="UIElement">
+								<rect x="53.0" y="483.0" height="92.0" width="457.0" data-name="UIElement"></rect>
+							<path d="M53.0 514.0 L510.0 514.0" fill="none" data-name="UIElement"></path>
+							</g>
+						<g transform="translate(53, 483)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UIElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UIElement">
+									<text x="220.5" y="13.5" stroke="none" text-anchor="middle" data-name="UIElement">UIElement</text>
+								
+								</g>
+							</g>
+						<g transform="translate(53, 514)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="UIElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UIElement">
+									<text x="0.0" y="13.5" stroke="none" data-name="UIElement">UIElement is a base class for WPF core level implementations</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="UIElement">building on Windows Presentation Foundation (WPF)</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="UIElement">elements and basic presentation characteristics.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FrameworkElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+								<rect x="0.0" y="615.0" height="107.0" width="563.0" data-name="FrameworkElement"></rect>
+							<path d="M0.0 646.0 L563.0 646.0" fill="none" data-name="FrameworkElement"></path>
+							</g>
+						<g transform="translate(0, 615)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement">
+									<text x="273.5" y="13.5" stroke="none" text-anchor="middle" data-name="FrameworkElement">FrameworkElement</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 646)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FrameworkElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FrameworkElement">
+									<text x="0.0" y="13.5" stroke="none" data-name="FrameworkElement">Provides a WPF framework-level set of properties, events, and methods</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="FrameworkElement">for Windows Presentation Foundation (WPF) elements. This class represents</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="FrameworkElement">the provided WPF framework-level implementation that is built</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="FrameworkElement">on the WPF core-level APIs that are defined by UIElement.</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

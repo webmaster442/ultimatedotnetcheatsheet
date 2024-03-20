@@ -1,0 +1,246 @@
+<svg version="1.1" baseProfile="full" width="2140.0" height="378.3" viewbox="0 0 2140 378.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	
+	[DataGrid|Represents a control that
+	displays data in a customizable grid.]
+	
+	[ListView|Represents a control that
+	displays a list of data items.]
+	
+	[TreeView|Represents a control that 
+	displays hierarchical data in a tree structure
+	that has items that can expand and collapse.]
+	
+	[ComboBox|Represents a selection control with 
+	a drop-down list that can be shown 
+	or hidden by clicking the arrow on the control.]
+	
+	[ListBox|Contains a list of selectable items.]
+	
+	[MultiSelector|Provides an abstract class for controls
+	that allow multiple items to be selected.]
+	
+		[Control|Represents the base class for user interface (UI) elements
+		that use a ControlTemplate to define their appearance.]
+	
+	[ItemsControl|Represents a control 
+	that can be used to present a collection of items.]
+	
+	[FrameworkElement] &lt;:- [Control] &lt;:- [ItemsControl] &lt;:- [Selector] &lt;:- [ListBox] &lt;:- [ListView]
+	
+	[ItemsControl] &lt;:- [TreeView]
+	
+	[Selector|Represents a control that allows a user to 
+	select items from among its child elements.] &lt;:- [ComboBox]
+	
+	[Selector] &lt;:- [MultiSelector] &lt;:- [DataGrid]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M176.3 104.5 L183 104.5 L203 104.5 L203.0 104.5 " fill="none"></path>
+					<path d="M176.3 99.2 L176.3 104.5 L176.3 109.8 L163.0 104.5 Z"></path>
+					<path d="M643.3 104.5 L650 104.5 L670 104.5 L670.0 104.5 " fill="none"></path>
+					<path d="M643.3 99.2 L643.3 104.5 L643.3 109.8 L630.0 104.5 Z"></path>
+					<path d="M976.9 147.2 L1047 170.5 L1072 170.5 L1072.0 170.5 " fill="none"></path>
+					<path d="M978.6 142.1 L976.9 147.2 L975.3 152.3 L964.3 143.0 Z"></path>
+					<path d="M1405.3 167.0 L1417 166.75 L1477 166.75 L1477.0 166.8 " fill="none"></path>
+					<path d="M1405.2 161.7 L1405.3 167.0 L1405.4 172.3 L1392.0 167.3 Z"></path>
+					<path d="M1746.3 166.8 L1793 166.75 L1843.5 166.75 L1843.5 166.8 " fill="none"></path>
+					<path d="M1746.3 161.4 L1746.3 166.8 L1746.3 172.1 L1733.0 166.8 Z"></path>
+					<path d="M991.9 62.2 L1047 46 L1067 46 L1067.0 46.0 " fill="none"></path>
+					<path d="M990.4 57.1 L991.9 62.2 L993.4 67.3 L979.1 66.0 Z"></path>
+					<path d="M1302.2 124.7 L1417 49.75 L1437 49.75 L1437.0 49.8 " fill="none"></path>
+					<path d="M1299.2 120.2 L1302.2 124.7 L1305.1 129.2 L1291.0 132.0 Z"></path>
+					<path d="M1306.3 216.0 L1417 283.75 L1458.5 283.75 L1458.5 283.8 " fill="none"></path>
+					<path d="M1309.0 211.4 L1306.3 216.0 L1303.5 220.5 L1294.9 209.0 Z"></path>
+					<path d="M1764.8 283.8 L1793 283.75 L1813 283.75 L1813.0 283.8 " fill="none"></path>
+					<path d="M1764.8 278.4 L1764.8 283.8 L1764.8 289.1 L1751.5 283.8 Z"></path>
+					<g data-name="DataGrid">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGrid">
+								<rect x="1813.0" y="245.3" height="77.0" width="271.0" data-name="DataGrid"></rect>
+							<path d="M1813.0 276.3 L2084.0 276.3" fill="none" data-name="DataGrid"></path>
+							</g>
+						<g transform="translate(1813, 245.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGrid">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGrid">
+									<text x="127.5" y="13.5" stroke="none" text-anchor="middle" data-name="DataGrid">DataGrid</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1813, 276.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DataGrid">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DataGrid">
+									<text x="0.0" y="13.5" stroke="none" data-name="DataGrid">Represents a control that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="DataGrid">displays data in a customizable grid.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ListView">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ListView">
+								<rect x="1843.5" y="128.3" height="77.0" width="210.0" data-name="ListView"></rect>
+							<path d="M1843.5 159.3 L2053.5 159.3" fill="none" data-name="ListView"></path>
+							</g>
+						<g transform="translate(1843.5, 128.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ListView">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ListView">
+									<text x="97.0" y="13.5" stroke="none" text-anchor="middle" data-name="ListView">ListView</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1843.5, 159.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ListView">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ListView">
+									<text x="0.0" y="13.5" stroke="none" data-name="ListView">Represents a control that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ListView">displays a list of data items.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="TreeView">
+							<g fill="#eee8d5" stroke="#33322E" data-name="TreeView">
+								<rect x="1067.0" y="0.0" height="92.0" width="330.0" data-name="TreeView"></rect>
+							<path d="M1067.0 31.0 L1397.0 31.0" fill="none" data-name="TreeView"></path>
+							</g>
+						<g transform="translate(1067, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TreeView">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TreeView">
+									<text x="157.0" y="13.5" stroke="none" text-anchor="middle" data-name="TreeView">TreeView</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1067, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TreeView">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TreeView">
+									<text x="0.0" y="13.5" stroke="none" data-name="TreeView">Represents a control that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="TreeView">displays hierarchical data in a tree structure</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="TreeView">that has items that can expand and collapse.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ComboBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ComboBox">
+								<rect x="1437.0" y="3.8" height="92.0" width="336.0" data-name="ComboBox"></rect>
+							<path d="M1437.0 34.8 L1773.0 34.8" fill="none" data-name="ComboBox"></path>
+							</g>
+						<g transform="translate(1437, 3.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ComboBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ComboBox">
+									<text x="160.0" y="13.5" stroke="none" text-anchor="middle" data-name="ComboBox">ComboBox</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1437, 34.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ComboBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ComboBox">
+									<text x="0.0" y="13.5" stroke="none" data-name="ComboBox">Represents a selection control with</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ComboBox">a drop-down list that can be shown</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="ComboBox">or hidden by clicking the arrow on the control.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ListBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ListBox">
+								<rect x="1477.0" y="135.8" height="62.0" width="256.0" data-name="ListBox"></rect>
+							<path d="M1477.0 166.8 L1733.0 166.8" fill="none" data-name="ListBox"></path>
+							</g>
+						<g transform="translate(1477, 135.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ListBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ListBox">
+									<text x="120.0" y="13.5" stroke="none" text-anchor="middle" data-name="ListBox">ListBox</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1477, 166.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ListBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ListBox">
+									<text x="0.0" y="13.5" stroke="none" data-name="ListBox">Contains a list of selectable items.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MultiSelector">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MultiSelector">
+								<rect x="1458.5" y="245.3" height="77.0" width="293.0" data-name="MultiSelector"></rect>
+							<path d="M1458.5 276.3 L1751.5 276.3" fill="none" data-name="MultiSelector"></path>
+							</g>
+						<g transform="translate(1458.5, 245.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MultiSelector">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MultiSelector">
+									<text x="138.5" y="13.5" stroke="none" text-anchor="middle" data-name="MultiSelector">MultiSelector</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1458.5, 276.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MultiSelector">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MultiSelector">
+									<text x="0.0" y="13.5" stroke="none" data-name="MultiSelector">Provides an abstract class for controls</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="MultiSelector">that allow multiple items to be selected.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Control">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Control">
+								<rect x="203.0" y="66.0" height="77.0" width="427.0" data-name="Control"></rect>
+							<path d="M203.0 97.0 L630.0 97.0" fill="none" data-name="Control"></path>
+							</g>
+						<g transform="translate(203, 66)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Control">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control">
+									<text x="205.5" y="13.5" stroke="none" text-anchor="middle" data-name="Control">Control</text>
+								
+								</g>
+							</g>
+						<g transform="translate(203, 97)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Control">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Control">
+									<text x="0.0" y="13.5" stroke="none" data-name="Control">Represents the base class for user interface (UI) elements</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Control">that use a ControlTemplate to define their appearance.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ItemsControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ItemsControl">
+								<rect x="670.0" y="66.0" height="77.0" width="357.0" data-name="ItemsControl"></rect>
+							<path d="M670.0 97.0 L1027.0 97.0" fill="none" data-name="ItemsControl"></path>
+							</g>
+						<g transform="translate(670, 66)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemsControl">
+									<text x="170.5" y="13.5" stroke="none" text-anchor="middle" data-name="ItemsControl">ItemsControl</text>
+								
+								</g>
+							</g>
+						<g transform="translate(670, 97)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ItemsControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ItemsControl">
+									<text x="0.0" y="13.5" stroke="none" data-name="ItemsControl">Represents a control</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ItemsControl">that can be used to present a collection of items.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FrameworkElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+								<rect x="0.0" y="89.0" height="31.0" width="163.0" data-name="FrameworkElement"></rect>
+							</g>
+						<g transform="translate(0, 89)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement">
+									<text x="73.5" y="13.5" stroke="none" text-anchor="middle" data-name="FrameworkElement">FrameworkElement</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Selector">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Selector">
+								<rect x="1072.0" y="132.0" height="77.0" width="320.0" data-name="Selector"></rect>
+							<path d="M1072.0 163.0 L1392.0 163.0" fill="none" data-name="Selector"></path>
+							</g>
+						<g transform="translate(1072, 132)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Selector">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Selector">
+									<text x="152.0" y="13.5" stroke="none" text-anchor="middle" data-name="Selector">Selector</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1072, 163)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Selector">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Selector">
+									<text x="0.0" y="13.5" stroke="none" data-name="Selector">Represents a control that allows a user to</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Selector">select items from among its child elements.</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

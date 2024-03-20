@@ -1,0 +1,246 @@
+<svg version="1.1" baseProfile="full" width="1376.0" height="463.0" viewbox="0 0 1376 463" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+		
+		[Viewport3D|Renders the contained 3-D content 
+		within the 2-D layout bounds of the 
+		Viewport3D element.]
+		
+		
+		[Viewport3DVisual|Renders the Visual3D children 
+		within the specified 2D viewport bounds.]
+		
+		[Visual3D|Provides services and properties that 
+		are common to visual 3-D objects, including hit-testing,
+		coordinate transformation, and bounding box calculations.]
+		
+		[Viewport2DVisual3D|Renders the 2-D children 
+		within the specified 3-D viewport bounds.]
+		
+		[UIElement3D|UIElement3D is a base class for 
+		WPF core level implementations building on 
+		Windows Presentation Foundation (WPF) 
+		elements and basic presentation characteristics.]
+		
+		[ModelVisual3D|Provides a Visual3D 
+		that renders Model3D objects.]
+		
+		[ContainerUIElement3D|Represents a 
+		container for Visual3D objects.]
+		
+		[ModelUIElement3D|Renders a 3-D model that 
+		supports input, focus, and events.]
+		
+		[FrameworkElement] &lt;:- [Viewport3D]
+	
+		[Visual] &lt;:- [Viewport3DVisual]
+		[Visual] &lt;:-[Visual3D] &lt;:- [ModelVisual3D]
+		[Visual3D] &lt;:- [Viewport2DVisual3D]
+		[Visual3D] &lt;:- [UIElement3D] &lt;:- [ContainerUIElement3D]
+		
+		[UIElement3D] &lt;:- [ModelUIElement3D]
+		 
+		
+		</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M176.3 46.0 L183 46 L283.5 46 L283.5 46.0 " fill="none"></path>
+					<path d="M176.3 40.7 L176.3 46.0 L176.3 51.3 L163.0 46.0 Z"></path>
+					<path d="M126.3 172.6 L183 170.5 L265 170.5 L265.0 170.5 " fill="none"></path>
+					<path d="M126.1 167.3 L126.3 172.6 L126.5 177.9 L113.0 173.1 Z"></path>
+					<path d="M103.1 200.0 L183 295 L203 295 L203.0 295.0 " fill="none"></path>
+					<path d="M107.2 196.5 L103.1 200.0 L99.0 203.4 L94.5 189.8 Z"></path>
+					<path d="M573.7 345.0 L648 368.5 L732 368.5 L732.0 368.5 " fill="none"></path>
+					<path d="M575.3 339.9 L573.7 345.0 L572.1 350.1 L561.0 341.0 Z"></path>
+					<path d="M482.0 240.5 L648 104.5 L693.5 104.5 L693.5 104.5 " fill="none"></path>
+					<path d="M478.6 236.4 L482.0 240.5 L485.3 244.7 L471.6 249.0 Z"></path>
+					<path d="M611.3 245.7 L648 236.5 L668 236.5 L668.0 236.5 " fill="none"></path>
+					<path d="M609.9 240.6 L611.3 245.7 L612.6 250.9 L598.3 249.0 Z"></path>
+					<path d="M1037.8 180.1 L1045 178 L1076.5 178 L1076.5 178.0 " fill="none"></path>
+					<path d="M1036.3 175.0 L1037.8 180.1 L1039.3 185.2 L1025.0 183.9 Z"></path>
+					<path d="M1037.8 292.9 L1045 295 L1065 295 L1065.0 295.0 " fill="none"></path>
+					<path d="M1039.3 287.8 L1037.8 292.9 L1036.3 298.0 L1025.0 289.1 Z"></path>
+					<g data-name="Viewport3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Viewport3D">
+								<rect x="283.5" y="0.0" height="92.0" width="264.0" data-name="Viewport3D"></rect>
+							<path d="M283.5 31.0 L547.5 31.0" fill="none" data-name="Viewport3D"></path>
+							</g>
+						<g transform="translate(283.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewport3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewport3D">
+									<text x="124.0" y="13.5" stroke="none" text-anchor="middle" data-name="Viewport3D">Viewport3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(283.5, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Viewport3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Viewport3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="Viewport3D">Renders the contained 3-D content</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Viewport3D">within the 2-D layout bounds of the</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="Viewport3D">Viewport3D element.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Viewport3DVisual">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Viewport3DVisual">
+								<rect x="265.0" y="132.0" height="77.0" width="301.0" data-name="Viewport3DVisual"></rect>
+							<path d="M265.0 163.0 L566.0 163.0" fill="none" data-name="Viewport3DVisual"></path>
+							</g>
+						<g transform="translate(265, 132)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewport3DVisual">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewport3DVisual">
+									<text x="142.5" y="13.5" stroke="none" text-anchor="middle" data-name="Viewport3DVisual">Viewport3DVisual</text>
+								
+								</g>
+							</g>
+						<g transform="translate(265, 163)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Viewport3DVisual">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Viewport3DVisual">
+									<text x="0.0" y="13.5" stroke="none" data-name="Viewport3DVisual">Renders the Visual3D children</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Viewport3DVisual">within the specified 2D viewport bounds.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Visual3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Visual3D">
+								<rect x="203.0" y="249.0" height="92.0" width="425.0" data-name="Visual3D"></rect>
+							<path d="M203.0 280.0 L628.0 280.0" fill="none" data-name="Visual3D"></path>
+							</g>
+						<g transform="translate(203, 249)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Visual3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Visual3D">
+									<text x="204.5" y="13.5" stroke="none" text-anchor="middle" data-name="Visual3D">Visual3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(203, 280)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Visual3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Visual3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="Visual3D">Provides services and properties that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Visual3D">are common to visual 3-D objects, including hit-testing,</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="Visual3D">coordinate transformation, and bounding box calculations.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Viewport2DVisual3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Viewport2DVisual3D">
+								<rect x="693.5" y="66.0" height="77.0" width="306.0" data-name="Viewport2DVisual3D"></rect>
+							<path d="M693.5 97.0 L999.5 97.0" fill="none" data-name="Viewport2DVisual3D"></path>
+							</g>
+						<g transform="translate(693.5, 66)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewport2DVisual3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewport2DVisual3D">
+									<text x="145.0" y="13.5" stroke="none" text-anchor="middle" data-name="Viewport2DVisual3D">Viewport2DVisual3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(693.5, 97)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Viewport2DVisual3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Viewport2DVisual3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="Viewport2DVisual3D">Renders the 2-D children</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="Viewport2DVisual3D">within the specified 3-D viewport bounds.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="UIElement3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="UIElement3D">
+								<rect x="668.0" y="183.0" height="107.0" width="357.0" data-name="UIElement3D"></rect>
+							<path d="M668.0 214.0 L1025.0 214.0" fill="none" data-name="UIElement3D"></path>
+							</g>
+						<g transform="translate(668, 183)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UIElement3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UIElement3D">
+									<text x="170.5" y="13.5" stroke="none" text-anchor="middle" data-name="UIElement3D">UIElement3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(668, 214)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="UIElement3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UIElement3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="UIElement3D">UIElement3D is a base class for</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="UIElement3D">WPF core level implementations building on</text>
+								<text x="0.0" y="43.5" stroke="none" data-name="UIElement3D">Windows Presentation Foundation (WPF)</text>
+								<text x="0.0" y="58.5" stroke="none" data-name="UIElement3D">elements and basic presentation characteristics.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ModelVisual3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ModelVisual3D">
+								<rect x="732.0" y="330.0" height="77.0" width="229.0" data-name="ModelVisual3D"></rect>
+							<path d="M732.0 361.0 L961.0 361.0" fill="none" data-name="ModelVisual3D"></path>
+							</g>
+						<g transform="translate(732, 330)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ModelVisual3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ModelVisual3D">
+									<text x="106.5" y="13.5" stroke="none" text-anchor="middle" data-name="ModelVisual3D">ModelVisual3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(732, 361)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ModelVisual3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ModelVisual3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="ModelVisual3D">Provides a Visual3D</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ModelVisual3D">that renders Model3D objects.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ContainerUIElement3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ContainerUIElement3D">
+								<rect x="1076.5" y="139.5" height="77.0" width="232.0" data-name="ContainerUIElement3D"></rect>
+							<path d="M1076.5 170.5 L1308.5 170.5" fill="none" data-name="ContainerUIElement3D"></path>
+							</g>
+						<g transform="translate(1076.5, 139.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ContainerUIElement3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ContainerUIElement3D">
+									<text x="108.0" y="13.5" stroke="none" text-anchor="middle" data-name="ContainerUIElement3D">ContainerUIElement3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1076.5, 170.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ContainerUIElement3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ContainerUIElement3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="ContainerUIElement3D">Represents a</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ContainerUIElement3D">container for Visual3D objects.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ModelUIElement3D">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ModelUIElement3D">
+								<rect x="1065.0" y="256.5" height="77.0" width="255.0" data-name="ModelUIElement3D"></rect>
+							<path d="M1065.0 287.5 L1320.0 287.5" fill="none" data-name="ModelUIElement3D"></path>
+							</g>
+						<g transform="translate(1065, 256.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ModelUIElement3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ModelUIElement3D">
+									<text x="119.5" y="13.5" stroke="none" text-anchor="middle" data-name="ModelUIElement3D">ModelUIElement3D</text>
+								
+								</g>
+							</g>
+						<g transform="translate(1065, 287.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ModelUIElement3D">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ModelUIElement3D">
+									<text x="0.0" y="13.5" stroke="none" data-name="ModelUIElement3D">Renders a 3-D model that</text>
+								<text x="0.0" y="28.5" stroke="none" data-name="ModelUIElement3D">supports input, focus, and events.</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FrameworkElement">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+								<rect x="0.0" y="30.5" height="31.0" width="163.0" data-name="FrameworkElement"></rect>
+							</g>
+						<g transform="translate(0, 30.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement">
+									<text x="73.5" y="13.5" stroke="none" text-anchor="middle" data-name="FrameworkElement">FrameworkElement</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Visual">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Visual">
+								<rect x="50.0" y="158.8" height="31.0" width="63.0" data-name="Visual"></rect>
+							</g>
+						<g transform="translate(50, 158.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Visual">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Visual">
+									<text x="23.5" y="13.5" stroke="none" text-anchor="middle" data-name="Visual">Visual</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>
