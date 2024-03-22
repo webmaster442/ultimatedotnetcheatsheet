@@ -81,7 +81,7 @@ Note: solution file name can be ignored if folder only contains one `.sln` file.
 
 Globaly means that the tool is installed to the users profile, instead of the current project/solution.
 
-## Usefull tools
+## Useful tools
 
 * **dotnet-ef**
 
