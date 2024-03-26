@@ -1,42 +1,41 @@
 <svg version="1.1" baseProfile="full" width="753.0" height="1012.0" viewbox="0 0 753 1012" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-		<title >wpf-frameworkelements</title>
-	<desc >#direction: right
+		<desc >#direction: right
 	#spacing: 12
-	#title: wpf-frameworkelements
-	
-	[FrameworkElement] &lt;:- [AccessText]
-	[FrameworkElement] &lt;:- [Popup]
-	[FrameworkElement] &lt;:- [TextBlock]
-	[FrameworkElement] &lt;:- [Decorator] &lt;:- [Border]
-	[FrameworkElement] &lt;:- [Page]
-	[FrameworkElement] &lt;:- [Panel]
-	[FrameworkElement] &lt;:- [Viewport3D]
-	
-	[Decorator] &lt;:- [BulletDecorator]
-	[Decorator] &lt;:- [Viewbox]
-	
-	[Panel] &lt;:- [Canvas]
-	[Panel] &lt;:- [DockPanel]
-	[Panel] &lt;:- [Grid]
-	[Panel] &lt;:- [TabPanel]
-	[Panel] &lt;:- [ToolBarOverflowPanel]
-	[Panel] &lt;:- [UniformGrid]
-	[Panel] &lt;:- [StackPanel]
-	[Panel] &lt;:- [VirtualizingPanel] -[VirtualizingStackPanel]
-	[Panel] &lt;:- [WrapPanel]
-	[VirtualizingPanel] &lt;:- [DataGridCellsPanel]
-	
-	[FrameworkElement] &lt;:- [Shape] &lt;:- [Path]
-	[Shape] &lt;:- [Line]
-	[Shape] &lt;:- [Ellipse]
-	[Shape] &lt;:- [Polygon]
-	[Shape] &lt;:- [Polyline]
-	[Shape] &lt;:- [Rectangle]
-	
-	[FrameworkElement] &lt;:- [MediaElement]
-	[FrameworkElement] &lt;:- [Image]
-	[FrameworkElement] &lt;:- [HwndHost] &lt;:- [ActiveXHost] &lt;:- [WebBrowser]
-	[HwndHost] &lt;:- [WindowsFormsHost]</desc>
+	#.box: fill=#C06EF0
+		
+		[&lt;box&gt;FrameworkElement] &lt;:- [AccessText]
+		[FrameworkElement] &lt;:- [Popup]
+		[FrameworkElement] &lt;:- [TextBlock]
+		[FrameworkElement] &lt;:- [Decorator] &lt;:- [Border]
+		[FrameworkElement] &lt;:- [Page]
+		[FrameworkElement] &lt;:- [Panel]
+		[FrameworkElement] &lt;:- [Viewport3D]
+		
+		[Decorator] &lt;:- [BulletDecorator]
+		[Decorator] &lt;:- [Viewbox]
+		
+		[Panel] &lt;:- [Canvas]
+		[Panel] &lt;:- [DockPanel]
+		[Panel] &lt;:- [Grid]
+		[Panel] &lt;:- [TabPanel]
+		[Panel] &lt;:- [ToolBarOverflowPanel]
+		[Panel] &lt;:- [UniformGrid]
+		[Panel] &lt;:- [StackPanel]
+		[Panel] &lt;:- [VirtualizingPanel] -[VirtualizingStackPanel]
+		[Panel] &lt;:- [WrapPanel]
+		[VirtualizingPanel] &lt;:- [DataGridCellsPanel]
+		
+		[FrameworkElement] &lt;:- [Shape] &lt;:- [Path]
+		[Shape] &lt;:- [Line]
+		[Shape] &lt;:- [Ellipse]
+		[Shape] &lt;:- [Polygon]
+		[Shape] &lt;:- [Polyline]
+		[Shape] &lt;:- [Rectangle]
+		
+		[FrameworkElement] &lt;:- [MediaElement]
+		[FrameworkElement] &lt;:- [Image]
+		[FrameworkElement] &lt;:- [HwndHost] &lt;:- [ActiveXHost] &lt;:- [WebBrowser]
+		[HwndHost] &lt;:- [WindowsFormsHost]</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
 			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 				<g stroke="transparent" fill="transparent">
@@ -112,10 +111,10 @@
 					<path d="M289.5 940.0 L306 940 L319.5 940 L319.5 940.0 " fill="none"></path>
 					<path d="M289.5 938.4 L289.5 940.0 L289.5 941.6 L285.5 940.0 Z"></path>
 					<g data-name="FrameworkElement">
-							<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+							<g fill="#C06EF0" stroke="#33322E" data-name="FrameworkElement">
 								<rect x="0.0" y="396.0" height="32.0" width="164.0" data-name="FrameworkElement"></rect>
 							</g>
-						<g transform="translate(0, 396)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement">
+						<g transform="translate(0, 396)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FrameworkElement">
 								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement">
 									<text x="74.0" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkElement">FrameworkElement</text>
 								

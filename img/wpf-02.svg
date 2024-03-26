@@ -1,63 +1,62 @@
 <svg version="1.1" baseProfile="full" width="991.0" height="1144.0" viewbox="0 0 991 1144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-		<title >wpf-animatable</title>
-	<desc >#direction: right
+		<desc >#direction: right
 	#spacing: 12
-	#title: wpf-animatable
-	
-	[Animatable] &lt;:- [Camera] &lt;:- [ProjectionCamera] &lt;:- [PerspectiveCamera]
-	
-	[Animatable] &lt;:- [Geometry3D] &lt;:- [MeshGeometry3D]
-	[Animatable] &lt;:- [Model3D] &lt;:- [Light] &lt;:- [DirectionalLight]
-	
-	[Animatable] &lt;:- [GeneralTransform3D] &lt;:- [Transform3D]
-	
-	[Transform3D] &lt;:- [AffineTransform3D]
-	[Transform3D] &lt;:- [MatrixTransform3D]
-	[Transform3D] &lt;:- [Transform3DGroup]
-	
-	[AffineTransform3D] &lt;:- [RotateTransform3D]
-	[AffineTransform3D] &lt;:- [ScaleTransform3D]
-	[AffineTransform3D] &lt;:- [TranslateTransform3D]
-	
-	[GeneralTransform3D] &lt;:-[GeneralTransform3DGroup]
-	
-	[Animatable] &lt;:- [Material] &lt;:- [MaterialGroup]
-	[Material] &lt;:- [DiffuseMaterial]
-	[Material] &lt;:- [EmissiveMaterial]
-	[Material] &lt;:- [SpecularMaterial]
-	
-	[Model3D] &lt;:- [GeometryModel3D]
-	[Model3D] &lt;:- [Model3DGroup]
-	
-	[ProjectionCamera] &lt;:- [OrthographicCamera]
-	
-	[Light] &lt;:- [PointLightBase] &lt;:- [SpotLight]
-	[Light] &lt;:- [AmbientLight]
-	[PointLightBase] &lt;:- [PointLight]
-	
-	[Animatable] &lt;:-[Brush] &lt;:- [TileBrush] &lt;:- [VisualBrush]
-	[Brush] &lt;:- [BitmapCacheBrush]
-	[TileBrush] &lt;:- [DrawingBrush]
-	[TileBrush] &lt;:- [ImageBrush]
-	
-	[Animatable] &lt;:- [Drawing]
-	[Animatable] &lt;:- [Pen]
-	[Drawing] &lt;:- [DrawingGroup]
-	[Drawing] &lt;:- [GeometryDrawing]
-	[Drawing] &lt;:- [GlyphRunDrawing]
-	[Drawing] &lt;:- [ImageDrawing]
-	[Drawing] &lt;:- [VideoDrawing]
-	
-	[Animatable] &lt;:- [ImageSource] &lt;:- [BitmapSource] &lt;:- [BitmapImage]
-	[BitmapSource] &lt;:- [InteropBitmap]
-	[BitmapSource] &lt;:- [BitmapFrame]
-	[BitmapSource] &lt;:- [CachedBitmap]
-	[BitmapSource] &lt;:- [ColorConvertedBitmap]
-	[BitmapSource] &lt;:- [CroppedBitmap]
-	[BitmapSource] &lt;:- [FormatConvertedBitmap]
-	[BitmapSource] &lt;:- [RenderTargetBitmap]
-	[BitmapSource] &lt;:- [TransformedBitmap]
-	[BitmapSource] &lt;:- [WriteableBitmap]</desc>
+	#.box: fill=#C06EF0
+		
+		[&lt;box&gt;Animatable] &lt;:- [Camera] &lt;:- [ProjectionCamera] &lt;:- [PerspectiveCamera]
+		
+		[Animatable] &lt;:- [Geometry3D] &lt;:- [MeshGeometry3D]
+		[Animatable] &lt;:- [Model3D] &lt;:- [Light] &lt;:- [DirectionalLight]
+		
+		[Animatable] &lt;:- [GeneralTransform3D] &lt;:- [Transform3D]
+		
+		[Transform3D] &lt;:- [AffineTransform3D]
+		[Transform3D] &lt;:- [MatrixTransform3D]
+		[Transform3D] &lt;:- [Transform3DGroup]
+		
+		[AffineTransform3D] &lt;:- [RotateTransform3D]
+		[AffineTransform3D] &lt;:- [ScaleTransform3D]
+		[AffineTransform3D] &lt;:- [TranslateTransform3D]
+		
+		[GeneralTransform3D] &lt;:-[GeneralTransform3DGroup]
+		
+		[Animatable] &lt;:- [Material] &lt;:- [MaterialGroup]
+		[Material] &lt;:- [DiffuseMaterial]
+		[Material] &lt;:- [EmissiveMaterial]
+		[Material] &lt;:- [SpecularMaterial]
+		
+		[Model3D] &lt;:- [GeometryModel3D]
+		[Model3D] &lt;:- [Model3DGroup]
+		
+		[ProjectionCamera] &lt;:- [OrthographicCamera]
+		
+		[Light] &lt;:- [PointLightBase] &lt;:- [SpotLight]
+		[Light] &lt;:- [AmbientLight]
+		[PointLightBase] &lt;:- [PointLight]
+		
+		[Animatable] &lt;:-[Brush] &lt;:- [TileBrush] &lt;:- [VisualBrush]
+		[Brush] &lt;:- [BitmapCacheBrush]
+		[TileBrush] &lt;:- [DrawingBrush]
+		[TileBrush] &lt;:- [ImageBrush]
+		
+		[Animatable] &lt;:- [Drawing]
+		[Animatable] &lt;:- [Pen]
+		[Drawing] &lt;:- [DrawingGroup]
+		[Drawing] &lt;:- [GeometryDrawing]
+		[Drawing] &lt;:- [GlyphRunDrawing]
+		[Drawing] &lt;:- [ImageDrawing]
+		[Drawing] &lt;:- [VideoDrawing]
+		
+		[Animatable] &lt;:- [ImageSource] &lt;:- [BitmapSource] &lt;:- [BitmapImage]
+		[BitmapSource] &lt;:- [InteropBitmap]
+		[BitmapSource] &lt;:- [BitmapFrame]
+		[BitmapSource] &lt;:- [CachedBitmap]
+		[BitmapSource] &lt;:- [ColorConvertedBitmap]
+		[BitmapSource] &lt;:- [CroppedBitmap]
+		[BitmapSource] &lt;:- [FormatConvertedBitmap]
+		[BitmapSource] &lt;:- [RenderTargetBitmap]
+		[BitmapSource] &lt;:- [TransformedBitmap]
+		[BitmapSource] &lt;:- [WriteableBitmap]</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
 			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 				<g stroke="transparent" fill="transparent">
@@ -99,14 +98,14 @@
 					<path d="M666.4 252.7 L665.6 254.1 L664.8 255.5 L662.2 252.0 Z"></path>
 					<path d="M272.5 340.9 L294 346 L300 346 L300.0 346.0 " fill="none"></path>
 					<path d="M272.9 339.4 L272.5 340.9 L272.2 342.5 L268.6 340.0 Z"></path>
-					<path d="M106.0 456.0 L108 456 L163 456 L163.0 456.0 " fill="none"></path>
+					<path d="M106.0 456.0 L108 456 L162.5 456 L162.5 456.0 " fill="none"></path>
 					<path d="M106.0 454.4 L106.0 456.0 L106.0 457.6 L102.0 456.0 Z"></path>
 					<path d="M226.8 437.7 L294 390 L349 390 L349.0 390.0 " fill="none"></path>
 					<path d="M225.9 436.4 L226.8 437.7 L227.7 439.0 L223.5 440.0 Z"></path>
-					<path d="M242.9 446.1 L294 434 L345.5 434 L345.5 434.0 " fill="none"></path>
-					<path d="M242.5 444.5 L242.9 446.1 L243.3 447.6 L239.0 447.0 Z"></path>
-					<path d="M242.9 465.9 L294 478 L338 478 L338.0 478.0 " fill="none"></path>
-					<path d="M243.3 464.4 L242.9 465.9 L242.5 467.5 L239.0 465.0 Z"></path>
+					<path d="M243.4 446.0 L294 434 L345.5 434 L345.5 434.0 " fill="none"></path>
+					<path d="M243.0 444.4 L243.4 446.0 L243.8 447.5 L239.5 446.9 Z"></path>
+					<path d="M243.4 466.0 L294 478 L338 478 L338.0 478.0 " fill="none"></path>
+					<path d="M243.8 464.5 L243.4 466.0 L243.0 467.6 L239.5 465.1 Z"></path>
 					<path d="M226.8 474.3 L294 522 L339 522 L339.0 522.0 " fill="none"></path>
 					<path d="M227.7 473.0 L226.8 474.3 L225.9 475.6 L223.5 472.0 Z"></path>
 					<path d="M246.4 203.3 L294 192 L332.5 192 L332.5 192.0 " fill="none"></path>
@@ -174,10 +173,10 @@
 					<path d="M422.5 893.4 L528 1072 L565 1072 L565.0 1072.0 " fill="none"></path>
 					<path d="M423.9 892.6 L422.5 893.4 L421.1 894.3 L420.5 890.0 Z"></path>
 					<g data-name="Animatable">
-							<g fill="#eee8d5" stroke="#33322E" data-name="Animatable">
+							<g fill="#C06EF0" stroke="#33322E" data-name="Animatable">
 								<rect x="0.0" y="440.0" height="32.0" width="102.0" data-name="Animatable"></rect>
 							</g>
-						<g transform="translate(0, 440)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Animatable">
+						<g transform="translate(0, 440)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Animatable">
 								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Animatable">
 									<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="Animatable">Animatable</text>
 								
@@ -373,11 +372,11 @@
 						</g>
 					<g data-name="Material">
 							<g fill="#eee8d5" stroke="#33322E" data-name="Material">
-								<rect x="163.0" y="440.0" height="32.0" width="76.0" data-name="Material"></rect>
+								<rect x="162.5" y="440.0" height="32.0" width="77.0" data-name="Material"></rect>
 							</g>
-						<g transform="translate(163, 440)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Material">
+						<g transform="translate(162.5, 440)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Material">
 								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Material">
-									<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="Material">Material</text>
+									<text x="30.5" y="14.1" stroke="none" text-anchor="middle" data-name="Material">Material</text>
 								
 								</g>
 							</g>
