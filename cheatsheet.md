@@ -604,7 +604,7 @@ To produce this behaviour, a custom format string can contain up to three sectio
 |           `LinkedList<T>`            |                      Represents a doubly linked list                      |            `ICollection<T>`, `IReadOnlyCollection<T>`            |
 
 
-## Concurent Collections
+## Concurrent Collections
 
 |                Type                 |                               Description                               |                                Is                                 |
 | :---------------------------------: | :---------------------------------------------------------------------: | :---------------------------------------------------------------: |
