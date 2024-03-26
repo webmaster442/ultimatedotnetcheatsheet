@@ -920,5 +920,39 @@ new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 
 ![Data annotation Attributes](img/attributes-dataannotation.svg)
 
+
+# UI
+
+* **Windows Forms**
+
+    Windows Forms is a UI framework for building Windows desktop apps. It provides one of the most productive ways to create desktop apps based on the visual designer provided in Visual Studio. Functionality such as drag-and-drop placement of visual controls makes it easy to build desktop apps.
+
+* **WPF**
+
+    Windows Presentation Foundation (WPF) is a UI framework that is resolution-independent and uses a vector-based rendering engine, built to take advantage of modern graphics hardware. WPF provides a comprehensive set of application-development features that include Extensible Application Markup Language (XAML), controls, data binding, layout, 2D and 3D graphics, animation, styles, templates, documents, media, text, and typography. WPF is part of .NET, so you can build applications that incorporate other elements of the .NET API.
+
+* **MVVM**
+
+    The MVVM pattern helps cleanly separate an application's business and presentation logic from its user interface (UI). Maintaining a clean separation between application logic and the UI helps address numerous development issues and makes an application easier to test, maintain, and evolve. It can also significantly improve code re-use opportunities and allows developers and UI designers to collaborate more easily when developing their respective parts of an app.
+    
+    Frameworks:
+    * CommunityToolkit.Mvvm - https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/
+    * ReactiveUI - https://www.reactiveui.net/
+    * Prism Libary - https://prismlibrary.com/
+
+## Windows Froms class hierarchy
+
+![MarshalByRefObject derivatives](img/winforms01.svg)
+![Component derivatives](img/winforms02.svg)
+![Control derivatives](img/winforms03.svg)
+![Control derivatives](img/winforms04.svg)
+
+## WPF class hierarchy
+
+![WPF Core Objects](img/wpf-01.svg)
+![Animatable derivatives](img/wpf-02.svg)
+![FrameworkElement derivatives](img/wpf-03.svg)
+![Control derivatives](img/wpf-04.svg)
+
 :::
 :::

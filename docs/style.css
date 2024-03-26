@@ -165,6 +165,7 @@
         max-width: 235mm;
         max-height: 345mm;
         margin: 0 auto;
+        border: 1px solid red;
     }
 
     svg {
@@ -217,6 +218,14 @@
     }
 
     #data-annotation {
+        page-break-before: always;
+    }
+    
+    #windows-froms-class-hierarchy {
+        page-break-before: always;
+    }
+
+    #wpf-class-hierarchy {
         page-break-before: always;
     }
 }
