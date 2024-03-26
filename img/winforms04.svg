@@ -1,0 +1,790 @@
+<svg version="1.1" baseProfile="full" width="1157.0" height="1222.0" viewbox="0 0 1157 1222" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	#spacing: 10
+		
+	[Control] &lt;:- [ScrollableControl]
+	[Control] &lt;:- [ButtonBase]
+	[Control] &lt;:- [Label] &lt;:- [LinkLabel]
+	
+	[ButtonBase] -[Button]
+	[ButtonBase] -[CheckBox]
+	[ButtonBase] -[RadioButton]
+	
+	[TextBox] &lt;:- [DataGridTextBox]
+	[TextBox] &lt;:- [DataGridViewTextBoxEditingControl]
+	[ScrollableControl] &lt;:- [ContainerControl]
+	
+	[ScrollableControl] &lt;:- [ComponentTray]
+	[ScrollableControl] &lt;:- [Panel]
+	[ScrollableControl] &lt;:- [ToolStrip]
+	
+	[ToolStrip] &lt;:- [ToolStripDropDown]
+	[ToolStripDropDown] &lt;:- [ToolStripDropDownMenu] &lt;:- [ContextMenuStrip]
+	[ToolStripDropDown] &lt;:- [ToolStripOverflow]
+	[ToolStrip] &lt;:- [BindingNavigator]
+	[ToolStrip] &lt;:- [MenuStrip]
+	[ToolStrip] &lt;:- [StatusStrip]
+	
+	
+	[ContainerControl] &lt;:- [Form] &lt;:- [PrintPreviewDialog]
+	[Form] &lt;:- [ThreadExceptionDialog]
+	[ContainerControl] &lt;:- [PropertyGrid]
+	[ContainerControl] &lt;:- [SplitContainer]
+	[ContainerControl] &lt;:- [ToolStripContainer]
+	[ContainerControl] &lt;:- [ToolStripPanel]
+	[ContainerControl] &lt;:- [UpDownBase] &lt;:- [DomainUpDown]
+	[UpDownBase] &lt;:- [NumericUpDown]
+	[ContainerControl] &lt;:- [UserControl]
+	
+	[Control] &lt;:- [ListControl] &lt;:- [ComboBox] &lt;:- [DataGridViewComboBoxEditingControl]
+	[ListControl] &lt;:- [ListBox] &lt;:- [CheckedListBox]
+	
+	[Control] &lt;:- [TextBoxBase]
+	[TextBoxBase] &lt;:- [MaskedTextBox]
+	[TextBoxBase] &lt;:- [RichTextBox]
+	[TextBoxBase] &lt;:- [TextBox]
+	
+	[ScrollBar] &lt;:- [VScrollBar]
+	[Control] &lt;:- [Splitter]
+	[Control] &lt;:- [StatusBar]
+	
+	[Control] &lt;:- [WebBrowserBase] &lt;:- [WebBrowser]
+	
+	[Panel] &lt;:- [ComponentEditorPage]
+	[Panel] &lt;:- [FlowLayoutPanel]
+	[Panel] &lt;:- [SplitterPanel]
+	[Panel] &lt;:- [TableLayoutPanel] &lt;:- [ByteViewer]
+	[Panel] &lt;:- [TabPage]
+	[Panel] &lt;:- [ToolStripContentPanel]
+	[Control] &lt;:- [ScrollBar] &lt;:- [HScrollBar]
+	
+		
+		
+		
+		
+		
+		
+		
+		</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="1222.0" width="1157.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M37.9 962.7 L78 415 L84.5 415 L84.5 415.0 " fill="none"></path>
+					<path d="M36.6 962.6 L37.9 962.7 L39.2 962.8 L37.7 966.0 Z"></path>
+					<path d="M39.2 962.7 L78 688 L106 688 L106.0 688.0 " fill="none"></path>
+					<path d="M37.9 962.5 L39.2 962.7 L40.5 962.9 L38.8 966.0 Z"></path>
+					<path d="M40.7 962.7 L78 793 L130 793 L130.0 793.0 " fill="none"></path>
+					<path d="M39.4 962.5 L40.7 962.7 L42.0 963.0 L40.0 966.0 Z"></path>
+					<path d="M191.3 793.0 L240 793 L273.5 793 L273.5 793.0 " fill="none"></path>
+					<path d="M191.3 791.7 L191.3 793.0 L191.3 794.3 L188.0 793.0 Z"></path>
+					<path d="M212.0 674.3 L240 667 L285 667 L285.0 667.0 " fill="none"></path>
+					<path d="M212.0 701.7 L240 709 L272 709 L272.0 709.0 " fill="none"></path>
+					<path d="M179.6 704.0 L240 751 L263 751 L263.0 751.0 " fill="none"></path>
+					<path d="M352.0 985.4 L398 961 L488 961 L488.0 961.0 " fill="none"></path>
+					<path d="M351.4 984.3 L352.0 985.4 L352.7 986.6 L349.1 987.0 Z"></path>
+					<path d="M361.2 1014.2 L398 1024 L414.5 1024 L414.5 1024.0 " fill="none"></path>
+					<path d="M361.6 1012.9 L361.2 1014.2 L360.9 1015.5 L358.0 1013.4 Z"></path>
+					<path d="M164.3 395.8 L240 121 L245 121 L245.0 121.0 " fill="none"></path>
+					<path d="M163.0 395.4 L164.3 395.8 L165.6 396.1 L163.4 399.0 Z"></path>
+					<path d="M169.4 396.1 L240 268 L250 268 L250.0 268.0 " fill="none"></path>
+					<path d="M168.3 395.4 L169.4 396.1 L170.6 396.7 L167.8 399.0 Z"></path>
+					<path d="M223.9 398.2 L240 394 L289.5 394 L289.5 394.0 " fill="none"></path>
+					<path d="M223.6 396.9 L223.9 398.2 L224.3 399.5 L220.7 399.0 Z"></path>
+					<path d="M166.4 434.1 L240 625 L276.5 625 L276.5 625.0 " fill="none"></path>
+					<path d="M167.6 433.6 L166.4 434.1 L165.1 434.6 L165.2 431.0 Z"></path>
+					<path d="M352.0 607.4 L398 583 L478 583 L478.0 583.0 " fill="none"></path>
+					<path d="M351.4 606.3 L352.0 607.4 L352.7 608.6 L349.1 609.0 Z"></path>
+					<path d="M626.3 566.2 L724 541 L729 541 L729.0 541.0 " fill="none"></path>
+					<path d="M626.0 564.9 L626.3 566.2 L626.7 567.5 L623.1 567.0 Z"></path>
+					<path d="M940.3 541.0 L942 541 L947 541 L947.0 541.0 " fill="none"></path>
+					<path d="M940.3 539.7 L940.3 541.0 L940.3 542.3 L937.0 541.0 Z"></path>
+					<path d="M647.3 594.1 L724 604 L756 604 L756.0 604.0 " fill="none"></path>
+					<path d="M647.5 592.8 L647.3 594.1 L647.1 595.4 L644.0 593.7 Z"></path>
+					<path d="M364.8 625.0 L398 625 L486.5 625 L486.5 625.0 " fill="none"></path>
+					<path d="M364.8 623.7 L364.8 625.0 L364.8 626.3 L361.5 625.0 Z"></path>
+					<path d="M341.7 643.1 L398 688 L514 688 L514.0 688.0 " fill="none"></path>
+					<path d="M342.5 642.0 L341.7 643.1 L340.8 644.1 L339.1 641.0 Z"></path>
+					<path d="M333.0 643.7 L398 730 L510.5 730 L510.5 730.0 " fill="none"></path>
+					<path d="M334.1 642.9 L333.0 643.7 L332.0 644.5 L331.0 641.0 Z"></path>
+					<path d="M336.3 102.6 L398 37 L533 37 L533.0 37.0 " fill="none"></path>
+					<path d="M335.4 101.7 L336.3 102.6 L337.3 103.5 L334.0 105.0 Z"></path>
+					<path d="M592.3 33.0 L724 16 L752 16 L752.0 16.0 " fill="none"></path>
+					<path d="M592.1 31.6 L592.3 33.0 L592.5 34.3 L589.0 33.4 Z"></path>
+					<path d="M592.0 53.0 L724 121 L735.5 121 L735.5 121.0 " fill="none"></path>
+					<path d="M592.6 51.8 L592.0 53.0 L591.4 54.1 L589.0 51.4 Z"></path>
+					<path d="M352.0 103.4 L398 79 L503.5 79 L503.5 79.0 " fill="none"></path>
+					<path d="M351.4 102.3 L352.0 103.4 L352.7 104.6 L349.1 105.0 Z"></path>
+					<path d="M396.3 121.0 L398 121 L498.5 121 L498.5 121.0 " fill="none"></path>
+					<path d="M396.3 119.7 L396.3 121.0 L396.3 122.3 L393.0 121.0 Z"></path>
+					<path d="M352.0 138.6 L398 163 L481 163 L481.0 163.0 " fill="none"></path>
+					<path d="M352.7 137.4 L352.0 138.6 L351.4 139.7 L349.1 137.0 Z"></path>
+					<path d="M336.3 139.4 L398 205 L497 205 L497.0 205.0 " fill="none"></path>
+					<path d="M337.3 138.5 L336.3 139.4 L335.4 140.3 L334.0 137.0 Z"></path>
+					<path d="M330.8 139.8 L398 247 L501.5 247 L501.5 247.0 " fill="none"></path>
+					<path d="M331.9 139.1 L330.8 139.8 L329.7 140.5 L329.0 137.0 Z"></path>
+					<path d="M595.0 229.5 L724 163 L763 163 L763.0 163.0 " fill="none"></path>
+					<path d="M594.4 228.3 L595.0 229.5 L595.6 230.7 L592.0 231.0 Z"></path>
+					<path d="M595.0 264.5 L724 331 L760.5 331 L760.5 331.0 " fill="none"></path>
+					<path d="M595.6 263.3 L595.0 264.5 L594.4 265.7 L592.0 263.0 Z"></path>
+					<path d="M327.9 140.0 L398 289 L507 289 L507.0 289.0 " fill="none"></path>
+					<path d="M329.1 139.4 L327.9 140.0 L326.7 140.6 L326.5 137.0 Z"></path>
+					<path d="M42.8 962.8 L78 856 L108.5 856 L108.5 856.0 " fill="none"></path>
+					<path d="M41.5 962.4 L42.8 962.8 L44.1 963.3 L41.8 966.0 Z"></path>
+					<path d="M212.7 842.1 L240 835 L268.5 835 L268.5 835.0 " fill="none"></path>
+					<path d="M212.4 840.8 L212.7 842.1 L213.1 843.4 L209.5 842.9 Z"></path>
+					<path d="M372.8 835.0 L398 835 L403 835 L403.0 835.0 " fill="none"></path>
+					<path d="M372.8 833.7 L372.8 835.0 L372.8 836.3 L369.5 835.0 Z"></path>
+					<path d="M212.7 869.9 L240 877 L281.5 877 L281.5 877.0 " fill="none"></path>
+					<path d="M213.1 868.6 L212.7 869.9 L212.4 871.2 L209.5 869.1 Z"></path>
+					<path d="M359.8 877.0 L398 877 L490.5 877 L490.5 877.0 " fill="none"></path>
+					<path d="M359.8 875.7 L359.8 877.0 L359.8 878.3 L356.5 877.0 Z"></path>
+					<path d="M54.7 963.6 L78 940 L101 940 L101.0 940.0 " fill="none"></path>
+					<path d="M53.7 962.7 L54.7 963.6 L55.6 964.6 L52.3 966.0 Z"></path>
+					<path d="M220.2 924.1 L240 919 L250.5 919 L250.5 919.0 " fill="none"></path>
+					<path d="M219.9 922.8 L220.2 924.1 L220.6 925.4 L217.0 925.0 Z"></path>
+					<path d="M220.2 955.9 L240 961 L262.5 961 L262.5 961.0 " fill="none"></path>
+					<path d="M220.6 954.6 L220.2 955.9 L219.9 957.2 L217.0 955.0 Z"></path>
+					<path d="M182.2 958.0 L240 1003 L280 1003 L280.0 1003.0 " fill="none"></path>
+					<path d="M183.0 957.0 L182.2 958.0 L181.4 959.1 L179.6 956.0 Z"></path>
+					<path d="M192.8 1132.5 L240 1108 L270 1108 L270.0 1108.0 " fill="none"></path>
+					<path d="M192.2 1131.3 L192.8 1132.5 L193.4 1133.6 L189.9 1134.0 Z"></path>
+					<path d="M76.3 982.0 L78 982 L123.5 982 L123.5 982.0 " fill="none"></path>
+					<path d="M76.3 980.7 L76.3 982.0 L76.3 983.3 L73.0 982.0 Z"></path>
+					<path d="M54.7 1000.4 L78 1024 L113 1024 L113.0 1024.0 " fill="none"></path>
+					<path d="M55.6 999.4 L54.7 1000.4 L53.7 1001.3 L52.3 998.0 Z"></path>
+					<path d="M45.9 1001.0 L78 1066 L83 1066 L83.0 1066.0 " fill="none"></path>
+					<path d="M47.1 1000.4 L45.9 1001.0 L44.7 1001.6 L44.4 998.0 Z"></path>
+					<path d="M238.3 1066.0 L240 1066 L262 1066 L262.0 1066.0 " fill="none"></path>
+					<path d="M238.3 1064.7 L238.3 1066.0 L238.3 1067.3 L235.0 1066.0 Z"></path>
+					<path d="M341.7 375.9 L398 331 L466.5 331 L466.5 331.0 " fill="none"></path>
+					<path d="M340.8 374.9 L341.7 375.9 L342.5 377.0 L339.1 378.0 Z"></path>
+					<path d="M351.7 385.3 L398 373 L487 373 L487.0 373.0 " fill="none"></path>
+					<path d="M351.4 384.0 L351.7 385.3 L352.1 386.6 L348.5 386.2 Z"></path>
+					<path d="M351.7 402.7 L398 415 L504 415 L504.0 415.0 " fill="none"></path>
+					<path d="M352.1 401.4 L351.7 402.7 L351.4 404.0 L348.5 401.8 Z"></path>
+					<path d="M341.7 412.1 L398 457 L485 457 L485.0 457.0 " fill="none"></path>
+					<path d="M342.5 411.0 L341.7 412.1 L340.8 413.1 L339.1 410.0 Z"></path>
+					<path d="M640.3 457.0 L724 457 L782 457 L782.0 457.0 " fill="none"></path>
+					<path d="M640.3 455.7 L640.3 457.0 L640.3 458.3 L637.0 457.0 Z"></path>
+					<path d="M333.0 412.7 L398 499 L520.5 499 L520.5 499.0 " fill="none"></path>
+					<path d="M334.1 411.9 L333.0 412.7 L332.0 413.5 L331.0 410.0 Z"></path>
+					<path d="M329.2 412.9 L398 541 L467 541 L467.0 541.0 " fill="none"></path>
+					<path d="M330.4 412.3 L329.2 412.9 L328.0 413.6 L327.6 410.0 Z"></path>
+					<path d="M41.3 1001.2 L78 1150 L115.5 1150 L115.5 1150.0 " fill="none"></path>
+					<path d="M42.5 1000.9 L41.3 1001.2 L40.0 1001.6 L40.5 998.0 Z"></path>
+					<path d="M205.8 1150.0 L240 1150 L269.5 1150 L269.5 1150.0 " fill="none"></path>
+					<path d="M205.8 1148.7 L205.8 1150.0 L205.8 1151.3 L202.5 1150.0 Z"></path>
+					<g data-name="Control">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Control">
+								<rect x="0.0" y="966.0" height="32.0" width="73.0" data-name="Control"></rect>
+							</g>
+						<g transform="translate(0, 966)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Control">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control">
+									<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control">Control</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ScrollableControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ScrollableControl">
+								<rect x="84.5" y="399.0" height="32.0" width="149.0" data-name="ScrollableControl"></rect>
+							</g>
+						<g transform="translate(84.5, 399)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScrollableControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScrollableControl">
+									<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="ScrollableControl">ScrollableControl</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ButtonBase">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ButtonBase">
+								<rect x="106.0" y="672.0" height="32.0" width="106.0" data-name="ButtonBase"></rect>
+							</g>
+						<g transform="translate(106, 672)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ButtonBase">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ButtonBase">
+									<text x="45.0" y="14.1" stroke="none" text-anchor="middle" data-name="ButtonBase">ButtonBase</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Label">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Label">
+								<rect x="130.0" y="777.0" height="32.0" width="58.0" data-name="Label"></rect>
+							</g>
+						<g transform="translate(130, 777)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Label">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Label">
+									<text x="21.0" y="14.1" stroke="none" text-anchor="middle" data-name="Label">Label</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="LinkLabel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="LinkLabel">
+								<rect x="273.5" y="777.0" height="32.0" width="91.0" data-name="LinkLabel"></rect>
+							</g>
+						<g transform="translate(273.5, 777)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LinkLabel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LinkLabel">
+									<text x="37.5" y="14.1" stroke="none" text-anchor="middle" data-name="LinkLabel">LinkLabel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Button">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Button">
+								<rect x="285.0" y="651.0" height="32.0" width="68.0" data-name="Button"></rect>
+							</g>
+						<g transform="translate(285, 651)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Button">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Button">
+									<text x="26.0" y="14.1" stroke="none" text-anchor="middle" data-name="Button">Button</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="CheckBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="CheckBox">
+								<rect x="272.0" y="693.0" height="32.0" width="94.0" data-name="CheckBox"></rect>
+							</g>
+						<g transform="translate(272, 693)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CheckBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CheckBox">
+									<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="CheckBox">CheckBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="RadioButton">
+							<g fill="#eee8d5" stroke="#33322E" data-name="RadioButton">
+								<rect x="263.0" y="735.0" height="32.0" width="112.0" data-name="RadioButton"></rect>
+							</g>
+						<g transform="translate(263, 735)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RadioButton">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RadioButton">
+									<text x="48.0" y="14.1" stroke="none" text-anchor="middle" data-name="RadioButton">RadioButton</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="TextBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="TextBox">
+								<rect x="280.0" y="987.0" height="32.0" width="78.0" data-name="TextBox"></rect>
+							</g>
+						<g transform="translate(280, 987)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextBox">
+									<text x="31.0" y="14.1" stroke="none" text-anchor="middle" data-name="TextBox">TextBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridTextBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridTextBox">
+								<rect x="488.0" y="945.0" height="32.0" width="146.0" data-name="DataGridTextBox"></rect>
+							</g>
+						<g transform="translate(488, 945)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridTextBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridTextBox">
+									<text x="65.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridTextBox">DataGridTextBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridViewTextBoxEditingControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridViewTextBoxEditingControl">
+								<rect x="414.5" y="1008.0" height="32.0" width="293.0" data-name="DataGridViewTextBoxEditingControl"></rect>
+							</g>
+						<g transform="translate(414.5, 1008)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridViewTextBoxEditingControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridViewTextBoxEditingControl">
+									<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridViewTextBoxEditingControl">DataGridViewTextBoxEditingControl</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ContainerControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ContainerControl">
+								<rect x="245.0" y="105.0" height="32.0" width="148.0" data-name="ContainerControl"></rect>
+							</g>
+						<g transform="translate(245, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ContainerControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ContainerControl">
+									<text x="66.0" y="14.1" stroke="none" text-anchor="middle" data-name="ContainerControl">ContainerControl</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ComponentTray">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ComponentTray">
+								<rect x="250.0" y="252.0" height="32.0" width="138.0" data-name="ComponentTray"></rect>
+							</g>
+						<g transform="translate(250, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ComponentTray">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ComponentTray">
+									<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="ComponentTray">ComponentTray</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Panel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Panel">
+								<rect x="289.5" y="378.0" height="32.0" width="59.0" data-name="Panel"></rect>
+							</g>
+						<g transform="translate(289.5, 378)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Panel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Panel">
+									<text x="21.5" y="14.1" stroke="none" text-anchor="middle" data-name="Panel">Panel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStrip">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStrip">
+								<rect x="276.5" y="609.0" height="32.0" width="85.0" data-name="ToolStrip"></rect>
+							</g>
+						<g transform="translate(276.5, 609)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStrip">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStrip">
+									<text x="34.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStrip">ToolStrip</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripDropDown">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripDropDown">
+								<rect x="478.0" y="567.0" height="32.0" width="166.0" data-name="ToolStripDropDown"></rect>
+							</g>
+						<g transform="translate(478, 567)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripDropDown">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripDropDown">
+									<text x="75.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripDropDown">ToolStripDropDown</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripDropDownMenu">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripDropDownMenu">
+								<rect x="729.0" y="525.0" height="32.0" width="208.0" data-name="ToolStripDropDownMenu"></rect>
+							</g>
+						<g transform="translate(729, 525)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripDropDownMenu">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripDropDownMenu">
+									<text x="96.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripDropDownMenu">ToolStripDropDownMenu</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ContextMenuStrip">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ContextMenuStrip">
+								<rect x="947.0" y="525.0" height="32.0" width="154.0" data-name="ContextMenuStrip"></rect>
+							</g>
+						<g transform="translate(947, 525)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ContextMenuStrip">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ContextMenuStrip">
+									<text x="69.0" y="14.1" stroke="none" text-anchor="middle" data-name="ContextMenuStrip">ContextMenuStrip</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripOverflow">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripOverflow">
+								<rect x="756.0" y="588.0" height="32.0" width="154.0" data-name="ToolStripOverflow"></rect>
+							</g>
+						<g transform="translate(756, 588)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripOverflow">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripOverflow">
+									<text x="69.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripOverflow">ToolStripOverflow</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="BindingNavigator">
+							<g fill="#eee8d5" stroke="#33322E" data-name="BindingNavigator">
+								<rect x="486.5" y="609.0" height="32.0" width="149.0" data-name="BindingNavigator"></rect>
+							</g>
+						<g transform="translate(486.5, 609)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BindingNavigator">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BindingNavigator">
+									<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="BindingNavigator">BindingNavigator</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MenuStrip">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MenuStrip">
+								<rect x="514.0" y="672.0" height="32.0" width="94.0" data-name="MenuStrip"></rect>
+							</g>
+						<g transform="translate(514, 672)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MenuStrip">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MenuStrip">
+									<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="MenuStrip">MenuStrip</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="StatusStrip">
+							<g fill="#eee8d5" stroke="#33322E" data-name="StatusStrip">
+								<rect x="510.5" y="714.0" height="32.0" width="101.0" data-name="StatusStrip"></rect>
+							</g>
+						<g transform="translate(510.5, 714)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StatusStrip">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StatusStrip">
+									<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="StatusStrip">StatusStrip</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Form">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Form">
+								<rect x="533.0" y="21.0" height="32.0" width="56.0" data-name="Form"></rect>
+							</g>
+						<g transform="translate(533, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Form">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Form">
+									<text x="20.0" y="14.1" stroke="none" text-anchor="middle" data-name="Form">Form</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PrintPreviewDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PrintPreviewDialog">
+								<rect x="752.0" y="0.0" height="32.0" width="162.0" data-name="PrintPreviewDialog"></rect>
+							</g>
+						<g transform="translate(752, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PrintPreviewDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PrintPreviewDialog">
+									<text x="73.0" y="14.1" stroke="none" text-anchor="middle" data-name="PrintPreviewDialog">PrintPreviewDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ThreadExceptionDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ThreadExceptionDialog">
+								<rect x="735.5" y="105.0" height="32.0" width="195.0" data-name="ThreadExceptionDialog"></rect>
+							</g>
+						<g transform="translate(735.5, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ThreadExceptionDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ThreadExceptionDialog">
+									<text x="89.5" y="14.1" stroke="none" text-anchor="middle" data-name="ThreadExceptionDialog">ThreadExceptionDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PropertyGrid">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PropertyGrid">
+								<rect x="503.5" y="63.0" height="32.0" width="115.0" data-name="PropertyGrid"></rect>
+							</g>
+						<g transform="translate(503.5, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PropertyGrid">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PropertyGrid">
+									<text x="49.5" y="14.1" stroke="none" text-anchor="middle" data-name="PropertyGrid">PropertyGrid</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="SplitContainer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="SplitContainer">
+								<rect x="498.5" y="105.0" height="32.0" width="125.0" data-name="SplitContainer"></rect>
+							</g>
+						<g transform="translate(498.5, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SplitContainer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SplitContainer">
+									<text x="54.5" y="14.1" stroke="none" text-anchor="middle" data-name="SplitContainer">SplitContainer</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripContainer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripContainer">
+								<rect x="481.0" y="147.0" height="32.0" width="160.0" data-name="ToolStripContainer"></rect>
+							</g>
+						<g transform="translate(481, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripContainer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripContainer">
+									<text x="72.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripContainer">ToolStripContainer</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripPanel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripPanel">
+								<rect x="497.0" y="189.0" height="32.0" width="128.0" data-name="ToolStripPanel"></rect>
+							</g>
+						<g transform="translate(497, 189)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripPanel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripPanel">
+									<text x="56.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripPanel">ToolStripPanel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="UpDownBase">
+							<g fill="#eee8d5" stroke="#33322E" data-name="UpDownBase">
+								<rect x="501.5" y="231.0" height="32.0" width="119.0" data-name="UpDownBase"></rect>
+							</g>
+						<g transform="translate(501.5, 231)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UpDownBase">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UpDownBase">
+									<text x="51.5" y="14.1" stroke="none" text-anchor="middle" data-name="UpDownBase">UpDownBase</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DomainUpDown">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DomainUpDown">
+								<rect x="763.0" y="147.0" height="32.0" width="140.0" data-name="DomainUpDown"></rect>
+							</g>
+						<g transform="translate(763, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DomainUpDown">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DomainUpDown">
+									<text x="62.0" y="14.1" stroke="none" text-anchor="middle" data-name="DomainUpDown">DomainUpDown</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NumericUpDown">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NumericUpDown">
+								<rect x="760.5" y="315.0" height="32.0" width="145.0" data-name="NumericUpDown"></rect>
+							</g>
+						<g transform="translate(760.5, 315)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NumericUpDown">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NumericUpDown">
+									<text x="64.5" y="14.1" stroke="none" text-anchor="middle" data-name="NumericUpDown">NumericUpDown</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="UserControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="UserControl">
+								<rect x="507.0" y="273.0" height="32.0" width="108.0" data-name="UserControl"></rect>
+							</g>
+						<g transform="translate(507, 273)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UserControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UserControl">
+									<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="UserControl">UserControl</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ListControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ListControl">
+								<rect x="108.5" y="840.0" height="32.0" width="101.0" data-name="ListControl"></rect>
+							</g>
+						<g transform="translate(108.5, 840)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ListControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ListControl">
+									<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="ListControl">ListControl</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ComboBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ComboBox">
+								<rect x="268.5" y="819.0" height="32.0" width="101.0" data-name="ComboBox"></rect>
+							</g>
+						<g transform="translate(268.5, 819)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ComboBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ComboBox">
+									<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="ComboBox">ComboBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridViewComboBoxEditingControl">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridViewComboBoxEditingControl">
+								<rect x="403.0" y="819.0" height="32.0" width="316.0" data-name="DataGridViewComboBoxEditingControl"></rect>
+							</g>
+						<g transform="translate(403, 819)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridViewComboBoxEditingControl">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridViewComboBoxEditingControl">
+									<text x="150.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridViewComboBoxEditingControl">DataGridViewComboBoxEditingControl</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ListBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ListBox">
+								<rect x="281.5" y="861.0" height="32.0" width="75.0" data-name="ListBox"></rect>
+							</g>
+						<g transform="translate(281.5, 861)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ListBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ListBox">
+									<text x="29.5" y="14.1" stroke="none" text-anchor="middle" data-name="ListBox">ListBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="CheckedListBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="CheckedListBox">
+								<rect x="490.5" y="861.0" height="32.0" width="141.0" data-name="CheckedListBox"></rect>
+							</g>
+						<g transform="translate(490.5, 861)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CheckedListBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CheckedListBox">
+									<text x="62.5" y="14.1" stroke="none" text-anchor="middle" data-name="CheckedListBox">CheckedListBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="TextBoxBase">
+							<g fill="#eee8d5" stroke="#33322E" data-name="TextBoxBase">
+								<rect x="101.0" y="924.0" height="32.0" width="116.0" data-name="TextBoxBase"></rect>
+							</g>
+						<g transform="translate(101, 924)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextBoxBase">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextBoxBase">
+									<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="TextBoxBase">TextBoxBase</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MaskedTextBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MaskedTextBox">
+								<rect x="250.5" y="903.0" height="32.0" width="137.0" data-name="MaskedTextBox"></rect>
+							</g>
+						<g transform="translate(250.5, 903)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaskedTextBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MaskedTextBox">
+									<text x="60.5" y="14.1" stroke="none" text-anchor="middle" data-name="MaskedTextBox">MaskedTextBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="RichTextBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="RichTextBox">
+								<rect x="262.5" y="945.0" height="32.0" width="113.0" data-name="RichTextBox"></rect>
+							</g>
+						<g transform="translate(262.5, 945)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RichTextBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RichTextBox">
+									<text x="48.5" y="14.1" stroke="none" text-anchor="middle" data-name="RichTextBox">RichTextBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ScrollBar">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ScrollBar">
+								<rect x="115.5" y="1134.0" height="32.0" width="87.0" data-name="ScrollBar"></rect>
+							</g>
+						<g transform="translate(115.5, 1134)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScrollBar">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScrollBar">
+									<text x="35.5" y="14.1" stroke="none" text-anchor="middle" data-name="ScrollBar">ScrollBar</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="VScrollBar">
+							<g fill="#eee8d5" stroke="#33322E" data-name="VScrollBar">
+								<rect x="270.0" y="1092.0" height="32.0" width="98.0" data-name="VScrollBar"></rect>
+							</g>
+						<g transform="translate(270, 1092)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="VScrollBar">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VScrollBar">
+									<text x="41.0" y="14.1" stroke="none" text-anchor="middle" data-name="VScrollBar">VScrollBar</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Splitter">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Splitter">
+								<rect x="123.5" y="966.0" height="32.0" width="71.0" data-name="Splitter"></rect>
+							</g>
+						<g transform="translate(123.5, 966)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Splitter">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Splitter">
+									<text x="27.5" y="14.1" stroke="none" text-anchor="middle" data-name="Splitter">Splitter</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="StatusBar">
+							<g fill="#eee8d5" stroke="#33322E" data-name="StatusBar">
+								<rect x="113.0" y="1008.0" height="32.0" width="92.0" data-name="StatusBar"></rect>
+							</g>
+						<g transform="translate(113, 1008)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StatusBar">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StatusBar">
+									<text x="38.0" y="14.1" stroke="none" text-anchor="middle" data-name="StatusBar">StatusBar</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="WebBrowserBase">
+							<g fill="#eee8d5" stroke="#33322E" data-name="WebBrowserBase">
+								<rect x="83.0" y="1050.0" height="32.0" width="152.0" data-name="WebBrowserBase"></rect>
+							</g>
+						<g transform="translate(83, 1050)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WebBrowserBase">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WebBrowserBase">
+									<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="WebBrowserBase">WebBrowserBase</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="WebBrowser">
+							<g fill="#eee8d5" stroke="#33322E" data-name="WebBrowser">
+								<rect x="262.0" y="1050.0" height="32.0" width="114.0" data-name="WebBrowser"></rect>
+							</g>
+						<g transform="translate(262, 1050)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WebBrowser">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WebBrowser">
+									<text x="49.0" y="14.1" stroke="none" text-anchor="middle" data-name="WebBrowser">WebBrowser</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ComponentEditorPage">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ComponentEditorPage">
+								<rect x="466.5" y="315.0" height="32.0" width="189.0" data-name="ComponentEditorPage"></rect>
+							</g>
+						<g transform="translate(466.5, 315)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ComponentEditorPage">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ComponentEditorPage">
+									<text x="86.5" y="14.1" stroke="none" text-anchor="middle" data-name="ComponentEditorPage">ComponentEditorPage</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FlowLayoutPanel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FlowLayoutPanel">
+								<rect x="487.0" y="357.0" height="32.0" width="148.0" data-name="FlowLayoutPanel"></rect>
+							</g>
+						<g transform="translate(487, 357)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FlowLayoutPanel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FlowLayoutPanel">
+									<text x="66.0" y="14.1" stroke="none" text-anchor="middle" data-name="FlowLayoutPanel">FlowLayoutPanel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="SplitterPanel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="SplitterPanel">
+								<rect x="504.0" y="399.0" height="32.0" width="114.0" data-name="SplitterPanel"></rect>
+							</g>
+						<g transform="translate(504, 399)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SplitterPanel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SplitterPanel">
+									<text x="49.0" y="14.1" stroke="none" text-anchor="middle" data-name="SplitterPanel">SplitterPanel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="TableLayoutPanel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="TableLayoutPanel">
+								<rect x="485.0" y="441.0" height="32.0" width="152.0" data-name="TableLayoutPanel"></rect>
+							</g>
+						<g transform="translate(485, 441)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TableLayoutPanel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TableLayoutPanel">
+									<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="TableLayoutPanel">TableLayoutPanel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ByteViewer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ByteViewer">
+								<rect x="782.0" y="441.0" height="32.0" width="102.0" data-name="ByteViewer"></rect>
+							</g>
+						<g transform="translate(782, 441)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ByteViewer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ByteViewer">
+									<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="ByteViewer">ByteViewer</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="TabPage">
+							<g fill="#eee8d5" stroke="#33322E" data-name="TabPage">
+								<rect x="520.5" y="483.0" height="32.0" width="81.0" data-name="TabPage"></rect>
+							</g>
+						<g transform="translate(520.5, 483)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TabPage">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TabPage">
+									<text x="32.5" y="14.1" stroke="none" text-anchor="middle" data-name="TabPage">TabPage</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripContentPanel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripContentPanel">
+								<rect x="467.0" y="525.0" height="32.0" width="188.0" data-name="ToolStripContentPanel"></rect>
+							</g>
+						<g transform="translate(467, 525)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripContentPanel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripContentPanel">
+									<text x="86.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripContentPanel">ToolStripContentPanel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="HScrollBar">
+							<g fill="#eee8d5" stroke="#33322E" data-name="HScrollBar">
+								<rect x="269.5" y="1134.0" height="32.0" width="99.0" data-name="HScrollBar"></rect>
+							</g>
+						<g transform="translate(269.5, 1134)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HScrollBar">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HScrollBar">
+									<text x="41.5" y="14.1" stroke="none" text-anchor="middle" data-name="HScrollBar">HScrollBar</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>

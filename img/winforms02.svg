@@ -1,0 +1,576 @@
+<svg version="1.1" baseProfile="full" width="1011.0" height="880.0" viewbox="0 0 1011 880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#direction: right
+	#spacing: 12
+	
+	[Component] &lt;:- [BindingSource]
+	[Component] &lt;:- [CommonDialog]
+	
+	[CommonDialog] &lt;:- [ColorDialog]
+	[CommonDialog] &lt;:- [FileDialog]
+	[FileDialog] &lt;:- [OpenFileDialog]
+	[FileDialog] &lt;:- [SaveFileDialog]
+	
+	[CommonDialog] &lt;:- [FolderBrowserDialog]
+	[CommonDialog] &lt;:- [FontDialog]
+	[CommonDialog] &lt;:- [PageSetupDialog]
+	[CommonDialog] &lt;:- [PrintDialog]
+	[Component] &lt;:- [BindableComponent] &lt;:- [ToolStripItem]
+	[Component] &lt;:- [Menu]
+	[Menu] &lt;:- [CiontextMenu]
+	[Menu] &lt;:- [MainMenu]
+	[Menu] &lt;:- [MenuItem]
+	
+	[Component] &lt;:- [DataGridColumnStyle]
+	[DataGridColumnStyle] &lt;:- [DataGridBoolColumn]
+	[DataGridColumnStyle] &lt;:- [DataGridTextBoxColumn]
+	
+	[ToolStripItem] &lt;:- [ToolStripButton]
+	[ToolStripItem] &lt;:- [ToolStripControlHost]
+	[ToolStripItem] &lt;:- [ToolStripDropDownItem]
+	[ToolStripItem] &lt;:- [ToolStripLabel] &lt;:- [ToolStripStatusLabel]
+	[ToolStripItem] &lt;:- [ToolStripSeparator]
+	
+	[ToolStripControlHost] &lt;:- [ToolStripComboBox]
+	[ToolStripControlHost] &lt;:- [ToolStripProgressBar]
+	[ToolStripControlHost] &lt;:- [ToolStripTextBox]
+	
+	[ToolStripDropDownItem] &lt;:- [ToolStripDropDownButton]
+	[ToolStripDropDownItem] &lt;:- [ToolStripMenuItem]
+	
+	[ToolStripDropDownItem] &lt;:- [ToolStripSplitButton]
+	
+	[Component] &lt;:- [DataGridTableStyle]
+	[Component] &lt;:- [HelpProvider]
+	[Component] &lt;:- [ImageList]
+	[Component] &lt;:- [NotifyIcon]
+	[Component] &lt;:- [StatusBarPanel]
+	[Component] &lt;:- [Timer]
+	
+	[Component] &lt;:- [Control]
+		
+		
+	
+	
+	
+		
+		
+		
+	
+		</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="880.0" width="1011.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+						<path d="M55.0 546.0 L111 104 L142.5 104 L142.5 104.0 " fill="none"></path>
+					<path d="M53.4 545.8 L55.0 546.0 L56.6 546.2 L54.5 550.0 Z"></path>
+					<path d="M55.3 546.0 L111 148 L140.5 148 L140.5 148.0 " fill="none"></path>
+					<path d="M53.7 545.8 L55.3 546.0 L56.9 546.3 L54.7 550.0 Z"></path>
+					<path d="M221.6 128.8 L304 16 L359 16 L359.0 16.0 " fill="none"></path>
+					<path d="M220.3 127.8 L221.6 128.8 L222.8 129.7 L219.2 132.0 Z"></path>
+					<path d="M228.0 129.3 L304 60 L366.5 60 L366.5 60.0 " fill="none"></path>
+					<path d="M226.9 128.1 L228.0 129.3 L229.1 130.5 L225.0 132.0 Z"></path>
+					<path d="M462.4 49.9 L521 38 L560 38 L560.0 38.0 " fill="none"></path>
+					<path d="M462.1 48.3 L462.4 49.9 L462.7 51.4 L458.5 50.7 Z"></path>
+					<path d="M462.4 70.1 L521 82 L561.5 82 L561.5 82.0 " fill="none"></path>
+					<path d="M462.7 68.6 L462.4 70.1 L462.1 71.7 L458.5 69.3 Z"></path>
+					<path d="M278.4 131.8 L304 126 L323.5 126 L323.5 126.0 " fill="none"></path>
+					<path d="M278.0 130.3 L278.4 131.8 L278.8 133.4 L274.5 132.7 Z"></path>
+					<path d="M278.4 164.2 L304 170 L362.5 170 L362.5 170.0 " fill="none"></path>
+					<path d="M278.8 162.6 L278.4 164.2 L278.0 165.7 L274.5 163.3 Z"></path>
+					<path d="M234.2 166.3 L304 214 L338.5 214 L338.5 214.0 " fill="none"></path>
+					<path d="M235.1 164.9 L234.2 166.3 L233.3 167.6 L230.9 164.0 Z"></path>
+					<path d="M224.2 167.0 L304 258 L362 258 L362.0 258.0 " fill="none"></path>
+					<path d="M225.4 166.0 L224.2 167.0 L223.0 168.1 L221.5 164.0 Z"></path>
+					<path d="M56.9 546.1 L111 302 L121.5 302 L121.5 302.0 " fill="none"></path>
+					<path d="M55.3 545.7 L56.9 546.1 L58.5 546.4 L56.0 550.0 Z"></path>
+					<path d="M297.5 302.0 L304 302 L353.5 302 L353.5 302.0 " fill="none"></path>
+					<path d="M297.5 300.4 L297.5 302.0 L297.5 303.6 L293.5 302.0 Z"></path>
+					<path d="M59.1 546.2 L111 390 L178.5 390 L178.5 390.0 " fill="none"></path>
+					<path d="M57.6 545.7 L59.1 546.2 L60.6 546.7 L57.8 550.0 Z"></path>
+					<path d="M240.1 375.1 L304 346 L351.5 346 L351.5 346.0 " fill="none"></path>
+					<path d="M239.5 373.7 L240.1 375.1 L240.8 376.6 L236.5 376.8 Z"></path>
+					<path d="M240.5 390.0 L304 390 L365.5 390 L365.5 390.0 " fill="none"></path>
+					<path d="M240.5 388.4 L240.5 390.0 L240.5 391.6 L236.5 390.0 Z"></path>
+					<path d="M240.1 404.9 L304 434 L367 434 L367.0 434.0 " fill="none"></path>
+					<path d="M240.8 403.4 L240.1 404.9 L239.5 406.3 L236.5 403.2 Z"></path>
+					<path d="M69.3 547.0 L111 500 L117 500 L117.0 500.0 " fill="none"></path>
+					<path d="M68.1 545.9 L69.3 547.0 L70.5 548.1 L66.7 550.0 Z"></path>
+					<path d="M281.6 483.1 L304 478 L323 478 L323.0 478.0 " fill="none"></path>
+					<path d="M281.2 481.6 L281.6 483.1 L281.9 484.7 L277.7 484.0 Z"></path>
+					<path d="M281.6 516.9 L304 522 L310 522 L310.0 522.0 " fill="none"></path>
+					<path d="M281.9 515.3 L281.6 516.9 L281.2 518.4 L277.7 516.0 Z"></path>
+					<path d="M424.5 282.6 L521 126 L558 126 L558.0 126.0 " fill="none"></path>
+					<path d="M423.1 281.8 L424.5 282.6 L425.8 283.4 L422.4 286.0 Z"></path>
+					<path d="M428.2 282.9 L521 170 L538 170 L538.0 170.0 " fill="none"></path>
+					<path d="M427.0 281.9 L428.2 282.9 L429.4 283.9 L425.7 286.0 Z"></path>
+					<path d="M475.5 302.0 L521 302 L527 302 L527.0 302.0 " fill="none"></path>
+					<path d="M475.5 300.4 L475.5 302.0 L475.5 303.6 L471.5 302.0 Z"></path>
+					<path d="M435.3 320.5 L521 390 L563 390 L563.0 390.0 " fill="none"></path>
+					<path d="M436.3 319.3 L435.3 320.5 L434.3 321.8 L432.2 318.0 Z"></path>
+					<path d="M694.0 390.0 L732 390 L758.5 390 L758.5 390.0 " fill="none"></path>
+					<path d="M694.0 388.4 L694.0 390.0 L694.0 391.6 L690.0 390.0 Z"></path>
+					<path d="M428.2 321.1 L521 434 L546.5 434 L546.5 434.0 " fill="none"></path>
+					<path d="M429.4 320.1 L428.2 321.1 L427.0 322.1 L425.7 318.0 Z"></path>
+					<path d="M668.6 152.5 L732 126 L761.5 126 L761.5 126.0 " fill="none"></path>
+					<path d="M667.9 151.0 L668.6 152.5 L669.2 153.9 L664.9 154.0 Z"></path>
+					<path d="M719.0 170.0 L732 170 L756 170 L756.0 170.0 " fill="none"></path>
+					<path d="M719.0 168.4 L719.0 170.0 L719.0 171.6 L715.0 170.0 Z"></path>
+					<path d="M668.6 187.5 L732 214 L773 214 L773.0 214.0 " fill="none"></path>
+					<path d="M669.2 186.1 L668.6 187.5 L667.9 189.0 L664.9 186.0 Z"></path>
+					<path d="M668.6 284.5 L732 258 L738 258 L738.0 258.0 " fill="none"></path>
+					<path d="M667.9 283.0 L668.6 284.5 L669.2 285.9 L664.9 286.0 Z"></path>
+					<path d="M730.0 302.0 L732 302 L766.5 302 L766.5 302.0 " fill="none"></path>
+					<path d="M730.0 300.4 L730.0 302.0 L730.0 303.6 L726.0 302.0 Z"></path>
+					<path d="M668.6 319.5 L732 346 L761 346 L761.0 346.0 " fill="none"></path>
+					<path d="M669.2 318.1 L668.6 319.5 L667.9 321.0 L664.9 318.0 Z"></path>
+					<path d="M98.8 548.6 L111 544 L126.5 544 L126.5 544.0 " fill="none"></path>
+					<path d="M98.2 547.1 L98.8 548.6 L99.4 550.1 L95.0 550.0 Z"></path>
+					<path d="M98.8 583.4 L111 588 L149.5 588 L149.5 588.0 " fill="none"></path>
+					<path d="M99.4 581.9 L98.8 583.4 L98.2 584.9 L95.0 582.0 Z"></path>
+					<path d="M69.3 585.0 L111 632 L162 632 L162.0 632.0 " fill="none"></path>
+					<path d="M70.5 583.9 L69.3 585.0 L68.1 586.1 L66.7 582.0 Z"></path>
+					<path d="M62.9 585.5 L111 676 L160.5 676 L160.5 676.0 " fill="none"></path>
+					<path d="M64.3 584.8 L62.9 585.5 L61.5 586.3 L61.0 582.0 Z"></path>
+					<path d="M60.0 585.7 L111 720 L140.5 720 L140.5 720.0 " fill="none"></path>
+					<path d="M61.5 585.2 L60.0 585.7 L58.5 586.3 L58.6 582.0 Z"></path>
+					<path d="M58.4 585.8 L111 764 L178 764 L178.0 764.0 " fill="none"></path>
+					<path d="M59.9 585.4 L58.4 585.8 L56.8 586.3 L57.2 582.0 Z"></path>
+					<path d="M57.3 585.9 L111 808 L171 808 L171.0 808.0 " fill="none"></path>
+					<path d="M58.9 585.5 L57.3 585.9 L55.8 586.3 L56.4 582.0 Z"></path>
+					<g data-name="Component">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Component">
+								<rect x="0.0" y="550.0" height="32.0" width="105.0" data-name="Component"></rect>
+							</g>
+						<g transform="translate(0, 550)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Component">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Component">
+									<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="Component">Component</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="BindingSource">
+							<g fill="#eee8d5" stroke="#33322E" data-name="BindingSource">
+								<rect x="142.5" y="88.0" height="32.0" width="130.0" data-name="BindingSource"></rect>
+							</g>
+						<g transform="translate(142.5, 88)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BindingSource">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BindingSource">
+									<text x="57.0" y="14.1" stroke="none" text-anchor="middle" data-name="BindingSource">BindingSource</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="CommonDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="CommonDialog">
+								<rect x="140.5" y="132.0" height="32.0" width="134.0" data-name="CommonDialog"></rect>
+							</g>
+						<g transform="translate(140.5, 132)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CommonDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CommonDialog">
+									<text x="59.0" y="14.1" stroke="none" text-anchor="middle" data-name="CommonDialog">CommonDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ColorDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ColorDialog">
+								<rect x="359.0" y="0.0" height="32.0" width="107.0" data-name="ColorDialog"></rect>
+							</g>
+						<g transform="translate(359, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ColorDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ColorDialog">
+									<text x="45.5" y="14.1" stroke="none" text-anchor="middle" data-name="ColorDialog">ColorDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FileDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FileDialog">
+								<rect x="366.5" y="44.0" height="32.0" width="92.0" data-name="FileDialog"></rect>
+							</g>
+						<g transform="translate(366.5, 44)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileDialog">
+									<text x="38.0" y="14.1" stroke="none" text-anchor="middle" data-name="FileDialog">FileDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="OpenFileDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="OpenFileDialog">
+								<rect x="560.0" y="22.0" height="32.0" width="133.0" data-name="OpenFileDialog"></rect>
+							</g>
+						<g transform="translate(560, 22)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OpenFileDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OpenFileDialog">
+									<text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="OpenFileDialog">OpenFileDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="SaveFileDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="SaveFileDialog">
+								<rect x="561.5" y="66.0" height="32.0" width="130.0" data-name="SaveFileDialog"></rect>
+							</g>
+						<g transform="translate(561.5, 66)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SaveFileDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SaveFileDialog">
+									<text x="57.0" y="14.1" stroke="none" text-anchor="middle" data-name="SaveFileDialog">SaveFileDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FolderBrowserDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FolderBrowserDialog">
+								<rect x="323.5" y="110.0" height="32.0" width="178.0" data-name="FolderBrowserDialog"></rect>
+							</g>
+						<g transform="translate(323.5, 110)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FolderBrowserDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FolderBrowserDialog">
+									<text x="81.0" y="14.1" stroke="none" text-anchor="middle" data-name="FolderBrowserDialog">FolderBrowserDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="FontDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="FontDialog">
+								<rect x="362.5" y="154.0" height="32.0" width="100.0" data-name="FontDialog"></rect>
+							</g>
+						<g transform="translate(362.5, 154)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FontDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FontDialog">
+									<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="FontDialog">FontDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PageSetupDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PageSetupDialog">
+								<rect x="338.5" y="198.0" height="32.0" width="148.0" data-name="PageSetupDialog"></rect>
+							</g>
+						<g transform="translate(338.5, 198)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PageSetupDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PageSetupDialog">
+									<text x="66.0" y="14.1" stroke="none" text-anchor="middle" data-name="PageSetupDialog">PageSetupDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="PrintDialog">
+							<g fill="#eee8d5" stroke="#33322E" data-name="PrintDialog">
+								<rect x="362.0" y="242.0" height="32.0" width="101.0" data-name="PrintDialog"></rect>
+							</g>
+						<g transform="translate(362, 242)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PrintDialog">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PrintDialog">
+									<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="PrintDialog">PrintDialog</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="BindableComponent">
+							<g fill="#eee8d5" stroke="#33322E" data-name="BindableComponent">
+								<rect x="121.5" y="286.0" height="32.0" width="172.0" data-name="BindableComponent"></rect>
+							</g>
+						<g transform="translate(121.5, 286)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BindableComponent">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BindableComponent">
+									<text x="78.0" y="14.1" stroke="none" text-anchor="middle" data-name="BindableComponent">BindableComponent</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripItem">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripItem">
+								<rect x="353.5" y="286.0" height="32.0" width="118.0" data-name="ToolStripItem"></rect>
+							</g>
+						<g transform="translate(353.5, 286)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripItem">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripItem">
+									<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripItem">ToolStripItem</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Menu">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Menu">
+								<rect x="178.5" y="374.0" height="32.0" width="58.0" data-name="Menu"></rect>
+							</g>
+						<g transform="translate(178.5, 374)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Menu">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Menu">
+									<text x="21.0" y="14.1" stroke="none" text-anchor="middle" data-name="Menu">Menu</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="CiontextMenu">
+							<g fill="#eee8d5" stroke="#33322E" data-name="CiontextMenu">
+								<rect x="351.5" y="330.0" height="32.0" width="122.0" data-name="CiontextMenu"></rect>
+							</g>
+						<g transform="translate(351.5, 330)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CiontextMenu">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CiontextMenu">
+									<text x="53.0" y="14.1" stroke="none" text-anchor="middle" data-name="CiontextMenu">CiontextMenu</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MainMenu">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MainMenu">
+								<rect x="365.5" y="374.0" height="32.0" width="94.0" data-name="MainMenu"></rect>
+							</g>
+						<g transform="translate(365.5, 374)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MainMenu">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MainMenu">
+									<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="MainMenu">MainMenu</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="MenuItem">
+							<g fill="#eee8d5" stroke="#33322E" data-name="MenuItem">
+								<rect x="367.0" y="418.0" height="32.0" width="91.0" data-name="MenuItem"></rect>
+							</g>
+						<g transform="translate(367, 418)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MenuItem">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MenuItem">
+									<text x="37.5" y="14.1" stroke="none" text-anchor="middle" data-name="MenuItem">MenuItem</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridColumnStyle">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridColumnStyle">
+								<rect x="117.0" y="484.0" height="32.0" width="181.0" data-name="DataGridColumnStyle"></rect>
+							</g>
+						<g transform="translate(117, 484)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridColumnStyle">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridColumnStyle">
+									<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridColumnStyle">DataGridColumnStyle</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridBoolColumn">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridBoolColumn">
+								<rect x="323.0" y="462.0" height="32.0" width="179.0" data-name="DataGridBoolColumn"></rect>
+							</g>
+						<g transform="translate(323, 462)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridBoolColumn">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridBoolColumn">
+									<text x="81.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridBoolColumn">DataGridBoolColumn</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridTextBoxColumn">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridTextBoxColumn">
+								<rect x="310.0" y="506.0" height="32.0" width="205.0" data-name="DataGridTextBoxColumn"></rect>
+							</g>
+						<g transform="translate(310, 506)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridTextBoxColumn">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridTextBoxColumn">
+									<text x="94.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridTextBoxColumn">DataGridTextBoxColumn</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripButton">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripButton">
+								<rect x="558.0" y="110.0" height="32.0" width="137.0" data-name="ToolStripButton"></rect>
+							</g>
+						<g transform="translate(558, 110)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripButton">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripButton">
+									<text x="60.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripButton">ToolStripButton</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripControlHost">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripControlHost">
+								<rect x="538.0" y="154.0" height="32.0" width="177.0" data-name="ToolStripControlHost"></rect>
+							</g>
+						<g transform="translate(538, 154)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripControlHost">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripControlHost">
+									<text x="80.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripControlHost">ToolStripControlHost</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripDropDownItem">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripDropDownItem">
+								<rect x="527.0" y="286.0" height="32.0" width="199.0" data-name="ToolStripDropDownItem"></rect>
+							</g>
+						<g transform="translate(527, 286)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripDropDownItem">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripDropDownItem">
+									<text x="91.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripDropDownItem">ToolStripDropDownItem</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripLabel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripLabel">
+								<rect x="563.0" y="374.0" height="32.0" width="127.0" data-name="ToolStripLabel"></rect>
+							</g>
+						<g transform="translate(563, 374)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripLabel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripLabel">
+									<text x="55.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripLabel">ToolStripLabel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripStatusLabel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripStatusLabel">
+								<rect x="758.5" y="374.0" height="32.0" width="176.0" data-name="ToolStripStatusLabel"></rect>
+							</g>
+						<g transform="translate(758.5, 374)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripStatusLabel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripStatusLabel">
+									<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripStatusLabel">ToolStripStatusLabel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripSeparator">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripSeparator">
+								<rect x="546.5" y="418.0" height="32.0" width="160.0" data-name="ToolStripSeparator"></rect>
+							</g>
+						<g transform="translate(546.5, 418)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripSeparator">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripSeparator">
+									<text x="72.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripSeparator">ToolStripSeparator</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripComboBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripComboBox">
+								<rect x="761.5" y="110.0" height="32.0" width="170.0" data-name="ToolStripComboBox"></rect>
+							</g>
+						<g transform="translate(761.5, 110)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripComboBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripComboBox">
+									<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripComboBox">ToolStripComboBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripProgressBar">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripProgressBar">
+								<rect x="756.0" y="154.0" height="32.0" width="181.0" data-name="ToolStripProgressBar"></rect>
+							</g>
+						<g transform="translate(756, 154)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripProgressBar">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripProgressBar">
+									<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripProgressBar">ToolStripProgressBar</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripTextBox">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripTextBox">
+								<rect x="773.0" y="198.0" height="32.0" width="147.0" data-name="ToolStripTextBox"></rect>
+							</g>
+						<g transform="translate(773, 198)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripTextBox">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripTextBox">
+									<text x="65.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripTextBox">ToolStripTextBox</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripDropDownButton">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripDropDownButton">
+								<rect x="738.0" y="242.0" height="32.0" width="217.0" data-name="ToolStripDropDownButton"></rect>
+							</g>
+						<g transform="translate(738, 242)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripDropDownButton">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripDropDownButton">
+									<text x="100.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripDropDownButton">ToolStripDropDownButton</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripMenuItem">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripMenuItem">
+								<rect x="766.5" y="286.0" height="32.0" width="160.0" data-name="ToolStripMenuItem"></rect>
+							</g>
+						<g transform="translate(766.5, 286)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripMenuItem">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripMenuItem">
+									<text x="72.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripMenuItem">ToolStripMenuItem</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ToolStripSplitButton">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ToolStripSplitButton">
+								<rect x="761.0" y="330.0" height="32.0" width="171.0" data-name="ToolStripSplitButton"></rect>
+							</g>
+						<g transform="translate(761, 330)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolStripSplitButton">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolStripSplitButton">
+									<text x="77.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolStripSplitButton">ToolStripSplitButton</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="DataGridTableStyle">
+							<g fill="#eee8d5" stroke="#33322E" data-name="DataGridTableStyle">
+								<rect x="126.5" y="528.0" height="32.0" width="162.0" data-name="DataGridTableStyle"></rect>
+							</g>
+						<g transform="translate(126.5, 528)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridTableStyle">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridTableStyle">
+									<text x="73.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridTableStyle">DataGridTableStyle</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="HelpProvider">
+							<g fill="#eee8d5" stroke="#33322E" data-name="HelpProvider">
+								<rect x="149.5" y="572.0" height="32.0" width="116.0" data-name="HelpProvider"></rect>
+							</g>
+						<g transform="translate(149.5, 572)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HelpProvider">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HelpProvider">
+									<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="HelpProvider">HelpProvider</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="ImageList">
+							<g fill="#eee8d5" stroke="#33322E" data-name="ImageList">
+								<rect x="162.0" y="616.0" height="32.0" width="91.0" data-name="ImageList"></rect>
+							</g>
+						<g transform="translate(162, 616)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageList">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageList">
+									<text x="37.5" y="14.1" stroke="none" text-anchor="middle" data-name="ImageList">ImageList</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="NotifyIcon">
+							<g fill="#eee8d5" stroke="#33322E" data-name="NotifyIcon">
+								<rect x="160.5" y="660.0" height="32.0" width="94.0" data-name="NotifyIcon"></rect>
+							</g>
+						<g transform="translate(160.5, 660)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NotifyIcon">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NotifyIcon">
+									<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="NotifyIcon">NotifyIcon</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="StatusBarPanel">
+							<g fill="#eee8d5" stroke="#33322E" data-name="StatusBarPanel">
+								<rect x="140.5" y="704.0" height="32.0" width="134.0" data-name="StatusBarPanel"></rect>
+							</g>
+						<g transform="translate(140.5, 704)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StatusBarPanel">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StatusBarPanel">
+									<text x="59.0" y="14.1" stroke="none" text-anchor="middle" data-name="StatusBarPanel">StatusBarPanel</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Timer">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Timer">
+								<rect x="178.0" y="748.0" height="32.0" width="59.0" data-name="Timer"></rect>
+							</g>
+						<g transform="translate(178, 748)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Timer">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Timer">
+									<text x="21.5" y="14.1" stroke="none" text-anchor="middle" data-name="Timer">Timer</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="Control">
+							<g fill="#eee8d5" stroke="#33322E" data-name="Control">
+								<rect x="171.0" y="792.0" height="32.0" width="73.0" data-name="Control"></rect>
+							</g>
+						<g transform="translate(171, 792)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Control">
+								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control">
+									<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control">Control</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>
