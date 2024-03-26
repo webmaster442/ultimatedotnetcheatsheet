@@ -1,62 +1,63 @@
 <svg version="1.1" baseProfile="full" width="1011.0" height="880.0" viewbox="0 0 1011 880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 12
-	
-	[Component] &lt;:- [BindingSource]
-	[Component] &lt;:- [CommonDialog]
-	
-	[CommonDialog] &lt;:- [ColorDialog]
-	[CommonDialog] &lt;:- [FileDialog]
-	[FileDialog] &lt;:- [OpenFileDialog]
-	[FileDialog] &lt;:- [SaveFileDialog]
-	
-	[CommonDialog] &lt;:- [FolderBrowserDialog]
-	[CommonDialog] &lt;:- [FontDialog]
-	[CommonDialog] &lt;:- [PageSetupDialog]
-	[CommonDialog] &lt;:- [PrintDialog]
-	[Component] &lt;:- [BindableComponent] &lt;:- [ToolStripItem]
-	[Component] &lt;:- [Menu]
-	[Menu] &lt;:- [CiontextMenu]
-	[Menu] &lt;:- [MainMenu]
-	[Menu] &lt;:- [MenuItem]
-	
-	[Component] &lt;:- [DataGridColumnStyle]
-	[DataGridColumnStyle] &lt;:- [DataGridBoolColumn]
-	[DataGridColumnStyle] &lt;:- [DataGridTextBoxColumn]
-	
-	[ToolStripItem] &lt;:- [ToolStripButton]
-	[ToolStripItem] &lt;:- [ToolStripControlHost]
-	[ToolStripItem] &lt;:- [ToolStripDropDownItem]
-	[ToolStripItem] &lt;:- [ToolStripLabel] &lt;:- [ToolStripStatusLabel]
-	[ToolStripItem] &lt;:- [ToolStripSeparator]
-	
-	[ToolStripControlHost] &lt;:- [ToolStripComboBox]
-	[ToolStripControlHost] &lt;:- [ToolStripProgressBar]
-	[ToolStripControlHost] &lt;:- [ToolStripTextBox]
-	
-	[ToolStripDropDownItem] &lt;:- [ToolStripDropDownButton]
-	[ToolStripDropDownItem] &lt;:- [ToolStripMenuItem]
-	
-	[ToolStripDropDownItem] &lt;:- [ToolStripSplitButton]
-	
-	[Component] &lt;:- [DataGridTableStyle]
-	[Component] &lt;:- [HelpProvider]
-	[Component] &lt;:- [ImageList]
-	[Component] &lt;:- [NotifyIcon]
-	[Component] &lt;:- [StatusBarPanel]
-	[Component] &lt;:- [Timer]
-	
-	[Component] &lt;:- [Control]
+	#.box: fill=#C06EF0
 		
+		[&lt;box&gt;Component] &lt;:- [BindingSource]
+		[Component] &lt;:- [CommonDialog]
 		
-	
-	
-	
+		[CommonDialog] &lt;:- [ColorDialog]
+		[CommonDialog] &lt;:- [FileDialog]
+		[FileDialog] &lt;:- [OpenFileDialog]
+		[FileDialog] &lt;:- [SaveFileDialog]
+		
+		[CommonDialog] &lt;:- [FolderBrowserDialog]
+		[CommonDialog] &lt;:- [FontDialog]
+		[CommonDialog] &lt;:- [PageSetupDialog]
+		[CommonDialog] &lt;:- [PrintDialog]
+		[Component] &lt;:- [BindableComponent] &lt;:- [ToolStripItem]
+		[Component] &lt;:- [Menu]
+		[Menu] &lt;:- [CiontextMenu]
+		[Menu] &lt;:- [MainMenu]
+		[Menu] &lt;:- [MenuItem]
+		
+		[Component] &lt;:- [DataGridColumnStyle]
+		[DataGridColumnStyle] &lt;:- [DataGridBoolColumn]
+		[DataGridColumnStyle] &lt;:- [DataGridTextBoxColumn]
+		
+		[ToolStripItem] &lt;:- [ToolStripButton]
+		[ToolStripItem] &lt;:- [ToolStripControlHost]
+		[ToolStripItem] &lt;:- [ToolStripDropDownItem]
+		[ToolStripItem] &lt;:- [ToolStripLabel] &lt;:- [ToolStripStatusLabel]
+		[ToolStripItem] &lt;:- [ToolStripSeparator]
+		
+		[ToolStripControlHost] &lt;:- [ToolStripComboBox]
+		[ToolStripControlHost] &lt;:- [ToolStripProgressBar]
+		[ToolStripControlHost] &lt;:- [ToolStripTextBox]
+		
+		[ToolStripDropDownItem] &lt;:- [ToolStripDropDownButton]
+		[ToolStripDropDownItem] &lt;:- [ToolStripMenuItem]
+		
+		[ToolStripDropDownItem] &lt;:- [ToolStripSplitButton]
+		
+		[Component] &lt;:- [DataGridTableStyle]
+		[Component] &lt;:- [HelpProvider]
+		[Component] &lt;:- [ImageList]
+		[Component] &lt;:- [NotifyIcon]
+		[Component] &lt;:- [StatusBarPanel]
+		[Component] &lt;:- [Timer]
+		
+		[Component] &lt;:- [&lt;box&gt;Control]
+			
+			
 		
 		
 		
-	
-		</desc>
+			
+			
+			
+		
+			</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
 			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 				<g stroke="transparent" fill="transparent">
@@ -141,10 +142,10 @@
 					<path d="M57.3 585.9 L111 808 L171 808 L171.0 808.0 " fill="none"></path>
 					<path d="M58.9 585.5 L57.3 585.9 L55.8 586.3 L56.4 582.0 Z"></path>
 					<g data-name="Component">
-							<g fill="#eee8d5" stroke="#33322E" data-name="Component">
+							<g fill="#C06EF0" stroke="#33322E" data-name="Component">
 								<rect x="0.0" y="550.0" height="32.0" width="105.0" data-name="Component"></rect>
 							</g>
-						<g transform="translate(0, 550)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Component">
+						<g transform="translate(0, 550)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Component">
 								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Component">
 									<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="Component">Component</text>
 								
@@ -559,10 +560,10 @@
 							</g>
 						</g>
 					<g data-name="Control">
-							<g fill="#eee8d5" stroke="#33322E" data-name="Control">
+							<g fill="#C06EF0" stroke="#33322E" data-name="Control">
 								<rect x="171.0" y="792.0" height="32.0" width="73.0" data-name="Control"></rect>
 							</g>
-						<g transform="translate(171, 792)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Control">
+						<g transform="translate(171, 792)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Control">
 								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control">
 									<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control">Control</text>
 								

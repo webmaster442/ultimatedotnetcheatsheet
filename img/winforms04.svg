@@ -1,71 +1,71 @@
 <svg version="1.1" baseProfile="full" width="1157.0" height="1222.0" viewbox="0 0 1157 1222" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 10
+	#.box: fill=#C06EF0		
+		[&lt;box&gt;Control] &lt;:- [ScrollableControl]
+		[Control] &lt;:- [ButtonBase]
+		[Control] &lt;:- [Label] &lt;:- [LinkLabel]
 		
-	[Control] &lt;:- [ScrollableControl]
-	[Control] &lt;:- [ButtonBase]
-	[Control] &lt;:- [Label] &lt;:- [LinkLabel]
-	
-	[ButtonBase] -[Button]
-	[ButtonBase] -[CheckBox]
-	[ButtonBase] -[RadioButton]
-	
-	[TextBox] &lt;:- [DataGridTextBox]
-	[TextBox] &lt;:- [DataGridViewTextBoxEditingControl]
-	[ScrollableControl] &lt;:- [ContainerControl]
-	
-	[ScrollableControl] &lt;:- [ComponentTray]
-	[ScrollableControl] &lt;:- [Panel]
-	[ScrollableControl] &lt;:- [ToolStrip]
-	
-	[ToolStrip] &lt;:- [ToolStripDropDown]
-	[ToolStripDropDown] &lt;:- [ToolStripDropDownMenu] &lt;:- [ContextMenuStrip]
-	[ToolStripDropDown] &lt;:- [ToolStripOverflow]
-	[ToolStrip] &lt;:- [BindingNavigator]
-	[ToolStrip] &lt;:- [MenuStrip]
-	[ToolStrip] &lt;:- [StatusStrip]
-	
-	
-	[ContainerControl] &lt;:- [Form] &lt;:- [PrintPreviewDialog]
-	[Form] &lt;:- [ThreadExceptionDialog]
-	[ContainerControl] &lt;:- [PropertyGrid]
-	[ContainerControl] &lt;:- [SplitContainer]
-	[ContainerControl] &lt;:- [ToolStripContainer]
-	[ContainerControl] &lt;:- [ToolStripPanel]
-	[ContainerControl] &lt;:- [UpDownBase] &lt;:- [DomainUpDown]
-	[UpDownBase] &lt;:- [NumericUpDown]
-	[ContainerControl] &lt;:- [UserControl]
-	
-	[Control] &lt;:- [ListControl] &lt;:- [ComboBox] &lt;:- [DataGridViewComboBoxEditingControl]
-	[ListControl] &lt;:- [ListBox] &lt;:- [CheckedListBox]
-	
-	[Control] &lt;:- [TextBoxBase]
-	[TextBoxBase] &lt;:- [MaskedTextBox]
-	[TextBoxBase] &lt;:- [RichTextBox]
-	[TextBoxBase] &lt;:- [TextBox]
-	
-	[ScrollBar] &lt;:- [VScrollBar]
-	[Control] &lt;:- [Splitter]
-	[Control] &lt;:- [StatusBar]
-	
-	[Control] &lt;:- [WebBrowserBase] &lt;:- [WebBrowser]
-	
-	[Panel] &lt;:- [ComponentEditorPage]
-	[Panel] &lt;:- [FlowLayoutPanel]
-	[Panel] &lt;:- [SplitterPanel]
-	[Panel] &lt;:- [TableLayoutPanel] &lt;:- [ByteViewer]
-	[Panel] &lt;:- [TabPage]
-	[Panel] &lt;:- [ToolStripContentPanel]
-	[Control] &lt;:- [ScrollBar] &lt;:- [HScrollBar]
-	
+		[ButtonBase] -[Button]
+		[ButtonBase] -[CheckBox]
+		[ButtonBase] -[RadioButton]
+		
+		[TextBox] &lt;:- [DataGridTextBox]
+		[TextBox] &lt;:- [DataGridViewTextBoxEditingControl]
+		[ScrollableControl] &lt;:- [ContainerControl]
+		
+		[ScrollableControl] &lt;:- [ComponentTray]
+		[ScrollableControl] &lt;:- [Panel]
+		[ScrollableControl] &lt;:- [ToolStrip]
+		
+		[ToolStrip] &lt;:- [ToolStripDropDown]
+		[ToolStripDropDown] &lt;:- [ToolStripDropDownMenu] &lt;:- [ContextMenuStrip]
+		[ToolStripDropDown] &lt;:- [ToolStripOverflow]
+		[ToolStrip] &lt;:- [BindingNavigator]
+		[ToolStrip] &lt;:- [MenuStrip]
+		[ToolStrip] &lt;:- [StatusStrip]
 		
 		
+		[ContainerControl] &lt;:- [Form] &lt;:- [PrintPreviewDialog]
+		[Form] &lt;:- [ThreadExceptionDialog]
+		[ContainerControl] &lt;:- [PropertyGrid]
+		[ContainerControl] &lt;:- [SplitContainer]
+		[ContainerControl] &lt;:- [ToolStripContainer]
+		[ContainerControl] &lt;:- [ToolStripPanel]
+		[ContainerControl] &lt;:- [UpDownBase] &lt;:- [DomainUpDown]
+		[UpDownBase] &lt;:- [NumericUpDown]
+		[ContainerControl] &lt;:- [UserControl]
 		
+		[Control] &lt;:- [ListControl] &lt;:- [ComboBox] &lt;:- [DataGridViewComboBoxEditingControl]
+		[ListControl] &lt;:- [ListBox] &lt;:- [CheckedListBox]
 		
+		[Control] &lt;:- [TextBoxBase]
+		[TextBoxBase] &lt;:- [MaskedTextBox]
+		[TextBoxBase] &lt;:- [RichTextBox]
+		[TextBoxBase] &lt;:- [TextBox]
 		
+		[ScrollBar] &lt;:- [VScrollBar]
+		[Control] &lt;:- [Splitter]
+		[Control] &lt;:- [StatusBar]
 		
+		[Control] &lt;:- [WebBrowserBase] &lt;:- [WebBrowser]
 		
-		</desc>
+		[Panel] &lt;:- [ComponentEditorPage]
+		[Panel] &lt;:- [FlowLayoutPanel]
+		[Panel] &lt;:- [SplitterPanel]
+		[Panel] &lt;:- [TableLayoutPanel] &lt;:- [ByteViewer]
+		[Panel] &lt;:- [TabPage]
+		[Panel] &lt;:- [ToolStripContentPanel]
+		[Control] &lt;:- [ScrollBar] &lt;:- [HScrollBar]
+		
+			
+			
+			
+			
+			
+			
+			
+			</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
 			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 				<g stroke="transparent" fill="transparent">
@@ -179,10 +179,10 @@
 					<path d="M205.8 1150.0 L240 1150 L269.5 1150 L269.5 1150.0 " fill="none"></path>
 					<path d="M205.8 1148.7 L205.8 1150.0 L205.8 1151.3 L202.5 1150.0 Z"></path>
 					<g data-name="Control">
-							<g fill="#eee8d5" stroke="#33322E" data-name="Control">
+							<g fill="#C06EF0" stroke="#33322E" data-name="Control">
 								<rect x="0.0" y="966.0" height="32.0" width="73.0" data-name="Control"></rect>
 							</g>
-						<g transform="translate(0, 966)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Control">
+						<g transform="translate(0, 966)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Control">
 								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control">
 									<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control">Control</text>
 								
