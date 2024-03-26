@@ -135,6 +135,13 @@
 
 @media print {
 
+    @page {
+        margin-top: 5mm;
+        margin-bottom: 5mm;
+        margin-left: 10mm;
+        margin-right: 10mm;
+     }
+
     body,
     html {
         width: 250mm;
@@ -165,11 +172,7 @@
         max-width: 235mm;
         max-height: 345mm;
         margin: 0 auto;
-        border: 1px solid red;
-    }
-
-    svg {
-        display: block;
+        /*border: 1px solid red;*/
     }
 
     p,
@@ -220,12 +223,11 @@
     #data-annotation {
         page-break-before: always;
     }
-    
+
+    #wpf-class-hierarchy,
     #windows-froms-class-hierarchy {
         page-break-before: always;
-    }
-
-    #wpf-class-hierarchy {
-        page-break-before: always;
+        padding-top: 15cm;
+        text-align: center;
     }
 }
