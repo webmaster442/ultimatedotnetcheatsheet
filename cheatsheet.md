@@ -989,6 +989,16 @@ new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 ![Data annotation Attributes](img/attributes-dataannotation.svg)
 
 
+# Cryptography
+
+## Encryption Algortithms
+
+![Cryptography](img/cryptography1.svg)
+
+## Hash Algorithms
+
+![Cryptography](img/cryptography2.svg)
+
 # UI
 
 * **Windows Forms**
@@ -999,19 +1009,19 @@ new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 
     Windows Presentation Foundation (WPF) is a UI framework that is resolution-independent and uses a vector-based rendering engine, built to take advantage of modern graphics hardware. WPF provides a comprehensive set of application-development features that include Extensible Application Markup Language (XAML), controls, data binding, layout, 2D and 3D graphics, animation, styles, templates, documents, media, text, and typography. WPF is part of .NET, so you can build applications that incorporate other elements of the .NET API.
 
-* **MVVM**
+## MVVM
 
-    The MVVM pattern helps cleanly separate an application's business and presentation logic from its user interface (UI). Maintaining a clean separation between application logic and the UI helps address numerous development issues and makes an application easier to test, maintain, and evolve. It can also significantly improve code re-use opportunities and allows developers and UI designers to collaborate more easily when developing their respective parts of an app.
+The MVVM pattern helps cleanly separate an application's business and presentation logic from its user interface (UI). Maintaining a clean separation between application logic and the UI helps address numerous development issues and makes an application easier to test, maintain, and evolve. It can also significantly improve code re-use opportunities and allows developers and UI designers to collaborate more easily when developing their respective parts of an app.
     
-    Frameworks:
-    * CommunityToolkit.Mvvm - https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/
-    * ReactiveUI - https://www.reactiveui.net/
-    * Prism Libary - https://prismlibrary.com/
+Frameworks:
 
+* CommunityToolkit.Mvvm - https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/
+* ReactiveUI - https://www.reactiveui.net/
+* Prism Libary - https://prismlibrary.com/
 
 ![MVVM Data flow](img/mvvm.svg)
 
-## Minimal MVVM Implementation
+### Minimal MVVM Implementation
 
 ```csharp
 public abstract class ViewModelBase : INotifyPropertyChanged
