@@ -398,6 +398,74 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 |            `IRootFunctions<T>`             |                            |        |                              |         |   √   |       √        |         |         |            |
 |        `ITrigonometricFunctions<T>`        |                            |        |                              |         |   √   |       √        |         |         |            |
 
+## Important interfaces for types
+
+### `IComparable<T>`
+
+Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.
+
+```csharp
+interface IComparable<T>
+{
+	int CompareTo (T? other);
+}
+```
+
+The CompareTo returns a value that indicates the relative order of the objects being compared. The return value has these meanings:
+
+| Value | Meaning |
+| :--| :-- |
+| Less than zero | This instance precedes other in the `sort` order. |
+| Zero | This instance occurs in the same position in the `sort` order as other. |
+| Greater than zero | This instance follows other in the sort order. |
+
+### `IComparer<T>`
+
+Defines a method that a type implements to compare two objects.
+
+This interface is used with the `List<T>.Sort` and `List<T>.BinarySearch` methods. It provides a way to customize the sort order of a collection. Classes that implement this interface include the `SortedDictionary<TKey,TValue>` and `SortedList<TKey,TValue>` generic classes.
+
+The default implementation of this interface is the `Comparer<T>` class. The `StringComparer` class implements this interface for type String.
+
+```csharp
+interface IComparer<T>
+{
+	int Compare (T? x, T? y);
+}
+```
+
+Return a signed integer that indicates the relative values of x and y, as shown in the following table:
+
+| Value | Meaning |
+| :--| :-- |
+| Less than zero |`x` is less than `y`. |
+| Zero | `x` equals `y`. |
+| Greater than zero | `x` is greater than `y`. |
+
+### `IEquatable<T>`
+
+Defines a generalized method that a value type or class implements to create a type-specific method for determining equality of instances.
+
+```csharp
+interface IEquatable<T>
+{
+	bool Equals (T? other);
+}
+```
+
+Note: If a type implements the `IEquatable<T>`, then the type must override the `Equals(object? other)` and `GetHashCode()` methods provided also.
+
+### `EqualityComparer<T>`
+
+Defines methods to support the comparison of objects for equality. This interface allows the implementation of customized equality comparison for collections. That is, you can create your own definition of equality for type `T`, and specify that this definition be used with a collection type that accepts the `IEqualityComparer<T>` generic interface.
+
+```csharp
+interface IEqualityComparer<T>
+{
+	bool Equals (T? x, T? y);
+	int GetHashCode (T obj);
+}
+```
 
 # Operator Precedence
 
@@ -939,6 +1007,69 @@ new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
     * CommunityToolkit.Mvvm - https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/
     * ReactiveUI - https://www.reactiveui.net/
     * Prism Libary - https://prismlibrary.com/
+
+
+![MVVM Data flow](img/mvvm.svg)
+
+## Minimal MVVM Implementation
+
+```csharp
+public abstract class ViewModelBase : INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    protected void OnPropertyChanged(string propertyName = "") 
+        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+    protected void SetValue<T>(ref T field,
+                               T newValue,
+                               [CallerMemberName] string properyName = "")
+    {
+        if (!EqualityComparer<T>.Default.Equals(field, newValue))
+        {
+            field = newValue;
+            OnPropertyChanged(properyName);
+        }
+    }
+
+    protected void SetValue<T>(ref T field,
+                               T newValue,
+                               IEqualityComparer<T> comparer,
+                               [CallerMemberName] string properyName = "")
+    {
+        if (!comparer.Equals(field, newValue))
+        {
+            field = newValue;
+            OnPropertyChanged(properyName);
+        }
+    }
+}
+```
+
+```csharp
+public class RelayCommand : ICommand
+{
+    private readonly Action<object?> _acton;
+    private readonly Predicate<object?>? _canExecute;
+
+    public event EventHandler? CanExecuteChanged;
+
+    public RelayCommand(Action<object?> acton, Predicate<object?>? canExecute = null)
+    {
+        _acton = acton;
+        _canExecute = canExecute;
+    }
+
+    public void RaiseCanExecuteChanged()
+        => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+
+    public bool CanExecute(object? parameter)
+        => _canExecute == null || _canExecute(parameter);
+
+    public void Execute(object? parameter)
+        => _acton.Invoke(parameter);
+}
+```
 
 ## Windows Froms class hierarchy
 
