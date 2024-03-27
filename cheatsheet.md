@@ -1231,7 +1231,38 @@ public class RelayCommand : ICommand
 ## Windows Froms class hierarchy
 
 ![MarshalByRefObject derivatives](img/winforms01.svg)
+
+* **MarshalByRefObject**
+
+    Enables access to objects across application domain boundaries in applications that support remoting.
+
+* **Component**
+
+    Provides the base implementation for the IComponent interface and enables object sharing between applications. Component is the base class for all components in the common language runtime that marshal by reference. Component is remotable and derives from the MarshalByRefObject class. Component provides an implementation of the IComponent interface. The MarshalByValueComponent provides an implementation of IComponent that marshals by value.
+
+
+* **NativeWindow**
+
+    Provides a low-level encapsulation of a window handle and a window procedure. This class automatically manages window class creation and registration. A window is not eligible for garbage collection when it is associated with a window handle. To ensure proper garbage collection, handles must either be destroyed manually using DestroyHandle or released using ReleaseHandle.
+
 ![Component derivatives](img/winforms02.svg)
+
+* **BindableComponent**
+
+    Base class for components that provide properties that can be data bound with the Windows Forms Designer.
+
+* **ToolStripItem**
+
+    Represents the abstract base class that manages events and layout for all the elements that a ToolStrip or ToolStripDropDown can contain.
+
+* **CommonDialog**
+
+    Specifies the base class used for displaying dialog boxes on the screen. Inherited classes are required to implement RunDialog by invoking ShowDialog to create a specific common dialog box. Inherited classes can optionally override HookProc to implement specific dialog box hook functionality.
+
+* **Control**
+
+    Defines the base class for controls, which are components with visual representation. The Control class implements very basic functionality required by classes that display information to the user. It handles user input through the keyboard and pointing devices. It handles message routing and security. It defines the bounds of a control (its position and size), although it does not implement painting. It provides a window handle (hWnd).
+
 ![Control derivatives](img/winforms03.svg)
 ![Control derivatives](img/winforms04.svg)
 
