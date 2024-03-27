@@ -1071,19 +1071,169 @@ public class RelayCommand : ICommand
 }
 ```
 
+## WPF class hierarchy
+
+![WPF Core Objects](img/wpf-01.svg)
+
+* **DispatcherObject**
+
+	Represents an object that is associated with a Dispatcher. The Dispatcher Provides services for managing the queue of work items for a thread.
+	
+* **DependencyObject**
+
+	Represents an object that participates in the dependency property system.
+	
+* **Visual**
+
+	Provides rendering support in WPF, which includes hit testing, coordinate transformation, and bounding box calculations.
+	
+* **UIElement**
+
+	UIElement is a base class for WPF core level implementations building on Windows Presentation Foundation (WPF) elements and basic presentation characteristics.
+	
+* **FrameworkElement**
+
+	Provides a WPF framework-level set of properties, events, and methods for Windows Presentation Foundation (WPF) elements. This class represents the provided WPF framework-level implementation that is built on the WPF core-level APIs that are defined by UIElement.
+	
+* **Control**
+
+	Represents the base class for user interface (UI) elements that use a ControlTemplate to define their appearance.
+
+* **Freezable**
+
+	Defines an object that has a modifiable state and a read-only (frozen) state. Classes that derive from Freezable provide detailed change notification, can be made immutable, and can clone themselves.
+
+* **Animatable**
+
+	Abstract class that provides animation support.
+	
+* **Visual3D**
+
+	Provides services and properties that are common to visual 3-D objects, including hit-testing, coordinate transformation, and bounding box calculations.
+
+![Template derivatives](img/wpf-02.svg)
+
+* **ControlTemplate**
+
+	Specifies the visual structure and behavioral aspects of a Control that can be shared across multiple instances of the control.
+	
+* **ItemsPanelTemplate**
+
+	Specifies the panel that the ItemsPresenter creates for the layout of the items of an ItemsControl.
+	
+* **DataTemplate**
+
+	Describes the visual structure of a data object.
+	
+* **ItemContainerTemplate**
+
+	Provides the template for producing a container for an ItemsControl object.
+	
+* **HierarchicalDataTemplate**
+
+	Represents a DataTemplate that supports HeaderedItemsControl, such as TreeViewItem or MenuItem.
+
+![Animatable derivatives](img/wpf-03.svg)
+
+* **Brush**
+
+	Defines objects used to fill the interiors of graphical shapes such as rectangles, ellipses, pies, polygons, and paths.
+	
+* **Drawing**
+
+	Abstract class that describes a 2-D drawing. This class cannot be inherited by your code.
+	
+* **ImageSource**
+
+	Represents an object type that has a width, height, and ImageMetadata such as a BitmapSource and a DrawingImage. This is an abstract class.
+	
+* **BitmapSource**
+
+	Represents a single, constant set of pixels at a certain size and resolution.
+
+* **Transform**
+
+    Defines functionality that enables transformations in a 2-D plane. Transformations include rotation (RotateTransform), scale (ScaleTransform), skew (SkewTransform), and translation (TranslateTransform). This class hierarchy differs from the Matrix structure because it is a class and it supports animation and enumeration semantics.
+
+* **Material**
+
+    Abstract base class for materials. Materials provide texture to 3-D geometries. Combined with a light source, a material makes a 3-D surface visible in the scene.
+
+* **Model3D**
+    
+    Provides functionality for 3-D models. Use the ModelVisual3D class to render Model3D objects. You can compose Model3D objects by using a Model3DGroup to form a single model. You can share Model3D objects among ModelVisual3D objects to make multiple instances in a scene.
+
+* **Geometry3D**
+
+    Classes that derive from this abstract base class define 3D geometric shapes. The Geometry3D class of objects can be used for hit-testing and rendering 3D graphic data.
+
+![FrameworkElement derivatives](img/wpf-04.svg)
+
+* **Decorator**
+
+    Provides a base class for elements that apply effects onto or around a single child element, such as Border or Viewbox.
+
+* **Page**
+
+    Encapsulates a page of content that can be navigated to and hosted by Windows Internet Explorer, NavigationWindow, and Frame.
+
+* **Panel**
+
+    Provides a base class for all Panel elements. Use Panel elements to position and arrange child objects in Windows Presentation Foundation (WPF) applications.
+
+* **Shape**
+
+    * **Canvas**: Defines an area within which you can explicitly position child elements by using coordinates that are relative to the Canvas area.
+
+    * **DockPanel**: Defines an area where you can arrange child elements either horizontally or vertically, relative to each other.
+
+    * **Grid**: Defines a flexible grid area that consists of columns and rows.
+    
+    *  **TabPanel**: Handles the layout of the TabItem objects on a TabControl.
+    
+    *  **ToolBarOverflowPanel**: Used to arrange overflow ToolBar items.
+    
+    *  **UniformGrid**: Provides a way to arrange content in a grid where all the cells in the grid have the same size.
+    
+    *  **StackPanel**: Arranges child elements into a single line that can be oriented horizontally or vertically.
+   
+    *  **VirtualizingPanel**: Provides a framework for Panel elements that virtualize their child data collection. This is an abstract class.
+    
+    *  **WrapPanel**: Positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering happens sequentially from top to bottom or from right to left, depending on the value of the Orientation property.
+
+
+* **MediaElement**
+
+    Represents a control that contains audio and/or video. When distributing media with your application, you cannot use a media file as a project resource. In your project file, you must instead set the media type to Content and set CopyToOutputDirectory to PreserveNewest or Always.
+
+* **HwndHost**
+
+    Hosts a Win32 window as an element within Windows Presentation Foundation (WPF) content.
+
+![Control derivatives](img/wpf-05.svg)
+
+* **ContentControl**
+
+    Represents a control with a single piece of content of any type. The ContentControl can contain any type of common language runtime object (such as a string or a DateTime object) or a UIElement object (such as a Rectangle or a Panel).
+
+* **ItemsControl**
+
+    Represents a control that can be used to present a collection of items. An ItemsControl is a type of Control that can contain multiple items, such as strings, objects, or other elements.
+
+* **Selector**
+
+    Represents a control that allows a user to select items from among its child elements.
+
+* **RangeBase**
+
+    Represents an element that has a value within a specific range.
+
 ## Windows Froms class hierarchy
 
 ![MarshalByRefObject derivatives](img/winforms01.svg)
 ![Component derivatives](img/winforms02.svg)
 ![Control derivatives](img/winforms03.svg)
 ![Control derivatives](img/winforms04.svg)
-
-## WPF class hierarchy
-
-![WPF Core Objects](img/wpf-01.svg)
-![Animatable derivatives](img/wpf-02.svg)
-![FrameworkElement derivatives](img/wpf-03.svg)
-![Control derivatives](img/wpf-04.svg)
 
 :::
 :::
