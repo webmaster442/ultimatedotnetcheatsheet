@@ -18,10 +18,16 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 ![CC BY SA](img/by-sa.svg) 
 
+
+The project is open-source and available on GitHub. You can contribute to it by visiting project's GitHub repository: https://github.com/webmaster442/ultimatedotnetcheatsheet
+
+![QR Code](img/qrcode.svg)
+
 ## Changelog
 
 * 2024.02.29 - Initial release
 * 2024.03.08 - Generic math interfaces extended & various small improvements
+* 2024.09.28 - Grammar fixes, added cryptography and UI chapters
 
 # Dotnet basic commands
 
