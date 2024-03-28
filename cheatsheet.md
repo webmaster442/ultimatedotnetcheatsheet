@@ -6,6 +6,8 @@
 
 ![cheat sheet header](img/header.svg)
 
+<hr class="pagebreak">
+
 ## Authors
 
 * Ruzsinszki Gábor - https://www.linkedin.com/in/gabor-ruzsinszki-b564a8181/
@@ -1190,6 +1192,8 @@ public class RelayCommand : ICommand
 	Represents a DataTemplate that supports HeaderedItemsControl, such as TreeViewItem or MenuItem.
 
 ![Animatable derivatives](img/wpf-03.svg)
+
+<hr class="pagebreak">
 
 * **Brush**
 

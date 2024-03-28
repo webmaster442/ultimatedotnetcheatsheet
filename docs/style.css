@@ -38,6 +38,10 @@
 
     }
 
+    .pagebreak {
+        display: none;
+    }
+
     #navigate-top {
         position: fixed;
         right: 20px;
@@ -187,8 +191,13 @@
         overflow: hidden;
     }
 
+    .pagebreak {
+        display: block;
+        page-break-after: always;
+    }
+
     /*Manual page break adjustments*/
-    #usefull-tools {
+    #nuget {
         page-break-before: always;
     }
 
@@ -224,10 +233,19 @@
         page-break-before: always;
     }
 
-    #wpf-class-hierarchy,
+    #hash-algorithms {
+        page-break-before: always;
+    }
+
+    #minimal-mvvm-implementation {
+        page-break-before: always;
+    }
+
+    #wpf-class-hierarchy {
+        page-break-before: always;
+    }
+
     #windows-froms-class-hierarchy {
         page-break-before: always;
-        padding-top: 15cm;
-        text-align: center;
     }
 }
