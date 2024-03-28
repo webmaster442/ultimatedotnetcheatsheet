@@ -81,6 +81,18 @@ Note: solution file name can be ignored if folder only contains one `.sln` file.
 
 Globaly means that the tool is installed to the users profile, instead of the current project/solution.
 
+## NuGet
+
+* Display all cache directories: `dotnet nuget locals all --list`
+* Clear all files from all local cache directories: `dotnet nuget locals all --clear`
+* Push a package to the NuGet repository: `dotnet nuget push [package.nupkg] -k [api key]`
+* Push a package to a custom NuGet feed: `dotnet nuget push [package.nupkg] -k [api key] -s [feed url]`
+* Push all .nupkg files in the current directory to a local feed directory: `dotnet nuget push "*.nupkg" -s [feed directory]`
+* List all configured NuGet sources: `dotnet nuget list source [source name]`
+* Remove a NuGet source: `dotnet nuget remove source`
+* Add a NuGet source: `dotnet nuget add source [url or local path] -n [source name]`
+* Update a NuGet source: `dotnet nuget update source [source name]`
+
 ## Useful tools
 
 * **dotnet-ef**
