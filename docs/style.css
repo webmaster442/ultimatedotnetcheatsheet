@@ -17,7 +17,7 @@
     @media screen and (min-width: 1000px) {
         .parent {
             display: grid;
-            grid-template-columns: 0.1fr 0.9fr;
+            grid-template-columns: 0.15fr 0.85fr;
             grid-template-rows: 1fr;
             grid-column-gap: 10px;
             grid-row-gap: 0px;
@@ -36,10 +36,6 @@
             text-align: left;
         }
 
-    }
-
-    .pagebreak {
-        display: none;
     }
 
     #navigate-top {
@@ -134,6 +130,10 @@
     tr:nth-child(even) {
         background-color: var(--color2);
     }
+	
+	.pagebreak {
+        display: none;
+    }
 
 }
 
@@ -144,7 +144,12 @@
         margin-bottom: 5mm;
         margin-left: 10mm;
         margin-right: 10mm;
-     }
+
+        @bottom-right {
+            content: counter(page) " of "counter(pages);
+        }
+
+    }
 
     body,
     html {
@@ -197,55 +202,22 @@
     }
 
     /*Manual page break adjustments*/
-    #nuget {
-        page-break-before: always;
-    }
-
-    #generic-math-interfaces {
-        page-break-before: always;
+    #constant-pattern,
+    #custom-numeric-format-strings,
+    #data-annotation,
+    #generic-math-interfaces,
+    #hash-algorithms,
+    #list-patterns,
+    #minimal-mvvm-implementation,
+    #nuget,
+    #property-pattern,
+    #standard-date-and-time-format-strings,
+    #windows-froms-class-hierarchy,
+    #wpf-class-hierarchy {
+        page-break-before: always
     }
 
     #access-modifiers {
-        page-break-before: avoid;
-    }
-
-    #custom-numeric-format-strings {
-        page-break-before: always;
-    }
-
-    #standard-date-and-time-format-strings {
-        page-break-before: always;
-    }
-
-    #constant-pattern {
-        page-break-before: always;
-    }
-
-    #property-pattern {
-        page-break-before: always;
-    }
-
-    #list-patterns {
-        page-break-before: always;
-    }
-
-    #data-annotation {
-        page-break-before: always;
-    }
-
-    #hash-algorithms {
-        page-break-before: always;
-    }
-
-    #minimal-mvvm-implementation {
-        page-break-before: always;
-    }
-
-    #wpf-class-hierarchy {
-        page-break-before: always;
-    }
-
-    #windows-froms-class-hierarchy {
-        page-break-before: always;
+        page-break-before: avoid
     }
 }
