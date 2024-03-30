@@ -5,7 +5,7 @@
     "description": "This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.",
     "start_url": "/",
     "background_color": "#eee8d6",
-    "theme_color": "#C06EF0",
+    "theme_color": "#5026d3",
     "orientation": "any",
     "display": "standalone",
     "icons": [

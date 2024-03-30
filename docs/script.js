@@ -7,16 +7,15 @@ document.addEventListener("DOMContentLoaded", applyCopyButton);
 window.onscroll = function () { scrollFunction() };
 
 function applyCopyButton() {
-    const pres = document.querySelectorAll('pre');
+    const preElements = document.querySelectorAll('pre');
 
+    preElements.forEach(pre => {
+        const copyButton = document.createElement('button');
+        copyButton.classList.add('copyButton');
+        copyButton.textContent = 'Copy to clipboard';
+        pre.appendChild(copyButton);
 
-    pres.forEach(pre => {
-        const copyBtn = document.createElement('button');
-        copyBtn.classList.add('copyButton');
-        copyBtn.textContent = 'Copy to clipboard';
-        pre.appendChild(copyBtn);
-
-        copyBtn.addEventListener('click', () => {
+        copyButton.addEventListener('click', () => {
             const codeToCopy = pre.firstChild.textContent;
             navigator.clipboard.writeText(codeToCopy).then(() => {
                 notify('Code copied to clipboard');
@@ -25,7 +24,6 @@ function applyCopyButton() {
             });
         });
     });
-
 }
 
 function notify(message) {
@@ -36,7 +34,6 @@ function notify(message) {
         notify.style.display = 'none';
     }, 500);
 }
-
 
 function scrollFunction() {
     const scrollBtn = document.getElementById('navigate-top');

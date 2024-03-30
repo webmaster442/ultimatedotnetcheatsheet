@@ -101,6 +101,31 @@ Globaly means that the tool is installed to the users profile, instead of the cu
 * Add a NuGet source: `dotnet nuget add source [url or local path] -n [source name]`
 * Update a NuGet source: `dotnet nuget update source [source name]`
 
+## Formating
+
+* Create a new editorconfig file: `dotnet new editorconfig`
+* Format all code in the solution or a project: `dotnet format [solution.sln or project.csproj]`
+* Verify that all code is correctly formatted: `dotnet format --verify-no-changes`
+
+## Workloads
+
+* List all available workloads: `dotnet workload search`
+* Install an optional workload: `dotnet workload install [workload id]`
+* Uninstall a workload: `dotnet workload uninstall [workload id]`
+* List installed workloads: `dotnet workload list`
+* Repair workload installations: `dotnet workload repair`
+* Update installed workloads: `dotnet workload update`
+* Install workload needed for a project or a solution: `dotnet workload restore [soluton.sln or project.csproj]`
+
+## Tools
+
+* Install a tool: `dotnet tool install --global [tool name]`
+* Uninstall a tool: `dotnet tool uninstall --global [tool name]`
+* Lists all tools that are currently installed: `dotnet tool list --global`
+* Searches all .NET tools that are published to NuGet: `dotnet tool search [tool name]`
+
+Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windows they are installed in the `%USERPROFILE%\.dotnet\tools` folder. Instead of the `--global` switch use the `--tool-path [folder]` to install the tool to a custom directory. If no `--global` or `--tool-path` is specified, then the tool is installed to the current C# project.
+
 ## Useful tools
 
 * **dotnet-ef**
@@ -418,9 +443,9 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 |            `IRootFunctions<T>`             |                            |        |                              |         |   √   |       √        |         |         |            |
 |        `ITrigonometricFunctions<T>`        |                            |        |                              |         |   √   |       √        |         |         |            |
 
-## Important interfaces for types
+# Important interfaces for types
 
-### `IComparable<T>`
+## IComparable\<T\>
 
 Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.
 
@@ -439,7 +464,7 @@ The CompareTo returns a value that indicates the relative order of the objects b
 | Zero | This instance occurs in the same position in the `sort` order as other. |
 | Greater than zero | This instance follows other in the sort order. |
 
-### `IComparer<T>`
+## IComparer\<T\>
 
 Defines a method that a type implements to compare two objects.
 
@@ -462,7 +487,7 @@ Return a signed integer that indicates the relative values of x and y, as shown 
 | Zero | `x` equals `y`. |
 | Greater than zero | `x` is greater than `y`. |
 
-### `IEquatable<T>`
+## IEquatable\<T\>
 
 Defines a generalized method that a value type or class implements to create a type-specific method for determining equality of instances.
 
@@ -475,7 +500,7 @@ interface IEquatable<T>
 
 Note: If a type implements the `IEquatable<T>`, then the type must override the `Equals(object? other)` and `GetHashCode()` methods provided also.
 
-### `EqualityComparer<T>`
+## EqualityComparer\<T\>
 
 Defines methods to support the comparison of objects for equality. This interface allows the implementation of customized equality comparison for collections. That is, you can create your own definition of equality for type `T`, and specify that this definition be used with a collection type that accepts the `IEqualityComparer<T>` generic interface.
 
@@ -502,8 +527,7 @@ Implementation example:
 ```csharp
 public class AsyncDisposable : IAsyncDisposable, IDisposable
 {
-    //a flag to indicate whether the object has been disposed
-    //to prevent multiple dispose calls
+    //a flag to indicate whether the object has been disposed to prevent multiple dispose calls
     private bool _disposed;
 
     //A disposable field
@@ -514,24 +538,20 @@ public class AsyncDisposable : IAsyncDisposable, IDisposable
         _field = new MemoryStream();
     }
 
-    //IDosposable implementation
-    //Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+    //IDosposable implementation. Do not change this code. Put cleanup code in the Dispose(bool disposing) method
     public void Dispose()
     {
         Dispose(disposing: true);
         GC.SuppressFinalize(this);
     }
 
-    //IAsyncDisposable implementation
-    //Do not change this code. Put cleanup code in 'DisposeAsyncCore' method
+    //IAsyncDisposable implementation. Do not change this code. Put cleanup code in the DisposeAsyncCore method
     public async ValueTask DisposeAsync()
     {
-        //Call the overridable DisposeAsyncCore that
-        //does the actual work of releasing resources
+        //Call the overridable DisposeAsyncCore that does the actual work
         await DisposeAsyncCore().ConfigureAwait(false);
 
-        //no need to call finalizer, because the resources
-        //have been freed by the DisposeAsyncCore method
+        //no need to call finalizer, because the resources have been freed by the DisposeAsyncCore method
         GC.SuppressFinalize(this);
     }
 
@@ -561,14 +581,12 @@ public class AsyncDisposable : IAsyncDisposable, IDisposable
         }
     }
 
-    //TODO: override finalizer only
-    //if 'Dispose(bool disposing)' has code to free unmanaged resources
+    //TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
     // ~AsyncDisposable()
     // {
-    //     // Do not change this code.
-    //     Put cleanup code in 'Dispose(bool disposing)' method
+    //     // Do not change this code. Put cleanup code in Dispose(bool disposing) method
     //     Dispose(disposing: false);
-    //}
+    // }
 }
 ```
 
@@ -1355,8 +1373,6 @@ public class RelayCommand : ICommand
 
     Hosts a Win32 window as an element within Windows Presentation Foundation (WPF) content.
 
-![Control derivatives](img/wpf-05.svg)
-
 * **ContentControl**
 
     Represents a control with a single piece of content of any type. The ContentControl can contain any type of common language runtime object (such as a string or a DateTime object) or a UIElement object (such as a Rectangle or a Panel).
@@ -1372,6 +1388,8 @@ public class RelayCommand : ICommand
 * **RangeBase**
 
     Represents an element that has a value within a specific range.
+
+![Control derivatives](img/wpf-05.svg)
 
 ## Windows Froms class hierarchy
 
@@ -1422,8 +1440,6 @@ public class RelayCommand : ICommand
 
     A Windows Forms control that can be used to host a Windows Presentation Foundation (WPF) element.
 
-![Control derivatives](img/winforms04.svg)
-
 * **ScrollableControl**
 
     Defines a base class for controls that support auto-scrolling behavior. To enable a control to display scroll bars as needed, set the AutoScroll property to true and set the AutoScrollMinSize property to the desired size. When the control is sized smaller than the specified minimum size, or a child control is located outside the bounds of the control, the appropriate scroll bars are displayed.
@@ -1444,6 +1460,8 @@ public class RelayCommand : ICommand
 * **UserControl**
 
     The UserControl gives you the ability to create controls that can be used in multiple places within an application or organization. You can include all the code needed for validation of common data you ask the user to input.
+
+![Control derivatives](img/winforms04.svg)
 
 :::
 :::

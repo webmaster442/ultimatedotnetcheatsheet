@@ -2,7 +2,7 @@
 
     :root {
         --color0: #F7F9F5;
-        --color1: #ED58FC;
+        --color1: #5026d3;
         --color2: #eee8d6;
         --color-text: #454545;
     }
@@ -41,15 +41,17 @@
 
     #notify {
         display: none;
-        background-color: var(--color2);
+        background-color: var(--color-text);
+        color: var(--color0);
         position: fixed;
         top: 0px;
+        left: 0px;
         width: 100%;
         padding: 5px;
-        margin: 0px;
     }
 
     #navigate-top {
+        background-color: var(--color2);
         position: fixed;
         right: 20px;
         bottom: 20px;
@@ -62,7 +64,7 @@
     .toc-title {
         margin: 0 0 0 10px;
         border: 0px;
-        color: black;
+        color: var(--color1);
     }
 
     #toc ul {
@@ -127,6 +129,7 @@
         top: 0px;
         right: 0px;
         opacity: 0.5;
+        background-color: var(--color0);
     }
 
     pre .copyButton:hover {
@@ -136,10 +139,6 @@
     pre code {
         overflow: auto;
         display: block;
-    }
-
-    pre code:hover {
-        background-color: var(--color2);
     }
 
     table {
@@ -228,6 +227,7 @@
 
     .pagebreak {
         display: block;
+        visibility: collapse;
         page-break-after: always;
     }
 
