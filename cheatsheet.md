@@ -487,6 +487,91 @@ interface IEqualityComparer<T>
 }
 ```
 
+## IDisposable & IAsyncDisposable
+
+The `IDisposable` interface is used to release unmanaged resources like file handles, database connections, network connections, or any resource that is not managed by the .NET runtime.
+
+The `IDisposable` interface is typically implemented when a class holds onto resources that need to be explicitly released or closed to avoid potential resource leaks and do a proper cleanup. By implementing `IDisposable`, you can provide a mechanism for users of your class to explicitly release those resources when they're done with them, rather than relying on the garbage collector to eventually clean them up.
+
+The `IAsyncDisposable` interface is similar to `IDisposable`, but it is specifically designed for asynchronous resource cleanup scenarios.
+
+If you implement the `IAsyncDisposable` interface but not the `IDisposable` interface, your app can potentially leak resources. If a class implements `IAsyncDisposable`, but not `IDisposable`, and a consumer only calls `Dispose()`, your implementation would never call `DisposeAsync()`. This would result in a resource leak.
+
+Implementation example:
+
+```csharp
+public class AsyncDisposable : IAsyncDisposable, IDisposable
+{
+    //a flag to indicate whether the object has been disposed
+    //to prevent multiple dispose calls
+    private bool _disposed;
+
+    //A disposable field
+    private readonly MemoryStream _field;
+
+    public AsyncDisposable()
+    {
+        _field = new MemoryStream();
+    }
+
+    //IDosposable implementation
+    //Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+    public void Dispose()
+    {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
+
+    //IAsyncDisposable implementation
+    //Do not change this code. Put cleanup code in 'DisposeAsyncCore' method
+    public async ValueTask DisposeAsync()
+    {
+        //Call the overridable DisposeAsyncCore that
+        //does the actual work of releasing resources
+        await DisposeAsyncCore().ConfigureAwait(false);
+
+        //no need to call finalizer, because the resources
+        //have been freed by the DisposeAsyncCore method
+        GC.SuppressFinalize(this);
+    }
+
+    // Async version of Dispose method
+    protected virtual async ValueTask DisposeAsyncCore()
+    {
+        if (!_disposed)
+        {
+            await _field.DisposeAsync().ConfigureAwait(false);
+        }
+    }
+
+    // Sync version of Dispose method
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposed)
+        {
+            if (disposing)
+            {
+                //Dispose managed state (managed objects)
+                _field.Dispose();
+            }
+
+            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+            // TODO: set large fields to null
+            _disposed = true;
+        }
+    }
+
+    //TODO: override finalizer only
+    //if 'Dispose(bool disposing)' has code to free unmanaged resources
+    // ~AsyncDisposable()
+    // {
+    //     // Do not change this code.
+    //     Put cleanup code in 'Dispose(bool disposing)' method
+    //     Dispose(disposing: false);
+    //}
+}
+```
+
 # Operator Precedence
 
 1. Primary:

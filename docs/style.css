@@ -1,8 +1,10 @@
 @media all {
 
     :root {
-        --color1: #C06EF0;
+        --color0: #F7F9F5;
+        --color1: #ED58FC;
         --color2: #eee8d6;
+        --color-text: #454545;
     }
 
     body {
@@ -10,8 +12,8 @@
         font-size: 16px;
         line-height: 1.4;
         font-family: Open Sans, Arial;
-        color: #454545;
-        background-color: #F7F9F5;
+        color: var(--color-text);
+        background-color: var(--color0);
     }
 
     @media screen and (min-width: 1000px) {
@@ -35,7 +37,16 @@
             border-right: 1px solid var(--color1);
             text-align: left;
         }
+    }
 
+    #notify {
+        display: none;
+        background-color: var(--color2);
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        padding: 5px;
+        margin: 0px;
     }
 
     #navigate-top {
@@ -106,9 +117,29 @@
         color: #dd4a68;
     }
 
+    pre {
+        position: relative;
+    }
+
+    pre .copyButton {
+        padding: 2px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: 0.5;
+    }
+
+    pre .copyButton:hover {
+        opacity: 1.0;
+    }
+
     pre code {
         overflow: auto;
         display: block;
+    }
+
+    pre code:hover {
+        background-color: var(--color2);
     }
 
     table {
@@ -117,12 +148,12 @@
     }
 
     td {
-        border: 1px solid #454545;
+        border: 1px solid var(--color-text);
     }
 
     th {
         background-color: var(--color2);
-        border: 1px solid #454545;
+        border: 1px solid var(--color-text);
         text-align: left;
         padding: 8px;
     }
@@ -130,11 +161,10 @@
     tr:nth-child(even) {
         background-color: var(--color2);
     }
-	
-	.pagebreak {
+
+    .pagebreak {
         display: none;
     }
-
 }
 
 @media print {
@@ -144,11 +174,6 @@
         margin-bottom: 5mm;
         margin-left: 10mm;
         margin-right: 10mm;
-
-        @bottom-right {
-            content: counter(page) " of "counter(pages);
-        }
-
     }
 
     body,
@@ -189,6 +214,11 @@
     code,
     table {
         break-inside: avoid;
+    }
+
+    pre .copyButton {
+        display: none;
+        visibility: collapse;
     }
 
     pre code {

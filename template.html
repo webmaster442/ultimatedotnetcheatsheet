@@ -25,29 +25,9 @@
 		</svg>
 	</button>
 
-	<script type="text/javascript">
+	<div id="notify"></div>
 
-		if('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('serviceworker.js', { scope: '/' });
-		}
-
-		window.onscroll = function () { scrollFunction() };
-
-		function scrollFunction() {
-			let scrollBtn = document.getElementById("navigate-top");
-			if (document.body.scrollTop > 100
-				|| document.documentElement.scrollTop > 100) {
-				scrollBtn.style.display = "block";
-			} else {
-				scrollBtn.style.display = "none";
-			}
-		}
-
-		function scrollToTop() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

@@ -66,6 +66,8 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <a href='#important-interfaces-for-types'>Important interfaces for types</a><ul>
 </ul>
 </li>
+<li>
+<a href='#idisposable-iasyncdisposable'>IDisposable & IAsyncDisposable</a></li>
 </ul>
 </li>
 <li>
@@ -6455,6 +6457,83 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <span class="token punctuation">{</span>
 	<span class="token return-type class-name"><span class="token keyword">bool</span></span> Equals <span class="token punctuation">(</span><span class="token class-name">T<span class="token punctuation">?</span></span> x<span class="token punctuation">,</span> <span class="token class-name">T<span class="token punctuation">?</span></span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token return-type class-name"><span class="token keyword">int</span></span> GetHashCode <span class="token punctuation">(</span><span class="token class-name">T</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="idisposable-iasyncdisposable">IDisposable &amp; IAsyncDisposable</h2>
+<p>The <code>IDisposable</code> interface is used to release unmanaged resources like file handles, database connections, network connections, or any resource that is not managed by the .NET runtime.</p>
+<p>The <code>IDisposable</code> interface is typically implemented when a class holds onto resources that need to be explicitly released or closed to avoid potential resource leaks and do a proper cleanup. By implementing <code>IDisposable</code>, you can provide a mechanism for users of your class to explicitly release those resources when they're done with them, rather than relying on the garbage collector to eventually clean them up.</p>
+<p>The <code>IAsyncDisposable</code> interface is similar to <code>IDisposable</code>, but it is specifically designed for asynchronous resource cleanup scenarios.</p>
+<p>If you implement the <code>IAsyncDisposable</code> interface but not the <code>IDisposable</code> interface, your app can potentially leak resources. If a class implements <code>IAsyncDisposable</code>, but not <code>IDisposable</code>, and a consumer only calls <code>Dispose()</code>, your implementation would never call <code>DisposeAsync()</code>. This would result in a resource leak.</p>
+<p>Implementation example:</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AsyncDisposable</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IAsyncDisposable</span><span class="token punctuation">,</span> <span class="token class-name">IDisposable</span></span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//a flag to indicate whether the object has been disposed</span>
+    <span class="token comment">//to prevent multiple dispose calls</span>
+    <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">bool</span></span> _disposed<span class="token punctuation">;</span>
+
+    <span class="token comment">//A disposable field</span>
+    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">MemoryStream</span> _field<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">AsyncDisposable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        _field <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MemoryStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//IDosposable implementation</span>
+    <span class="token comment">//Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token named-parameter punctuation">disposing</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        GC<span class="token punctuation">.</span><span class="token function">SuppressFinalize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//IAsyncDisposable implementation</span>
+    <span class="token comment">//Do not change this code. Put cleanup code in 'DisposeAsyncCore' method</span>
+    <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">ValueTask</span> <span class="token function">DisposeAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//Call the overridable DisposeAsyncCore that</span>
+        <span class="token comment">//does the actual work of releasing resources</span>
+        <span class="token keyword">await</span> <span class="token function">DisposeAsyncCore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ConfigureAwait</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//no need to call finalizer, because the resources</span>
+        <span class="token comment">//have been freed by the DisposeAsyncCore method</span>
+        GC<span class="token punctuation">.</span><span class="token function">SuppressFinalize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Async version of Dispose method</span>
+    <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token keyword">async</span> <span class="token return-type class-name">ValueTask</span> <span class="token function">DisposeAsyncCore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_disposed<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">await</span> _field<span class="token punctuation">.</span><span class="token function">DisposeAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ConfigureAwait</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Sync version of Dispose method</span>
+    <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">bool</span></span> disposing<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_disposed<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>disposing<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//Dispose managed state (managed objects)</span>
+                _field<span class="token punctuation">.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token comment">// TODO: free unmanaged resources (unmanaged objects) and override finalizer</span>
+            <span class="token comment">// TODO: set large fields to null</span>
+            _disposed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//TODO: override finalizer only</span>
+    <span class="token comment">//if 'Dispose(bool disposing)' has code to free unmanaged resources</span>
+    <span class="token comment">// ~AsyncDisposable()</span>
+    <span class="token comment">// {</span>
+    <span class="token comment">//     // Do not change this code.</span>
+    <span class="token comment">//     Put cleanup code in 'Dispose(bool disposing)' method</span>
+    <span class="token comment">//     Dispose(disposing: false);</span>
+    <span class="token comment">//}</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h1 id="operator-precedence">Operator Precedence</h1>
@@ -15986,29 +16065,9 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 		</svg>
 	</button>
 
-	<script type="text/javascript">
+	<div id="notify"></div>
 
-		if('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('serviceworker.js', { scope: '/' });
-		}
-
-		window.onscroll = function () { scrollFunction() };
-
-		function scrollFunction() {
-			let scrollBtn = document.getElementById("navigate-top");
-			if (document.body.scrollTop > 100
-				|| document.documentElement.scrollTop > 100) {
-				scrollBtn.style.display = "block";
-			} else {
-				scrollBtn.style.display = "none";
-			}
-		}
-
-		function scrollToTop() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
