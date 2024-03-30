@@ -6,8 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 	<link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="manifest.json">
 	<style type="text/css">
 		/*no inline css was specified*/
 	</style>
@@ -15985,6 +15987,11 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 	</button>
 
 	<script type="text/javascript">
+
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('serviceworker.js', { scope: '/' });
+		}
+
 		window.onscroll = function () { scrollFunction() };
 
 		function scrollFunction() {
