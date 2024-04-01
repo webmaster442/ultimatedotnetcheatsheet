@@ -27,9 +27,21 @@ The project is open-source and available on GitHub. You can contribute to it by 
 
 ## Changelog
 
-* 2024.02.29 - Initial release
-* 2024.03.08 - Generic math interfaces extended & various small improvements
-* 2024.09.28 - Grammar fixes, added cryptography and UI chapters
+* **2024.02.29** 
+
+    Initial release
+
+* **2024.03.08** 
+
+    Generic math interfaces extended & various small improvements
+
+* **2024.04.08**
+  
+  * Grammar fixes by CsabaDu
+  * dotnet commands extended with previously missing commands
+  * Print layout changes
+  * Installable as a web app
+  * Cryptography and UI chapters 
 
 # Dotnet basic commands
 
@@ -238,7 +250,15 @@ Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windo
 
     ```xml
     <PropertyGroup>
-      <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+        <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    </PropertyGroup>
+    ```
+
+* Allow Unsafe code:
+
+    ```xml
+    <PropertyGroup>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     </PropertyGroup>
     ```
 

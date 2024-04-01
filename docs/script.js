@@ -32,7 +32,7 @@ function notify(message) {
     notify.innerText = message;
     setTimeout(() => {
         notify.style.display = 'none';
-    }, 500);
+    }, 800);
 }
 
 function scrollFunction() {
