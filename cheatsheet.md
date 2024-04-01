@@ -1160,6 +1160,10 @@ The recipient, who knows the secret key, can generate the HMAC using the receive
 
     Windows Presentation Foundation (WPF) is a UI framework that is resolution-independent and uses a vector-based rendering engine, built to take advantage of modern graphics hardware. WPF provides a comprehensive set of application-development features that include Extensible Application Markup Language (XAML), controls, data binding, layout, 2D and 3D graphics, animation, styles, templates, documents, media, text, and typography. WPF is part of .NET, so you can build applications that incorporate other elements of the .NET API.
 
+* **MAUI**
+
+    .NET Multi-platform App UI (.NET MAUI) is a cross-platform framework for creating native mobile and desktop apps with C# and XAML. Using .NET MAUI, you can develop apps that can run on Android, iOS, macOS, and Windows from a single shared code-base.
+
 ## MVVM
 
 The MVVM pattern helps cleanly separate an application's business and presentation logic from its user interface (UI). Maintaining a clean separation between application logic and the UI helps address numerous development issues and makes an application easier to test, maintain, and evolve. It can also significantly improve code re-use opportunities and allows developers and UI designers to collaborate more easily when developing their respective parts of an app.
@@ -1462,6 +1466,14 @@ public class RelayCommand : ICommand
     The UserControl gives you the ability to create controls that can be used in multiple places within an application or organization. You can include all the code needed for validation of common data you ask the user to input.
 
 ![Control derivatives](img/winforms04.svg)
+
+## MAUI class hierarchy
+
+![MAUI 1](img/maui01.svg)
+
+![MAUI 2](img/maui02.svg)
+
+![MAUI 3](img/maui03.svg)
 
 :::
 :::

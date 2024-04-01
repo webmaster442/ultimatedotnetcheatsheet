@@ -243,7 +243,8 @@
     #property-pattern,
     #standard-date-and-time-format-strings,
     #windows-froms-class-hierarchy,
-    #wpf-class-hierarchy {
+    #wpf-class-hierarchy,
+    #maui-class-hierarchy {
         page-break-before: always
     }
 

@@ -1,0 +1,756 @@
+<svg version="1.1" baseProfile="full" width="1075.0" height="1628.0" viewBox="0 0 1075 1628" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#direction: right
+	#spacing: 12
+	#.box: fill=#C06EF0
+		
+	[BindableObject] &lt;:- [StateTriggerBase]
+	[StateTriggerBase] &lt;:- [AdaptiveTrigger]
+	[StateTriggerBase] &lt;:- [CompareStateTrigger]
+	[StateTriggerBase] &lt;:- [DeviceStateTrigger]
+	[StateTriggerBase] &lt;:- [SpanModeStateTrigger]
+	[StateTriggerBase] &lt;:- [WindowSpanModeStateTrigger]
+	
+	[BindableObject] &lt;:- [TriggerBase]
+	[TriggerBase] &lt;:- [DataTrigger]
+	[TriggerBase] &lt;:- [EventTrigger]
+	[TriggerBase] &lt;:- [MultiTrigger]
+	[TriggerBase] &lt;:- [Trigger]
+	
+	[BindableObject] &lt;:- [&lt;box&gt;Elelement]
+	[BindableObject] &lt;:- [BackButtonBehavior]
+	[BindableObject] &lt;:- [ColumnDefinition]
+	
+	[BindableObject] &lt;:- [ItemsLayout]
+	[ItemsLayout] &lt;:- [GridItemsLayout]
+	[ItemsLayout] &lt;:- [LinearItemsLayout]
+	
+	[BindableObject] &lt;:- [Behavior] &lt;:- [Behavior\&lt;T\&gt;] &lt;:- [PlatformBehavior
+	\&lt;TView,TPlatformView\&gt;] &lt;:- [PlatformBehavior\&lt;TView\&gt;]
+	
+	[BindableObject] &lt;:- [WebViewSource]
+	[WebViewSource] &lt;:- [HtmlWebViewSource]
+	[WebViewSource] &lt;:- [UrlWebViewSource]
+	
+	[BindableObject] &lt;:- [KeyboardAccelerator]
+	[BindableObject] &lt;:- [RowDefinition]
+	[BindableObject] &lt;:- [SearchHandler]
+	[BindableObject] &lt;:- [PathFigure]
+	[BindableObject] &lt;:- [TableSectionBase]
+	[BindableObject] &lt;:- [Geometry]
+	[Geometry] &lt;:- [EllipseGeometry]
+	[Geometry] &lt;:- [GeometryGroup]
+	[Geometry] &lt;:- [LineGeometry]
+	[Geometry] &lt;:- [PathGeometry]
+	[Geometry] &lt;:- [RectangleGeometry]
+	
+	[BindableObject] &lt;:- [PathSegment]
+	[PathSegment] &lt;:- [ArcSegment]
+	[PathSegment] &lt;:- [BezierSegment]
+	[PathSegment] &lt;:- [LineSegment]
+	[PathSegment] &lt;:- [PolyBezierSegment]
+	[PathSegment] &lt;:- [PolyLineSegment ]
+	[PathSegment] &lt;:- [PolyQuadraticBezierSegment]
+	[PathSegment] &lt;:- [QuadraticBezierSegment]
+	
+	[BindableObject] &lt;:- [Transform]
+	[Transform] &lt;:- [CompositeTransform]
+	[Transform] &lt;:- [MatrixTransform]
+	[Transform] &lt;:- [RotateTransform]
+	[Transform] &lt;:- [ScaleTransform]
+	[Transform] &lt;:- [SkewTransform]
+	[Transform] &lt;:- [TransformGroup]
+	[Transform] &lt;:- [TranslateTransform]
+		
+	
+	
+	
+	
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="1628.0" width="1075.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M69.2 590.0 L139 82 L160 82 L160.0 82.0 " fill="none"></path>
+					<path d="M67.7 589.8 L69.2 590.0 L70.8 590.3 L68.7 594.0 Z"></path>
+					<path d="M260.3 63.7 L329 16 L391.5 16 L391.5 16.0 " fill="none"></path>
+					<path d="M259.4 62.4 L260.3 63.7 L261.2 65.0 L257.0 66.0 Z"></path>
+					<path d="M307.0 65.1 L329 60 L371 60 L371.0 60.0 " fill="none"></path>
+					<path d="M306.6 63.5 L307.0 65.1 L307.3 66.7 L303.1 66.0 Z"></path>
+					<path d="M307.0 98.9 L329 104 L380 104 L380.0 104.0 " fill="none"></path>
+					<path d="M307.3 97.3 L307.0 98.9 L306.6 100.5 L303.1 98.0 Z"></path>
+					<path d="M260.3 100.3 L329 148 L365.5 148 L365.5 148.0 " fill="none"></path>
+					<path d="M261.2 99.0 L260.3 100.3 L259.4 101.6 L257.0 98.0 Z"></path>
+					<path d="M250.4 101.0 L329 192 L335 192 L335.0 192.0 " fill="none"></path>
+					<path d="M251.6 100.0 L250.4 101.0 L249.2 102.1 L247.8 98.0 Z"></path>
+					<path d="M70.9 590.1 L139 280 L180 280 L180.0 280.0 " fill="none"></path>
+					<path d="M69.3 589.7 L70.9 590.1 L72.4 590.4 L70.0 594.0 Z"></path>
+					<path d="M272.2 262.3 L329 236 L408 236 L408.0 236.0 " fill="none"></path>
+					<path d="M271.5 260.9 L272.2 262.3 L272.8 263.8 L268.5 264.0 Z"></path>
+					<path d="M292.0 280.0 L329 280 L403.5 280 L403.5 280.0 " fill="none"></path>
+					<path d="M292.0 278.4 L292.0 280.0 L292.0 281.6 L288.0 280.0 Z"></path>
+					<path d="M272.2 297.7 L329 324 L406.5 324 L406.5 324.0 " fill="none"></path>
+					<path d="M272.8 296.2 L272.2 297.7 L271.5 299.1 L268.5 296.0 Z"></path>
+					<path d="M254.2 298.7 L329 368 L425.5 368 L425.5 368.0 " fill="none"></path>
+					<path d="M255.3 297.5 L254.2 298.7 L253.1 299.9 L251.3 296.0 Z"></path>
+					<path d="M71.5 590.1 L139 324 L188 324 L188.0 324.0 " fill="none"></path>
+					<path d="M70.0 589.7 L71.5 590.1 L73.1 590.5 L70.6 594.0 Z"></path>
+					<path d="M72.4 590.2 L139 368 L147 368 L147.0 368.0 " fill="none"></path>
+					<path d="M70.9 589.7 L72.4 590.2 L74.0 590.6 L71.3 594.0 Z"></path>
+					<path d="M73.7 590.2 L139 412 L159.5 412 L159.5 412.0 " fill="none"></path>
+					<path d="M72.2 589.7 L73.7 590.2 L75.2 590.8 L72.4 594.0 Z"></path>
+					<path d="M75.7 590.4 L139 456 L179 456 L179.0 456.0 " fill="none"></path>
+					<path d="M74.3 589.7 L75.7 590.4 L77.2 591.1 L74.0 594.0 Z"></path>
+					<path d="M272.2 438.3 L329 412 L389 412 L389.0 412.0 " fill="none"></path>
+					<path d="M271.5 436.9 L272.2 438.3 L272.8 439.8 L268.5 440.0 Z"></path>
+					<path d="M292.9 469.6 L329 478 L381.5 478 L381.5 478.0 " fill="none"></path>
+					<path d="M293.3 468.1 L292.9 469.6 L292.5 471.2 L289.0 468.7 Z"></path>
+					<path d="M82.2 590.9 L139 522 L192 522 L192.0 522.0 " fill="none"></path>
+					<path d="M81.0 589.9 L82.2 590.9 L83.5 591.9 L79.7 594.0 Z"></path>
+					<path d="M280.0 522.0 L329 522 L404 522 L404.0 522.0 " fill="none"></path>
+					<path d="M280.0 520.4 L280.0 522.0 L280.0 523.6 L276.0 522.0 Z"></path>
+					<path d="M521.0 522.0 L592 522 L598 522 L598.0 522.0 " fill="none"></path>
+					<path d="M521.0 520.4 L521.0 522.0 L521.0 523.6 L517.0 522.0 Z"></path>
+					<path d="M797.0 522.0 L799 522 L805 522 L805.0 522.0 " fill="none"></path>
+					<path d="M797.0 520.4 L797.0 522.0 L797.0 523.6 L793.0 522.0 Z"></path>
+					<path d="M123.1 592.8 L139 588 L164 588 L164.0 588.0 " fill="none"></path>
+					<path d="M122.6 591.3 L123.1 592.8 L123.5 594.4 L119.2 594.0 Z"></path>
+					<path d="M307.0 571.1 L329 566 L373 566 L373.0 566.0 " fill="none"></path>
+					<path d="M306.6 569.5 L307.0 571.1 L307.3 572.7 L303.1 572.0 Z"></path>
+					<path d="M250.4 607.0 L329 698 L379.5 698 L379.5 698.0 " fill="none"></path>
+					<path d="M251.6 606.0 L250.4 607.0 L249.2 608.1 L247.8 604.0 Z"></path>
+					<path d="M123.1 627.2 L139 632 L145 632 L145.0 632.0 " fill="none"></path>
+					<path d="M123.5 625.6 L123.1 627.2 L122.6 628.7 L119.2 626.0 Z"></path>
+					<path d="M87.0 628.7 L139 676 L172 676 L172.0 676.0 " fill="none"></path>
+					<path d="M88.1 627.5 L87.0 628.7 L86.0 629.9 L84.1 626.0 Z"></path>
+					<path d="M79.2 629.3 L139 720 L169.5 720 L169.5 720.0 " fill="none"></path>
+					<path d="M80.6 628.5 L79.2 629.3 L77.9 630.2 L77.0 626.0 Z"></path>
+					<path d="M75.7 629.6 L139 764 L184 764 L184.0 764.0 " fill="none"></path>
+					<path d="M77.2 628.9 L75.7 629.6 L74.3 630.3 L74.0 626.0 Z"></path>
+					<path d="M73.7 629.8 L139 808 L157.5 808 L157.5 808.0 " fill="none"></path>
+					<path d="M75.2 629.2 L73.7 629.8 L72.2 630.3 L72.4 626.0 Z"></path>
+					<path d="M72.4 629.8 L139 852 L188.5 852 L188.5 852.0 " fill="none"></path>
+					<path d="M74.0 629.4 L72.4 629.8 L70.9 630.3 L71.3 626.0 Z"></path>
+					<path d="M250.4 833.0 L329 742 L389.5 742 L389.5 742.0 " fill="none"></path>
+					<path d="M249.2 831.9 L250.4 833.0 L251.6 834.0 L247.8 836.0 Z"></path>
+					<path d="M260.3 833.7 L329 786 L391 786 L391.0 786.0 " fill="none"></path>
+					<path d="M259.4 832.4 L260.3 833.7 L261.2 835.0 L257.0 836.0 Z"></path>
+					<path d="M283.5 852.0 L329 852 L398.5 852 L398.5 852.0 " fill="none"></path>
+					<path d="M283.5 850.4 L283.5 852.0 L283.5 853.6 L279.5 852.0 Z"></path>
+					<path d="M272.2 869.7 L329 896 L398 896 L398.0 896.0 " fill="none"></path>
+					<path d="M272.8 868.2 L272.2 869.7 L271.5 871.1 L268.5 868.0 Z"></path>
+					<path d="M254.2 870.7 L329 940 L377 940 L377.0 940.0 " fill="none"></path>
+					<path d="M255.3 869.5 L254.2 870.7 L253.1 871.9 L251.3 868.0 Z"></path>
+					<path d="M69.4 630.0 L139 1116 L175 1116 L175.0 1116.0 " fill="none"></path>
+					<path d="M70.9 629.7 L69.4 630.0 L67.8 630.2 L68.8 626.0 Z"></path>
+					<path d="M247.9 1096.8 L329 984 L405.5 984 L405.5 984.0 " fill="none"></path>
+					<path d="M246.6 1095.8 L247.9 1096.8 L249.2 1097.7 L245.5 1100.0 Z"></path>
+					<path d="M254.2 1097.3 L329 1028 L394.5 1028 L394.5 1028.0 " fill="none"></path>
+					<path d="M253.1 1096.1 L254.2 1097.3 L255.3 1098.5 L251.3 1100.0 Z"></path>
+					<path d="M272.2 1098.3 L329 1072 L402.5 1072 L402.5 1072.0 " fill="none"></path>
+					<path d="M271.5 1096.9 L272.2 1098.3 L272.8 1099.8 L268.5 1100.0 Z"></path>
+					<path d="M297.0 1116.0 L329 1116 L378 1116 L378.0 1116.0 " fill="none"></path>
+					<path d="M297.0 1114.4 L297.0 1116.0 L297.0 1117.6 L293.0 1116.0 Z"></path>
+					<path d="M272.2 1133.7 L329 1160 L385.5 1160 L385.5 1160.0 " fill="none"></path>
+					<path d="M272.8 1132.2 L272.2 1133.7 L271.5 1135.1 L268.5 1132.0 Z"></path>
+					<path d="M254.2 1134.7 L329 1204 L340.5 1204 L340.5 1204.0 " fill="none"></path>
+					<path d="M255.3 1133.5 L254.2 1134.7 L253.1 1135.9 L251.3 1132.0 Z"></path>
+					<path d="M247.9 1135.2 L329 1248 L357.5 1248 L357.5 1248.0 " fill="none"></path>
+					<path d="M249.2 1134.3 L247.9 1135.2 L246.6 1136.2 L245.5 1132.0 Z"></path>
+					<path d="M68.3 630.0 L139 1424 L187 1424 L187.0 1424.0 " fill="none"></path>
+					<path d="M69.9 629.8 L68.3 630.0 L66.7 630.1 L67.9 626.0 Z"></path>
+					<path d="M247.9 1404.8 L329 1292 L372 1292 L372.0 1292.0 " fill="none"></path>
+					<path d="M246.6 1403.8 L247.9 1404.8 L249.2 1405.7 L245.5 1408.0 Z"></path>
+					<path d="M254.2 1405.3 L329 1336 L390 1336 L390.0 1336.0 " fill="none"></path>
+					<path d="M253.1 1404.1 L254.2 1405.3 L255.3 1406.5 L251.3 1408.0 Z"></path>
+					<path d="M272.2 1406.3 L329 1380 L388.5 1380 L388.5 1380.0 " fill="none"></path>
+					<path d="M271.5 1404.9 L272.2 1406.3 L272.8 1407.8 L268.5 1408.0 Z"></path>
+					<path d="M285.0 1424.0 L329 1424 L392.5 1424 L392.5 1424.0 " fill="none"></path>
+					<path d="M285.0 1422.4 L285.0 1424.0 L285.0 1425.6 L281.0 1424.0 Z"></path>
+					<path d="M272.2 1441.7 L329 1468 L393 1468 L393.0 1468.0 " fill="none"></path>
+					<path d="M272.8 1440.2 L272.2 1441.7 L271.5 1443.1 L268.5 1440.0 Z"></path>
+					<path d="M254.2 1442.7 L329 1512 L389.5 1512 L389.5 1512.0 " fill="none"></path>
+					<path d="M255.3 1441.5 L254.2 1442.7 L253.1 1443.9 L251.3 1440.0 Z"></path>
+					<path d="M247.9 1443.2 L329 1556 L378 1556 L378.0 1556.0 " fill="none"></path>
+					<path d="M249.2 1442.3 L247.9 1443.2 L246.6 1444.2 L245.5 1440.0 Z"></path>
+					<g data-name="BindableObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BindableObject">
+							<rect x="0.0" y="594.0" height="32.0" width="133.0" data-name="BindableObject"></rect>
+						</g>
+						<g transform="translate(0, 594)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BindableObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BindableObject">
+								<text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="BindableObject">BindableObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StateTriggerBase">
+						<g fill="#eee8d5" stroke="#33322E" data-name="StateTriggerBase">
+							<rect x="160.0" y="66.0" height="32.0" width="148.0" data-name="StateTriggerBase"></rect>
+						</g>
+						<g transform="translate(160, 66)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StateTriggerBase">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StateTriggerBase">
+								<text x="66.0" y="14.1" stroke="none" text-anchor="middle" data-name="StateTriggerBase">StateTriggerBase</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AdaptiveTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="AdaptiveTrigger">
+							<rect x="391.5" y="0.0" height="32.0" width="138.0" data-name="AdaptiveTrigger"></rect>
+						</g>
+						<g transform="translate(391.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AdaptiveTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AdaptiveTrigger">
+								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="AdaptiveTrigger">AdaptiveTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CompareStateTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CompareStateTrigger">
+							<rect x="371.0" y="44.0" height="32.0" width="179.0" data-name="CompareStateTrigger"></rect>
+						</g>
+						<g transform="translate(371, 44)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CompareStateTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CompareStateTrigger">
+								<text x="81.5" y="14.1" stroke="none" text-anchor="middle" data-name="CompareStateTrigger">CompareStateTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DeviceStateTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DeviceStateTrigger">
+							<rect x="380.0" y="88.0" height="32.0" width="161.0" data-name="DeviceStateTrigger"></rect>
+						</g>
+						<g transform="translate(380, 88)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeviceStateTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DeviceStateTrigger">
+								<text x="72.5" y="14.1" stroke="none" text-anchor="middle" data-name="DeviceStateTrigger">DeviceStateTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SpanModeStateTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SpanModeStateTrigger">
+							<rect x="365.5" y="132.0" height="32.0" width="190.0" data-name="SpanModeStateTrigger"></rect>
+						</g>
+						<g transform="translate(365.5, 132)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpanModeStateTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SpanModeStateTrigger">
+								<text x="87.0" y="14.1" stroke="none" text-anchor="middle" data-name="SpanModeStateTrigger">SpanModeStateTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WindowSpanModeStateTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="WindowSpanModeStateTrigger">
+							<rect x="335.0" y="176.0" height="32.0" width="251.0" data-name="WindowSpanModeStateTrigger"></rect>
+						</g>
+						<g transform="translate(335, 176)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WindowSpanModeStateTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WindowSpanModeStateTrigger">
+								<text x="117.5" y="14.1" stroke="none" text-anchor="middle" data-name="WindowSpanModeStateTrigger">WindowSpanModeStateTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TriggerBase">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TriggerBase">
+							<rect x="180.0" y="264.0" height="32.0" width="108.0" data-name="TriggerBase"></rect>
+						</g>
+						<g transform="translate(180, 264)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TriggerBase">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TriggerBase">
+								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="TriggerBase">TriggerBase</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DataTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DataTrigger">
+							<rect x="408.0" y="220.0" height="32.0" width="105.0" data-name="DataTrigger"></rect>
+						</g>
+						<g transform="translate(408, 220)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTrigger">
+								<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataTrigger">DataTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="EventTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="EventTrigger">
+							<rect x="403.5" y="264.0" height="32.0" width="114.0" data-name="EventTrigger"></rect>
+						</g>
+						<g transform="translate(403.5, 264)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EventTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EventTrigger">
+								<text x="49.0" y="14.1" stroke="none" text-anchor="middle" data-name="EventTrigger">EventTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MultiTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MultiTrigger">
+							<rect x="406.5" y="308.0" height="32.0" width="108.0" data-name="MultiTrigger"></rect>
+						</g>
+						<g transform="translate(406.5, 308)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MultiTrigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MultiTrigger">
+								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="MultiTrigger">MultiTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Trigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Trigger">
+							<rect x="425.5" y="352.0" height="32.0" width="70.0" data-name="Trigger"></rect>
+						</g>
+						<g transform="translate(425.5, 352)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Trigger">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Trigger">
+								<text x="27.0" y="14.1" stroke="none" text-anchor="middle" data-name="Trigger">Trigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Elelement">
+						<g fill="#C06EF0" stroke="#33322E" data-name="Elelement">
+							<rect x="188.0" y="308.0" height="32.0" width="92.0" data-name="Elelement"></rect>
+						</g>
+						<g transform="translate(188, 308)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Elelement">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Elelement">
+								<text x="38.0" y="14.1" stroke="none" text-anchor="middle" data-name="Elelement">Elelement</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BackButtonBehavior">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BackButtonBehavior">
+							<rect x="147.0" y="352.0" height="32.0" width="174.0" data-name="BackButtonBehavior"></rect>
+						</g>
+						<g transform="translate(147, 352)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BackButtonBehavior">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BackButtonBehavior">
+								<text x="79.0" y="14.1" stroke="none" text-anchor="middle" data-name="BackButtonBehavior">BackButtonBehavior</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ColumnDefinition">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ColumnDefinition">
+							<rect x="159.5" y="396.0" height="32.0" width="149.0" data-name="ColumnDefinition"></rect>
+						</g>
+						<g transform="translate(159.5, 396)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ColumnDefinition">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ColumnDefinition">
+								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="ColumnDefinition">ColumnDefinition</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ItemsLayout">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ItemsLayout">
+							<rect x="179.0" y="440.0" height="32.0" width="110.0" data-name="ItemsLayout"></rect>
+						</g>
+						<g transform="translate(179, 440)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsLayout">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemsLayout">
+								<text x="47.0" y="14.1" stroke="none" text-anchor="middle" data-name="ItemsLayout">ItemsLayout</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GridItemsLayout">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GridItemsLayout">
+							<rect x="389.0" y="396.0" height="32.0" width="143.0" data-name="GridItemsLayout"></rect>
+						</g>
+						<g transform="translate(389, 396)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GridItemsLayout">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GridItemsLayout">
+								<text x="63.5" y="14.1" stroke="none" text-anchor="middle" data-name="GridItemsLayout">GridItemsLayout</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LinearItemsLayout">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LinearItemsLayout">
+							<rect x="381.5" y="462.0" height="32.0" width="158.0" data-name="LinearItemsLayout"></rect>
+						</g>
+						<g transform="translate(381.5, 462)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LinearItemsLayout">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LinearItemsLayout">
+								<text x="71.0" y="14.1" stroke="none" text-anchor="middle" data-name="LinearItemsLayout">LinearItemsLayout</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Behavior">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Behavior">
+							<rect x="192.0" y="506.0" height="32.0" width="84.0" data-name="Behavior"></rect>
+						</g>
+						<g transform="translate(192, 506)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Behavior">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Behavior">
+								<text x="34.0" y="14.1" stroke="none" text-anchor="middle" data-name="Behavior">Behavior</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Behavior&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Behavior&lt;T&gt;">
+							<rect x="404.0" y="506.0" height="32.0" width="113.0" data-name="Behavior&lt;T&gt;"></rect>
+						</g>
+						<g transform="translate(404, 506)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Behavior&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Behavior&lt;T&gt;">
+								<text x="48.5" y="14.1" stroke="none" text-anchor="middle" data-name="Behavior&lt;T&gt;">Behavior&lt;T&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PlatformBehavior">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PlatformBehavior">
+							<rect x="598.0" y="498.0" height="48.0" width="195.0" data-name="PlatformBehavior"></rect>
+						</g>
+						<g transform="translate(598, 498)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PlatformBehavior">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PlatformBehavior">
+								<text x="89.5" y="14.1" stroke="none" text-anchor="middle" data-name="PlatformBehavior">PlatformBehavior</text>
+								<text x="89.5" y="30.3" stroke="none" text-anchor="middle" data-name="PlatformBehavior">&lt;TView,TPlatformView&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PlatformBehavior&lt;TView&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PlatformBehavior&lt;TView&gt;">
+							<rect x="805.0" y="506.0" height="32.0" width="214.0" data-name="PlatformBehavior&lt;TView&gt;"></rect>
+						</g>
+						<g transform="translate(805, 506)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PlatformBehavior&lt;TView&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PlatformBehavior&lt;TView&gt;">
+								<text x="99.0" y="14.1" stroke="none" text-anchor="middle" data-name="PlatformBehavior&lt;TView&gt;">PlatformBehavior&lt;TView&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WebViewSource">
+						<g fill="#eee8d5" stroke="#33322E" data-name="WebViewSource">
+							<rect x="164.0" y="572.0" height="32.0" width="140.0" data-name="WebViewSource"></rect>
+						</g>
+						<g transform="translate(164, 572)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WebViewSource">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WebViewSource">
+								<text x="62.0" y="14.1" stroke="none" text-anchor="middle" data-name="WebViewSource">WebViewSource</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HtmlWebViewSource">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HtmlWebViewSource">
+							<rect x="373.0" y="550.0" height="32.0" width="175.0" data-name="HtmlWebViewSource"></rect>
+						</g>
+						<g transform="translate(373, 550)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HtmlWebViewSource">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HtmlWebViewSource">
+								<text x="79.5" y="14.1" stroke="none" text-anchor="middle" data-name="HtmlWebViewSource">HtmlWebViewSource</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UrlWebViewSource">
+						<g fill="#eee8d5" stroke="#33322E" data-name="UrlWebViewSource">
+							<rect x="379.5" y="682.0" height="32.0" width="162.0" data-name="UrlWebViewSource"></rect>
+						</g>
+						<g transform="translate(379.5, 682)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UrlWebViewSource">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UrlWebViewSource">
+								<text x="73.0" y="14.1" stroke="none" text-anchor="middle" data-name="UrlWebViewSource">UrlWebViewSource</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="KeyboardAccelerator">
+						<g fill="#eee8d5" stroke="#33322E" data-name="KeyboardAccelerator">
+							<rect x="145.0" y="616.0" height="32.0" width="178.0" data-name="KeyboardAccelerator"></rect>
+						</g>
+						<g transform="translate(145, 616)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyboardAccelerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="KeyboardAccelerator">
+								<text x="81.0" y="14.1" stroke="none" text-anchor="middle" data-name="KeyboardAccelerator">KeyboardAccelerator</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RowDefinition">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RowDefinition">
+							<rect x="172.0" y="660.0" height="32.0" width="124.0" data-name="RowDefinition"></rect>
+						</g>
+						<g transform="translate(172, 660)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RowDefinition">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RowDefinition">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="RowDefinition">RowDefinition</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SearchHandler">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SearchHandler">
+							<rect x="169.5" y="704.0" height="32.0" width="129.0" data-name="SearchHandler"></rect>
+						</g>
+						<g transform="translate(169.5, 704)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SearchHandler">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SearchHandler">
+								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="SearchHandler">SearchHandler</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PathFigure">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PathFigure">
+							<rect x="184.0" y="748.0" height="32.0" width="100.0" data-name="PathFigure"></rect>
+						</g>
+						<g transform="translate(184, 748)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PathFigure">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PathFigure">
+								<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="PathFigure">PathFigure</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TableSectionBase">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TableSectionBase">
+							<rect x="157.5" y="792.0" height="32.0" width="153.0" data-name="TableSectionBase"></rect>
+						</g>
+						<g transform="translate(157.5, 792)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TableSectionBase">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TableSectionBase">
+								<text x="68.5" y="14.1" stroke="none" text-anchor="middle" data-name="TableSectionBase">TableSectionBase</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Geometry">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Geometry">
+							<rect x="188.5" y="836.0" height="32.0" width="91.0" data-name="Geometry"></rect>
+						</g>
+						<g transform="translate(188.5, 836)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Geometry">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Geometry">
+								<text x="37.5" y="14.1" stroke="none" text-anchor="middle" data-name="Geometry">Geometry</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="EllipseGeometry">
+						<g fill="#eee8d5" stroke="#33322E" data-name="EllipseGeometry">
+							<rect x="389.5" y="726.0" height="32.0" width="142.0" data-name="EllipseGeometry"></rect>
+						</g>
+						<g transform="translate(389.5, 726)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EllipseGeometry">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EllipseGeometry">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="EllipseGeometry">EllipseGeometry</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GeometryGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GeometryGroup">
+							<rect x="391.0" y="770.0" height="32.0" width="139.0" data-name="GeometryGroup"></rect>
+						</g>
+						<g transform="translate(391, 770)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryGroup">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeometryGroup">
+								<text x="61.5" y="14.1" stroke="none" text-anchor="middle" data-name="GeometryGroup">GeometryGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LineGeometry">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LineGeometry">
+							<rect x="398.5" y="836.0" height="32.0" width="124.0" data-name="LineGeometry"></rect>
+						</g>
+						<g transform="translate(398.5, 836)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LineGeometry">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LineGeometry">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="LineGeometry">LineGeometry</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PathGeometry">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PathGeometry">
+							<rect x="398.0" y="880.0" height="32.0" width="125.0" data-name="PathGeometry"></rect>
+						</g>
+						<g transform="translate(398, 880)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PathGeometry">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PathGeometry">
+								<text x="54.5" y="14.1" stroke="none" text-anchor="middle" data-name="PathGeometry">PathGeometry</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RectangleGeometry">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RectangleGeometry">
+							<rect x="377.0" y="924.0" height="32.0" width="167.0" data-name="RectangleGeometry"></rect>
+						</g>
+						<g transform="translate(377, 924)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RectangleGeometry">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RectangleGeometry">
+								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="RectangleGeometry">RectangleGeometry</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PathSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PathSegment">
+							<rect x="175.0" y="1100.0" height="32.0" width="118.0" data-name="PathSegment"></rect>
+						</g>
+						<g transform="translate(175, 1100)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PathSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PathSegment">
+								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="PathSegment">PathSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ArcSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ArcSegment">
+							<rect x="405.5" y="968.0" height="32.0" width="110.0" data-name="ArcSegment"></rect>
+						</g>
+						<g transform="translate(405.5, 968)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ArcSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ArcSegment">
+								<text x="47.0" y="14.1" stroke="none" text-anchor="middle" data-name="ArcSegment">ArcSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BezierSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BezierSegment">
+							<rect x="394.5" y="1012.0" height="32.0" width="132.0" data-name="BezierSegment"></rect>
+						</g>
+						<g transform="translate(394.5, 1012)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BezierSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BezierSegment">
+								<text x="58.0" y="14.1" stroke="none" text-anchor="middle" data-name="BezierSegment">BezierSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LineSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LineSegment">
+							<rect x="402.5" y="1056.0" height="32.0" width="116.0" data-name="LineSegment"></rect>
+						</g>
+						<g transform="translate(402.5, 1056)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LineSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LineSegment">
+								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="LineSegment">LineSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PolyBezierSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PolyBezierSegment">
+							<rect x="378.0" y="1100.0" height="32.0" width="165.0" data-name="PolyBezierSegment"></rect>
+						</g>
+						<g transform="translate(378, 1100)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PolyBezierSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PolyBezierSegment">
+								<text x="74.5" y="14.1" stroke="none" text-anchor="middle" data-name="PolyBezierSegment">PolyBezierSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PolyLineSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PolyLineSegment">
+							<rect x="385.5" y="1144.0" height="32.0" width="150.0" data-name="PolyLineSegment"></rect>
+						</g>
+						<g transform="translate(385.5, 1144)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PolyLineSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PolyLineSegment">
+								<text x="67.0" y="14.1" stroke="none" text-anchor="middle" data-name="PolyLineSegment">PolyLineSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PolyQuadraticBezierSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PolyQuadraticBezierSegment">
+							<rect x="340.5" y="1188.0" height="32.0" width="240.0" data-name="PolyQuadraticBezierSegment"></rect>
+						</g>
+						<g transform="translate(340.5, 1188)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PolyQuadraticBezierSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PolyQuadraticBezierSegment">
+								<text x="112.0" y="14.1" stroke="none" text-anchor="middle" data-name="PolyQuadraticBezierSegment">PolyQuadraticBezierSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="QuadraticBezierSegment">
+						<g fill="#eee8d5" stroke="#33322E" data-name="QuadraticBezierSegment">
+							<rect x="357.5" y="1232.0" height="32.0" width="206.0" data-name="QuadraticBezierSegment"></rect>
+						</g>
+						<g transform="translate(357.5, 1232)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="QuadraticBezierSegment">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="QuadraticBezierSegment">
+								<text x="95.0" y="14.1" stroke="none" text-anchor="middle" data-name="QuadraticBezierSegment">QuadraticBezierSegment</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Transform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Transform">
+							<rect x="187.0" y="1408.0" height="32.0" width="94.0" data-name="Transform"></rect>
+						</g>
+						<g transform="translate(187, 1408)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="Transform">Transform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CompositeTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CompositeTransform">
+							<rect x="372.0" y="1276.0" height="32.0" width="177.0" data-name="CompositeTransform"></rect>
+						</g>
+						<g transform="translate(372, 1276)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CompositeTransform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CompositeTransform">
+								<text x="80.5" y="14.1" stroke="none" text-anchor="middle" data-name="CompositeTransform">CompositeTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MatrixTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MatrixTransform">
+							<rect x="390.0" y="1320.0" height="32.0" width="141.0" data-name="MatrixTransform"></rect>
+						</g>
+						<g transform="translate(390, 1320)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MatrixTransform">
+								<text x="62.5" y="14.1" stroke="none" text-anchor="middle" data-name="MatrixTransform">MatrixTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RotateTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RotateTransform">
+							<rect x="388.5" y="1364.0" height="32.0" width="144.0" data-name="RotateTransform"></rect>
+						</g>
+						<g transform="translate(388.5, 1364)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RotateTransform">
+								<text x="64.0" y="14.1" stroke="none" text-anchor="middle" data-name="RotateTransform">RotateTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ScaleTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ScaleTransform">
+							<rect x="392.5" y="1408.0" height="32.0" width="136.0" data-name="ScaleTransform"></rect>
+						</g>
+						<g transform="translate(392.5, 1408)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScaleTransform">
+								<text x="60.0" y="14.1" stroke="none" text-anchor="middle" data-name="ScaleTransform">ScaleTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SkewTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SkewTransform">
+							<rect x="393.0" y="1452.0" height="32.0" width="135.0" data-name="SkewTransform"></rect>
+						</g>
+						<g transform="translate(393, 1452)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SkewTransform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SkewTransform">
+								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="SkewTransform">SkewTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TransformGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TransformGroup">
+							<rect x="389.5" y="1496.0" height="32.0" width="142.0" data-name="TransformGroup"></rect>
+						</g>
+						<g transform="translate(389.5, 1496)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TransformGroup">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TransformGroup">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="TransformGroup">TransformGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TranslateTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TranslateTransform">
+							<rect x="378.0" y="1540.0" height="32.0" width="165.0" data-name="TranslateTransform"></rect>
+						</g>
+						<g transform="translate(378, 1540)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TranslateTransform">
+								<text x="74.5" y="14.1" stroke="none" text-anchor="middle" data-name="TranslateTransform">TranslateTransform</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
