@@ -1496,7 +1496,15 @@ public class RelayCommand : ICommand
 ![MAUI 3](img/maui03.svg)
 
 # Useful NuGet packages
+
+* **CsWin32**
+
+    A source generator to add a user-defined set of Win32 P/Invoke methods and supporting types to a C# project.
 	
+	Website: https://github.com/microsoft/CsWin32
+	Install with: `dotnet add package Microsoft.Windows.CsWin32`
+
+
 * **NSubstitute**
 	
 	A friendly substitute for .NET mocking libraries. Perfect for those new to testing, and for others who would just like to to get their tests written with less noise and fewer lambdas.
