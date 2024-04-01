@@ -5389,7 +5389,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>Update a tool: <code>dotnet tool update [tool Name]</code></li>
 <li>Update a globaly installed tool: <code>dotnet tool update -g [tool Name]</code></li>
 </ul>
-<p>Globaly means that the tool is installed to the users profile, instead of the current project/solution.</p>
+<p>Globally means that the tool is installed to the users profile, instead of the current project/solution.</p>
 <h2 id="nuget">NuGet</h2>
 <ul>
 <li>Display all cache directories: <code>dotnet nuget locals all --list</code></li>
@@ -5444,7 +5444,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <p>More info: <a href="https://ironpython.net/">https://ironpython.net/</a></p>
 </li>
 <li><p><strong>dotnet-format</strong></p>
-<p>Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an .editorconfig file, if present, otherwise a default set of preferences will be used.</p>
+<p>Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an <code>.editorconfig</code> file, if present, otherwise a default set of preferences will be used.</p>
 <p>Install with: <code>dotnet tool install -g dotnet-format</code></p>
 <p>More info: <a href="https://github.com/dotnet/format">https://github.com/dotnet/format</a></p>
 </li>
@@ -6521,8 +6521,8 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </code></pre>
 <h2 id="idisposable-iasyncdisposable">IDisposable &amp; IAsyncDisposable</h2>
 <p>The <code>IDisposable</code> interface is used to release unmanaged resources like file handles, database connections, network connections, or any resource that is not managed by the .NET runtime.</p>
-<p>The <code>IDisposable</code> interface is typically implemented when a class holds onto resources that need to be explicitly released or closed to avoid potential resource leaks and do a proper cleanup. By implementing <code>IDisposable</code>, you can provide a mechanism for users of your class to explicitly release those resources when they're done with them, rather than relying on the garbage collector to eventually clean them up.</p>
-<p>The <code>IAsyncDisposable</code> interface is similar to <code>IDisposable</code>, but it is specifically designed for asynchronous resource cleanup scenarios.</p>
+<p>The <code>IDisposable</code> interface is typically implemented when a class holds onto resources that need to be explicitly released or closed to avoid potential resource leaks and do a proper clean-up. By implementing <code>IDisposable</code>, you can provide a mechanism for users of your class to explicitly release those resources when they're done with them, rather than relying on the garbage collector to eventually clean them up.</p>
+<p>The <code>IAsyncDisposable</code> interface is similar to <code>IDisposable</code>, but it is specifically designed for asynchronous resource clean-up scenarios.</p>
 <p>If you implement the <code>IAsyncDisposable</code> interface but not the <code>IDisposable</code> interface, your app can potentially leak resources. If a class implements <code>IAsyncDisposable</code>, but not <code>IDisposable</code>, and a consumer only calls <code>Dispose()</code>, your implementation would never call <code>DisposeAsync()</code>. This would result in a resource leak.</p>
 <p>Implementation example:</p>
 <pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AsyncDisposable</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IAsyncDisposable</span><span class="token punctuation">,</span> <span class="token class-name">IDisposable</span></span>
@@ -6584,7 +6584,7 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
     <span class="token comment">//TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources</span>
     <span class="token comment">// ~AsyncDisposable()</span>
     <span class="token comment">// {</span>
-    <span class="token comment">//     // Do not change this code. Put cleanup code in Dispose(bool disposing) method</span>
+    <span class="token comment">//     // Do not change this code. Put clean-up code in Dispose(bool disposing) method</span>
     <span class="token comment">//     Dispose(disposing: false);</span>
     <span class="token comment">// }</span>
 <span class="token punctuation">}</span>

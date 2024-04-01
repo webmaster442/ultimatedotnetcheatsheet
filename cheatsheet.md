@@ -99,7 +99,7 @@ Note: solution file name can be ignored if folder only contains one `.sln` file.
 * Update a tool: `dotnet tool update [tool Name]`
 * Update a globaly installed tool: `dotnet tool update -g [tool Name]`
 
-Globaly means that the tool is installed to the users profile, instead of the current project/solution.
+Globally means that the tool is installed to the users profile, instead of the current project/solution.
 
 ## NuGet
 
@@ -166,7 +166,7 @@ Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windo
 
 * **dotnet-format**
 
-    Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an .editorconfig file, if present, otherwise a default set of preferences will be used.
+    Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an `.editorconfig` file, if present, otherwise a default set of preferences will be used.
     
     Install with: `dotnet tool install -g dotnet-format`
 
@@ -536,9 +536,9 @@ interface IEqualityComparer<T>
 
 The `IDisposable` interface is used to release unmanaged resources like file handles, database connections, network connections, or any resource that is not managed by the .NET runtime.
 
-The `IDisposable` interface is typically implemented when a class holds onto resources that need to be explicitly released or closed to avoid potential resource leaks and do a proper cleanup. By implementing `IDisposable`, you can provide a mechanism for users of your class to explicitly release those resources when they're done with them, rather than relying on the garbage collector to eventually clean them up.
+The `IDisposable` interface is typically implemented when a class holds onto resources that need to be explicitly released or closed to avoid potential resource leaks and do a proper clean-up. By implementing `IDisposable`, you can provide a mechanism for users of your class to explicitly release those resources when they're done with them, rather than relying on the garbage collector to eventually clean them up.
 
-The `IAsyncDisposable` interface is similar to `IDisposable`, but it is specifically designed for asynchronous resource cleanup scenarios.
+The `IAsyncDisposable` interface is similar to `IDisposable`, but it is specifically designed for asynchronous resource clean-up scenarios.
 
 If you implement the `IAsyncDisposable` interface but not the `IDisposable` interface, your app can potentially leak resources. If a class implements `IAsyncDisposable`, but not `IDisposable`, and a consumer only calls `Dispose()`, your implementation would never call `DisposeAsync()`. This would result in a resource leak.
 
@@ -604,7 +604,7 @@ public class AsyncDisposable : IAsyncDisposable, IDisposable
     //TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
     // ~AsyncDisposable()
     // {
-    //     // Do not change this code. Put cleanup code in Dispose(bool disposing) method
+    //     // Do not change this code. Put clean-up code in Dispose(bool disposing) method
     //     Dispose(disposing: false);
     // }
 }
