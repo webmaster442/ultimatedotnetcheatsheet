@@ -12,9 +12,15 @@
         text-align: justify;
         font-size: 16px;
         line-height: 1.4;
-        font-family: Open Sans, Arial;
+        font-family: "Alef", sans-serif;
+        font-weight: 400;
+        font-style: normal;
         color: var(--color-text);
         background-color: var(--color0);
+    }
+
+    code {
+        font-family: "JetBrains Mono", monospace;
     }
 
     @media screen and (min-width: 1000px) {
@@ -99,8 +105,13 @@
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    h6 {
         color: var(--color1);
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
     }
 
     a {
