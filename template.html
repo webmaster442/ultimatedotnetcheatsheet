@@ -6,8 +6,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+	<link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=JetBrains+Mono&family=Open+Sans:wght@700&display=swap" rel="stylesheet">	
 	<link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="manifest.json">
 	<style type="text/css">
 		<!--{css}-->
 	</style>
@@ -23,24 +27,9 @@
 		</svg>
 	</button>
 
-	<script type="text/javascript">
-		window.onscroll = function () { scrollFunction() };
+	<div id="notify"></div>
 
-		function scrollFunction() {
-			let scrollBtn = document.getElementById("navigate-top");
-			if (document.body.scrollTop > 100
-				|| document.documentElement.scrollTop > 100) {
-				scrollBtn.style.display = "block";
-			} else {
-				scrollBtn.style.display = "none";
-			}
-		}
-
-		function scrollToTop() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

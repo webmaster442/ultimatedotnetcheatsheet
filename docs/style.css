@@ -1,23 +1,32 @@
 @media all {
 
     :root {
-        --color1: #C06EF0;
+        --color0: #F7F9F5;
+        --color1: #5026d3;
         --color2: #eee8d6;
+        --color-text: #454545;
+        --btn-opacity: 0.5;
     }
 
     body {
         text-align: justify;
         font-size: 16px;
         line-height: 1.4;
-        font-family: Open Sans, Arial;
-        color: #454545;
-        background-color: #F7F9F5;
+        font-family: "Alef", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--color-text);
+        background-color: var(--color0);
+    }
+
+    code {
+        font-family: "JetBrains Mono", monospace;
     }
 
     @media screen and (min-width: 1000px) {
         .parent {
             display: grid;
-            grid-template-columns: 0.1fr 0.9fr;
+            grid-template-columns: 0.15fr 0.85fr;
             grid-template-rows: 1fr;
             grid-column-gap: 10px;
             grid-row-gap: 0px;
@@ -35,23 +44,39 @@
             border-right: 1px solid var(--color1);
             text-align: left;
         }
+    }
 
+    #notify {
+        display: none;
+        background-color: var(--color-text);
+        color: var(--color0);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 5px;
     }
 
     #navigate-top {
+        background-color: var(--color2);
         position: fixed;
         right: 20px;
         bottom: 20px;
         display: none;
         width: 2%;
-        min-width: 80px;
+        min-width: 60px;
+        opacity: var(--btn-opacity);
         transition: opacity 0.3s;
+    }
+
+    #navigate-top:hover {
+        opacity: 1.0;
     }
 
     .toc-title {
         margin: 0 0 0 10px;
         border: 0px;
-        color: black;
+        color: var(--color1);
     }
 
     #toc ul {
@@ -80,8 +105,13 @@
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    h6 {
         color: var(--color1);
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
     }
 
     a {
@@ -106,6 +136,23 @@
         color: #dd4a68;
     }
 
+    pre {
+        position: relative;
+    }
+
+    pre .copyButton {
+        padding: 2px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: var(--btn-opacity);
+        background-color: var(--color0);
+    }
+
+    pre .copyButton:hover {
+        opacity: 1.0;
+    }
+
     pre code {
         overflow: auto;
         display: block;
@@ -117,12 +164,12 @@
     }
 
     td {
-        border: 1px solid #454545;
+        border: 1px solid var(--color-text);
     }
 
     th {
         background-color: var(--color2);
-        border: 1px solid #454545;
+        border: 1px solid var(--color-text);
         text-align: left;
         padding: 8px;
     }
@@ -131,9 +178,19 @@
         background-color: var(--color2);
     }
 
+    .pagebreak {
+        display: none;
+    }
 }
 
 @media print {
+
+    @page {
+        margin-top: 5mm;
+        margin-bottom: 5mm;
+        margin-left: 10mm;
+        margin-right: 10mm;
+    }
 
     body,
     html {
@@ -165,10 +222,7 @@
         max-width: 235mm;
         max-height: 345mm;
         margin: 0 auto;
-    }
-
-    svg {
-        display: block;
+        /*border: 1px solid red;*/
     }
 
     p,
@@ -178,45 +232,40 @@
         break-inside: avoid;
     }
 
+    pre .copyButton {
+        display: none;
+        visibility: collapse;
+    }
+
     pre code {
         line-break: anywhere;
         overflow: hidden;
     }
 
-    /*Manual page break adjustments*/
-    #usefull-tools {
-        page-break-before: always;
+    .pagebreak {
+        display: block;
+        visibility: collapse;
+        page-break-after: always;
     }
 
-    #generic-math-interfaces {
-        page-break-before: always;
+    /*Manual page break adjustments*/
+    #constant-pattern,
+    #custom-numeric-format-strings,
+    #data-annotation,
+    #generic-math-interfaces,
+    #hash-algorithms,
+    #list-patterns,
+    #minimal-mvvm-implementation,
+    #nuget,
+    #property-pattern,
+    #standard-date-and-time-format-strings,
+    #windows-froms-class-hierarchy,
+    #wpf-class-hierarchy,
+    #maui-class-hierarchy {
+        page-break-before: always
     }
 
     #access-modifiers {
-        page-break-before: avoid;
-    }
-
-    #custom-numeric-format-strings {
-        page-break-before: always;
-    }
-
-    #standard-date-and-time-format-strings {
-        page-break-before: always;
-    }
-
-    #constant-pattern {
-        page-break-before: always;
-    }
-
-    #property-pattern {
-        page-break-before: always;
-    }
-
-    #list-patterns {
-        page-break-before: always;
-    }
-
-    #data-annotation {
-        page-break-before: always;
+        page-break-before: avoid
     }
 }

@@ -1,0 +1,23 @@
+{
+    "lang": "en-us",
+    "name": "Ultimate .NET Cheat Sheet",
+    "short_name": ".NET Cheat Sheet",
+    "description": "This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.",
+    "start_url": "/",
+    "background_color": "#eee8d6",
+    "theme_color": "#5026d3",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "pwa/i-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "pwa/i-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
