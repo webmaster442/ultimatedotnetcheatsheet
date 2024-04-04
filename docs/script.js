@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceworker.js', { scope: '/' });
+    navigator.serviceWorker.register('serviceworker.js', { scope: 'https://webmaster442.github.io/ultimatedotnetcheatsheet/' });
 }
 
 document.addEventListener("DOMContentLoaded", applyCopyButton);
