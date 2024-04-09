@@ -2,11 +2,21 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('serviceworker.js', { scope: '/ultimatedotnetcheatsheet/' });
 }
 
-document.addEventListener("DOMContentLoaded", applyCopyButton);
+document.addEventListener("DOMContentLoaded", onLoaded);
 
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () {
+    const scrollBtn = document.getElementById('navigate-top');
+    if (document.body.scrollTop > 100
+        || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = 'block';
+    }
+    else {
+        scrollBtn.style.display = 'none';
+    }
+};
 
-function applyCopyButton() {
+function onLoaded() {
+    //apply copy buttons
     const preElements = document.querySelectorAll('pre');
 
     preElements.forEach(pre => {
@@ -20,10 +30,16 @@ function applyCopyButton() {
             navigator.clipboard.writeText(codeToCopy).then(() => {
                 notify('Code copied to clipboard');
             }).catch(err => {
-                notify('Failed to copy code: '+ err);
+                notify('Failed to copy code: ' + err);
             });
         });
     });
+
+    //link fixing
+    Array.from(document.links)
+        .filter(link => link.hostname != window.location.hostname)
+        .forEach(link => link.target = '_blank');
+
 }
 
 function notify(message) {
@@ -33,16 +49,6 @@ function notify(message) {
     setTimeout(() => {
         notify.style.display = 'none';
     }, 800);
-}
-
-function scrollFunction() {
-    const scrollBtn = document.getElementById('navigate-top');
-    if (document.body.scrollTop > 100
-        || document.documentElement.scrollTop > 100) {
-        scrollBtn.style.display = 'block';
-    } else {
-        scrollBtn.style.display = 'none';
-    }
 }
 
 function scrollToTop() {
