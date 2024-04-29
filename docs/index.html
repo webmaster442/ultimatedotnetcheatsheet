@@ -86,6 +86,8 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>
 <a href='#project-file-xml-settings'>Project file XML settings</a></li>
 <li>
+<a href='#usefull-powershell-commands-scripts'>Usefull Powershell commands & scripts</a></li>
+<li>
 <a href='#basic-type-system'>Basic type system</a><ul>
 <li>
 <a href='#numerical-types'>Numerical types</a></li>
@@ -147,6 +149,8 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <a href='#join'>Join</a></li>
 <li>
 <a href='#grouping'>Grouping</a></li>
+<li>
+<a href='#lookup'>Lookup</a></li>
 <li>
 <a href='#skip-take'>Skip & Take</a></li>
 <li>
@@ -5360,6 +5364,13 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>Cryptography and UI chapters</li>
 </ul>
 </li>
+<li><p><strong>2024.05.08</strong></p>
+<ul>
+<li>PWA &amp; website: added Github project link and print support</li>
+<li>Extended LINQ part</li>
+<li>Added powershell commands section</li>
+</ul>
+</li>
 </ul>
 <h1 id="dotnet-basic-commands">Dotnet basic commands</h1>
 <ul>
@@ -5544,6 +5555,27 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <pre><code class="language-xml">&lt;PropertyGroup&gt;
     &lt;AllowUnsafeBlocks&gt;True&lt;/AllowUnsafeBlocks&gt;
 &lt;/PropertyGroup&gt;
+</code></pre>
+</li>
+</ul>
+<h1 id="usefull-powershell-commands-scripts">Usefull Powershell commands &amp; scripts</h1>
+<ul>
+<li><p>Enable long path support (Windows 10 version 1607 or later)</p>
+<pre><code class="language-powershell"><span class="token function">New-ItemProperty</span> <span class="token operator">-</span>Path <span class="token string">"HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"</span> `
+<span class="token operator">-</span>Name <span class="token string">"LongPathsEnabled"</span> <span class="token operator">-</span>Value 1 <span class="token operator">-</span>PropertyType DWORD <span class="token operator">-</span>Force
+</code></pre>
+</li>
+<li><p>Delete bin and obj directories produced by build</p>
+<pre><code class="language-powershell"><span class="token keyword">function</span> RemoveBinObj  <span class="token punctuation">{</span>
+    <span class="token variable">$directories</span> = <span class="token function">Get-ChildItem</span> <span class="token operator">-</span>Directory <span class="token operator">-</span>Recurse <span class="token punctuation">|</span> <span class="token function">Where-Object</span> <span class="token punctuation">{</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-eq</span> <span class="token string">"bin"</span> <span class="token operator">-or</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-eq</span> <span class="token string">"obj"</span> <span class="token punctuation">}</span>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$directory</span> in <span class="token variable">$directories</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">Write-Host</span> <span class="token string">"Deleting <span class="token function">$<span class="token punctuation">(</span><span class="token variable">$directory</span><span class="token punctuation">.</span>FullName<span class="token punctuation">)</span></span>"</span> <span class="token operator">-</span>ForegroundColor Yellow
+        <span class="token function">Remove-Item</span> <span class="token variable">$directory</span><span class="token punctuation">.</span>FullName <span class="token operator">-</span>Recurse <span class="token operator">-</span>Force
+    <span class="token punctuation">}</span>
+    <span class="token function">Write-Host</span> <span class="token string">"Cleanup complete!"</span> <span class="token operator">-</span>ForegroundColor Green
+<span class="token punctuation">}</span>
+
+RemoveBinObj
 </code></pre>
 </li>
 </ul>
@@ -7962,159 +7994,232 @@ the resulting zero is formatted according to the third section.</p>
 		</g>
 	</svg></p>
 <h1 id="collections">Collections</h1>
-<p><svg version="1.1" baseProfile="full" width="971.0" height="220.0" viewbox="0 0 971 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-		<desc >#direction: right
+<p><svg version="1.1" baseProfile="full" width="1310.0" height="425.0" viewBox="0 0 1310 425" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#direction: right
+	
 	[IDisposable|
-		void Dispose()] &lt;:- [IEnumerator]
-		
-		[IEnumerator|
-		object Current { get }
-		bool MoveNext()
-		void Reset()]
-		
-		[IEnumerator&lt;out T&gt;|
-		IEnumerator&lt;T&gt; GetEnumerator()]
-		
-		[IEnumerator] &lt;:- [IEnumerator&lt;out T&gt;]
-		
-		[IEnumerator] &lt;--[IEnumerable]
-		[IEnumerator&lt;out T&gt;] &lt;-- [IEnumerable&lt;T&gt;]
-		
-		[IEnumerable|
-		IEnumerator GetEnumerator()] &lt;:- [IEnumerable&lt;T&gt;]
-		
-		[IEnumerable&lt;T&gt;|
-		IEnumerator&lt;T&gt; GetEnumerator()]
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		</desc>
+	void Dispose()] &lt;:- [IEnumerator]
+	
+	[IEnumerator|
+	object Current { get }
+	bool MoveNext()
+	void Reset()]
+	
+	[IEnumerator&lt;out T&gt;|
+	IEnumerator&lt;T&gt; GetEnumerator()]
+	
+	[IEnumerator] &lt;:- [IEnumerator&lt;out T&gt;]
+	
+	[IEnumerator] &lt;--[IEnumerable]
+	[IEnumerator&lt;out T&gt;] &lt;-- [IEnumerable&lt;T&gt;]
+	
+	[IEnumerable|
+	IEnumerator GetEnumerator()] &lt;:- [IEnumerable&lt;T&gt;]
+	
+	[IEnumerable&lt;T&gt;|
+	IEnumerator&lt;T&gt; GetEnumerator()]
+	
+	[IEnumerable&lt;T&gt;] &lt;-- [IGrouping&lt;TKey,TElement&gt;|TKey Key \{ get\; \}]
+	[IEnumerable&lt;T&gt;] &lt;--[ILookup&lt;TKey,TElement&gt;|int Count \{ get\; }
+	this\[TKey key\] \{ get\; \}]
+	[IEnumerable&lt;T&gt;]&lt;--[IOrderedEnumerable&lt;TElement&gt;|
+	CreateOrderedEnumerable&lt;TKey&gt;
+	(
+	Func&lt;out TElement,TKey&gt; keySelector,
+	IComparer&lt;TKey&gt;? comparer,
+	bool descending
+	)
+	]</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
-			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
-				<g stroke="transparent" fill="transparent">
-					<rect x="0.0" y="0.0" height="220.0" width="971.0" stroke="none"></rect>
-				</g>
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="425.0" width="1310.0" stroke="none"></rect>
+			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
-						<path d="M131.3 82.0 L138 82 L158 82 L158.0 82.0 " fill="none"></path>
-					<path d="M131.3 76.7 L131.3 82.0 L131.3 87.3 L118.0 82.0 Z"></path>
-					<path d="M332.9 35.1 L341 31 L361 31 L361.0 31.0 " fill="none"></path>
-					<path d="M330.5 30.3 L332.9 35.1 L335.3 39.8 L321.0 41.0 Z"></path>
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M131.3 144.0 L138 144 L158 144 L158.0 144.0 " fill="none"></path>
+					<path d="M131.3 138.7 L131.3 144.0 L131.3 149.3 L118.0 144.0 Z"></path>
+					<path d="M332.9 96.2 L341 92 L361 92 L361.0 92.0 " fill="none"></path>
+					<path d="M330.4 91.4 L332.9 96.2 L335.3 100.9 L321.0 102.2 Z"></path>
 					<g stroke-dasharray="6 6">
-							<path d="M327.0 125.9 L341 133 L375 133 L375.0 133.0 " fill="none"></path>
-						</g>
-					<path d="M335.3 124.2 L327.0 125.9 L330.5 133.7 L321.0 123.0 Z"></path>
+						<path d="M326.9 188.8 L341 196 L375 196 L375.0 196.0 " fill="none"></path>
+					</g>
+					<path d="M335.3 187.1 L326.9 188.8 L330.4 196.6 L321.0 185.8 Z"></path>
 					<g stroke-dasharray="6 6">
-							<path d="M624.7 31.0 L638 31 L696.2352941176471 51 L696.2 51.0 " fill="none"></path>
-						</g>
-					<path d="M631.3 25.7 L624.7 31.0 L631.3 36.3 L618.0 31.0 Z"></path>
-					<path d="M617.3 133.0 L638 133 L696.2352941176471 113 L696.2 113.0 " fill="none"></path>
-					<path d="M617.3 127.7 L617.3 133.0 L617.3 138.3 L604.0 133.0 Z"></path>
+						<path d="M624.7 92.0 L638 92 L695.1153846153846 112 L695.1 112.0 " fill="none"></path>
+					</g>
+					<path d="M631.3 86.7 L624.7 92.0 L631.3 97.3 L618.0 92.0 Z"></path>
+					<path d="M617.3 196.0 L638 196 L695.1153846153846 176 L695.1 176.0 " fill="none"></path>
+					<path d="M617.3 190.7 L617.3 196.0 L617.3 201.3 L604.0 196.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M834.3 108.0 L935 32 L991.5 32 L991.5 32.0 " fill="none"></path>
+					</g>
+					<path d="M836.4 99.7 L834.3 108.0 L842.8 108.2 L828.9 112.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M921.7 144.0 L935 144 L999 144 L999.0 144.0 " fill="none"></path>
+					</g>
+					<path d="M928.3 138.7 L921.7 144.0 L928.3 149.3 L915.0 144.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M822.3 180.8 L935 296.5 L955 296.5 L955.0 296.5 " fill="none"></path>
+					</g>
+					<path d="M830.8 181.8 L822.3 180.8 L823.1 189.3 L817.7 176.0 Z"></path>
 					<g data-name="IDisposable">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
-								<rect x="0.0" y="51.0" height="62.0" width="118.0" data-name="IDisposable"></rect>
-							<path d="M0.0 82.0 L118.0 82.0" fill="none" data-name="IDisposable"></path>
-							</g>
-						<g transform="translate(0, 51)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
-									<text x="51.0" y="13.5" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="0.0" y="112.0" height="64.0" width="118.0" data-name="IDisposable"></rect>
+							<path d="M0.0 144.0 L118.0 144.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(0, 112)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
 								
-								</g>
-							</g>
-						<g transform="translate(0, 82)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
-									<text x="0.0" y="13.5" stroke="none" data-name="IDisposable">void Dispose()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(0, 144)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable">void Dispose()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerator">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator">
-								<rect x="158.0" y="36.0" height="92.0" width="163.0" data-name="IEnumerator"></rect>
-							<path d="M158.0 67.0 L321.0 67.0" fill="none" data-name="IEnumerator"></path>
-							</g>
-						<g transform="translate(158, 36)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator">
-									<text x="73.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerator">IEnumerator</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator">
+							<rect x="158.0" y="95.5" height="97.0" width="163.0" data-name="IEnumerator"></rect>
+							<path d="M158.0 127.5 L321.0 127.5" fill="none" data-name="IEnumerator"></path>
+						</g>
+						<g transform="translate(158, 95.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator">
+								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator">IEnumerator</text>
 								
-								</g>
-							</g>
-						<g transform="translate(158, 67)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerator">object Current { get }</text>
-								<text x="0.0" y="28.5" stroke="none" data-name="IEnumerator">bool MoveNext()</text>
-								<text x="0.0" y="43.5" stroke="none" data-name="IEnumerator">void Reset()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(158, 127.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator">object Current { get }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEnumerator">bool MoveNext()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEnumerator">void Reset()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerator&lt;out T&gt;">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
-								<rect x="361.0" y="0.0" height="62.0" width="257.0" data-name="IEnumerator&lt;out T&gt;"></rect>
-							<path d="M361.0 31.0 L618.0 31.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
-							</g>
-						<g transform="translate(361, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;">
-									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;out T&gt;</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
+							<rect x="361.0" y="60.0" height="64.0" width="257.0" data-name="IEnumerator&lt;out T&gt;"></rect>
+							<path d="M361.0 92.0 L618.0 92.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
+						</g>
+						<g transform="translate(361, 60)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;">
+								<text x="120.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;out T&gt;</text>
 								
-								</g>
-							</g>
-						<g transform="translate(361, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(361, 92)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerable">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
-								<rect x="375.0" y="102.0" height="62.0" width="229.0" data-name="IEnumerable"></rect>
-							<path d="M375.0 133.0 L604.0 133.0" fill="none" data-name="IEnumerable"></path>
-							</g>
-						<g transform="translate(375, 102)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
-									<text x="106.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
+							<rect x="375.0" y="164.0" height="64.0" width="229.0" data-name="IEnumerable"></rect>
+							<path d="M375.0 196.0 L604.0 196.0" fill="none" data-name="IEnumerable"></path>
+						</g>
+						<g transform="translate(375, 164)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
+								<text x="106.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
 								
-								</g>
-							</g>
-						<g transform="translate(375, 133)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(375, 196)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerable&lt;T&gt;">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;T&gt;">
-								<rect x="658.0" y="51.0" height="62.0" width="257.0" data-name="IEnumerable&lt;T&gt;"></rect>
-							<path d="M658.0 82.0 L915.0 82.0" fill="none" data-name="IEnumerable&lt;T&gt;"></path>
-							</g>
-						<g transform="translate(658, 51)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;T&gt;">
-									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;T&gt;">IEnumerable&lt;T&gt;</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;T&gt;">
+							<rect x="658.0" y="112.0" height="64.0" width="257.0" data-name="IEnumerable&lt;T&gt;"></rect>
+							<path d="M658.0 144.0 L915.0 144.0" fill="none" data-name="IEnumerable&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(658, 112)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;T&gt;">
+								<text x="120.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;T&gt;">IEnumerable&lt;T&gt;</text>
 								
-								</g>
 							</g>
-						<g transform="translate(658, 82)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;T&gt;">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable&lt;T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+						</g>
+						<g transform="translate(658, 144)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable&lt;T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
 								
-								</g>
+							</g>
+						</g>
+					</g>
+					<g data-name="IGrouping&lt;TKey,TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IGrouping&lt;TKey,TElement&gt;">
+							<rect x="991.5" y="0.0" height="64.0" width="226.0" data-name="IGrouping&lt;TKey,TElement&gt;"></rect>
+							<path d="M991.5 32.0 L1217.5 32.0" fill="none" data-name="IGrouping&lt;TKey,TElement&gt;"></path>
+						</g>
+						<g transform="translate(991.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IGrouping&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IGrouping&lt;TKey,TElement&gt;">
+								<text x="105.0" y="14.1" stroke="none" text-anchor="middle" data-name="IGrouping&lt;TKey,TElement&gt;">IGrouping&lt;TKey,TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(991.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IGrouping&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IGrouping&lt;TKey,TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IGrouping&lt;TKey,TElement&gt;">TKey Key { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ILookup&lt;TKey,TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ILookup&lt;TKey,TElement&gt;">
+							<rect x="999.0" y="104.0" height="80.0" width="211.0" data-name="ILookup&lt;TKey,TElement&gt;"></rect>
+							<path d="M999.0 136.0 L1210.0 136.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
+						</g>
+						<g transform="translate(999, 104)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="97.5" y="14.1" stroke="none" text-anchor="middle" data-name="ILookup&lt;TKey,TElement&gt;">ILookup&lt;TKey,TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(999, 136)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">int Count { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">this[TKey key] { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IOrderedEnumerable&lt;TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IOrderedEnumerable&lt;TElement&gt;">
+							<rect x="955.0" y="224.0" height="145.0" width="299.0" data-name="IOrderedEnumerable&lt;TElement&gt;"></rect>
+							<path d="M955.0 256.0 L1254.0 256.0" fill="none" data-name="IOrderedEnumerable&lt;TElement&gt;"></path>
+						</g>
+						<g transform="translate(955, 224)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedEnumerable&lt;TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedEnumerable&lt;TElement&gt;">
+								<text x="141.5" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedEnumerable&lt;TElement&gt;">IOrderedEnumerable&lt;TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(955, 256)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOrderedEnumerable&lt;TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IOrderedEnumerable&lt;TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">CreateOrderedEnumerable&lt;TKey&gt;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">(</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">Func&lt;out TElement,TKey&gt; keySelector,</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">IComparer&lt;TKey&gt;? comparer,</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">bool descending</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">)</text>
+								
 							</g>
 						</g>
 					</g>
 				</g>
 			</g>
 		</g>
-	</svg></p>
+	</g>
+</svg></p>
 <p><svg version="1.1" baseProfile="full" width="1243.0" height="971.0" viewbox="0 0 1243 971" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 15
@@ -8578,6 +8683,8 @@ the resulting zero is formatted according to the third section.</p>
 
 <span class="token class-name"><span class="token keyword">var</span></span> multipleOdering <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ThenBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+
+<p>Note: Result will be an <code>IOrderedEnumerable&lt;TElement&gt;</code>.</p>
 <h2 id="join">Join</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> joined <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>orders<span class="token punctuation">,</span> 
                             customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> 
@@ -8592,6 +8699,13 @@ the resulting zero is formatted according to the third section.</p>
 <h2 id="grouping">Grouping</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> grouped <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">GroupBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+
+<p>Note: Result will be an <code>IGrouping&lt;TKey,TElement&gt;</code></p>
+<h2 id="lookup">Lookup</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> packagesByCompany <span class="token operator">=</span> packages<span class="token punctuation">.</span><span class="token function">ToLookup</span><span class="token punctuation">(</span>oder <span class="token operator">=></span> oder<span class="token punctuation">.</span>Date<span class="token punctuation">,</span>  order <span class="token operator">=></span> order<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+
+<p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
 <h2 id="skip-take">Skip &amp; Take</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> take3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> next3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Skip</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

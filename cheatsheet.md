@@ -41,7 +41,13 @@ The project is open-source and available on GitHub. You can contribute to it by 
   * dotnet commands extended with previously missing commands
   * Print layout changes
   * Installable as a web app
-  * Cryptography and UI chapters 
+  * Cryptography and UI chapters
+
+* **2024.05.08**
+
+  * PWA & website: added Github project link and print support
+  * Extended LINQ part
+  * Added powershell commands section
 
 # Dotnet basic commands
 
@@ -260,6 +266,30 @@ Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windo
     <PropertyGroup>
         <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     </PropertyGroup>
+    ```
+
+# Usefull Powershell commands & scripts
+
+* Enable long path support (Windows 10 version 1607 or later)
+
+    ```powershell
+    New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
+    -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+    ```
+
+* Delete bin and obj directories produced by build
+
+    ```powershell
+    function RemoveBinObj  {
+        $directories = Get-ChildItem -Directory -Recurse | Where-Object { $_.Name -eq "bin" -or $_.Name -eq "obj" }
+        foreach ($directory in $directories) {
+            Write-Host "Deleting $($directory.FullName)" -ForegroundColor Yellow
+            Remove-Item $directory.FullName -Recurse -Force
+        }
+        Write-Host "Cleanup complete!" -ForegroundColor Green
+    }
+
+    RemoveBinObj
     ```
 
 # Basic type system
@@ -852,6 +882,8 @@ var descendingOrder = orders.OrderByDescending(order => order.Cost);
 var multipleOdering = orders.OrderBy(order => order.Cost).ThenBy(order => order.CustomerId);
 ```
 
+Note: Result will be an `IOrderedEnumerable<TElement>`.
+
 ## Join
 
 ```csharp
@@ -871,6 +903,16 @@ var joined = customers.Join(orders,
 ```csharp
 var grouped = orders.GroupBy(order => CustomerId);
 ```
+
+Note: Result will be an `IGrouping<TKey,TElement>`
+
+## Lookup
+
+```csharp
+var packagesByCompany = packages.ToLookup(oder => oder.Date,  order => order.id); 
+```
+
+Note: Result will be an `ILookup<TKey,TElement>`, which is a one-to-many dictionary that maps keys to collections of values.
 
 ## Skip & Take
 
