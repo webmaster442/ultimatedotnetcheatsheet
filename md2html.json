@@ -1,0 +1,12 @@
+[
+	"--svg",
+	"--no-css",
+	"-tf",
+	"template.html",
+	"--title",
+	"Ultimate .NET Cheat sheet",
+	"-o",
+	"docs\\index.html",
+	"-i",
+	"cheatsheet.md"
+]
