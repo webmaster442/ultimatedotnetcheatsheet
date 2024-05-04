@@ -36,7 +36,9 @@
     "-i",
     "120-crypto.md",
     "-i",
-    "130-ui.md",
+    "130-reflection.md",
     "-i",
-    "140-nuget.md"
+    "140-ui.md",
+    "-i",
+    "150-nuget.md"
 ]

@@ -60,4 +60,16 @@ public static class ReflectionExtensions
         return type.GetProperty("EqualityContract", searchFlags) != null
             && type.GetMethod("<Clone>$", searchFlags) != null;
     }
+
+    public static bool IsRefStruct(this Type type)
+    {
+        return type.IsByRefLike;
+    }
+
+    public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assembly)
+        where TInterface : class
+    {
+        return assembly.GetTypes()
+            .Where(t => t.IsAssignableTo(typeof(TInterface)) && !t.IsInterface);
+    }
 }

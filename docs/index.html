@@ -198,6 +198,14 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 </ul>
 </li>
 <li>
+<a href='#reflection'>Reflection</a><ul>
+<li>
+<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <a href='#ui'>UI</a><ul>
 <li>
 <a href='#mvvm'>MVVM</a><ul>
@@ -11288,6 +11296,79 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <p>Hash-based Message Authentication Code (HMAG), is a mechanism for generating a cryptographic hash of data in combination with a secret key. It provides a way to verify both the integrity and authenticity of a message.</p>
 <p>HMAC takes two inputs - the message to be authenticated and a secret key known only to the sender and the receiver. It uses a cryptographic hash function (such as MD5, SHA-1, SHA-256) to process the message. The secret key is mixed with the message in a specific way, usually by XOR operations and padding, to create a unique digest. The mixed data is then hashed using the chosen hash function and the output of the hash function is the HMAC.</p>
 <p>The recipient, who knows the secret key, can generate the HMAC using the received message and compare it to the transmitted HMAC. If they match, it indicates that the message has not been tampered with during transmission and that it was sent by someone with knowledge of the secret key.</p>
+<h1 id="reflection">Reflection</h1>
+<h3 id="get-all-types-that-implement-a-given-interface">Get all types that implement a given interface</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>Type<span class="token punctuation">></span></span> <span class="token generic-method"><span class="token function">GetTypesThatImplement</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TInterface<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Assembly</span> assembly<span class="token punctuation">)</span>
+    <span class="token keyword">where</span> <span class="token class-name">TInterface</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> assembly<span class="token punctuation">.</span><span class="token function">GetTypes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>t <span class="token operator">=></span> t<span class="token punctuation">.</span><span class="token function">IsAssignableTo</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">TInterface</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>t<span class="token punctuation">.</span>IsInterface<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="get-assembly-version">Get assembly version</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Version</span> <span class="token function">GetCurrentAssemblyVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>Assembly<span class="token punctuation">.</span><span class="token function">GetExecutingAssembly</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span>Version
+        <span class="token operator">??</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Version</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="check-if-a-type-is-a-record-class">Check if a type is a record class</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsRecordType</span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>type<span class="token punctuation">.</span>IsClass<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+    <span class="token class-name"><span class="token keyword">var</span></span> searchFlags <span class="token operator">=</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Instance
+            <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Public
+            <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>NonPublic<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> type<span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span><span class="token string">"EqualityContract"</span><span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span>
+        <span class="token operator">&amp;&amp;</span> type<span class="token punctuation">.</span><span class="token function">GetMethod</span><span class="token punctuation">(</span><span class="token string">"&lt;Clone>$"</span><span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="check-if-a-type-is-a-ref-struct">Check if a type is a ref struct</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsRefStruct</span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> type<span class="token punctuation">.</span>IsByRefLike<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="create-an-instance-of-a-type-with-optional-property-initializers">Create an instance of a type with optional property initializers</h3>
+<p><strong>Notes</strong></p>
+<ol>
+<li>This method will fail with an exception if, the <code>type</code> has no parameterless constructor</li>
+<li>Reflection doesn't enforce that properties marked with the <code>required</code> keyword have to have a value set. If you don't set these values, then they can be <code>null</code></li>
+<li>This method doesn't check property and value types. If you provide a wrong type of value in the <code>propertyInitializers</code>, then the method will fail with an exception.</li>
+</ol>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">T</span> <span class="token generic-method"><span class="token function">CreateInstance</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">,</span>
+                                    <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">object</span><span class="token punctuation">></span><span class="token punctuation">?</span></span> propertyInitializers <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token keyword">where</span> <span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">T</span><span class="token punctuation">)</span> <span class="token operator">!=</span> type<span class="token punctuation">)</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Type mismatch"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">T<span class="token punctuation">?</span></span> instance <span class="token operator">=</span> Activator<span class="token punctuation">.</span><span class="token function">CreateInstance</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token class-name">T
+        <span class="token punctuation">?</span></span><span class="token punctuation">?</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">InvalidOperationException</span><span class="token punctuation">(</span><span class="token string">"Failed to create instance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token class-name"><span class="token keyword">var</span></span> searchFlags <span class="token operator">=</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Instance
+                    <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Public
+                    <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>NonPublic<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>propertyInitializers <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> propery <span class="token keyword">in</span> propertyInitializers<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> propertyInfo <span class="token operator">=</span> type<span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span>propery<span class="token punctuation">.</span>Key<span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span>
+                <span class="token operator">??</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Property </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">propery<span class="token punctuation">.</span>Key</span><span class="token punctuation">}</span></span><span class="token string"> not found"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            propertyInfo<span class="token punctuation">.</span><span class="token function">SetValue</span><span class="token punctuation">(</span>instance<span class="token punctuation">,</span> propery<span class="token punctuation">.</span>Value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h1 id="ui">UI</h1>
 <ul>
 <li><p><strong>Windows Forms</strong></p>
