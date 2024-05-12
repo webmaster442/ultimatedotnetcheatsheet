@@ -1,9 +1,5 @@
 # Basic type system
 
-^^^
-![Base classes](img/baseclasses.svg)
-^^^ Base classes
-
 ## Numerical types
 
 |  Type   | bytes  |   Bits   |                    Minimum value                     |                   Maximum  Value                    |
@@ -46,6 +42,12 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 * **System.Numerics.Vector2** : Represents a vector with two single-precision floating-point values.
 * **System.Numerics.Vector3** : Represents a vector with three single-precision floating-point values.
 * **System.Numerics.Vector4** : Represents a vector with four single-precision floating-point values.
+
+## Base class hierarchy under the hood
+
+^^^
+![Base classes](img/baseclasses.svg)
+^^^ Base classes
 
 ## Generic Math Interfaces
 

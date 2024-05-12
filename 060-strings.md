@@ -142,7 +142,7 @@ To produce this behaviour, a custom format string can contain up to three sectio
 |       `/`        |                         The date separator                          |
 |       `\`        |                        The escape character                         |
 
-## Examples
+## Format string examples
 
 **Apply thousand sepperator**
 
@@ -166,4 +166,3 @@ Console.WriteLine($"{DateTime.Now:HH\\:mm\\:ss}"); //10:01:48
 ```
 
 Note: the `:` must be escaped with `\\` chars.
-
