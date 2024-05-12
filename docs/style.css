@@ -91,6 +91,10 @@
         background-color: var(--color2);
     }
 
+    figcaption {
+        text-align: center;
+    }
+
     @media screen and (min-width: 1000px) {
         .parent {
             display: grid;
@@ -272,6 +276,8 @@
     #custom-numeric-format-strings,
     #data-annotation,
     #generic-math-interfaces,
+    #format-string-examples,
+    #implement-an-own-exception,
     #hash-algorithms,
     #list-patterns,
     #minimal-mvvm-implementation,

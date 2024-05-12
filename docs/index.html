@@ -94,6 +94,8 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>
 <a href='#numerical-types-provided-by.net'>Numerical types provided by .NET</a></li>
 <li>
+<a href='#base-class-hierarchy-under-the-hood'>Base class hierarchy under the hood</a></li>
+<li>
 <a href='#generic-math-interfaces'>Generic Math Interfaces</a></li>
 </ul>
 </li>
@@ -127,10 +129,18 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <a href='#standard-date-and-time-format-strings'>Standard date and time format strings</a></li>
 <li>
 <a href='#custom-date-and-time-format-strings'>Custom date and time format strings</a></li>
+<li>
+<a href='#format-string-examples'>Format string examples</a></li>
 </ul>
 </li>
 <li>
-<a href='#common-exceptions'>Common exceptions</a></li>
+<a href='#common-exceptions'>Common exceptions</a><ul>
+<li>
+<a href='#implement-an-own-exception'>Implement an own Exception</a></li>
+<li>
+<a href='#unreachableexecption'>UnreachableExecption</a></li>
+</ul>
+</li>
 <li>
 <a href='#collections'>Collections</a><ul>
 <li>
@@ -144,6 +154,8 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>
 <a href='#select-with-anonymus-type'>Select with anonymus type</a></li>
 <li>
+<a href='#distinct'>Distinct</a></li>
+<li>
 <a href='#ordering'>Ordering</a></li>
 <li>
 <a href='#join'>Join</a></li>
@@ -152,11 +164,15 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>
 <a href='#lookup'>Lookup</a></li>
 <li>
+<a href='#zip'>Zip</a></li>
+<li>
 <a href='#skip-take'>Skip & Take</a></li>
 <li>
 <a href='#element-operations'>Element operations</a></li>
 <li>
 <a href='#conversions'>Conversions</a></li>
+<li>
+<a href='#enumerable-class'>Enumerable class</a></li>
 </ul>
 </li>
 <li>
@@ -5372,11 +5388,14 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>Cryptography and UI chapters</li>
 </ul>
 </li>
-<li><p><strong>2024.05.08</strong></p>
+<li><p><strong>2024.05.12</strong></p>
 <ul>
 <li>PWA &amp; website: added Github project link and print support</li>
-<li>Extended LINQ part</li>
+<li>Extended LINQ chapter</li>
 <li>Added powershell commands section</li>
+<li>Added reflection section</li>
+<li>Format strings: Added few examples</li>
+<li>Extended Exceptions chapter</li>
 </ul>
 </li>
 </ul>
@@ -5735,7 +5754,231 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <li><strong>System.Numerics.Vector3</strong> : Represents a vector with three single-precision floating-point values.</li>
 <li><strong>System.Numerics.Vector4</strong> : Represents a vector with four single-precision floating-point values.</li>
 </ul>
+<h2 id="base-class-hierarchy-under-the-hood">Base class hierarchy under the hood</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1030.0" height="690.0" viewBox="0 0 1030 690" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#direction: right
+	[Object] &lt;:- [ValueType] &lt;:- [Enum]
+	[Object] &lt;:- [Array]
+	[Object] &lt;:- [DynamicObject]
+	[Object] &lt;:- [ExpandoObject]
+	
+	
+	[DynamicObject|
+	Provides a base class for specifying 
+	dynamic behavior at run time.|
+	❗This class must be inherited from\;
+	you cannot instantiate it directly.]
+	
+	[ExpandoObject|
+	Represents an object whose members 
+	can be dynamically added
+	and removed at run time.]
+	
+	[Array|
+	Provides methods for creating, manipulating, 
+	searching, and sorting arrays, 
+	thereby serving as the base class  for 
+	all arrays in the common language runtime.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[ValueType|
+	Provides the base class
+	for value types.for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Enum|
+	Provides the base class
+	for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Object|
+	Supports all classes in the .NET 
+	class hierarchy and provides 
+	low-level services to derived classes.
+	This is the ultimate base class of all
+	.NET classes\; it is the root of the type hierarchy.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="690.0" width="1030.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M231.3 265.4 L375 64 L437 64 L437.0 64.0 " fill="none"></path>
+					<path d="M226.9 262.3 L231.3 265.4 L235.6 268.5 L223.5 276.3 Z"></path>
+					<path d="M699.3 64.0 L748 64 L768 64 L768.0 64.0 " fill="none"></path>
+					<path d="M699.3 58.7 L699.3 64.0 L699.3 69.3 L686.0 64.0 Z"></path>
+					<path d="M327.7 270.6 L375 248.5 L395 248.5 L395.0 248.5 " fill="none"></path>
+					<path d="M325.4 265.8 L327.7 270.6 L329.9 275.4 L315.6 276.3 Z"></path>
+					<path d="M327.7 410.9 L375 433 L423 433 L423.0 433.0 " fill="none"></path>
+					<path d="M329.9 406.1 L327.7 410.9 L325.4 415.7 L315.6 405.3 Z"></path>
+					<path d="M237.9 415.6 L375 585.5 L417 585.5 L417.0 585.5 " fill="none"></path>
+					<path d="M242.1 412.3 L237.9 415.6 L233.8 419.0 L229.5 405.3 Z"></path>
+					<g data-name="Object">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="276.3" height="129.0" width="355.0" data-name="Object"></rect>
+							<path d="M0.0 308.3 L355.0 308.3" fill="none" data-name="Object"></path>
+						</g>
+						<g transform="translate(0, 276.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object">
+								<text x="169.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object">Object</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 308.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object">
+								<text x="0.0" y="14.1" stroke="none" data-name="Object">Supports all classes in the .NET</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Object">class hierarchy and provides</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Object">low-level services to derived classes.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Object">This is the ultimate base class of all</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Object">.NET classes; it is the root of the type hierarchy.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueType">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueType">
+							<rect x="437.0" y="0.0" height="128.0" width="249.0" data-name="ValueType"></rect>
+							<path d="M437.0 32.0 L686.0 32.0" fill="none" data-name="ValueType"></path>
+							<path d="M437.0 80.0 L686.0 80.0" fill="none" data-name="ValueType"></path>
+						</g>
+						<g transform="translate(437, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType">
+								<text x="116.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType">ValueType</text>
+								
+							</g>
+						</g>
+						<g transform="translate(437, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">for value types.for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(437, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Enum">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Enum">
+							<rect x="768.0" y="0.0" height="128.0" width="206.0" data-name="Enum"></rect>
+							<path d="M768.0 32.0 L974.0 32.0" fill="none" data-name="Enum"></path>
+							<path d="M768.0 80.0 L974.0 80.0" fill="none" data-name="Enum"></path>
+						</g>
+						<g transform="translate(768, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum">
+								<text x="95.0" y="14.1" stroke="none" text-anchor="middle" data-name="Enum">Enum</text>
+								
+							</g>
+						</g>
+						<g transform="translate(768, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum">for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(768, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Array">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Array">
+							<rect x="395.0" y="168.0" height="161.0" width="333.0" data-name="Array"></rect>
+							<path d="M395.0 200.0 L728.0 200.0" fill="none" data-name="Array"></path>
+							<path d="M395.0 281.0 L728.0 281.0" fill="none" data-name="Array"></path>
+						</g>
+						<g transform="translate(395, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array">
+								<text x="158.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array">Array</text>
+								
+							</g>
+						</g>
+						<g transform="translate(395, 200)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array">Provides methods for creating, manipulating,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array">searching, and sorting arrays,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Array">thereby serving as the base class  for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Array">all arrays in the common language runtime.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(395, 281)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DynamicObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DynamicObject">
+							<rect x="423.0" y="369.0" height="128.0" width="277.0" data-name="DynamicObject"></rect>
+							<path d="M423.0 401.0 L700.0 401.0" fill="none" data-name="DynamicObject"></path>
+							<path d="M423.0 449.0 L700.0 449.0" fill="none" data-name="DynamicObject"></path>
+						</g>
+						<g transform="translate(423, 369)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject">DynamicObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(423, 401)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">Provides a base class for specifying</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">dynamic behavior at run time.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(423, 449)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">❗This class must be inherited from;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">you cannot instantiate it directly.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ExpandoObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ExpandoObject">
+							<rect x="417.0" y="537.0" height="97.0" width="289.0" data-name="ExpandoObject"></rect>
+							<path d="M417.0 569.0 L706.0 569.0" fill="none" data-name="ExpandoObject"></path>
+						</g>
+						<g transform="translate(417, 537)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject">
+								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject">ExpandoObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(417, 569)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject">Represents an object whose members</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject">can be dynamically added</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ExpandoObject">and removed at run time.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Base classes</figcaption>
+</figure>
 <h2 id="generic-math-interfaces">Generic Math Interfaces</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="975.5" height="586.0" viewbox="0 0 975.5 586" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >[INumberBase\&lt;T\&gt;|
 	Defines the base of other number types.]
@@ -5956,6 +6199,8 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Generic Math Interfaces</figcaption>
+</figure>
 <ul>
 <li><p><code>IComparable&lt;T&gt;</code></p>
 <p>Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.</p>
@@ -7208,7 +7453,25 @@ the resulting zero is formatted according to the third section.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="format-string-examples">Format string examples</h2>
+<p><strong>Apply thousand sepperator</strong></p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span></span> number <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>N0</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123 456</span>
+</code></pre>
+
+<p><strong>Format with fixed number of decimal places</strong></p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">double</span></span> number <span class="token operator">=</span> <span class="token number">123.456</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>F2</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123,46</span>
+</code></pre>
+
+<p><strong>Date and time formatting</strong></p>
+<pre><code class="language-csharp">Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>yyyy-MM-dd</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//2024-05-12</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>HH\\:mm\\:ss</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10:01:48</span>
+</code></pre>
+
+<p>Note: the <code>:</code> must be escaped with <code>\\</code> chars.</p>
 <h1 id="common-exceptions">Common exceptions</h1>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1278.0" height="1433.8" viewbox="0 0 1278 1433.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 8
@@ -8001,7 +8264,58 @@ the resulting zero is formatted according to the third section.</p>
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Common Exceptions</figcaption>
+</figure>
+<h2 id="implement-an-own-exception">Implement an own Exception</h2>
+<p>Every exception class should have 3 constructors for the following scenarios:</p>
+<ol>
+<li>A parameterless constructor</li>
+<li>A constructor that takes a string message</li>
+<li>A constructor that takes a string message and an inner exception</li>
+</ol>
+<p>The constructors should call the base class constructors with the appropriate parameters. Exceptions should be serializable for compatibility with older .NET Framework versions.</p>
+<pre><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Serializable</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomException</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Exception</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">?</span></span> message<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">?</span></span> message<span class="token punctuation">,</span> <span class="token class-name">Exception<span class="token punctuation">?</span></span> innerException<span class="token punctuation">)</span> 
+        <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> innerException<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="unreachableexecption">UnreachableExecption</h2>
+<p>UnreachableException indicates that a code path that should never be reached has been reached. This is usefull, when dealing with enum values, that can be extended in the future. When handling enum values, it is a good practice to always have a default case, that throws an exception. This way, the method will fail fast, if a new enum value is added, and the switch statement is not updated.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">MyEnum</span>
+<span class="token punctuation">{</span>
+    First<span class="token punctuation">,</span>
+    Second
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SomeMethod</span><span class="token punctuation">(</span><span class="token class-name">MyEnum</span> <span class="token keyword">value</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> MyEnum<span class="token punctuation">.</span>First<span class="token punctuation">:</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"First"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> MyEnum<span class="token punctuation">.</span>Second<span class="token punctuation">:</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Second"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">UnreachableException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Unknown: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string"> value: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">value</span></span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h1 id="collections">Collections</h1>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1310.0" height="425.0" viewBox="0 0 1310 425" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<desc >#direction: right
 	
@@ -8228,6 +8542,9 @@ the resulting zero is formatted according to the third section.</p>
 		</g>
 	</g>
 </svg></p>
+<figcaption>The IEnumerable&lt;T&gt; interface</figcaption>
+</figure>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1243.0" height="971.0" viewbox="0 0 1243 971" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 15
@@ -8586,6 +8903,8 @@ the resulting zero is formatted according to the third section.</p>
 			</g>
 		</g>
 	</svg></p>
+<figcaption>collection interfaces</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -8685,6 +9004,14 @@ the resulting zero is formatted according to the third section.</p>
     Cost <span class="token operator">=</span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h2 id="distinct">Distinct</h2>
+<pre><code class="language-csharp"><span class="token comment">//The Distinct method requries equality implementation on the class or </span>
+<span class="token comment">//an IEqualityComparer as parameter</span>
+<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">Distinct</span><span class="token punctuation">(</span><span class="token punctuation">(</span>customerComparer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//DistinctBy requires a lambda</span>
+<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">DistinctBy</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
 <h2 id="ordering">Ordering</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> ascendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> descendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderByDescending</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -8714,6 +9041,13 @@ the resulting zero is formatted according to the third section.</p>
 </code></pre>
 
 <p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
+<h2 id="zip">Zip</h2>
+<p>Zip creates an Enumerable of tupples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> first <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> second <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//Returns [(1, "a"), (2, "b"), (3, "c")]</span>
+first<span class="token punctuation">.</span><span class="token function">Zip</span><span class="token punctuation">(</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
 <h2 id="skip-take">Skip &amp; Take</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> take3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> next3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Skip</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -8722,9 +9056,12 @@ the resulting zero is formatted according to the third section.</p>
 <pre><code class="language-csharp"><span class="token comment">//throws exception if element not found</span>
 <span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Last</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//returns default value if element not found</span>
+<span class="token comment">//returns default value if element not found. For refenrence types this is null!</span>
 <span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//You can specify the default return value with the 2nd parameter:</span>
+<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Cutomer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Customer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="conversions">Conversions</h2>
 <pre><code class="language-csharp"><span class="token class-name">Order<span class="token punctuation">[</span><span class="token punctuation">]</span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -8732,6 +9069,14 @@ the resulting zero is formatted according to the third section.</p>
 <span class="token class-name">HashSet<span class="token punctuation">&lt;</span>Order<span class="token punctuation">></span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToHashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span></span> customerDictionary
      <span class="token operator">=</span> Customers<span class="token punctuation">.</span><span class="token function">ToDictionary</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="enumerable-class">Enumerable class</h2>
+<pre><code class="language-csharp"><span class="token comment">//Create a range of numbers from 0 to 9</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> range <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Create a sequence of 12 "foo" strings</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> foos <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Repeat</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Create an empty sequence of integers</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> empty <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Empty</span><span class="token generic class-name"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h1 id="pattern-matching">Pattern matching</h1>
 <h2 id="discard-pattern">Discard pattern</h2>
@@ -8906,6 +9251,8 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
 </code></pre>
 <h1 id="io">I/O</h1>
+<figure>
+<figcaption>Stream types</figcaption>
 <p><svg version="1.1" baseProfile="full" width="1202.0" height="1393.0" viewbox="0 0 1202 1393" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	[MarshalByRefObject|Enables access to objects across application
@@ -9295,6 +9642,9 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Stream types</figcaption>
+</figure>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1038.0" height="713.8" viewbox="0 0 1038 713.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	[MarshalByRefObject|Enables access to objects across application
@@ -9590,7 +9940,10 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Reader and writer types</figcaption>
+</figure>
 <h1 id="attributes">Attributes</h1>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="823.0" height="1256.0" viewbox="0 0 823 1256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 10
@@ -10006,7 +10359,10 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Common Attributes</figcaption>
+</figure>
 <h2 id="data-annotation">Data annotation</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1226.0" height="1296.3" viewbox="0 0 1226 1296.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 10
@@ -10548,8 +10904,11 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Data annotation Attributes</figcaption>
+</figure>
 <h1 id="cryptography">Cryptography</h1>
 <h2 id="encryption-algortithms">Encryption Algortithms</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1013.0" height="871.0" viewbox="0 0 1013 871" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#spacing: 12
 	#direction: right
@@ -10878,11 +11237,14 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Encryption Algortithms </figcaption>
+</figure>
 <p><strong>Symmetric encryption</strong></p>
 <p>Symmetric encryption is a cryptographic method where the same key is used for both encryption and decryption of data. In other words, the sender and the recipient use a shared secret key to encrypt and decrypt messages. It is commonly used in various applications, including securing data transmission over networks, encrypting files stored on disk, and protecting sensitive information in databases.</p>
 <p><strong>Asymmetric encryption</strong></p>
 <p>Asymmetric encryption, also known as public-key cryptography, is a cryptographic method that uses two separate keys for encryption and decryption. A public, and a private key. The pair of keys are mathematically related, but distinct. It is widely used in various applications, including secure Communication, digital signatures and key exchange.</p>
 <h2 id="hash-algorithms">Hash Algorithms</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1044.0" height="721.5" viewBox="0 0 1044 721.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<desc >#spacing: 12
 	#direction: right
@@ -11286,6 +11648,8 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 		</g>
 	</g>
 </svg></p>
+<figcaption>Hash Algorithms</figcaption>
+</figure>
 <p><strong>Hash Algorithms</strong></p>
 <p>A hash algorithm, also known as a cryptographic hash function, is a mathematical algorithm that takes an input (or &quot;message&quot;) and produces a fixed-size string of bytes, which are typically represented as a hexadecimal number or it is base64 encoded.</p>
 <p>Hash algorithms have several important properties: They are deterministic. For a given input, the hash algorithm always produces the same output and given a hash value, it should be computationally infeasible to determine the original input.</p>
@@ -11389,6 +11753,7 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <li>ReactiveUI - <a href="https://www.reactiveui.net/">https://www.reactiveui.net/</a></li>
 <li>Prism Libary - <a href="https://prismlibrary.com/">https://prismlibrary.com/</a></li>
 </ul>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1285.0" height="301.0" viewBox="0 0 1285 301" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<desc >#direction: right
 	#spacing: 12
@@ -11624,6 +11989,8 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 		</g>
 	</g>
 </svg></p>
+<figcaption>MVVM Data flow</figcaption>
+</figure>
 <h3 id="minimal-mvvm-implementation">Minimal MVVM Implementation</h3>
 <pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">ViewModelBase</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">INotifyPropertyChanged</span></span>
 <span class="token punctuation">{</span>
