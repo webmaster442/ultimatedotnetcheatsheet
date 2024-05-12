@@ -23,80 +23,6 @@
         font-family: "JetBrains Mono", monospace;
     }
 
-    @media screen and (min-width: 1000px) {
-        .parent {
-            display: grid;
-            grid-template-columns: 0.15fr 0.85fr;
-            grid-template-rows: 1fr;
-            grid-column-gap: 10px;
-            grid-row-gap: 0px;
-        }
-
-        .content {
-            margin-left: 0px;
-            margin-left: 10px;
-            grid-area: 1 / 2 / 2 / 3;
-            max-width: 1400px;
-        }
-
-        #toc {
-            grid-area: 1 / 1 / 2 / 2;
-            border-right: 1px solid var(--color1);
-            text-align: left;
-        }
-    }
-
-    #notify {
-        display: none;
-        background-color: var(--color-text);
-        color: var(--color0);
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        padding: 5px;
-    }
-
-    #navigate-top {
-        background-color: var(--color2);
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        display: none;
-        width: 2%;
-        min-width: 60px;
-        opacity: var(--btn-opacity);
-        transition: opacity 0.3s;
-    }
-
-    #navigate-top:hover {
-        opacity: 1.0;
-    }
-
-    .toc-title {
-        margin: 0 0 0 10px;
-        border: 0px;
-        color: var(--color1);
-    }
-
-    #toc ul {
-        list-style-type: none;
-        padding-left: 20px;
-    }
-
-    #toc ul ul {
-        padding-left: 20px;
-    }
-
-    #toc a {
-        color: black;
-        text-decoration: none;
-    }
-
-    #toc a:hover {
-        text-decoration: underline;
-    }
-
     h1 {
         border-bottom: 1px solid var(--color1);
     }
@@ -140,19 +66,6 @@
         position: relative;
     }
 
-    pre .copyButton {
-        padding: 2px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        opacity: var(--btn-opacity);
-        background-color: var(--color0);
-    }
-
-    pre .copyButton:hover {
-        opacity: 1.0;
-    }
-
     pre code {
         overflow: auto;
         display: block;
@@ -176,6 +89,118 @@
 
     tr:nth-child(even) {
         background-color: var(--color2);
+    }
+
+    figcaption {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1000px) {
+        .parent {
+            display: grid;
+            grid-template-columns: 0.15fr 0.85fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 0px;
+        }
+
+        .content {
+            margin-left: 0px;
+            margin-left: 10px;
+            grid-area: 1 / 2 / 2 / 3;
+            max-width: 1400px;
+        }
+
+        #toc {
+            grid-area: 1 / 1 / 2 / 2;
+            border-right: 1px solid var(--color1);
+            text-align: left;
+        }
+    }
+
+    #notify {
+        display: none;
+        background-color: var(--color-text);
+        color: var(--color0);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    #navigate-top {
+        background-color: var(--color2);
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        display: none;
+        width: 2%;
+        min-width: 60px;
+        opacity: var(--btn-opacity);
+    }
+
+    #navigate-top:hover {
+        opacity: 1.0;
+    }
+
+    .toc-title {
+        margin: 0 0 0 10px;
+        border: 0px;
+        color: var(--color1);
+    }
+
+    #toc ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    #toc ul ul {
+        padding-left: 20px;
+    }
+
+    #toc a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #toc a:hover {
+        text-decoration: underline;
+    }
+
+    #topmenu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        fill: var(--color-text);
+    }
+
+    #topmenu a {
+        text-decoration: none;
+        opacity: var(--btn-opacity);
+    }
+
+    #topmenu a:hover {
+        fill: var(--color1);
+        opacity: 1;
+    }
+
+    #topmenu svg {
+        width: 45px;
+    }
+
+    pre .copyButton {
+        padding: 2px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: var(--btn-opacity);
+        background-color: var(--color0);
+    }
+
+    pre .copyButton:hover {
+        opacity: 1.0;
     }
 
     .pagebreak {
@@ -203,11 +228,8 @@
         background: white;
     }
 
-    #toc {
-        visibility: collapse;
-        display: none;
-    }
-
+    #toc,
+    #topmenu, 
     #navigate-top {
         visibility: collapse;
         display: none;
@@ -249,10 +271,13 @@
     }
 
     /*Manual page break adjustments*/
+    #useful-tools,
     #constant-pattern,
     #custom-numeric-format-strings,
     #data-annotation,
     #generic-math-interfaces,
+    #format-string-examples,
+    #implement-an-own-exception,
     #hash-algorithms,
     #list-patterns,
     #minimal-mvvm-implementation,

@@ -9,7 +9,9 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=JetBrains+Mono&family=Open+Sans:wght@700&display=swap" rel="stylesheet">	
+	<link
+		href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=JetBrains+Mono&family=Open+Sans:wght@700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link rel="manifest" href="manifest.json">
 	<style type="text/css">
@@ -18,6 +20,27 @@
 </head>
 
 <body>
+	<button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+		</svg>
+	</button>
+
+	<div id="notify"></div>
+
+	<div id="topmenu">
+		<a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank" title="Fork me on github">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+			</svg>
+		</a>
+		<a href="#" title="Print this page" onclick="printPage()">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M19 8C20.66 8 22 9.34 22 11V17H18V21H6V17H2V11C2 9.34 3.34 8 5 8H6V3H18V8H19M8 5V8H16V5H8M16 19V15H8V19H16M18 15H20V11C20 10.45 19.55 10 19 10H5C4.45 10 4 10.45 4 11V15H6V13H18V15M19 11.5C19 12.05 18.55 12.5 18 12.5C17.45 12.5 17 12.05 17 11.5C17 10.95 17.45 10.5 18 10.5C18.55 10.5 19 10.95 19 11.5Z" />
+			</svg>
+		</a>
+	</div>
+
 	<style type="text/css">
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig */
@@ -63,11 +86,15 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>
 <a href='#project-file-xml-settings'>Project file XML settings</a></li>
 <li>
+<a href='#usefull-powershell-commands-scripts'>Usefull Powershell commands & scripts</a></li>
+<li>
 <a href='#basic-type-system'>Basic type system</a><ul>
 <li>
 <a href='#numerical-types'>Numerical types</a></li>
 <li>
 <a href='#numerical-types-provided-by.net'>Numerical types provided by .NET</a></li>
+<li>
+<a href='#base-class-hierarchy-under-the-hood'>Base class hierarchy under the hood</a></li>
 <li>
 <a href='#generic-math-interfaces'>Generic Math Interfaces</a></li>
 </ul>
@@ -102,10 +129,18 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <a href='#standard-date-and-time-format-strings'>Standard date and time format strings</a></li>
 <li>
 <a href='#custom-date-and-time-format-strings'>Custom date and time format strings</a></li>
+<li>
+<a href='#format-string-examples'>Format string examples</a></li>
 </ul>
 </li>
 <li>
-<a href='#common-exceptions'>Common exceptions</a></li>
+<a href='#common-exceptions'>Common exceptions</a><ul>
+<li>
+<a href='#implement-an-own-exception'>Implement an own Exception</a></li>
+<li>
+<a href='#unreachableexecption'>UnreachableExecption</a></li>
+</ul>
+</li>
 <li>
 <a href='#collections'>Collections</a><ul>
 <li>
@@ -119,17 +154,25 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>
 <a href='#select-with-anonymus-type'>Select with anonymus type</a></li>
 <li>
+<a href='#distinct'>Distinct</a></li>
+<li>
 <a href='#ordering'>Ordering</a></li>
 <li>
 <a href='#join'>Join</a></li>
 <li>
 <a href='#grouping'>Grouping</a></li>
 <li>
+<a href='#lookup'>Lookup</a></li>
+<li>
+<a href='#zip'>Zip</a></li>
+<li>
 <a href='#skip-take'>Skip & Take</a></li>
 <li>
 <a href='#element-operations'>Element operations</a></li>
 <li>
 <a href='#conversions'>Conversions</a></li>
+<li>
+<a href='#enumerable-class'>Enumerable class</a></li>
 </ul>
 </li>
 <li>
@@ -168,6 +211,14 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <a href='#encryption-algortithms'>Encryption Algortithms</a></li>
 <li>
 <a href='#hash-algorithms'>Hash Algorithms</a></li>
+</ul>
+</li>
+<li>
+<a href='#reflection'>Reflection</a><ul>
+<li>
+<ul>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -5337,6 +5388,16 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <li>Cryptography and UI chapters</li>
 </ul>
 </li>
+<li><p><strong>2024.05.12</strong></p>
+<ul>
+<li>PWA &amp; website: added Github project link and print support</li>
+<li>Extended LINQ chapter</li>
+<li>Added powershell commands section</li>
+<li>Added reflection section</li>
+<li>Format strings: Added few examples</li>
+<li>Extended Exceptions chapter</li>
+</ul>
+</li>
 </ul>
 <h1 id="dotnet-basic-commands">Dotnet basic commands</h1>
 <ul>
@@ -5524,6 +5585,27 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 </code></pre>
 </li>
 </ul>
+<h1 id="usefull-powershell-commands-scripts">Usefull Powershell commands &amp; scripts</h1>
+<ul>
+<li><p>Enable long path support (Windows 10 version 1607 or later)</p>
+<pre><code class="language-powershell"><span class="token function">New-ItemProperty</span> <span class="token operator">-</span>Path <span class="token string">"HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"</span> `
+<span class="token operator">-</span>Name <span class="token string">"LongPathsEnabled"</span> <span class="token operator">-</span>Value 1 <span class="token operator">-</span>PropertyType DWORD <span class="token operator">-</span>Force
+</code></pre>
+</li>
+<li><p>Delete bin and obj directories produced by build</p>
+<pre><code class="language-powershell"><span class="token keyword">function</span> RemoveBinObj  <span class="token punctuation">{</span>
+    <span class="token variable">$directories</span> = <span class="token function">Get-ChildItem</span> <span class="token operator">-</span>Directory <span class="token operator">-</span>Recurse <span class="token punctuation">|</span> <span class="token function">Where-Object</span> <span class="token punctuation">{</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-eq</span> <span class="token string">"bin"</span> <span class="token operator">-or</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-eq</span> <span class="token string">"obj"</span> <span class="token punctuation">}</span>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$directory</span> in <span class="token variable">$directories</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">Write-Host</span> <span class="token string">"Deleting <span class="token function">$<span class="token punctuation">(</span><span class="token variable">$directory</span><span class="token punctuation">.</span>FullName<span class="token punctuation">)</span></span>"</span> <span class="token operator">-</span>ForegroundColor Yellow
+        <span class="token function">Remove-Item</span> <span class="token variable">$directory</span><span class="token punctuation">.</span>FullName <span class="token operator">-</span>Recurse <span class="token operator">-</span>Force
+    <span class="token punctuation">}</span>
+    <span class="token function">Write-Host</span> <span class="token string">"Cleanup complete!"</span> <span class="token operator">-</span>ForegroundColor Green
+<span class="token punctuation">}</span>
+
+RemoveBinObj
+</code></pre>
+</li>
+</ul>
 <h1 id="basic-type-system">Basic type system</h1>
 <h2 id="numerical-types">Numerical types</h2>
 <table>
@@ -5672,7 +5754,231 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <li><strong>System.Numerics.Vector3</strong> : Represents a vector with three single-precision floating-point values.</li>
 <li><strong>System.Numerics.Vector4</strong> : Represents a vector with four single-precision floating-point values.</li>
 </ul>
+<h2 id="base-class-hierarchy-under-the-hood">Base class hierarchy under the hood</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1030.0" height="690.0" viewBox="0 0 1030 690" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#direction: right
+	[Object] &lt;:- [ValueType] &lt;:- [Enum]
+	[Object] &lt;:- [Array]
+	[Object] &lt;:- [DynamicObject]
+	[Object] &lt;:- [ExpandoObject]
+	
+	
+	[DynamicObject|
+	Provides a base class for specifying 
+	dynamic behavior at run time.|
+	❗This class must be inherited from\;
+	you cannot instantiate it directly.]
+	
+	[ExpandoObject|
+	Represents an object whose members 
+	can be dynamically added
+	and removed at run time.]
+	
+	[Array|
+	Provides methods for creating, manipulating, 
+	searching, and sorting arrays, 
+	thereby serving as the base class  for 
+	all arrays in the common language runtime.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[ValueType|
+	Provides the base class
+	for value types.for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Enum|
+	Provides the base class
+	for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Object|
+	Supports all classes in the .NET 
+	class hierarchy and provides 
+	low-level services to derived classes.
+	This is the ultimate base class of all
+	.NET classes\; it is the root of the type hierarchy.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="690.0" width="1030.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M231.3 265.4 L375 64 L437 64 L437.0 64.0 " fill="none"></path>
+					<path d="M226.9 262.3 L231.3 265.4 L235.6 268.5 L223.5 276.3 Z"></path>
+					<path d="M699.3 64.0 L748 64 L768 64 L768.0 64.0 " fill="none"></path>
+					<path d="M699.3 58.7 L699.3 64.0 L699.3 69.3 L686.0 64.0 Z"></path>
+					<path d="M327.7 270.6 L375 248.5 L395 248.5 L395.0 248.5 " fill="none"></path>
+					<path d="M325.4 265.8 L327.7 270.6 L329.9 275.4 L315.6 276.3 Z"></path>
+					<path d="M327.7 410.9 L375 433 L423 433 L423.0 433.0 " fill="none"></path>
+					<path d="M329.9 406.1 L327.7 410.9 L325.4 415.7 L315.6 405.3 Z"></path>
+					<path d="M237.9 415.6 L375 585.5 L417 585.5 L417.0 585.5 " fill="none"></path>
+					<path d="M242.1 412.3 L237.9 415.6 L233.8 419.0 L229.5 405.3 Z"></path>
+					<g data-name="Object">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="276.3" height="129.0" width="355.0" data-name="Object"></rect>
+							<path d="M0.0 308.3 L355.0 308.3" fill="none" data-name="Object"></path>
+						</g>
+						<g transform="translate(0, 276.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object">
+								<text x="169.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object">Object</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 308.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object">
+								<text x="0.0" y="14.1" stroke="none" data-name="Object">Supports all classes in the .NET</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Object">class hierarchy and provides</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Object">low-level services to derived classes.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Object">This is the ultimate base class of all</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Object">.NET classes; it is the root of the type hierarchy.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueType">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueType">
+							<rect x="437.0" y="0.0" height="128.0" width="249.0" data-name="ValueType"></rect>
+							<path d="M437.0 32.0 L686.0 32.0" fill="none" data-name="ValueType"></path>
+							<path d="M437.0 80.0 L686.0 80.0" fill="none" data-name="ValueType"></path>
+						</g>
+						<g transform="translate(437, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType">
+								<text x="116.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType">ValueType</text>
+								
+							</g>
+						</g>
+						<g transform="translate(437, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">for value types.for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(437, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Enum">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Enum">
+							<rect x="768.0" y="0.0" height="128.0" width="206.0" data-name="Enum"></rect>
+							<path d="M768.0 32.0 L974.0 32.0" fill="none" data-name="Enum"></path>
+							<path d="M768.0 80.0 L974.0 80.0" fill="none" data-name="Enum"></path>
+						</g>
+						<g transform="translate(768, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum">
+								<text x="95.0" y="14.1" stroke="none" text-anchor="middle" data-name="Enum">Enum</text>
+								
+							</g>
+						</g>
+						<g transform="translate(768, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum">for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(768, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Array">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Array">
+							<rect x="395.0" y="168.0" height="161.0" width="333.0" data-name="Array"></rect>
+							<path d="M395.0 200.0 L728.0 200.0" fill="none" data-name="Array"></path>
+							<path d="M395.0 281.0 L728.0 281.0" fill="none" data-name="Array"></path>
+						</g>
+						<g transform="translate(395, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array">
+								<text x="158.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array">Array</text>
+								
+							</g>
+						</g>
+						<g transform="translate(395, 200)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array">Provides methods for creating, manipulating,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array">searching, and sorting arrays,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Array">thereby serving as the base class  for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Array">all arrays in the common language runtime.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(395, 281)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DynamicObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DynamicObject">
+							<rect x="423.0" y="369.0" height="128.0" width="277.0" data-name="DynamicObject"></rect>
+							<path d="M423.0 401.0 L700.0 401.0" fill="none" data-name="DynamicObject"></path>
+							<path d="M423.0 449.0 L700.0 449.0" fill="none" data-name="DynamicObject"></path>
+						</g>
+						<g transform="translate(423, 369)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject">DynamicObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(423, 401)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">Provides a base class for specifying</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">dynamic behavior at run time.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(423, 449)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">❗This class must be inherited from;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">you cannot instantiate it directly.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ExpandoObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ExpandoObject">
+							<rect x="417.0" y="537.0" height="97.0" width="289.0" data-name="ExpandoObject"></rect>
+							<path d="M417.0 569.0 L706.0 569.0" fill="none" data-name="ExpandoObject"></path>
+						</g>
+						<g transform="translate(417, 537)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject">
+								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject">ExpandoObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(417, 569)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject">Represents an object whose members</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject">can be dynamically added</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ExpandoObject">and removed at run time.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Base classes</figcaption>
+</figure>
 <h2 id="generic-math-interfaces">Generic Math Interfaces</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="975.5" height="586.0" viewbox="0 0 975.5 586" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >[INumberBase\&lt;T\&gt;|
 	Defines the base of other number types.]
@@ -5893,6 +6199,8 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Generic Math Interfaces</figcaption>
+</figure>
 <ul>
 <li><p><code>IComparable&lt;T&gt;</code></p>
 <p>Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.</p>
@@ -7145,7 +7453,25 @@ the resulting zero is formatted according to the third section.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="format-string-examples">Format string examples</h2>
+<p><strong>Apply thousand sepperator</strong></p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span></span> number <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>N0</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123 456</span>
+</code></pre>
+
+<p><strong>Format with fixed number of decimal places</strong></p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">double</span></span> number <span class="token operator">=</span> <span class="token number">123.456</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>F2</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123,46</span>
+</code></pre>
+
+<p><strong>Date and time formatting</strong></p>
+<pre><code class="language-csharp">Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>yyyy-MM-dd</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//2024-05-12</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>HH\\:mm\\:ss</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10:01:48</span>
+</code></pre>
+
+<p>Note: the <code>:</code> must be escaped with <code>\\</code> chars.</p>
 <h1 id="common-exceptions">Common exceptions</h1>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1278.0" height="1433.8" viewbox="0 0 1278 1433.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 8
@@ -7938,160 +8264,287 @@ the resulting zero is formatted according to the third section.</p>
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Common Exceptions</figcaption>
+</figure>
+<h2 id="implement-an-own-exception">Implement an own Exception</h2>
+<p>Every exception class should have 3 constructors for the following scenarios:</p>
+<ol>
+<li>A parameterless constructor</li>
+<li>A constructor that takes a string message</li>
+<li>A constructor that takes a string message and an inner exception</li>
+</ol>
+<p>The constructors should call the base class constructors with the appropriate parameters. Exceptions should be serializable for compatibility with older .NET Framework versions.</p>
+<pre><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Serializable</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomException</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Exception</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">?</span></span> message<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">?</span></span> message<span class="token punctuation">,</span> <span class="token class-name">Exception<span class="token punctuation">?</span></span> innerException<span class="token punctuation">)</span> 
+        <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> innerException<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="unreachableexecption">UnreachableExecption</h2>
+<p>UnreachableException indicates that a code path that should never be reached has been reached. This is usefull, when dealing with enum values, that can be extended in the future. When handling enum values, it is a good practice to always have a default case, that throws an exception. This way, the method will fail fast, if a new enum value is added, and the switch statement is not updated.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">MyEnum</span>
+<span class="token punctuation">{</span>
+    First<span class="token punctuation">,</span>
+    Second
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SomeMethod</span><span class="token punctuation">(</span><span class="token class-name">MyEnum</span> <span class="token keyword">value</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> MyEnum<span class="token punctuation">.</span>First<span class="token punctuation">:</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"First"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> MyEnum<span class="token punctuation">.</span>Second<span class="token punctuation">:</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Second"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">UnreachableException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Unknown: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string"> value: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">value</span></span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h1 id="collections">Collections</h1>
-<p><svg version="1.1" baseProfile="full" width="971.0" height="220.0" viewbox="0 0 971 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-		<desc >#direction: right
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1310.0" height="425.0" viewBox="0 0 1310 425" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >#direction: right
+	
 	[IDisposable|
-		void Dispose()] &lt;:- [IEnumerator]
-		
-		[IEnumerator|
-		object Current { get }
-		bool MoveNext()
-		void Reset()]
-		
-		[IEnumerator&lt;out T&gt;|
-		IEnumerator&lt;T&gt; GetEnumerator()]
-		
-		[IEnumerator] &lt;:- [IEnumerator&lt;out T&gt;]
-		
-		[IEnumerator] &lt;--[IEnumerable]
-		[IEnumerator&lt;out T&gt;] &lt;-- [IEnumerable&lt;T&gt;]
-		
-		[IEnumerable|
-		IEnumerator GetEnumerator()] &lt;:- [IEnumerable&lt;T&gt;]
-		
-		[IEnumerable&lt;T&gt;|
-		IEnumerator&lt;T&gt; GetEnumerator()]
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		</desc>
+	void Dispose()] &lt;:- [IEnumerator]
+	
+	[IEnumerator|
+	object Current { get }
+	bool MoveNext()
+	void Reset()]
+	
+	[IEnumerator&lt;out T&gt;|
+	IEnumerator&lt;T&gt; GetEnumerator()]
+	
+	[IEnumerator] &lt;:- [IEnumerator&lt;out T&gt;]
+	
+	[IEnumerator] &lt;--[IEnumerable]
+	[IEnumerator&lt;out T&gt;] &lt;-- [IEnumerable&lt;T&gt;]
+	
+	[IEnumerable|
+	IEnumerator GetEnumerator()] &lt;:- [IEnumerable&lt;T&gt;]
+	
+	[IEnumerable&lt;T&gt;|
+	IEnumerator&lt;T&gt; GetEnumerator()]
+	
+	[IEnumerable&lt;T&gt;] &lt;-- [IGrouping&lt;TKey,TElement&gt;|TKey Key \{ get\; \}]
+	[IEnumerable&lt;T&gt;] &lt;--[ILookup&lt;TKey,TElement&gt;|int Count \{ get\; }
+	this\[TKey key\] \{ get\; \}]
+	[IEnumerable&lt;T&gt;]&lt;--[IOrderedEnumerable&lt;TElement&gt;|
+	CreateOrderedEnumerable&lt;TKey&gt;
+	(
+	Func&lt;out TElement,TKey&gt; keySelector,
+	IComparer&lt;TKey&gt;? comparer,
+	bool descending
+	)
+	]</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
-			<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
-				<g stroke="transparent" fill="transparent">
-					<rect x="0.0" y="0.0" height="220.0" width="971.0" stroke="none"></rect>
-				</g>
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="425.0" width="1310.0" stroke="none"></rect>
+			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-					<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
-						<path d="M131.3 82.0 L138 82 L158 82 L158.0 82.0 " fill="none"></path>
-					<path d="M131.3 76.7 L131.3 82.0 L131.3 87.3 L118.0 82.0 Z"></path>
-					<path d="M332.9 35.1 L341 31 L361 31 L361.0 31.0 " fill="none"></path>
-					<path d="M330.5 30.3 L332.9 35.1 L335.3 39.8 L321.0 41.0 Z"></path>
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M131.3 144.0 L138 144 L158 144 L158.0 144.0 " fill="none"></path>
+					<path d="M131.3 138.7 L131.3 144.0 L131.3 149.3 L118.0 144.0 Z"></path>
+					<path d="M332.9 96.2 L341 92 L361 92 L361.0 92.0 " fill="none"></path>
+					<path d="M330.4 91.4 L332.9 96.2 L335.3 100.9 L321.0 102.2 Z"></path>
 					<g stroke-dasharray="6 6">
-							<path d="M327.0 125.9 L341 133 L375 133 L375.0 133.0 " fill="none"></path>
-						</g>
-					<path d="M335.3 124.2 L327.0 125.9 L330.5 133.7 L321.0 123.0 Z"></path>
+						<path d="M326.9 188.8 L341 196 L375 196 L375.0 196.0 " fill="none"></path>
+					</g>
+					<path d="M335.3 187.1 L326.9 188.8 L330.4 196.6 L321.0 185.8 Z"></path>
 					<g stroke-dasharray="6 6">
-							<path d="M624.7 31.0 L638 31 L696.2352941176471 51 L696.2 51.0 " fill="none"></path>
-						</g>
-					<path d="M631.3 25.7 L624.7 31.0 L631.3 36.3 L618.0 31.0 Z"></path>
-					<path d="M617.3 133.0 L638 133 L696.2352941176471 113 L696.2 113.0 " fill="none"></path>
-					<path d="M617.3 127.7 L617.3 133.0 L617.3 138.3 L604.0 133.0 Z"></path>
+						<path d="M624.7 92.0 L638 92 L695.1153846153846 112 L695.1 112.0 " fill="none"></path>
+					</g>
+					<path d="M631.3 86.7 L624.7 92.0 L631.3 97.3 L618.0 92.0 Z"></path>
+					<path d="M617.3 196.0 L638 196 L695.1153846153846 176 L695.1 176.0 " fill="none"></path>
+					<path d="M617.3 190.7 L617.3 196.0 L617.3 201.3 L604.0 196.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M834.3 108.0 L935 32 L991.5 32 L991.5 32.0 " fill="none"></path>
+					</g>
+					<path d="M836.4 99.7 L834.3 108.0 L842.8 108.2 L828.9 112.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M921.7 144.0 L935 144 L999 144 L999.0 144.0 " fill="none"></path>
+					</g>
+					<path d="M928.3 138.7 L921.7 144.0 L928.3 149.3 L915.0 144.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M822.3 180.8 L935 296.5 L955 296.5 L955.0 296.5 " fill="none"></path>
+					</g>
+					<path d="M830.8 181.8 L822.3 180.8 L823.1 189.3 L817.7 176.0 Z"></path>
 					<g data-name="IDisposable">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
-								<rect x="0.0" y="51.0" height="62.0" width="118.0" data-name="IDisposable"></rect>
-							<path d="M0.0 82.0 L118.0 82.0" fill="none" data-name="IDisposable"></path>
-							</g>
-						<g transform="translate(0, 51)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
-									<text x="51.0" y="13.5" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="0.0" y="112.0" height="64.0" width="118.0" data-name="IDisposable"></rect>
+							<path d="M0.0 144.0 L118.0 144.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(0, 112)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
 								
-								</g>
-							</g>
-						<g transform="translate(0, 82)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
-									<text x="0.0" y="13.5" stroke="none" data-name="IDisposable">void Dispose()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(0, 144)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable">void Dispose()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerator">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator">
-								<rect x="158.0" y="36.0" height="92.0" width="163.0" data-name="IEnumerator"></rect>
-							<path d="M158.0 67.0 L321.0 67.0" fill="none" data-name="IEnumerator"></path>
-							</g>
-						<g transform="translate(158, 36)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator">
-									<text x="73.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerator">IEnumerator</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator">
+							<rect x="158.0" y="95.5" height="97.0" width="163.0" data-name="IEnumerator"></rect>
+							<path d="M158.0 127.5 L321.0 127.5" fill="none" data-name="IEnumerator"></path>
+						</g>
+						<g transform="translate(158, 95.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator">
+								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator">IEnumerator</text>
 								
-								</g>
-							</g>
-						<g transform="translate(158, 67)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerator">object Current { get }</text>
-								<text x="0.0" y="28.5" stroke="none" data-name="IEnumerator">bool MoveNext()</text>
-								<text x="0.0" y="43.5" stroke="none" data-name="IEnumerator">void Reset()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(158, 127.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator">object Current { get }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEnumerator">bool MoveNext()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEnumerator">void Reset()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerator&lt;out T&gt;">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
-								<rect x="361.0" y="0.0" height="62.0" width="257.0" data-name="IEnumerator&lt;out T&gt;"></rect>
-							<path d="M361.0 31.0 L618.0 31.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
-							</g>
-						<g transform="translate(361, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;">
-									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;out T&gt;</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
+							<rect x="361.0" y="60.0" height="64.0" width="257.0" data-name="IEnumerator&lt;out T&gt;"></rect>
+							<path d="M361.0 92.0 L618.0 92.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
+						</g>
+						<g transform="translate(361, 60)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;">
+								<text x="120.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;out T&gt;</text>
 								
-								</g>
-							</g>
-						<g transform="translate(361, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(361, 92)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerable">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
-								<rect x="375.0" y="102.0" height="62.0" width="229.0" data-name="IEnumerable"></rect>
-							<path d="M375.0 133.0 L604.0 133.0" fill="none" data-name="IEnumerable"></path>
-							</g>
-						<g transform="translate(375, 102)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
-									<text x="106.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
+							<rect x="375.0" y="164.0" height="64.0" width="229.0" data-name="IEnumerable"></rect>
+							<path d="M375.0 196.0 L604.0 196.0" fill="none" data-name="IEnumerable"></path>
+						</g>
+						<g transform="translate(375, 164)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
+								<text x="106.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
 								
-								</g>
-							</g>
-						<g transform="translate(375, 133)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator()</text>
-								
-								</g>
 							</g>
 						</g>
+						<g transform="translate(375, 196)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator()</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="IEnumerable&lt;T&gt;">
-							<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;T&gt;">
-								<rect x="658.0" y="51.0" height="62.0" width="257.0" data-name="IEnumerable&lt;T&gt;"></rect>
-							<path d="M658.0 82.0 L915.0 82.0" fill="none" data-name="IEnumerable&lt;T&gt;"></path>
-							</g>
-						<g transform="translate(658, 51)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;T&gt;">
-									<text x="120.5" y="13.5" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;T&gt;">IEnumerable&lt;T&gt;</text>
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;T&gt;">
+							<rect x="658.0" y="112.0" height="64.0" width="257.0" data-name="IEnumerable&lt;T&gt;"></rect>
+							<path d="M658.0 144.0 L915.0 144.0" fill="none" data-name="IEnumerable&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(658, 112)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;T&gt;">
+								<text x="120.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;T&gt;">IEnumerable&lt;T&gt;</text>
 								
-								</g>
 							</g>
-						<g transform="translate(658, 82)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;T&gt;">
-								<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;T&gt;">
-									<text x="0.0" y="13.5" stroke="none" data-name="IEnumerable&lt;T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
+						</g>
+						<g transform="translate(658, 144)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable&lt;T&gt;">IEnumerator&lt;T&gt; GetEnumerator()</text>
 								
-								</g>
+							</g>
+						</g>
+					</g>
+					<g data-name="IGrouping&lt;TKey,TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IGrouping&lt;TKey,TElement&gt;">
+							<rect x="991.5" y="0.0" height="64.0" width="226.0" data-name="IGrouping&lt;TKey,TElement&gt;"></rect>
+							<path d="M991.5 32.0 L1217.5 32.0" fill="none" data-name="IGrouping&lt;TKey,TElement&gt;"></path>
+						</g>
+						<g transform="translate(991.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IGrouping&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IGrouping&lt;TKey,TElement&gt;">
+								<text x="105.0" y="14.1" stroke="none" text-anchor="middle" data-name="IGrouping&lt;TKey,TElement&gt;">IGrouping&lt;TKey,TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(991.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IGrouping&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IGrouping&lt;TKey,TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IGrouping&lt;TKey,TElement&gt;">TKey Key { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ILookup&lt;TKey,TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ILookup&lt;TKey,TElement&gt;">
+							<rect x="999.0" y="104.0" height="80.0" width="211.0" data-name="ILookup&lt;TKey,TElement&gt;"></rect>
+							<path d="M999.0 136.0 L1210.0 136.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
+						</g>
+						<g transform="translate(999, 104)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="97.5" y="14.1" stroke="none" text-anchor="middle" data-name="ILookup&lt;TKey,TElement&gt;">ILookup&lt;TKey,TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(999, 136)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">int Count { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">this[TKey key] { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IOrderedEnumerable&lt;TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IOrderedEnumerable&lt;TElement&gt;">
+							<rect x="955.0" y="224.0" height="145.0" width="299.0" data-name="IOrderedEnumerable&lt;TElement&gt;"></rect>
+							<path d="M955.0 256.0 L1254.0 256.0" fill="none" data-name="IOrderedEnumerable&lt;TElement&gt;"></path>
+						</g>
+						<g transform="translate(955, 224)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedEnumerable&lt;TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedEnumerable&lt;TElement&gt;">
+								<text x="141.5" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedEnumerable&lt;TElement&gt;">IOrderedEnumerable&lt;TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(955, 256)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOrderedEnumerable&lt;TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IOrderedEnumerable&lt;TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">CreateOrderedEnumerable&lt;TKey&gt;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">(</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">Func&lt;out TElement,TKey&gt; keySelector,</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">IComparer&lt;TKey&gt;? comparer,</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">bool descending</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="IOrderedEnumerable&lt;TElement&gt;">)</text>
+								
 							</g>
 						</g>
 					</g>
 				</g>
 			</g>
 		</g>
-	</svg></p>
+	</g>
+</svg></p>
+<figcaption>The IEnumerable&lt;T&gt; interface</figcaption>
+</figure>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1243.0" height="971.0" viewbox="0 0 1243 971" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 15
@@ -8450,6 +8903,8 @@ the resulting zero is formatted according to the third section.</p>
 			</g>
 		</g>
 	</svg></p>
+<figcaption>collection interfaces</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -8549,12 +9004,22 @@ the resulting zero is formatted according to the third section.</p>
     Cost <span class="token operator">=</span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h2 id="distinct">Distinct</h2>
+<pre><code class="language-csharp"><span class="token comment">//The Distinct method requries equality implementation on the class or </span>
+<span class="token comment">//an IEqualityComparer as parameter</span>
+<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">Distinct</span><span class="token punctuation">(</span><span class="token punctuation">(</span>customerComparer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//DistinctBy requires a lambda</span>
+<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">DistinctBy</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
 <h2 id="ordering">Ordering</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> ascendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> descendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderByDescending</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token class-name"><span class="token keyword">var</span></span> multipleOdering <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ThenBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+
+<p>Note: Result will be an <code>IOrderedEnumerable&lt;TElement&gt;</code>.</p>
 <h2 id="join">Join</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> joined <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>orders<span class="token punctuation">,</span> 
                             customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> 
@@ -8569,6 +9034,20 @@ the resulting zero is formatted according to the third section.</p>
 <h2 id="grouping">Grouping</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> grouped <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">GroupBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+
+<p>Note: Result will be an <code>IGrouping&lt;TKey,TElement&gt;</code></p>
+<h2 id="lookup">Lookup</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> packagesByCompany <span class="token operator">=</span> packages<span class="token punctuation">.</span><span class="token function">ToLookup</span><span class="token punctuation">(</span>oder <span class="token operator">=></span> oder<span class="token punctuation">.</span>Date<span class="token punctuation">,</span>  order <span class="token operator">=></span> order<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+
+<p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
+<h2 id="zip">Zip</h2>
+<p>Zip creates an Enumerable of tupples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> first <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> second <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//Returns [(1, "a"), (2, "b"), (3, "c")]</span>
+first<span class="token punctuation">.</span><span class="token function">Zip</span><span class="token punctuation">(</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
 <h2 id="skip-take">Skip &amp; Take</h2>
 <pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> take3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> next3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Skip</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -8577,9 +9056,12 @@ the resulting zero is formatted according to the third section.</p>
 <pre><code class="language-csharp"><span class="token comment">//throws exception if element not found</span>
 <span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Last</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//returns default value if element not found</span>
+<span class="token comment">//returns default value if element not found. For refenrence types this is null!</span>
 <span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//You can specify the default return value with the 2nd parameter:</span>
+<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Cutomer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Customer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="conversions">Conversions</h2>
 <pre><code class="language-csharp"><span class="token class-name">Order<span class="token punctuation">[</span><span class="token punctuation">]</span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -8587,6 +9069,14 @@ the resulting zero is formatted according to the third section.</p>
 <span class="token class-name">HashSet<span class="token punctuation">&lt;</span>Order<span class="token punctuation">></span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToHashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span></span> customerDictionary
      <span class="token operator">=</span> Customers<span class="token punctuation">.</span><span class="token function">ToDictionary</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="enumerable-class">Enumerable class</h2>
+<pre><code class="language-csharp"><span class="token comment">//Create a range of numbers from 0 to 9</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> range <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Create a sequence of 12 "foo" strings</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> foos <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Repeat</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Create an empty sequence of integers</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> empty <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Empty</span><span class="token generic class-name"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h1 id="pattern-matching">Pattern matching</h1>
 <h2 id="discard-pattern">Discard pattern</h2>
@@ -8761,6 +9251,8 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
 </code></pre>
 <h1 id="io">I/O</h1>
+<figure>
+<figcaption>Stream types</figcaption>
 <p><svg version="1.1" baseProfile="full" width="1202.0" height="1393.0" viewbox="0 0 1202 1393" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	[MarshalByRefObject|Enables access to objects across application
@@ -9150,6 +9642,9 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Stream types</figcaption>
+</figure>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1038.0" height="713.8" viewbox="0 0 1038 713.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	[MarshalByRefObject|Enables access to objects across application
@@ -9445,7 +9940,10 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Reader and writer types</figcaption>
+</figure>
 <h1 id="attributes">Attributes</h1>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="823.0" height="1256.0" viewbox="0 0 823 1256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 10
@@ -9861,7 +10359,10 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Common Attributes</figcaption>
+</figure>
 <h2 id="data-annotation">Data annotation</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1226.0" height="1296.3" viewbox="0 0 1226 1296.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#direction: right
 	#spacing: 10
@@ -10403,8 +10904,11 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Data annotation Attributes</figcaption>
+</figure>
 <h1 id="cryptography">Cryptography</h1>
 <h2 id="encryption-algortithms">Encryption Algortithms</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1013.0" height="871.0" viewbox="0 0 1013 871" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 		<desc >#spacing: 12
 	#direction: right
@@ -10733,11 +11237,14 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 			</g>
 		</g>
 	</svg></p>
+<figcaption>Encryption Algortithms </figcaption>
+</figure>
 <p><strong>Symmetric encryption</strong></p>
 <p>Symmetric encryption is a cryptographic method where the same key is used for both encryption and decryption of data. In other words, the sender and the recipient use a shared secret key to encrypt and decrypt messages. It is commonly used in various applications, including securing data transmission over networks, encrypting files stored on disk, and protecting sensitive information in databases.</p>
 <p><strong>Asymmetric encryption</strong></p>
 <p>Asymmetric encryption, also known as public-key cryptography, is a cryptographic method that uses two separate keys for encryption and decryption. A public, and a private key. The pair of keys are mathematically related, but distinct. It is widely used in various applications, including secure Communication, digital signatures and key exchange.</p>
 <h2 id="hash-algorithms">Hash Algorithms</h2>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1044.0" height="721.5" viewBox="0 0 1044 721.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<desc >#spacing: 12
 	#direction: right
@@ -11141,6 +11648,8 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 		</g>
 	</g>
 </svg></p>
+<figcaption>Hash Algorithms</figcaption>
+</figure>
 <p><strong>Hash Algorithms</strong></p>
 <p>A hash algorithm, also known as a cryptographic hash function, is a mathematical algorithm that takes an input (or &quot;message&quot;) and produces a fixed-size string of bytes, which are typically represented as a hexadecimal number or it is base64 encoded.</p>
 <p>Hash algorithms have several important properties: They are deterministic. For a given input, the hash algorithm always produces the same output and given a hash value, it should be computationally infeasible to determine the original input.</p>
@@ -11151,6 +11660,79 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <p>Hash-based Message Authentication Code (HMAG), is a mechanism for generating a cryptographic hash of data in combination with a secret key. It provides a way to verify both the integrity and authenticity of a message.</p>
 <p>HMAC takes two inputs - the message to be authenticated and a secret key known only to the sender and the receiver. It uses a cryptographic hash function (such as MD5, SHA-1, SHA-256) to process the message. The secret key is mixed with the message in a specific way, usually by XOR operations and padding, to create a unique digest. The mixed data is then hashed using the chosen hash function and the output of the hash function is the HMAC.</p>
 <p>The recipient, who knows the secret key, can generate the HMAC using the received message and compare it to the transmitted HMAC. If they match, it indicates that the message has not been tampered with during transmission and that it was sent by someone with knowledge of the secret key.</p>
+<h1 id="reflection">Reflection</h1>
+<h3 id="get-all-types-that-implement-a-given-interface">Get all types that implement a given interface</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>Type<span class="token punctuation">></span></span> <span class="token generic-method"><span class="token function">GetTypesThatImplement</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TInterface<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Assembly</span> assembly<span class="token punctuation">)</span>
+    <span class="token keyword">where</span> <span class="token class-name">TInterface</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> assembly<span class="token punctuation">.</span><span class="token function">GetTypes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>t <span class="token operator">=></span> t<span class="token punctuation">.</span><span class="token function">IsAssignableTo</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">TInterface</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>t<span class="token punctuation">.</span>IsInterface<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="get-assembly-version">Get assembly version</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Version</span> <span class="token function">GetCurrentAssemblyVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>Assembly<span class="token punctuation">.</span><span class="token function">GetExecutingAssembly</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span>Version
+        <span class="token operator">??</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Version</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="check-if-a-type-is-a-record-class">Check if a type is a record class</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsRecordType</span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>type<span class="token punctuation">.</span>IsClass<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+    <span class="token class-name"><span class="token keyword">var</span></span> searchFlags <span class="token operator">=</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Instance
+            <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Public
+            <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>NonPublic<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> type<span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span><span class="token string">"EqualityContract"</span><span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span>
+        <span class="token operator">&amp;&amp;</span> type<span class="token punctuation">.</span><span class="token function">GetMethod</span><span class="token punctuation">(</span><span class="token string">"&lt;Clone>$"</span><span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="check-if-a-type-is-a-ref-struct">Check if a type is a ref struct</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsRefStruct</span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> type<span class="token punctuation">.</span>IsByRefLike<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="create-an-instance-of-a-type-with-optional-property-initializers">Create an instance of a type with optional property initializers</h3>
+<p><strong>Notes</strong></p>
+<ol>
+<li>This method will fail with an exception if, the <code>type</code> has no parameterless constructor</li>
+<li>Reflection doesn't enforce that properties marked with the <code>required</code> keyword have to have a value set. If you don't set these values, then they can be <code>null</code></li>
+<li>This method doesn't check property and value types. If you provide a wrong type of value in the <code>propertyInitializers</code>, then the method will fail with an exception.</li>
+</ol>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">T</span> <span class="token generic-method"><span class="token function">CreateInstance</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">,</span>
+                                    <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">object</span><span class="token punctuation">></span><span class="token punctuation">?</span></span> propertyInitializers <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token keyword">where</span> <span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">T</span><span class="token punctuation">)</span> <span class="token operator">!=</span> type<span class="token punctuation">)</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Type mismatch"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">T<span class="token punctuation">?</span></span> instance <span class="token operator">=</span> Activator<span class="token punctuation">.</span><span class="token function">CreateInstance</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token class-name">T
+        <span class="token punctuation">?</span></span><span class="token punctuation">?</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">InvalidOperationException</span><span class="token punctuation">(</span><span class="token string">"Failed to create instance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token class-name"><span class="token keyword">var</span></span> searchFlags <span class="token operator">=</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Instance
+                    <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Public
+                    <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>NonPublic<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>propertyInitializers <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> propery <span class="token keyword">in</span> propertyInitializers<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> propertyInfo <span class="token operator">=</span> type<span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span>propery<span class="token punctuation">.</span>Key<span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span>
+                <span class="token operator">??</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Property </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">propery<span class="token punctuation">.</span>Key</span><span class="token punctuation">}</span></span><span class="token string"> not found"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            propertyInfo<span class="token punctuation">.</span><span class="token function">SetValue</span><span class="token punctuation">(</span>instance<span class="token punctuation">,</span> propery<span class="token punctuation">.</span>Value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h1 id="ui">UI</h1>
 <ul>
 <li><p><strong>Windows Forms</strong></p>
@@ -11171,6 +11753,7 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <li>ReactiveUI - <a href="https://www.reactiveui.net/">https://www.reactiveui.net/</a></li>
 <li>Prism Libary - <a href="https://prismlibrary.com/">https://prismlibrary.com/</a></li>
 </ul>
+<figure>
 <p><svg version="1.1" baseProfile="full" width="1285.0" height="301.0" viewBox="0 0 1285 301" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<desc >#direction: right
 	#spacing: 12
@@ -11406,6 +11989,8 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 		</g>
 	</g>
 </svg></p>
+<figcaption>MVVM Data flow</figcaption>
+</figure>
 <h3 id="minimal-mvvm-implementation">Minimal MVVM Implementation</h3>
 <pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">ViewModelBase</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">INotifyPropertyChanged</span></span>
 <span class="token punctuation">{</span>
@@ -18565,15 +19150,6 @@ Install with: <code>dotnet add package xunit</code></p>
 </div>
 <div></div>
 
-
-	<button id="navigate-top" onclick="scrollToTop()" type="button">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<title>Scroll to top</title>
-			<path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
-		</svg>
-	</button>
-
-	<div id="notify"></div>
 
 	<script type="text/javascript" src="script.js"></script>
 </body>
