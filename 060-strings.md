@@ -141,3 +141,29 @@ To produce this behaviour, a custom format string can contain up to three sectio
 |       `:`        |                         The time separator                          |
 |       `/`        |                         The date separator                          |
 |       `\`        |                        The escape character                         |
+
+## Examples
+
+**Apply thousand sepperator**
+
+```csharp
+int number = 123456;
+Console.WriteLine($"{number:N0}") //123 456
+```
+
+**Format with fixed number of decimal places**
+
+```csharp
+double number = 123.456;
+Console.WriteLine($"{number:F2}") //123,46
+```
+
+**Date and time formatting**
+
+```csharp
+Console.WriteLine($"{DateTime.Now:yyyy-MM-dd}"); //2024-05-12
+Console.WriteLine($"{DateTime.Now:HH\\:mm\\:ss}"); //10:01:48
+```
+
+Note: the `:` must be escaped with `\\` chars.
+

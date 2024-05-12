@@ -2,7 +2,9 @@
 
 ## Encryption Algortithms
 
-![Cryptography](img/cryptography1.svg)
+^^^
+![Encryption Algortithms](img/cryptography1.svg)
+^^^ Encryption Algortithms 
 
 **Symmetric encryption**
 
@@ -14,7 +16,9 @@ Asymmetric encryption, also known as public-key cryptography, is a cryptographic
 
 ## Hash Algorithms
 
-![Cryptography](img/cryptography2.svg)
+^^^
+![Hash Algorithms](img/cryptography2.svg)
+^^^ Hash Algorithms
 
 **Hash Algorithms**
 

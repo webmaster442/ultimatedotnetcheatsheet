@@ -1,5 +1,9 @@
 # Basic type system
 
+^^^
+![Base classes](img/baseclasses.svg)
+^^^ Base classes
+
 ## Numerical types
 
 |  Type   | bytes  |   Bits   |                    Minimum value                     |                   Maximum  Value                    |
@@ -45,7 +49,9 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 ## Generic Math Interfaces
 
+^^^
 ![Generic Math Interfaces](img/genericmath1.svg)
+^^^ Generic Math Interfaces
 
 * `IComparable<T>` 
 

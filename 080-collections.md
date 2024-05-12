@@ -1,8 +1,12 @@
 # Collections
 
-![collection interfaces](img/collections2.svg)
+^^^
+![The IEnumerable\<T\> interface](img/collections2.svg)
+^^^ The IEnumerable\<T\> interface
 
+^^^
 ![collection interfaces](img/collections1.svg)
+^^^ collection interfaces
 
 |                 Type                 |                                Description                                |                                Is                                |
 | :----------------------------------: | :-----------------------------------------------------------------------: | :--------------------------------------------------------------: |

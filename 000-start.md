@@ -43,8 +43,11 @@ The project is open-source and available on GitHub. You can contribute to it by 
   * Installable as a web app
   * Cryptography and UI chapters
 
-* **2024.05.08**
+* **2024.05.12**
 
   * PWA & website: added Github project link and print support
-  * Extended LINQ part
+  * Extended LINQ chapter
   * Added powershell commands section
+  * Added reflection section
+  * Format strings: Added few examples
+  * Extended Exceptions chapter
