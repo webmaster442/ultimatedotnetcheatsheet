@@ -6,7 +6,7 @@ Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehe
 
 ## Website
 
-The Cheet sheet can be found at: https://webmaster442.github.io/ultimatecharpcheatsheet/
+The Cheatsheet can be found at: https://webmaster442.github.io/ultimatedotnetcheatsheet/
 
 ## License
 
