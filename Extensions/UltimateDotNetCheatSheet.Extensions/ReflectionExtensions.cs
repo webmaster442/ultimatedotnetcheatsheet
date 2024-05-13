@@ -1,4 +1,6 @@
-﻿namespace UltimateDotNetCheatSheet.Extensions;
+﻿using System.Reflection;
+
+namespace UltimateDotNetCheatSheet.Extensions;
 
 public static class ReflectionExtensions
 {
@@ -66,10 +68,16 @@ public static class ReflectionExtensions
         return type.IsByRefLike;
     }
 
-    public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assembly)
+    public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assembly,
+                                                                      bool includeAbstract = false)
         where TInterface : class
     {
-        return assembly.GetTypes()
+        var types = assembly.GetTypes()
             .Where(t => t.IsAssignableTo(typeof(TInterface)) && !t.IsInterface);
+
+        if (!includeAbstract)
+            types = types.Where(t => !t.IsAbstract);
+
+        return types;
     }
 }

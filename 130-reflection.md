@@ -3,11 +3,17 @@
 ### Get all types that implement a given interface
 
 ```csharp
-public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assembly)
+public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assembly,
+                                                                    bool includeAbstract = false)
     where TInterface : class
 {
-    return assembly.GetTypes()
+    var types = assembly.GetTypes()
         .Where(t => t.IsAssignableTo(typeof(TInterface)) && !t.IsInterface);
+
+    if (!includeAbstract)
+        types = types.Where(t => !t.IsAbstract);
+
+    return types;
 }
 ```
 
