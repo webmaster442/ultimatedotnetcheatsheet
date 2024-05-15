@@ -83,7 +83,7 @@ table {
 }
 
 td {
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--main-alt);
 }
 
 th {
