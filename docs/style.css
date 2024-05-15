@@ -63,15 +63,18 @@ table {
 
 code {
     color: #dd4a68;
+    font-family: "Jetbrains Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 pre {
     position: relative;
+    font-family: "Jetbrains Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 pre code {
     overflow: auto;
     display: block;
+    font-family: "Jetbrains Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 table {
@@ -84,14 +87,14 @@ td {
 }
 
 th {
-    background-color: var(--color2);
+    background-color: var(--main-alt);
     border: 1px solid var(--color-text);
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: var(--color2);
+    background-color: var(--main-alt);
 }
 
 figcaption {
@@ -108,6 +111,7 @@ figcaption {
     position: fixed;
     top: 0px;
     width: 100%;
+    z-index: var(--layer-toc);
 }
 
 #mainNavMenu ul {
@@ -159,8 +163,6 @@ figcaption {
     padding: 6px;
     font-weight: bold;
     display: none;
-    position: fixed;
-    top: 0;
 }
 
 #navigate-top {
@@ -181,6 +183,20 @@ figcaption {
 #navigate-top:hover {
     color: var(--main-alt2);
     fill: var(--main-alt2);
+}
+
+pre .copyButton {
+    padding: 2px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: var(--main-alt);
+
+    outline: none;
+}
+
+pre .copyButton:hover {
+    opacity: 1.0;
 }
 
 /* Table of contents */
@@ -214,6 +230,12 @@ figcaption {
 .toc-wrapper .close:hover {
     color: var(--main-alt2);
     fill: var(--main-alt2);
+}
+
+.toc-title {
+    margin: 0 0 0 10px;
+    border: 0px;
+    color: var(--dotnet);
 }
 
 /* Content */

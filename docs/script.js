@@ -61,7 +61,7 @@ function printPage() {
 }
 
 function openNav() {
-    document.querySelector('.toc-wrapper').style.width = "50%";
+    document.querySelector('.toc-wrapper').style.width = "30%";
 }
 
 function closeNav() {
