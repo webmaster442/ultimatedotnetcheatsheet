@@ -59,3 +59,11 @@ function scrollToTop() {
 function printPage() {
     window.print();
 }
+
+function openNav() {
+    document.querySelector('.toc-wrapper').style.width = "50%";
+}
+
+function closeNav() {
+    document.querySelector('.toc-wrapper').style.width = "0%";
+}

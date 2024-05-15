@@ -15,7 +15,8 @@
 
     <link rel="manifest" href="manifest.json">
 
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style-print.css" type="text/css"/>
 
     <!--OpenGraph meta-->
     <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
@@ -34,7 +35,7 @@
     <nav id="mainNavMenu">
         <ul>
             <li id="tocMenu">
-                <a href="#">
+                <a href="#" title="Open table of contents" onclick="openNav()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" />
@@ -57,8 +58,62 @@
                     </svg>
                 </a>
             </li>
+            <li id="notify">
+                <!--Notfication container-->
+            </li>
         </ul>
     </nav>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <div class="toc-wrapper">
+        <button class="close" onclick="closeNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </svg>
+        </button>
+        <nav id="toc">
+            <ul>
+                <li>Chapter1</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius velit eget lacus porta commodo. Nam
+            vitae elit tempor, rhoncus lorem sed, dignissim lorem. Curabitur eu lacus posuere, iaculis nulla in, commodo
+            nisl. Sed semper imperdiet vestibulum. Etiam et metus vel orci vulputate finibus. Integer euismod ligula vel
+            justo semper commodo. Aliquam erat volutpat.</p>
+
+
+        <p>Aliquam mollis at justo vitae dignissim. Praesent mauris nunc, semper at tellus eget, viverra tempor odio.
+            Cras sit amet tincidunt velit. Nulla sit amet mauris eget urna lobortis vehicula et id nulla. Fusce molestie
+            tempor lacinia. In tortor diam, suscipit sed scelerisque eget, porta id sem. Praesent viverra ullamcorper
+            lorem ut pharetra. In at bibendum metus, ut blandit metus. Vestibulum id enim ut purus molestie feugiat.
+            Integer consectetur leo at lectus pulvinar feugiat. Suspendisse a lacus sodales, pretium odio ut, aliquet
+            enim.</p>
+
+        <p>Sed mollis orci ante, a pulvinar erat bibendum sit amet. Nam sed dui sed tellus tincidunt vehicula. Aenean
+            erat nisi, viverra vel ex posuere, varius rutrum mi. Curabitur pulvinar id justo sed bibendum. Aliquam
+            malesuada magna quis orci tincidunt cursus. Praesent a posuere massa. Suspendisse porta magna tellus, eget
+            maximus orci elementum eget. Proin eu neque vel velit viverra iaculis sit amet ac mauris. In pretium lectus
+            lorem, consectetur facilisis urna volutpat scelerisque. </p>
+        </main>
+
+
+        <script type="text/javascript" src="script.js"></script>
+
 </body>
 
 </html>
