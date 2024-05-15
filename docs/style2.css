@@ -1,0 +1,55 @@
+:root {
+    --color0: #F7F9F5;
+    --color1: #5026d3;
+    --color2: #eee8d6;
+    --color-text: #454545;
+    --btn-opacity: 0.5;
+}
+
+#mainNavMenu {
+    margin: 0px;
+    padding: 0px;
+}
+
+#mainNavMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#mainNavMenu svg {
+    width: 32px;
+}
+
+
+#tocMenu {
+    position: relative;
+    border-right: 2px solid #bbb;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#mainNavMenu li {
+    float: right;
+    border-left: 2px solid #bbb;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#mainNavMenu li:last-child {
+    border-right: none;
+}
+
+#mainNavMenu li a {
+    display: block;
+    color: var(--color0);
+    fill: var(--color0);
+    text-align: center;
+    text-decoration: none;
+}
+
+#mainNavMenu li a:hover:not(.active) {
+    background-color: #111;
+}
