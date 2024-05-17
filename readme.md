@@ -25,3 +25,7 @@ Thank you for considering contributing to our project! We welcome contributions 
 * **Class Diagrams**: For class diagrams, we use nomnoml (https://nomnoml.com/) with diagram source embedded.
 
 * **Releases**: Releases are made periodically, preferably on a monthly basis. The project's website is automatically updated. Any changes made to the repository will reflect on the website after the automated update process.
+
+## Rendering tool
+
+For rendering html, my custom developed tool Bookgen is used. You can get it's source from: https://github.com/webmaster442/BookGen
