@@ -35,6 +35,8 @@
     "-i",
     "110-io-attribs.md",
     "-i",
+    "112-xmlserialization.md",
+    "-i",
     "120-crypto.md",
     "-i",
     "130-reflection.md",
