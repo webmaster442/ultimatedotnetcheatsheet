@@ -20,8 +20,7 @@
 
     #mainNavMenu,
     #navigate-top,
-    .toc-wrapper
-    {
+    .toc-wrapper {
         visibility: collapse;
         display: none;
     }
@@ -45,6 +44,10 @@
         break-inside: avoid;
     }
 
+    :not(pre)>code[class*=language-], pre[class*=language-] {
+        border: none;
+    }
+
     pre .copyButton {
         display: none;
         visibility: collapse;
@@ -59,6 +62,14 @@
         display: block;
         visibility: collapse;
         page-break-after: always;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "Toc Content";
+        grid-template-columns: 0% 100%;
     }
 
     /*Manual page break adjustments*/
