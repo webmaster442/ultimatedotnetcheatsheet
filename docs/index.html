@@ -44,7 +44,7 @@
     <nav id="mainNavMenu">
         <ul>
             <li id="tocMenu">
-                <a href="#" title="Open table of contents" onclick="openNav()">
+                <a href="#" title="Open table of contents" onclick="openCloseNav()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" />
@@ -67,9 +67,10 @@
                     </svg>
                 </a>
             </li>
+            <li id="version">Version: 24-05-17
+            </li>
             <li id="notify">
                 <!--Notfication container-->
-                Foobar
             </li>
         </ul>
     </nav>
@@ -80,12 +81,8 @@
         </svg>
     </button>
 
-    <div class="parent">
-<div class="toc-wrapper"><button class="close" onclick="closeNav()">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-<path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-</svg>
-</button>
+    <div class="container toc-collapsed">
+        <div class="toc-wrapper">
 <nav id="toc"><h1 class="toc-title">Contents</h1><ul>
 <li>
 <ul>
@@ -277,7 +274,6 @@
 <a href='#useful-nuget-packages'>Useful NuGet packages</a></li>
 </ul>
 </nav>
-</div>
 </div>
 <div class="content"><p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
@@ -19170,10 +19166,10 @@ Install with: <code>dotnet add package xunit</code></p>
 </li>
 </ul>
 </div>
-<div></div>
 
+        </main>
 
-    <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
 
 </body>
 

@@ -40,6 +40,14 @@ function onLoaded() {
         .filter(link => link.hostname != window.location.hostname)
         .forEach(link => link.target = '_blank');
 
+
+    //navigation links close
+    const navlinks = document.getElementById("toc").getElementsByTagName('a');
+    Array.from(navlinks).forEach(a => a.onclick = function (ev) {
+        const classes = document.querySelector('.container').classList;
+        classes.remove('toc-visible');
+        classes.add('toc-collapsed');
+    });
 }
 
 function notify(message) {
@@ -60,10 +68,15 @@ function printPage() {
     window.print();
 }
 
-function openNav() {
-    document.querySelector('.toc-wrapper').style.width = "30%";
-}
+function openCloseNav() {
+    const classes = document.querySelector('.container').classList;
 
-function closeNav() {
-    document.querySelector('.toc-wrapper').style.width = "0%";
+    if (classes.contains('toc-collapsed')) {
+        classes.remove('toc-collapsed');
+        classes.add('toc-visible');
+    }
+    else {
+        classes.remove('toc-visible');
+        classes.add('toc-collapsed');
+    }
 }

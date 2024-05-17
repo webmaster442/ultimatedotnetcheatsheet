@@ -124,6 +124,10 @@ figcaption {
     width: var(--nav-iconsize);
 }
 
+#mainNavMenu #version {
+    color: var(--main);
+    padding: 6px;
+}
 
 #tocMenu {
     position: absolute;
@@ -199,37 +203,49 @@ pre .copyButton:hover {
     opacity: 1.0;
 }
 
+/* Main grid */
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0px 8px;
+    grid-template-areas: "Toc Content";
+    transition: 0.5s;
+}
+
+.toc-visible {
+    grid-template-columns: 18% 72%;
+}
+
+.toc-collapsed {
+    grid-template-columns: 0% 100%;
+}
+
 /* Table of contents */
 
 .toc-wrapper {
     background-color: var(--main-alt);
-    position: fixed;
-    height: 100%;
-    top: 0px;
-    width: 0%;
-    z-index: var(--layer-toc);
     border-right: 2px solid var(--text);
     overflow-x: hidden;
-    transition: 0.5s;
+    grid-area: Toc;
 }
 
-.toc-wrapper .close {
-    width: var(--nav-iconsize);
-    height: var(--nav-iconsize);
-    background-color: var(--navbar);
-    color: var(--main-alt);
-    fill: var(--main-alt);
-    border: none;
-    outline: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transition: 0.3s;
+.toc-wrapper #toc {
+    margin-top: 60px;
+    text-align: left;
 }
 
-.toc-wrapper .close:hover {
-    color: var(--main-alt2);
-    fill: var(--main-alt2);
+.toc-wrapper #toc a {
+    text-decoration: none;
+}
+
+.toc-wrapper #toc a:hover {
+    text-decoration: underline;
+}
+
+.toc-wrapper #toc ul {
+    list-style-type: none;
+    padding-left: 20px;
 }
 
 .toc-title {
@@ -241,8 +257,7 @@ pre .copyButton:hover {
 /* Content */
 
 .content {
-    max-width: 88rem;
+    grid-area: Content;
     margin: 60px auto 0px auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 88rem;
 }
