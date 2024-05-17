@@ -34,5 +34,51 @@ More info: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/op
 |   Derived class (different assembly)   |    √     |           √           |      √      |     X      |          X          |     X     |
 | Non-derived class (different assembly) |    √     |           X           |      X      |     X      |          X          |     X     |
 
+Beginning with C# 11, the `file` contextual keyword is a type modifier.
 
-More info: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
+The `file` modifier restricts a top-level type's scope and visibility to the file in which it's declared. The `file` modifier will generally be applied to types written by a source generator. File-local types provide source generators with a convenient way to avoid name collisions among generated types. 
+
+# Keywords
+
+Keywords are predefined, reserved identifiers that have special meanings to the compiler. They can't be used as identifiers in your program unless they include `@` as a prefix. For example, `@if` is a valid identifier, but `if` isn't because `if` is a keyword.
+
+|   A-E    |    E-L    |    N-S     |    S-W    |
+| :------: | :-------: | :--------: | :-------: |
+| abstract |   event   | namespace  |  static   |
+|    as    | explicit  |    new     |  string   |
+|   base   |  extern   |    null    |  struct   |
+|   bool   |   FALSE   |   object   |  switch   |
+|  break   |  finally  |  operator  |   this    |
+|   byte   |   fixed   |    out     |   throw   |
+|   case   |   float   |  override  |   TRUE    |
+|  catch   |    for    |   params   |    try    |
+|   char   |  foreach  |  private   |  typeof   |
+| checked  |   goto    | protected  |   uint    |
+|  class   |    if     |   public   |   ulong   |
+|  const   | implicit  |  readonly  | unchecked |
+| continue |    in     |    ref     |  unsafe   |
+| decimal  |    int    |   return   |  ushort   |
+| default  | interface |   sbyte    |   using   |
+| delegate | internal  |   sealed   |  virtual  |
+|    do    |    is     |   short    |   void    |
+|  double  |   lock    |   sizeof   | volatile  |
+|   else   |   long    | stackalloc |   while   |
+|   enum   |           |            |           |
+
+# Contextual keywords
+
+A contextual keyword is used to provide a specific meaning in the code, but it isn't a reserved word in C#. Some contextual keywords, such as `partial` and `where`, have special meanings in two or more contexts.
+
+|    A-E     |   F-N   |       N-R        |    R-Y    |
+| :--------: | :-----: | :--------------: | :-------: |
+|    add     |  file   |       nint       | required  |
+|    and     |  from   |       not        |  scoped   |
+|   alias    |   get   |     notnull      |  select   |
+| ascending  | global  |      nuint       |    set    |
+|    args    |  group  |        on        | unmanaged |
+|   async    |  init   |        or        |   value   |
+|   await    |  into   |     orderby      |    var    |
+|     by     |  join   |  partial (type)  |   when    |
+| descending |   let   | partial (method) |   where   |
+|  dynamic   | managed |      record      |   with    |
+|   equals   | nameof  |      remove      |   yield   |
