@@ -2,65 +2,87 @@
 <html prefix="og: https://ogp.me/ns#">
 
 <head>
-	<title>Ultimate .NET Cheat sheet</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=JetBrains+Mono&family=Open+Sans:wght@700&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<link rel="manifest" href="manifest.json">
-	<!--OpenGraph meta-->
-	<meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Ultimate .NET Cheat sheet">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
-	<meta property="og:image:type" content="image/webp" />
-	<meta property="og:image:width" content="945" />
-	<meta property="og:image:height" content="1134" />
-	<meta property="og:description"
-		content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
-	<style type="text/css">
-		/*no inline css was specified*/
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=JetBrains+Mono&family=Open+Sans:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style-print.css" type="text/css" />
+
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <script type="text/javascript" src="prism.js"></script>
+
+    <title>Ultimate .NET Cheat sheet</title>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET Cheat sheet">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+
+    <style type="text/css">
+        /*no inline css was specified*/
+    </style>
 </head>
 
 <body>
-	<button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
-		</svg>
-	</button>
+    <nav id="mainNavMenu">
+        <ul>
+            <li id="tocMenu">
+                <a href="#" title="Open table of contents" onclick="openCloseNav()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Print this page" onclick="printPage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M19 8C20.66 8 22 9.34 22 11V17H18V21H6V17H2V11C2 9.34 3.34 8 5 8H6V3H18V8H19M8 5V8H16V5H8M16 19V15H8V19H16M18 15H20V11C20 10.45 19.55 10 19 10H5C4.45 10 4 10.45 4 11V15H6V13H18V15M19 11.5C19 12.05 18.55 12.5 18 12.5C17.45 12.5 17 12.05 17 11.5C17 10.95 17.45 10.5 18 10.5C18.55 10.5 19 10.95 19 11.5Z" />
+                    </svg>
+                </a>
+            </li>
+            <li><a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                    title="Fork me on github">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
+                </a>
+            </li>
+            <li id="version">Version: 24-05-17
+            </li>
+            <li id="notify">
+                <!--Notfication container-->
+            </li>
+        </ul>
+    </nav>
 
-	<div id="notify"></div>
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
 
-	<div id="topmenu">
-		<a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank" title="Fork me on github">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-				<path
-					d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-			</svg>
-		</a>
-		<a href="#" title="Print this page" onclick="printPage()">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-				<path
-					d="M19 8C20.66 8 22 9.34 22 11V17H18V21H6V17H2V11C2 9.34 3.34 8 5 8H6V3H18V8H19M8 5V8H16V5H8M16 19V15H8V19H16M18 15H20V11C20 10.45 19.55 10 19 10H5C4.45 10 4 10.45 4 11V15H6V13H18V15M19 11.5C19 12.05 18.55 12.5 18 12.5C17.45 12.5 17 12.05 17 11.5C17 10.95 17.45 10.5 18 10.5C18.55 10.5 19 10.95 19 11.5Z" />
-			</svg>
-		</a>
-	</div>
-
-	<style type="text/css">
-/* PrismJS 1.29.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig */
-code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
-</style>
-
-<div class="parent">
+    <div class="container toc-collapsed">
+        <div class="toc-wrapper">
 <nav id="toc"><h1 class="toc-title">Contents</h1><ul>
 <li>
 <ul>
@@ -252,6 +274,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <a href='#useful-nuget-packages'>Useful NuGet packages</a></li>
 </ul>
 </nav>
+</div>
 <div class="content"><p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -5601,19 +5624,19 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 <h1 id="usefull-powershell-commands-scripts">Usefull Powershell commands &amp; scripts</h1>
 <ul>
 <li><p>Enable long path support (Windows 10 version 1607 or later)</p>
-<pre><code class="language-powershell"><span class="token function">New-ItemProperty</span> <span class="token operator">-</span>Path <span class="token string">"HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"</span> `
-<span class="token operator">-</span>Name <span class="token string">"LongPathsEnabled"</span> <span class="token operator">-</span>Value 1 <span class="token operator">-</span>PropertyType DWORD <span class="token operator">-</span>Force
+<pre><code class="language-powershell">New-ItemProperty -Path &quot;HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem&quot; `
+-Name &quot;LongPathsEnabled&quot; -Value 1 -PropertyType DWORD -Force
 </code></pre>
 </li>
 <li><p>Delete bin and obj directories produced by build</p>
-<pre><code class="language-powershell"><span class="token keyword">function</span> RemoveBinObj  <span class="token punctuation">{</span>
-    <span class="token variable">$directories</span> = <span class="token function">Get-ChildItem</span> <span class="token operator">-</span>Directory <span class="token operator">-</span>Recurse <span class="token punctuation">|</span> <span class="token function">Where-Object</span> <span class="token punctuation">{</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-eq</span> <span class="token string">"bin"</span> <span class="token operator">-or</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-eq</span> <span class="token string">"obj"</span> <span class="token punctuation">}</span>
-    <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$directory</span> in <span class="token variable">$directories</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">Write-Host</span> <span class="token string">"Deleting <span class="token function">$<span class="token punctuation">(</span><span class="token variable">$directory</span><span class="token punctuation">.</span>FullName<span class="token punctuation">)</span></span>"</span> <span class="token operator">-</span>ForegroundColor Yellow
-        <span class="token function">Remove-Item</span> <span class="token variable">$directory</span><span class="token punctuation">.</span>FullName <span class="token operator">-</span>Recurse <span class="token operator">-</span>Force
-    <span class="token punctuation">}</span>
-    <span class="token function">Write-Host</span> <span class="token string">"Cleanup complete!"</span> <span class="token operator">-</span>ForegroundColor Green
-<span class="token punctuation">}</span>
+<pre><code class="language-powershell">function RemoveBinObj  {
+    $directories = Get-ChildItem -Directory -Recurse | Where-Object { $_.Name -eq &quot;bin&quot; -or $_.Name -eq &quot;obj&quot; }
+    foreach ($directory in $directories) {
+        Write-Host &quot;Deleting $($directory.FullName)&quot; -ForegroundColor Yellow
+        Remove-Item $directory.FullName -Recurse -Force
+    }
+    Write-Host &quot;Cleanup complete!&quot; -ForegroundColor Green
+}
 
 RemoveBinObj
 </code></pre>
@@ -6765,12 +6788,11 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <h1 id="important-interfaces-for-types">Important interfaces for types</h1>
 <h2 id="icomparablet">IComparable&lt;T&gt;</h2>
 <p>Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.</p>
-<pre><code class="language-csharp"><span class="token keyword">interface</span> <span class="token class-name">IComparable<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span>
-<span class="token punctuation">{</span>
-	<span class="token return-type class-name"><span class="token keyword">int</span></span> CompareTo <span class="token punctuation">(</span><span class="token class-name">T<span class="token punctuation">?</span></span> other<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">interface IComparable&lt;T&gt;
+{
+	int CompareTo (T? other);
+}
 </code></pre>
-
 <p>The CompareTo returns a value that indicates the relative order of the objects being compared. The return value has these meanings:</p>
 <table>
 <thead>
@@ -6798,12 +6820,11 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <p>Defines a method that a type implements to compare two objects.</p>
 <p>This interface is used with the <code>List&lt;T&gt;.Sort</code> and <code>List&lt;T&gt;.BinarySearch</code> methods. It provides a way to customize the sort order of a collection. Classes that implement this interface include the <code>SortedDictionary&lt;TKey,TValue&gt;</code> and <code>SortedList&lt;TKey,TValue&gt;</code> generic classes.</p>
 <p>The default implementation of this interface is the <code>Comparer&lt;T&gt;</code> class. The <code>StringComparer</code> class implements this interface for type String.</p>
-<pre><code class="language-csharp"><span class="token keyword">interface</span> <span class="token class-name">IComparer<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span>
-<span class="token punctuation">{</span>
-	<span class="token return-type class-name"><span class="token keyword">int</span></span> Compare <span class="token punctuation">(</span><span class="token class-name">T<span class="token punctuation">?</span></span> x<span class="token punctuation">,</span> <span class="token class-name">T<span class="token punctuation">?</span></span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">interface IComparer&lt;T&gt;
+{
+	int Compare (T? x, T? y);
+}
 </code></pre>
-
 <p>Return a signed integer that indicates the relative values of x and y, as shown in the following table:</p>
 <table>
 <thead>
@@ -6829,20 +6850,19 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </table>
 <h2 id="iequatablet">IEquatable&lt;T&gt;</h2>
 <p>Defines a generalized method that a value type or class implements to create a type-specific method for determining equality of instances.</p>
-<pre><code class="language-csharp"><span class="token keyword">interface</span> <span class="token class-name">IEquatable<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span>
-<span class="token punctuation">{</span>
-	<span class="token return-type class-name"><span class="token keyword">bool</span></span> Equals <span class="token punctuation">(</span><span class="token class-name">T<span class="token punctuation">?</span></span> other<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">interface IEquatable&lt;T&gt;
+{
+	bool Equals (T? other);
+}
 </code></pre>
-
 <p>Note: If a type implements the <code>IEquatable&lt;T&gt;</code>, then the type must override the <code>Equals(object? other)</code> and <code>GetHashCode()</code> methods provided also.</p>
 <h2 id="equalitycomparert">EqualityComparer&lt;T&gt;</h2>
 <p>Defines methods to support the comparison of objects for equality. This interface allows the implementation of customized equality comparison for collections. That is, you can create your own definition of equality for type <code>T</code>, and specify that this definition be used with a collection type that accepts the <code>IEqualityComparer&lt;T&gt;</code> generic interface.</p>
-<pre><code class="language-csharp"><span class="token keyword">interface</span> <span class="token class-name">IEqualityComparer<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span>
-<span class="token punctuation">{</span>
-	<span class="token return-type class-name"><span class="token keyword">bool</span></span> Equals <span class="token punctuation">(</span><span class="token class-name">T<span class="token punctuation">?</span></span> x<span class="token punctuation">,</span> <span class="token class-name">T<span class="token punctuation">?</span></span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token return-type class-name"><span class="token keyword">int</span></span> GetHashCode <span class="token punctuation">(</span><span class="token class-name">T</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">interface IEqualityComparer&lt;T&gt;
+{
+	bool Equals (T? x, T? y);
+	int GetHashCode (T obj);
+}
 </code></pre>
 <h2 id="idisposable-iasyncdisposable">IDisposable &amp; IAsyncDisposable</h2>
 <p>The <code>IDisposable</code> interface is used to release unmanaged resources like file handles, database connections, network connections, or any resource that is not managed by the .NET runtime.</p>
@@ -6850,69 +6870,69 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <p>The <code>IAsyncDisposable</code> interface is similar to <code>IDisposable</code>, but it is specifically designed for asynchronous resource clean-up scenarios.</p>
 <p>If you implement the <code>IAsyncDisposable</code> interface but not the <code>IDisposable</code> interface, your app can potentially leak resources. If a class implements <code>IAsyncDisposable</code>, but not <code>IDisposable</code>, and a consumer only calls <code>Dispose()</code>, your implementation would never call <code>DisposeAsync()</code>. This would result in a resource leak.</p>
 <p>Implementation example:</p>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AsyncDisposable</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IAsyncDisposable</span><span class="token punctuation">,</span> <span class="token class-name">IDisposable</span></span>
-<span class="token punctuation">{</span>
-    <span class="token comment">//a flag to indicate whether the object has been disposed to prevent multiple dispose calls</span>
-    <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">bool</span></span> _disposed<span class="token punctuation">;</span>
+<pre><code class="language-csharp">public class AsyncDisposable : IAsyncDisposable, IDisposable
+{
+    //a flag to indicate whether the object has been disposed to prevent multiple dispose calls
+    private bool _disposed;
 
-    <span class="token comment">//A disposable field</span>
-    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">MemoryStream</span> _field<span class="token punctuation">;</span>
+    //A disposable field
+    private readonly MemoryStream _field;
 
-    <span class="token keyword">public</span> <span class="token function">AsyncDisposable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        _field <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MemoryStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    public AsyncDisposable()
+    {
+        _field = new MemoryStream();
+    }
 
-    <span class="token comment">//IDosposable implementation. Do not change this code. Put cleanup code in the Dispose(bool disposing) method</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token named-parameter punctuation">disposing</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        GC<span class="token punctuation">.</span><span class="token function">SuppressFinalize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    //IDosposable implementation. Do not change this code. Put cleanup code in the Dispose(bool disposing) method
+    public void Dispose()
+    {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
 
-    <span class="token comment">//IAsyncDisposable implementation. Do not change this code. Put cleanup code in the DisposeAsyncCore method</span>
-    <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">ValueTask</span> <span class="token function">DisposeAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment">//Call the overridable DisposeAsyncCore that does the actual work</span>
-        <span class="token keyword">await</span> <span class="token function">DisposeAsyncCore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ConfigureAwait</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    //IAsyncDisposable implementation. Do not change this code. Put cleanup code in the DisposeAsyncCore method
+    public async ValueTask DisposeAsync()
+    {
+        //Call the overridable DisposeAsyncCore that does the actual work
+        await DisposeAsyncCore().ConfigureAwait(false);
 
-        <span class="token comment">//no need to call finalizer, because the resources have been freed by the DisposeAsyncCore method</span>
-        GC<span class="token punctuation">.</span><span class="token function">SuppressFinalize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+        //no need to call finalizer, because the resources have been freed by the DisposeAsyncCore method
+        GC.SuppressFinalize(this);
+    }
 
-    <span class="token comment">// Async version of Dispose method</span>
-    <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token keyword">async</span> <span class="token return-type class-name">ValueTask</span> <span class="token function">DisposeAsyncCore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_disposed<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">await</span> _field<span class="token punctuation">.</span><span class="token function">DisposeAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ConfigureAwait</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+    // Async version of Dispose method
+    protected virtual async ValueTask DisposeAsyncCore()
+    {
+        if (!_disposed)
+        {
+            await _field.DisposeAsync().ConfigureAwait(false);
+        }
+    }
 
-    <span class="token comment">// Sync version of Dispose method</span>
-    <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">bool</span></span> disposing<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_disposed<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>disposing<span class="token punctuation">)</span>
-            <span class="token punctuation">{</span>
-                <span class="token comment">//Dispose managed state (managed objects)</span>
-                _field<span class="token punctuation">.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+    // Sync version of Dispose method
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposed)
+        {
+            if (disposing)
+            {
+                //Dispose managed state (managed objects)
+                _field.Dispose();
+            }
 
-            <span class="token comment">// TODO: free unmanaged resources (unmanaged objects) and override finalizer</span>
-            <span class="token comment">// TODO: set large fields to null</span>
-            _disposed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+            // TODO: set large fields to null
+            _disposed = true;
+        }
+    }
 
-    <span class="token comment">//TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources</span>
-    <span class="token comment">// ~AsyncDisposable()</span>
-    <span class="token comment">// {</span>
-    <span class="token comment">//     // Do not change this code. Put clean-up code in Dispose(bool disposing) method</span>
-    <span class="token comment">//     Dispose(disposing: false);</span>
-    <span class="token comment">// }</span>
-<span class="token punctuation">}</span>
+    //TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+    // ~AsyncDisposable()
+    // {
+    //     // Do not change this code. Put clean-up code in Dispose(bool disposing) method
+    //     Dispose(disposing: false);
+    // }
+}
 </code></pre>
 <h1 id="operator-precedence">Operator Precedence</h1>
 <ol>
@@ -7468,20 +7488,17 @@ the resulting zero is formatted according to the third section.</p>
 </table>
 <h2 id="format-string-examples">Format string examples</h2>
 <p><strong>Apply thousand sepperator</strong></p>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span></span> number <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>
-Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>N0</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123 456</span>
+<pre><code class="language-csharp">int number = 123456;
+Console.WriteLine($&quot;{number:N0}&quot;) //123 456
 </code></pre>
-
 <p><strong>Format with fixed number of decimal places</strong></p>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">double</span></span> number <span class="token operator">=</span> <span class="token number">123.456</span><span class="token punctuation">;</span>
-Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>F2</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123,46</span>
+<pre><code class="language-csharp">double number = 123.456;
+Console.WriteLine($&quot;{number:F2}&quot;) //123,46
 </code></pre>
-
 <p><strong>Date and time formatting</strong></p>
-<pre><code class="language-csharp">Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>yyyy-MM-dd</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//2024-05-12</span>
-Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>HH\\:mm\\:ss</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10:01:48</span>
+<pre><code class="language-csharp">Console.WriteLine($&quot;{DateTime.Now:yyyy-MM-dd}&quot;); //2024-05-12
+Console.WriteLine($&quot;{DateTime.Now:HH\\:mm\\:ss}&quot;); //10:01:48
 </code></pre>
-
 <p>Note: the <code>:</code> must be escaped with <code>\\</code> chars.</p>
 <h1 id="common-exceptions">Common exceptions</h1>
 <figure>
@@ -8287,45 +8304,45 @@ Console<span class="token punctuation">.</span><span class="token function">Writ
 <li>A constructor that takes a string message and an inner exception</li>
 </ol>
 <p>The constructors should call the base class constructors with the appropriate parameters. Exceptions should be serializable for compatibility with older .NET Framework versions.</p>
-<pre><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Serializable</span></span><span class="token punctuation">]</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomException</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Exception</span></span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span>
+<pre><code class="language-csharp">[Serializable]
+public class CustomException : Exception
+{
+    public CustomException()
+    {
+    }
 
-    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">?</span></span> message<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span>
+    public CustomException(string? message) : base(message)
+    {
+    }
 
-    <span class="token keyword">public</span> <span class="token function">CustomException</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">?</span></span> message<span class="token punctuation">,</span> <span class="token class-name">Exception<span class="token punctuation">?</span></span> innerException<span class="token punctuation">)</span> 
-        <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> innerException<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    public CustomException(string? message, Exception? innerException) 
+        : base(message, innerException)
+    {
+    }
+}
 </code></pre>
 <h2 id="unreachableexecption">UnreachableExecption</h2>
 <p>UnreachableException indicates that a code path that should never be reached has been reached. This is usefull, when dealing with enum values, that can be extended in the future. When handling enum values, it is a good practice to always have a default case, that throws an exception. This way, the method will fail fast, if a new enum value is added, and the switch statement is not updated.</p>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">MyEnum</span>
-<span class="token punctuation">{</span>
-    First<span class="token punctuation">,</span>
+<pre><code class="language-csharp">public enum MyEnum
+{
+    First,
     Second
-<span class="token punctuation">}</span>
+}
 
-<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SomeMethod</span><span class="token punctuation">(</span><span class="token class-name">MyEnum</span> <span class="token keyword">value</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">switch</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">case</span> MyEnum<span class="token punctuation">.</span>First<span class="token punctuation">:</span>
-            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"First"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> MyEnum<span class="token punctuation">.</span>Second<span class="token punctuation">:</span>
-            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Second"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">default</span><span class="token punctuation">:</span>
-            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">UnreachableException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Unknown: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string"> value: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">value</span></span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+public void SomeMethod(MyEnum value)
+{
+    switch(value)
+    {
+        case MyEnum.First:
+            Console.WriteLine(&quot;First&quot;);
+            break;
+        case MyEnum.Second:
+            Console.WriteLine(&quot;Second&quot;);
+            break;
+        default:
+            throw new UnreachableException($&quot;Unknown: {nameof(value)} value: {value}&quot;);
+    }
+}
 </code></pre>
 <h1 id="collections">Collections</h1>
 <figure>
@@ -9008,260 +9025,249 @@ Console<span class="token punctuation">.</span><span class="token function">Writ
 </table>
 <h1 id="linq">LINQ</h1>
 <h2 id="filtering">Filtering</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> customerOrders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">var customerOrders = Orders.Where(order =&gt; order.CustomerId == 66);
 </code></pre>
 <h2 id="select-with-anonymus-type">Select with anonymus type</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> ordersWithCost <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span>order <span class="token operator">=></span> <span class="token keyword">new</span>
-<span class="token punctuation">{</span>
-    OrderId <span class="token operator">=</span> order<span class="token punctuation">.</span>Id<span class="token punctuation">,</span>
-    Cost <span class="token operator">=</span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">var ordersWithCost = Orders.Select(order =&gt; new
+{
+    OrderId = order.Id,
+    Cost = order.Cost,
+});
 </code></pre>
 <h2 id="distinct">Distinct</h2>
-<pre><code class="language-csharp"><span class="token comment">//The Distinct method requries equality implementation on the class or </span>
-<span class="token comment">//an IEqualityComparer as parameter</span>
-<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">Distinct</span><span class="token punctuation">(</span><span class="token punctuation">(</span>customerComparer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">//The Distinct method requries equality implementation on the class or 
+//an IEqualityComparer as parameter
+var uniqueNames = customer.Distinct((customerComparer);
 
-<span class="token comment">//DistinctBy requires a lambda</span>
-<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">DistinctBy</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+//DistinctBy requires a lambda
+var uniqueNames = customer.DistinctBy(x =&gt; x.Name); 
 </code></pre>
 <h2 id="ordering">Ordering</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> ascendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name"><span class="token keyword">var</span></span> descendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderByDescending</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">var ascendingOrder = orders.OrderBy(order =&gt; order.Cost);
+var descendingOrder = orders.OrderByDescending(order =&gt; order.Cost);
 
-<span class="token class-name"><span class="token keyword">var</span></span> multipleOdering <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ThenBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+var multipleOdering = orders.OrderBy(order =&gt; order.Cost).ThenBy(order =&gt; order.CustomerId);
 </code></pre>
-
 <p>Note: Result will be an <code>IOrderedEnumerable&lt;TElement&gt;</code>.</p>
 <h2 id="join">Join</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> joined <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>orders<span class="token punctuation">,</span> 
-                            customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> 
-                            order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId
-                            <span class="token punctuation">(</span>customer<span class="token punctuation">,</span> order<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span>
-                            <span class="token punctuation">{</span>
-                                CustomerId <span class="token operator">=</span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span>
-                                Name <span class="token operator">=</span> customer<span class="token punctuation">.</span>Name<span class="token punctuation">,</span>
-                                Cost <span class="token operator">=</span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">,</span> 
-                            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">var joined = customers.Join(orders, 
+                            customer =&gt; customer.Id, 
+                            order =&gt; order.CustomerId
+                            (customer, order) =&gt; new
+                            {
+                                CustomerId = customer.Id,
+                                Name = customer.Name,
+                                Cost = order.Cost, 
+                            });
 </code></pre>
 <h2 id="grouping">Grouping</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> grouped <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">GroupBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">var grouped = orders.GroupBy(order =&gt; CustomerId);
 </code></pre>
-
 <p>Note: Result will be an <code>IGrouping&lt;TKey,TElement&gt;</code></p>
 <h2 id="lookup">Lookup</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> packagesByCompany <span class="token operator">=</span> packages<span class="token punctuation">.</span><span class="token function">ToLookup</span><span class="token punctuation">(</span>oder <span class="token operator">=></span> oder<span class="token punctuation">.</span>Date<span class="token punctuation">,</span>  order <span class="token operator">=></span> order<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<pre><code class="language-csharp">var packagesByCompany = packages.ToLookup(oder =&gt; oder.Date,  order =&gt; order.id); 
 </code></pre>
-
 <p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
 <h2 id="zip">Zip</h2>
 <p>Zip creates an Enumerable of tupples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> first <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> second <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token comment">//Returns [(1, "a"), (2, "b"), (3, "c")]</span>
-first<span class="token punctuation">.</span><span class="token function">Zip</span><span class="token punctuation">(</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<pre><code class="language-csharp">int[] first = [1, 2, 3];
+string[] second = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+//Returns [(1, &quot;a&quot;), (2, &quot;b&quot;), (3, &quot;c&quot;)]
+first.Zip(second); 
 </code></pre>
 <h2 id="skip-take">Skip &amp; Take</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> take3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name"><span class="token keyword">var</span></span> next3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Skip</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">var take3 = orders.Take(3);
+var next3 = orders.Skip(3).Take(3);
 </code></pre>
 <h2 id="element-operations">Element operations</h2>
-<pre><code class="language-csharp"><span class="token comment">//throws exception if element not found</span>
-<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Last</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//returns default value if element not found. For refenrence types this is null!</span>
-<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//You can specify the default return value with the 2nd parameter:</span>
-<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Cutomer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Customer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">//throws exception if element not found
+var firstCustomer = customers.First(customer =&gt; customer.Id == 63);
+var lastCustomer = customers.Last(customer =&gt; customer.Id == 63);
+//returns default value if element not found. For refenrence types this is null!
+var firstCustomer = customers.FirstOrDefault(customer =&gt; customer.Id == 63);
+var lastCustomer = customers.LastOrDefault(customer =&gt; customer.Id == 63);
+//You can specify the default return value with the 2nd parameter:
+var firstCustomer = customers.FirstOrDefault(customer =&gt; customer.Id == 63, new Cutomer());
+var lastCustomer = customers.LastOrDefault(customer =&gt; customer.Id == 63, new Customer());
 </code></pre>
 <h2 id="conversions">Conversions</h2>
-<pre><code class="language-csharp"><span class="token class-name">Order<span class="token punctuation">[</span><span class="token punctuation">]</span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">List<span class="token punctuation">&lt;</span>Order<span class="token punctuation">></span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">HashSet<span class="token punctuation">&lt;</span>Order<span class="token punctuation">></span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToHashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span></span> customerDictionary
-     <span class="token operator">=</span> Customers<span class="token punctuation">.</span><span class="token function">ToDictionary</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">Order[] orders = Orders.Where(order =&gt; order.CustomerId == 66).ToArray();
+List&lt;Order&gt; orders = Orders.Where(order =&gt; order.CustomerId == 66).ToList();
+HashSet&lt;Order&gt; orders = Orders.Where(order =&gt; order.CustomerId == 66).ToHashSet();
+Dictionary&lt;int, string&gt; customerDictionary
+     = Customers.ToDictionary(customer =&gt; customer.Id, customer =&gt; customer.Name);
 </code></pre>
 <h2 id="enumerable-class">Enumerable class</h2>
-<pre><code class="language-csharp"><span class="token comment">//Create a range of numbers from 0 to 9</span>
-<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> range <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//Create a sequence of 12 "foo" strings</span>
-<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> foos <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Repeat</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//Create an empty sequence of integers</span>
-<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> empty <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Empty</span><span class="token generic class-name"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">//Create a range of numbers from 0 to 9
+IEnumerable&lt;int&gt; range = Enumerable.Range(0, 10);
+//Create a sequence of 12 &quot;foo&quot; strings
+IEnumerable&lt;string&gt; foos = Enumerable.Repeat(&quot;foo&quot;, 12);
+//Create an empty sequence of integers
+IEnumerable&lt;int&gt; empty = Enumerable.Empty&lt;int&gt;();
 </code></pre>
 <h1 id="pattern-matching">Pattern matching</h1>
 <h2 id="discard-pattern">Discard pattern</h2>
 <p>The discard pattern can be used to match any expression, including <code>null</code>. It's represented by the <code>_</code> symbol.</p>
-<pre><code class="language-csharp"><span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">isFloatingPointNumber</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> input<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token comment">//the out value of the conversion is discarded</span>
-    <span class="token keyword">return</span> <span class="token keyword">double</span><span class="token punctuation">.</span><span class="token function">TryParse</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">double</span></span> _<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">bool isFloatingPointNumber(string input)
+{
+    //the out value of the conversion is discarded
+    return double.TryParse(input, out double _);
+}
 </code></pre>
 <h2 id="var-pattern">var pattern</h2>
 <p>The <code>var</code> pattern can be used to match any expression, including <code>null</code>, and assign its result to a new local variable:</p>
-<pre><code class="language-csharp"><span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">isFloatingPointNumber</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> input<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">double</span><span class="token punctuation">.</span><span class="token function">TryParse</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">var</span></span> _<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">bool isFloatingPointNumber(string input)
+{
+    return double.TryParse(input, out var _);
+}
 </code></pre>
 <h2 id="declaration-and-type-patterns">Declaration and type patterns</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">object</span></span> greeting <span class="token operator">=</span> <span class="token string">"Hello, World!"</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span>greeting <span class="token keyword">is</span> <span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-	<span class="token comment">//greeting is a string and casted to message variable</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">object greeting = &quot;Hello, World!&quot;;
+if (greeting is string message)
+{
+	//greeting is a string and casted to message variable
+}
 </code></pre>
-
 <p>A declaration pattern with type T matches an expression when an expression result is non-null and any of the following conditions are true:</p>
 <ul>
 <li>The run-time type of an expression result is T.</li>
 <li>The run-time type of an expression result derives from type T, implements interface T, or another implicit reference conversion exists from it to T.</li>
 </ul>
 <p><strong>Null checking:</strong></p>
-<pre><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>input <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token comment">// ...</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">if (input is not null)
+{
+    // ...
+}
 </code></pre>
-
 <p><strong>Type checking in switch:</strong></p>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Vehicle</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Vehicle</span></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Truck</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Vehicle</span></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<pre><code class="language-csharp">public abstract class Vehicle {}
+public class Car : Vehicle {}
+public class Truck : Vehicle {}
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">TollCalculator</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">decimal</span></span> <span class="token function">CalculateToll</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token class-name">Vehicle</span> vehicle<span class="token punctuation">)</span> <span class="token operator">=></span> vehicle <span class="token keyword">switch</span>
-    <span class="token punctuation">{</span>
-        <span class="token return-type class-name">Car</span> _ <span class="token operator">=></span> <span class="token number">2.00m</span><span class="token punctuation">,</span>
-        <span class="token return-type class-name">Truck</span> _ <span class="token operator">=></span> <span class="token number">7.50m</span><span class="token punctuation">,</span>
-        <span class="token keyword">null</span> <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>vehicle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Unknown type of a vehicle"</span><span class="token punctuation">,</span> <span class="token keyword">nameof</span><span class="token punctuation">(</span>vehicle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+public static class TollCalculator
+{
+    public static decimal CalculateToll(this Vehicle vehicle) =&gt; vehicle switch
+    {
+        Car _ =&gt; 2.00m,
+        Truck _ =&gt; 7.50m,
+        null =&gt; throw new ArgumentNullException(nameof(vehicle)),
+        _ =&gt; throw new ArgumentException(&quot;Unknown type of a vehicle&quot;, nameof(vehicle)),
+    };
+}
 </code></pre>
 <h2 id="constant-pattern">Constant pattern</h2>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">decimal</span></span> <span class="token function">GetGroupTicketPrice</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> visitorCount<span class="token punctuation">)</span> <span class="token operator">=></span> visitorCount <span class="token keyword">switch</span>
-<span class="token punctuation">{</span>
-    <span class="token number">1</span> <span class="token operator">=></span> <span class="token number">12.0m</span><span class="token punctuation">,</span>
-    <span class="token number">2</span> <span class="token operator">=></span> <span class="token number">20.0m</span><span class="token punctuation">,</span>
-    <span class="token number">3</span> <span class="token operator">=></span> <span class="token number">27.0m</span><span class="token punctuation">,</span>
-    <span class="token number">0</span> <span class="token operator">=></span> <span class="token number">0.0m</span><span class="token punctuation">,</span>
-    _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Not supported number of visitors: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">visitorCount</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> <span class="token keyword">nameof</span><span class="token punctuation">(</span>visitorCount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">public static decimal GetGroupTicketPrice(int visitorCount) =&gt; visitorCount switch
+{
+    1 =&gt; 12.0m,
+    2 =&gt; 20.0m,
+    3 =&gt; 27.0m,
+    0 =&gt; 0.0m,
+    _ =&gt; throw new ArgumentException($&quot;Not supported number of visitors: {visitorCount}&quot;, nameof(visitorCount)),
+};
 </code></pre>
-
 <p>In a constant pattern, you can use any constant expression, such as integers, floating-point numbers, char, string, boolean, enums, name of a declared const field or local and null. Note: <code>Span&lt;char&gt;</code> or <code>ReadOnlySpan&lt;char&gt;</code> can also be matched in the constant pattern, but in C# 11 and later versions</p>
 <h2 id="relational-patterns">Relational patterns</h2>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">Classify</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">double</span></span> measurement<span class="token punctuation">)</span> <span class="token operator">=></span> measurement <span class="token keyword">switch</span>
-<span class="token punctuation">{</span>
-    <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">4.0</span> <span class="token operator">=></span> <span class="token string">"Too low"</span><span class="token punctuation">,</span>
-    <span class="token operator">></span> <span class="token number">10.0</span> <span class="token operator">=></span> <span class="token string">"Too high"</span><span class="token punctuation">,</span>
-    <span class="token keyword">double</span><span class="token punctuation">.</span>NaN <span class="token operator">=></span> <span class="token string">"Unknown"</span><span class="token punctuation">,</span>
-    _ <span class="token operator">=></span> <span class="token string">"Acceptable"</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">static string Classify(double measurement) =&gt; measurement switch
+{
+    &lt; -4.0 =&gt; &quot;Too low&quot;,
+    &gt; 10.0 =&gt; &quot;Too high&quot;,
+    double.NaN =&gt; &quot;Unknown&quot;,
+    _ =&gt; &quot;Acceptable&quot;,
+};
 </code></pre>
-
 <p>In a relational pattern, you can use any of the relational operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, or <code>&gt;=</code>. The right-hand part of a relational pattern must be a constant expression. For the constant expression, the constant pattern limitations apply.</p>
 <h2 id="logical-patterns">Logical patterns</h2>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">Classify</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">double</span></span> measurement<span class="token punctuation">)</span> <span class="token operator">=></span> measurement <span class="token keyword">switch</span>
-<span class="token punctuation">{</span>
-    <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">40.0</span> <span class="token operator">=></span> <span class="token string">"Too low"</span><span class="token punctuation">,</span>
-    <span class="token operator">>=</span> <span class="token operator">-</span><span class="token number">40.0</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">=></span> <span class="token string">"Low"</span><span class="token punctuation">,</span>
-    <span class="token operator">>=</span> <span class="token number">0</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">10.0</span> <span class="token operator">=></span> <span class="token string">"Acceptable"</span><span class="token punctuation">,</span>
-    <span class="token operator">>=</span> <span class="token number">10.0</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">20.0</span> <span class="token operator">=></span> <span class="token string">"High"</span><span class="token punctuation">,</span>
-    <span class="token operator">>=</span> <span class="token number">20.0</span> <span class="token operator">=></span> <span class="token string">"Too high"</span><span class="token punctuation">,</span>
-    <span class="token keyword">double</span><span class="token punctuation">.</span>NaN <span class="token operator">=></span> <span class="token string">"Unknown"</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">static string Classify(double measurement) =&gt; measurement switch
+{
+    &lt; -40.0 =&gt; &quot;Too low&quot;,
+    &gt;= -40.0 and &lt; 0 =&gt; &quot;Low&quot;,
+    &gt;= 0 and &lt; 10.0 =&gt; &quot;Acceptable&quot;,
+    &gt;= 10.0 and &lt; 20.0 =&gt; &quot;High&quot;,
+    &gt;= 20.0 =&gt; &quot;Too high&quot;,
+    double.NaN =&gt; &quot;Unknown&quot;,
+};
 </code></pre>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">GetCalendarSeason</span><span class="token punctuation">(</span><span class="token class-name">DateTime</span> date<span class="token punctuation">)</span> <span class="token operator">=></span> date<span class="token punctuation">.</span>Month <span class="token keyword">switch</span>
-<span class="token punctuation">{</span>
-    <span class="token number">3</span> <span class="token keyword">or</span> <span class="token number">4</span> <span class="token keyword">or</span> <span class="token number">5</span> <span class="token operator">=></span> <span class="token string">"spring"</span><span class="token punctuation">,</span>
-    <span class="token number">6</span> <span class="token keyword">or</span> <span class="token number">7</span> <span class="token keyword">or</span> <span class="token number">8</span> <span class="token operator">=></span> <span class="token string">"summer"</span><span class="token punctuation">,</span>
-    <span class="token number">9</span> <span class="token keyword">or</span> <span class="token number">10</span> <span class="token keyword">or</span> <span class="token number">11</span> <span class="token operator">=></span> <span class="token string">"autumn"</span><span class="token punctuation">,</span>
-    <span class="token number">12</span> <span class="token keyword">or</span> <span class="token number">1</span> <span class="token keyword">or</span> <span class="token number">2</span> <span class="token operator">=></span> <span class="token string">"winter"</span><span class="token punctuation">,</span>
-    _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentOutOfRangeException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token interpolation-string"><span class="token string">$"Date with unexpected month: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">date<span class="token punctuation">.</span>Month</span><span class="token punctuation">}</span></span><span class="token string">."</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">static string GetCalendarSeason(DateTime date) =&gt; date.Month switch
+{
+    3 or 4 or 5 =&gt; &quot;spring&quot;,
+    6 or 7 or 8 =&gt; &quot;summer&quot;,
+    9 or 10 or 11 =&gt; &quot;autumn&quot;,
+    12 or 1 or 2 =&gt; &quot;winter&quot;,
+    _ =&gt; throw new ArgumentOutOfRangeException(nameof(date), $&quot;Date with unexpected month: {date.Month}.&quot;),
+};
 </code></pre>
-
 <p>Precedence: <code>not</code>, <code>and</code>, <code>or</code>. To explicitly specify the precedence, use parentheses:</p>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsLetter</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">char</span></span> c<span class="token punctuation">)</span> <span class="token operator">=></span> c <span class="token keyword">is</span> <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token char">'a'</span> <span class="token keyword">and</span> <span class="token operator">&lt;=</span> <span class="token char">'z'</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token char">'A'</span> <span class="token keyword">and</span> <span class="token operator">&lt;=</span> <span class="token char">'Z'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">static bool IsLetter(char c) =&gt; c is (&gt;= 'a' and &lt;= 'z') or (&gt;= 'A' and &lt;= 'Z');
 </code></pre>
 <h2 id="property-pattern">Property Pattern</h2>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsConferenceDay</span><span class="token punctuation">(</span><span class="token class-name">DateTime</span> date<span class="token punctuation">)</span> <span class="token operator">=></span> date <span class="token keyword">is</span> <span class="token punctuation">{</span> Year<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">Month</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">Day</span><span class="token punctuation">:</span> <span class="token number">19</span> <span class="token keyword">or</span> <span class="token number">20</span> <span class="token keyword">or</span> <span class="token number">21</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">static bool IsConferenceDay(DateTime date) =&gt; date is { Year: 2020, Month: 5, Day: 19 or 20 or 21 };
 </code></pre>
-
 <p>A property pattern matches an expression when an expression result is non-null and every nested pattern matches the corresponding property or field of the expression result. It can be combined with run-time type check and variable declaration:</p>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">TakeFive</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> input<span class="token punctuation">)</span> <span class="token operator">=></span> input <span class="token keyword">switch</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">string</span> <span class="token punctuation">{</span> Length<span class="token punctuation">:</span> <span class="token operator">>=</span> <span class="token number">5</span> <span class="token punctuation">}</span> s <span class="token operator">=></span> s<span class="token punctuation">.</span><span class="token function">Substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token return-type class-name"><span class="token keyword">string</span></span> s <span class="token operator">=></span> s<span class="token punctuation">,</span>
+<pre><code class="language-csharp">static string TakeFive(object input) =&gt; input switch
+{
+    string { Length: &gt;= 5 } s =&gt; s.Substring(0, 5),
+    string s =&gt; s,
 
-    ICollection<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span> <span class="token punctuation">{</span> Count<span class="token punctuation">:</span> <span class="token operator">>=</span> <span class="token number">5</span> <span class="token punctuation">}</span> symbols <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">string</span></span><span class="token punctuation">(</span>symbols<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token return-type class-name">ICollection<span class="token punctuation">&lt;</span><span class="token keyword">char</span><span class="token punctuation">></span></span> symbols <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">string</span></span><span class="token punctuation">(</span>symbols<span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    ICollection&lt;char&gt; { Count: &gt;= 5 } symbols =&gt; new string(symbols.Take(5).ToArray()),
+    ICollection&lt;char&gt; symbols =&gt; new string(symbols.ToArray()),
 
-    <span class="token keyword">null</span> <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Not supported input type."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    null =&gt; throw new ArgumentNullException(nameof(input)),
+    _ =&gt; throw new ArgumentException(&quot;Not supported input type.&quot;),
+};
 </code></pre>
 <h2 id="positional-pattern">Positional pattern</h2>
 <p>You use a positional pattern to deconstruct an expression result and match the resulting values against the corresponding nested patterns.</p>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">readonly</span> <span class="token keyword">struct</span> <span class="token class-name">Point</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> X <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Y <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<pre><code class="language-csharp">public readonly struct Point
+{
+    public int X { get; }
+    public int Y { get; }
 
-    <span class="token keyword">public</span> <span class="token function">Point</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> x<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> y<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Deconstruct</span><span class="token punctuation">(</span><span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">int</span></span> x<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">int</span></span> y<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    public Point(int x, int y) =&gt; (X, Y) = (x, y);
+    public void Deconstruct(out int x, out int y) =&gt; (x, y) = (X, Y);
+}
 
-<span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">Classify</span><span class="token punctuation">(</span><span class="token class-name">Point</span> point<span class="token punctuation">)</span> <span class="token operator">=></span> point <span class="token keyword">switch</span>
-<span class="token punctuation">{</span>
-    <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"Origin"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"positive X basis end"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"positive Y basis end"</span><span class="token punctuation">,</span>
-    _ <span class="token operator">=></span> <span class="token string">"Just a point"</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+static string Classify(Point point) =&gt; point switch
+{
+    (0, 0) =&gt; &quot;Origin&quot;,
+    (1, 0) =&gt; &quot;positive X basis end&quot;,
+    (0, 1) =&gt; &quot;positive Y basis end&quot;,
+    _ =&gt; &quot;Just a point&quot;,
+};
 </code></pre>
-
 <p>At the preceding example, the type of an expression contains the Deconstruct method, which is used to deconstruct an expression result. You can also match expressions of tuple types against positional patterns. In that way, you can match multiple inputs against various patterns:</p>
-<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">decimal</span></span> <span class="token function">GetGroupTicketPriceDiscount</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> groupSize<span class="token punctuation">,</span> <span class="token class-name">DateTime</span> visitDate<span class="token punctuation">)</span>
-    <span class="token operator">=></span> <span class="token punctuation">(</span>groupSize<span class="token punctuation">,</span> visitDate<span class="token punctuation">.</span>DayOfWeek<span class="token punctuation">)</span> <span class="token keyword">switch</span>
-    <span class="token punctuation">{</span>
-        <span class="token punctuation">(</span><span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Group size must be positive."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        <span class="token punctuation">(</span>_<span class="token punctuation">,</span> DayOfWeek<span class="token punctuation">.</span>Saturday <span class="token keyword">or</span> DayOfWeek<span class="token punctuation">.</span>Sunday<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">0.0m</span><span class="token punctuation">,</span>
-        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">5</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">,</span> DayOfWeek<span class="token punctuation">.</span>Monday<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">20.0m</span><span class="token punctuation">,</span>
-        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">,</span> DayOfWeek<span class="token punctuation">.</span>Monday<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">30.0m</span><span class="token punctuation">,</span>
-        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">5</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">12.0m</span><span class="token punctuation">,</span>
-        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">15.0m</span><span class="token punctuation">,</span>
-        _ <span class="token operator">=></span> <span class="token number">0.0m</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">static decimal GetGroupTicketPriceDiscount(int groupSize, DateTime visitDate)
+    =&gt; (groupSize, visitDate.DayOfWeek) switch
+    {
+        (&lt;= 0, _) =&gt; throw new ArgumentException(&quot;Group size must be positive.&quot;),
+        (_, DayOfWeek.Saturday or DayOfWeek.Sunday) =&gt; 0.0m,
+        (&gt;= 5 and &lt; 10, DayOfWeek.Monday) =&gt; 20.0m,
+        (&gt;= 10, DayOfWeek.Monday) =&gt; 30.0m,
+        (&gt;= 5 and &lt; 10, _) =&gt; 12.0m,
+        (&gt;= 10, _) =&gt; 15.0m,
+        _ =&gt; 0.0m,
+    };
 </code></pre>
 <h2 id="list-patterns">List patterns</h2>
-<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">int[] numbers = { 1, 2, 3 };
 
-numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
-numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
-numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
-numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">or</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">>=</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+numbers is [1, 2, 3]; //true
+numbers is [1, 2, 4]; //false
+numbers is [1, 2, 3, 4]; //false
+numbers is [0 or 1, &lt;= 2, &gt;= 3]; //true
 </code></pre>
-
 <p>To match elements only at the start or/and the end of an input sequence, use the slice pattern (<code>..</code>);  A slice pattern matches zero or more elements. You can use at most one slice pattern in a list pattern. The slice pattern can only appear in a list pattern.</p>
-<pre><code class="language-csharp"><span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span> _<span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
+<pre><code class="language-csharp">new[] { 1, 2, 3, 4, 5 } is [&gt; 0, &gt; 0, ..];  // True
+new[] { 1, 1 } is [_, _, ..];  // True
+new[] { 0, 1, 2, 3, 4 } is [&gt; 0, &gt; 0, ..];  // False
+new[] { 1 } is [1, 2, ..];  // False
 
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+new[] { 1, 2, 3, 4 } is [.., &gt; 0, &gt; 0];  // True
+new[] { 2, 4 } is [.., &gt; 0, 2, 4];  // False
+new[] { 2, 4 } is [.., 2, 4];  // True
 
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token keyword">or</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
-<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
+new[] { 1, 2, 3, 4 } is [&gt;= 0, .., 2 or 4];  // True
+new[] { 1, 0, 0, 1 } is [1, 0, .., 0, 1];  // True
+new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 </code></pre>
 <h1 id="io">I/O</h1>
 <figure>
@@ -11675,41 +11681,41 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <p>The recipient, who knows the secret key, can generate the HMAC using the received message and compare it to the transmitted HMAC. If they match, it indicates that the message has not been tampered with during transmission and that it was sent by someone with knowledge of the secret key.</p>
 <h1 id="reflection">Reflection</h1>
 <h3 id="get-all-types-that-implement-a-given-interface">Get all types that implement a given interface</h3>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>Type<span class="token punctuation">></span></span> <span class="token generic-method"><span class="token function">GetTypesThatImplement</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TInterface<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Assembly</span> assembly<span class="token punctuation">)</span>
-    <span class="token keyword">where</span> <span class="token class-name">TInterface</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> assembly<span class="token punctuation">.</span><span class="token function">GetTypes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>t <span class="token operator">=></span> t<span class="token punctuation">.</span><span class="token function">IsAssignableTo</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">TInterface</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>t<span class="token punctuation">.</span>IsInterface<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">public static IEnumerable&lt;Type&gt; GetTypesThatImplement&lt;TInterface&gt;(Assembly assembly)
+    where TInterface : class
+{
+    return assembly.GetTypes()
+        .Where(t =&gt; t.IsAssignableTo(typeof(TInterface)) &amp;&amp; !t.IsInterface);
+}
 </code></pre>
 <h3 id="get-assembly-version">Get assembly version</h3>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">Version</span> <span class="token function">GetCurrentAssemblyVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>Assembly<span class="token punctuation">.</span><span class="token function">GetExecutingAssembly</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">.</span>Version
-        <span class="token operator">??</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Version</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">public static Version GetCurrentAssemblyVersion()
+{
+    return System.Reflection.Assembly.GetExecutingAssembly()
+        .GetName()
+        .Version
+        ?? new Version(0, 0, 0, 0);
+}
 </code></pre>
 <h3 id="check-if-a-type-is-a-record-class">Check if a type is a record class</h3>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsRecordType</span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>type<span class="token punctuation">.</span>IsClass<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">public static bool IsRecordType(Type type)
+{
+    if (!type.IsClass)
+        return false;
 
-    <span class="token class-name"><span class="token keyword">var</span></span> searchFlags <span class="token operator">=</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Instance
-            <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Public
-            <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>NonPublic<span class="token punctuation">;</span>
+    var searchFlags = System.Reflection.BindingFlags.Instance
+            | System.Reflection.BindingFlags.Public
+            | System.Reflection.BindingFlags.NonPublic;
 
-    <span class="token keyword">return</span> type<span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span><span class="token string">"EqualityContract"</span><span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span>
-        <span class="token operator">&amp;&amp;</span> type<span class="token punctuation">.</span><span class="token function">GetMethod</span><span class="token punctuation">(</span><span class="token string">"&lt;Clone>$"</span><span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    return type.GetProperty(&quot;EqualityContract&quot;, searchFlags) != null
+        &amp;&amp; type.GetMethod(&quot;&lt;Clone&gt;$&quot;, searchFlags) != null;
+}
 </code></pre>
 <h3 id="check-if-a-type-is-a-ref-struct">Check if a type is a ref struct</h3>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsRefStruct</span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> type<span class="token punctuation">.</span>IsByRefLike<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<pre><code class="language-csharp">public static bool IsRefStruct(Type type)
+{
+    return type.IsByRefLike;
+}
 </code></pre>
 <h3 id="create-an-instance-of-a-type-with-optional-property-initializers">Create an instance of a type with optional property initializers</h3>
 <p><strong>Notes</strong></p>
@@ -11718,33 +11724,33 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <li>Reflection doesn't enforce that properties marked with the <code>required</code> keyword have to have a value set. If you don't set these values, then they can be <code>null</code></li>
 <li>This method doesn't check property and value types. If you provide a wrong type of value in the <code>propertyInitializers</code>, then the method will fail with an exception.</li>
 </ol>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">T</span> <span class="token generic-method"><span class="token function">CreateInstance</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Type</span> type<span class="token punctuation">,</span>
-                                    <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">object</span><span class="token punctuation">></span><span class="token punctuation">?</span></span> propertyInitializers <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-    <span class="token keyword">where</span> <span class="token class-name">T</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">T</span><span class="token punctuation">)</span> <span class="token operator">!=</span> type<span class="token punctuation">)</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Type mismatch"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="language-csharp">public static T CreateInstance&lt;T&gt;(Type type,
+                                    Dictionary&lt;string, object&gt;? propertyInitializers = null)
+    where T: class
+{
+    if (typeof(T) != type)
+        throw new ArgumentException(&quot;Type mismatch&quot;);
 
-    <span class="token class-name">T<span class="token punctuation">?</span></span> instance <span class="token operator">=</span> Activator<span class="token punctuation">.</span><span class="token function">CreateInstance</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token class-name">T
-        <span class="token punctuation">?</span></span><span class="token punctuation">?</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">InvalidOperationException</span><span class="token punctuation">(</span><span class="token string">"Failed to create instance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    T? instance = Activator.CreateInstance(type) as T
+        ?? throw new InvalidOperationException(&quot;Failed to create instance&quot;);
     
-    <span class="token class-name"><span class="token keyword">var</span></span> searchFlags <span class="token operator">=</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Instance
-                    <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>Public
-                    <span class="token operator">|</span> System<span class="token punctuation">.</span>Reflection<span class="token punctuation">.</span>BindingFlags<span class="token punctuation">.</span>NonPublic<span class="token punctuation">;</span>
+    var searchFlags = System.Reflection.BindingFlags.Instance
+                    | System.Reflection.BindingFlags.Public
+                    | System.Reflection.BindingFlags.NonPublic;
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>propertyInitializers <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> propery <span class="token keyword">in</span> propertyInitializers<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token class-name"><span class="token keyword">var</span></span> propertyInfo <span class="token operator">=</span> type<span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span>propery<span class="token punctuation">.</span>Key<span class="token punctuation">,</span> searchFlags<span class="token punctuation">)</span>
-                <span class="token operator">??</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Property </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">propery<span class="token punctuation">.</span>Key</span><span class="token punctuation">}</span></span><span class="token string"> not found"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    if (propertyInitializers != null)
+    {
+        foreach (var propery in propertyInitializers)
+        {
+            var propertyInfo = type.GetProperty(propery.Key, searchFlags)
+                ?? throw new ArgumentException($&quot;Property {propery.Key} not found&quot;);
 
-            propertyInfo<span class="token punctuation">.</span><span class="token function">SetValue</span><span class="token punctuation">(</span>instance<span class="token punctuation">,</span> propery<span class="token punctuation">.</span>Value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+            propertyInfo.SetValue(instance, propery.Value);
+        }
+    }
 
-    <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    return instance;
+}
 </code></pre>
 <h1 id="ui">UI</h1>
 <ul>
@@ -12005,59 +12011,59 @@ numbers <span class="token keyword">is</span> <span class="token punctuation">[<
 <figcaption>MVVM Data flow</figcaption>
 </figure>
 <h3 id="minimal-mvvm-implementation">Minimal MVVM Implementation</h3>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">ViewModelBase</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">INotifyPropertyChanged</span></span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">event</span> <span class="token class-name">PropertyChangedEventHandler<span class="token punctuation">?</span></span> PropertyChanged<span class="token punctuation">;</span>
+<pre><code class="language-csharp">public abstract class ViewModelBase : INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler? PropertyChanged;
 
-    <span class="token keyword">protected</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">OnPropertyChanged</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> propertyName <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">)</span> 
-        <span class="token operator">=></span> PropertyChanged<span class="token punctuation">?.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PropertyChangedEventArgs</span><span class="token punctuation">(</span>propertyName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    protected void OnPropertyChanged(string propertyName = &quot;&quot;) 
+        =&gt; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-    <span class="token keyword">protected</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token generic-method"><span class="token function">SetValue</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">T</span> field<span class="token punctuation">,</span>
-                               <span class="token class-name">T</span> newValue<span class="token punctuation">,</span>
-                               <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">CallerMemberName</span></span><span class="token punctuation">]</span> <span class="token class-name"><span class="token keyword">string</span></span> properyName <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>EqualityComparer<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">.</span>Default<span class="token punctuation">.</span><span class="token function">Equals</span><span class="token punctuation">(</span>field<span class="token punctuation">,</span> newValue<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            field <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
-            <span class="token function">OnPropertyChanged</span><span class="token punctuation">(</span>properyName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+    protected void SetValue&lt;T&gt;(ref T field,
+                               T newValue,
+                               [CallerMemberName] string properyName = &quot;&quot;)
+    {
+        if (!EqualityComparer&lt;T&gt;.Default.Equals(field, newValue))
+        {
+            field = newValue;
+            OnPropertyChanged(properyName);
+        }
+    }
 
-    <span class="token keyword">protected</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token generic-method"><span class="token function">SetValue</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">T</span> field<span class="token punctuation">,</span>
-                               <span class="token class-name">T</span> newValue<span class="token punctuation">,</span>
-                               <span class="token class-name">IEqualityComparer<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> comparer<span class="token punctuation">,</span>
-                               <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">CallerMemberName</span></span><span class="token punctuation">]</span> <span class="token class-name"><span class="token keyword">string</span></span> properyName <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>comparer<span class="token punctuation">.</span><span class="token function">Equals</span><span class="token punctuation">(</span>field<span class="token punctuation">,</span> newValue<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            field <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
-            <span class="token function">OnPropertyChanged</span><span class="token punctuation">(</span>properyName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    protected void SetValue&lt;T&gt;(ref T field,
+                               T newValue,
+                               IEqualityComparer&lt;T&gt; comparer,
+                               [CallerMemberName] string properyName = &quot;&quot;)
+    {
+        if (!comparer.Equals(field, newValue))
+        {
+            field = newValue;
+            OnPropertyChanged(properyName);
+        }
+    }
+}
 </code></pre>
-<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RelayCommand</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ICommand</span></span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">Action<span class="token punctuation">&lt;</span><span class="token keyword">object</span><span class="token punctuation">?</span><span class="token punctuation">></span></span> _acton<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">Predicate<span class="token punctuation">&lt;</span><span class="token keyword">object</span><span class="token punctuation">?</span><span class="token punctuation">></span><span class="token punctuation">?</span></span> _canExecute<span class="token punctuation">;</span>
+<pre><code class="language-csharp">public class RelayCommand : ICommand
+{
+    private readonly Action&lt;object?&gt; _acton;
+    private readonly Predicate&lt;object?&gt;? _canExecute;
 
-    <span class="token keyword">public</span> <span class="token keyword">event</span> <span class="token class-name">EventHandler<span class="token punctuation">?</span></span> CanExecuteChanged<span class="token punctuation">;</span>
+    public event EventHandler? CanExecuteChanged;
 
-    <span class="token keyword">public</span> <span class="token function">RelayCommand</span><span class="token punctuation">(</span><span class="token class-name">Action<span class="token punctuation">&lt;</span><span class="token keyword">object</span><span class="token punctuation">?</span><span class="token punctuation">></span></span> acton<span class="token punctuation">,</span> <span class="token class-name">Predicate<span class="token punctuation">&lt;</span><span class="token keyword">object</span><span class="token punctuation">?</span><span class="token punctuation">></span><span class="token punctuation">?</span></span> canExecute <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        _acton <span class="token operator">=</span> acton<span class="token punctuation">;</span>
-        _canExecute <span class="token operator">=</span> canExecute<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    public RelayCommand(Action&lt;object?&gt; acton, Predicate&lt;object?&gt;? canExecute = null)
+    {
+        _acton = acton;
+        _canExecute = canExecute;
+    }
 
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">RaiseCanExecuteChanged</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token operator">=></span> CanExecuteChanged<span class="token punctuation">?.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> EventArgs<span class="token punctuation">.</span>Empty<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    public void RaiseCanExecuteChanged()
+        =&gt; CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">CanExecute</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span><span class="token punctuation">?</span></span> parameter<span class="token punctuation">)</span>
-        <span class="token operator">=></span> _canExecute <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">_canExecute</span><span class="token punctuation">(</span>parameter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    public bool CanExecute(object? parameter)
+        =&gt; _canExecute == null || _canExecute(parameter);
 
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Execute</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span><span class="token punctuation">?</span></span> parameter<span class="token punctuation">)</span>
-        <span class="token operator">=></span> _acton<span class="token punctuation">.</span><span class="token function">Invoke</span><span class="token punctuation">(</span>parameter<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    public void Execute(object? parameter)
+        =&gt; _acton.Invoke(parameter);
+}
 </code></pre>
 <h2 id="wpf-class-hierarchy">WPF class hierarchy</h2>
 <p><svg version="1.1" baseProfile="full" width="1105.8" height="520.0" viewbox="0 0 1105.75 520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
@@ -19160,11 +19166,11 @@ Install with: <code>dotnet add package xunit</code></p>
 </li>
 </ul>
 </div>
-</div>
-<div></div>
 
+        </main>
 
-	<script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+
 </body>
 
 </html>

@@ -1,6 +1,8 @@
-:::parent
+:::toc-wrapper
 
 [toc maxlevel="2"] Contents
+
+:::
 
 :::content
 
