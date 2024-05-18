@@ -261,3 +261,7 @@ pre .copyButton:hover {
     margin: 60px auto 0px auto;
     max-width: 88rem;
 }
+
+#intro {
+    display: none;
+}
