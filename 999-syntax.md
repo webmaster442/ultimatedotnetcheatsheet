@@ -394,7 +394,7 @@ class Program
 
 ## Delegates
 
-```cshap
+```csharp
 public delegate void MyDelegate(string message);
 
 public class Program
@@ -418,7 +418,7 @@ public class Program
 ### Delegate as parameter
 
 
-```cshap
+```csharp
 public delegate void MyDelegate(string message);
 
 public class Program
