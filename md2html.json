@@ -48,5 +48,21 @@
       "-i",
       "150-nuget.md"
     ]
+  },
+  {
+    "Name": "csharp.html generation",
+    "Arguments": [
+      "-ns",
+      "--svg",
+      "--no-css",
+      "-tf",
+      "template.html",
+      "--title",
+      "Ultimate .NET Cheat sheet - C# Syntax",
+      "-o",
+      "docs\\csharp.html",
+      "-i",
+      "999-syntax.md"
+    ]
   }
 ]
