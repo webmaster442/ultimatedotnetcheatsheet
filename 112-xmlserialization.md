@@ -1,4 +1,6 @@
-# XML Serialization
+# Serialization
+
+## XML Serialization
 
 XML serialization is part of .NET since the 1.0 release. It uses attributes and under the hood reflection to serialize data into the XML (https://en.wikipedia.org/wiki/XML) format. To use XML serialization you must reference the `System.Xml.Serialization` namespace. **Warning**: The XmlSerializer class **does not serializes objects that are marked as `[Obsolete]`**.
 
