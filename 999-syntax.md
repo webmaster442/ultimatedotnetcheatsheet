@@ -477,7 +477,7 @@ public class Program
 
 #### Action
 
-```cshap
+```csharp
 public class Program
 {
     public static void DisplayMessage(string message)
@@ -495,7 +495,7 @@ public class Program
 
 #### Func
 
-```cshap
+```csharp
 public class Program
 {
     public static int Add(int x, int y)
@@ -514,7 +514,7 @@ public class Program
 
 #### Predicate
 
-```cshap
+```csharp
 public class Program
 {
     public static bool IsPositive(int number)
