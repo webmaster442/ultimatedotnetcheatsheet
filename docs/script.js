@@ -48,14 +48,6 @@ function onLoaded() {
         classes.remove('toc-visible');
         classes.add('toc-collapsed');
     });
-
-    //correct menu switching
-    if (window.location.href.endsWith('index.html')) {
-        document.getElementById('menu-net').style.display = "none";
-    }
-    else if (window.location.href.endsWith('csharp.html')) {
-        document.getElementById('menu-csharp').style.display = "none";
-    }
 }
 
 function notify(message) {

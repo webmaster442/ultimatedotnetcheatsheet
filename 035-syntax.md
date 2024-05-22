@@ -1,14 +1,6 @@
-:::toc-wrapper
+# C# basic syntax
 
-[toc maxlevel="3"] Contents
-
-:::
-
-:::content
-
-# C# Syntax
-
-# Basic Structure
+## Basic program Structure
 
 ```csharp
 using System;
@@ -25,20 +17,27 @@ namespace HelloWorld
 }
 ```
 
+With Top level statements (.NET > 5):
+
+```csharp
+Console.WriteLine("Hello, World!");
+```
+
 ## Comments
 
 ```csharp
 // Single-line comment
 
 /*
-Multi-line comment
+This is a 
+multi-line comment
 */
 ```
 
 ## Variables and Data Types
 
 ```csharp
-// Variable declaration and initialization
+//Variable declaration and initialization
 int number = 10;
 double decimalNumber = 10.5;
 char character = 'A';
@@ -49,21 +48,9 @@ bool isTrue = true;
 var autoVariable = 100;
 ```
 
-### Common Data types
+## Control Structures
 
-```csharp
-int integerNumber = 100;
-float floatNumber = 10.5f;
-double doubleNumber = 20.99;
-decimal decimalNumber = 100.5m;
-char singleCharacter = 'A';
-string textString = "Hello, World!";
-bool booleanValue = true;
-```
-
-# Control Structures
-
-## Conditional Statements
+### Conditional Statements
 
 ```csharp
 if (condition)
@@ -80,7 +67,7 @@ else
 }
 ```
 
-## Switch
+### Switch
 
 ```csharp
 switch (variable)
@@ -97,7 +84,7 @@ switch (variable)
 }
 ```
 
-## Loops
+### Loops
 
 ```csharp
 // For Loop
@@ -125,7 +112,7 @@ foreach (var item in collection)
 }
 ```
 
-# Methods
+## Methods
 
 ```csharp
 class Program
@@ -143,7 +130,7 @@ class Program
 }
 ```
 
-# Classes and Objects
+## Classes and Objects
 
 ```csharp
 class Person
@@ -171,7 +158,7 @@ Person person = new Person("John", 30);
 person.Greet();
 ```
 
-## Properties
+### Properties
 
 ```csharp
 class Person
@@ -181,7 +168,7 @@ class Person
 }
 ```
 
-## Inheritance
+### Inheritance
 
 ```csharp
 class Animal
@@ -205,7 +192,7 @@ dog.Eat();  // Inherited method
 dog.Bark(); // Dog's method
 ```
 
-## Polymorphism
+### Polymorphism
 
 ```csharp
 class Animal
@@ -239,7 +226,7 @@ myDog.MakeSound(); // Output: Woof!
 myCat.MakeSound(); // Output: Meow!
 ```
 
-## Interfaces
+### Interfaces
 
 ```csharp
 interface IAnimal
@@ -256,7 +243,7 @@ class Dog : IAnimal
 }
 ```
 
-## Generics
+### Generics
 
 ```csharp
 // Generic Class
@@ -300,7 +287,7 @@ utilities.Print(123);    // Output: 123
 utilities.Print("abc");  // Output: abc
 ```
 
-# Tupples
+## Tupples
 
 ```csharp
 var tuple = new Tuple<int, string, double>(1, "apple", 3.14);
@@ -309,7 +296,7 @@ Console.WriteLine(tuple.Item2); // Output: apple
 Console.WriteLine(tuple.Item3); // Output: 3.14
 ```
 
-## Value tupples
+### Value tupples
 
 ```csharp
 var valueTuple = (1, "apple", 3.14);
@@ -325,9 +312,9 @@ Console.WriteLine(valueTuple.Name);  // Output: apple
 Console.WriteLine(valueTuple.Price); // Output: 3.14
 ```
 
-## Deconstruct
+### Deconstruct
 
-```cshap
+```csharp
 var valueTuple = (1, "apple", 3.14);
 var (id, name, price) = valueTuple;
 Console.WriteLine(id);    // Output: 1
@@ -335,40 +322,7 @@ Console.WriteLine(name);  // Output: apple
 Console.WriteLine(price); // Output: 3.14
 ```
 
-# Exception Handling
-
-```csharp
-try
-{
-    // code that may cause an exception
-}
-catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
-finally
-{
-    // code to be executed regardless of an exception
-}
-```
-
-# Namespaces
-
-```csharp
-using System;
-using System.Collections.Generic;
-
-// Define a namespace
-namespace MyNamespace
-{
-    class MyClass
-    {
-        // class members
-    }
-}
-```
-
-# Yield
+## Yield
 
 ```csharp
 public class NumberGenerator
@@ -400,7 +354,7 @@ class Program
 }
 ```
 
-# Delegates
+## Delegates
 
 ```csharp
 public delegate void MyDelegate(string message);
@@ -423,7 +377,7 @@ public class Program
 }
 ```
 
-## Delegate as parameter
+### Delegate as parameter
 
 
 ```csharp
@@ -449,7 +403,7 @@ public class Program
 }
 ```
 
-## Multicast Delegates
+### Multicast Delegates
 
 ```csharp
 public delegate void MyDelegate(string message);
@@ -481,9 +435,9 @@ public class Program
 }
 ```
 
-## Generic Delegates
+### Generic Delegates
 
-### Action
+#### Action
 
 ```csharp
 public class Program
@@ -501,7 +455,7 @@ public class Program
 }
 ```
 
-### Func
+#### Func
 
 ```csharp
 public class Program
@@ -520,7 +474,7 @@ public class Program
 }
 ```
 
-### Predicate
+#### Predicate
 
 ```csharp
 public class Program
@@ -539,9 +493,9 @@ public class Program
 }
 ```
 
-# Events
+## Events
 
-## Declaring an Event
+### Declaring an Event
 
 ```csharp
 public class Publisher
@@ -563,7 +517,7 @@ public class Publisher
 }
 ```
 
-## Subscribing to an event
+### Subscribing to an event
 
 ```csharp
 public class Subscriber
@@ -590,7 +544,7 @@ class Program
 }
 ```
 
-## Creating Custom EventArgs
+### Creating Custom EventArgs
 
 ```csharp
 public class CustomEventArgs : EventArgs
@@ -620,5 +574,3 @@ public class Publisher
     }
 }
 ```
-
-::::

@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="prism.css" type="text/css">
     <link rel="stylesheet" href="style-print.css" type="text/css" />
     <script type="text/javascript" src="prism.js"></script>
-
     <title>Ultimate .NET Cheat sheet</title>
 
     <!--OpenGraph meta-->
@@ -58,7 +57,8 @@
                     </svg>
                 </a>
             </li>
-            <li><a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+            <li>
+                <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
                     title="Fork me on github">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
@@ -66,7 +66,7 @@
                     </svg>
                 </a>
             </li>
-            <li id="version">Version: 24-05-17
+            <li id="version">Version: 24-05-22
             </li>
             <li id="notify">
                 <!--Notfication container-->
@@ -84,207 +84,243 @@
         <div class="toc-wrapper">
 <nav id="toc"><h1 class="toc-title">Contents</h1><ul>
 <li>
+<a href="#intro">Intro</a><ul>
+<li>
+<a href="#authors">Authors</a></li>
+<li>
+<a href="#license">License</a></li>
+<li>
+<a href="#changelog">Changelog</a></li>
+</ul>
+</li>
+<li>
+<a href="#dotnet-basic-commands">Dotnet basic commands</a><ul>
+<li>
+<a href="#new">New</a></li>
+<li>
+<a href="#solution-management">Solution management</a></li>
+<li>
+<a href="#package-management">Package management</a></li>
+<li>
+<a href="#build-run">Build & Run</a></li>
+<li>
+<a href="#tool-management">Tool management</a></li>
+<li>
+<a href="#nuget">NuGet</a></li>
+<li>
+<a href="#formating">Formating</a></li>
+<li>
+<a href="#workloads">Workloads</a></li>
+<li>
+<a href="#tools">Tools</a></li>
+<li>
+<a href="#useful-tools">Useful tools</a></li>
+</ul>
+</li>
+<li>
+<a href="#project-file-xml-settings">Project file XML settings</a></li>
+<li>
+<a href="#usefull-powershell-commands-scripts">Usefull Powershell commands & scripts</a></li>
+<li>
+<a href="#c-basic-syntax">C# basic syntax</a><ul>
+<li>
+<a href="#basic-program-structure">Basic program Structure</a></li>
+<li>
+<a href="#comments">Comments</a></li>
+<li>
+<a href="#variables-and-data-types">Variables and Data Types</a></li>
+<li>
+<a href="#control-structures">Control Structures</a><ul>
+</ul>
+</li>
+<li>
+<a href="#methods">Methods</a></li>
+<li>
+<a href="#classes-and-objects">Classes and Objects</a><ul>
+</ul>
+</li>
+<li>
+<a href="#tupples">Tupples</a><ul>
+</ul>
+</li>
+<li>
+<a href="#yield">Yield</a></li>
+<li>
+<a href="#delegates">Delegates</a><ul>
+</ul>
+</li>
+<li>
+<a href="#events">Events</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#basic-type-system">Basic type system</a><ul>
+<li>
+<a href="#numerical-types">Numerical types</a></li>
+<li>
+<a href="#numerical-types-provided-by.net">Numerical types provided by .NET</a></li>
+<li>
+<a href="#base-class-hierarchy-under-the-hood">Base class hierarchy under the hood</a></li>
+<li>
+<a href="#generic-math-interfaces">Generic Math Interfaces</a></li>
+</ul>
+</li>
+<li>
+<a href="#important-interfaces-for-types">Important interfaces for types</a><ul>
+<li>
+<a href="#icomparablet">IComparable<T></a></li>
+<li>
+<a href="#icomparert">IComparer<T></a></li>
+<li>
+<a href="#iequatablet">IEquatable<T></a></li>
+<li>
+<a href="#equalitycomparert">EqualityComparer<T></a></li>
+<li>
+<a href="#idisposable-iasyncdisposable">IDisposable & IAsyncDisposable</a></li>
+</ul>
+</li>
+<li>
+<a href="#operator-precedence">Operator Precedence</a></li>
+<li>
+<a href="#access-modifiers">Access modifiers</a></li>
+<li>
+<a href="#keywords">Keywords</a><ul>
+<li>
+<a href="#contextual-keywords">Contextual keywords</a></li>
+</ul>
+</li>
+<li>
+<a href="#strings">Strings</a><ul>
+<li>
+<a href="#string-escape-sequences">String escape sequences</a></li>
+<li>
+<a href="#numeric-format-strings">Numeric format strings</a></li>
+<li>
+<a href="#custom-numeric-format-strings">Custom numeric format strings</a></li>
+<li>
+<a href="#standard-date-and-time-format-strings">Standard date and time format strings</a></li>
+<li>
+<a href="#custom-date-and-time-format-strings">Custom date and time format strings</a></li>
+<li>
+<a href="#format-string-examples">Format string examples</a></li>
+</ul>
+</li>
+<li>
+<a href="#common-exceptions">Common exceptions</a><ul>
+<li>
+<a href="#implement-an-own-exception">Implement an own Exception</a></li>
+<li>
+<a href="#unreachableexecption">UnreachableExecption</a></li>
+</ul>
+</li>
+<li>
+<a href="#collections">Collections</a><ul>
+<li>
+<a href="#concurrent-collections">Concurrent Collections</a></li>
+</ul>
+</li>
+<li>
+<a href="#linq">LINQ</a><ul>
+<li>
+<a href="#filtering">Filtering</a></li>
+<li>
+<a href="#select-with-anonymus-type">Select with anonymus type</a></li>
+<li>
+<a href="#distinct">Distinct</a></li>
+<li>
+<a href="#ordering">Ordering</a></li>
+<li>
+<a href="#join">Join</a></li>
+<li>
+<a href="#grouping">Grouping</a></li>
+<li>
+<a href="#lookup">Lookup</a></li>
+<li>
+<a href="#zip">Zip</a></li>
+<li>
+<a href="#skip-take">Skip & Take</a></li>
+<li>
+<a href="#element-operations">Element operations</a></li>
+<li>
+<a href="#conversions">Conversions</a></li>
+<li>
+<a href="#enumerable-class">Enumerable class</a></li>
+</ul>
+</li>
+<li>
+<a href="#pattern-matching">Pattern matching</a><ul>
+<li>
+<a href="#discard-pattern">Discard pattern</a></li>
+<li>
+<a href="#var-pattern">var pattern</a></li>
+<li>
+<a href="#declaration-and-type-patterns">Declaration and type patterns</a></li>
+<li>
+<a href="#constant-pattern">Constant pattern</a></li>
+<li>
+<a href="#relational-patterns">Relational patterns</a></li>
+<li>
+<a href="#logical-patterns">Logical patterns</a></li>
+<li>
+<a href="#property-pattern">Property Pattern</a></li>
+<li>
+<a href="#positional-pattern">Positional pattern</a></li>
+<li>
+<a href="#list-patterns">List patterns</a></li>
+</ul>
+</li>
+<li>
+<a href="#io">I/O</a></li>
+<li>
+<a href="#attributes">Attributes</a><ul>
+<li>
+<a href="#data-annotation">Data annotation</a></li>
+</ul>
+</li>
+<li>
+<a href="#serialization">Serialization</a><ul>
+<li>
+<a href="#xml-serialization">XML Serialization</a></li>
+<li>
+<a href="#xml-serialization-example">XML serialization example</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#cryptography">Cryptography</a><ul>
+<li>
+<a href="#encryption-algortithms">Encryption Algortithms</a></li>
+<li>
+<a href="#hash-algorithms">Hash Algorithms</a></li>
+</ul>
+</li>
+<li>
+<a href="#reflection">Reflection</a><ul>
+<li>
 <ul>
-<li>
-<a href='#authors'>Authors</a></li>
-<li>
-<a href='#license'>License</a></li>
-<li>
-<a href='#changelog'>Changelog</a></li>
-</ul>
-</li>
-<li>
-<a href='#dotnet-basic-commands'>Dotnet basic commands</a><ul>
-<li>
-<a href='#new'>New</a></li>
-<li>
-<a href='#solution-management'>Solution management</a></li>
-<li>
-<a href='#package-management'>Package management</a></li>
-<li>
-<a href='#build-run'>Build & Run</a></li>
-<li>
-<a href='#tool-management'>Tool management</a></li>
-<li>
-<a href='#nuget'>NuGet</a></li>
-<li>
-<a href='#formating'>Formating</a></li>
-<li>
-<a href='#workloads'>Workloads</a></li>
-<li>
-<a href='#tools'>Tools</a></li>
-<li>
-<a href='#useful-tools'>Useful tools</a></li>
-</ul>
-</li>
-<li>
-<a href='#project-file-xml-settings'>Project file XML settings</a></li>
-<li>
-<a href='#usefull-powershell-commands-scripts'>Usefull Powershell commands & scripts</a></li>
-<li>
-<a href='#basic-type-system'>Basic type system</a><ul>
-<li>
-<a href='#numerical-types'>Numerical types</a></li>
-<li>
-<a href='#numerical-types-provided-by.net'>Numerical types provided by .NET</a></li>
-<li>
-<a href='#base-class-hierarchy-under-the-hood'>Base class hierarchy under the hood</a></li>
-<li>
-<a href='#generic-math-interfaces'>Generic Math Interfaces</a></li>
-</ul>
-</li>
-<li>
-<a href='#important-interfaces-for-types'>Important interfaces for types</a><ul>
-<li>
-<a href='#icomparablet'>IComparable<T></a></li>
-<li>
-<a href='#icomparert'>IComparer<T></a></li>
-<li>
-<a href='#iequatablet'>IEquatable<T></a></li>
-<li>
-<a href='#equalitycomparert'>EqualityComparer<T></a></li>
-<li>
-<a href='#idisposable-iasyncdisposable'>IDisposable & IAsyncDisposable</a></li>
-</ul>
-</li>
-<li>
-<a href='#operator-precedence'>Operator Precedence</a></li>
-<li>
-<a href='#access-modifiers'>Access modifiers</a></li>
-<li>
-<a href='#keywords'>Keywords</a><ul>
-<li>
-<a href='#contextual-keywords'>Contextual keywords</a></li>
-</ul>
-</li>
-<li>
-<a href='#strings'>Strings</a><ul>
-<li>
-<a href='#string-escape-sequences'>String escape sequences</a></li>
-<li>
-<a href='#numeric-format-strings'>Numeric format strings</a></li>
-<li>
-<a href='#custom-numeric-format-strings'>Custom numeric format strings</a></li>
-<li>
-<a href='#standard-date-and-time-format-strings'>Standard date and time format strings</a></li>
-<li>
-<a href='#custom-date-and-time-format-strings'>Custom date and time format strings</a></li>
-<li>
-<a href='#format-string-examples'>Format string examples</a></li>
-</ul>
-</li>
-<li>
-<a href='#common-exceptions'>Common exceptions</a><ul>
-<li>
-<a href='#implement-an-own-exception'>Implement an own Exception</a></li>
-<li>
-<a href='#unreachableexecption'>UnreachableExecption</a></li>
-</ul>
-</li>
-<li>
-<a href='#collections'>Collections</a><ul>
-<li>
-<a href='#concurrent-collections'>Concurrent Collections</a></li>
-</ul>
-</li>
-<li>
-<a href='#linq'>LINQ</a><ul>
-<li>
-<a href='#filtering'>Filtering</a></li>
-<li>
-<a href='#select-with-anonymus-type'>Select with anonymus type</a></li>
-<li>
-<a href='#distinct'>Distinct</a></li>
-<li>
-<a href='#ordering'>Ordering</a></li>
-<li>
-<a href='#join'>Join</a></li>
-<li>
-<a href='#grouping'>Grouping</a></li>
-<li>
-<a href='#lookup'>Lookup</a></li>
-<li>
-<a href='#zip'>Zip</a></li>
-<li>
-<a href='#skip-take'>Skip & Take</a></li>
-<li>
-<a href='#element-operations'>Element operations</a></li>
-<li>
-<a href='#conversions'>Conversions</a></li>
-<li>
-<a href='#enumerable-class'>Enumerable class</a></li>
-</ul>
-</li>
-<li>
-<a href='#pattern-matching'>Pattern matching</a><ul>
-<li>
-<a href='#discard-pattern'>Discard pattern</a></li>
-<li>
-<a href='#var-pattern'>var pattern</a></li>
-<li>
-<a href='#declaration-and-type-patterns'>Declaration and type patterns</a></li>
-<li>
-<a href='#constant-pattern'>Constant pattern</a></li>
-<li>
-<a href='#relational-patterns'>Relational patterns</a></li>
-<li>
-<a href='#logical-patterns'>Logical patterns</a></li>
-<li>
-<a href='#property-pattern'>Property Pattern</a></li>
-<li>
-<a href='#positional-pattern'>Positional pattern</a></li>
-<li>
-<a href='#list-patterns'>List patterns</a></li>
-</ul>
-</li>
-<li>
-<a href='#io'>I/O</a></li>
-<li>
-<a href='#attributes'>Attributes</a><ul>
-<li>
-<a href='#data-annotation'>Data annotation</a></li>
-</ul>
-</li>
-<li>
-<a href='#xml-serialization'>XML Serialization</a><ul>
-<li>
-<a href='#xml-serialization-example'>XML serialization example</a><ul>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<a href='#cryptography'>Cryptography</a><ul>
+<a href="#ui">UI</a><ul>
 <li>
-<a href='#encryption-algortithms'>Encryption Algortithms</a></li>
-<li>
-<a href='#hash-algorithms'>Hash Algorithms</a></li>
+<a href="#mvvm">MVVM</a><ul>
 </ul>
 </li>
 <li>
-<a href='#reflection'>Reflection</a><ul>
+<a href="#wpf-class-hierarchy">WPF class hierarchy</a></li>
 <li>
-<ul>
-</ul>
-</li>
-</ul>
-</li>
+<a href="#windows-froms-class-hierarchy">Windows Froms class hierarchy</a></li>
 <li>
-<a href='#ui'>UI</a><ul>
-<li>
-<a href='#mvvm'>MVVM</a><ul>
+<a href="#maui-class-hierarchy">MAUI class hierarchy</a></li>
 </ul>
 </li>
 <li>
-<a href='#wpf-class-hierarchy'>WPF class hierarchy</a></li>
-<li>
-<a href='#windows-froms-class-hierarchy'>Windows Froms class hierarchy</a></li>
-<li>
-<a href='#maui-class-hierarchy'>MAUI class hierarchy</a></li>
-</ul>
-</li>
-<li>
-<a href='#useful-nuget-packages'>Useful NuGet packages</a></li>
+<a href="#useful-nuget-packages">Useful NuGet packages</a></li>
 </ul>
 </nav>
 </div>
@@ -1569,6 +1605,7 @@
              id="path4-2" /></g></g></g></g></svg>
 </p>
 <hr class="pagebreak">
+<h1 id="intro">Intro</h1>
 <h2 id="authors">Authors</h2>
 <ul>
 <li>Ruzsinszki Gábor - <a href="https://www.linkedin.com/in/gabor-ruzsinszki-b564a8181/">https://www.linkedin.com/in/gabor-ruzsinszki-b564a8181/</a></li>
@@ -5655,6 +5692,495 @@ RemoveBinObj
 </code></pre>
 </li>
 </ul>
+<h1 id="c-basic-syntax">C# basic syntax</h1>
+<h2 id="basic-program-structure">Basic program Structure</h2>
+<pre><code class="language-csharp">using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(&quot;Hello, World!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>With Top level statements (.NET &gt; 5):</p>
+<pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
+</code></pre>
+<h2 id="comments">Comments</h2>
+<pre><code class="language-csharp">// Single-line comment
+
+/*
+This is a 
+multi-line comment
+*/
+</code></pre>
+<h2 id="variables-and-data-types">Variables and Data Types</h2>
+<pre><code class="language-csharp">//Variable declaration and initialization
+int number = 10;
+double decimalNumber = 10.5;
+char character = 'A';
+string text = &quot;Hello&quot;;
+bool isTrue = true;
+
+// Implicitly typed variable
+var autoVariable = 100;
+</code></pre>
+<h2 id="control-structures">Control Structures</h2>
+<h3 id="conditional-statements">Conditional Statements</h3>
+<pre><code class="language-csharp">if (condition)
+{
+    // code to be executed if condition is true
+}
+else if (anotherCondition)
+{
+    // code to be executed if anotherCondition is true
+}
+else
+{
+    // code to be executed if all conditions are false
+}
+</code></pre>
+<h3 id="switch">Switch</h3>
+<pre><code class="language-csharp">switch (variable)
+{
+    case value1:
+        // code to be executed if variable == value1
+        break;
+    case value2:
+        // code to be executed if variable == value2
+        break;
+    default:
+        // code to be executed if variable doesn't match any case
+        break;
+}
+</code></pre>
+<h3 id="loops">Loops</h3>
+<pre><code class="language-csharp">// For Loop
+for (int i = 0; i &lt; 10; i++)
+{
+    // code to be executed
+}
+
+// While Loop
+while (condition)
+{
+    // code to be executed
+}
+
+// Do-While Loop
+do
+{
+    // code to be executed
+} while (condition);
+
+// Foreach Loop
+foreach (var item in collection)
+{
+    // code to be executed
+}
+</code></pre>
+<h2 id="methods">Methods</h2>
+<pre><code class="language-csharp">class Program
+{
+    static void Main(string[] args)
+    {
+        int result = Add(5, 10);
+        Console.WriteLine(result);
+    }
+
+    static int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+</code></pre>
+<h2 id="classes-and-objects">Classes and Objects</h2>
+<pre><code class="language-csharp">class Person
+{
+    // Fields
+    private string name;
+    private int age;
+
+    // Constructor
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    public void Greet()
+    {
+        Console.WriteLine($&quot;Hello, my name is {name} and I am {age} years old.&quot;);
+    }
+}
+
+// Creating an object
+Person person = new Person(&quot;John&quot;, 30);
+person.Greet();
+</code></pre>
+<h3 id="properties">Properties</h3>
+<pre><code class="language-csharp">class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+</code></pre>
+<h3 id="inheritance">Inheritance</h3>
+<pre><code class="language-csharp">class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine(&quot;Eating...&quot;);
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine(&quot;Barking...&quot;);
+    }
+}
+
+Dog dog = new Dog();
+dog.Eat();  // Inherited method
+dog.Bark(); // Dog's method
+</code></pre>
+<h3 id="polymorphism">Polymorphism</h3>
+<pre><code class="language-csharp">class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine(&quot;Some generic animal sound&quot;);
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine(&quot;Woof!&quot;);
+    }
+}
+
+class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine(&quot;Meow!&quot;);
+    }
+}
+
+Animal myDog = new Dog();
+Animal myCat = new Cat();
+
+myDog.MakeSound(); // Output: Woof!
+myCat.MakeSound(); // Output: Meow!
+</code></pre>
+<h3 id="interfaces">Interfaces</h3>
+<pre><code class="language-csharp">interface IAnimal
+{
+    void MakeSound();
+}
+
+class Dog : IAnimal
+{
+    public void MakeSound()
+    {
+        Console.WriteLine(&quot;Woof!&quot;);
+    }
+}
+</code></pre>
+<h3 id="generics">Generics</h3>
+<pre><code class="language-csharp">// Generic Class
+public class GenericList&lt;T&gt;
+{
+    private T[] items = new T[100];
+    private int count;
+
+    public void Add(T item)
+    {
+        items[count++] = item;
+    }
+
+    public T Get(int index)
+    {
+        return items[index];
+    }
+}
+
+GenericList&lt;int&gt; intList = new GenericList&lt;int&gt;();
+intList.Add(1);
+intList.Add(2);
+Console.WriteLine(intList.Get(0)); // Output: 1
+
+GenericList&lt;string&gt; stringList = new GenericList&lt;string&gt;();
+stringList.Add(&quot;Hello&quot;);
+stringList.Add(&quot;World&quot;);
+Console.WriteLine(stringList.Get(1)); // Output: World
+
+// Generic Method
+public class Utilities
+{
+    public void Print&lt;T&gt;(T item)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+Utilities utilities = new Utilities();
+utilities.Print(123);    // Output: 123
+utilities.Print(&quot;abc&quot;);  // Output: abc
+</code></pre>
+<h2 id="tupples">Tupples</h2>
+<pre><code class="language-csharp">var tuple = new Tuple&lt;int, string, double&gt;(1, &quot;apple&quot;, 3.14);
+Console.WriteLine(tuple.Item1); // Output: 1
+Console.WriteLine(tuple.Item2); // Output: apple
+Console.WriteLine(tuple.Item3); // Output: 3.14
+</code></pre>
+<h3 id="value-tupples">Value tupples</h3>
+<pre><code class="language-csharp">var valueTuple = (1, &quot;apple&quot;, 3.14);
+Console.WriteLine(valueTuple.Item1); // Output: 1
+Console.WriteLine(valueTuple.Item2); // Output: apple
+Console.WriteLine(valueTuple.Item3); // Output: 3.14
+</code></pre>
+<pre><code class="language-csharp">var valueTuple = (Id: 1, Name: &quot;apple&quot;, Price: 3.14);
+Console.WriteLine(valueTuple.Id);    // Output: 1
+Console.WriteLine(valueTuple.Name);  // Output: apple
+Console.WriteLine(valueTuple.Price); // Output: 3.14
+</code></pre>
+<h3 id="deconstruct">Deconstruct</h3>
+<pre><code class="language-csharp">var valueTuple = (1, &quot;apple&quot;, 3.14);
+var (id, name, price) = valueTuple;
+Console.WriteLine(id);    // Output: 1
+Console.WriteLine(name);  // Output: apple
+Console.WriteLine(price); // Output: 3.14
+</code></pre>
+<h2 id="yield">Yield</h2>
+<pre><code class="language-csharp">public class NumberGenerator
+{
+    public IEnumerable&lt;int&gt; GetNumbers()
+    {
+		for (int i=0; i&lt;10; i++)
+		{
+		    if (i == 5)
+            {
+                yield break; // Exit the method when i equals 5
+            }
+			yield return i;
+		}
+	}
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        NumberGenerator generator = new NumberGenerator();
+        
+        foreach (int number in generator.GetNumbers())
+        {
+            Console.WriteLine(number); // Output: 0 1 2 3 4 
+        }
+    }
+}
+</code></pre>
+<h2 id="delegates">Delegates</h2>
+<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+
+public class Program
+{
+    public static void DisplayMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+
+    public static void Main(string[] args)
+    {
+        // Creating an instance of the delegate
+        MyDelegate del = new MyDelegate(DisplayMessage);
+
+        // Calling the delegate
+        del(&quot;Hello, Delegates!&quot;); // Output: Hello, Delegates!
+    }
+}
+</code></pre>
+<h3 id="delegate-as-parameter">Delegate as parameter</h3>
+<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+
+public class Program
+{
+    public static void DisplayMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+
+    public static void ProcessMessage(MyDelegate del, string message)
+    {
+        del(message);
+    }
+
+    public static void Main(string[] args)
+    {
+        MyDelegate del = new MyDelegate(DisplayMessage);
+        ProcessMessage(del, &quot;Hello, Delegates with Parameters!&quot;); // Output: Hello, Delegates with Parameters!
+    }
+}
+</code></pre>
+<h3 id="multicast-delegates">Multicast Delegates</h3>
+<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+
+public class Program
+{
+    public static void DisplayMessage1(string message)
+    {
+        Console.WriteLine(&quot;Message1: &quot; + message);
+    }
+
+    public static void DisplayMessage2(string message)
+    {
+        Console.WriteLine(&quot;Message2: &quot; + message);
+    }
+
+    public static void Main(string[] args)
+    {
+        MyDelegate del1 = new MyDelegate(DisplayMessage1);
+        MyDelegate del2 = new MyDelegate(DisplayMessage2);
+
+        // Combining delegates
+        MyDelegate del = del1 + del2;
+        del(&quot;Hello, Multicast Delegates!&quot;); 
+        // Output:
+        // Message1: Hello, Multicast Delegates!
+        // Message2: Hello, Multicast Delegates!
+    }
+}
+</code></pre>
+<h3 id="generic-delegates">Generic Delegates</h3>
+<h4 id="action">Action</h4>
+<pre><code class="language-csharp">public class Program
+{
+    public static void DisplayMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+
+    public static void Main(string[] args)
+    {
+        Action&lt;string&gt; messageAction = DisplayMessage;
+        messageAction(&quot;Hello, Action Delegate!&quot;); // Output: Hello, Action Delegate!
+    }
+}
+</code></pre>
+<h4 id="func">Func</h4>
+<pre><code class="language-csharp">public class Program
+{
+    public static int Add(int x, int y)
+    {
+        return x + y;
+    }
+
+    public static void Main(string[] args)
+    
+        Func&lt;int, int, int&gt; addFunc = Add;
+        int result = addFunc(5, 3);
+        Console.WriteLine(result); // Output: 8
+    }
+}
+</code></pre>
+<h4 id="predicate">Predicate</h4>
+<pre><code class="language-csharp">public class Program
+{
+    public static bool IsPositive(int number)
+    {
+        return number &gt; 0;
+    }
+
+    public static void Main(string[] args)
+    {
+        Predicate&lt;int&gt; isPositivePredicate = IsPositive;
+        bool result = isPositivePredicate(5);
+        Console.WriteLine(result); // Output: True
+    }
+}
+</code></pre>
+<h2 id="events">Events</h2>
+<h3 id="declaring-an-event">Declaring an Event</h3>
+<pre><code class="language-csharp">public class Publisher
+{
+    // Define the delegate for the event handler
+    public delegate void EventHandler(object sender, EventArgs e);
+
+    // Declare the event using the delegate
+    public event EventHandler OnNotify;
+
+    // Method to raise the event
+    protected virtual void RaiseEvent()
+    {
+        if (OnNotify != null)
+        {
+            OnNotify(this, EventArgs.Empty);
+        }
+    }
+}
+</code></pre>
+<h3 id="subscribing-to-an-event">Subscribing to an event</h3>
+<pre><code class="language-csharp">public class Subscriber
+{
+    public void OnNotified(object sender, EventArgs e)
+    {
+        Console.WriteLine(&quot;Standard event received!&quot;);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Publisher pub = new Publisher();
+        Subscriber sub = new Subscriber();
+
+        // Subscribe to the event
+        pub.OnNotify += sub.OnNotified; 
+
+        // Raise the event
+        pub.RaiseEvent(); // Output: Standard event received!
+    }
+}
+</code></pre>
+<h3 id="creating-custom-eventargs">Creating Custom EventArgs</h3>
+<pre><code class="language-csharp">public class CustomEventArgs : EventArgs
+{
+    public string Message { get; set; }
+    public CustomEventArgs(string message)
+    {
+        Message = message;
+    }
+}
+
+public class Publisher
+{
+    // Define the delegate with custom EventArgs
+    public delegate void CustomEventHandler(object sender, CustomEventArgs e);
+
+    // Declare the event using the delegate
+    public event CustomEventHandler OnNotify;
+
+    // Method to raise the event
+    protected virtual void RaiseEvent(string message)
+    {
+        if (OnNotify != null)
+        {
+            OnNotify(this, new CustomEventArgs(message));
+        }
+    }
+}
+</code></pre>
 <h1 id="basic-type-system">Basic type system</h1>
 <h2 id="numerical-types">Numerical types</h2>
 <table>
@@ -11184,7 +11710,8 @@ new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 	</svg></p>
 <figcaption>Data annotation Attributes</figcaption>
 </figure>
-<h1 id="xml-serialization">XML Serialization</h1>
+<h1 id="serialization">Serialization</h1>
+<h2 id="xml-serialization">XML Serialization</h2>
 <p>XML serialization is part of .NET since the 1.0 release. It uses attributes and under the hood reflection to serialize data into the XML (<a href="https://en.wikipedia.org/wiki/XML">https://en.wikipedia.org/wiki/XML</a>) format. To use XML serialization you must reference the <code>System.Xml.Serialization</code> namespace. <strong>Warning</strong>: The XmlSerializer class <strong>does not serializes objects that are marked as <code>[Obsolete]</code></strong>.</p>
 <p>Important attributes and their hierarchy for XML serialization:</p>
 <ul>
