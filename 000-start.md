@@ -55,3 +55,11 @@ The project is open-source and available on GitHub. You can contribute to it by 
   * Added reflection section
   * Format strings: Added few examples
   * Extended Exceptions chapter
+
+* **2024.06.08**
+  
+  * Grammar fixes by JamesKidd87
+  * New PWA & website look and feel
+  * Added Basic C# syntax section
+  * Added XML and JSON serialization chapter
+  * Added Object validation chapter
