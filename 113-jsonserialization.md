@@ -68,9 +68,15 @@ Serialization and deserialization ptions can be controlled via the `JsonSerializ
 	
 	Possible values:
 	
-	* `JsonCommentHandling.Disallow` - Doesn't allow comments within the JSON input. Comments are treated as invalid JSON if found, and a `System.Text.Json.JsonException` is thrown. This is the default value.
-	* `JsonCommentHandling.Skip` - Allows comments within the JSON input and ignores them. The `System.Text.Json.Utf8JsonReader` behaves as if no comments are present.
-	* `JsonCommentHandling.Allow` - Allows comments within the JSON input and treats them as valid tokens. While reading, the caller can access the comment values.
+	* `JsonCommentHandling.Disallow`
+	
+		Doesn't allow comments within the JSON input. Comments are treated as invalid JSON if found, and a `System.Text.Json.JsonException` is thrown. This is the default value.
+	* `JsonCommentHandling.Skip`
+	
+		Allows comments within the JSON input and ignores them. The `System.Text.Json.Utf8JsonReader` behaves as if no comments are present.
+	* `JsonCommentHandling.Allow`
+	
+		Allows comments within the JSON input and treats them as valid tokens. While reading, the caller can access the comment values.
 	
 * `JsonNumberHandling NumberHandling`:
 
@@ -78,10 +84,21 @@ Serialization and deserialization ptions can be controlled via the `JsonSerializ
 	
 	Possible values:
 	
-	* `JsonNumberHandling.Strict` - Numbers will only be read from System.Text.Json.JsonTokenType.Number tokens and will only be written as JSON numbers (without quotes).
-	* `JsonNumberHandling.AllowReadingFromString` - Numbers can be read from System.Text.Json.JsonTokenType.String tokens. Does not prevent numbers from being read from System.Text.Json.JsonTokenType.Number token.
-	* `JsonNumberHandling.WriteAsString` - Numbers will be written as JSON strings (with quotes), not as JSON numbers.
-	* `JsonNumberHandling.AllowNamedFloatingPointLiterals` - The `NaN`, `Infinity` and `-Infinity` `System.Text.Json.JsonTokenType.String` tokens can be read as floating-point constants, and the `System.Single` and `System.Double` values for these constants will be written as their corresponding JSON string representations.
+	* `JsonNumberHandling.Strict`
+	
+		Numbers will only be read from System.Text.Json.JsonTokenType.Number tokens and will only be written as JSON numbers (without quotes).
+	
+	* `JsonNumberHandling.AllowReadingFromString`
+	
+	Numbers can be read from System.Text.Json.JsonTokenType.String tokens. Does not prevent numbers from being read from System.Text.Json.JsonTokenType.Number token.
+	
+	* `JsonNumberHandling.WriteAsString`
+	
+		Numbers will be written as JSON strings (with quotes), not as JSON numbers.
+	
+	* `JsonNumberHandling.AllowNamedFloatingPointLiterals`
+	
+		The `NaN`, `Infinity` and `-Infinity` `System.Text.Json.JsonTokenType.String` tokens can be read as floating-point constants, and the `System.Single` and `System.Double` values for these constants will be written as their corresponding JSON string representations.
 	
 * `JsonIgnoreCondition DefaultIgnoreCondition`:
 
@@ -89,7 +106,43 @@ Serialization and deserialization ptions can be controlled via the `JsonSerializ
 
 	Possible values:
 	
-	* `JsonIgnoreCondition.Never` - 
+	* `JsonIgnoreCondition.Never`
+  
+		Property is always serialized and deserialized, regardless of IgnoreNullValues configuration.
+	
 	* `JsonIgnoreCondition.Always`
+  
+		Property is always ignored.
+	
 	* `JsonIgnoreCondition.WhenWritingDefault`
+	
+		Property is ignored only if it equals the default value for its type.
+	
 	* `JsonIgnoreCondition.WhenWritingNull`
+
+		Property is ignored if its value is null. This is applied only to reference-type properties and fields.
+
+## Converters
+
+You can convert complex types into JSON representation, by implementing the `JsonConverter<T>` abstract class and then adding the converter to the `Converters` collection of your `JsonSerializerOptions` instance.
+
+An example converter:
+
+```csharp
+public class CultureInfoConverter : JsonConverter<CultureInfo>
+{
+    public override CultureInfo? Read(ref Utf8JsonReader reader, 
+                                      Type typeToConvert, 
+                                      JsonSerializerOptions options)
+    {
+        return new CultureInfo(reader.GetString()!);
+    }
+
+     public override void Write(Utf8JsonWriter writer,
+                                CultureInfo value, 
+                                JsonSerializerOptions options)
+     {
+        writer.WriteStringValue(value.Name);
+     }
+}
+```
