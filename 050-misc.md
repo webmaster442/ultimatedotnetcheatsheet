@@ -79,6 +79,6 @@ A contextual keyword is used to provide a specific meaning in the code, but it i
 |   async    |  init   |        or        |   value   |
 |   await    |  into   |     orderby      |    var    |
 |     by     |  join   |  partial (type)  |   when    |
-| descending |   let   | partial (method) |   where   |
+| descending |   let   | |   where   |
 |  dynamic   | managed |      record      |   with    |
 |   equals   | nameof  |      remove      |   yield   |

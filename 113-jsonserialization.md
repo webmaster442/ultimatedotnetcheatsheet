@@ -26,11 +26,11 @@ Person deserializedPerson = JsonSerializer.Deserialize<Person>(jsonString);
 
 ## JSON Serializer options
 
-Serialization and deserialization ptions can be controlled via the `JsonSerializerOptions` class. Important properties:
+Serialization and de serialization options can be controlled via the `JsonSerializerOptions` class. Important properties:
 
 * `bool AllowTrailingCommas`:
   
-	Get or sets a value that indicates whether an extra comma at the end of a list of JSON values in an object or array is allowed (and ignored) within the JSON payload being deserialized.
+	Get or sets a value that indicates whether an extra comma at the end of a list of JSON values in an object or array is allowed (and ignored) within the JSON payload being de-serialized.
 
 * `bool WriteIndented`:
 
@@ -52,19 +52,19 @@ Serialization and deserialization ptions can be controlled via the `JsonSerializ
 	* `JsonNamingPolicy.SnakeCaseLower` - `property_name`
 	* `JsonNamingPolicy.SnakeCaseUpper` - `PROPERTY_NAME`
 	
-	Custom values can be set, by implementint the `JsonNamingPolicy` class.
+	Custom values can be set, by implementing the `JsonNamingPolicy` class.
 	
 * `bool IncludeFields`:
 
-	Gets or sets a value that indicates whether fields are handled during serialization and deserialization. The default value is false.
+	Gets or sets a value that indicates whether fields are handled during serialization and de-serialization. The default value is false.
 	
 * `bool IgnoreReadOnlyProperties`:
 
-	Gets or sets a value that indicates whether null values are ignored during serialization and deserialization. The default value is false.
+	Gets or sets a value that indicates whether null values are ignored during serialization and de-serialization. The default value is false.
 	
 * `JsonCommentHandling ReadCommentHandling`:
 
-	Gets or sets a value that defines how comments are handled during deserialization.
+	Gets or sets a value that defines how comments are handled during de-serialization.
 	
 	Possible values:
 	
@@ -80,7 +80,7 @@ Serialization and deserialization ptions can be controlled via the `JsonSerializ
 	
 * `JsonNumberHandling NumberHandling`:
 
-	Gets or sets an object that specifies how number types should be handled when serializing or deserializing.
+	Gets or sets an object that specifies how number types should be handled when serializing or de-serializing.
 	
 	Possible values:
 	
@@ -102,13 +102,13 @@ Serialization and deserialization ptions can be controlled via the `JsonSerializ
 	
 * `JsonIgnoreCondition DefaultIgnoreCondition`:
 
-	Gets or sets a value that determines when properties with default values are ignored during serialization or deserialization. The default value is `JsonIgnoreCondition.Never`.
+	Gets or sets a value that determines when properties with default values are ignored during serialization or de-serialization. The default value is `JsonIgnoreCondition.Never`.
 
 	Possible values:
 	
 	* `JsonIgnoreCondition.Never`
   
-		Property is always serialized and deserialized, regardless of IgnoreNullValues configuration.
+		Property is always serialized and de-serialized, regardless of IgnoreNullValues configuration.
 	
 	* `JsonIgnoreCondition.Always`
   

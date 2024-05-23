@@ -37,7 +37,7 @@ The project is open-source and available on GitHub. You can contribute to it by 
 
 * **2024.03.08** 
 
-    Generic math interfaces extended & various small improvements
+    Generic maths interfaces extended & various small improvements
 
 * **2024.04.08**
   

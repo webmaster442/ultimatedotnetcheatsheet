@@ -37,7 +37,7 @@ Important attributes and their hierarchy for XML serialization:
 
 * **XmlTextAttribute**: 
 
-    Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or deserialized.
+    Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or de-serialized.
 
 ## XML serialization example
 
@@ -75,9 +75,9 @@ public enum TestEnum
     Second
 }
 
-//A sub class, that is part of the root class that needs to be serialied
+//A sub class, that is part of the root class that needs to be serialized
 //NOTE: Complex types, like this, needs to be serialized as XML elements
-//It is not pissible to serialize these as attributes
+//It is not possible to serialize these as attributes
 public class SubClass
 {
     [XmlText]
