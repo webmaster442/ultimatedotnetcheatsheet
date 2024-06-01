@@ -386,10 +386,8 @@ public delegate void MyDelegate(string message);
 public class Program
 {
     public static void DisplayMessage(string message)
-    {
-        Console.WriteLine(message);
-    }
-
+        => Console.WriteLine(message);
+    
     public static void ProcessMessage(MyDelegate del, string message)
     {
         del(message);
@@ -411,14 +409,10 @@ public delegate void MyDelegate(string message);
 public class Program
 {
     public static void DisplayMessage1(string message)
-    {
-        Console.WriteLine("Message1: " + message);
-    }
+        => Console.WriteLine("Message1: " + message);
 
     public static void DisplayMessage2(string message)
-    {
-        Console.WriteLine("Message2: " + message);
-    }
+        => Console.WriteLine("Message2: " + message);
 
     public static void Main(string[] args)
     {
@@ -443,9 +437,7 @@ public class Program
 public class Program
 {
     public static void DisplayMessage(string message)
-    {
-        Console.WriteLine(message);
-    }
+        => Console.WriteLine(message);
 
     public static void Main(string[] args)
     {
@@ -461,9 +453,7 @@ public class Program
 public class Program
 {
     public static int Add(int x, int y)
-    {
-        return x + y;
-    }
+        => x + y;
 
     public static void Main(string[] args)
     
@@ -480,9 +470,7 @@ public class Program
 public class Program
 {
     public static bool IsPositive(int number)
-    {
-        return number > 0;
-    }
+        => number > 0;
 
     public static void Main(string[] args)
     {
