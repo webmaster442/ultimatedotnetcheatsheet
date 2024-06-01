@@ -21,3 +21,22 @@
 
     RemoveBinObj
     ```
+
+* Render markdown to html file
+
+  ```powershell
+	function Convert-MarkdownToHtml {
+		param (
+			[Parameter(Mandatory = $true)]
+			[string]$input,
+
+			[Parameter(Mandatory = $true)]
+			[string]$output
+		)
+
+		$markdownContent = Get-Content -Path $input -Raw
+		$htmlContent = $markdownContent | ConvertFrom-Markdown
+		$htmlContent | Out-File -FilePath $output -Encoding utf8
+	}
+	Convert-MarkdownToHtml -input "input.md" -output "out.html"
+  ```
