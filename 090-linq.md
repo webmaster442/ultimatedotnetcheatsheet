@@ -19,7 +19,7 @@ var ordersWithCost = Orders.Select(order => new
 ## Distinct
 
 ```csharp
-//The Distinct method requries equality implementation on the class or 
+//The Distinct method requires equality implementation on the class or 
 //an IEqualityComparer as parameter
 var uniqueNames = customer.Distinct((customerComparer);
 
@@ -70,7 +70,7 @@ Note: Result will be an `ILookup<TKey,TElement>`, which is a one-to-many diction
 
 ## Zip
 
-Zip creates an Enumerable of tupples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.
+Zip creates an Enumerable of tuples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.
 
 ```csharp
 int[] first = [1, 2, 3];

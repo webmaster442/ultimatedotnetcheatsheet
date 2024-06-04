@@ -1,12 +1,16 @@
-:::parent
+:::toc-wrapper
 
 [toc maxlevel="2"] Contents
+
+:::
 
 :::content
 
 ![cheat sheet header](img/header.svg)
 
 <hr class="pagebreak">
+
+# Intro
 
 ## Authors
 
@@ -33,7 +37,7 @@ The project is open-source and available on GitHub. You can contribute to it by 
 
 * **2024.03.08** 
 
-    Generic math interfaces extended & various small improvements
+    Generic maths interfaces extended & various small improvements
 
 * **2024.04.08**
   
@@ -51,3 +55,11 @@ The project is open-source and available on GitHub. You can contribute to it by 
   * Added reflection section
   * Format strings: Added few examples
   * Extended Exceptions chapter
+
+* **2024.06.04**
+  
+  * Grammar fixes by JamesKidd87
+  * New PWA & website look and feel
+  * Added Basic C# syntax section
+  * Added XML and JSON serialization chapter
+  * Added Object validation chapter

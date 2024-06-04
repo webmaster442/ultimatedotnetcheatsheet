@@ -22,7 +22,7 @@
     RemoveBinObj
     ```
 
-* Render markdown to html file
+* Render markdown to a html file (Works on Powershell Core > 7)
 
   ```powershell
 	function Convert-MarkdownToHtml {
