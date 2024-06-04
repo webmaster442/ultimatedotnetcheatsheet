@@ -56,7 +56,7 @@ The project is open-source and available on GitHub. You can contribute to it by 
   * Format strings: Added few examples
   * Extended Exceptions chapter
 
-* **2024.06.08**
+* **2024.06.04**
   
   * Grammar fixes by JamesKidd87
   * New PWA & website look and feel
