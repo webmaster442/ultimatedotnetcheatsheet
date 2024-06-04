@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="prism.css" type="text/css">
     <link rel="stylesheet" href="style-print.css" type="text/css" />
     <script type="text/javascript" src="prism.js"></script>
-    <title><!--{title}--></title>
+    <title>{{title}}</title>
 
     <!--OpenGraph meta-->
     <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
@@ -34,7 +34,7 @@
         content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
 
     <style type="text/css">
-        <!--{css}-->
+    {{css}}
     </style>
 </head>
 
@@ -66,7 +66,7 @@
                     </svg>
                 </a>
             </li>
-            <li id="version">Version: <!--{BuildTime format="yy-MM-dd"}-->
+            <li id="version">Version: {{BuildTime(format=yy-MM-dd)}}
             </li>
             <li id="notify">
                 <!--Notfication container-->
@@ -81,8 +81,8 @@
     </button>
 
     <div class="container toc-collapsed">
-        <!--{content}-->
-        </main>
+        {{content}}
+    </div>
 
         <script type="text/javascript" src="script.js"></script>
 

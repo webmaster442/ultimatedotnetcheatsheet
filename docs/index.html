@@ -24,7 +24,7 @@
     <!--OpenGraph meta-->
     <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ultimate .NET Cheat sheet">
+    <meta property="og:title" content="<!--{title}-->">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
     <meta property="og:image:type" content="image/webp" />
@@ -34,7 +34,7 @@
         content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
 
     <style type="text/css">
-        /*no inline css was specified*/
+    /*no inline css was specified*/
     </style>
 </head>
 
@@ -66,7 +66,7 @@
                     </svg>
                 </a>
             </li>
-            <li id="version">Version: 24-05-22
+            <li id="version">Version: 24-06-04
             </li>
             <li id="notify">
                 <!--Notfication container-->
@@ -287,6 +287,18 @@
 <a href="#xml-serialization-example">XML serialization example</a><ul>
 </ul>
 </li>
+<li>
+<a href="#json-serialization">JSON Serialization</a></li>
+<li>
+<a href="#json-serializer-options">JSON Serializer options</a></li>
+<li>
+<a href="#converters">Converters</a></li>
+</ul>
+</li>
+<li>
+<a href="#object-validation">Object validation</a><ul>
+<li>
+<a href="#defining-a-custom-validation-attribute">Defining a custom validation attribute</a></li>
 </ul>
 </li>
 <li>
@@ -5463,7 +5475,7 @@
 <p>Initial release</p>
 </li>
 <li><p><strong>2024.03.08</strong></p>
-<p>Generic math interfaces extended &amp; various small improvements</p>
+<p>Generic maths interfaces extended &amp; various small improvements</p>
 </li>
 <li><p><strong>2024.04.08</strong></p>
 <ul>
@@ -5482,6 +5494,15 @@
 <li>Added reflection section</li>
 <li>Format strings: Added few examples</li>
 <li>Extended Exceptions chapter</li>
+</ul>
+</li>
+<li><p><strong>2024.06.08</strong></p>
+<ul>
+<li>Grammar fixes by JamesKidd87</li>
+<li>New PWA &amp; website look and feel</li>
+<li>Added Basic C# syntax section</li>
+<li>Added XML and JSON serialization chapter</li>
+<li>Added Object validation chapter</li>
 </ul>
 </li>
 </ul>
@@ -5689,6 +5710,23 @@
 }
 
 RemoveBinObj
+</code></pre>
+</li>
+<li><p>Render markdown to a html file (Works on Powershell Core &gt; 7)</p>
+<pre><code class="language-powershell">  function Convert-MarkdownToHtml {
+  	param (
+  		[Parameter(Mandatory = $true)]
+  		[string]$input,
+
+  		[Parameter(Mandatory = $true)]
+  		[string]$output
+  	)
+
+  	$markdownContent = Get-Content -Path $input -Raw
+  	$htmlContent = $markdownContent | ConvertFrom-Markdown
+  	$htmlContent | Out-File -FilePath $output -Encoding utf8
+  }
+  Convert-MarkdownToHtml -input &quot;input.md&quot; -output &quot;out.html&quot;
 </code></pre>
 </li>
 </ul>
@@ -6016,10 +6054,8 @@ public class Program
 public class Program
 {
     public static void DisplayMessage(string message)
-    {
-        Console.WriteLine(message);
-    }
-
+        =&gt; Console.WriteLine(message);
+    
     public static void ProcessMessage(MyDelegate del, string message)
     {
         del(message);
@@ -6038,14 +6074,10 @@ public class Program
 public class Program
 {
     public static void DisplayMessage1(string message)
-    {
-        Console.WriteLine(&quot;Message1: &quot; + message);
-    }
+        =&gt; Console.WriteLine(&quot;Message1: &quot; + message);
 
     public static void DisplayMessage2(string message)
-    {
-        Console.WriteLine(&quot;Message2: &quot; + message);
-    }
+        =&gt; Console.WriteLine(&quot;Message2: &quot; + message);
 
     public static void Main(string[] args)
     {
@@ -6066,9 +6098,7 @@ public class Program
 <pre><code class="language-csharp">public class Program
 {
     public static void DisplayMessage(string message)
-    {
-        Console.WriteLine(message);
-    }
+        =&gt; Console.WriteLine(message);
 
     public static void Main(string[] args)
     {
@@ -6081,9 +6111,7 @@ public class Program
 <pre><code class="language-csharp">public class Program
 {
     public static int Add(int x, int y)
-    {
-        return x + y;
-    }
+        =&gt; x + y;
 
     public static void Main(string[] args)
     
@@ -6097,9 +6125,7 @@ public class Program
 <pre><code class="language-csharp">public class Program
 {
     public static bool IsPositive(int number)
-    {
-        return number &gt; 0;
-    }
+        =&gt; number &gt; 0;
 
     public static void Main(string[] args)
     {
@@ -7773,7 +7799,7 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <tr>
 <td style="text-align: center;">descending</td>
 <td style="text-align: center;">let</td>
-<td style="text-align: center;">partial (method)</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">where</td>
 </tr>
 <tr>
@@ -9820,7 +9846,7 @@ public void SomeMethod(MyEnum value)
 });
 </code></pre>
 <h2 id="distinct">Distinct</h2>
-<pre><code class="language-csharp">//The Distinct method requries equality implementation on the class or 
+<pre><code class="language-csharp">//The Distinct method requires equality implementation on the class or 
 //an IEqualityComparer as parameter
 var uniqueNames = customer.Distinct((customerComparer);
 
@@ -9854,7 +9880,7 @@ var multipleOdering = orders.OrderBy(order =&gt; order.Cost).ThenBy(order =&gt; 
 </code></pre>
 <p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
 <h2 id="zip">Zip</h2>
-<p>Zip creates an Enumerable of tupples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
+<p>Zip creates an Enumerable of tuples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
 <pre><code class="language-csharp">int[] first = [1, 2, 3];
 string[] second = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
 //Returns [(1, &quot;a&quot;), (2, &quot;b&quot;), (3, &quot;c&quot;)]
@@ -11737,7 +11763,7 @@ new[] { 1, 0, 1 } is [1, 0, .., 0, 1];  // False
 <p>Controls XML serialization of the attribute target as an XML root element.</p>
 </li>
 <li><p><strong>XmlTextAttribute</strong>:</p>
-<p>Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or deserialized.</p>
+<p>Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or de-serialized.</p>
 </li>
 </ul>
 <h2 id="xml-serialization-example">XML serialization example</h2>
@@ -11772,9 +11798,9 @@ public enum TestEnum
     Second
 }
 
-//A sub class, that is part of the root class that needs to be serialied
+//A sub class, that is part of the root class that needs to be serialized
 //NOTE: Complex types, like this, needs to be serialized as XML elements
-//It is not pissible to serialize these as attributes
+//It is not possible to serialize these as attributes
 public class SubClass
 {
     [XmlText]
@@ -11848,6 +11874,207 @@ using (var stream = File.Create(&quot;testfile.xml&quot;))
       Item2Int=&quot;1242&quot; /&gt;
   &lt;/array&gt;
 &lt;/rootName&gt;
+</code></pre>
+<h2 id="json-serialization">JSON Serialization</h2>
+<p>The <code>System.Text.Json</code> serializer was introduced in .NET Core 3.0 as a NuGet package and it's inlcuded in .NET 5 and later releases by default. It's designed to be an efficient replacement for <code>Newtonsoft.Json</code>.</p>
+<p>Basic usage:</p>
+<pre><code class="language-csharp">public class Person 
+{
+    public string Name { get; init; }
+    public int Age { get; init; }
+}
+
+var person = new Person
+{
+    Name = &quot;test&quot;,
+    Age = 30,
+}
+
+string jsonString = JsonSerializer.Serialize(person);
+
+
+//deserialization:
+Person deserializedPerson = JsonSerializer.Deserialize&lt;Person&gt;(jsonString);
+</code></pre>
+<h2 id="json-serializer-options">JSON Serializer options</h2>
+<p>Serialization and de serialization options can be controlled via the <code>JsonSerializerOptions</code> class. Important properties:</p>
+<ul>
+<li><p><code>bool AllowTrailingCommas</code>:</p>
+<p>Get or sets a value that indicates whether an extra comma at the end of a list of JSON values in an object or array is allowed (and ignored) within the JSON payload being de-serialized.</p>
+</li>
+<li><p><code>bool WriteIndented</code>:</p>
+<p>Gets or sets a value that indicates whether JSON should use pretty printing. By default, JSON is serialized without any extra white space.</p>
+</li>
+<li><p><code>bool PropertyNameCaseInsensitive</code>:</p>
+<p>Gets or sets a value that indicates whether a property's name uses a case-insensitive comparison during deserialization. The default value is false.</p>
+</li>
+<li><p><code>JsonNamingPolicy? PropertyNamingPolicy</code>:</p>
+<p>Gets or sets a value that specifies the policy used to convert a property's name on an object to another format, such as camel-casing, or null to leave property  names unchanged.</p>
+<p>Possible built-in values, that can be set:</p>
+<ul>
+<li><code>JsonNamingPolicy.CamelCase</code> - <code>propertyName</code></li>
+<li><code>JsonNamingPolicy.KebabCaseLower</code> - <code>property-name</code></li>
+<li><code>JsonNamingPolicy.KebabCaseUpper</code> - <code>PROPERTY-NAME</code></li>
+<li><code>JsonNamingPolicy.SnakeCaseLower</code> - <code>property_name</code></li>
+<li><code>JsonNamingPolicy.SnakeCaseUpper</code> - <code>PROPERTY_NAME</code></li>
+</ul>
+<p>Custom values can be set, by implementing the <code>JsonNamingPolicy</code> class.</p>
+</li>
+<li><p><code>bool IncludeFields</code>:</p>
+<p>Gets or sets a value that indicates whether fields are handled during serialization and de-serialization. The default value is false.</p>
+</li>
+<li><p><code>bool IgnoreReadOnlyProperties</code>:</p>
+<p>Gets or sets a value that indicates whether null values are ignored during serialization and de-serialization. The default value is false.</p>
+</li>
+<li><p><code>JsonCommentHandling ReadCommentHandling</code>:</p>
+<p>Gets or sets a value that defines how comments are handled during de-serialization.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code>JsonCommentHandling.Disallow</code></p>
+<p>Doesn't allow comments within the JSON input. Comments are treated as invalid JSON if found, and a <code>System.Text.Json.JsonException</code> is thrown. This is the default value.</p>
+</li>
+<li><p><code>JsonCommentHandling.Skip</code></p>
+<p>Allows comments within the JSON input and ignores them. The <code>System.Text.Json.Utf8JsonReader</code> behaves as if no comments are present.</p>
+</li>
+<li><p><code>JsonCommentHandling.Allow</code></p>
+<p>Allows comments within the JSON input and treats them as valid tokens. While reading, the caller can access the comment values.</p>
+</li>
+</ul>
+</li>
+<li><p><code>JsonNumberHandling NumberHandling</code>:</p>
+<p>Gets or sets an object that specifies how number types should be handled when serializing or de-serializing.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code>JsonNumberHandling.Strict</code></p>
+<p>Numbers will only be read from System.Text.Json.JsonTokenType.Number tokens and will only be written as JSON numbers (without quotes).</p>
+</li>
+<li><p><code>JsonNumberHandling.AllowReadingFromString</code></p>
+</li>
+</ul>
+<p>Numbers can be read from System.Text.Json.JsonTokenType.String tokens. Does not prevent numbers from being read from System.Text.Json.JsonTokenType.Number token.</p>
+<ul>
+<li><p><code>JsonNumberHandling.WriteAsString</code></p>
+<p>Numbers will be written as JSON strings (with quotes), not as JSON numbers.</p>
+</li>
+<li><p><code>JsonNumberHandling.AllowNamedFloatingPointLiterals</code></p>
+<p>The <code>NaN</code>, <code>Infinity</code> and <code>-Infinity</code> <code>System.Text.Json.JsonTokenType.String</code> tokens can be read as floating-point constants, and the <code>System.Single</code> and <code>System.Double</code> values for these constants will be written as their corresponding JSON string representations.</p>
+</li>
+</ul>
+</li>
+<li><p><code>JsonIgnoreCondition DefaultIgnoreCondition</code>:</p>
+<p>Gets or sets a value that determines when properties with default values are ignored during serialization or de-serialization. The default value is <code>JsonIgnoreCondition.Never</code>.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code>JsonIgnoreCondition.Never</code></p>
+<p>Property is always serialized and de-serialized, regardless of IgnoreNullValues configuration.</p>
+</li>
+<li><p><code>JsonIgnoreCondition.Always</code></p>
+<p>Property is always ignored.</p>
+</li>
+<li><p><code>JsonIgnoreCondition.WhenWritingDefault</code></p>
+<p>Property is ignored only if it equals the default value for its type.</p>
+</li>
+<li><p><code>JsonIgnoreCondition.WhenWritingNull</code></p>
+<p>Property is ignored if its value is null. This is applied only to reference-type properties and fields.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="converters">Converters</h2>
+<p>You can convert complex types into JSON representation, by implementing the <code>JsonConverter&lt;T&gt;</code> abstract class and then adding the converter to the <code>Converters</code> collection of your <code>JsonSerializerOptions</code> instance.</p>
+<p>An example converter:</p>
+<pre><code class="language-csharp">public class CultureInfoConverter : JsonConverter&lt;CultureInfo&gt;
+{
+    public override CultureInfo? Read(ref Utf8JsonReader reader, 
+                                      Type typeToConvert, 
+                                      JsonSerializerOptions options)
+    {
+        return new CultureInfo(reader.GetString()!);
+    }
+
+     public override void Write(Utf8JsonWriter writer,
+                                CultureInfo value, 
+                                JsonSerializerOptions options)
+     {
+        writer.WriteStringValue(value.Name);
+     }
+}
+</code></pre>
+<h1 id="object-validation">Object validation</h1>
+<p>The <code>Validator</code> class is commonly used for validating data annotations on objects. Validation attributes are defined in the <code>System.ComponentModel.DataAnnotations</code> namespace. To validate an object, first it must be annotated:</p>
+<pre><code class="language-csharp">public class Person
+{
+    [Required(ErrorMessage = &quot;Name is required.&quot;)]
+    [StringLength(100, ErrorMessage = &quot;Name cannot be longer than 100 characters.&quot;)]
+    public string Name { get; set; }
+
+    [Range(1, 120, ErrorMessage = &quot;Age must be between 1 and 120.&quot;)]
+    public int Age { get; set; }
+
+    [EmailAddress(ErrorMessage = &quot;Invalid Email Address.&quot;)]
+    public string Email { get; set; }
+}
+</code></pre>
+<p>Validation code:</p>
+<pre><code class="language-csharp">//person instance with invalid data
+var person = new Person
+{
+    Name = null, //Invalid: Required
+    Age = 150, //Invalid: Out of Range
+    Email = &quot;invalid-email&quot; //Invalid: Not an email format
+};
+
+// Create a list to hold validation results
+var validationResults = new List&lt;ValidationResult&gt;();
+
+// Validate the object
+var validationContext = new ValidationContext(person, null, null);
+bool isValid = Validator.TryValidateObject(person, validationContext, validationResults, true);
+
+// Output the validation results
+if (!isValid)
+{
+    Console.WriteLine(&quot;Validation failed for the following reasons:&quot;);
+
+    foreach (var validationResult in validationResults)
+    {
+        Console.WriteLine($&quot;- {validationResult.ErrorMessage}&quot;);
+    }
+}
+else
+{
+    Console.WriteLine(&quot;Validation succeeded.&quot;);
+}
+</code></pre>
+<h2 id="defining-a-custom-validation-attribute">Defining a custom validation attribute</h2>
+<p>You can create a custom attribute by deriving from <code>ValidationAttribute</code> class:</p>
+<pre><code class="language-csharp">
+public class FutureDateAttribute : ValidationAttribute
+{
+    public FutureDateAttribute()
+    {
+        ErrorMessage = &quot;The date must be in the future.&quot;;
+    }
+
+    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    {
+        if (value == null)
+        {
+            return new ValidationResult(ErrorMessage);
+        }
+
+        DateTime dateValue;
+        if (DateTime.TryParse(value.ToString(), out dateValue))
+        {
+            if (dateValue &gt; DateTime.Now)
+            {
+                return ValidationResult.Success;
+            }
+        }
+
+        return new ValidationResult(ErrorMessage);
+    }
+}
 </code></pre>
 <h1 id="cryptography">Cryptography</h1>
 <h2 id="encryption-algortithms">Encryption Algortithms</h2>
@@ -20097,7 +20324,7 @@ Install with: <code>dotnet add package xunit</code></p>
 </ul>
 </div>
 
-        </main>
+    </div>
 
         <script type="text/javascript" src="script.js"></script>
 
