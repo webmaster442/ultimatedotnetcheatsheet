@@ -1,7 +1,11 @@
-<svg version="1.1" baseProfile="full" width="1044.0" height="721.5" viewBox="0 0 1044 721.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-	<desc >#spacing: 12
-	#direction: right
-	
+<svg version="1.1" baseProfile="full" width="1037.0" height="697.5" viewBox="0 0 1037 697.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >cryptography2</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: cryptography2
+		
 	[&lt;note&gt;Note: 
 	SHA3 is only available on .NET 8
 	or newer versions ]
@@ -55,58 +59,58 @@
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
 		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="721.5" width="1044.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="697.5" width="1037.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M182.4 441.3 L292 297.5 L390.5 297.5 L390.5 297.5 " fill="none"></path>
-					<path d="M181.1 440.3 L182.4 441.3 L183.7 442.3 L180.0 444.5 Z"></path>
-					<path d="M193.5 441.6 L292 341.5 L363 341.5 L363.0 341.5 " fill="none"></path>
-					<path d="M192.4 440.5 L193.5 441.6 L194.6 442.8 L190.7 444.5 Z"></path>
-					<path d="M213.5 442.2 L292 385.5 L386 385.5 L386.0 385.5 " fill="none"></path>
-					<path d="M212.5 440.9 L213.5 442.2 L214.4 443.5 L210.2 444.5 Z"></path>
-					<path d="M260.5 442.9 L292 429.5 L377.5 429.5 L377.5 429.5 " fill="none"></path>
-					<path d="M259.9 441.5 L260.5 442.9 L261.1 444.4 L256.8 444.5 Z"></path>
-					<path d="M290.0 473.8 L292 473.5 L377.5 473.5 L377.5 473.5 " fill="none"></path>
-					<path d="M289.8 472.2 L290.0 473.8 L290.2 475.4 L286.0 474.3 Z"></path>
-					<path d="M289.9 517.2 L292 517.5 L377.5 517.5 L377.5 517.5 " fill="none"></path>
-					<path d="M290.2 515.6 L289.9 517.2 L289.7 518.7 L286.0 516.5 Z"></path>
-					<path d="M252.1 543.2 L292 561.5 L368.5 561.5 L368.5 561.5 " fill="none"></path>
-					<path d="M252.8 541.7 L252.1 543.2 L251.5 544.6 L248.5 541.5 Z"></path>
-					<path d="M210.4 543.9 L292 605.5 L368.5 605.5 L368.5 605.5 " fill="none"></path>
-					<path d="M211.4 542.6 L210.4 543.9 L209.5 545.2 L207.2 541.5 Z"></path>
-					<path d="M191.9 544.4 L292 649.5 L368.5 649.5 L368.5 649.5 " fill="none"></path>
-					<path d="M193.1 543.3 L191.9 544.4 L190.8 545.5 L189.2 541.5 Z"></path>
-					<path d="M170.7 441.0 L292 213 L298 213 L298.0 213.0 " fill="none"></path>
-					<path d="M169.3 440.2 L170.7 441.0 L172.1 441.7 L168.8 444.5 Z"></path>
-					<path d="M530.7 154.7 L539 150.5 L566.5 150.5 L566.5 150.5 " fill="none"></path>
-					<path d="M530.0 153.3 L530.7 154.7 L531.4 156.1 L527.1 156.5 Z"></path>
-					<path d="M530.7 271.3 L539 275.5 L545 275.5 L545.0 275.5 " fill="none"></path>
-					<path d="M531.4 269.9 L530.7 271.3 L530.0 272.7 L527.1 269.5 Z"></path>
-					<path d="M756.5 83.3 L829 16 L862.5 16 L862.5 16.0 " fill="none"></path>
-					<path d="M755.4 82.1 L756.5 83.3 L757.6 84.5 L753.5 86.0 Z"></path>
-					<path d="M790.7 83.9 L829 60 L835 60 L835.0 60.0 " fill="none"></path>
-					<path d="M789.9 82.5 L790.7 83.9 L791.6 85.2 L787.3 86.0 Z"></path>
-					<path d="M805.3 111.6 L829 104 L858 104 L858.0 104.0 " fill="none"></path>
-					<path d="M804.8 110.1 L805.3 111.6 L805.8 113.1 L801.5 112.8 Z"></path>
-					<path d="M805.5 148.4 L829 148 L849.5 148 L849.5 148.0 " fill="none"></path>
-					<path d="M805.5 146.8 L805.5 148.4 L805.5 150.0 L801.5 148.5 Z"></path>
-					<path d="M805.3 185.2 L829 192 L849.5 192 L849.5 192.0 " fill="none"></path>
-					<path d="M805.8 183.7 L805.3 185.2 L804.9 186.8 L801.5 184.1 Z"></path>
-					<path d="M796.8 217.0 L829 236 L849.5 236 L849.5 236.0 " fill="none"></path>
-					<path d="M797.6 215.7 L796.8 217.0 L796.0 218.4 L793.4 215.0 Z"></path>
-					<path d="M759.2 217.7 L829 280 L840.5 280 L840.5 280.0 " fill="none"></path>
-					<path d="M760.3 216.5 L759.2 217.7 L758.1 218.9 L756.2 215.0 Z"></path>
-					<path d="M740.5 218.1 L829 324 L840.5 324 L840.5 324.0 " fill="none"></path>
-					<path d="M741.7 217.0 L740.5 218.1 L739.2 219.1 L737.9 215.0 Z"></path>
-					<path d="M729.2 218.3 L829 368 L840.5 368 L840.5 368.0 " fill="none"></path>
-					<path d="M730.6 217.4 L729.2 218.3 L727.9 219.2 L727.0 215.0 Z"></path>
+					<path d="M190.0 416.1 L291 289.5 L388.5 289.5 L388.5 289.5 " fill="none"></path>
+					<path d="M185.8 412.8 L190.0 416.1 L194.2 419.4 L181.7 426.5 Z"></path>
+					<path d="M202.6 417.2 L291 331.5 L361 331.5 L361.0 331.5 " fill="none"></path>
+					<path d="M198.9 413.4 L202.6 417.2 L206.3 421.0 L193.0 426.5 Z"></path>
+					<path d="M224.7 419.0 L291 373.5 L384 373.5 L384.0 373.5 " fill="none"></path>
+					<path d="M221.7 414.6 L224.7 419.0 L227.7 423.4 L213.7 426.5 Z"></path>
+					<path d="M276.0 421.5 L291 415.5 L375.5 415.5 L375.5 415.5 " fill="none"></path>
+					<path d="M274.0 416.6 L276.0 421.5 L278.0 426.5 L263.6 426.5 Z"></path>
+					<path d="M299.2 456.5 L291 457.5 L375.5 457.5 L375.5 457.5 " fill="none"></path>
+					<path d="M298.6 451.2 L299.2 456.5 L299.9 461.8 L286.0 458.1 Z"></path>
+					<path d="M299.2 500.8 L291 499.5 L375.5 499.5 L375.5 499.5 " fill="none"></path>
+					<path d="M300.0 495.6 L299.2 500.8 L298.3 506.1 L286.0 498.7 Z"></path>
+					<path d="M263.1 529.0 L291 541.5 L366.5 541.5 L366.5 541.5 " fill="none"></path>
+					<path d="M265.3 524.1 L263.1 529.0 L260.9 533.8 L250.9 523.5 Z"></path>
+					<path d="M219.9 531.4 L291 583.5 L366.5 583.5 L366.5 583.5 " fill="none"></path>
+					<path d="M223.1 527.1 L219.9 531.4 L216.8 535.7 L209.2 523.5 Z"></path>
+					<path d="M200.0 533.0 L291 625.5 L366.5 625.5 L366.5 625.5 " fill="none"></path>
+					<path d="M203.8 529.3 L200.0 533.0 L196.2 536.7 L190.7 523.5 Z"></path>
+					<path d="M176.2 414.8 L291 207 L296 207 L296.0 207.0 " fill="none"></path>
+					<path d="M171.6 412.2 L176.2 414.8 L180.9 417.4 L169.8 426.5 Z"></path>
+					<path d="M538.0 144.5 L536 145.5 L562 145.5 L562.0 145.5 " fill="none"></path>
+					<path d="M535.6 139.8 L538.0 144.5 L540.3 149.3 L526.0 150.5 Z"></path>
+					<path d="M538.0 269.5 L536 268.5 L541 268.5 L541.0 268.5 " fill="none"></path>
+					<path d="M540.3 264.7 L538.0 269.5 L535.6 274.2 L526.0 263.5 Z"></path>
+					<path d="M760.9 72.1 L823 16 L855.5 16 L855.5 16.0 " fill="none"></path>
+					<path d="M757.3 68.1 L760.9 72.1 L764.4 76.0 L751.0 81.0 Z"></path>
+					<path d="M796.7 74.1 L823 58 L828 58 L828.0 58.0 " fill="none"></path>
+					<path d="M793.9 69.5 L796.7 74.1 L799.4 78.6 L785.3 81.0 Z"></path>
+					<path d="M809.7 104.2 L823 100 L851 100 L851.0 100.0 " fill="none"></path>
+					<path d="M808.1 99.1 L809.7 104.2 L811.3 109.3 L797.0 108.2 Z"></path>
+					<path d="M810.3 142.3 L823 142 L842.5 142 L842.5 142.0 " fill="none"></path>
+					<path d="M810.2 137.0 L810.3 142.3 L810.5 147.6 L797.0 142.6 Z"></path>
+					<path d="M809.9 180.5 L823 184 L842.5 184 L842.5 184.0 " fill="none"></path>
+					<path d="M811.3 175.3 L809.9 180.5 L808.5 185.6 L797.0 177.0 Z"></path>
+					<path d="M806.1 216.5 L823 226 L842.5 226 L842.5 226.0 " fill="none"></path>
+					<path d="M808.7 211.9 L806.1 216.5 L803.5 221.2 L794.5 210.0 Z"></path>
+					<path d="M765.2 218.7 L823 268 L833.5 268 L833.5 268.0 " fill="none"></path>
+					<path d="M768.7 214.6 L765.2 218.7 L761.7 222.7 L755.1 210.0 Z"></path>
+					<path d="M744.5 220.0 L823 310 L833.5 310 L833.5 310.0 " fill="none"></path>
+					<path d="M748.5 216.5 L744.5 220.0 L740.5 223.6 L735.8 210.0 Z"></path>
+					<path d="M731.9 220.9 L823 352 L833.5 352 L833.5 352.0 " fill="none"></path>
+					<path d="M736.3 217.9 L731.9 220.9 L727.6 224.0 L724.3 210.0 Z"></path>
 					<g data-name="Note:">
 						<g fill="#eee8d5" stroke="#33322E" data-name="Note:">
-							<path d="M11.0 367.5 L267.0 367.5 L275.0 375.5 L275.0 432.5 L11.0 432.5 L11.0 367.5 Z" data-name="Note:"></path>
-							<path d="M267.0 367.5 L267.0 375.5 L275.0 375.5" fill="none" data-name="Note:"></path>
+							<path d="M11.0 351.5 L267.0 351.5 L275.0 359.5 L275.0 416.5 L11.0 416.5 L11.0 351.5 Z" data-name="Note:"></path>
+							<path d="M267.0 351.5 L267.0 359.5 L275.0 359.5" fill="none" data-name="Note:"></path>
 						</g>
-						<g transform="translate(11, 367.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Note:">
+						<g transform="translate(11, 351.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Note:">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Note:">
 								<text x="0.0" y="14.1" stroke="none" data-name="Note:">Note:</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Note:">SHA3 is only available on .NET 8</text>
@@ -117,16 +121,16 @@
 					</g>
 					<g data-name="HashAlgorithm">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HashAlgorithm">
-							<rect x="0.0" y="444.5" height="97.0" width="286.0" data-name="HashAlgorithm"></rect>
-							<path d="M0.0 476.5 L286.0 476.5" fill="none" data-name="HashAlgorithm"></path>
+							<rect x="0.0" y="426.5" height="97.0" width="286.0" data-name="HashAlgorithm"></rect>
+							<path d="M0.0 458.5 L286.0 458.5" fill="none" data-name="HashAlgorithm"></path>
 						</g>
-						<g transform="translate(0, 444.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HashAlgorithm">
+						<g transform="translate(0, 426.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HashAlgorithm">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HashAlgorithm">
 								<text x="135.0" y="14.1" stroke="none" text-anchor="middle" data-name="HashAlgorithm">HashAlgorithm</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 476.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HashAlgorithm">
+						<g transform="translate(0, 458.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HashAlgorithm">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HashAlgorithm">
 								<text x="0.0" y="14.1" stroke="none" data-name="HashAlgorithm">Represents the base class from which</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="HashAlgorithm">all implementations of cryptographic</text>
@@ -137,16 +141,16 @@
 					</g>
 					<g data-name="KeyedHashAlgorithm">
 						<g fill="#eee8d5" stroke="#33322E" data-name="KeyedHashAlgorithm">
-							<rect x="298.0" y="156.5" height="113.0" width="235.0" data-name="KeyedHashAlgorithm"></rect>
-							<path d="M298.0 188.5 L533.0 188.5" fill="none" data-name="KeyedHashAlgorithm"></path>
+							<rect x="296.0" y="150.5" height="113.0" width="235.0" data-name="KeyedHashAlgorithm"></rect>
+							<path d="M296.0 182.5 L531.0 182.5" fill="none" data-name="KeyedHashAlgorithm"></path>
 						</g>
-						<g transform="translate(298, 156.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyedHashAlgorithm">
+						<g transform="translate(296, 150.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyedHashAlgorithm">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="KeyedHashAlgorithm">
 								<text x="109.5" y="14.1" stroke="none" text-anchor="middle" data-name="KeyedHashAlgorithm">KeyedHashAlgorithm</text>
 								
 							</g>
 						</g>
-						<g transform="translate(298, 188.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="KeyedHashAlgorithm">
+						<g transform="translate(296, 182.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="KeyedHashAlgorithm">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="KeyedHashAlgorithm">
 								<text x="0.0" y="14.1" stroke="none" data-name="KeyedHashAlgorithm">Represents the abstract class</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="KeyedHashAlgorithm">from which all implementations</text>
@@ -158,16 +162,16 @@
 					</g>
 					<g data-name="HMAC">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMAC">
-							<rect x="566.5" y="86.0" height="129.0" width="235.0" data-name="HMAC"></rect>
-							<path d="M566.5 118.0 L801.5 118.0" fill="none" data-name="HMAC"></path>
+							<rect x="562.0" y="81.0" height="129.0" width="235.0" data-name="HMAC"></rect>
+							<path d="M562.0 113.0 L797.0 113.0" fill="none" data-name="HMAC"></path>
 						</g>
-						<g transform="translate(566.5, 86)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMAC">
+						<g transform="translate(562, 81)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMAC">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMAC">
 								<text x="109.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMAC">HMAC</text>
 								
 							</g>
 						</g>
-						<g transform="translate(566.5, 118)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMAC">
+						<g transform="translate(562, 113)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMAC">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMAC">
 								<text x="0.0" y="14.1" stroke="none" data-name="HMAC">Represents the abstract class</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="HMAC">from which all implementations</text>
@@ -180,16 +184,16 @@
 					</g>
 					<g data-name="MACTripleDES">
 						<g fill="#eee8d5" stroke="#33322E" data-name="MACTripleDES">
-							<rect x="545.0" y="227.0" height="97.0" width="278.0" data-name="MACTripleDES"></rect>
-							<path d="M545.0 259.0 L823.0 259.0" fill="none" data-name="MACTripleDES"></path>
+							<rect x="541.0" y="220.0" height="97.0" width="277.0" data-name="MACTripleDES"></rect>
+							<path d="M541.0 252.0 L818.0 252.0" fill="none" data-name="MACTripleDES"></path>
 						</g>
-						<g transform="translate(545, 227)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MACTripleDES">
+						<g transform="translate(541, 220)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MACTripleDES">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MACTripleDES">
-								<text x="131.0" y="14.1" stroke="none" text-anchor="middle" data-name="MACTripleDES">MACTripleDES</text>
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="MACTripleDES">MACTripleDES</text>
 								
 							</g>
 						</g>
-						<g transform="translate(545, 259)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MACTripleDES">
+						<g transform="translate(541, 252)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MACTripleDES">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MACTripleDES">
 								<text x="0.0" y="14.1" stroke="none" data-name="MACTripleDES">Computes a Message Authentication</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="MACTripleDES">Code (MAC) using TripleDES for</text>
@@ -200,9 +204,9 @@
 					</g>
 					<g data-name="MD5">
 						<g fill="#eee8d5" stroke="#33322E" data-name="MD5">
-							<rect x="390.5" y="281.5" height="32.0" width="50.0" data-name="MD5"></rect>
+							<rect x="388.5" y="273.5" height="32.0" width="50.0" data-name="MD5"></rect>
 						</g>
-						<g transform="translate(390.5, 281.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MD5">
+						<g transform="translate(388.5, 273.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MD5">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MD5">
 								<text x="17.0" y="14.1" stroke="none" text-anchor="middle" data-name="MD5">MD5</text>
 								
@@ -211,9 +215,9 @@
 					</g>
 					<g data-name="RIPEMD160">
 						<g fill="#eee8d5" stroke="#33322E" data-name="RIPEMD160">
-							<rect x="363.0" y="325.5" height="32.0" width="105.0" data-name="RIPEMD160"></rect>
+							<rect x="361.0" y="315.5" height="32.0" width="105.0" data-name="RIPEMD160"></rect>
 						</g>
-						<g transform="translate(363, 325.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RIPEMD160">
+						<g transform="translate(361, 315.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RIPEMD160">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RIPEMD160">
 								<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="RIPEMD160">RIPEMD160</text>
 								
@@ -222,9 +226,9 @@
 					</g>
 					<g data-name="SHA1">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA1">
-							<rect x="386.0" y="369.5" height="32.0" width="59.0" data-name="SHA1"></rect>
+							<rect x="384.0" y="357.5" height="32.0" width="59.0" data-name="SHA1"></rect>
 						</g>
-						<g transform="translate(386, 369.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA1">
+						<g transform="translate(384, 357.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA1">
 								<text x="21.5" y="14.1" stroke="none" text-anchor="middle" data-name="SHA1">SHA1</text>
 								
@@ -233,9 +237,9 @@
 					</g>
 					<g data-name="SHA256">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA256">
-							<rect x="377.5" y="413.5" height="32.0" width="76.0" data-name="SHA256"></rect>
+							<rect x="375.5" y="399.5" height="32.0" width="76.0" data-name="SHA256"></rect>
 						</g>
-						<g transform="translate(377.5, 413.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA256">
+						<g transform="translate(375.5, 399.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA256">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA256">
 								<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA256">SHA256</text>
 								
@@ -244,9 +248,9 @@
 					</g>
 					<g data-name="SHA384">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA384">
-							<rect x="377.5" y="457.5" height="32.0" width="76.0" data-name="SHA384"></rect>
+							<rect x="375.5" y="441.5" height="32.0" width="76.0" data-name="SHA384"></rect>
 						</g>
-						<g transform="translate(377.5, 457.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA384">
+						<g transform="translate(375.5, 441.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA384">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA384">
 								<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA384">SHA384</text>
 								
@@ -255,9 +259,9 @@
 					</g>
 					<g data-name="SHA512">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA512">
-							<rect x="377.5" y="501.5" height="32.0" width="76.0" data-name="SHA512"></rect>
+							<rect x="375.5" y="483.5" height="32.0" width="76.0" data-name="SHA512"></rect>
 						</g>
-						<g transform="translate(377.5, 501.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA512">
+						<g transform="translate(375.5, 483.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA512">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA512">
 								<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA512">SHA512</text>
 								
@@ -266,9 +270,9 @@
 					</g>
 					<g data-name="SHA3_256">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA3_256">
-							<rect x="368.5" y="545.5" height="32.0" width="94.0" data-name="SHA3_256"></rect>
+							<rect x="366.5" y="525.5" height="32.0" width="94.0" data-name="SHA3_256"></rect>
 						</g>
-						<g transform="translate(368.5, 545.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_256">
+						<g transform="translate(366.5, 525.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_256">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_256">
 								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_256">SHA3_256</text>
 								
@@ -277,9 +281,9 @@
 					</g>
 					<g data-name="SHA3_384">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA3_384">
-							<rect x="368.5" y="589.5" height="32.0" width="94.0" data-name="SHA3_384"></rect>
+							<rect x="366.5" y="567.5" height="32.0" width="94.0" data-name="SHA3_384"></rect>
 						</g>
-						<g transform="translate(368.5, 589.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_384">
+						<g transform="translate(366.5, 567.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_384">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_384">
 								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_384">SHA3_384</text>
 								
@@ -288,9 +292,9 @@
 					</g>
 					<g data-name="SHA3_512">
 						<g fill="#eee8d5" stroke="#33322E" data-name="SHA3_512">
-							<rect x="368.5" y="633.5" height="32.0" width="94.0" data-name="SHA3_512"></rect>
+							<rect x="366.5" y="609.5" height="32.0" width="94.0" data-name="SHA3_512"></rect>
 						</g>
-						<g transform="translate(368.5, 633.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_512">
+						<g transform="translate(366.5, 609.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_512">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_512">
 								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_512">SHA3_512</text>
 								
@@ -299,9 +303,9 @@
 					</g>
 					<g data-name="HMACMD5">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACMD5">
-							<rect x="862.5" y="0.0" height="32.0" width="98.0" data-name="HMACMD5"></rect>
+							<rect x="855.5" y="0.0" height="32.0" width="98.0" data-name="HMACMD5"></rect>
 						</g>
-						<g transform="translate(862.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACMD5">
+						<g transform="translate(855.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACMD5">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACMD5">
 								<text x="41.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACMD5">HMACMD5</text>
 								
@@ -310,9 +314,9 @@
 					</g>
 					<g data-name="HMACRIPEMD160">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACRIPEMD160">
-							<rect x="835.0" y="44.0" height="32.0" width="153.0" data-name="HMACRIPEMD160"></rect>
+							<rect x="828.0" y="42.0" height="32.0" width="153.0" data-name="HMACRIPEMD160"></rect>
 						</g>
-						<g transform="translate(835, 44)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACRIPEMD160">
+						<g transform="translate(828, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACRIPEMD160">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACRIPEMD160">
 								<text x="68.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACRIPEMD160">HMACRIPEMD160</text>
 								
@@ -321,9 +325,9 @@
 					</g>
 					<g data-name="HMACSHA1">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA1">
-							<rect x="858.0" y="88.0" height="32.0" width="107.0" data-name="HMACSHA1"></rect>
+							<rect x="851.0" y="84.0" height="32.0" width="107.0" data-name="HMACSHA1"></rect>
 						</g>
-						<g transform="translate(858, 88)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA1">
+						<g transform="translate(851, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA1">
 								<text x="45.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA1">HMACSHA1</text>
 								
@@ -332,9 +336,9 @@
 					</g>
 					<g data-name="HMACSHA256">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA256">
-							<rect x="849.5" y="132.0" height="32.0" width="124.0" data-name="HMACSHA256"></rect>
+							<rect x="842.5" y="126.0" height="32.0" width="124.0" data-name="HMACSHA256"></rect>
 						</g>
-						<g transform="translate(849.5, 132)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA256">
+						<g transform="translate(842.5, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA256">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA256">
 								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA256">HMACSHA256</text>
 								
@@ -343,9 +347,9 @@
 					</g>
 					<g data-name="HMACSHA384">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA384">
-							<rect x="849.5" y="176.0" height="32.0" width="124.0" data-name="HMACSHA384"></rect>
+							<rect x="842.5" y="168.0" height="32.0" width="124.0" data-name="HMACSHA384"></rect>
 						</g>
-						<g transform="translate(849.5, 176)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA384">
+						<g transform="translate(842.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA384">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA384">
 								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA384">HMACSHA384</text>
 								
@@ -354,9 +358,9 @@
 					</g>
 					<g data-name="HMACSHA512">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA512">
-							<rect x="849.5" y="220.0" height="32.0" width="124.0" data-name="HMACSHA512"></rect>
+							<rect x="842.5" y="210.0" height="32.0" width="124.0" data-name="HMACSHA512"></rect>
 						</g>
-						<g transform="translate(849.5, 220)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA512">
+						<g transform="translate(842.5, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA512">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA512">
 								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA512">HMACSHA512</text>
 								
@@ -365,9 +369,9 @@
 					</g>
 					<g data-name="HMACSHA3_256">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA3_256">
-							<rect x="840.5" y="264.0" height="32.0" width="142.0" data-name="HMACSHA3_256"></rect>
+							<rect x="833.5" y="252.0" height="32.0" width="142.0" data-name="HMACSHA3_256"></rect>
 						</g>
-						<g transform="translate(840.5, 264)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_256">
+						<g transform="translate(833.5, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_256">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_256">
 								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_256">HMACSHA3_256</text>
 								
@@ -376,9 +380,9 @@
 					</g>
 					<g data-name="HMACSHA3_384">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA3_384">
-							<rect x="840.5" y="308.0" height="32.0" width="142.0" data-name="HMACSHA3_384"></rect>
+							<rect x="833.5" y="294.0" height="32.0" width="142.0" data-name="HMACSHA3_384"></rect>
 						</g>
-						<g transform="translate(840.5, 308)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_384">
+						<g transform="translate(833.5, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_384">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_384">
 								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_384">HMACSHA3_384</text>
 								
@@ -387,9 +391,9 @@
 					</g>
 					<g data-name="HMACSHA3_512">
 						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA3_512">
-							<rect x="840.5" y="352.0" height="32.0" width="142.0" data-name="HMACSHA3_512"></rect>
+							<rect x="833.5" y="336.0" height="32.0" width="142.0" data-name="HMACSHA3_512"></rect>
 						</g>
-						<g transform="translate(840.5, 352)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_512">
+						<g transform="translate(833.5, 336)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_512">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_512">
 								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_512">HMACSHA3_512</text>
 								

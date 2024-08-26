@@ -1,0 +1,52 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: streamwriters
+
+[MarshalByRefObject|Enables access to objects across application
+domain boundaries in applications 
+that support remoting.]
+
+[TextWriter|Represents a writer that can write
+a sequential series of characters.
+This class is abstract.]
+
+[TextReader|Represents a reader that can read 
+a sequential series of characters.]
+
+[StreamReader|Implements a TextReader that 
+reads characters from a byte stream
+in a particular encoding.]
+
+[StringReader|Implements a TextReader that
+reads from a string.]
+
+[StreamWriter|Implements a TextWriter for writing
+characters to a stream ina particular 
+encoding.]
+
+[StringWriter|Implements a TextWriter for writing 
+information to a string. The information
+is stored in an underlying StringBuilder.]
+
+[BinaryReader|Reads primitive data types as binary
+values in a specific encoding.]
+
+[BinaryWriter|Writes primitive types in binary 
+to a stream and supports writing 
+strings in a specific encoding.]
+
+[MarshalByRefObject] <:- [TextReader]
+[MarshalByRefObject] <:- [TextWriter]
+
+[IDisposable] <:-- [TextReader]
+[IDisposable] <:-- [TextWriter]
+[IDisposable] <:-- [BinaryWriter]
+[IDisposable] <:-- [BinaryReader]
+
+[TextReader] <:- [StreamReader]
+[TextReader] <:- [StringReader]
+[TextWriter] <:- [StreamWriter]
+[TextWriter] <:- [StringWriter]
+

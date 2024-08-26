@@ -1,0 +1,31 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: mvvm
+
+[<actor> User] <- [<label>interacts] -> [<transceiver>View]
+
+[<transceiver>View Model]
+
+[<transceiver>Model]
+
+[<note>Implements the 
+INotifyPropertyChanged interface] -- [View Model]
+
+[View] -- [<note>Binding is possible
+to Dependency properties of Controls]
+
+[<transceiver>Binding]
+
+[View] <- [<label>Updates view]- [<reference>Binding] <-  [<label>Observes View Model] -  [View Model]
+[View] -[<label>Dependency Property
+changes updae it]-> [<reference>Binding] - [<label>Updates]-> [View Model]
+
+[View Model] <-[<label>Reads model]- [Model]
+[View Model] - [<label>Updates model] -> [Model]
+
+[<note>May include an optional
+converter that is either an
+IValueConverter or
+IMultiValueConverter instance] -- [Binding]

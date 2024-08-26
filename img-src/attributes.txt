@@ -1,0 +1,80 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: attributes
+
+[Attribute|Represents the base class
+for custom attributes.]
+
+[AttributeUsageAttribute|Specifies the usage of another
+attribute class.
+This class cannot be inherited.]
+
+[ThreadStaticAttribute|
+Indicates that the value of
+a static field is 
+unique for each thread.]
+
+[FlagsAttribute|Indicates that an enumeration 
+can be treated as a bit field\; 
+that is, a set of flags.]
+
+[Attribute] <:- [<note>Serialization
+Related] - [SerializableAttribute|Indicates that a class can be
+serialized using binary or XML 
+serialization. 
+This class cannot be inherited.]
+
+[Attribute] <:- [<note>Threading 
+Related] 
+
+[<note>Serialization
+Related] - [NonSerializedAttribute|Indicates that a field  of
+a serializable class should not
+be serialized. 
+This class cannot be inherited.]
+
+[<note>Threading 
+Related] - [STAThreadAttribute|Indicates that the COM 
+threading model for an 
+application is single-threaded
+apartment (STA).]
+
+[<note>Threading 
+Related] - [MTAThreadAttribute|Indicates that the COM 
+threading model for an 
+application is multithreaded
+apartment (MTA).]
+
+[<note>Threading 
+Related] - [ThreadStaticAttribute]
+
+[Attribute] <:- [AttributeUsageAttribute]
+[Attribute] <:- [FlagsAttribute]
+
+[Attribute] <:- [<note>Development 
+related] - [ObsoleteAttribute|Marks the program elements
+that are no longer in use. 
+This class cannot be inherited.]
+
+[<note>Development 
+related] - [CallerMemberNameAttribute|Allows you to obtain the
+method or property name of the
+caller to the method.]
+
+[<note>Development 
+related] - [CallerLineNumberAttribute|Allows you to obtain the 
+line number in the source file 
+at which the method is called.]
+
+[<note>Development 
+related] - [CallerFilePathAttribute|Allows you to obtain the 
+full path of the source file that 
+contains the caller. 
+This is the file path at the time of compile.]
+
+[<note>Development 
+related] - [CallerArgumentExpressionAttribute|Indicates that a parameter captures
+the expression passed for another
+parameter as a string.]

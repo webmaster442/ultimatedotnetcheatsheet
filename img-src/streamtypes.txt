@@ -1,0 +1,68 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: streamtypes
+
+[MarshalByRefObject|Enables access to objects across application
+domain boundaries in applications 
+that support remoting.]
+
+[Stream|Provides a generic view of a sequence of bytes.
+This is an abstract class.]
+
+[BufferedStream|Adds a buffering layer to 
+read and write operations on another stream.
+This class cannot be inherited.]
+
+[BrotliStream|Provides methods and properties used to 
+compress and decompress streams by using 
+the Brotli data format specification.]
+
+[DeflateStream |Provides methods and properties for 
+compressing and decompressing streams 
+by using the Deflate algorithm.]
+
+[GZipStream|Provides methods and properties 
+used to compress and decompress streams by 
+using the GZip data format specification.]
+
+[ZLibStream|Provides methods and properties used
+to compress and decompress streams
+by using the zlib data format specification.]
+
+[FileStream|Provides a Stream for a file,
+supporting both synchronous and
+asynchronous read and write operations.]
+
+[MemoryStream|Creates a stream whose
+backing store is memory]
+
+[PipeStream|Exposes a Stream object around a pipe, 
+which supports both anonymous and named pipes.]
+
+[UnmanagedMemoryStream|Provides access to unmanaged 
+blocks of memory from managed code.]
+
+[NetworkStream|Provides the underlying stream 
+of data for network access.]
+
+[CryptoStream|Defines a stream that links data
+streams to cryptographic transformations.]
+
+[MarshalByRefObject] <:- [Stream]
+
+[IAsyncDisposable] <:-- [Stream]
+[IDisposable] <:-- [Stream]
+
+[Stream] <:- [BufferedStream]
+[Stream] <:- [BrotliStream]
+[Stream] <:- [DeflateStream]
+[Stream] <:- [GZipStream]
+[Stream] <:- [ZLibStream]
+[Stream] <:- [FileStream]
+[Stream] <:- [MemoryStream]
+[Stream] <:- [PipeStream]
+[Stream] <:- [UnmanagedMemoryStream]
+[Stream] <:- [NetworkStream]
+[Stream] <:- [CryptoStream]

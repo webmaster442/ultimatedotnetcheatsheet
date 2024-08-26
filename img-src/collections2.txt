@@ -1,0 +1,47 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: collections2
+
+[IEnumerable|
+IEnumerator GetEnumerator ()] <:--
+
+[IEnumerable<out T>|
+IEnumerator<out T> GetEnumerator ()]
+
+
+[IEnumerable<out T>] <:-- [IOrderedEnumerable<out TElement>|
+CreateOrderedEnumerable<TKey>(
+Func<out TElement,TKey> keySelector,
+IComparer<TKey>? comparer, 
+bool descending)]
+
+[IEnumerable<out T>] <:-- [IGrouping<out TKey,out TElement>|
+TKey Key { get\; }] <:-- [ILookup<TKey,TElement>|
+int Count { get\; }
+IEnumerable<TElement> this\[TKey key\] { get\; }|
+bool Contains (TKey key)]
+
+[IEnumerable<out T>] <:-- [IQueryable<out T>] <:-- [IOrderedQueryable<out T>]
+
+[IEnumerable] <:-- [IQueryable] <:-- [IQueryable<out T>]
+
+[IQueryable |
+Type ElementType { get\; }
+Expression Expression { get\; }
+IQueryProvider Provider { get\; }]
+
+
+[IEnumerator|
+object Current { get\; }
+bool MoveNext()
+void Reset()]
+
+[IEnumerator] <:-- [IEnumerator<out T>|
+T Current { get\; }]
+
+[IDisposable|
+void Dispose()]
+
+[IDisposable] <:-- [IEnumerator<out T>]

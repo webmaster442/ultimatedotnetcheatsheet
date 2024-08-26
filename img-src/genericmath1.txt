@@ -1,0 +1,26 @@
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: genericmath1
+
+[INumberBase\&lt;T\&gt;|
+Defines the base of other number types.]
+
+[INumber\&lt;T\&gt;|Defines a number type.]
+[ISignedNumber\&lt;T\&gt;|Defines a number type which can represent
+both positive and negative values.]
+[IUnsignedNumber&lt;Tself&gt;|Defines a number type that can only
+represent positive values.]
+[IBinaryNumber\&lt;T\&gt;|Defines a number that
+is represented in a base-2 format.]
+[IBinaryInteger\&lt;T\&gt;|Defines an integer type that
+is represented in a base-2 format.]
+[IFloatingPoint\&lt;T\&gt;|Defines a floating-point type.]
+[IFloatingPointIeee754\&lt;T\&gt;|Defines an IEEE 754 floating-point type.]
+[IBinaryFloatingPointIeee754\&lt;T\&gt;|Defines an IEEE 754 floating-point
+type that is represented in a base-2 format.]
+
+
+[INumberBase\&lt;T\&gt;] &lt;:- [ISignedNumber\&lt;T\&gt;] &lt;:- [IFloatingPoint\&lt;T\&gt;] &lt;:- [IFloatingPointIeee754\&lt;T\&gt;] &lt;:- [IBinaryFloatingPointIeee754\&lt;T\&gt;]
+[INumberBase\&lt;T\&gt;] &lt;:- [IUnsignedNumber&lt;Tself&gt;]
+[INumberBase\&lt;T\&gt;] &lt;:- [INumber\&lt;T\&gt;] &lt;:- [IBinaryNumber\&lt;T\&gt;] &lt;:- [IBinaryInteger\&lt;T\&gt;]
