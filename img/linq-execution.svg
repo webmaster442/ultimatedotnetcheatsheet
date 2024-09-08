@@ -1,0 +1,135 @@
+<svg version="1.1" baseProfile="full" width="798.0" height="283.8" viewBox="0 0 798 283.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >linq-execution</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: linq-execution
+	
+	[Deferred|The operation isn&apos;t performed
+	at the point in the code where the 
+	query is declared]
+	
+	[Immediate|
+	The data source is read
+	and the operation is performed once]
+	
+	[Streaming|
+	Operations that desn&apos;t have to read all 
+	the source data before they yield element.]
+	
+	[Nonstreaming|
+	Operations that must read all the source 
+	data before they can yie
+	ld a result element]
+	
+	[LINQ Execution] - [Immediate]
+	[LINQ Execution] - [Deferred]
+	[Deferred] - [Streaming]
+	[Deferred] - [Nonstreaming]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="283.8" width="798.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M91.1 154.5 L140 187.75 L145 187.75 L145.0 187.8 " fill="none"></path>
+					<path d="M91.1 122.5 L140 89.25 L155 89.25 L155.0 89.3 " fill="none"></path>
+					<path d="M408.0 45.2 L423 40 L428 40 L428.0 40.0 " fill="none"></path>
+					<path d="M408.0 133.3 L423 138.5 L434.5 138.5 L434.5 138.5 " fill="none"></path>
+					<g data-name="Deferred">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Deferred">
+							<rect x="155.0" y="40.8" height="97.0" width="253.0" data-name="Deferred"></rect>
+							<path d="M155.0 72.8 L408.0 72.8" fill="none" data-name="Deferred"></path>
+						</g>
+						<g transform="translate(155, 40.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Deferred">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Deferred">
+								<text x="118.5" y="14.1" stroke="none" text-anchor="middle" data-name="Deferred">Deferred</text>
+								
+							</g>
+						</g>
+						<g transform="translate(155, 72.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Deferred">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Deferred">
+								<text x="0.0" y="14.1" stroke="none" data-name="Deferred">The operation isn&apos;t performed</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Deferred">at the point in the code where the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Deferred">query is declared</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Immediate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Immediate">
+							<rect x="145.0" y="147.8" height="80.0" width="273.0" data-name="Immediate"></rect>
+							<path d="M145.0 179.8 L418.0 179.8" fill="none" data-name="Immediate"></path>
+						</g>
+						<g transform="translate(145, 147.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Immediate">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Immediate">
+								<text x="128.5" y="14.1" stroke="none" text-anchor="middle" data-name="Immediate">Immediate</text>
+								
+							</g>
+						</g>
+						<g transform="translate(145, 179.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Immediate">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Immediate">
+								<text x="0.0" y="14.1" stroke="none" data-name="Immediate">The data source is read</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Immediate">and the operation is performed once</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Streaming">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Streaming">
+							<rect x="428.0" y="0.0" height="80.0" width="314.0" data-name="Streaming"></rect>
+							<path d="M428.0 32.0 L742.0 32.0" fill="none" data-name="Streaming"></path>
+						</g>
+						<g transform="translate(428, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Streaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Streaming">
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="Streaming">Streaming</text>
+								
+							</g>
+						</g>
+						<g transform="translate(428, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Streaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Streaming">
+								<text x="0.0" y="14.1" stroke="none" data-name="Streaming">Operations that desn&apos;t have to read all</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Streaming">the source data before they yield element.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Nonstreaming">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Nonstreaming">
+							<rect x="434.5" y="90.0" height="97.0" width="301.0" data-name="Nonstreaming"></rect>
+							<path d="M434.5 122.0 L735.5 122.0" fill="none" data-name="Nonstreaming"></path>
+						</g>
+						<g transform="translate(434.5, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Nonstreaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Nonstreaming">
+								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="Nonstreaming">Nonstreaming</text>
+								
+							</g>
+						</g>
+						<g transform="translate(434.5, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Nonstreaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Nonstreaming">
+								<text x="0.0" y="14.1" stroke="none" data-name="Nonstreaming">Operations that must read all the source</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Nonstreaming">data before they can yie</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Nonstreaming">ld a result element</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LINQ Execution">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LINQ Execution">
+							<rect x="0.0" y="122.5" height="32.0" width="135.0" data-name="LINQ Execution"></rect>
+						</g>
+						<g transform="translate(0, 122.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LINQ Execution">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LINQ Execution">
+								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="LINQ Execution">LINQ Execution</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

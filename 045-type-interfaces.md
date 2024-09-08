@@ -13,11 +13,11 @@ interface IComparable<T>
 
 The CompareTo returns a value that indicates the relative order of the objects being compared. The return value has these meanings:
 
-| Value | Meaning |
-| :--| :-- |
-| Less than zero | This instance precedes other in the `sort` order. |
-| Zero | This instance occurs in the same position in the `sort` order as other. |
-| Greater than zero | This instance follows other in the sort order. |
+| Value             | Meaning                                                                 |
+| :---------------- | :---------------------------------------------------------------------- |
+| Less than zero    | This instance precedes other in the `sort` order.                       |
+| Zero              | This instance occurs in the same position in the `sort` order as other. |
+| Greater than zero | This instance follows other in the sort order.                          |
 
 ## IComparer\<T\>
 
@@ -36,10 +36,10 @@ interface IComparer<T>
 
 Return a signed integer that indicates the relative values of x and y, as shown in the following table:
 
-| Value | Meaning |
-| :--| :-- |
-| Less than zero |`x` is less than `y`. |
-| Zero | `x` equals `y`. |
+| Value             | Meaning                  |
+| :---------------- | :----------------------- |
+| Less than zero    | `x` is less than `y`.    |
+| Zero              | `x` equals `y`.          |
 | Greater than zero | `x` is greater than `y`. |
 
 ## IEquatable\<T\>
