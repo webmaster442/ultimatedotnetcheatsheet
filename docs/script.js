@@ -39,15 +39,6 @@ function onLoaded() {
     Array.from(document.links)
         .filter(link => link.hostname != window.location.hostname)
         .forEach(link => link.target = '_blank');
-
-
-    //navigation links close
-    const navlinks = document.getElementById("toc").getElementsByTagName('a');
-    Array.from(navlinks).forEach(a => a.onclick = function (ev) {
-        const classes = document.querySelector('.container').classList;
-        classes.remove('toc-visible');
-        classes.add('toc-collapsed');
-    });
 }
 
 function notify(message) {
