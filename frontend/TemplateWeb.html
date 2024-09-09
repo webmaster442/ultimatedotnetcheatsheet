@@ -11,18 +11,11 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap.bundle.min.js"></script>
     <link href="prism.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="prism.js"></script>
-    <style type="text/css">
-        .navbar svg {
-            height: 32px;
-            fill: wheat;
-        }
-    </style>
-</head>
 
 <body>
-
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="javascript:void(0)">.NET CheatSheet Version:
                 {{BuildTime(format=yy-MM-dd)}}</a>
@@ -31,9 +24,9 @@
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Link</a>
-                    </li>
+                    <div id="toclinks">
+                        {{toc}}
+                    </div>
                 </ul>
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto">
@@ -51,9 +44,18 @@
             </div>
         </div>
     </nav>
-    
-    <div class="container-fluid" style="margin-top:80px">
-        {{content}}
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-lg-10 text-justify">
+                {{content}}
+            </div>
+            <div class="col-lg-2">
+                Here be navigation of page
+            </div>
+        </div>
+
     </div>
 
 </body>

@@ -5,7 +5,7 @@
   "ScriptsDirectory": "",
   "HostName": "https://webmaster442.github.io/ultimatedotnetcheatsheet/",
   "Index": "000-start.md",
-  "Version": 1014,
+  "Version": 1015,
   "LinksOutSideOfHostOpenNewTab": true,
   "Metadata": {
     "Author": "Ruzsinszki Gábor",
@@ -19,6 +19,10 @@
       {
         "Source": "frontend\\bootstrap.bundle.min.js",
         "Target": "bootstrap.bundle.min.js"
+      },
+      {
+        "Source": "frontend\\style.css",
+        "Target": "style.css"
       },
       {
         "Source": "frontend\\bootstrap.min.css",
@@ -58,10 +62,10 @@
       "Heading2": "",
       "Heading3": "",
       "Image": "img-fluid mx-auto rounded",
-      "Table": "table",
+      "Table": "table table-striped",
       "Blockquote": "blockquote",
-      "Figure": "figure",
-      "FigureCaption": "figure-caption",
+      "Figure": "",
+      "FigureCaption": "",
       "Link": "",
       "OrderedList": "",
       "UnorederedList": "",
@@ -72,13 +76,14 @@
     },
     "ImageOptions": {
       "RecodeJpegToWebp": false,
-      "EnableResize": true,
+      "EnableResize": false,
       "MaxWidth": 1080,
       "MaxHeight": 1080,
       "InlineImageSizeLimit": 665536,
       "ImageQuality": 95,
       "RecodePngToWebp": false,
-      "EncodeSvgAsWebp": false
+      "EncodeSvgAsWebp": false,
+      "SvgPassthru": true
     }
   },
   "TargetPrint": {
@@ -115,7 +120,8 @@
       "InlineImageSizeLimit": 9223372036854775807,
       "ImageQuality": 95,
       "RecodePngToWebp": false,
-      "EncodeSvgAsWebp": false
+      "EncodeSvgAsWebp": false,
+      "SvgPassthru": false
     }
   },
   "TargetEpub": {
@@ -152,7 +158,8 @@
       "InlineImageSizeLimit": 9223372036854775807,
       "ImageQuality": 95,
       "RecodePngToWebp": false,
-      "EncodeSvgAsWebp": false
+      "EncodeSvgAsWebp": false,
+      "SvgPassthru": false
     }
   },
   "TargetWordpress": {
@@ -202,7 +209,8 @@
       "InlineImageSizeLimit": 9223372036854775807,
       "ImageQuality": 95,
       "RecodePngToWebp": false,
-      "EncodeSvgAsWebp": false
+      "EncodeSvgAsWebp": false,
+      "SvgPassthru": false
     }
   },
   "TargetPostProcess": {
@@ -239,7 +247,8 @@
       "InlineImageSizeLimit": 9223372036854775807,
       "ImageQuality": 95,
       "RecodePngToWebp": false,
-      "EncodeSvgAsWebp": false
+      "EncodeSvgAsWebp": false,
+      "SvgPassthru": false
     }
   },
   "Translations": {

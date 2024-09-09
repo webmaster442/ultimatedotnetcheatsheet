@@ -1,0 +1,44 @@
+#nav svg {
+    height: 32px;
+    fill: wheat;
+}
+
+#main {
+    max-width: 88rem;
+}
+
+#main svg {
+    display: inherit;
+    margin: 0px auto;
+}
+
+#main figcaption {
+    text-align: center;
+}
+
+#main h1 {
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+#main h2 {
+    margin-bottom: 1rem;
+}
+
+#toclinks li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 4px;
+}
+
+#toclinks li a {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
