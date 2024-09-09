@@ -1,13 +1,3 @@
-# I/O
-
-^^^ Stream types
-![Stream types](img/streamtypes.svg)
-^^^ Stream types
-
-^^^
-![Reader and writer types](img/streamwriters.svg)
-^^^ Reader and writer types
-
 # Attributes
 
 ^^^

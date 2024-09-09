@@ -70,5 +70,3 @@
 	
 	Website: https://xunit.net/
 	Install with: `dotnet add package xunit`
-
-:::

@@ -1,10 +1,3 @@
-:::toc-wrapper
-
-[toc maxlevel="2"] Contents
-
-:::
-
-:::content
 
 ![cheat sheet header](img/header.svg)
 

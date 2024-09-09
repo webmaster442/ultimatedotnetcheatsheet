@@ -1,0 +1,232 @@
+{
+  "$schema": "https://raw.githubusercontent.com/webmaster442/BookGen/master/Schema/config.schema.json",
+  "TOCFile": "summary.md",
+  "ImageDir": "img",
+  "ScriptsDirectory": "",
+  "HostName": "https://webmaster442.github.io/ultimatedotnetcheatsheet/",
+  "Index": "index.md",
+  "Version": 1014,
+  "LinksOutSideOfHostOpenNewTab": true,
+  "Metadata": {
+    "Author": "Ruzsinszki Gábor",
+    "CoverImage": "img\\header.svg",
+    "Title": "Ultimate .NET Cheatsheet"
+  },
+  "TargetWeb": {
+    "OutPutDirectory": "wwwRoot",
+    "TemplateFile": "frontend\\TemplateWeb.html",
+    "TemplateAssets": [
+      {
+        "Source": "",
+        "Target": ""
+      }
+    ],
+    "StyleClasses": {
+      "Heading1": "",
+      "Heading2": "",
+      "Heading3": "",
+      "Image": "img-fluid mx-auto rounded",
+      "Table": "table",
+      "Blockquote": "blockquote",
+      "Figure": "figure",
+      "FigureCaption": "figure-caption",
+      "Link": "",
+      "OrderedList": "",
+      "UnorederedList": "",
+      "ListItem": ""
+    },
+    "TemplateOptions": {
+      "CookieDisplayBannerEnabled": "true"
+    },
+    "ImageOptions": {
+      "RecodeJpegToWebp": false,
+      "EnableResize": true,
+      "MaxWidth": 1080,
+      "MaxHeight": 1080,
+      "InlineImageSizeLimit": 65536,
+      "ImageQuality": 95,
+      "RecodePngToWebp": false,
+      "EncodeSvgAsWebp": false
+    }
+  },
+  "TargetPrint": {
+    "OutPutDirectory": "wwwRoot/print",
+    "TemplateFile": "frontend\\TemplatePrint.html",
+    "TemplateAssets": [
+      {
+        "Source": "",
+        "Target": ""
+      }
+    ],
+    "StyleClasses": {
+      "Heading1": "",
+      "Heading2": "",
+      "Heading3": "",
+      "Image": "",
+      "Table": "",
+      "Blockquote": "",
+      "Figure": "",
+      "FigureCaption": "",
+      "Link": "",
+      "OrderedList": "",
+      "UnorederedList": "",
+      "ListItem": ""
+    },
+    "TemplateOptions": {
+      "CookieDisplayBannerEnabled": "true"
+    },
+    "ImageOptions": {
+      "RecodeJpegToWebp": false,
+      "EnableResize": true,
+      "MaxWidth": 1080,
+      "MaxHeight": 1080,
+      "InlineImageSizeLimit": 9223372036854775807,
+      "ImageQuality": 95,
+      "RecodePngToWebp": false,
+      "EncodeSvgAsWebp": false
+    }
+  },
+  "TargetEpub": {
+    "OutPutDirectory": "output/epub",
+    "TemplateFile": ".bookgen\\Templates\\TemplateEpub.html",
+    "TemplateAssets": [
+      {
+        "Source": "",
+        "Target": ""
+      }
+    ],
+    "StyleClasses": {
+      "Heading1": "",
+      "Heading2": "",
+      "Heading3": "",
+      "Image": "",
+      "Table": "",
+      "Blockquote": "",
+      "Figure": "",
+      "FigureCaption": "",
+      "Link": "",
+      "OrderedList": "",
+      "UnorederedList": "",
+      "ListItem": ""
+    },
+    "TemplateOptions": {
+      "CookieDisplayBannerEnabled": "true"
+    },
+    "ImageOptions": {
+      "RecodeJpegToWebp": false,
+      "EnableResize": true,
+      "MaxWidth": 1080,
+      "MaxHeight": 1080,
+      "InlineImageSizeLimit": 9223372036854775807,
+      "ImageQuality": 95,
+      "RecodePngToWebp": false,
+      "EncodeSvgAsWebp": false
+    }
+  },
+  "TargetWordpress": {
+    "OutPutDirectory": "output/wordpress",
+    "TemplateFile": "",
+    "TemplateAssets": [
+      {
+        "Source": "",
+        "Target": ""
+      }
+    ],
+    "StyleClasses": {
+      "Heading1": "",
+      "Heading2": "",
+      "Heading3": "",
+      "Image": "",
+      "Table": "",
+      "Blockquote": "",
+      "Figure": "",
+      "FigureCaption": "",
+      "Link": "",
+      "OrderedList": "",
+      "UnorederedList": "",
+      "ListItem": ""
+    },
+    "TemplateOptions": {
+      "WordpressTargetHost": "https://localhost/",
+      "WordpressAuthorDisplayName": "John Doe",
+      "WordpressAuthorLastName": "Doe",
+      "WordpressAuthorFirstName": "John",
+      "WordpressAuthorEmail": "john.doe@provider.com",
+      "WordpressAuthorLogin": "wploginuser",
+      "WordpressAuthorId": "1",
+      "WordpressItemType": "page",
+      "WordpresCreateParentTitle": "Parent",
+      "WordpressCreateParent": "true",
+      "WordpressCreateFillerPages": "true",
+      "WordpressCommentStatus": "closed",
+      "WordpressSkipPageTitle": "true",
+      "WordpressTagCategory": "post_tag"
+    },
+    "ImageOptions": {
+      "RecodeJpegToWebp": false,
+      "EnableResize": true,
+      "MaxWidth": 1080,
+      "MaxHeight": 1080,
+      "InlineImageSizeLimit": 9223372036854775807,
+      "ImageQuality": 95,
+      "RecodePngToWebp": false,
+      "EncodeSvgAsWebp": false
+    }
+  },
+  "TargetPostProcess": {
+    "OutPutDirectory": "output/postproc",
+    "TemplateFile": "",
+    "TemplateAssets": [
+      {
+        "Source": "",
+        "Target": ""
+      }
+    ],
+    "StyleClasses": {
+      "Heading1": "",
+      "Heading2": "",
+      "Heading3": "",
+      "Image": "",
+      "Table": "",
+      "Blockquote": "",
+      "Figure": "",
+      "FigureCaption": "",
+      "Link": "",
+      "OrderedList": "",
+      "UnorederedList": "",
+      "ListItem": ""
+    },
+    "TemplateOptions": {
+      "CookieDisplayBannerEnabled": "true"
+    },
+    "ImageOptions": {
+      "RecodeJpegToWebp": false,
+      "EnableResize": true,
+      "MaxWidth": 1080,
+      "MaxHeight": 1080,
+      "InlineImageSizeLimit": 9223372036854775807,
+      "ImageQuality": 95,
+      "RecodePngToWebp": false,
+      "EncodeSvgAsWebp": false
+    }
+  },
+  "Translations": {
+    "Search_ButtonText": "Search",
+    "Search_NoResults": "No Results found",
+    "Search_Results": "Results",
+    "Search_PageTitle": "Search",
+    "Search_TextBoxText": "Type here to search",
+    "Cookie_Header": "Do you like Cookies?",
+    "Cookie_Description": "This Site uses cookies.",
+    "Cookie_Link": "https://cookiesandyou.com/",
+    "Cookie_LearnMore": "Learn more",
+    "Cookie_Accept": "Okay",
+    "Navigate_Next": "Next",
+    "Navigate_Previous": "Previous",
+    "Navigate_Search": "Search",
+    "Navigate_OnThisPage": "On this page",
+    "Navigate_Contents": "Contents",
+    "Navigate_Top": "Go to top"
+  },
+  "BookLanguage": "en-US"
+}
