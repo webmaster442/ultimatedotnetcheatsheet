@@ -1,319 +1,61 @@
-﻿<!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
-    <title>
-        {{title}}
-    </title>
+    <title>{{title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{metadata}}
-    {{SriDependency file="Assets/bootstrap.min.css"}}
-    {{SriDependency file="Assets/jquery.min.js"}}
-    {{SriDependency file="Assets/popper.min.js"}}
-    {{SriDependency file="Assets/bootstrap.min.js"}}
-    {{SriDependency file="Assets/prism.css"}}
-    {{SriDependency file="Assets/prism.js"}}
-    {{SriDependency file="pages.js"}}
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link href="prism.css" rel="stylesheet">
+    <script src="prism.js"></script>
     <style type="text/css">
-        .nodisplay {
-            display: none;
-        }
-
-        #content {
-            margin-top: 70px;
-        }
-
-        #content p {
-            text-align: justify;
-        }
-
-        #toc {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1000000;
-            top: 0;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding-top: 60px;
-            transition: 0.5s;
-            overflow-x: hidden;
-        }
-
-        #toc #tocinside {
-            padding-left: 40px;
-        }
-
-        #toc #tocinside summary {
-            font-size: 24px;
-        }
-
-        #toc #closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        #topbutton {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-        }
-
-        .figure {
-            display: block;
-            text-align: center;
-        }
-
-        figure img {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-
-        figure img:hover {
-            opacity: 0.7;
-            cursor: pointer;
-        }
-
-        #lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        #lightboxcontent {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 1200px;
-        }
-
-        #lightboxcaption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        #lightboxcontent,
-        #lightboxcaption {
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-
-        @keyframes zoom {
-            from {
-                transform: scale(0)
-            }
-
-            to {
-                transform: scale(1)
-            }
-        }
-
-        #lightboxClose {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            margin-top: 50px;
-        }
-
-        #lightboxClose:hover,
-        #lightboxClose:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
+        .navbar svg {
+            height: 32px;
+            fill: wheat;
         }
     </style>
 </head>
 
 <body>
-    <div id="lightbox">
-        <span id="lightboxClose">&times;</span>
-        <img id="lightboxcontent">
-        <div id="lightboxcaption"></div>
-    </div>
 
-    <div id="toc">
-        <a href="#closetoc" id="closebtn">&times;</a>
-        <div id="tocinside">
-            {{toc}}
-        </div>
-    </div>
-
-    <div id="toc-local" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                        {{Navigate_OnThisPage}}
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" id="localToc">
-                    <p>Some text in the modal.</p>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">.NET CheatSheet Version:
+                {{BuildTime(format=yy-MM-dd)}}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-
-    <nav id="Header" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#toc">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="16" height="16">
-                        <path fill="white" opacity="0.5"
-                            d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z" />
-                    </svg>
-                    {{Navigate_Contents}}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#toc-local">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16">
-                        <path fill="white" opacity="0.5"
-                            d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z" />
-                    </svg>
-                    {{Navigate_OnThisPage}}
-                </a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{host}}search.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-                        <path fill="white" opacity="0.5"
-                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                    </svg>
-                    {{Navigate_Search}}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#previous">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16">
-                        <path fill="white" opacity="0.5"
-                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" />
-                    </svg>
-                    {{Navigate_Previous}}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#next">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16">
-                        <path fill="white" opacity="0.5"
-                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                    </svg>
-                    {{Navigate_Next}}
-                </a>
-            </li>
-        </ul>
     </nav>
-
-    <div class="container-fluid" id="content" style="transition: transform .4s;">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                {{content}}
-            </div>
-        </div>
+    
+    <div class="container-fluid" style="margin-top:80px">
+        {{content}}
     </div>
 
-    <button id="topbutton" class="btn btn-dark" title="Ugrás a tetejére">
-        {{Navigate_Top}}
-    </button>
-
-    <script type="text/javascript">
-        var currentindex = pages.indexOf(window.location.href);
-
-        if (currentindex + 1 < pages.length) {
-            var link = document.createElement('link');
-            link.rel = 'preload';
-            link.as = 'document';
-            link.href = pages[currentindex + 1];
-            document.head.appendChild(link);
-        }
-
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                $('#topbutton').css("display", "block");
-            } else {
-                $('#topbutton').css("display", "none");
-            }
-        }
-
-        $('img').click(function () {
-            $('#lightbox').css("display", "block");
-            $('#lightboxcontent').attr("src", this.src);
-            $('#lightboxcaption').html(this.alt);
-        });
-
-        $('#lightboxClose').click(function () {
-            $('#lightbox').css("display", "none");
-        });
-
-        $('#topbutton').click(function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-        $('a[href="#toc"]').click(function () {
-
-            var width = window.innerWidth > 800 ? 30 : 100;
-
-            $("#toc").css("width", width + "%");
-        });
-        $('a[href="#closetoc"]').click(function () {
-            $("#toc").css("width", "0");
-        });
-        $('a[href="#previous"]').click(function () {
-            if (currentindex - 1 < 0) return;
-            var newloc = pages[currentindex - 1];
-            window.location.href = newloc;
-        });
-        $('a[href="#next"]').click(function () {
-            if (currentindex + 1 > (pages.length - 1)) return;
-            var newloc = pages[currentindex + 1];
-            window.location.href = newloc;
-        });
-        var thisPage = "<ul>";
-        $("h1, h2, h3").each(function (i) {
-            var current = $(this);
-            var link = current.attr("id");
-            var append = "<li><a class=\"navigateto\" href=\"#" + link + "\">" + current.html() + "</a></li>\n";
-            thisPage += append;
-        });
-        thisPage += "</ul>";
-        $("#localToc").html(thisPage);
-
-        $('.navigateto').click(function () {
-            $('#toc-local').modal('toggle');
-        });
-
-        $(document).on('turbolinks:load', function () {
-            Prism.highlightAll();
-        });
-    </script>
-    {{CookieWarnIfEnabledInTarget}}
 </body>
 
 </html>

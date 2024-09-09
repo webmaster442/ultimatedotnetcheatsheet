@@ -4,7 +4,7 @@
   "ImageDir": "img",
   "ScriptsDirectory": "",
   "HostName": "https://webmaster442.github.io/ultimatedotnetcheatsheet/",
-  "Index": "index.md",
+  "Index": "000-start.md",
   "Version": 1014,
   "LinksOutSideOfHostOpenNewTab": true,
   "Metadata": {
@@ -17,8 +17,40 @@
     "TemplateFile": "frontend\\TemplateWeb.html",
     "TemplateAssets": [
       {
-        "Source": "",
-        "Target": ""
+        "Source": "frontend\\bootstrap.bundle.min.js",
+        "Target": "bootstrap.bundle.min.js"
+      },
+      {
+        "Source": "frontend\\bootstrap.min.css",
+        "Target": "bootstrap.min.css"
+      },
+      {
+        "Source": "frontend\\prism.js",
+        "Target": "prism.js"
+      },
+      {
+        "Source": "frontend\\prism.css",
+        "Target": "prism.css"
+      },
+      {
+        "Source": "frontend\\manifest.json",
+        "Target": "manifest.json"
+      },
+      {
+        "Source": "frontend\\favicon.ico",
+        "Target": "favicon.ico"
+      },
+      {
+        "Source": "frontend\\pwa\\i-192.png",
+        "Target": "pwa\\i-192.png"
+      },
+      {
+        "Source": "frontend\\pwa\\i-512.png",
+        "Target": "pwa\\i-512.png"
+      },
+      {
+        "Source": "frontend\\pwa\\apple-touch-icon.png",
+        "Target": "pwa\\apple-touch-icon.png"
       }
     ],
     "StyleClasses": {
@@ -43,7 +75,7 @@
       "EnableResize": true,
       "MaxWidth": 1080,
       "MaxHeight": 1080,
-      "InlineImageSizeLimit": 65536,
+      "InlineImageSizeLimit": 665536,
       "ImageQuality": 95,
       "RecodePngToWebp": false,
       "EncodeSvgAsWebp": false
@@ -88,7 +120,7 @@
   },
   "TargetEpub": {
     "OutPutDirectory": "output/epub",
-    "TemplateFile": ".bookgen\\Templates\\TemplateEpub.html",
+    "TemplateFile": "",
     "TemplateAssets": [
       {
         "Source": "",

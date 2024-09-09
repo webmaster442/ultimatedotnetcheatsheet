@@ -1,7 +1,4 @@
-
 ![cheat sheet header](img/header.svg)
-
-<hr class="pagebreak">
 
 # Intro
 
