@@ -19,7 +19,7 @@
 <body>
     <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">.NET CheatSheet Version:
+            <a class="navbar-brand" href="index.html">.NET CheatSheet Version:
                 {{BuildTime(format=yy-MM-dd)}}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -50,11 +50,13 @@
 
     <div id="main" class="container-fluid" style="margin-top:150px">
         <div class="row">
-            <div class="col-lg-10 text-justify" id="content">
+            <div class="col-xl-10 text-justify" id="content">
                 {{content}}
             </div>
-            <div class="col-lg-2" id="pagenav">
-                Here be navigation of page
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
             </div>
         </div>
 

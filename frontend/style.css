@@ -4,12 +4,17 @@
 }
 
 #main {
-    max-width: 88rem;
+    max-width: 95rem;
 }
 
 #main svg {
     display: inherit;
     margin: 0px auto;
+    max-width: 1149px;
+}
+
+#main img {
+    max-width: 1149px;
 }
 
 #main figcaption {
@@ -61,4 +66,8 @@
 #navigate-top:hover {
     color: var(--main-alt2);
     fill: var(--main-alt2);
+}
+
+#pagenav li {
+    list-style: none;
 }

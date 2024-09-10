@@ -1,5 +1,4 @@
-﻿* [Start](000-start.md)
-* [Dotnet CLI](010-basiccommands.md)
+﻿* [Dotnet CLI](010-basiccommands.md)
 * [Project XML Settings](020-project.md)
 * [Usefull Powershell commands & scripts](030-powershell.md)
 * [C# basics](035-csharpbasics.md)
