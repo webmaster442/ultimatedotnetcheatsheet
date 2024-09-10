@@ -55,6 +55,10 @@
       {
         "Source": "frontend\\pwa\\apple-touch-icon.png",
         "Target": "pwa\\apple-touch-icon.png"
+      },
+      {
+        "Source": "frontend\\script.js",
+        "Target": "script.js"
       }
     ],
     "StyleClasses": {

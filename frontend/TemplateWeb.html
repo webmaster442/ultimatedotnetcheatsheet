@@ -8,11 +8,13 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap.bundle.min.js"></script>
-    <link href="prism.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="prism.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
 
 <body>
     <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -48,15 +50,21 @@
 
     <div id="main" class="container-fluid" style="margin-top:150px">
         <div class="row">
-            <div class="col-lg-10 text-justify">
+            <div class="col-lg-10 text-justify" id="content">
                 {{content}}
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2" id="pagenav">
                 Here be navigation of page
             </div>
         </div>
 
     </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
 
 </body>
 

@@ -42,3 +42,23 @@
     border: 0;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
+
+#navigate-top {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    outline: none;
+    z-index: var(--layer-nav);
+    background-color: var(--navbar);
+    color: var(--main-alt);
+    fill: var(--main-alt);
+    display: none;
+}
+
+#navigate-top:hover {
+    color: var(--main-alt2);
+    fill: var(--main-alt2);
+}
