@@ -1,9 +1,33 @@
 // Define the cache name and the files to cache
-var CACHE_NAME = 'ultimate-dotnet-cheatsheet-cache-v1';
+var CACHE_NAME = 'ultimate-dotnet-cheatsheet-cache-v2';
 var urlsToCache = [
   '/',
   '/index.html',
+  '/010-basiccommands.html',
+  '/020-project.html',
+  '/030-powershell.html',
+  '/035-csharpbasics.html',
+  '/040-types.html',
+  '/045-type-interfaces.html',
+  '/060-strings.html',
+  '/070-exceptions.html',
+  '/080-collections.html',
+  '/090-linq.html',
+  '/100-paternmatch.html',
+  '/110-io.html',
+  '/111-attribs.html',
+  '/112-serialization.html',
+  '/114-validation.html',
+  '/120-crypto.html',
+  '/130-reflection.html',
+  '/140-ui.html',
+  '/150-nuget.html',
+  '/bootstrap.bundle.min.js',
+  '/bootstrap.min.css',
+  '/prism.css',
+  '/prism.js',
   '/script.js',
+  '/serviceworker.js',
   '/style.css'
 ];
 

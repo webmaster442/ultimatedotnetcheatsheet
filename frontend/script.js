@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js', { scope: '/ultimatedotnetcheatsheet/' });
+}
+
 function generateHeaderList(containerId, listId) {
     const container = document.getElementById(containerId);
     const toc = document.getElementById(listId);
