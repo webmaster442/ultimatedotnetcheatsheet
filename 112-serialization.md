@@ -39,9 +39,9 @@ Important attributes and their hierarchy for XML serialization:
 
     Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or de-serialized.
 
-## XML serialization example
+### XML serialization example
 
-### Object model that will be serialized:
+#### Object model that will be serialized
 
 **Note: The types that will be serialied must have `public` accessibility modifier.**
 
@@ -106,7 +106,7 @@ public class Item2 : BaseItem
 }
 ```
 
-### Serialization code:
+#### Serialization code:
 
 ```csharp
 var data = new ClassToSerialize()
@@ -138,7 +138,7 @@ using (var stream = File.Create("testfile.xml"))
 }
 ```
 
-### This code produces this XML file:
+#### Result XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -185,7 +185,7 @@ string jsonString = JsonSerializer.Serialize(person);
 Person deserializedPerson = JsonSerializer.Deserialize<Person>(jsonString);
 ```
 
-## JSON Serializer options
+### JSON Serializer options
 
 Serialization and de serialization options can be controlled via the `JsonSerializerOptions` class. Important properties:
 
@@ -283,7 +283,7 @@ Serialization and de serialization options can be controlled via the `JsonSerial
 
 		Property is ignored if its value is null. This is applied only to reference-type properties and fields.
 
-## Converters
+### Converters
 
 You can convert complex types into JSON representation, by implementing the `JsonConverter<T>` abstract class and then adding the converter to the `Converters` collection of your `JsonSerializerOptions` instance.
 

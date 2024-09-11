@@ -1,10 +1,12 @@
-# Common exceptions
+# Exceptions
+
+## Common exceptions
 
 ^^^
 ![Common Exceptions](img/common_exceptions.svg)
 ^^^ Common Exceptions
 
-## Implement an own Exception
+## Implementing an own Exception
 
 Every exception class should have 3 constructors for the following scenarios:
 

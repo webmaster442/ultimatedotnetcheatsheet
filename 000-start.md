@@ -1,6 +1,6 @@
-![cheat sheet header](img/header.svg)
+# Ultimate .NET cheat sheet
 
-# Intro
+![cheat sheet header](img/header.svg)
 
 ## Authors
 
@@ -19,32 +19,11 @@ The project is open-source and available on GitHub. You can contribute to it by 
 
 ![QR Code](img/qrcode.svg)
 
-## Changelog
+## Latest changes
 
-* **2024.02.29** 
+* **2024.09.11**
 
-    Initial release
-
-* **2024.03.08** 
-
-    Generic maths interfaces extended & various small improvements
-
-* **2024.04.08**
-  
-  * Grammar fixes by CsabaDu
-  * dotnet commands extended with previously missing commands
-  * Print layout changes
-  * Installable as a web app
-  * Cryptography and UI chapters
-
-* **2024.05.12**
-
-  * PWA & website: added Github project link and print support
-  * Extended LINQ chapter
-  * Added powershell commands section
-  * Added reflection section
-  * Format strings: Added few examples
-  * Extended Exceptions chapter
+  * Updated website design
 
 * **2024.06.04**
   
