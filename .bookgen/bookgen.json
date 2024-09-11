@@ -10,7 +10,7 @@
   "Metadata": {
     "Author": "Ruzsinszki Gábor",
     "CoverImage": "img\\header.svg",
-    "Title": "Ultimate .NET Cheatsheet"
+    "Title": "Ultimate .NET cheat sheet"
   },
   "TargetWeb": {
     "OutPutDirectory": "wwwRoot",

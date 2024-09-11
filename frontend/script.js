@@ -75,5 +75,14 @@ window.onscroll = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    generateHeaderList('content', 'pagenav')
+    generateHeaderList('content', 'pagenav');
+
+    const codeElements = document.querySelectorAll('code');
+    codeElements.forEach((codeElement) => {
+        const hasLanguageClass = Array.from(codeElement.classList).some(cls => cls.startsWith('language-'));
+        if (hasLanguageClass) {
+            codeElement.setAttribute('data-prismjs-copy', 'copy');
+        }
+    });
+
 });

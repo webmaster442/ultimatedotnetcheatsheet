@@ -48,6 +48,10 @@
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
+#toclinks li a:hover {
+    text-decoration: underline;
+}
+
 #navigate-top {
     width: 48px;
     height: 48px;
@@ -66,6 +70,10 @@
 #navigate-top:hover {
     color: var(--main-alt2);
     fill: var(--main-alt2);
+}
+
+#pagenav {
+    padding: 0.5rem;
 }
 
 #pagenav li {
