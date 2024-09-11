@@ -24,6 +24,10 @@ The project is open-source and available on GitHub. You can contribute to it by 
 * **2024.09.11**
 
   * Updated website design
+  * Updated list of NuGet packages
+  * Extended collections section
+  * LINQ section extended
+  * 
 
 * **2024.06.04**
   

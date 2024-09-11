@@ -1,0 +1,212 @@
+<svg version="1.1" baseProfile="full" width="836.0" height="534.0" viewBox="0 0 836 534" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >tasks</title>
+	<desc >#direction: right
+	#gravity: .8
+	#title: tasks
+	
+	[IAsyncResult|
+	Represents the status of
+	an asynchronous operation]
+	
+	[IDisposable|
+	Provides a mechanism for 
+	releasing unmanaged resources]
+	
+	[Task|
+	Represents an 
+	asynchronous operation]
+	
+	[Task&lt;TResult&gt;|
+	Represents an 
+	asynchronous operation 
+	that can return a value]
+	
+	[IEquatable&lt;T&gt;|Defines a generalized method that 
+	a value type or class implements to 
+	create a type-specific method for
+	determining equality of instances]
+	
+	[ValueTask|
+	Provides an awaitable 
+	result of an asynchronous
+	operation.]
+	
+	[ValueTask&lt;TResult&gt;|
+	Provides a value type that wraps 
+	a Task&lt;TResult&gt; and a TResult, 
+	only one of which is used.]
+	
+	
+	[IAsyncResult] &lt;:-- [Task]
+	[IDisposable] &lt;:-- [Task] &lt;:- [Task&lt;TResult&gt;]
+	
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask&lt;TResult&gt;] 
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="534.0" width="836.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M250.8 40.0 L286 40 L336 60.90592334494774 L336.0 60.9 " fill="none"></path>
+					</g>
+					<path d="M250.8 34.7 L250.8 40.0 L250.8 45.3 L237.5 40.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M268.8 160.0 L286 160 L336 139.09407665505228 L336.0 139.1 " fill="none"></path>
+					</g>
+					<path d="M268.8 154.7 L268.8 160.0 L268.8 165.3 L255.5 160.0 Z"></path>
+					<path d="M536.3 100.0 L573 100 L593 100 L593.0 100.0 " fill="none"></path>
+					<path d="M536.3 94.7 L536.3 100.0 L536.3 105.3 L523.0 100.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M271.4 422.9 L286 429.5 L306 429.5 L306.0 429.5 " fill="none"></path>
+					</g>
+					<path d="M273.5 418.1 L271.4 422.9 L269.2 427.8 L259.2 417.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M271.4 299.1 L286 292.5 L330 292.5 L330.0 292.5 " fill="none"></path>
+					</g>
+					<path d="M269.2 294.2 L271.4 299.1 L273.5 303.9 L259.2 304.5 Z"></path>
+					<g data-name="IAsyncResult">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IAsyncResult">
+							<rect x="28.5" y="0.0" height="80.0" width="209.0" data-name="IAsyncResult"></rect>
+							<path d="M28.5 32.0 L237.5 32.0" fill="none" data-name="IAsyncResult"></path>
+						</g>
+						<g transform="translate(28.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncResult">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncResult">
+								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncResult">IAsyncResult</text>
+								
+							</g>
+						</g>
+						<g transform="translate(28.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IAsyncResult">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IAsyncResult">
+								<text x="0.0" y="14.1" stroke="none" data-name="IAsyncResult">Represents the status of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IAsyncResult">an asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="10.5" y="120.0" height="80.0" width="245.0" data-name="IDisposable"></rect>
+							<path d="M10.5 152.0 L255.5 152.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(10.5, 120)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="114.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(10.5, 152)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable">Provides a mechanism for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable">releasing unmanaged resources</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Task">
+							<rect x="336.0" y="60.0" height="80.0" width="187.0" data-name="Task"></rect>
+							<path d="M336.0 92.0 L523.0 92.0" fill="none" data-name="Task"></path>
+						</g>
+						<g transform="translate(336, 60)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task">
+								<text x="85.5" y="14.1" stroke="none" text-anchor="middle" data-name="Task">Task</text>
+								
+							</g>
+						</g>
+						<g transform="translate(336, 92)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task">asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task&lt;TResult&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Task&lt;TResult&gt;">
+							<rect x="593.0" y="51.5" height="97.0" width="187.0" data-name="Task&lt;TResult&gt;"></rect>
+							<path d="M593.0 83.5 L780.0 83.5" fill="none" data-name="Task&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(593, 51.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task&lt;TResult&gt;">
+								<text x="85.5" y="14.1" stroke="none" text-anchor="middle" data-name="Task&lt;TResult&gt;">Task&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(593, 83.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task&lt;TResult&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task&lt;TResult&gt;">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task&lt;TResult&gt;">asynchronous operation</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Task&lt;TResult&gt;">that can return a value</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEquatable&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEquatable&lt;T&gt;">
+							<rect x="0.0" y="304.5" height="113.0" width="266.0" data-name="IEquatable&lt;T&gt;"></rect>
+							<path d="M0.0 336.5 L266.0 336.5" fill="none" data-name="IEquatable&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 304.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEquatable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEquatable&lt;T&gt;">
+								<text x="125.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEquatable&lt;T&gt;">IEquatable&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 336.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEquatable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEquatable&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEquatable&lt;T&gt;">Defines a generalized method that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEquatable&lt;T&gt;">a value type or class implements to</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEquatable&lt;T&gt;">create a type-specific method for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IEquatable&lt;T&gt;">determining equality of instances</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueTask">
+							<rect x="330.0" y="244.0" height="97.0" width="199.0" data-name="ValueTask"></rect>
+							<path d="M330.0 276.0 L529.0 276.0" fill="none" data-name="ValueTask"></path>
+						</g>
+						<g transform="translate(330, 244)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask">
+								<text x="91.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask">ValueTask</text>
+								
+							</g>
+						</g>
+						<g transform="translate(330, 276)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask">Provides an awaitable</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask">result of an asynchronous</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask">operation.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask&lt;TResult&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueTask&lt;TResult&gt;">
+							<rect x="306.0" y="381.0" height="97.0" width="247.0" data-name="ValueTask&lt;TResult&gt;"></rect>
+							<path d="M306.0 413.0 L553.0 413.0" fill="none" data-name="ValueTask&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(306, 381)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask&lt;TResult&gt;">
+								<text x="115.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask&lt;TResult&gt;">ValueTask&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(306, 413)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask&lt;TResult&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask&lt;TResult&gt;">Provides a value type that wraps</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask&lt;TResult&gt;">a Task&lt;TResult&gt; and a TResult,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask&lt;TResult&gt;">only one of which is used.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

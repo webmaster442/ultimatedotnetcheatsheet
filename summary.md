@@ -15,5 +15,6 @@
 * [Object validation](114-validation.md)
 * [Cryptography](120-crypto.md)
 * [Reflection](130-reflection.md)
+* [Tasks](135-tasks.md)
 * [UI](140-ui.md)
 * [Useful NuGet packages](150-nuget.md)
