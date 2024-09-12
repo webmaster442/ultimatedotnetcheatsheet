@@ -20,6 +20,7 @@ var urlsToCache = [
   '/114-validation.html',
   '/120-crypto.html',
   '/130-reflection.html',
+  '/135-tasks.html',
   '/140-ui.html',
   '/150-nuget.html',
   '/bootstrap.bundle.min.js',

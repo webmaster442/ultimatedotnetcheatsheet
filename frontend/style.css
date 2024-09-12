@@ -4,7 +4,7 @@
 }
 
 #main {
-    max-width: 95rem;
+    max-width: 100rem;
 }
 
 #main svg {
@@ -28,6 +28,10 @@
 
 #main h2 {
     margin-bottom: 1rem;
+}
+
+#content {
+    text-align: justify;
 }
 
 #toclinks li {
@@ -73,9 +77,12 @@
 }
 
 #pagenav {
-    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 #pagenav li {
-    list-style: none;
+    list-style: disclosure-closed;
 }

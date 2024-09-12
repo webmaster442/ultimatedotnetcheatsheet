@@ -21,6 +21,10 @@
         "Target": "bootstrap.bundle.min.js"
       },
       {
+        "Source": "frontend\\serviceworker.js",
+        "Target": "serviceworker.js"
+      },
+      {
         "Source": "frontend\\style.css",
         "Target": "style.css"
       },

@@ -66,19 +66,47 @@ In C#, both `Task` and `ValueTask` are used to represent asynchronous operations
 
 ### When to use a Task
 
-* **Asynchronous method always completes asynchronously**: If the operation always runs asynchronously and returns a result in the future, use Task. The overhead of Task is justified for managing the state of the operation.
-* **Long-running or CPU-bound operations**: When the operation involves long-running or CPU-intensive tasks, Task is the standard choice.
-* **Multiple await points or continuations**: If the method has multiple asynchronous steps or continuations (e.g., several `await` calls), `Task` is better suited as it provides efficient memory management for complex operations.
-* **Memory management is not a major concern**: In many scenarios, the additional memory overhead of `Task` is minimal and worth the simplicity it offers.
-* **You expect consumers to use `.Result`, `.Wait()`, or `Task.WhenAll`**: Task handles these scenarios better because it is reference type and has additional functionality for managing asynchronous flows.
+* **Asynchronous method always completes asynchronously**: 
+
+    If the operation always runs asynchronously and returns a result in the future, use Task. The overhead of Task is justified for managing the state of the operation.
+
+* **Long-running or CPU-bound operations**:
+
+    When the operation involves long-running or CPU-intensive tasks, Task is the standard choice.
+
+* **Multiple await points or continuations**:
+
+    If the method has multiple asynchronous steps or continuations (e.g., several `await` calls), `Task` is better suited as it provides efficient memory management for complex operations.
+
+* **Memory management is not a major concern**:
+
+    In many scenarios, the additional memory overhead of `Task` is minimal and worth the simplicity it offers.
+
+* **You expect consumers to use `.Result`, `.Wait()`, or `Task.WhenAll`**: 
+
+    Task handles these scenarios better because it is reference type and has additional functionality for managing asynchronous flows.
 
 ### When to use a ValueTask
 
-* **Operation may complete synchronously**: If the operation sometimes completes synchronously (e.g., from a cache or optimized path), `ValueTask` avoids allocating a `Task` object unnecessarily.
-* **Performance-sensitive, high-frequency methods**: In performance-critical code where the method is called frequently, and synchronous completions are common, It can reduce memory allocations and improve efficiency.
-* **Low memory pressure is essential**: It is a value type, so it avoids heap allocations when it completes synchronously, which is useful in scenarios where memory allocation needs to be minimized.
-* **Limited continuation and lifetime**: If you are sure that the `ValueTask` will only be awaited once (e.g., there are no complex continuations, multiple awaits, or reuse), it’s safe to use.
-* **Pooling or caching scenarios**: When implementing methods that benefit from object pooling or where synchronous fast-path execution is common (like low-latency I/O or cached results), it is a good option.
+* **Operation may complete synchronously**: 
+  
+  If the operation sometimes completes synchronously (e.g., from a cache or optimized path), `ValueTask` avoids allocating a `Task` object unnecessarily.
+
+* **Performance-sensitive, high-frequency methods**:
+  
+  In performance-critical code where the method is called frequently, and synchronous completions are common, It can reduce memory allocations and improve efficiency.
+
+* **Low memory pressure is essential**:
+  
+  It is a value type, so it avoids heap allocations when it completes synchronously, which is useful in scenarios where memory allocation needs to be minimized.
+
+* **Limited continuation and lifetime**:
+  
+  If you are sure that the `ValueTask` will only be awaited once (e.g., there are no complex continuations, multiple awaits, or reuse), it’s safe to use.
+
+* **Pooling or caching scenarios**:
+  
+  When implementing methods that benefit from object pooling or where synchronous fast-path execution is common (like low-latency I/O or cached results), it is a good option.
 
 ### What not to do with ValueTasks
 

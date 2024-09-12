@@ -41,9 +41,7 @@ Important attributes and their hierarchy for XML serialization:
 
 ### XML serialization example
 
-#### Object model that will be serialized
-
-**Note: The types that will be serialied must have `public` accessibility modifier.**
+**Object model that will be serialized:**
 
 ```csharp
 [XmlType(Namespace = "myxmlNamespace", TypeName = "SerializedTypeName")]
@@ -106,7 +104,9 @@ public class Item2 : BaseItem
 }
 ```
 
-#### Serialization code:
+**Note**: The types that will be serialied must have `public` accessibility modifier.
+
+**Serialization code:**
 
 ```csharp
 var data = new ClassToSerialize()
@@ -138,7 +138,7 @@ using (var stream = File.Create("testfile.xml"))
 }
 ```
 
-#### Result XML:
+**Result XML:**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
