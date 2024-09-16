@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - Basic type system</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Basic type system">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="basic-type-system">Basic type system</h1>
+<h2 id="numerical-types">Numerical types</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">bytes</th>
+<th style="text-align: center;">Bits</th>
+<th style="text-align: center;">Minimum value</th>
+<th style="text-align: center;">Maximum  Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">byte</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">255</td>
+</tr>
+<tr>
+<td style="text-align: center;">sbyte</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">-127</td>
+<td style="text-align: center;">127</td>
+</tr>
+<tr>
+<td style="text-align: center;">short</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">-32 768</td>
+<td style="text-align: center;">32 767</td>
+</tr>
+<tr>
+<td style="text-align: center;">ushort</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">65 535</td>
+</tr>
+<tr>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">-2 147 483 648</td>
+<td style="text-align: center;">2 147 483 647</td>
+</tr>
+<tr>
+<td style="text-align: center;">uint</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4 294 967 295</td>
+</tr>
+<tr>
+<td style="text-align: center;">long</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">-9 223 372 036 854 775 808</td>
+<td style="text-align: center;">9 223 372 036 854 775 807</td>
+</tr>
+<tr>
+<td style="text-align: center;">ulong</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">18 446 744 073 709 551 615</td>
+</tr>
+<tr>
+<td style="text-align: center;">Int128</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">128</td>
+<td style="text-align: center;">-170 141 183 460 469 231 731 687 303 715 884 105 728</td>
+<td style="text-align: center;">170 141 183 460 469 231 731 687 303 715 884 105 727</td>
+</tr>
+<tr>
+<td style="text-align: center;">UInt128</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">128</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">340 282 366 920 938 463 463 374 607 431 768 211 455</td>
+</tr>
+<tr>
+<td style="text-align: center;">nint</td>
+<td style="text-align: center;">4 or 8</td>
+<td style="text-align: center;">32 or 64</td>
+<td style="text-align: center;">platform dependent signed integer</td>
+<td style="text-align: center;">platform dependent signed integer</td>
+</tr>
+<tr>
+<td style="text-align: center;">nuint</td>
+<td style="text-align: center;">4 or 8</td>
+<td style="text-align: center;">32 or 64</td>
+<td style="text-align: center;">platform dependent unsigned integer</td>
+<td style="text-align: center;">platform dependent unsigned integer</td>
+</tr>
+<tr>
+<td style="text-align: center;">float</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">-3.4028235 x 10<sup>38</sup></td>
+<td style="text-align: center;">3.4028235 x 10<sup>38</sup></td>
+</tr>
+<tr>
+<td style="text-align: center;">double</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">-1.7976931348623157 x 10<sup>308</sup></td>
+<td style="text-align: center;">1.7976931348623157 x 10<sup>308</sup></td>
+</tr>
+<tr>
+<td style="text-align: center;">decimal</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">128</td>
+<td style="text-align: center;">-7.92 x 10 <sup>28</sup></td>
+<td style="text-align: center;">7.92 x 10 <sup>28</sup></td>
+</tr>
+<tr>
+<td style="text-align: center;">Half</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">-65 504</td>
+<td style="text-align: center;">65 504</td>
+</tr>
+</tbody>
+</table>
+<p>Note: <code>nint</code> and <code>nuint</code> represent the platforms native integer type. For 32 bit systems this will be a 32 bit integer, so the limitations and properties of <code>int</code>
+or <code>uint</code> aplies. On 64 bit systems the limitations and properties of <code>long</code> and <code>ulong</code> applies.</p>
+<p><strong>Smallest representable number in floating types, that is not zero:</strong></p>
+<ul>
+<li><code>decimal</code>: 1.0 x 10<sup>-28</sup></li>
+<li><code>double</code> : 5.0 x 10<sup>-324</sup></li>
+<li><code>float</code> : 1.0 x 10<sup>-45</sup></li>
+<li><code>Half</code>: 6.0 x 10<sup>-8</sup></li>
+</ul>
+<h2 id="numerical-types-provided-by.net">Numerical types provided by .NET</h2>
+<ul>
+<li><strong>System.Numerics.BigInteger</strong> : Represents an arbitrarily large signed integer.</li>
+<li><strong>System.Numerics.Complex</strong> : Represents a complex number.</li>
+<li><strong>System.Numerics.Matrix3x2</strong> : Represents a 3x2 matrix.</li>
+<li><strong>System.Numerics.Matrix4x4</strong> : Represents a 4x4 matrix.</li>
+<li><strong>System.Numerics.Plane</strong> : Represents a plane in three-dimensional space.</li>
+<li><strong>System.Numerics.Quaternion</strong> : Represents a vector that is used to encode three-dimensional physical rotations.</li>
+<li><strong>System.Numerics.Vector2</strong> : Represents a vector with two single-precision floating-point values.</li>
+<li><strong>System.Numerics.Vector3</strong> : Represents a vector with three single-precision floating-point values.</li>
+<li><strong>System.Numerics.Vector4</strong> : Represents a vector with four single-precision floating-point values.</li>
+</ul>
+<h2 id="base-class-hierarchy-under-the-hood">Base class hierarchy under the hood</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="970.0" height="600.0" viewBox="0 0 970 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >baseclasses</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: baseclasses
+	
+	[Object] &lt;:- [ValueType] &lt;:- [Enum]
+	[Object] &lt;:- [Array]
+	[Object] &lt;:- [DynamicObject]
+	[Object] &lt;:- [ExpandoObject]
+	
+	
+	[DynamicObject|
+	Provides a base class for specifying 
+	dynamic behavior at run time.|
+	❗This class must be inherited from\;
+	you cannot instantiate it directly.]
+	
+	[ExpandoObject|
+	Represents an object whose members 
+	can be dynamically added
+	and removed at run time.]
+	
+	[Array|
+	Provides methods for creating, manipulating, 
+	searching, and sorting arrays, 
+	thereby serving as the base class  for 
+	all arrays in the common language runtime.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[ValueType|
+	Provides the base class
+	for value types.for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Enum|
+	Provides the base class
+	for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Object|
+	Supports all classes in the .NET 
+	class hierarchy and provides 
+	low-level services to derived classes.
+	This is the ultimate base class of all
+	.NET classes\; it is the root of the type hierarchy.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="600.0" width="970.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M236.5 220.8 L360 64 L407 64 L407.0 64.0 " fill="none"></path>
+					<path d="M232.4 217.5 L236.5 220.8 L240.7 224.1 L228.3 231.3 Z"></path>
+					<path d="M669.3 64.0 L703 64 L708 64 L708.0 64.0 " fill="none"></path>
+					<path d="M669.3 58.7 L669.3 64.0 L669.3 69.3 L656.0 64.0 Z"></path>
+					<path d="M342.2 226.1 L360 218.5 L365 218.5 L365.0 218.5 " fill="none"></path>
+					<path d="M340.1 221.1 L342.2 226.1 L344.2 231.0 L329.9 231.3 Z"></path>
+					<path d="M342.2 365.4 L360 373 L393 373 L393.0 373.0 " fill="none"></path>
+					<path d="M344.2 360.5 L342.2 365.4 L340.1 370.4 L329.9 360.3 Z"></path>
+					<path d="M245.4 370.1 L360 495.5 L387 495.5 L387.0 495.5 " fill="none"></path>
+					<path d="M249.4 366.5 L245.4 370.1 L241.5 373.7 L236.4 360.3 Z"></path>
+					<g data-name="Object">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="231.3" height="129.0" width="355.0" data-name="Object"></rect>
+							<path d="M0.0 263.3 L355.0 263.3" fill="none" data-name="Object"></path>
+						</g>
+						<g transform="translate(0, 231.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object">
+								<text x="169.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object">Object</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 263.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object">
+								<text x="0.0" y="14.1" stroke="none" data-name="Object">Supports all classes in the .NET</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Object">class hierarchy and provides</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Object">low-level services to derived classes.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Object">This is the ultimate base class of all</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Object">.NET classes; it is the root of the type hierarchy.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueType">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueType">
+							<rect x="407.0" y="0.0" height="128.0" width="249.0" data-name="ValueType"></rect>
+							<path d="M407.0 32.0 L656.0 32.0" fill="none" data-name="ValueType"></path>
+							<path d="M407.0 80.0 L656.0 80.0" fill="none" data-name="ValueType"></path>
+						</g>
+						<g transform="translate(407, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType">
+								<text x="116.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType">ValueType</text>
+								
+							</g>
+						</g>
+						<g transform="translate(407, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">for value types.for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(407, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Enum">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Enum">
+							<rect x="708.0" y="0.0" height="128.0" width="206.0" data-name="Enum"></rect>
+							<path d="M708.0 32.0 L914.0 32.0" fill="none" data-name="Enum"></path>
+							<path d="M708.0 80.0 L914.0 80.0" fill="none" data-name="Enum"></path>
+						</g>
+						<g transform="translate(708, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum">
+								<text x="95.0" y="14.1" stroke="none" text-anchor="middle" data-name="Enum">Enum</text>
+								
+							</g>
+						</g>
+						<g transform="translate(708, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum">for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(708, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Array">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Array">
+							<rect x="365.0" y="138.0" height="161.0" width="333.0" data-name="Array"></rect>
+							<path d="M365.0 170.0 L698.0 170.0" fill="none" data-name="Array"></path>
+							<path d="M365.0 251.0 L698.0 251.0" fill="none" data-name="Array"></path>
+						</g>
+						<g transform="translate(365, 138)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array">
+								<text x="158.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array">Array</text>
+								
+							</g>
+						</g>
+						<g transform="translate(365, 170)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array">Provides methods for creating, manipulating,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array">searching, and sorting arrays,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Array">thereby serving as the base class  for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Array">all arrays in the common language runtime.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(365, 251)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DynamicObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DynamicObject">
+							<rect x="393.0" y="309.0" height="128.0" width="277.0" data-name="DynamicObject"></rect>
+							<path d="M393.0 341.0 L670.0 341.0" fill="none" data-name="DynamicObject"></path>
+							<path d="M393.0 389.0 L670.0 389.0" fill="none" data-name="DynamicObject"></path>
+						</g>
+						<g transform="translate(393, 309)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject">DynamicObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(393, 341)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">Provides a base class for specifying</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">dynamic behavior at run time.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(393, 389)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">❗This class must be inherited from;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">you cannot instantiate it directly.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ExpandoObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ExpandoObject">
+							<rect x="387.0" y="447.0" height="97.0" width="289.0" data-name="ExpandoObject"></rect>
+							<path d="M387.0 479.0 L676.0 479.0" fill="none" data-name="ExpandoObject"></path>
+						</g>
+						<g transform="translate(387, 447)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject">
+								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject">ExpandoObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(387, 479)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject">Represents an object whose members</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject">can be dynamically added</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ExpandoObject">and removed at run time.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Base classes</figcaption>
+</figure>
+<h2 id="generic-math-interfaces">Generic Math Interfaces</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="915.5" height="480.0" viewBox="0 0 915.5 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >genericmath1</title>
+	<desc >#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: genericmath1
+	
+	[INumberBase\&lt;T\&gt;|
+	Defines the base of other number types.]
+	
+	[INumber\&lt;T\&gt;|Defines a number type.]
+	[ISignedNumber\&lt;T\&gt;|Defines a number type which can represent
+	both positive and negative values.]
+	[IUnsignedNumber&lt;Tself&gt;|Defines a number type that can only
+	represent positive values.]
+	[IBinaryNumber\&lt;T\&gt;|Defines a number that
+	is represented in a base-2 format.]
+	[IBinaryInteger\&lt;T\&gt;|Defines an integer type that
+	is represented in a base-2 format.]
+	[IFloatingPoint\&lt;T\&gt;|Defines a floating-point type.]
+	[IFloatingPointIeee754\&lt;T\&gt;|Defines an IEEE 754 floating-point type.]
+	[IBinaryFloatingPointIeee754\&lt;T\&gt;|Defines an IEEE 754 floating-point
+	type that is represented in a base-2 format.]
+	
+	
+	[INumberBase\&lt;T\&gt;] &lt;:-- [ISignedNumber\&lt;T\&gt;] &lt;:-- [IFloatingPoint\&lt;T\&gt;] &lt;:-- [IFloatingPointIeee754\&lt;T\&gt;] &lt;:-- [IBinaryFloatingPointIeee754\&lt;T\&gt;]
+	[INumberBase\&lt;T\&gt;] &lt;:-- [IUnsignedNumber&lt;Tself&gt;]
+	[INumberBase\&lt;T\&gt;] &lt;:-- [INumber\&lt;T\&gt;] &lt;:-- [IBinaryNumber\&lt;T\&gt;] &lt;:-- [IBinaryInteger\&lt;T\&gt;]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="480.0" width="915.5" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M415.0 77.3 L415 69 L415 74 L415.0 74.0 " fill="none"></path>
+					</g>
+					<path d="M420.3 77.3 L415.0 77.3 L409.7 77.3 L415.0 64.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M415.0 167.3 L415 159 L415 172 L415.0 172.0 " fill="none"></path>
+					</g>
+					<path d="M420.3 167.3 L415.0 167.3 L409.7 167.3 L415.0 154.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M415.0 249.3 L415 249 L415 262 L415.0 262.0 " fill="none"></path>
+					</g>
+					<path d="M420.3 249.3 L415.0 249.3 L409.7 249.3 L415.0 236.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M415.0 339.3 L415 339 L415 344 L415.0 344.0 " fill="none"></path>
+					</g>
+					<path d="M420.3 339.3 L415.0 339.3 L409.7 339.3 L415.0 326.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M578.7 51.6 L723.5 69 L723.5 74 L723.5 74.0 " fill="none"></path>
+					</g>
+					<path d="M579.4 46.3 L578.7 51.6 L578.1 56.9 L565.5 50.1 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M251.3 53.1 L127.5 69 L127.5 82 L127.5 82.0 " fill="none"></path>
+					</g>
+					<path d="M252.0 58.4 L251.3 53.1 L250.6 47.8 L264.5 51.4 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M127.5 159.3 L127.5 159 L127.5 164 L127.5 164.0 " fill="none"></path>
+					</g>
+					<path d="M132.8 159.3 L127.5 159.3 L122.2 159.3 L127.5 146.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M127.5 257.3 L127.5 249 L127.5 254 L127.5 254.0 " fill="none"></path>
+					</g>
+					<path d="M132.8 257.3 L127.5 257.3 L122.2 257.3 L127.5 244.0 Z"></path>
+					<g data-name="INumberBase&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="INumberBase&lt;T&gt;">
+							<rect x="264.5" y="0.0" height="64.0" width="301.0" data-name="INumberBase&lt;T&gt;"></rect>
+							<path d="M264.5 32.0 L565.5 32.0" fill="none" data-name="INumberBase&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(264.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumberBase&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumberBase&lt;T&gt;">
+								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="INumberBase&lt;T&gt;">INumberBase&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(264.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumberBase&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumberBase&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="INumberBase&lt;T&gt;">Defines the base of other number types.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="INumber&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="INumber&lt;T&gt;">
+							<rect x="37.0" y="82.0" height="64.0" width="181.0" data-name="INumber&lt;T&gt;"></rect>
+							<path d="M37.0 114.0 L218.0 114.0" fill="none" data-name="INumber&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(37, 82)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumber&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumber&lt;T&gt;">
+								<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="INumber&lt;T&gt;">INumber&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(37, 114)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumber&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumber&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="INumber&lt;T&gt;">Defines a number type.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ISignedNumber&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ISignedNumber&lt;T&gt;">
+							<rect x="252.5" y="74.0" height="80.0" width="325.0" data-name="ISignedNumber&lt;T&gt;"></rect>
+							<path d="M252.5 106.0 L577.5 106.0" fill="none" data-name="ISignedNumber&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(252.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ISignedNumber&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ISignedNumber&lt;T&gt;">
+								<text x="154.5" y="14.1" stroke="none" text-anchor="middle" data-name="ISignedNumber&lt;T&gt;">ISignedNumber&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(252.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ISignedNumber&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ISignedNumber&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ISignedNumber&lt;T&gt;">Defines a number type which can represent</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ISignedNumber&lt;T&gt;">both positive and negative values.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IUnsignedNumber&lt;Tself&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IUnsignedNumber&lt;Tself&gt;">
+							<rect x="587.5" y="74.0" height="80.0" width="272.0" data-name="IUnsignedNumber&lt;Tself&gt;"></rect>
+							<path d="M587.5 106.0 L859.5 106.0" fill="none" data-name="IUnsignedNumber&lt;Tself&gt;"></path>
+						</g>
+						<g transform="translate(587.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IUnsignedNumber&lt;Tself&gt;">
+								<text x="128.0" y="14.1" stroke="none" text-anchor="middle" data-name="IUnsignedNumber&lt;Tself&gt;">IUnsignedNumber&lt;Tself&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(587.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IUnsignedNumber&lt;Tself&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;">Defines a number type that can only</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;">represent positive values.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IBinaryNumber&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IBinaryNumber&lt;T&gt;">
+							<rect x="0.0" y="164.0" height="80.0" width="255.0" data-name="IBinaryNumber&lt;T&gt;"></rect>
+							<path d="M0.0 196.0 L255.0 196.0" fill="none" data-name="IBinaryNumber&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 164)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryNumber&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryNumber&lt;T&gt;">
+								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryNumber&lt;T&gt;">IBinaryNumber&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 196)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryNumber&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryNumber&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryNumber&lt;T&gt;">Defines a number that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryNumber&lt;T&gt;">is represented in a base-2 format.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IBinaryInteger&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IBinaryInteger&lt;T&gt;">
+							<rect x="0.0" y="254.0" height="80.0" width="255.0" data-name="IBinaryInteger&lt;T&gt;"></rect>
+							<path d="M0.0 286.0 L255.0 286.0" fill="none" data-name="IBinaryInteger&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 254)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryInteger&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryInteger&lt;T&gt;">
+								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryInteger&lt;T&gt;">IBinaryInteger&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 286)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryInteger&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryInteger&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryInteger&lt;T&gt;">Defines an integer type that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryInteger&lt;T&gt;">is represented in a base-2 format.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IFloatingPoint&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IFloatingPoint&lt;T&gt;">
+							<rect x="305.5" y="172.0" height="64.0" width="219.0" data-name="IFloatingPoint&lt;T&gt;"></rect>
+							<path d="M305.5 204.0 L524.5 204.0" fill="none" data-name="IFloatingPoint&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(305.5, 172)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPoint&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPoint&lt;T&gt;">
+								<text x="101.5" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPoint&lt;T&gt;">IFloatingPoint&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(305.5, 204)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPoint&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPoint&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPoint&lt;T&gt;">Defines a floating-point type.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IFloatingPointIeee754&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IFloatingPointIeee754&lt;T&gt;">
+							<rect x="265.0" y="262.0" height="64.0" width="300.0" data-name="IFloatingPointIeee754&lt;T&gt;"></rect>
+							<path d="M265.0 294.0 L565.0 294.0" fill="none" data-name="IFloatingPointIeee754&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(265, 262)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPointIeee754&lt;T&gt;">
+								<text x="142.0" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPointIeee754&lt;T&gt;">IFloatingPointIeee754&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(265, 294)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPointIeee754&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPointIeee754&lt;T&gt;">Defines an IEEE 754 floating-point type.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+							<rect x="254.5" y="344.0" height="80.0" width="321.0" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></rect>
+							<path d="M254.5 376.0 L575.5 376.0" fill="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(254.5, 344)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+								<text x="152.5" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">IBinaryFloatingPointIeee754&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(254.5, 376)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">Defines an IEEE 754 floating-point</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">type that is represented in a base-2 format.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Generic Math Interfaces</figcaption>
+</figure>
+<ul>
+<li><p><code>IComparable&lt;T&gt;</code></p>
+<p>Defines a generalized comparison method that a value type or class implements to create a type-specific comparison method for ordering or sorting its instances.</p>
+</li>
+<li><p><code>IConvertible</code></p>
+<p>Defines methods that convert the value of the implementing reference or value type to a common language runtime type that has an equivalent value.</p>
+</li>
+<li><p><code>IEquatable&lt;T&gt;</code></p>
+<p>Defines a generalized method that a value type or class implements to create a type-specific method for determining equality of instances.</p>
+</li>
+<li><p><code>IParsable&lt;T&gt;</code></p>
+<p>Defines a mechanism for parsing a string to a value.</p>
+</li>
+<li><p><code>ISpanParsable&lt;T&gt;</code></p>
+<p>Defines a mechanism for parsing a span of characters to a value.</p>
+</li>
+<li><p><code>IAdditionOperators&lt;TSelf,TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the sum of two values. Provides operators: <code>+</code></p>
+</li>
+<li><p><code>IBitwiseOperators&lt;TSelf,TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for performing bitwise operations over two values. Provides operators: <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code></p>
+</li>
+<li><p><code>IComparisonOperators&lt;TSelf,TSelf,bool&gt;</code></p>
+<p>Defines a mechanism for comparing two values to determine relative order. Provides operators: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></p>
+</li>
+<li><p><code>IDecrementOperators&lt;T&gt;</code></p>
+<p>Defines a mechanism for decrementing a given value. Provides operators: <code>--</code></p>
+</li>
+<li><p><code>IDivisionOperators&lt;TSelf,TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the quotient of two values. Provides operators: <code>/</code></p>
+</li>
+<li><p><code>IEqualityOperators&lt;TSelf,TSelf,bool&gt;</code></p>
+<p>Defines a mechanism for comparing two values to determine equality. Provides operators: <code>==</code>, <code>!=</code></p>
+</li>
+<li><p><code>IIncrementOperators&lt;T&gt;</code></p>
+<p>Defines a mechanism for incrementing a given value. Provides operators: <code>++</code></p>
+</li>
+<li><p><code>IModulusOperators&lt;TSelf,TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the modulus or remainder of two values. Provides operators: <code>%</code></p>
+</li>
+<li><p><code>IMultiplyOperators&lt;TSelf,TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the product of two values. Provides operators: <code>*</code></p>
+</li>
+<li><p><code>IShiftOperators&lt;TSelf,int,TSelf&gt;</code></p>
+<p>Defines a mechanism for shifting a value by another value. Provides operators: <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&lt;&lt;&lt;</code></p>
+</li>
+<li><p><code>ISubtractionOperators&lt;TSelf,TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the difference of two values. Provides operators: <code>-</code></p>
+</li>
+<li><p><code>IUnaryNegationOperators&lt;TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the unary negation of a value. Provides operators: <code>-</code></p>
+</li>
+<li><p><code>IUnaryPlusOperators&lt;TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for computing the unary plus of a value. Provides operators: <code>+</code></p>
+</li>
+<li><p><code>IAdditiveIdentity&lt;TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for getting the additive identity of a given type.</p>
+</li>
+<li><p><code>IMultiplicativeIdentity&lt;TSelf,TSelf&gt;</code></p>
+<p>Defines a mechanism for getting the multiplicative identity of a given type.</p>
+</li>
+<li><p><code>IMinMaxValue&lt;T&gt;</code></p>
+<p>Defines a mechanism for getting the minimum and maximum value of a type.</p>
+</li>
+<li><p><code>IExponentialFunctions&lt;T&gt;</code></p>
+<p>Defines support for exponential functions.</p>
+</li>
+<li><p><code>IFloatingPointConstants&lt;T&gt;</code></p>
+<p>Defines support for floating-point constants, like <code>E</code>, <code>Pi</code>, <code>Tau</code></p>
+</li>
+<li><p><code>IHyperbolicFunctions&lt;T&gt;</code></p>
+<p>Defines support for hyperbolic functions.</p>
+</li>
+<li><p><code>ILogarithmicFunctions&lt;T&gt;</code></p>
+<p>Defines support for logarithmic functions.</p>
+</li>
+<li><p><code>IPowerFunctions&lt;T&gt;</code></p>
+<p>Defines support for power functions.</p>
+</li>
+<li><p><code>IRootFunctions&lt;T&gt;</code></p>
+<p>Defines support for root functions.</p>
+</li>
+<li><p><code>ITrigonometricFunctions&lt;T&gt;</code></p>
+<p>Defines support for trigonometric functions.</p>
+</li>
+</ul>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Interfaces / Types</th>
+<th style="text-align: center;">SByte, Int16, Int32, Int64</th>
+<th style="text-align: center;">Int128</th>
+<th style="text-align: center;">Byte, UInt16, UInt32, UInt64</th>
+<th style="text-align: center;">UInt128</th>
+<th style="text-align: center;">Half</th>
+<th style="text-align: center;">Single, Double</th>
+<th style="text-align: center;">Decimal</th>
+<th style="text-align: center;">Complex</th>
+<th style="text-align: center;">BigInteger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>INumberBase&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>INumber&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ISignedNumber&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IUnsignedNumber&lt;Tself&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IBinaryNumber&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IBinaryInteger&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IFloatingPoint&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IFloatingPointIeee754&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IBinaryFloatingPointIeee754&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IComparable&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IConvertible</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IEquatable&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IParsable&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ISpanParsable&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IAdditionOperators&lt;TSelf,TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IBitwiseOperators&lt;TSelf,TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IComparisonOperators&lt;TSelf,TSelf,bool&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IDecrementOperators&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IDivisionOperators&lt;TSelf,TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IEqualityOperators&lt;TSelf,TSelf,bool&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IIncrementOperators&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IModulusOperators&lt;TSelf,TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IMultiplyOperators&lt;TSelf,TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IShiftOperators&lt;TSelf,int,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ISubtractionOperators&lt;TSelf,TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IUnaryNegationOperators&lt;TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IUnaryPlusOperators&lt;TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IAdditiveIdentity&lt;TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IMultiplicativeIdentity&lt;TSelf,TSelf&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IMinMaxValue&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IExponentialFunctions&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IFloatingPointConstants&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IHyperbolicFunctions&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ILogarithmicFunctions&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IPowerFunctions&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>IRootFunctions&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ITrigonometricFunctions&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

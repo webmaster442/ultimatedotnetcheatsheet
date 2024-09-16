@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - Cryptography</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Cryptography">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="cryptography">Cryptography</h1>
+<h2 id="encryption-algortithms">Encryption Algortithms</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1009.0" height="859.0" viewBox="0 0 1009 859" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >cryptography1</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: cryptography1
+	
+	[SymmetricAlgorithm|
+	Represents the abstract base class
+	from which all implementations of
+	symmetric algorithms must inherit.]
+	
+	[Aes|
+	Represents the abstract base class 
+	from which all implementations of
+	the Advanced Encryption Standard 
+	(AES) must inherit.]
+	
+	[DES|
+	Represents the base class for the Data
+	Encryption Standard (DES) algorithm 
+	from which all DES implementations 
+	must derive.]
+	
+	[RC2|
+	Represents the base class from which 
+	all implementations of the RC2 
+	algorithm must derive.]
+	
+	[TripleDES|
+	Represents the base class for Triple
+	Data Encryption Standard algorithms
+	from which all TripleDES 
+	implementations must derive.]
+	
+	[AsymmetricAlgorithm|
+	Represents the abstract base class from
+	which all implementations of 
+	asymmetric algorithms must inherit.]
+	
+	[DSA|
+	Represents the abstract base class from 
+	which all implementations of the
+	Digital Signature Algorithm (DSA) 
+	must inherit.]
+	
+	[ECAlgorithm|
+	Represents the abstract class from which 
+	elliptic-curve asymmetric algorithms
+	can inherit.]
+	
+	[RSA|
+	Represents the base class from which 
+	all implementations of 
+	the RSA algorithm inherit.]
+	
+	[ECDiffieHellman|
+	Provides an abstract base class that 
+	Elliptic Curve Diffie-Hellman (ECDH) 
+	algorithm implementations can derive from.
+	]
+	
+	[ECDsa|
+	Provides an abstract base class that 
+	encapsulates the Elliptic Curve Digital
+	Signature Algorithm (ECDSA).]
+	
+	[SymmetricAlgorithm] &lt;:- [Aes]
+	[SymmetricAlgorithm] &lt;:- [DES]
+	[SymmetricAlgorithm] &lt;:- [RC2]
+	[SymmetricAlgorithm] &lt;:- [TripleDES]
+	
+	[AsymmetricAlgorithm] &lt;:- [RSA]
+	[AsymmetricAlgorithm] &lt;:- [DSA]
+	[AsymmetricAlgorithm] &lt;:- [ECAlgorithm]
+	
+	[ECAlgorithm] &lt;:- [ECDiffieHellman]
+	[ECAlgorithm] &lt;:- [ECDsa]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="859.0" width="1009.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M201.6 178.4 L307 56.5 L333.5 56.5 L333.5 56.5 " fill="none"></path>
+					<path d="M197.6 174.9 L201.6 178.4 L205.7 181.9 L192.9 188.5 Z"></path>
+					<path d="M295.1 183.9 L307 179.5 L320 179.5 L320.0 179.5 " fill="none"></path>
+					<path d="M293.2 178.9 L295.1 183.9 L296.9 188.9 L282.6 188.5 Z"></path>
+					<path d="M295.1 290.1 L307 294.5 L323.5 294.5 L323.5 294.5 " fill="none"></path>
+					<path d="M296.9 285.1 L295.1 290.1 L293.2 295.1 L282.6 285.5 Z"></path>
+					<path d="M203.8 295.4 L307 409.5 L328 409.5 L328.0 409.5 " fill="none"></path>
+					<path d="M207.8 291.8 L203.8 295.4 L199.8 299.0 L194.9 285.5 Z"></path>
+					<path d="M232.7 703.5 L307 754.5 L323.5 754.5 L323.5 754.5 " fill="none"></path>
+					<path d="M235.7 699.1 L232.7 703.5 L229.7 707.9 L221.7 696.0 Z"></path>
+					<path d="M227.5 591.1 L307 532.5 L315.5 532.5 L315.5 532.5 " fill="none"></path>
+					<path d="M224.4 586.8 L227.5 591.1 L230.7 595.4 L216.8 599.0 Z"></path>
+					<path d="M315.3 647.5 L307 647.5 L312 647.5 L312.0 647.5 " fill="none"></path>
+					<path d="M315.3 642.2 L315.3 647.5 L315.3 652.8 L302.0 647.5 Z"></path>
+					<path d="M623.7 594.8 L626 594 L631 594 L631.0 594.0 " fill="none"></path>
+					<path d="M622.0 589.7 L623.7 594.8 L625.4 599.8 L611.1 599.0 Z"></path>
+					<path d="M623.7 700.2 L626 701 L650 701 L650.0 701.0 " fill="none"></path>
+					<path d="M625.4 695.2 L623.7 700.2 L622.0 705.3 L611.1 696.0 Z"></path>
+					<g data-name="SymmetricAlgorithm">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SymmetricAlgorithm">
+							<rect x="18.0" y="188.5" height="97.0" width="266.0" data-name="SymmetricAlgorithm"></rect>
+							<path d="M18.0 220.5 L284.0 220.5" fill="none" data-name="SymmetricAlgorithm"></path>
+						</g>
+						<g transform="translate(18, 188.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SymmetricAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SymmetricAlgorithm">
+								<text x="125.0" y="14.1" stroke="none" text-anchor="middle" data-name="SymmetricAlgorithm">SymmetricAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(18, 220.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="SymmetricAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SymmetricAlgorithm">
+								<text x="0.0" y="14.1" stroke="none" data-name="SymmetricAlgorithm">Represents the abstract base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="SymmetricAlgorithm">from which all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="SymmetricAlgorithm">symmetric algorithms must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Aes">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Aes">
+							<rect x="333.5" y="0.0" height="113.0" width="266.0" data-name="Aes"></rect>
+							<path d="M333.5 32.0 L599.5 32.0" fill="none" data-name="Aes"></path>
+						</g>
+						<g transform="translate(333.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Aes">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Aes">
+								<text x="125.0" y="14.1" stroke="none" text-anchor="middle" data-name="Aes">Aes</text>
+								
+							</g>
+						</g>
+						<g transform="translate(333.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Aes">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Aes">
+								<text x="0.0" y="14.1" stroke="none" data-name="Aes">Represents the abstract base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Aes">from which all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Aes">the Advanced Encryption Standard</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Aes">(AES) must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DES">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DES">
+							<rect x="320.0" y="123.0" height="113.0" width="293.0" data-name="DES"></rect>
+							<path d="M320.0 155.0 L613.0 155.0" fill="none" data-name="DES"></path>
+						</g>
+						<g transform="translate(320, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DES">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DES">
+								<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="DES">DES</text>
+								
+							</g>
+						</g>
+						<g transform="translate(320, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DES">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DES">
+								<text x="0.0" y="14.1" stroke="none" data-name="DES">Represents the base class for the Data</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DES">Encryption Standard (DES) algorithm</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="DES">from which all DES implementations</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="DES">must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RC2">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RC2">
+							<rect x="323.5" y="246.0" height="97.0" width="286.0" data-name="RC2"></rect>
+							<path d="M323.5 278.0 L609.5 278.0" fill="none" data-name="RC2"></path>
+						</g>
+						<g transform="translate(323.5, 246)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RC2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RC2">
+								<text x="135.0" y="14.1" stroke="none" text-anchor="middle" data-name="RC2">RC2</text>
+								
+							</g>
+						</g>
+						<g transform="translate(323.5, 278)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RC2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RC2">
+								<text x="0.0" y="14.1" stroke="none" data-name="RC2">Represents the base class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RC2">all implementations of the RC2</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="RC2">algorithm must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TripleDES">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TripleDES">
+							<rect x="328.0" y="353.0" height="113.0" width="277.0" data-name="TripleDES"></rect>
+							<path d="M328.0 385.0 L605.0 385.0" fill="none" data-name="TripleDES"></path>
+						</g>
+						<g transform="translate(328, 353)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TripleDES">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TripleDES">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="TripleDES">TripleDES</text>
+								
+							</g>
+						</g>
+						<g transform="translate(328, 385)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TripleDES">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TripleDES">
+								<text x="0.0" y="14.1" stroke="none" data-name="TripleDES">Represents the base class for Triple</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="TripleDES">Data Encryption Standard algorithms</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="TripleDES">from which all TripleDES</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="TripleDES">implementations must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AsymmetricAlgorithm">
+						<g fill="#eee8d5" stroke="#33322E" data-name="AsymmetricAlgorithm">
+							<rect x="0.0" y="599.0" height="97.0" width="302.0" data-name="AsymmetricAlgorithm"></rect>
+							<path d="M0.0 631.0 L302.0 631.0" fill="none" data-name="AsymmetricAlgorithm"></path>
+						</g>
+						<g transform="translate(0, 599)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AsymmetricAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AsymmetricAlgorithm">
+								<text x="143.0" y="14.1" stroke="none" text-anchor="middle" data-name="AsymmetricAlgorithm">AsymmetricAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 631)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="AsymmetricAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AsymmetricAlgorithm">
+								<text x="0.0" y="14.1" stroke="none" data-name="AsymmetricAlgorithm">Represents the abstract base class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="AsymmetricAlgorithm">which all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="AsymmetricAlgorithm">asymmetric algorithms must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DSA">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DSA">
+							<rect x="315.5" y="476.0" height="113.0" width="302.0" data-name="DSA"></rect>
+							<path d="M315.5 508.0 L617.5 508.0" fill="none" data-name="DSA"></path>
+						</g>
+						<g transform="translate(315.5, 476)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DSA">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DSA">
+								<text x="143.0" y="14.1" stroke="none" text-anchor="middle" data-name="DSA">DSA</text>
+								
+							</g>
+						</g>
+						<g transform="translate(315.5, 508)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DSA">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DSA">
+								<text x="0.0" y="14.1" stroke="none" data-name="DSA">Represents the abstract base class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DSA">which all implementations of the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="DSA">Digital Signature Algorithm (DSA)</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="DSA">must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ECAlgorithm">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ECAlgorithm">
+							<rect x="312.0" y="599.0" height="97.0" width="309.0" data-name="ECAlgorithm"></rect>
+							<path d="M312.0 631.0 L621.0 631.0" fill="none" data-name="ECAlgorithm"></path>
+						</g>
+						<g transform="translate(312, 599)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ECAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ECAlgorithm">
+								<text x="146.5" y="14.1" stroke="none" text-anchor="middle" data-name="ECAlgorithm">ECAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(312, 631)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ECAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ECAlgorithm">
+								<text x="0.0" y="14.1" stroke="none" data-name="ECAlgorithm">Represents the abstract class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ECAlgorithm">elliptic-curve asymmetric algorithms</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ECAlgorithm">can inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RSA">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RSA">
+							<rect x="323.5" y="706.0" height="97.0" width="286.0" data-name="RSA"></rect>
+							<path d="M323.5 738.0 L609.5 738.0" fill="none" data-name="RSA"></path>
+						</g>
+						<g transform="translate(323.5, 706)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RSA">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RSA">
+								<text x="135.0" y="14.1" stroke="none" text-anchor="middle" data-name="RSA">RSA</text>
+								
+							</g>
+						</g>
+						<g transform="translate(323.5, 738)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RSA">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RSA">
+								<text x="0.0" y="14.1" stroke="none" data-name="RSA">Represents the base class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RSA">all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="RSA">the RSA algorithm inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ECDiffieHellman">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ECDiffieHellman">
+							<rect x="631.0" y="545.5" height="97.0" width="322.0" data-name="ECDiffieHellman"></rect>
+							<path d="M631.0 577.5 L953.0 577.5" fill="none" data-name="ECDiffieHellman"></path>
+						</g>
+						<g transform="translate(631, 545.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ECDiffieHellman">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ECDiffieHellman">
+								<text x="153.0" y="14.1" stroke="none" text-anchor="middle" data-name="ECDiffieHellman">ECDiffieHellman</text>
+								
+							</g>
+						</g>
+						<g transform="translate(631, 577.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ECDiffieHellman">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ECDiffieHellman">
+								<text x="0.0" y="14.1" stroke="none" data-name="ECDiffieHellman">Provides an abstract base class that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ECDiffieHellman">Elliptic Curve Diffie-Hellman (ECDH)</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ECDiffieHellman">algorithm implementations can derive from.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ECDsa">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ECDsa">
+							<rect x="650.0" y="652.5" height="97.0" width="284.0" data-name="ECDsa"></rect>
+							<path d="M650.0 684.5 L934.0 684.5" fill="none" data-name="ECDsa"></path>
+						</g>
+						<g transform="translate(650, 652.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ECDsa">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ECDsa">
+								<text x="134.0" y="14.1" stroke="none" text-anchor="middle" data-name="ECDsa">ECDsa</text>
+								
+							</g>
+						</g>
+						<g transform="translate(650, 684.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ECDsa">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ECDsa">
+								<text x="0.0" y="14.1" stroke="none" data-name="ECDsa">Provides an abstract base class that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ECDsa">encapsulates the Elliptic Curve Digital</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ECDsa">Signature Algorithm (ECDSA).</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Encryption Algortithms </figcaption>
+</figure>
+<p><strong>Symmetric encryption</strong></p>
+<p>Symmetric encryption is a cryptographic method where the same key is used for both encryption and decryption of data. In other words, the sender and the recipient use a shared secret key to encrypt and decrypt messages. It is commonly used in various applications, including securing data transmission over networks, encrypting files stored on disk, and protecting sensitive information in databases.</p>
+<p><strong>Asymmetric encryption</strong></p>
+<p>Asymmetric encryption, also known as public-key cryptography, is a cryptographic method that uses two separate keys for encryption and decryption. A public, and a private key. The pair of keys are mathematically related, but distinct. It is widely used in various applications, including secure Communication, digital signatures and key exchange.</p>
+<h2 id="hash-algorithms">Hash Algorithms</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1037.0" height="697.5" viewBox="0 0 1037 697.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >cryptography2</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: cryptography2
+		
+	[&lt;note&gt;Note: 
+	SHA3 is only available on .NET 8
+	or newer versions ]
+	
+	[HashAlgorithm|
+	Represents the base class from which 
+	all implementations of cryptographic
+	hash algorithms must derive.]
+	
+	[KeyedHashAlgorithm|
+	Represents the abstract class
+	from which all implementations
+	of keyed hash algorithms
+	must derive.]
+	
+	[HMAC|
+	Represents the abstract class
+	from which all implementations
+	of Hash-based Message
+	AuthenticationCode (HMAC)
+	must derive.]
+	
+	[MACTripleDES|
+	Computes a Message Authentication
+	Code (MAC) using TripleDES for
+	the input data CryptoStream.]
+	
+	[HashAlgorithm] &lt;:- [MD5]
+	[HashAlgorithm] &lt;:- [RIPEMD160]
+	[HashAlgorithm] &lt;:- [SHA1]
+	[HashAlgorithm] &lt;:- [SHA256]
+	[HashAlgorithm] &lt;:- [SHA384]
+	[HashAlgorithm] &lt;:- [SHA512]
+	[HashAlgorithm] &lt;:- [SHA3_256]
+	[HashAlgorithm] &lt;:- [SHA3_384]
+	[HashAlgorithm] &lt;:- [SHA3_512]
+	[HashAlgorithm] &lt;:- [KeyedHashAlgorithm]
+	
+	[KeyedHashAlgorithm] &lt;:- [HMAC]
+	[KeyedHashAlgorithm] &lt;:-[MACTripleDES]
+	
+	[HMAC] &lt;:- [HMACMD5]
+	[HMAC] &lt;:- [HMACRIPEMD160]
+	[HMAC] &lt;:- [HMACSHA1]
+	[HMAC] &lt;:- [HMACSHA256]
+	[HMAC] &lt;:- [HMACSHA384]
+	[HMAC] &lt;:- [HMACSHA512]
+	[HMAC] &lt;:- [HMACSHA3_256]
+	[HMAC] &lt;:- [HMACSHA3_384]
+	[HMAC] &lt;:- [HMACSHA3_512]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="697.5" width="1037.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M190.0 416.1 L291 289.5 L388.5 289.5 L388.5 289.5 " fill="none"></path>
+					<path d="M185.8 412.8 L190.0 416.1 L194.2 419.4 L181.7 426.5 Z"></path>
+					<path d="M202.6 417.2 L291 331.5 L361 331.5 L361.0 331.5 " fill="none"></path>
+					<path d="M198.9 413.4 L202.6 417.2 L206.3 421.0 L193.0 426.5 Z"></path>
+					<path d="M224.7 419.0 L291 373.5 L384 373.5 L384.0 373.5 " fill="none"></path>
+					<path d="M221.7 414.6 L224.7 419.0 L227.7 423.4 L213.7 426.5 Z"></path>
+					<path d="M276.0 421.5 L291 415.5 L375.5 415.5 L375.5 415.5 " fill="none"></path>
+					<path d="M274.0 416.6 L276.0 421.5 L278.0 426.5 L263.6 426.5 Z"></path>
+					<path d="M299.2 456.5 L291 457.5 L375.5 457.5 L375.5 457.5 " fill="none"></path>
+					<path d="M298.6 451.2 L299.2 456.5 L299.9 461.8 L286.0 458.1 Z"></path>
+					<path d="M299.2 500.8 L291 499.5 L375.5 499.5 L375.5 499.5 " fill="none"></path>
+					<path d="M300.0 495.6 L299.2 500.8 L298.3 506.1 L286.0 498.7 Z"></path>
+					<path d="M263.1 529.0 L291 541.5 L366.5 541.5 L366.5 541.5 " fill="none"></path>
+					<path d="M265.3 524.1 L263.1 529.0 L260.9 533.8 L250.9 523.5 Z"></path>
+					<path d="M219.9 531.4 L291 583.5 L366.5 583.5 L366.5 583.5 " fill="none"></path>
+					<path d="M223.1 527.1 L219.9 531.4 L216.8 535.7 L209.2 523.5 Z"></path>
+					<path d="M200.0 533.0 L291 625.5 L366.5 625.5 L366.5 625.5 " fill="none"></path>
+					<path d="M203.8 529.3 L200.0 533.0 L196.2 536.7 L190.7 523.5 Z"></path>
+					<path d="M176.2 414.8 L291 207 L296 207 L296.0 207.0 " fill="none"></path>
+					<path d="M171.6 412.2 L176.2 414.8 L180.9 417.4 L169.8 426.5 Z"></path>
+					<path d="M538.0 144.5 L536 145.5 L562 145.5 L562.0 145.5 " fill="none"></path>
+					<path d="M535.6 139.8 L538.0 144.5 L540.3 149.3 L526.0 150.5 Z"></path>
+					<path d="M538.0 269.5 L536 268.5 L541 268.5 L541.0 268.5 " fill="none"></path>
+					<path d="M540.3 264.7 L538.0 269.5 L535.6 274.2 L526.0 263.5 Z"></path>
+					<path d="M760.9 72.1 L823 16 L855.5 16 L855.5 16.0 " fill="none"></path>
+					<path d="M757.3 68.1 L760.9 72.1 L764.4 76.0 L751.0 81.0 Z"></path>
+					<path d="M796.7 74.1 L823 58 L828 58 L828.0 58.0 " fill="none"></path>
+					<path d="M793.9 69.5 L796.7 74.1 L799.4 78.6 L785.3 81.0 Z"></path>
+					<path d="M809.7 104.2 L823 100 L851 100 L851.0 100.0 " fill="none"></path>
+					<path d="M808.1 99.1 L809.7 104.2 L811.3 109.3 L797.0 108.2 Z"></path>
+					<path d="M810.3 142.3 L823 142 L842.5 142 L842.5 142.0 " fill="none"></path>
+					<path d="M810.2 137.0 L810.3 142.3 L810.5 147.6 L797.0 142.6 Z"></path>
+					<path d="M809.9 180.5 L823 184 L842.5 184 L842.5 184.0 " fill="none"></path>
+					<path d="M811.3 175.3 L809.9 180.5 L808.5 185.6 L797.0 177.0 Z"></path>
+					<path d="M806.1 216.5 L823 226 L842.5 226 L842.5 226.0 " fill="none"></path>
+					<path d="M808.7 211.9 L806.1 216.5 L803.5 221.2 L794.5 210.0 Z"></path>
+					<path d="M765.2 218.7 L823 268 L833.5 268 L833.5 268.0 " fill="none"></path>
+					<path d="M768.7 214.6 L765.2 218.7 L761.7 222.7 L755.1 210.0 Z"></path>
+					<path d="M744.5 220.0 L823 310 L833.5 310 L833.5 310.0 " fill="none"></path>
+					<path d="M748.5 216.5 L744.5 220.0 L740.5 223.6 L735.8 210.0 Z"></path>
+					<path d="M731.9 220.9 L823 352 L833.5 352 L833.5 352.0 " fill="none"></path>
+					<path d="M736.3 217.9 L731.9 220.9 L727.6 224.0 L724.3 210.0 Z"></path>
+					<g data-name="Note:">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Note:">
+							<path d="M11.0 351.5 L267.0 351.5 L275.0 359.5 L275.0 416.5 L11.0 416.5 L11.0 351.5 Z" data-name="Note:"></path>
+							<path d="M267.0 351.5 L267.0 359.5 L275.0 359.5" fill="none" data-name="Note:"></path>
+						</g>
+						<g transform="translate(11, 351.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Note:">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Note:">
+								<text x="0.0" y="14.1" stroke="none" data-name="Note:">Note:</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Note:">SHA3 is only available on .NET 8</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Note:">or newer versions</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HashAlgorithm">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HashAlgorithm">
+							<rect x="0.0" y="426.5" height="97.0" width="286.0" data-name="HashAlgorithm"></rect>
+							<path d="M0.0 458.5 L286.0 458.5" fill="none" data-name="HashAlgorithm"></path>
+						</g>
+						<g transform="translate(0, 426.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HashAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HashAlgorithm">
+								<text x="135.0" y="14.1" stroke="none" text-anchor="middle" data-name="HashAlgorithm">HashAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 458.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HashAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HashAlgorithm">
+								<text x="0.0" y="14.1" stroke="none" data-name="HashAlgorithm">Represents the base class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HashAlgorithm">all implementations of cryptographic</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HashAlgorithm">hash algorithms must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="KeyedHashAlgorithm">
+						<g fill="#eee8d5" stroke="#33322E" data-name="KeyedHashAlgorithm">
+							<rect x="296.0" y="150.5" height="113.0" width="235.0" data-name="KeyedHashAlgorithm"></rect>
+							<path d="M296.0 182.5 L531.0 182.5" fill="none" data-name="KeyedHashAlgorithm"></path>
+						</g>
+						<g transform="translate(296, 150.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyedHashAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="KeyedHashAlgorithm">
+								<text x="109.5" y="14.1" stroke="none" text-anchor="middle" data-name="KeyedHashAlgorithm">KeyedHashAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(296, 182.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="KeyedHashAlgorithm">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="KeyedHashAlgorithm">
+								<text x="0.0" y="14.1" stroke="none" data-name="KeyedHashAlgorithm">Represents the abstract class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="KeyedHashAlgorithm">from which all implementations</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="KeyedHashAlgorithm">of keyed hash algorithms</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="KeyedHashAlgorithm">must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMAC">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMAC">
+							<rect x="562.0" y="81.0" height="129.0" width="235.0" data-name="HMAC"></rect>
+							<path d="M562.0 113.0 L797.0 113.0" fill="none" data-name="HMAC"></path>
+						</g>
+						<g transform="translate(562, 81)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMAC">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMAC">
+								<text x="109.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMAC">HMAC</text>
+								
+							</g>
+						</g>
+						<g transform="translate(562, 113)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMAC">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMAC">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMAC">Represents the abstract class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMAC">from which all implementations</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMAC">of Hash-based Message</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="HMAC">AuthenticationCode (HMAC)</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="HMAC">must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MACTripleDES">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MACTripleDES">
+							<rect x="541.0" y="220.0" height="97.0" width="277.0" data-name="MACTripleDES"></rect>
+							<path d="M541.0 252.0 L818.0 252.0" fill="none" data-name="MACTripleDES"></path>
+						</g>
+						<g transform="translate(541, 220)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MACTripleDES">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MACTripleDES">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="MACTripleDES">MACTripleDES</text>
+								
+							</g>
+						</g>
+						<g transform="translate(541, 252)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MACTripleDES">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MACTripleDES">
+								<text x="0.0" y="14.1" stroke="none" data-name="MACTripleDES">Computes a Message Authentication</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MACTripleDES">Code (MAC) using TripleDES for</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="MACTripleDES">the input data CryptoStream.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MD5">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MD5">
+							<rect x="388.5" y="273.5" height="32.0" width="50.0" data-name="MD5"></rect>
+						</g>
+						<g transform="translate(388.5, 273.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MD5">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MD5">
+								<text x="17.0" y="14.1" stroke="none" text-anchor="middle" data-name="MD5">MD5</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RIPEMD160">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RIPEMD160">
+							<rect x="361.0" y="315.5" height="32.0" width="105.0" data-name="RIPEMD160"></rect>
+						</g>
+						<g transform="translate(361, 315.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RIPEMD160">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RIPEMD160">
+								<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="RIPEMD160">RIPEMD160</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA1">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA1">
+							<rect x="384.0" y="357.5" height="32.0" width="59.0" data-name="SHA1"></rect>
+						</g>
+						<g transform="translate(384, 357.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA1">
+								<text x="21.5" y="14.1" stroke="none" text-anchor="middle" data-name="SHA1">SHA1</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA256">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA256">
+							<rect x="375.5" y="399.5" height="32.0" width="76.0" data-name="SHA256"></rect>
+						</g>
+						<g transform="translate(375.5, 399.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA256">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA256">
+								<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA256">SHA256</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA384">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA384">
+							<rect x="375.5" y="441.5" height="32.0" width="76.0" data-name="SHA384"></rect>
+						</g>
+						<g transform="translate(375.5, 441.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA384">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA384">
+								<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA384">SHA384</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA512">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA512">
+							<rect x="375.5" y="483.5" height="32.0" width="76.0" data-name="SHA512"></rect>
+						</g>
+						<g transform="translate(375.5, 483.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA512">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA512">
+								<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA512">SHA512</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA3_256">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA3_256">
+							<rect x="366.5" y="525.5" height="32.0" width="94.0" data-name="SHA3_256"></rect>
+						</g>
+						<g transform="translate(366.5, 525.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_256">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_256">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_256">SHA3_256</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA3_384">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA3_384">
+							<rect x="366.5" y="567.5" height="32.0" width="94.0" data-name="SHA3_384"></rect>
+						</g>
+						<g transform="translate(366.5, 567.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_384">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_384">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_384">SHA3_384</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA3_512">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SHA3_512">
+							<rect x="366.5" y="609.5" height="32.0" width="94.0" data-name="SHA3_512"></rect>
+						</g>
+						<g transform="translate(366.5, 609.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_512">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_512">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_512">SHA3_512</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACMD5">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACMD5">
+							<rect x="855.5" y="0.0" height="32.0" width="98.0" data-name="HMACMD5"></rect>
+						</g>
+						<g transform="translate(855.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACMD5">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACMD5">
+								<text x="41.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACMD5">HMACMD5</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACRIPEMD160">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACRIPEMD160">
+							<rect x="828.0" y="42.0" height="32.0" width="153.0" data-name="HMACRIPEMD160"></rect>
+						</g>
+						<g transform="translate(828, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACRIPEMD160">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACRIPEMD160">
+								<text x="68.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACRIPEMD160">HMACRIPEMD160</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA1">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA1">
+							<rect x="851.0" y="84.0" height="32.0" width="107.0" data-name="HMACSHA1"></rect>
+						</g>
+						<g transform="translate(851, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA1">
+								<text x="45.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA1">HMACSHA1</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA256">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA256">
+							<rect x="842.5" y="126.0" height="32.0" width="124.0" data-name="HMACSHA256"></rect>
+						</g>
+						<g transform="translate(842.5, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA256">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA256">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA256">HMACSHA256</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA384">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA384">
+							<rect x="842.5" y="168.0" height="32.0" width="124.0" data-name="HMACSHA384"></rect>
+						</g>
+						<g transform="translate(842.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA384">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA384">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA384">HMACSHA384</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA512">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA512">
+							<rect x="842.5" y="210.0" height="32.0" width="124.0" data-name="HMACSHA512"></rect>
+						</g>
+						<g transform="translate(842.5, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA512">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA512">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA512">HMACSHA512</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA3_256">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA3_256">
+							<rect x="833.5" y="252.0" height="32.0" width="142.0" data-name="HMACSHA3_256"></rect>
+						</g>
+						<g transform="translate(833.5, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_256">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_256">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_256">HMACSHA3_256</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA3_384">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA3_384">
+							<rect x="833.5" y="294.0" height="32.0" width="142.0" data-name="HMACSHA3_384"></rect>
+						</g>
+						<g transform="translate(833.5, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_384">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_384">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_384">HMACSHA3_384</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMACSHA3_512">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HMACSHA3_512">
+							<rect x="833.5" y="336.0" height="32.0" width="142.0" data-name="HMACSHA3_512"></rect>
+						</g>
+						<g transform="translate(833.5, 336)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_512">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_512">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_512">HMACSHA3_512</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Hash Algorithms</figcaption>
+</figure>
+<p><strong>Hash Algorithms</strong></p>
+<p>A hash algorithm, also known as a cryptographic hash function, is a mathematical algorithm that takes an input (or &quot;message&quot;) and produces a fixed-size string of bytes, which are typically represented as a hexadecimal number or it is base64 encoded.</p>
+<p>Hash algorithms have several important properties: They are deterministic. For a given input, the hash algorithm always produces the same output and given a hash value, it should be computationally infeasible to determine the original input.</p>
+<p>A cryptographic hash function is resilient to collision. It should be extremely unlikely for two different inputs to produce the same hash value. This property is crucial for ensuring the integrity of data. Even a small change in the input should result in a significantly different hash value.</p>
+<p>Hash algorithms are widely used in cryptography for various purposes, including data integrity checks, digital signatures and password storage.</p>
+<p>It's worth noting that while MD5 and SHA-1 were once widely used, they are now considered vulnerable to various attacks, and it's generally recommended to use stronger hash functions such as SHA-256 or SHA-3 for cryptographic purposes.</p>
+<p><strong>HMAC</strong></p>
+<p>Hash-based Message Authentication Code (HMAG), is a mechanism for generating a cryptographic hash of data in combination with a secret key. It provides a way to verify both the integrity and authenticity of a message.</p>
+<p>HMAC takes two inputs - the message to be authenticated and a secret key known only to the sender and the receiver. It uses a cryptographic hash function (such as MD5, SHA-1, SHA-256) to process the message. The secret key is mixed with the message in a specific way, usually by XOR operations and padding, to create a unique digest. The mixed data is then hashed using the chosen hash function and the output of the hash function is the HMAC.</p>
+<p>The recipient, who knows the secret key, can generate the HMAC using the received message and compare it to the transmitted HMAC. If they match, it indicates that the message has not been tampered with during transmission and that it was sent by someone with knowledge of the secret key.</p>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

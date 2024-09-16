@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - Dotnet basic commands</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Dotnet basic commands">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="dotnet-basic-commands">Dotnet basic commands</h1>
+<ul>
+<li>Check .NET version: <code>dotnet --version</code></li>
+<li>List installed .NET SDKs: <code>dotnet --list-sdks</code></li>
+<li>Show up-to-date status of installed .NET SDKs and .NET Runtimes: <code>dotnet sdk check</code></li>
+</ul>
+<h2 id="new">New</h2>
+<ul>
+<li>Create new gitignore file in current dir: <code>dotnet new gitignore</code></li>
+<li>Create new editorconfig file in current dir: <code>dotnet new editorconfig</code></li>
+<li>Create new solution with name: <code>dotnet new  sln -n &quot;Name of solution&quot;</code></li>
+<li>Create new class libary: <code>dotnet new classlib -n &quot;Name of lib&quot;</code></li>
+<li>Create new console app: <code>dotnet new console -n &quot;Program name&quot;</code></li>
+<li>Create new nunit test project: <code>dotnet new nunit -n &quot;test project name&quot;</code></li>
+<li>Create new xunit test project: <code>dotnet new xunit -n &quot;test project name&quot;</code></li>
+</ul>
+<h2 id="solution-management">Solution management</h2>
+<ul>
+<li>List projects in solution: <code>dotnet sln [solution.sln] list </code></li>
+<li>Add project to solution: <code>dotnet sln [solution.sln] add [project.csproj]</code></li>
+<li>Remove project from solution: <code>dotnet sln [solution.sln] remove [project.csproj]</code></li>
+</ul>
+<p>Note: solution file name can be ignored if folder only contains one <code>.sln</code> file.</p>
+<h2 id="package-management">Package management</h2>
+<ul>
+<li>List package references for project: <code>dotnet list [project.csproj] package</code></li>
+<li>List package references for solution: <code>dotnet list [solution.sln] package</code></li>
+<li>Add or update a package reference: <code>dotnet add [project.csproj] package [packagename]</code></li>
+<li>Remove a package reference: <code>dotnet remove [project.csproj] package [packagename]</code></li>
+<li>Restore package dependencies of project: <code>dotnet restore [project.csproj]</code></li>
+<li>Restore package dependencies of solution: <code>dotnet restore [solution.sln]</code></li>
+<li>Pack current project to nuget package: <code>dotnet pack [project.csproj]</code></li>
+</ul>
+<h2 id="build-run">Build &amp; Run</h2>
+<ul>
+<li>Build solution in debug mode: <code>dotnet build [solution.sln] -c DEBUG</code></li>
+<li>Build solution in release mode: <code>dotnet build [solution.sln]  -c RELEASE</code></li>
+<li>Build project in debug mode: <code>dotnet build [project.csproj] -c DEBUG</code></li>
+<li>Build project in release mode: <code>dotnet build [project.csproj]  -c RELEASE</code></li>
+<li>Clean output of a project: <code>dotnet clean [project.csproj]</code></li>
+<li>Clean output of a solution: <code>dotnet clean [solution.sln]</code></li>
+<li>Run a compiled assembly: <code>dotnet run [assembly.dll]</code></li>
+<li>Run tests: <code>dotnet test [testproject.csproj]</code> or <code>dotnet test [solution.sln]</code></li>
+</ul>
+<h2 id="tool-management">Tool management</h2>
+<ul>
+<li>Install a tool: <code>dotnet tool install [tool Name]</code></li>
+<li>Install a tool globaly: <code>dotnet tool install -g [tool Name]</code></li>
+<li>List installed tools: <code>dotnet tool list</code></li>
+<li>List globaly installed tools: <code>dotnet tool list -g</code></li>
+<li>Remove a tool: <code>dotnet tool uninstall [tool Name]</code></li>
+<li>Remove a globaly installed tool: <code>dotnet tool uninstall -g [tool Name]</code></li>
+<li>Update a tool: <code>dotnet tool update [tool Name]</code></li>
+<li>Update a globaly installed tool: <code>dotnet tool update -g [tool Name]</code></li>
+</ul>
+<p>Globally means that the tool is installed to the users profile, instead of the current project/solution.</p>
+<h2 id="nuget">NuGet</h2>
+<ul>
+<li>Display all cache directories: <code>dotnet nuget locals all --list</code></li>
+<li>Clear all files from all local cache directories: <code>dotnet nuget locals all --clear</code></li>
+<li>Push a package to the NuGet repository: <code>dotnet nuget push [package.nupkg] -k [api key]</code></li>
+<li>Push a package to a custom NuGet feed: <code>dotnet nuget push [package.nupkg] -k [api key] -s [feed url]</code></li>
+<li>Push all .nupkg files in the current directory to a local feed directory: <code>dotnet nuget push &quot;*.nupkg&quot; -s [feed directory]</code></li>
+<li>List all configured NuGet sources: <code>dotnet nuget list source [source name]</code></li>
+<li>Remove a NuGet source: <code>dotnet nuget remove source</code></li>
+<li>Add a NuGet source: <code>dotnet nuget add source [url or local path] -n [source name]</code></li>
+<li>Update a NuGet source: <code>dotnet nuget update source [source name]</code></li>
+</ul>
+<h2 id="formating">Formating</h2>
+<ul>
+<li>Create a new editorconfig file: <code>dotnet new editorconfig</code></li>
+<li>Format all code in the solution or a project: <code>dotnet format [solution.sln or project.csproj]</code></li>
+<li>Verify that all code is correctly formatted: <code>dotnet format --verify-no-changes</code></li>
+</ul>
+<h2 id="workloads">Workloads</h2>
+<ul>
+<li>List all available workloads: <code>dotnet workload search</code></li>
+<li>Install an optional workload: <code>dotnet workload install [workload id]</code></li>
+<li>Uninstall a workload: <code>dotnet workload uninstall [workload id]</code></li>
+<li>List installed workloads: <code>dotnet workload list</code></li>
+<li>Repair workload installations: <code>dotnet workload repair</code></li>
+<li>Update installed workloads: <code>dotnet workload update</code></li>
+<li>Install workload needed for a project or a solution: <code>dotnet workload restore [soluton.sln or project.csproj]</code></li>
+</ul>
+<h2 id="tools">Tools</h2>
+<ul>
+<li>Install a tool: <code>dotnet tool install --global [tool name]</code></li>
+<li>Uninstall a tool: <code>dotnet tool uninstall --global [tool name]</code></li>
+<li>Lists all tools that are currently installed: <code>dotnet tool list --global</code></li>
+<li>Searches all .NET tools that are published to NuGet: <code>dotnet tool search [tool name]</code></li>
+</ul>
+<p>Global tools are installed in <code>$HOME/.dotnet/tools</code> on Linux and macOS. On Windows they are installed in the <code>%USERPROFILE%\.dotnet\tools</code> folder. Instead of the <code>--global</code> switch use the <code>--tool-path [folder]</code> to install the tool to a custom directory. If no <code>--global</code> or <code>--tool-path</code> is specified, then the tool is installed to the current C# project.</p>
+<h2 id="useful-tools">Useful tools</h2>
+<ul>
+<li><p><strong>dotnet-ef</strong></p>
+<p>The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects.</p>
+<p>Install with: <code>dotnet tool install --global dotnet-ef</code></p>
+<p>More info: <a href="https://learn.microsoft.com/en-us/ef/core/cli/dotnet" target="_blank">https://learn.microsoft.com/en-us/ef/core/cli/dotnet</a></p>
+</li>
+<li><p><strong>csharprepl</strong></p>
+<p>A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local .NET projects and assemblies.</p>
+<p>Install with: <code>dotnet tool install -g csharprepl</code></p>
+<p>More info: <a href="https://github.com/waf/CSharpRepl" target="_blank">https://github.com/waf/CSharpRepl</a></p>
+</li>
+<li><p><strong>IronPython</strong></p>
+<p>IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily.</p>
+<p>Install with: <code>dotnet tool install -g IronPython.Console</code></p>
+<p>More info: <a href="https://ironpython.net/" target="_blank">https://ironpython.net/</a></p>
+</li>
+<li><p><strong>dotnet-format</strong></p>
+<p>Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an <code>.editorconfig</code> file, if present, otherwise a default set of preferences will be used.</p>
+<p>Install with: <code>dotnet tool install -g dotnet-format</code></p>
+<p>More info: <a href="https://github.com/dotnet/format" target="_blank">https://github.com/dotnet/format</a></p>
+</li>
+<li><p><strong>.NET Upgrade Assistant</strong></p>
+<p>The .NET Upgrade Assistant is a Visual Studio extension and command-line tool that's designed to assist with upgrading apps to the latest version of .NET.</p>
+<p>Install with: <code>dotnet tool install -g upgrade-assistant</code></p>
+<p>More info: <a href="https://dotnet.microsoft.com/en-us/platform/upgrade-assistant" target="_blank">https://dotnet.microsoft.com/en-us/platform/upgrade-assistant</a></p>
+</li>
+<li><p><strong>SlnGen</strong></p>
+<p>SlnGen is a Visual Studio solution file generator. Visual Studio solutions generally do not scale well for large project trees. They are scoped views of a set of projects. Enterprise-level builds use custom logic like traversal to convey how they should be built by a hosted build environment. Maintaining Visual Studio solutions becomes hard because you have to keep them in sync with the other build logic. Instead, SlnGen reads the project references of a given project to create a Visual Studio solution on demand. For example, you can run it against a unit test project and be presented with a Visual Studio solution containing the unit test project and all of its project references.</p>
+<p>Install with: <code>dotnet tool install --global Microsoft.VisualStudio.SlnGen.Tool --add-source https://api.nuget.org/v3/index.json --ignore-failed-sources</code></p>
+<p>More info: <a href="https://github.com/microsoft/slngen" target="_blank">https://github.com/microsoft/slngen</a></p>
+</li>
+<li><p><strong>Roslynator Cli</strong></p>
+<p>Roslynator is a set of code analysis tools for C#, powered by Roslyn.</p>
+<p>Install with: <code>dotnet tool install -g roslynator.dotnet.cli</code></p>
+<p>More info: <a href="https://josefpihrt.github.io/docs/roslynator/cli" target="_blank">https://josefpihrt.github.io/docs/roslynator/cli</a></p>
+</li>
+</ul>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>
