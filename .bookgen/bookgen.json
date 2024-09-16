@@ -5,7 +5,7 @@
   "ScriptsDirectory": "",
   "HostName": "https://webmaster442.github.io/ultimatedotnetcheatsheet/",
   "Index": "000-start.md",
-  "Version": 1015,
+  "Version": 1016,
   "LinksOutSideOfHostOpenNewTab": true,
   "Metadata": {
     "Author": "Ruzsinszki Gábor",
@@ -18,51 +18,63 @@
     "TemplateAssets": [
       {
         "Source": "frontend\\bootstrap.bundle.min.js",
-        "Target": "bootstrap.bundle.min.js"
+        "Target": "bootstrap.bundle.min.js",
+        "Minify": false
       },
       {
         "Source": "frontend\\serviceworker.js",
-        "Target": "serviceworker.js"
+        "Target": "serviceworker.js",
+        "Minify": false
       },
       {
         "Source": "frontend\\style.css",
-        "Target": "style.css"
+        "Target": "style.css",
+        "Minify": false
       },
       {
         "Source": "frontend\\bootstrap.min.css",
-        "Target": "bootstrap.min.css"
+        "Target": "bootstrap.min.css",
+        "Minify": false
       },
       {
         "Source": "frontend\\prism.js",
-        "Target": "prism.js"
+        "Target": "prism.js",
+        "Minify": false
       },
       {
         "Source": "frontend\\prism.css",
-        "Target": "prism.css"
+        "Target": "prism.css",
+        "Minify": false
       },
       {
         "Source": "frontend\\manifest.json",
-        "Target": "manifest.json"
+        "Target": "manifest.json",
+        "Minify": false
       },
       {
         "Source": "frontend\\favicon.ico",
-        "Target": "favicon.ico"
+        "Target": "favicon.ico",
+        "Minify": false
       },
       {
         "Source": "frontend\\pwa\\i-192.png",
-        "Target": "pwa\\i-192.png"
+        "Target": "pwa\\i-192.png",
+        "Minify": false
       },
       {
         "Source": "frontend\\pwa\\i-512.png",
-        "Target": "pwa\\i-512.png"
+        "Target": "pwa\\i-512.png",
+        "Minify": false
       },
       {
         "Source": "frontend\\pwa\\apple-touch-icon.png",
-        "Target": "pwa\\apple-touch-icon.png"
+        "Target": "pwa\\apple-touch-icon.png",
+        "Minify": false
       },
       {
         "Source": "frontend\\script.js",
-        "Target": "script.js"
+        "Target": "script.js",
+        "Minify": false
       }
     ],
     "StyleClasses": {
@@ -100,7 +112,8 @@
     "TemplateAssets": [
       {
         "Source": "",
-        "Target": ""
+        "Target": "",
+        "Minify": false
       }
     ],
     "StyleClasses": {
@@ -138,7 +151,8 @@
     "TemplateAssets": [
       {
         "Source": "",
-        "Target": ""
+        "Target": "",
+        "Minify": false
       }
     ],
     "StyleClasses": {
@@ -176,7 +190,8 @@
     "TemplateAssets": [
       {
         "Source": "",
-        "Target": ""
+        "Target": "",
+        "Minify": false
       }
     ],
     "StyleClasses": {
@@ -227,7 +242,8 @@
     "TemplateAssets": [
       {
         "Source": "",
-        "Target": ""
+        "Target": "",
+        "Minify": false
       }
     ],
     "StyleClasses": {
