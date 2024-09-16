@@ -1,4 +1,5 @@
 bookgen build -a BuildWeb
-cd wwwRoot
-del search.html
-cd ..
+Set-Location docs
+Remove-Item search.html
+Set-Location ..
+bookgen md2html
