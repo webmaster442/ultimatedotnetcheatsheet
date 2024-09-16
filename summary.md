@@ -6,6 +6,7 @@
 * [Important interfaces for types](045-type-interfaces.md)
 * [Strings](060-strings.md)
 * [Exceptions](070-exceptions.md)
+* [Generics](075-generics.md)
 * [Collections](080-collections.md)
 * [LINQ](090-linq.md)
 * [Pattern matching](100-paternmatch.md)
