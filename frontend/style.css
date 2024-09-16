@@ -9,6 +9,10 @@
     }
 }
 
+.qrcode {
+    display: none;
+}
+
 #main {
     max-width: 100rem;
 }

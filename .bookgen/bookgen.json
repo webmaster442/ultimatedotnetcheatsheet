@@ -107,13 +107,12 @@
     }
   },
   "TargetPrint": {
-    "OutPutDirectory": "wwwRoot/print",
+    "OutPutDirectory": "print",
     "TemplateFile": "frontend\\TemplatePrint.html",
     "TemplateAssets": [
       {
         "Source": "",
-        "Target": "",
-        "Minify": false
+        "Target": ""
       }
     ],
     "StyleClasses": {

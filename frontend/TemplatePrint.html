@@ -3,6 +3,89 @@
 
 <head>
     <meta charset="utf-8">
+    <style type="text/css">
+        @page {
+            margin-top: 5mm;
+            margin-bottom: 5mm;
+            margin-left: 10mm;
+            margin-right: 10mm;
+        }
+
+        html {
+            width: 250mm;
+            height: 353mm;
+        }
+
+        body {
+            color: black;
+            background: white;
+            font-family: "Blogger Sans Light";
+            font-size: 12pt;
+            text-align: justify;
+        }
+
+        h2 {
+            page-break-before: always;
+        }
+
+        img,
+        svg {
+            max-width: 235mm;
+            max-height: 345mm;
+            margin: 0 auto;
+            display: inherit;
+            /*border: 1px solid red;*/
+        }
+
+        p,
+        pre,
+        code,
+        table {
+            break-inside: avoid;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        p code {
+            color: #ad1a15;
+        }
+
+        li code {
+            color: #ad1a15;
+        }
+
+        figure {
+            page-break-inside: avoid;
+        }
+
+        figcaption {
+            font-style: italic;
+            text-align: center;
+        }
+
+        pre code {
+            line-break: anywhere;
+            overflow: hidden;
+        }
+
+        :not(pre)>code[class*=language-],
+        pre[class*=language-] {
+            border: none;
+        }
+    </style>
 </head>
 
 <body>

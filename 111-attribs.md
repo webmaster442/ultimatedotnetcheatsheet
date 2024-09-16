@@ -60,7 +60,7 @@ public static void ThrowWhenNull([NotNull] object? value, string valueExpression
 }
 ```
 
-## #Conditional post-conditions: NotNullWhen, MaybeNullWhen, and NotNullIfNotNull
+### Conditional post-conditions: NotNullWhen, MaybeNullWhen, and NotNullIfNotNull
 
 * `NotNullWhen`: A nullable argument won't be null when the method returns the specified `bool` value.
 * `MaybeNullWhen`: A non-nullable argument may be null when the method returns the specified `bool` value.

@@ -1,8 +1,13 @@
 # Full changelog
 
-* **2024.09.11**
+* **2024.09.16**
 
   * Updated website design
+  * Updated list of NuGet packages
+  * Extended collections section
+  * Attributes extended with Nullable atributes
+  * LINQ section extended
+  * Added Generics and Tasks sections
 
 * **2024.06.04**
   

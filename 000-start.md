@@ -17,17 +17,20 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 The project is open-source and available on GitHub. You can contribute to it by visiting project's GitHub repository: https://github.com/webmaster442/ultimatedotnetcheatsheet
 
+:::qrcode
 ![QR Code](img/qrcode.svg)
+:::
 
 ## Latest changes
 
-* **2024.09.11**
+* **2024.09.16**
 
   * Updated website design
   * Updated list of NuGet packages
   * Extended collections section
+  * Attributes extended with Nullable atributes
   * LINQ section extended
-  * 
+  * Added Generics and Tasks sections
 
 * **2024.06.04**
   
