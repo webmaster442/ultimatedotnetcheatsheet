@@ -1,7 +1,11 @@
-<svg version="1.1" baseProfile="full" width="1285.0" height="301.0" viewBox="0 0 1285 301" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="1269.0" height="295.0" viewBox="0 0 1269 295" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >mvvm</title>
 	<desc >#direction: right
-	#spacing: 12
-	#arrowSize: 5
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: mvvm
+	
 	[&lt;actor&gt; User] &lt;- [&lt;label&gt;interacts] -&gt; [&lt;transceiver&gt;View]
 	
 	[&lt;transceiver&gt;View Model]
@@ -30,49 +34,49 @@
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
 		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="301.0" width="1285.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="295.0" width="1269.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M62.0 76.0 L58 76 L64 76 L64.0 76.0 " fill="none"></path>
-					<path d="M72.0 68.0 L62.0 76.0 L72.0 84.0 L52.0 76.0 Z"></path>
-					<path d="M147.0 76.0 L153 76 L149 76 L149.0 76.0 " fill="none"></path>
-					<path d="M139.0 84.0 L149.0 76.0 L139.0 68.0 L159.0 76.0 Z"></path>
+					<path d="M58.7 74.0 L57 74 L62 74 L62.0 74.0 " fill="none"></path>
+					<path d="M65.3 68.7 L58.7 74.0 L65.3 79.3 L52.0 74.0 Z"></path>
+					<path d="M145.0 74.0 L150 74 L148.33333333333334 74 L148.3 74.0 " fill="none"></path>
+					<path d="M141.7 79.3 L148.3 74.0 L141.7 68.7 L155.0 74.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M897.0 54.0 L903 54 L942.8076923076923 90 L942.8 90.0 " fill="none"></path>
+						<path d="M887.0 53.0 L892 53 L930.42 87 L930.4 87.0 " fill="none"></path>
 					</g>
 					<g stroke-dasharray="6 6">
-						<path d="M194.8 60.0 L217 24 L223 24 L223.0 24.0 " fill="none"></path>
+						<path d="M190.9 58.0 L212 24 L217 24 L217.0 24.0 " fill="none"></path>
 					</g>
-					<path d="M221.0 76.0 L217 76 L315.5 76 L315.5 76.0 " fill="none"></path>
-					<path d="M231.0 68.0 L221.0 76.0 L231.0 84.0 L211.0 76.0 Z"></path>
-					<path d="M433.5 76.0 L532 76 L562.4615384615385 112 L562.5 112.0 " fill="none"></path>
-					<path d="M616.9 107.5 L620 106 L671.5 106 L671.5 106.0 " fill="none"></path>
-					<path d="M622.3 95.9 L616.9 107.5 L629.5 110.2 L608.0 112.0 Z"></path>
-					<path d="M851.5 106.0 L903 106 L909 106 L909.0 106.0 " fill="none"></path>
-					<path d="M194.8 92.0 L217 128 L284 128 L284.0 128.0 " fill="none"></path>
-					<path d="M465.0 128.0 L532 128 L528 128 L528.0 128.0 " fill="none"></path>
-					<path d="M518.0 136.0 L528.0 128.0 L518.0 120.0 L538.0 128.0 Z"></path>
-					<path d="M608.0 144.0 L620 150 L722 150 L722.0 150.0 " fill="none"></path>
-					<path d="M801.0 150.0 L903 150 L931.6492913233815 128.07706403080377 L931.6 128.1 " fill="none"></path>
-					<path d="M928.6 140.5 L931.6 128.1 L918.8 127.8 L939.6 122.0 Z"></path>
-					<path d="M1011.7 86.4 L1018 84 L1031.5 84 L1031.5 84.0 " fill="none"></path>
-					<path d="M1018.1 75.4 L1011.7 86.4 L1023.9 90.3 L1002.3 90.0 Z"></path>
-					<path d="M1147.5 84.0 L1161 84 L1171.090909090909 90 L1171.1 90.0 " fill="none"></path>
-					<path d="M1002.3 122.0 L1018 128 L1024 128 L1024.0 128.0 " fill="none"></path>
-					<path d="M1155.0 128.0 L1161 128 L1162.4955502107025 127.11075392877153 L1162.5 127.1 " fill="none"></path>
-					<path d="M1158.0 139.1 L1162.5 127.1 L1149.8 125.3 L1171.1 122.0 Z"></path>
+					<path d="M213.7 74.0 L212 74 L309.5 74 L309.5 74.0 " fill="none"></path>
+					<path d="M220.3 68.7 L213.7 74.0 L220.3 79.3 L207.0 74.0 Z"></path>
+					<path d="M427.5 74.0 L525 74 L554.24 108 L554.2 108.0 " fill="none"></path>
+					<path d="M606.8 105.1 L611 103 L661.5 103 L661.5 103.0 " fill="none"></path>
+					<path d="M610.4 97.4 L606.8 105.1 L615.1 106.9 L600.8 108.0 Z"></path>
+					<path d="M841.5 103.0 L892 103 L897 103 L897.0 103.0 " fill="none"></path>
+					<path d="M190.9 90.0 L212 124 L278 124 L278.0 124.0 " fill="none"></path>
+					<path d="M459.0 124.0 L525 124 L523.3333333333334 124 L523.3 124.0 " fill="none"></path>
+					<path d="M516.7 129.3 L523.3 124.0 L516.7 118.7 L530.0 124.0 Z"></path>
+					<path d="M600.8 140.0 L611 145 L712 145 L712.0 145.0 " fill="none"></path>
+					<path d="M791.0 145.0 L892 145 L921.625860267003 122.97723661567923 L921.6 123.0 " fill="none"></path>
+					<path d="M919.5 131.2 L921.6 123.0 L913.1 122.7 L927.0 119.0 Z"></path>
+					<path d="M997.8 84.7 L1005 82 L1017.5 82 L1017.5 82.0 " fill="none"></path>
+					<path d="M1002.2 77.4 L997.8 84.7 L1005.9 87.4 L991.5 87.0 Z"></path>
+					<path d="M1133.5 82.0 L1146 82 L1154.5714285714287 87 L1154.6 87.0 " fill="none"></path>
+					<path d="M991.5 119.0 L1005 124 L1010 124 L1010.0 124.0 " fill="none"></path>
+					<path d="M1141.0 124.0 L1146 124 L1148.8129025654391 122.35914017016054 L1148.8 122.4 " fill="none"></path>
+					<path d="M1145.7 130.3 L1148.8 122.4 L1140.4 121.1 L1154.6 119.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M497.0 204.5 L532 204.5 L566.7973856209151 144 L566.8 144.0 " fill="none"></path>
+						<path d="M491.0 198.5 L525 198.5 L558.7651006711409 140 L558.8 140.0 " fill="none"></path>
 					</g>
 					<g data-name="User">
 						<g fill="#eee8d5" stroke="#33322E" data-name="User">
-							<circle r="4.0" cx="26.0" cy="60.0" data-name="User"></circle>
-							<path d="M26.0 64.0 L26.0 72.0" fill="none" data-name="User"></path>
-							<path d="M22.0 68.0 L30.0 68.0" fill="none" data-name="User"></path>
-							<path d="M22.0 76.0 L26.0 72.0 L30.0 76.0" fill="none" data-name="User"></path>
+							<circle r="4.0" cx="26.0" cy="58.0" data-name="User"></circle>
+							<path d="M26.0 62.0 L26.0 70.0" fill="none" data-name="User"></path>
+							<path d="M22.0 66.0 L30.0 66.0" fill="none" data-name="User"></path>
+							<path d="M22.0 74.0 L26.0 70.0 L30.0 74.0" fill="none" data-name="User"></path>
 						</g>
-						<g transform="translate(0, 72)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
+						<g transform="translate(0, 70)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="User">
 								<text x="18.0" y="14.1" stroke="none" text-anchor="middle" data-name="User">User</text>
 								
@@ -81,7 +85,7 @@
 					</g>
 					<g data-name="interacts">
 						
-						<g transform="translate(64, 60)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="interacts">
+						<g transform="translate(62, 58)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="interacts">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="interacts">
 								<text x="33.5" y="14.1" stroke="none" text-anchor="middle" data-name="interacts">interacts</text>
 								
@@ -90,9 +94,9 @@
 					</g>
 					<g data-name="View">
 						<g fill="#eee8d5" stroke="#33322E" data-name="View">
-							<path d="M151.0 60.0 L203.0 60.0 L211.0 76.0 L203.0 92.0 L151.0 92.0 L159.0 76.0 Z" data-name="View"></path>
+							<path d="M147.0 58.0 L199.0 58.0 L207.0 74.0 L199.0 90.0 L147.0 90.0 L155.0 74.0 Z" data-name="View"></path>
 						</g>
-						<g transform="translate(159, 60)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="View">
+						<g transform="translate(155, 58)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="View">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="View">
 								<text x="0.0" y="14.1" stroke="none" data-name="View">View</text>
 								
@@ -101,9 +105,9 @@
 					</g>
 					<g data-name="View Model">
 						<g fill="#eee8d5" stroke="#33322E" data-name="View Model">
-							<path d="M901.0 90.0 L1004.0 90.0 L1012.0 106.0 L1004.0 122.0 L901.0 122.0 L909.0 106.0 Z" data-name="View Model"></path>
+							<path d="M889.0 87.0 L992.0 87.0 L1000.0 103.0 L992.0 119.0 L889.0 119.0 L897.0 103.0 Z" data-name="View Model"></path>
 						</g>
-						<g transform="translate(909, 90)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="View Model">
+						<g transform="translate(897, 87)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="View Model">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="View Model">
 								<text x="0.0" y="14.1" stroke="none" data-name="View Model">View Model</text>
 								
@@ -112,9 +116,9 @@
 					</g>
 					<g data-name="Model">
 						<g fill="#eee8d5" stroke="#33322E" data-name="Model">
-							<path d="M1159.0 90.0 L1221.0 90.0 L1229.0 106.0 L1221.0 122.0 L1159.0 122.0 L1167.0 106.0 Z" data-name="Model"></path>
+							<path d="M1143.0 87.0 L1205.0 87.0 L1213.0 103.0 L1205.0 119.0 L1143.0 119.0 L1151.0 103.0 Z" data-name="Model"></path>
 						</g>
-						<g transform="translate(1167, 90)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Model">
+						<g transform="translate(1151, 87)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Model">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Model">
 								<text x="0.0" y="14.1" stroke="none" data-name="Model">Model</text>
 								
@@ -123,10 +127,10 @@
 					</g>
 					<g data-name="Implements the">
 						<g fill="#eee8d5" stroke="#33322E" data-name="Implements the">
-							<path d="M626.0 30.0 L889.0 30.0 L897.0 38.0 L897.0 78.0 L626.0 78.0 L626.0 30.0 Z" data-name="Implements the"></path>
-							<path d="M889.0 30.0 L889.0 38.0 L897.0 38.0" fill="none" data-name="Implements the"></path>
+							<path d="M616.0 29.0 L879.0 29.0 L887.0 37.0 L887.0 77.0 L616.0 77.0 L616.0 29.0 Z" data-name="Implements the"></path>
+							<path d="M879.0 29.0 L879.0 37.0 L887.0 37.0" fill="none" data-name="Implements the"></path>
 						</g>
-						<g transform="translate(626, 30)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Implements the">
+						<g transform="translate(616, 29)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Implements the">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Implements the">
 								<text x="0.0" y="14.1" stroke="none" data-name="Implements the">Implements the</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Implements the">INotifyPropertyChanged interface</text>
@@ -136,10 +140,10 @@
 					</g>
 					<g data-name="Binding is possible">
 						<g fill="#eee8d5" stroke="#33322E" data-name="Binding is possible">
-							<path d="M223.0 0.0 L518.0 0.0 L526.0 8.0 L526.0 48.0 L223.0 48.0 L223.0 0.0 Z" data-name="Binding is possible"></path>
-							<path d="M518.0 0.0 L518.0 8.0 L526.0 8.0" fill="none" data-name="Binding is possible"></path>
+							<path d="M217.0 0.0 L512.0 0.0 L520.0 8.0 L520.0 48.0 L217.0 48.0 L217.0 0.0 Z" data-name="Binding is possible"></path>
+							<path d="M512.0 0.0 L512.0 8.0 L520.0 8.0" fill="none" data-name="Binding is possible"></path>
 						</g>
-						<g transform="translate(223, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding is possible">
+						<g transform="translate(217, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding is possible">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Binding is possible">
 								<text x="0.0" y="14.1" stroke="none" data-name="Binding is possible">Binding is possible</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Binding is possible">to Dependency properties of Controls</text>
@@ -149,9 +153,9 @@
 					</g>
 					<g data-name="Binding">
 						<g fill="#eee8d5" stroke="#33322E" data-name="Binding">
-							<path d="M530.0 112.0 L606.0 112.0 L614.0 128.0 L606.0 144.0 L530.0 144.0 L538.0 128.0 Z" data-name="Binding"></path>
+							<path d="M522.0 108.0 L598.0 108.0 L606.0 124.0 L598.0 140.0 L522.0 140.0 L530.0 124.0 Z" data-name="Binding"></path>
 						</g>
-						<g transform="translate(538, 112)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding">
+						<g transform="translate(530, 108)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Binding">
 								<text x="0.0" y="14.1" stroke="none" data-name="Binding">Binding</text>
 								
@@ -160,7 +164,7 @@
 					</g>
 					<g data-name="Updates view">
 						
-						<g transform="translate(315.5, 60)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates view">
+						<g transform="translate(309.5, 58)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates view">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Updates view">
 								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="Updates view">Updates view</text>
 								
@@ -169,7 +173,7 @@
 					</g>
 					<g data-name="Observes View Model">
 						
-						<g transform="translate(671.5, 90)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Observes View Model">
+						<g transform="translate(661.5, 87)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Observes View Model">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Observes View Model">
 								<text x="82.0" y="14.1" stroke="none" text-anchor="middle" data-name="Observes View Model">Observes View Model</text>
 								
@@ -178,7 +182,7 @@
 					</g>
 					<g data-name="Dependency Property">
 						
-						<g transform="translate(284, 104)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dependency Property">
+						<g transform="translate(278, 100)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dependency Property">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Dependency Property">
 								<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="Dependency Property">Dependency Property</text>
 								<text x="82.5" y="30.3" stroke="none" text-anchor="middle" data-name="Dependency Property">changes updae it</text>
@@ -188,7 +192,7 @@
 					</g>
 					<g data-name="Updates">
 						
-						<g transform="translate(722, 134)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates">
+						<g transform="translate(712, 129)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Updates">
 								<text x="31.5" y="14.1" stroke="none" text-anchor="middle" data-name="Updates">Updates</text>
 								
@@ -197,7 +201,7 @@
 					</g>
 					<g data-name="Reads model">
 						
-						<g transform="translate(1031.5, 68)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Reads model">
+						<g transform="translate(1017.5, 66)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Reads model">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Reads model">
 								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="Reads model">Reads model</text>
 								
@@ -206,7 +210,7 @@
 					</g>
 					<g data-name="Updates model">
 						
-						<g transform="translate(1024, 112)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates model">
+						<g transform="translate(1010, 108)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates model">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Updates model">
 								<text x="57.5" y="14.1" stroke="none" text-anchor="middle" data-name="Updates model">Updates model</text>
 								
@@ -215,10 +219,10 @@
 					</g>
 					<g data-name="May include an optional">
 						<g fill="#eee8d5" stroke="#33322E" data-name="May include an optional">
-							<path d="M252.0 164.0 L489.0 164.0 L497.0 172.0 L497.0 245.0 L252.0 245.0 L252.0 164.0 Z" data-name="May include an optional"></path>
-							<path d="M489.0 164.0 L489.0 172.0 L497.0 172.0" fill="none" data-name="May include an optional"></path>
+							<path d="M246.0 158.0 L483.0 158.0 L491.0 166.0 L491.0 239.0 L246.0 239.0 L246.0 158.0 Z" data-name="May include an optional"></path>
+							<path d="M483.0 158.0 L483.0 166.0 L491.0 166.0" fill="none" data-name="May include an optional"></path>
 						</g>
-						<g transform="translate(252, 164)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="May include an optional">
+						<g transform="translate(246, 158)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="May include an optional">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="May include an optional">
 								<text x="0.0" y="14.1" stroke="none" data-name="May include an optional">May include an optional</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="May include an optional">converter that is either an</text>

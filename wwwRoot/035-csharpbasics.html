@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - C# basics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - C# basics">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="c-basics">C# basics</h1>
+<h2 id="operator-precedence">Operator Precedence</h2>
+<ol>
+<li><p>Primary:</p>
+<p><code>x.y</code>, <code>f(x)</code>, <code>a[i]</code>, <code>x?.y</code>, <code>x?[y]</code>, <code>x++</code>, <code>x--</code>, <code>x!</code>, <code>new</code>, <code>typeof</code>, <code>checked</code>, <code>unchecked</code>, <code>default</code>, <code>nameof</code>, <code>delegate</code>, <code>sizeof</code>, <code>stackalloc</code>, <code>x-&gt;y</code></p>
+</li>
+<li><p>Unary: <code>+x, -x, !x, ~x, ++x, --x, ^x, (T)x, await, &amp;x, *x, true and false</code></p>
+</li>
+<li><p>Range: <code>x..y</code></p>
+</li>
+<li><p>Switch and with expressions: <code>switch, with</code></p>
+</li>
+<li><p>Multiplicative: <code>x * y, x / y, x % y</code></p>
+</li>
+<li><p>Additive: <code>x + y</code>, <code>x – y</code></p>
+</li>
+<li><p>Shift: <code>x &lt;&lt; y</code>, <code>x &gt;&gt; y</code>, <code>x &gt;&gt;&gt; y</code></p>
+</li>
+<li><p>Relational and type-testing: <code>x &lt; y</code>, <code>x &gt; y</code>, <code>x &lt;= y</code>, <code>x &gt;= y</code>, <code>is</code>, <code>as</code></p>
+</li>
+<li><p>Equality: <code>x == y</code>, <code>x != y</code></p>
+</li>
+<li><p>Boolean logical AND or bitwise logical AND: x &amp; y`</p>
+</li>
+<li><p>Boolean logical XOR or bitwise logical XOR: <code>x ^ y</code></p>
+</li>
+<li><p>Boolean logical OR or bitwise logical OR: <code>x | y</code></p>
+</li>
+<li><p>Conditional AND: <code>x &amp;&amp; y</code></p>
+</li>
+<li><p>Conditional OR: <code>x || y</code></p>
+</li>
+<li><p>Null-coalescing operator: <code>x ?? y</code></p>
+</li>
+<li><p>Conditional operator: <code>c ? t : f</code></p>
+</li>
+<li><p>Assignment and lambda declaration:</p>
+<p><code>x = y</code>, <code>x += y</code>, <code>x -= y</code>, <code>x *= y</code>, <code>x /= y</code>, <code>x %= y</code>, <code>x &amp;= y</code>, <code>x |= y</code>, <code>x ^= y</code>, <code>x &lt;&lt;= y</code>, <code>x &gt;&gt;= y</code>, <code>x &gt;&gt;&gt;= y</code>, <code>x ??= y</code>, <code>=&gt;</code></p>
+</li>
+</ol>
+<p>More info: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/" target="_blank">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/</a></p>
+<h2 id="keywords">Keywords</h2>
+<p>Keywords are predefined, reserved identifiers that have special meanings to the compiler. They can't be used as identifiers in your program unless they include <code>@</code> as a prefix. For example, <code>@if</code> is a valid identifier, but <code>if</code> isn't because <code>if</code> is a keyword.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">A-E</th>
+<th style="text-align: center;">E-L</th>
+<th style="text-align: center;">N-S</th>
+<th style="text-align: center;">S-W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">abstract</td>
+<td style="text-align: center;">event</td>
+<td style="text-align: center;">namespace</td>
+<td style="text-align: center;">static</td>
+</tr>
+<tr>
+<td style="text-align: center;">as</td>
+<td style="text-align: center;">explicit</td>
+<td style="text-align: center;">new</td>
+<td style="text-align: center;">string</td>
+</tr>
+<tr>
+<td style="text-align: center;">base</td>
+<td style="text-align: center;">extern</td>
+<td style="text-align: center;">null</td>
+<td style="text-align: center;">struct</td>
+</tr>
+<tr>
+<td style="text-align: center;">bool</td>
+<td style="text-align: center;">FALSE</td>
+<td style="text-align: center;">object</td>
+<td style="text-align: center;">switch</td>
+</tr>
+<tr>
+<td style="text-align: center;">break</td>
+<td style="text-align: center;">finally</td>
+<td style="text-align: center;">operator</td>
+<td style="text-align: center;">this</td>
+</tr>
+<tr>
+<td style="text-align: center;">byte</td>
+<td style="text-align: center;">fixed</td>
+<td style="text-align: center;">out</td>
+<td style="text-align: center;">throw</td>
+</tr>
+<tr>
+<td style="text-align: center;">case</td>
+<td style="text-align: center;">float</td>
+<td style="text-align: center;">override</td>
+<td style="text-align: center;">TRUE</td>
+</tr>
+<tr>
+<td style="text-align: center;">catch</td>
+<td style="text-align: center;">for</td>
+<td style="text-align: center;">params</td>
+<td style="text-align: center;">try</td>
+</tr>
+<tr>
+<td style="text-align: center;">char</td>
+<td style="text-align: center;">foreach</td>
+<td style="text-align: center;">private</td>
+<td style="text-align: center;">typeof</td>
+</tr>
+<tr>
+<td style="text-align: center;">checked</td>
+<td style="text-align: center;">goto</td>
+<td style="text-align: center;">protected</td>
+<td style="text-align: center;">uint</td>
+</tr>
+<tr>
+<td style="text-align: center;">class</td>
+<td style="text-align: center;">if</td>
+<td style="text-align: center;">public</td>
+<td style="text-align: center;">ulong</td>
+</tr>
+<tr>
+<td style="text-align: center;">const</td>
+<td style="text-align: center;">implicit</td>
+<td style="text-align: center;">readonly</td>
+<td style="text-align: center;">unchecked</td>
+</tr>
+<tr>
+<td style="text-align: center;">continue</td>
+<td style="text-align: center;">in</td>
+<td style="text-align: center;">ref</td>
+<td style="text-align: center;">unsafe</td>
+</tr>
+<tr>
+<td style="text-align: center;">decimal</td>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">return</td>
+<td style="text-align: center;">ushort</td>
+</tr>
+<tr>
+<td style="text-align: center;">default</td>
+<td style="text-align: center;">interface</td>
+<td style="text-align: center;">sbyte</td>
+<td style="text-align: center;">using</td>
+</tr>
+<tr>
+<td style="text-align: center;">delegate</td>
+<td style="text-align: center;">internal</td>
+<td style="text-align: center;">sealed</td>
+<td style="text-align: center;">virtual</td>
+</tr>
+<tr>
+<td style="text-align: center;">do</td>
+<td style="text-align: center;">is</td>
+<td style="text-align: center;">short</td>
+<td style="text-align: center;">void</td>
+</tr>
+<tr>
+<td style="text-align: center;">double</td>
+<td style="text-align: center;">lock</td>
+<td style="text-align: center;">sizeof</td>
+<td style="text-align: center;">volatile</td>
+</tr>
+<tr>
+<td style="text-align: center;">else</td>
+<td style="text-align: center;">long</td>
+<td style="text-align: center;">stackalloc</td>
+<td style="text-align: center;">while</td>
+</tr>
+<tr>
+<td style="text-align: center;">enum</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="contextual-keywords">Contextual keywords</h2>
+<p>A contextual keyword is used to provide a specific meaning in the code, but it isn't a reserved word in C#. Some contextual keywords, such as <code>partial</code> and <code>where</code>, have special meanings in two or more contexts.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">A-E</th>
+<th style="text-align: center;">F-N</th>
+<th style="text-align: center;">N-R</th>
+<th style="text-align: center;">R-Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">add</td>
+<td style="text-align: center;">file</td>
+<td style="text-align: center;">nint</td>
+<td style="text-align: center;">required</td>
+</tr>
+<tr>
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">not</td>
+<td style="text-align: center;">scoped</td>
+</tr>
+<tr>
+<td style="text-align: center;">alias</td>
+<td style="text-align: center;">get</td>
+<td style="text-align: center;">notnull</td>
+<td style="text-align: center;">select</td>
+</tr>
+<tr>
+<td style="text-align: center;">ascending</td>
+<td style="text-align: center;">global</td>
+<td style="text-align: center;">nuint</td>
+<td style="text-align: center;">set</td>
+</tr>
+<tr>
+<td style="text-align: center;">args</td>
+<td style="text-align: center;">group</td>
+<td style="text-align: center;">on</td>
+<td style="text-align: center;">unmanaged</td>
+</tr>
+<tr>
+<td style="text-align: center;">async</td>
+<td style="text-align: center;">init</td>
+<td style="text-align: center;">or</td>
+<td style="text-align: center;">value</td>
+</tr>
+<tr>
+<td style="text-align: center;">await</td>
+<td style="text-align: center;">into</td>
+<td style="text-align: center;">orderby</td>
+<td style="text-align: center;">var</td>
+</tr>
+<tr>
+<td style="text-align: center;">by</td>
+<td style="text-align: center;">join</td>
+<td style="text-align: center;">partial (type)</td>
+<td style="text-align: center;">when</td>
+</tr>
+<tr>
+<td style="text-align: center;">descending</td>
+<td style="text-align: center;">let</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">where</td>
+</tr>
+<tr>
+<td style="text-align: center;">dynamic</td>
+<td style="text-align: center;">managed</td>
+<td style="text-align: center;">record</td>
+<td style="text-align: center;">with</td>
+</tr>
+<tr>
+<td style="text-align: center;">equals</td>
+<td style="text-align: center;">nameof</td>
+<td style="text-align: center;">remove</td>
+<td style="text-align: center;">yield</td>
+</tr>
+</tbody>
+</table>
+<h2 id="basic-program-structure">Basic program Structure</h2>
+<pre><code class="language-csharp">using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(&quot;Hello, World!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>With Top level statements (.NET &gt; 5):</p>
+<pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
+</code></pre>
+<h2 id="comments">Comments</h2>
+<pre><code class="language-csharp">// Single-line comment
+
+/*
+This is a 
+multi-line comment
+*/
+</code></pre>
+<h2 id="variables-and-data-types">Variables and Data Types</h2>
+<pre><code class="language-csharp">//Variable declaration and initialization
+int number = 10;
+double decimalNumber = 10.5;
+char character = 'A';
+string text = &quot;Hello&quot;;
+bool isTrue = true;
+
+// Implicitly typed variable
+var autoVariable = 100;
+</code></pre>
+<h2 id="control-structures">Control Structures</h2>
+<h3 id="conditional-statements">Conditional Statements</h3>
+<pre><code class="language-csharp">if (condition)
+{
+    // code to be executed if condition is true
+}
+else if (anotherCondition)
+{
+    // code to be executed if anotherCondition is true
+}
+else
+{
+    // code to be executed if all conditions are false
+}
+</code></pre>
+<h3 id="switch">Switch</h3>
+<pre><code class="language-csharp">switch (variable)
+{
+    case value1:
+        // code to be executed if variable == value1
+        break;
+    case value2:
+        // code to be executed if variable == value2
+        break;
+    default:
+        // code to be executed if variable doesn't match any case
+        break;
+}
+</code></pre>
+<h3 id="loops">Loops</h3>
+<pre><code class="language-csharp">// For Loop
+for (int i = 0; i &lt; 10; i++)
+{
+    // code to be executed
+}
+
+// While Loop
+while (condition)
+{
+    // code to be executed
+}
+
+// Do-While Loop
+do
+{
+    // code to be executed
+} while (condition);
+
+// Foreach Loop
+foreach (var item in collection)
+{
+    // code to be executed
+}
+</code></pre>
+<h2 id="methods">Methods</h2>
+<pre><code class="language-csharp">class Program
+{
+    static void Main(string[] args)
+    {
+        int result = Add(5, 10);
+        Console.WriteLine(result);
+    }
+
+    static int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+</code></pre>
+<h2 id="classes-and-objects">Classes and Objects</h2>
+<pre><code class="language-csharp">class Person
+{
+    // Fields
+    private string name;
+    private int age;
+
+    // Constructor
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    public void Greet()
+    {
+        Console.WriteLine($&quot;Hello, my name is {name} and I am {age} years old.&quot;);
+    }
+}
+
+// Creating an object
+Person person = new Person(&quot;John&quot;, 30);
+person.Greet();
+</code></pre>
+<h3 id="access-modifiers">Access modifiers</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Caller's location</th>
+<th style="text-align: center;"><code>public</code></th>
+<th style="text-align: center;"><code>protected  internal</code></th>
+<th style="text-align: center;"><code>protected</code></th>
+<th style="text-align: center;"><code>internal</code></th>
+<th style="text-align: center;"><code>private protected</code></th>
+<th style="text-align: center;"><code>private</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Within the class</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Derived class (same assembly)</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr>
+<td style="text-align: center;">Non-derived class (same assembly)</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr>
+<td style="text-align: center;">Derived class (different assembly)</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr>
+<td style="text-align: center;">Non-derived class (different assembly)</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<p>Beginning with C# 11, the <code>file</code> contextual keyword is a type modifier.</p>
+<p>The <code>file</code> modifier restricts a top-level type's scope and visibility to the file in which it's declared. The <code>file</code> modifier will generally be applied to types written by a source generator. File-local types provide source generators with a convenient way to avoid name collisions among generated types.</p>
+<h3 id="properties">Properties</h3>
+<pre><code class="language-csharp">class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+</code></pre>
+<h3 id="inheritance">Inheritance</h3>
+<pre><code class="language-csharp">class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine(&quot;Eating...&quot;);
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine(&quot;Barking...&quot;);
+    }
+}
+
+Dog dog = new Dog();
+dog.Eat();  // Inherited method
+dog.Bark(); // Dog's method
+</code></pre>
+<h3 id="polymorphism">Polymorphism</h3>
+<pre><code class="language-csharp">class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine(&quot;Some generic animal sound&quot;);
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine(&quot;Woof!&quot;);
+    }
+}
+
+class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine(&quot;Meow!&quot;);
+    }
+}
+
+Animal myDog = new Dog();
+Animal myCat = new Cat();
+
+myDog.MakeSound(); // Output: Woof!
+myCat.MakeSound(); // Output: Meow!
+</code></pre>
+<h3 id="interfaces">Interfaces</h3>
+<pre><code class="language-csharp">interface IAnimal
+{
+    void MakeSound();
+}
+
+class Dog : IAnimal
+{
+    public void MakeSound()
+    {
+        Console.WriteLine(&quot;Woof!&quot;);
+    }
+}
+</code></pre>
+<h3 id="generics">Generics</h3>
+<pre><code class="language-csharp">// Generic Class
+public class GenericList&lt;T&gt;
+{
+    private T[] items = new T[100];
+    private int count;
+
+    public void Add(T item)
+    {
+        items[count++] = item;
+    }
+
+    public T Get(int index)
+    {
+        return items[index];
+    }
+}
+
+GenericList&lt;int&gt; intList = new GenericList&lt;int&gt;();
+intList.Add(1);
+intList.Add(2);
+Console.WriteLine(intList.Get(0)); // Output: 1
+
+GenericList&lt;string&gt; stringList = new GenericList&lt;string&gt;();
+stringList.Add(&quot;Hello&quot;);
+stringList.Add(&quot;World&quot;);
+Console.WriteLine(stringList.Get(1)); // Output: World
+
+// Generic Method
+public class Utilities
+{
+    public void Print&lt;T&gt;(T item)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+Utilities utilities = new Utilities();
+utilities.Print(123);    // Output: 123
+utilities.Print(&quot;abc&quot;);  // Output: abc
+</code></pre>
+<h2 id="tupples">Tupples</h2>
+<pre><code class="language-csharp">var tuple = new Tuple&lt;int, string, double&gt;(1, &quot;apple&quot;, 3.14);
+Console.WriteLine(tuple.Item1); // Output: 1
+Console.WriteLine(tuple.Item2); // Output: apple
+Console.WriteLine(tuple.Item3); // Output: 3.14
+</code></pre>
+<h3 id="value-tupples">Value tupples</h3>
+<pre><code class="language-csharp">var valueTuple = (1, &quot;apple&quot;, 3.14);
+Console.WriteLine(valueTuple.Item1); // Output: 1
+Console.WriteLine(valueTuple.Item2); // Output: apple
+Console.WriteLine(valueTuple.Item3); // Output: 3.14
+</code></pre>
+<pre><code class="language-csharp">var valueTuple = (Id: 1, Name: &quot;apple&quot;, Price: 3.14);
+Console.WriteLine(valueTuple.Id);    // Output: 1
+Console.WriteLine(valueTuple.Name);  // Output: apple
+Console.WriteLine(valueTuple.Price); // Output: 3.14
+</code></pre>
+<h3 id="deconstruct">Deconstruct</h3>
+<pre><code class="language-csharp">var valueTuple = (1, &quot;apple&quot;, 3.14);
+var (id, name, price) = valueTuple;
+Console.WriteLine(id);    // Output: 1
+Console.WriteLine(name);  // Output: apple
+Console.WriteLine(price); // Output: 3.14
+</code></pre>
+<h2 id="yield">Yield</h2>
+<pre><code class="language-csharp">public class NumberGenerator
+{
+    public IEnumerable&lt;int&gt; GetNumbers()
+    {
+		for (int i=0; i&lt;10; i++)
+		{
+		    if (i == 5)
+            {
+                yield break; // Exit the method when i equals 5
+            }
+			yield return i;
+		}
+	}
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        NumberGenerator generator = new NumberGenerator();
+        
+        foreach (int number in generator.GetNumbers())
+        {
+            Console.WriteLine(number); // Output: 0 1 2 3 4 
+        }
+    }
+}
+</code></pre>
+<h2 id="delegates">Delegates</h2>
+<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+
+public class Program
+{
+    public static void DisplayMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+
+    public static void Main(string[] args)
+    {
+        // Creating an instance of the delegate
+        MyDelegate del = new MyDelegate(DisplayMessage);
+
+        // Calling the delegate
+        del(&quot;Hello, Delegates!&quot;); // Output: Hello, Delegates!
+    }
+}
+</code></pre>
+<h3 id="delegate-as-parameter">Delegate as parameter</h3>
+<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+
+public class Program
+{
+    public static void DisplayMessage(string message)
+        =&gt; Console.WriteLine(message);
+    
+    public static void ProcessMessage(MyDelegate del, string message)
+    {
+        del(message);
+    }
+
+    public static void Main(string[] args)
+    {
+        MyDelegate del = new MyDelegate(DisplayMessage);
+        ProcessMessage(del, &quot;Hello, Delegates with Parameters!&quot;); // Output: Hello, Delegates with Parameters!
+    }
+}
+</code></pre>
+<h3 id="multicast-delegates">Multicast Delegates</h3>
+<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+
+public class Program
+{
+    public static void DisplayMessage1(string message)
+        =&gt; Console.WriteLine(&quot;Message1: &quot; + message);
+
+    public static void DisplayMessage2(string message)
+        =&gt; Console.WriteLine(&quot;Message2: &quot; + message);
+
+    public static void Main(string[] args)
+    {
+        MyDelegate del1 = new MyDelegate(DisplayMessage1);
+        MyDelegate del2 = new MyDelegate(DisplayMessage2);
+
+        // Combining delegates
+        MyDelegate del = del1 + del2;
+        del(&quot;Hello, Multicast Delegates!&quot;); 
+        // Output:
+        // Message1: Hello, Multicast Delegates!
+        // Message2: Hello, Multicast Delegates!
+    }
+}
+</code></pre>
+<h3 id="generic-delegates">Generic Delegates</h3>
+<h4 id="action">Action</h4>
+<pre><code class="language-csharp">public class Program
+{
+    public static void DisplayMessage(string message)
+        =&gt; Console.WriteLine(message);
+
+    public static void Main(string[] args)
+    {
+        Action&lt;string&gt; messageAction = DisplayMessage;
+        messageAction(&quot;Hello, Action Delegate!&quot;); // Output: Hello, Action Delegate!
+    }
+}
+</code></pre>
+<h4 id="func">Func</h4>
+<pre><code class="language-csharp">public class Program
+{
+    public static int Add(int x, int y)
+        =&gt; x + y;
+
+    public static void Main(string[] args)
+    
+        Func&lt;int, int, int&gt; addFunc = Add;
+        int result = addFunc(5, 3);
+        Console.WriteLine(result); // Output: 8
+    }
+}
+</code></pre>
+<h4 id="predicate">Predicate</h4>
+<pre><code class="language-csharp">public class Program
+{
+    public static bool IsPositive(int number)
+        =&gt; number &gt; 0;
+
+    public static void Main(string[] args)
+    {
+        Predicate&lt;int&gt; isPositivePredicate = IsPositive;
+        bool result = isPositivePredicate(5);
+        Console.WriteLine(result); // Output: True
+    }
+}
+</code></pre>
+<h2 id="events">Events</h2>
+<h3 id="declaring-an-event">Declaring an Event</h3>
+<pre><code class="language-csharp">public class Publisher
+{
+    // Define the delegate for the event handler
+    public delegate void EventHandler(object sender, EventArgs e);
+
+    // Declare the event using the delegate
+    public event EventHandler OnNotify;
+
+    // Method to raise the event
+    protected virtual void RaiseEvent()
+    {
+        if (OnNotify != null)
+        {
+            OnNotify(this, EventArgs.Empty);
+        }
+    }
+}
+</code></pre>
+<h3 id="subscribing-to-an-event">Subscribing to an event</h3>
+<pre><code class="language-csharp">public class Subscriber
+{
+    public void OnNotified(object sender, EventArgs e)
+    {
+        Console.WriteLine(&quot;Standard event received!&quot;);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Publisher pub = new Publisher();
+        Subscriber sub = new Subscriber();
+
+        // Subscribe to the event
+        pub.OnNotify += sub.OnNotified; 
+
+        // Raise the event
+        pub.RaiseEvent(); // Output: Standard event received!
+    }
+}
+</code></pre>
+<h3 id="creating-custom-eventargs">Creating Custom EventArgs</h3>
+<pre><code class="language-csharp">public class CustomEventArgs : EventArgs
+{
+    public string Message { get; set; }
+    public CustomEventArgs(string message)
+    {
+        Message = message;
+    }
+}
+
+public class Publisher
+{
+    // Define the delegate with custom EventArgs
+    public delegate void CustomEventHandler(object sender, CustomEventArgs e);
+
+    // Declare the event using the delegate
+    public event CustomEventHandler OnNotify;
+
+    // Method to raise the event
+    protected virtual void RaiseEvent(string message)
+    {
+        if (OnNotify != null)
+        {
+            OnNotify(this, new CustomEventArgs(message));
+        }
+    }
+}
+</code></pre>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

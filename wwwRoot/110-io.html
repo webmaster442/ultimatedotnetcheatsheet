@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - I/O</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - I/O">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="io">I/O</h1>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1142.0" height="1138.0" viewBox="0 0 1142 1138" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >streamtypes</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: streamtypes
+	
+	[MarshalByRefObject|Enables access to objects across application
+	domain boundaries in applications 
+	that support remoting.]
+	
+	[Stream|Provides a generic view of a sequence of bytes.
+	This is an abstract class.]
+	
+	[BufferedStream|Adds a buffering layer to 
+	read and write operations on another stream.
+	This class cannot be inherited.]
+	
+	[BrotliStream|Provides methods and properties used to 
+	compress and decompress streams by using 
+	the Brotli data format specification.]
+	
+	[DeflateStream |Provides methods and properties for 
+	compressing and decompressing streams 
+	by using the Deflate algorithm.]
+	
+	[GZipStream|Provides methods and properties 
+	used to compress and decompress streams by 
+	using the GZip data format specification.]
+	
+	[ZLibStream|Provides methods and properties used
+	to compress and decompress streams
+	by using the zlib data format specification.]
+	
+	[FileStream|Provides a Stream for a file,
+	supporting both synchronous and
+	asynchronous read and write operations.]
+	
+	[MemoryStream|Creates a stream whose
+	backing store is memory]
+	
+	[PipeStream|Exposes a Stream object around a pipe, 
+	which supports both anonymous and named pipes.]
+	
+	[UnmanagedMemoryStream|Provides access to unmanaged 
+	blocks of memory from managed code.]
+	
+	[NetworkStream|Provides the underlying stream 
+	of data for network access.]
+	
+	[CryptoStream|Defines a stream that links data
+	streams to cryptographic transformations.]
+	
+	[MarshalByRefObject] &lt;:- [Stream]
+	
+	[IAsyncDisposable] &lt;:-- [Stream]
+	[IDisposable] &lt;:-- [Stream]
+	
+	[Stream] &lt;:- [BufferedStream]
+	[Stream] &lt;:- [BrotliStream]
+	[Stream] &lt;:- [DeflateStream]
+	[Stream] &lt;:- [GZipStream]
+	[Stream] &lt;:- [ZLibStream]
+	[Stream] &lt;:- [FileStream]
+	[Stream] &lt;:- [MemoryStream]
+	[Stream] &lt;:- [PipeStream]
+	[Stream] &lt;:- [UnmanagedMemoryStream]
+	[Stream] &lt;:- [NetworkStream]
+	[Stream] &lt;:- [CryptoStream]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="1138.0" width="1142.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M347.3 525.3 L339 525.25 L396.1781115879828 543.5 L396.2 543.5 " fill="none"></path>
+					<path d="M347.3 519.9 L347.3 525.3 L347.3 530.6 L334.0 525.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M257.3 599.8 L339 599.75 L344 599.304794520548 L344.0 599.3 " fill="none"></path>
+					</g>
+					<path d="M257.3 594.4 L257.3 599.8 L257.3 605.1 L244.0 599.8 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M233.3 641.8 L339 641.75 L396.1781115879828 623.5 L396.2 623.5 " fill="none"></path>
+					</g>
+					<path d="M233.3 636.4 L233.3 641.8 L233.3 647.1 L220.0 641.8 Z"></path>
+					<path d="M539.4 530.9 L704 48.5 L730 48.5 L730.0 48.5 " fill="none"></path>
+					<path d="M534.4 529.2 L539.4 530.9 L544.5 532.6 L535.1 543.5 Z"></path>
+					<path d="M543.8 531.2 L704 155.5 L731 155.5 L731.0 155.5 " fill="none"></path>
+					<path d="M538.9 529.1 L543.8 531.2 L548.7 533.3 L538.6 543.5 Z"></path>
+					<path d="M550.8 531.9 L704 262.5 L741.5 262.5 L741.5 262.5 " fill="none"></path>
+					<path d="M546.2 529.3 L550.8 531.9 L555.5 534.5 L544.2 543.5 Z"></path>
+					<path d="M564.3 533.4 L704 369.5 L723.5 369.5 L723.5 369.5 " fill="none"></path>
+					<path d="M560.2 529.9 L564.3 533.4 L568.3 536.8 L555.6 543.5 Z"></path>
+					<path d="M601.2 536.8 L704 476.5 L741 476.5 L741.0 476.5 " fill="none"></path>
+					<path d="M598.5 532.2 L601.2 536.8 L603.9 541.4 L589.7 543.5 Z"></path>
+					<path d="M712.3 583.5 L704 583.5 L745 583.5 L745.0 583.5 " fill="none"></path>
+					<path d="M712.3 578.2 L712.3 583.5 L712.3 588.8 L699.0 583.5 Z"></path>
+					<path d="M607.3 629.8 L704 682 L803 682 L803.0 682.0 " fill="none"></path>
+					<path d="M609.9 625.1 L607.3 629.8 L604.8 634.5 L595.6 623.5 Z"></path>
+					<path d="M569.5 633.1 L704 772 L709 772 L709.0 772.0 " fill="none"></path>
+					<path d="M573.3 629.4 L569.5 633.1 L565.7 636.8 L560.2 623.5 Z"></path>
+					<path d="M555.0 634.7 L704 862 L751 862 L751.0 862.0 " fill="none"></path>
+					<path d="M559.5 631.7 L555.0 634.7 L550.6 637.6 L547.7 623.5 Z"></path>
+					<path d="M547.2 635.4 L704 952 L779 952 L779.0 952.0 " fill="none"></path>
+					<path d="M552.0 633.1 L547.2 635.4 L542.4 637.8 L541.3 623.5 Z"></path>
+					<path d="M542.4 635.9 L704 1042 L742.5 1042 L742.5 1042.0 " fill="none"></path>
+					<path d="M547.3 633.9 L542.4 635.9 L537.4 637.9 L537.4 623.5 Z"></path>
+					<g data-name="MarshalByRefObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MarshalByRefObject">
+							<rect x="0.0" y="476.8" height="97.0" width="334.0" data-name="MarshalByRefObject"></rect>
+							<path d="M0.0 508.8 L334.0 508.8" fill="none" data-name="MarshalByRefObject"></path>
+						</g>
+						<g transform="translate(0, 476.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject">
+								<text x="159.0" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject">MarshalByRefObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 508.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MarshalByRefObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MarshalByRefObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="MarshalByRefObject">Enables access to objects across application</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MarshalByRefObject">domain boundaries in applications</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="MarshalByRefObject">that support remoting.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Stream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Stream">
+							<rect x="344.0" y="543.5" height="80.0" width="355.0" data-name="Stream"></rect>
+							<path d="M344.0 575.5 L699.0 575.5" fill="none" data-name="Stream"></path>
+						</g>
+						<g transform="translate(344, 543.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Stream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Stream">
+								<text x="169.5" y="14.1" stroke="none" text-anchor="middle" data-name="Stream">Stream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(344, 575.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Stream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Stream">
+								<text x="0.0" y="14.1" stroke="none" data-name="Stream">Provides a generic view of a sequence of bytes.</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Stream">This is an abstract class.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BufferedStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BufferedStream">
+							<rect x="730.0" y="0.0" height="97.0" width="335.0" data-name="BufferedStream"></rect>
+							<path d="M730.0 32.0 L1065.0 32.0" fill="none" data-name="BufferedStream"></path>
+						</g>
+						<g transform="translate(730, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BufferedStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BufferedStream">
+								<text x="159.5" y="14.1" stroke="none" text-anchor="middle" data-name="BufferedStream">BufferedStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(730, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BufferedStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BufferedStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="BufferedStream">Adds a buffering layer to</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="BufferedStream">read and write operations on another stream.</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="BufferedStream">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BrotliStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BrotliStream">
+							<rect x="731.0" y="107.0" height="97.0" width="333.0" data-name="BrotliStream"></rect>
+							<path d="M731.0 139.0 L1064.0 139.0" fill="none" data-name="BrotliStream"></path>
+						</g>
+						<g transform="translate(731, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BrotliStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BrotliStream">
+								<text x="158.5" y="14.1" stroke="none" text-anchor="middle" data-name="BrotliStream">BrotliStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(731, 139)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BrotliStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BrotliStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="BrotliStream">Provides methods and properties used to</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="BrotliStream">compress and decompress streams by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="BrotliStream">the Brotli data format specification.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DeflateStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DeflateStream">
+							<rect x="741.5" y="214.0" height="97.0" width="312.0" data-name="DeflateStream"></rect>
+							<path d="M741.5 246.0 L1053.5 246.0" fill="none" data-name="DeflateStream"></path>
+						</g>
+						<g transform="translate(741.5, 214)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeflateStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DeflateStream">
+								<text x="148.0" y="14.1" stroke="none" text-anchor="middle" data-name="DeflateStream">DeflateStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(741.5, 246)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeflateStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DeflateStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="DeflateStream">Provides methods and properties for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DeflateStream">compressing and decompressing streams</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="DeflateStream">by using the Deflate algorithm.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GZipStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GZipStream">
+							<rect x="723.5" y="321.0" height="97.0" width="348.0" data-name="GZipStream"></rect>
+							<path d="M723.5 353.0 L1071.5 353.0" fill="none" data-name="GZipStream"></path>
+						</g>
+						<g transform="translate(723.5, 321)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GZipStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GZipStream">
+								<text x="166.0" y="14.1" stroke="none" text-anchor="middle" data-name="GZipStream">GZipStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(723.5, 353)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="GZipStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="GZipStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="GZipStream">Provides methods and properties</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="GZipStream">used to compress and decompress streams by</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="GZipStream">using the GZip data format specification.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ZLibStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ZLibStream">
+							<rect x="741.0" y="428.0" height="97.0" width="313.0" data-name="ZLibStream"></rect>
+							<path d="M741.0 460.0 L1054.0 460.0" fill="none" data-name="ZLibStream"></path>
+						</g>
+						<g transform="translate(741, 428)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ZLibStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ZLibStream">
+								<text x="148.5" y="14.1" stroke="none" text-anchor="middle" data-name="ZLibStream">ZLibStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(741, 460)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ZLibStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ZLibStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="ZLibStream">Provides methods and properties used</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ZLibStream">to compress and decompress streams</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ZLibStream">by using the zlib data format specification.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FileStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FileStream">
+							<rect x="745.0" y="535.0" height="97.0" width="305.0" data-name="FileStream"></rect>
+							<path d="M745.0 567.0 L1050.0 567.0" fill="none" data-name="FileStream"></path>
+						</g>
+						<g transform="translate(745, 535)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileStream">
+								<text x="144.5" y="14.1" stroke="none" text-anchor="middle" data-name="FileStream">FileStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(745, 567)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="FileStream">Provides a Stream for a file,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="FileStream">supporting both synchronous and</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="FileStream">asynchronous read and write operations.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MemoryStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MemoryStream">
+							<rect x="803.0" y="642.0" height="80.0" width="189.0" data-name="MemoryStream"></rect>
+							<path d="M803.0 674.0 L992.0 674.0" fill="none" data-name="MemoryStream"></path>
+						</g>
+						<g transform="translate(803, 642)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MemoryStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MemoryStream">
+								<text x="86.5" y="14.1" stroke="none" text-anchor="middle" data-name="MemoryStream">MemoryStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(803, 674)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MemoryStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MemoryStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="MemoryStream">Creates a stream whose</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MemoryStream">backing store is memory</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PipeStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PipeStream">
+							<rect x="709.0" y="732.0" height="80.0" width="377.0" data-name="PipeStream"></rect>
+							<path d="M709.0 764.0 L1086.0 764.0" fill="none" data-name="PipeStream"></path>
+						</g>
+						<g transform="translate(709, 732)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PipeStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PipeStream">
+								<text x="180.5" y="14.1" stroke="none" text-anchor="middle" data-name="PipeStream">PipeStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(709, 764)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="PipeStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PipeStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="PipeStream">Exposes a Stream object around a pipe,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="PipeStream">which supports both anonymous and named pipes.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UnmanagedMemoryStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="UnmanagedMemoryStream">
+							<rect x="751.0" y="822.0" height="80.0" width="293.0" data-name="UnmanagedMemoryStream"></rect>
+							<path d="M751.0 854.0 L1044.0 854.0" fill="none" data-name="UnmanagedMemoryStream"></path>
+						</g>
+						<g transform="translate(751, 822)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UnmanagedMemoryStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UnmanagedMemoryStream">
+								<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="UnmanagedMemoryStream">UnmanagedMemoryStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(751, 854)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="UnmanagedMemoryStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UnmanagedMemoryStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="UnmanagedMemoryStream">Provides access to unmanaged</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="UnmanagedMemoryStream">blocks of memory from managed code.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="NetworkStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="NetworkStream">
+							<rect x="779.0" y="912.0" height="80.0" width="237.0" data-name="NetworkStream"></rect>
+							<path d="M779.0 944.0 L1016.0 944.0" fill="none" data-name="NetworkStream"></path>
+						</g>
+						<g transform="translate(779, 912)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NetworkStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NetworkStream">
+								<text x="110.5" y="14.1" stroke="none" text-anchor="middle" data-name="NetworkStream">NetworkStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(779, 944)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NetworkStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NetworkStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="NetworkStream">Provides the underlying stream</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="NetworkStream">of data for network access.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CryptoStream">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CryptoStream">
+							<rect x="742.5" y="1002.0" height="80.0" width="310.0" data-name="CryptoStream"></rect>
+							<path d="M742.5 1034.0 L1052.5 1034.0" fill="none" data-name="CryptoStream"></path>
+						</g>
+						<g transform="translate(742.5, 1002)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CryptoStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CryptoStream">
+								<text x="147.0" y="14.1" stroke="none" text-anchor="middle" data-name="CryptoStream">CryptoStream</text>
+								
+							</g>
+						</g>
+						<g transform="translate(742.5, 1034)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CryptoStream">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CryptoStream">
+								<text x="0.0" y="14.1" stroke="none" data-name="CryptoStream">Defines a stream that links data</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CryptoStream">streams to cryptographic transformations.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IAsyncDisposable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IAsyncDisposable">
+							<rect x="90.0" y="583.8" height="32.0" width="154.0" data-name="IAsyncDisposable"></rect>
+						</g>
+						<g transform="translate(90, 583.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncDisposable">
+								<text x="69.0" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncDisposable">IAsyncDisposable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="114.0" y="625.8" height="32.0" width="106.0" data-name="IDisposable"></rect>
+						</g>
+						<g transform="translate(114, 625.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="45.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Stream types</figcaption>
+</figure>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="977.0" height="600.5" viewBox="0 0 977 600.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >streamwriters</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: streamwriters
+	
+	[MarshalByRefObject|Enables access to objects across application
+	domain boundaries in applications 
+	that support remoting.]
+	
+	[TextWriter|Represents a writer that can write
+	a sequential series of characters.
+	This class is abstract.]
+	
+	[TextReader|Represents a reader that can read 
+	a sequential series of characters.]
+	
+	[StreamReader|Implements a TextReader that 
+	reads characters from a byte stream
+	in a particular encoding.]
+	
+	[StringReader|Implements a TextReader that
+	reads from a string.]
+	
+	[StreamWriter|Implements a TextWriter for writing
+	characters to a stream ina particular 
+	encoding.]
+	
+	[StringWriter|Implements a TextWriter for writing 
+	information to a string. The information
+	is stored in an underlying StringBuilder.]
+	
+	[BinaryReader|Reads primitive data types as binary
+	values in a specific encoding.]
+	
+	[BinaryWriter|Writes primitive types in binary 
+	to a stream and supports writing 
+	strings in a specific encoding.]
+	
+	[MarshalByRefObject] &lt;:- [TextReader]
+	[MarshalByRefObject] &lt;:- [TextWriter]
+	
+	[IDisposable] &lt;:-- [TextReader]
+	[IDisposable] &lt;:-- [TextWriter]
+	[IDisposable] &lt;:-- [BinaryWriter]
+	[IDisposable] &lt;:-- [BinaryReader]
+	
+	[TextReader] &lt;:- [StreamReader]
+	[TextReader] &lt;:- [StringReader]
+	[TextWriter] &lt;:- [StreamWriter]
+	[TextWriter] &lt;:- [StringWriter]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="600.5" width="977.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M347.3 92.3 L339 92.75 L351 93.1725352112676 L351.0 93.2 " fill="none"></path>
+					<path d="M347.0 86.9 L347.3 92.3 L347.6 97.6 L334.0 93.0 Z"></path>
+					<path d="M263.3 157.9 L339 201.25 L410.54475703324806 250.5 L410.5 250.5 " fill="none"></path>
+					<path d="M265.9 153.2 L263.3 157.9 L260.6 162.5 L251.7 151.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M189.3 366.4 L339 191.25 L420.2513368983957 137.75 L420.3 137.8 " fill="none"></path>
+					</g>
+					<path d="M185.3 362.9 L189.3 366.4 L193.4 369.8 L180.7 376.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M232.8 373.7 L339 343.25 L354 338.5757042253521 L354.0 338.6 " fill="none"></path>
+					</g>
+					<path d="M231.4 368.5 L232.8 373.7 L234.3 378.8 L220.0 377.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M205.0 415.4 L339 496 L359 496 L359.0 496.0 " fill="none"></path>
+					</g>
+					<path d="M207.8 410.8 L205.0 415.4 L202.3 419.9 L193.6 408.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M233.3 394.4 L339 397.5 L344 397.5 L344.0 397.5 " fill="none"></path>
+					</g>
+					<path d="M233.5 389.1 L233.3 394.4 L233.2 399.8 L220.0 394.0 Z"></path>
+					<path d="M608.9 53.4 L623 48.5 L638 48.5 L638.0 48.5 " fill="none"></path>
+					<path d="M607.2 48.3 L608.9 53.4 L610.7 58.4 L596.3 57.8 Z"></path>
+					<path d="M608.9 142.1 L623 147 L660 147 L660.0 147.0 " fill="none"></path>
+					<path d="M610.7 137.1 L608.9 142.1 L607.2 147.2 L596.3 137.8 Z"></path>
+					<path d="M620.5 246.5 L623 245.5 L639 245.5 L639.0 245.5 " fill="none"></path>
+					<path d="M618.6 241.5 L620.5 246.5 L622.4 251.4 L608.0 251.2 Z"></path>
+					<path d="M620.5 351.5 L623 352.5 L628 352.5 L628.0 352.5 " fill="none"></path>
+					<path d="M622.4 346.6 L620.5 351.5 L618.6 356.5 L608.0 346.8 Z"></path>
+					<g data-name="MarshalByRefObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MarshalByRefObject">
+							<rect x="0.0" y="54.3" height="97.0" width="334.0" data-name="MarshalByRefObject"></rect>
+							<path d="M0.0 86.3 L334.0 86.3" fill="none" data-name="MarshalByRefObject"></path>
+						</g>
+						<g transform="translate(0, 54.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject">
+								<text x="159.0" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject">MarshalByRefObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 86.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MarshalByRefObject">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MarshalByRefObject">
+								<text x="0.0" y="14.1" stroke="none" data-name="MarshalByRefObject">Enables access to objects across application</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MarshalByRefObject">domain boundaries in applications</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="MarshalByRefObject">that support remoting.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TextWriter">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TextWriter">
+							<rect x="354.0" y="250.5" height="97.0" width="254.0" data-name="TextWriter"></rect>
+							<path d="M354.0 282.5 L608.0 282.5" fill="none" data-name="TextWriter"></path>
+						</g>
+						<g transform="translate(354, 250.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextWriter">
+								<text x="119.0" y="14.1" stroke="none" text-anchor="middle" data-name="TextWriter">TextWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(354, 282.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TextWriter">
+								<text x="0.0" y="14.1" stroke="none" data-name="TextWriter">Represents a writer that can write</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="TextWriter">a sequential series of characters.</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="TextWriter">This class is abstract.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TextReader">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TextReader">
+							<rect x="351.0" y="57.8" height="80.0" width="260.0" data-name="TextReader"></rect>
+							<path d="M351.0 89.8 L611.0 89.8" fill="none" data-name="TextReader"></path>
+						</g>
+						<g transform="translate(351, 57.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextReader">
+								<text x="122.0" y="14.1" stroke="none" text-anchor="middle" data-name="TextReader">TextReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(351, 89.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TextReader">
+								<text x="0.0" y="14.1" stroke="none" data-name="TextReader">Represents a reader that can read</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="TextReader">a sequential series of characters.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StreamReader">
+						<g fill="#eee8d5" stroke="#33322E" data-name="StreamReader">
+							<rect x="638.0" y="0.0" height="97.0" width="273.0" data-name="StreamReader"></rect>
+							<path d="M638.0 32.0 L911.0 32.0" fill="none" data-name="StreamReader"></path>
+						</g>
+						<g transform="translate(638, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StreamReader">
+								<text x="128.5" y="14.1" stroke="none" text-anchor="middle" data-name="StreamReader">StreamReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(638, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StreamReader">
+								<text x="0.0" y="14.1" stroke="none" data-name="StreamReader">Implements a TextReader that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StreamReader">reads characters from a byte stream</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="StreamReader">in a particular encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StringReader">
+						<g fill="#eee8d5" stroke="#33322E" data-name="StringReader">
+							<rect x="660.0" y="107.0" height="80.0" width="229.0" data-name="StringReader"></rect>
+							<path d="M660.0 139.0 L889.0 139.0" fill="none" data-name="StringReader"></path>
+						</g>
+						<g transform="translate(660, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringReader">
+								<text x="106.5" y="14.1" stroke="none" text-anchor="middle" data-name="StringReader">StringReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(660, 139)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringReader">
+								<text x="0.0" y="14.1" stroke="none" data-name="StringReader">Implements a TextReader that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StringReader">reads from a string.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StreamWriter">
+						<g fill="#eee8d5" stroke="#33322E" data-name="StreamWriter">
+							<rect x="639.0" y="197.0" height="97.0" width="271.0" data-name="StreamWriter"></rect>
+							<path d="M639.0 229.0 L910.0 229.0" fill="none" data-name="StreamWriter"></path>
+						</g>
+						<g transform="translate(639, 197)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StreamWriter">
+								<text x="127.5" y="14.1" stroke="none" text-anchor="middle" data-name="StreamWriter">StreamWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(639, 229)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StreamWriter">
+								<text x="0.0" y="14.1" stroke="none" data-name="StreamWriter">Implements a TextWriter for writing</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StreamWriter">characters to a stream ina particular</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="StreamWriter">encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StringWriter">
+						<g fill="#eee8d5" stroke="#33322E" data-name="StringWriter">
+							<rect x="628.0" y="304.0" height="97.0" width="293.0" data-name="StringWriter"></rect>
+							<path d="M628.0 336.0 L921.0 336.0" fill="none" data-name="StringWriter"></path>
+						</g>
+						<g transform="translate(628, 304)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringWriter">
+								<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="StringWriter">StringWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(628, 336)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringWriter">
+								<text x="0.0" y="14.1" stroke="none" data-name="StringWriter">Implements a TextWriter for writing</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StringWriter">information to a string. The information</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="StringWriter">is stored in an underlying StringBuilder.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BinaryReader">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BinaryReader">
+							<rect x="344.0" y="357.5" height="80.0" width="274.0" data-name="BinaryReader"></rect>
+							<path d="M344.0 389.5 L618.0 389.5" fill="none" data-name="BinaryReader"></path>
+						</g>
+						<g transform="translate(344, 357.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BinaryReader">
+								<text x="129.0" y="14.1" stroke="none" text-anchor="middle" data-name="BinaryReader">BinaryReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(344, 389.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryReader">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BinaryReader">
+								<text x="0.0" y="14.1" stroke="none" data-name="BinaryReader">Reads primitive data types as binary</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="BinaryReader">values in a specific encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BinaryWriter">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BinaryWriter">
+							<rect x="359.0" y="447.5" height="97.0" width="244.0" data-name="BinaryWriter"></rect>
+							<path d="M359.0 479.5 L603.0 479.5" fill="none" data-name="BinaryWriter"></path>
+						</g>
+						<g transform="translate(359, 447.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BinaryWriter">
+								<text x="114.0" y="14.1" stroke="none" text-anchor="middle" data-name="BinaryWriter">BinaryWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(359, 479.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryWriter">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BinaryWriter">
+								<text x="0.0" y="14.1" stroke="none" data-name="BinaryWriter">Writes primitive types in binary</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="BinaryWriter">to a stream and supports writing</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="BinaryWriter">strings in a specific encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="114.0" y="376.5" height="32.0" width="106.0" data-name="IDisposable"></rect>
+						</g>
+						<g transform="translate(114, 376.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="45.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Reader and writer types</figcaption>
+</figure>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

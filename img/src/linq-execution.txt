@@ -1,0 +1,27 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: linq-execution
+
+[Deferred|The operation isn't performed
+at the point in the code where the 
+query is declared]
+
+[Immediate|
+The data source is read
+and the operation is performed once]
+
+[Streaming|
+Operations that desn't have to read all 
+the source data before they yield element.]
+
+[Nonstreaming|
+Operations that must read all the source 
+data before they can yie
+ld a result element]
+
+[LINQ Execution] - [Immediate]
+[LINQ Execution] - [Deferred]
+[Deferred] - [Streaming]
+[Deferred] - [Nonstreaming]

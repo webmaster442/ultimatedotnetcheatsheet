@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - LINQ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - LINQ">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="linq">LINQ</h1>
+<p>Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. With LINQ, a query is a first-class language construct, just like classes, methods, and events.</p>
+<p>The LINQ to Objects works with any collection that implements the <code>IEnumerable&lt;T&gt;</code> interface.</p>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1256.0" height="515.3" viewBox="0 0 1256 515.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >collections2</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: collections2
+	
+	[IEnumerable|
+	IEnumerator GetEnumerator ()] &lt;:--
+	
+	[IEnumerable&lt;out T&gt;|
+	IEnumerator&lt;out T&gt; GetEnumerator ()]
+	
+	
+	[IEnumerable&lt;out T&gt;] &lt;:-- [IOrderedEnumerable&lt;out TElement&gt;|
+	CreateOrderedEnumerable&lt;TKey&gt;(
+	Func&lt;out TElement,TKey&gt; keySelector,
+	IComparer&lt;TKey&gt;? comparer, 
+	bool descending)]
+	
+	[IEnumerable&lt;out T&gt;] &lt;:-- [IGrouping&lt;out TKey,out TElement&gt;|
+	TKey Key { get\; }] &lt;:-- [ILookup&lt;TKey,TElement&gt;|
+	int Count { get\; }
+	IEnumerable&lt;TElement&gt; this\[TKey key\] { get\; }|
+	bool Contains (TKey key)]
+	
+	[IEnumerable&lt;out T&gt;] &lt;:-- [IQueryable&lt;out T&gt;] &lt;:-- [IOrderedQueryable&lt;out T&gt;]
+	
+	[IEnumerable] &lt;:-- [IQueryable] &lt;:-- [IQueryable&lt;out T&gt;]
+	
+	[IQueryable |
+	Type ElementType { get\; }
+	Expression Expression { get\; }
+	IQueryProvider Provider { get\; }]
+	
+	
+	[IEnumerator|
+	object Current { get\; }
+	bool MoveNext()
+	void Reset()]
+	
+	[IEnumerator] &lt;:-- [IEnumerator&lt;out T&gt;|
+	T Current { get\; }]
+	
+	[IDisposable|
+	void Dispose()]
+	
+	[IDisposable] &lt;:-- [IEnumerator&lt;out T&gt;]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="515.3" width="1256.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M214.9 163.6 L238 155 L243 155 L243.0 155.0 " fill="none"></path>
+					</g>
+					<path d="M213.1 158.6 L214.9 163.6 L216.8 168.6 L202.4 168.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M446.5 115.6 L536 56.5 L541 56.5 L541.0 56.5 " fill="none"></path>
+					</g>
+					<path d="M443.6 111.2 L446.5 115.6 L449.5 120.1 L435.4 123.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M544.3 155.0 L536 155 L548.5 155 L548.5 155.0 " fill="none"></path>
+					</g>
+					<path d="M544.3 149.7 L544.3 155.0 L544.3 160.3 L531.0 155.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M845.8 155.0 L845 155 L850 155 L850.0 155.0 " fill="none"></path>
+					</g>
+					<path d="M845.8 149.7 L845.8 155.0 L845.8 160.3 L832.5 155.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M503.4 190.9 L536 201 L629.083850931677 225.25 L629.1 225.3 " fill="none"></path>
+					</g>
+					<path d="M505.0 185.8 L503.4 190.9 L501.8 196.0 L490.7 187.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M781.8 241.3 L845 241.25 L915.5 241.25 L915.5 241.3 " fill="none"></path>
+					</g>
+					<path d="M781.8 235.9 L781.8 241.3 L781.8 246.6 L768.5 241.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M213.5 237.0 L238 246.25 L268 246.25 L268.0 246.3 " fill="none"></path>
+					</g>
+					<path d="M215.4 232.0 L213.5 237.0 L211.6 242.0 L201.0 232.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M519.3 246.3 L536 246.25 L612.5 243.7742718446602 L612.5 243.8 " fill="none"></path>
+					</g>
+					<path d="M519.3 240.9 L519.3 246.3 L519.3 251.6 L506.0 246.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M213.3 336.8 L238 336.75 L303 356.48993288590606 L303.0 356.5 " fill="none"></path>
+					</g>
+					<path d="M213.3 331.4 L213.3 336.8 L213.3 342.1 L200.0 336.8 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M188.8 427.3 L238 427.25 L303 407.51006711409394 L303.0 407.5 " fill="none"></path>
+					</g>
+					<path d="M188.8 421.9 L188.8 427.3 L188.8 432.6 L175.5 427.3 Z"></path>
+					<g data-name="IEnumerable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable">
+							<rect x="0.0" y="168.3" height="64.0" width="233.0" data-name="IEnumerable"></rect>
+							<path d="M0.0 200.3 L233.0 200.3" fill="none" data-name="IEnumerable"></path>
+						</g>
+						<g transform="translate(0, 168.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable">
+								<text x="108.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable">IEnumerable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 200.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable">IEnumerator GetEnumerator ()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerable&lt;out T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerable&lt;out T&gt;">
+							<rect x="243.0" y="123.0" height="64.0" width="288.0" data-name="IEnumerable&lt;out T&gt;"></rect>
+							<path d="M243.0 155.0 L531.0 155.0" fill="none" data-name="IEnumerable&lt;out T&gt;"></path>
+						</g>
+						<g transform="translate(243, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;out T&gt;">
+								<text x="136.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;out T&gt;">IEnumerable&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(243, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;out T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable&lt;out T&gt;">IEnumerator&lt;out T&gt; GetEnumerator ()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IOrderedEnumerable&lt;out TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IOrderedEnumerable&lt;out TElement&gt;">
+							<rect x="541.0" y="0.0" height="113.0" width="299.0" data-name="IOrderedEnumerable&lt;out TElement&gt;"></rect>
+							<path d="M541.0 32.0 L840.0 32.0" fill="none" data-name="IOrderedEnumerable&lt;out TElement&gt;"></path>
+						</g>
+						<g transform="translate(541, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedEnumerable&lt;out TElement&gt;">
+								<text x="141.5" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedEnumerable&lt;out TElement&gt;">IOrderedEnumerable&lt;out TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(541, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IOrderedEnumerable&lt;out TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;">CreateOrderedEnumerable&lt;TKey&gt;(</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;">Func&lt;out TElement,TKey&gt; keySelector,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;">IComparer&lt;TKey&gt;? comparer,</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;">bool descending)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IGrouping&lt;out TKey,out TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IGrouping&lt;out TKey,out TElement&gt;">
+							<rect x="548.5" y="123.0" height="64.0" width="284.0" data-name="IGrouping&lt;out TKey,out TElement&gt;"></rect>
+							<path d="M548.5 155.0 L832.5 155.0" fill="none" data-name="IGrouping&lt;out TKey,out TElement&gt;"></path>
+						</g>
+						<g transform="translate(548.5, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IGrouping&lt;out TKey,out TElement&gt;">
+								<text x="134.0" y="14.1" stroke="none" text-anchor="middle" data-name="IGrouping&lt;out TKey,out TElement&gt;">IGrouping&lt;out TKey,out TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(548.5, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IGrouping&lt;out TKey,out TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IGrouping&lt;out TKey,out TElement&gt;">TKey Key { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ILookup&lt;TKey,TElement&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ILookup&lt;TKey,TElement&gt;">
+							<rect x="850.0" y="99.0" height="112.0" width="350.0" data-name="ILookup&lt;TKey,TElement&gt;"></rect>
+							<path d="M850.0 131.0 L1200.0 131.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
+							<path d="M850.0 179.0 L1200.0 179.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
+						</g>
+						<g transform="translate(850, 99)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="167.0" y="14.1" stroke="none" text-anchor="middle" data-name="ILookup&lt;TKey,TElement&gt;">ILookup&lt;TKey,TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(850, 131)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">int Count { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">IEnumerable&lt;TElement&gt; this[TKey key] { get; }</text>
+								
+							</g>
+						</g>
+						<g transform="translate(850, 179)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;">bool Contains (TKey key)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IQueryable&lt;out T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IQueryable&lt;out T&gt;">
+							<rect x="612.5" y="225.3" height="32.0" width="156.0" data-name="IQueryable&lt;out T&gt;"></rect>
+						</g>
+						<g transform="translate(612.5, 225.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IQueryable&lt;out T&gt;">
+								<text x="70.0" y="14.1" stroke="none" text-anchor="middle" data-name="IQueryable&lt;out T&gt;">IQueryable&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IOrderedQueryable&lt;out T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IOrderedQueryable&lt;out T&gt;">
+							<rect x="915.5" y="225.3" height="32.0" width="219.0" data-name="IOrderedQueryable&lt;out T&gt;"></rect>
+						</g>
+						<g transform="translate(915.5, 225.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedQueryable&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedQueryable&lt;out T&gt;">
+								<text x="101.5" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedQueryable&lt;out T&gt;">IOrderedQueryable&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IQueryable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IQueryable">
+							<rect x="268.0" y="197.8" height="97.0" width="238.0" data-name="IQueryable"></rect>
+							<path d="M268.0 229.8 L506.0 229.8" fill="none" data-name="IQueryable"></path>
+						</g>
+						<g transform="translate(268, 197.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IQueryable">
+								<text x="111.0" y="14.1" stroke="none" text-anchor="middle" data-name="IQueryable">IQueryable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(268, 229.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IQueryable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IQueryable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IQueryable">Type ElementType { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IQueryable">Expression Expression { get; }</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IQueryable">IQueryProvider Provider { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerator">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator">
+							<rect x="33.0" y="288.3" height="97.0" width="167.0" data-name="IEnumerator"></rect>
+							<path d="M33.0 320.3 L200.0 320.3" fill="none" data-name="IEnumerator"></path>
+						</g>
+						<g transform="translate(33, 288.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator">
+								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator">IEnumerator</text>
+								
+							</g>
+						</g>
+						<g transform="translate(33, 320.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator">object Current { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEnumerator">bool MoveNext()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEnumerator">void Reset()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerator&lt;out T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
+							<rect x="303.0" y="350.0" height="64.0" width="168.0" data-name="IEnumerator&lt;out T&gt;"></rect>
+							<path d="M303.0 382.0 L471.0 382.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
+						</g>
+						<g transform="translate(303, 350)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;">
+								<text x="76.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;">IEnumerator&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(303, 382)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator&lt;out T&gt;">T Current { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="57.5" y="395.3" height="64.0" width="118.0" data-name="IDisposable"></rect>
+							<path d="M57.5 427.3 L175.5 427.3" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(57.5, 395.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(57.5, 427.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable">void Dispose()</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>The IEnumerable&lt;T&gt; interface</figcaption>
+</figure>
+<h2 id="filtering">Filtering</h2>
+<pre><code class="language-csharp">var customerOrders = Orders.Where(order =&gt; order.CustomerId == 66);
+</code></pre>
+<h2 id="select-with-anonymus-type">Select with anonymus type</h2>
+<pre><code class="language-csharp">var ordersWithCost = Orders.Select(order =&gt; new
+{
+    OrderId = order.Id,
+    Cost = order.Cost,
+});
+</code></pre>
+<h2 id="distinct">Distinct</h2>
+<pre><code class="language-csharp">//The Distinct method requires equality implementation on the class or 
+//an IEqualityComparer as parameter
+var uniqueNames = customer.Distinct((customerComparer);
+
+//DistinctBy requires a lambda
+var uniqueNames = customer.DistinctBy(√ =&gt; √.Name); 
+</code></pre>
+<h2 id="ordering">Ordering</h2>
+<pre><code class="language-csharp">var ascendingOrder = orders.OrderBy(order =&gt; order.Cost);
+var descendingOrder = orders.OrderByDescending(order =&gt; order.Cost);
+
+var multipleOdering = orders.OrderBy(order =&gt; order.Cost).ThenBy(order =&gt; order.CustomerId);
+</code></pre>
+<p>Note: Result will be an <code>IOrderedEnumerable&lt;TElement&gt;</code>.</p>
+<h2 id="join">Join</h2>
+<pre><code class="language-csharp">var joined = customers.Join(orders, 
+                            customer =&gt; customer.Id, 
+                            order =&gt; order.CustomerId
+                            (customer, order) =&gt; new
+                            {
+                                CustomerId = customer.Id,
+                                Name = customer.Name,
+                                Cost = order.Cost, 
+                            });
+</code></pre>
+<h2 id="grouping">Grouping</h2>
+<pre><code class="language-csharp">var grouped = orders.GroupBy(order =&gt; CustomerId);
+</code></pre>
+<p>Note: Result will be an <code>IGrouping&lt;TKey,TElement&gt;</code></p>
+<h2 id="lookup">Lookup</h2>
+<pre><code class="language-csharp">var packagesByCompany = packages.ToLookup(oder =&gt; oder.Date,  order =&gt; order.id); 
+</code></pre>
+<p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
+<h2 id="zip">Zip</h2>
+<p>Zip creates an Enumerable of tuples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
+<pre><code class="language-csharp">int[] first = [1, 2, 3];
+string[] second = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+//Returns [(1, &quot;a&quot;), (2, &quot;b&quot;), (3, &quot;c&quot;)]
+first.Zip(second); 
+</code></pre>
+<h2 id="skip-take">Skip &amp; Take</h2>
+<pre><code class="language-csharp">var take3 = orders.Take(3);
+var ne√t3 = orders.Skip(3).Take(3);
+</code></pre>
+<h2 id="element-operations">Element operations</h2>
+<pre><code class="language-csharp">//throws e√ception if element not found
+var firstCustomer = customers.First(customer =&gt; customer.Id == 63);
+var lastCustomer = customers.Last(customer =&gt; customer.Id == 63);
+//returns default value if element not found. For refenrence types this is null!
+var firstCustomer = customers.FirstOrDefault(customer =&gt; customer.Id == 63);
+var lastCustomer = customers.LastOrDefault(customer =&gt; customer.Id == 63);
+//You can specify the default return value with the 2nd parameter:
+var firstCustomer = customers.FirstOrDefault(customer =&gt; customer.Id == 63, new Cutomer());
+var lastCustomer = customers.LastOrDefault(customer =&gt; customer.Id == 63, new Customer());
+</code></pre>
+<h2 id="conversions">Conversions</h2>
+<pre><code class="language-csharp">Order[] orders = Orders.Where(order =&gt; order.CustomerId == 66).ToArray();
+List&lt;Order&gt; orders = Orders.Where(order =&gt; order.CustomerId == 66).ToList();
+HashSet&lt;Order&gt; orders = Orders.Where(order =&gt; order.CustomerId == 66).ToHashSet();
+Dictionary&lt;int, string&gt; customerDictionary
+     = Customers.ToDictionary(customer =&gt; customer.Id, customer =&gt; customer.Name);
+</code></pre>
+<h2 id="enumerable-class">Enumerable class</h2>
+<pre><code class="language-csharp">//Create a range of numbers from 0 to 9
+IEnumerable&lt;int&gt; range = Enumerable.Range(0, 10);
+//Create a sequence of 12 &quot;foo&quot; strings
+IEnumerable&lt;string&gt; foos = Enumerable.Repeat(&quot;foo&quot;, 12);
+//Create an empty sequence of integers
+IEnumerable&lt;int&gt; empty = Enumerable.Empty&lt;int&gt;();
+</code></pre>
+<h2 id="linq-execution">Linq Execution</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="798.0" height="283.8" viewBox="0 0 798 283.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >linq-execution</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: linq-execution
+	
+	[Deferred|The operation isn&apos;t performed
+	at the point in the code where the 
+	query is declared]
+	
+	[Immediate|
+	The data source is read
+	and the operation is performed once]
+	
+	[Streaming|
+	Operations that desn&apos;t have to read all 
+	the source data before they yield element.]
+	
+	[Nonstreaming|
+	Operations that must read all the source 
+	data before they can yie
+	ld a result element]
+	
+	[LINQ Execution] - [Immediate]
+	[LINQ Execution] - [Deferred]
+	[Deferred] - [Streaming]
+	[Deferred] - [Nonstreaming]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="283.8" width="798.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M91.1 154.5 L140 187.75 L145 187.75 L145.0 187.8 " fill="none"></path>
+					<path d="M91.1 122.5 L140 89.25 L155 89.25 L155.0 89.3 " fill="none"></path>
+					<path d="M408.0 45.2 L423 40 L428 40 L428.0 40.0 " fill="none"></path>
+					<path d="M408.0 133.3 L423 138.5 L434.5 138.5 L434.5 138.5 " fill="none"></path>
+					<g data-name="Deferred">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Deferred">
+							<rect x="155.0" y="40.8" height="97.0" width="253.0" data-name="Deferred"></rect>
+							<path d="M155.0 72.8 L408.0 72.8" fill="none" data-name="Deferred"></path>
+						</g>
+						<g transform="translate(155, 40.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Deferred">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Deferred">
+								<text x="118.5" y="14.1" stroke="none" text-anchor="middle" data-name="Deferred">Deferred</text>
+								
+							</g>
+						</g>
+						<g transform="translate(155, 72.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Deferred">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Deferred">
+								<text x="0.0" y="14.1" stroke="none" data-name="Deferred">The operation isn&apos;t performed</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Deferred">at the point in the code where the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Deferred">query is declared</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Immediate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Immediate">
+							<rect x="145.0" y="147.8" height="80.0" width="273.0" data-name="Immediate"></rect>
+							<path d="M145.0 179.8 L418.0 179.8" fill="none" data-name="Immediate"></path>
+						</g>
+						<g transform="translate(145, 147.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Immediate">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Immediate">
+								<text x="128.5" y="14.1" stroke="none" text-anchor="middle" data-name="Immediate">Immediate</text>
+								
+							</g>
+						</g>
+						<g transform="translate(145, 179.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Immediate">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Immediate">
+								<text x="0.0" y="14.1" stroke="none" data-name="Immediate">The data source is read</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Immediate">and the operation is performed once</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Streaming">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Streaming">
+							<rect x="428.0" y="0.0" height="80.0" width="314.0" data-name="Streaming"></rect>
+							<path d="M428.0 32.0 L742.0 32.0" fill="none" data-name="Streaming"></path>
+						</g>
+						<g transform="translate(428, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Streaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Streaming">
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="Streaming">Streaming</text>
+								
+							</g>
+						</g>
+						<g transform="translate(428, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Streaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Streaming">
+								<text x="0.0" y="14.1" stroke="none" data-name="Streaming">Operations that desn&apos;t have to read all</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Streaming">the source data before they yield element.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Nonstreaming">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Nonstreaming">
+							<rect x="434.5" y="90.0" height="97.0" width="301.0" data-name="Nonstreaming"></rect>
+							<path d="M434.5 122.0 L735.5 122.0" fill="none" data-name="Nonstreaming"></path>
+						</g>
+						<g transform="translate(434.5, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Nonstreaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Nonstreaming">
+								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="Nonstreaming">Nonstreaming</text>
+								
+							</g>
+						</g>
+						<g transform="translate(434.5, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Nonstreaming">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Nonstreaming">
+								<text x="0.0" y="14.1" stroke="none" data-name="Nonstreaming">Operations that must read all the source</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Nonstreaming">data before they can yie</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Nonstreaming">ld a result element</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LINQ Execution">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LINQ Execution">
+							<rect x="0.0" y="122.5" height="32.0" width="135.0" data-name="LINQ Execution"></rect>
+						</g>
+						<g transform="translate(0, 122.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LINQ Execution">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LINQ Execution">
+								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="LINQ Execution">LINQ Execution</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Classification of standard query operators by manner of execution</figcaption>
+</figure>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Standard query operator</th>
+<th style="text-align: center;">Return type</th>
+<th style="text-align: center;">Immediate</th>
+<th style="text-align: center;">Deferred streaming</th>
+<th style="text-align: center;">Deferred nonstreaming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Aggregate</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">All</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Any</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">AsEnumerable</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Average</td>
+<td style="text-align: center;">Single numeric value</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Cast</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Concat</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Contains</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Count</td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">DefaultIfEmpty</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Distinct</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ElementAt</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ElementAtOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Empty</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">E√cept</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">First</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">FirstOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">GroupBy</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">GroupJoin</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Intersect</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Join</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Last</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">LastOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">LongCount</td>
+<td style="text-align: center;"><code>long</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Ma√</td>
+<td style="text-align: center;">Single numeric value, <code>TSource</code>, or <code>TResult?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Min</td>
+<td style="text-align: center;">Single numeric value, <code>TSource</code>, or <code>TResult?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">OfType</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">OrderBy</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">OrderByDescending</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Range</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Repeat</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Reverse</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Select</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SelectMany</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SequenceEqual</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Single</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SingleOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Skip</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SkipWhile</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Sum</td>
+<td style="text-align: center;">Single numeric value</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Take</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">TakeWhile</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ThenBy</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">ThenByDescending</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">ToArray</td>
+<td style="text-align: center;"><code>TSource[]</code> array</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ToDictionary</td>
+<td style="text-align: center;"><code>Dictionary&lt;TKey, TValue&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ToList</td>
+<td style="text-align: center;"><code>IList&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ToLookup</td>
+<td style="text-align: center;"><code>ILookup&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Union</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Where</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - Attributes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Attributes">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="attributes">Attributes</h1>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="823.0" height="1316.0" viewBox="0 0 823 1316" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >attributes</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: attributes
+	
+	[Attribute|Represents the base class
+	for custom attributes.]
+	
+	[AttributeUsageAttribute|Specifies the usage of another
+	attribute class.
+	This class cannot be inherited.]
+	
+	[ThreadStaticAttribute|
+	Indicates that the value of
+	a static field is 
+	unique for each thread.]
+	
+	[FlagsAttribute|Indicates that an enumeration 
+	can be treated as a bit field\; 
+	that is, a set of flags.]
+	
+	[Attribute] &lt;:- [&lt;note&gt;Serialization
+	Related] - [SerializableAttribute|Indicates that a class can be
+	serialized using binary or XML 
+	serialization. 
+	This class cannot be inherited.]
+	
+	[Attribute] &lt;:- [&lt;note&gt;Threading 
+	Related] 
+	
+	[&lt;note&gt;Serialization
+	Related] - [NonSerializedAttribute|Indicates that a field  of
+	a serializable class should not
+	be serialized. 
+	This class cannot be inherited.]
+	
+	[&lt;note&gt;Threading 
+	Related] - [STAThreadAttribute|Indicates that the COM 
+	threading model for an 
+	application is single-threaded
+	apartment (STA).]
+	
+	[&lt;note&gt;Threading 
+	Related] - [MTAThreadAttribute|Indicates that the COM 
+	threading model for an 
+	application is multithreaded
+	apartment (MTA).]
+	
+	[&lt;note&gt;Threading 
+	Related] - [ThreadStaticAttribute]
+	
+	[Attribute] &lt;:- [AttributeUsageAttribute]
+	[Attribute] &lt;:- [FlagsAttribute]
+	
+	[Attribute] &lt;:- [&lt;note&gt;Development 
+	related] - [ObsoleteAttribute|Marks the program elements
+	that are no longer in use. 
+	This class cannot be inherited.]
+	
+	[&lt;note&gt;Development 
+	related] - [CallerMemberNameAttribute|Allows you to obtain the
+	method or property name of the
+	caller to the method.]
+	
+	[&lt;note&gt;Development 
+	related] - [CallerLineNumberAttribute|Allows you to obtain the 
+	line number in the source file 
+	at which the method is called.]
+	
+	[&lt;note&gt;Development 
+	related] - [CallerFilePathAttribute|Allows you to obtain the 
+	full path of the source file that 
+	contains the caller. 
+	This is the file path at the time of compile.]
+	
+	[&lt;note&gt;Development 
+	related] - [CallerArgumentExpressionAttribute|Indicates that a parameter captures
+	the expression passed for another
+	parameter as a string.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="1316.0" width="823.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M218.3 238.0 L210 238 L276 238 L276.0 238.0 " fill="none"></path>
+					<path d="M218.3 232.7 L218.3 238.0 L218.3 243.3 L205.0 238.0 Z"></path>
+					<path d="M378.2 214.0 L452 176.5 L496 176.5 L496.0 176.5 " fill="none"></path>
+					<path d="M121.1 290.6 L210 541.5 L284.5 541.5 L284.5 541.5 " fill="none"></path>
+					<path d="M126.1 288.8 L121.1 290.6 L116.1 292.3 L116.7 278.0 Z"></path>
+					<path d="M378.2 262.0 L452 299.5 L496 299.5 L496.0 299.5 " fill="none"></path>
+					<path d="M355.4 517.5 L452 422.5 L500.5 422.5 L500.5 422.5 " fill="none"></path>
+					<path d="M377.5 543.0 L452 545.5 L507 545.5 L507.0 545.5 " fill="none"></path>
+					<path d="M355.4 565.5 L452 660.5 L513 660.5 L513.0 660.5 " fill="none"></path>
+					<path d="M131.8 186.4 L210 48.5 L215 48.5 L215.0 48.5 " fill="none"></path>
+					<path d="M127.1 183.8 L131.8 186.4 L136.4 189.0 L125.2 198.0 Z"></path>
+					<path d="M165.2 189.9 L210 155.5 L217.5 155.5 L217.5 155.5 " fill="none"></path>
+					<path d="M162.0 185.7 L165.2 189.9 L168.4 194.1 L154.6 198.0 Z"></path>
+					<path d="M110.2 291.2 L210 981.5 L273 981.5 L273.0 981.5 " fill="none"></path>
+					<path d="M115.5 290.4 L110.2 291.2 L104.9 292.0 L108.3 278.0 Z"></path>
+					<path d="M344.6 957.5 L452 767.5 L496 767.5 L496.0 767.5 " fill="none"></path>
+					<path d="M358.1 957.5 L452 874.5 L492 874.5 L492.0 874.5 " fill="none"></path>
+					<path d="M389.0 981.5 L452 981.5 L499 981.5 L499.0 981.5 " fill="none"></path>
+					<path d="M356.3 1005.5 L452 1096.5 L457 1096.5 L457.0 1096.5 " fill="none"></path>
+					<path d="M343.6 1005.5 L452 1211.5 L467.5 1211.5 L467.5 1211.5 " fill="none"></path>
+					<g data-name="Attribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Attribute">
+							<rect x="0.0" y="198.0" height="80.0" width="205.0" data-name="Attribute"></rect>
+							<path d="M0.0 230.0 L205.0 230.0" fill="none" data-name="Attribute"></path>
+						</g>
+						<g transform="translate(0, 198)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Attribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Attribute">
+								<text x="94.5" y="14.1" stroke="none" text-anchor="middle" data-name="Attribute">Attribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 230)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Attribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Attribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="Attribute">Represents the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Attribute">for custom attributes.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AttributeUsageAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="AttributeUsageAttribute">
+							<rect x="215.0" y="0.0" height="97.0" width="232.0" data-name="AttributeUsageAttribute"></rect>
+							<path d="M215.0 32.0 L447.0 32.0" fill="none" data-name="AttributeUsageAttribute"></path>
+						</g>
+						<g transform="translate(215, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AttributeUsageAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AttributeUsageAttribute">
+								<text x="108.0" y="14.1" stroke="none" text-anchor="middle" data-name="AttributeUsageAttribute">AttributeUsageAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(215, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="AttributeUsageAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AttributeUsageAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="AttributeUsageAttribute">Specifies the usage of another</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="AttributeUsageAttribute">attribute class.</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="AttributeUsageAttribute">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ThreadStaticAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ThreadStaticAttribute">
+							<rect x="513.0" y="612.0" height="97.0" width="198.0" data-name="ThreadStaticAttribute"></rect>
+							<path d="M513.0 644.0 L711.0 644.0" fill="none" data-name="ThreadStaticAttribute"></path>
+						</g>
+						<g transform="translate(513, 612)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ThreadStaticAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ThreadStaticAttribute">
+								<text x="91.0" y="14.1" stroke="none" text-anchor="middle" data-name="ThreadStaticAttribute">ThreadStaticAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(513, 644)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ThreadStaticAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ThreadStaticAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="ThreadStaticAttribute">Indicates that the value of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ThreadStaticAttribute">a static field is</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ThreadStaticAttribute">unique for each thread.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FlagsAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FlagsAttribute">
+							<rect x="217.5" y="107.0" height="97.0" width="227.0" data-name="FlagsAttribute"></rect>
+							<path d="M217.5 139.0 L444.5 139.0" fill="none" data-name="FlagsAttribute"></path>
+						</g>
+						<g transform="translate(217.5, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FlagsAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FlagsAttribute">
+								<text x="105.5" y="14.1" stroke="none" text-anchor="middle" data-name="FlagsAttribute">FlagsAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(217.5, 139)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FlagsAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FlagsAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="FlagsAttribute">Indicates that an enumeration</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="FlagsAttribute">can be treated as a bit field;</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="FlagsAttribute">that is, a set of flags.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Serialization">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Serialization">
+							<path d="M276.0 214.0 L378.0 214.0 L386.0 222.0 L386.0 262.0 L276.0 262.0 L276.0 214.0 Z" data-name="Serialization"></path>
+							<path d="M378.0 214.0 L378.0 222.0 L386.0 222.0" fill="none" data-name="Serialization"></path>
+						</g>
+						<g transform="translate(276, 214)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Serialization">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Serialization">
+								<text x="0.0" y="14.1" stroke="none" data-name="Serialization">Serialization</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Serialization">Related</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SerializableAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SerializableAttribute">
+							<rect x="496.0" y="120.0" height="113.0" width="232.0" data-name="SerializableAttribute"></rect>
+							<path d="M496.0 152.0 L728.0 152.0" fill="none" data-name="SerializableAttribute"></path>
+						</g>
+						<g transform="translate(496, 120)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SerializableAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SerializableAttribute">
+								<text x="108.0" y="14.1" stroke="none" text-anchor="middle" data-name="SerializableAttribute">SerializableAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(496, 152)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="SerializableAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SerializableAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="SerializableAttribute">Indicates that a class can be</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="SerializableAttribute">serialized using binary or XML</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="SerializableAttribute">serialization.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="SerializableAttribute">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Threading">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Threading">
+							<path d="M284.5 517.5 L369.5 517.5 L377.5 525.5 L377.5 565.5 L284.5 565.5 L284.5 517.5 Z" data-name="Threading"></path>
+							<path d="M369.5 517.5 L369.5 525.5 L377.5 525.5" fill="none" data-name="Threading"></path>
+						</g>
+						<g transform="translate(284.5, 517.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Threading">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Threading">
+								<text x="0.0" y="14.1" stroke="none" data-name="Threading">Threading</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Threading">Related</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="NonSerializedAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="NonSerializedAttribute">
+							<rect x="496.0" y="243.0" height="113.0" width="232.0" data-name="NonSerializedAttribute"></rect>
+							<path d="M496.0 275.0 L728.0 275.0" fill="none" data-name="NonSerializedAttribute"></path>
+						</g>
+						<g transform="translate(496, 243)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NonSerializedAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NonSerializedAttribute">
+								<text x="108.0" y="14.1" stroke="none" text-anchor="middle" data-name="NonSerializedAttribute">NonSerializedAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(496, 275)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="NonSerializedAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NonSerializedAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="NonSerializedAttribute">Indicates that a field  of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="NonSerializedAttribute">a serializable class should not</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="NonSerializedAttribute">be serialized.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="NonSerializedAttribute">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="STAThreadAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="STAThreadAttribute">
+							<rect x="500.5" y="366.0" height="113.0" width="223.0" data-name="STAThreadAttribute"></rect>
+							<path d="M500.5 398.0 L723.5 398.0" fill="none" data-name="STAThreadAttribute"></path>
+						</g>
+						<g transform="translate(500.5, 366)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="STAThreadAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="STAThreadAttribute">
+								<text x="103.5" y="14.1" stroke="none" text-anchor="middle" data-name="STAThreadAttribute">STAThreadAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(500.5, 398)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="STAThreadAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="STAThreadAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="STAThreadAttribute">Indicates that the COM</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="STAThreadAttribute">threading model for an</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="STAThreadAttribute">application is single-threaded</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="STAThreadAttribute">apartment (STA).</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MTAThreadAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MTAThreadAttribute">
+							<rect x="507.0" y="489.0" height="113.0" width="210.0" data-name="MTAThreadAttribute"></rect>
+							<path d="M507.0 521.0 L717.0 521.0" fill="none" data-name="MTAThreadAttribute"></path>
+						</g>
+						<g transform="translate(507, 489)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MTAThreadAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MTAThreadAttribute">
+								<text x="97.0" y="14.1" stroke="none" text-anchor="middle" data-name="MTAThreadAttribute">MTAThreadAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(507, 521)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MTAThreadAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MTAThreadAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="MTAThreadAttribute">Indicates that the COM</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MTAThreadAttribute">threading model for an</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="MTAThreadAttribute">application is multithreaded</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="MTAThreadAttribute">apartment (MTA).</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Development">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Development">
+							<path d="M273.0 957.5 L381.0 957.5 L389.0 965.5 L389.0 1005.5 L273.0 1005.5 L273.0 957.5 Z" data-name="Development"></path>
+							<path d="M381.0 957.5 L381.0 965.5 L389.0 965.5" fill="none" data-name="Development"></path>
+						</g>
+						<g transform="translate(273, 957.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Development">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Development">
+								<text x="0.0" y="14.1" stroke="none" data-name="Development">Development</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Development">related</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ObsoleteAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ObsoleteAttribute">
+							<rect x="496.0" y="719.0" height="97.0" width="232.0" data-name="ObsoleteAttribute"></rect>
+							<path d="M496.0 751.0 L728.0 751.0" fill="none" data-name="ObsoleteAttribute"></path>
+						</g>
+						<g transform="translate(496, 719)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ObsoleteAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ObsoleteAttribute">
+								<text x="108.0" y="14.1" stroke="none" text-anchor="middle" data-name="ObsoleteAttribute">ObsoleteAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(496, 751)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ObsoleteAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ObsoleteAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="ObsoleteAttribute">Marks the program elements</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ObsoleteAttribute">that are no longer in use.</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ObsoleteAttribute">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CallerMemberNameAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CallerMemberNameAttribute">
+							<rect x="492.0" y="826.0" height="97.0" width="240.0" data-name="CallerMemberNameAttribute"></rect>
+							<path d="M492.0 858.0 L732.0 858.0" fill="none" data-name="CallerMemberNameAttribute"></path>
+						</g>
+						<g transform="translate(492, 826)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CallerMemberNameAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CallerMemberNameAttribute">
+								<text x="112.0" y="14.1" stroke="none" text-anchor="middle" data-name="CallerMemberNameAttribute">CallerMemberNameAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(492, 858)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CallerMemberNameAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CallerMemberNameAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CallerMemberNameAttribute">Allows you to obtain the</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CallerMemberNameAttribute">method or property name of the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="CallerMemberNameAttribute">caller to the method.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CallerLineNumberAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CallerLineNumberAttribute">
+							<rect x="499.0" y="933.0" height="97.0" width="226.0" data-name="CallerLineNumberAttribute"></rect>
+							<path d="M499.0 965.0 L725.0 965.0" fill="none" data-name="CallerLineNumberAttribute"></path>
+						</g>
+						<g transform="translate(499, 933)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CallerLineNumberAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CallerLineNumberAttribute">
+								<text x="105.0" y="14.1" stroke="none" text-anchor="middle" data-name="CallerLineNumberAttribute">CallerLineNumberAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(499, 965)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CallerLineNumberAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CallerLineNumberAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CallerLineNumberAttribute">Allows you to obtain the</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CallerLineNumberAttribute">line number in the source file</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="CallerLineNumberAttribute">at which the method is called.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CallerFilePathAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CallerFilePathAttribute">
+							<rect x="457.0" y="1040.0" height="113.0" width="310.0" data-name="CallerFilePathAttribute"></rect>
+							<path d="M457.0 1072.0 L767.0 1072.0" fill="none" data-name="CallerFilePathAttribute"></path>
+						</g>
+						<g transform="translate(457, 1040)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CallerFilePathAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CallerFilePathAttribute">
+								<text x="147.0" y="14.1" stroke="none" text-anchor="middle" data-name="CallerFilePathAttribute">CallerFilePathAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(457, 1072)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CallerFilePathAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CallerFilePathAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CallerFilePathAttribute">Allows you to obtain the</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CallerFilePathAttribute">full path of the source file that</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="CallerFilePathAttribute">contains the caller.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="CallerFilePathAttribute">This is the file path at the time of compile.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CallerArgumentExpressionAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CallerArgumentExpressionAttribute">
+							<rect x="467.5" y="1163.0" height="97.0" width="289.0" data-name="CallerArgumentExpressionAttribute"></rect>
+							<path d="M467.5 1195.0 L756.5 1195.0" fill="none" data-name="CallerArgumentExpressionAttribute"></path>
+						</g>
+						<g transform="translate(467.5, 1163)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CallerArgumentExpressionAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CallerArgumentExpressionAttribute">
+								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="CallerArgumentExpressionAttribute">CallerArgumentExpressionAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(467.5, 1195)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CallerArgumentExpressionAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CallerArgumentExpressionAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CallerArgumentExpressionAttribute">Indicates that a parameter captures</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CallerArgumentExpressionAttribute">the expression passed for another</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="CallerArgumentExpressionAttribute">parameter as a string.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Common Attributes</figcaption>
+</figure>
+<h2 id="data-annotation">Data annotation</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1226.0" height="1340.0" viewBox="0 0 1226 1340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >attributes-dataannotation</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: attributes-dataannotation
+	
+	[Attribute|Represents the base class
+	for custom attributes.]
+	
+	[ValidationAttribute|Serves as the base class
+	for all validation attributes.]
+	
+	[DisplayAttribute|Provides a general-purpose attribute
+	that lets you specify localizable
+	strings for types and members
+	of entity partial classes.]
+	
+	[DisplayFormatAttribute|Specifies how data fields are displayed 
+	and formatted by ASP.NET Dynamic Data.]
+	
+	[Attribute] &lt;:- [ValidationAttribute]
+	[Attribute] &lt;:- [DisplayAttribute]
+	[Attribute] &lt;:- [DescriptionAttribute]
+	[Attribute] &lt;:- [DisplayFormatAttribute]
+	
+	[DescriptionAttribute|Specifies a description
+	for a property or event.]
+	
+	[ValidationAttribute] &lt;:- [AllowedValuesAttribute|Specifies a list of values 
+	that should be allowed in a property.]
+	[ValidationAttribute] &lt;:- [Base64StringAttribute|Specifies that a data field
+	value is a well-formed Base64 string.]
+	[ValidationAttribute] &lt;:- [CompareAttribute|Provides an attribute that compares
+	two properties.]
+	[ValidationAttribute] &lt;:- [CustomValidationAttribute|Specifies a custom validation method that
+	is used to validate a property or class instance.]
+	[ValidationAttribute] &lt;:- [DeniedValuesAttribute|Specifies a list of values that
+	should not be allowed in a property.]
+	[ValidationAttribute] &lt;:- [LengthAttribute|Specifies the minimum and maximum length of
+	collection/string data allowed in a property.]
+	[ValidationAttribute] &lt;:- [MaxLengthAttribute|Specifies the maximum length of 
+	array or string data allowed in a property.]
+	[ValidationAttribute] &lt;:- [MinLengthAttribute|Specifies the minimum length of
+	array or string data allowed in a property.]
+	[ValidationAttribute] &lt;:- [RangeAttribute|Specifies the numeric range constraints
+	for the value of a data field.]
+	[ValidationAttribute] &lt;:- [RegularExpressionAttribute|Specifies that a data field value in ASP.NET
+	Dynamic Data must match 
+	the specified regular expression.]
+	[ValidationAttribute] &lt;:- [StringLengthAttribute|Specifies the minimum and maximum 
+	length of characters that are allowed in a data field.]
+	[ValidationAttribute] &lt;:- [DataTypeAttribute|Specifies the name of an additional
+	type to associate with a data field.]
+	
+	[DataTypeAttribute] &lt;:- [CreditCardAttribute|Specifies that a data field
+	value is a credit card number.]
+	[DataTypeAttribute] &lt;:- [EmailAddressAttribute|Validates an email address.]
+	[DataTypeAttribute] &lt;:- [EnumDataTypeAttribute|Enables a .NET enumeration 
+	to be mapped to a data column.]
+	[DataTypeAttribute] &lt;:- [FileExtensionsAttribute|Validates file name extensions]
+	
+	[DataTypeAttribute] &lt;:- [PhoneAttribute|Specifies that a data field value
+	is a well-formed phone number.]
+	
+	[DataTypeAttribute] &lt;:- [UrlAttribute|Provides URL validation.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="1340.0" width="1226.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M136.9 643.7 L210 535 L272 535 L272.0 535.0 " fill="none"></path>
+					<path d="M132.4 640.7 L136.9 643.7 L141.3 646.7 L129.4 654.8 Z"></path>
+					<path d="M195.2 648.8 L210 641.5 L235.5 641.5 L235.5 641.5 " fill="none"></path>
+					<path d="M192.8 644.1 L195.2 648.8 L197.6 653.6 L183.3 654.8 Z"></path>
+					<path d="M140.5 745.4 L210 838 L284 838 L284.0 838.0 " fill="none"></path>
+					<path d="M144.8 742.2 L140.5 745.4 L136.3 748.6 L132.5 734.8 Z"></path>
+					<path d="M195.2 740.7 L210 748 L215 748 L215.0 748.0 " fill="none"></path>
+					<path d="M197.6 735.9 L195.2 740.7 L192.8 745.4 L183.3 734.8 Z"></path>
+					<path d="M390.3 482.3 L536 40 L594 40 L594.0 40.0 " fill="none"></path>
+					<path d="M385.3 480.7 L390.3 482.3 L395.4 484.0 L386.2 495.0 Z"></path>
+					<path d="M394.1 482.6 L536 130 L591.5 130 L591.5 130.0 " fill="none"></path>
+					<path d="M389.1 480.6 L394.1 482.6 L399.0 484.6 L389.1 495.0 Z"></path>
+					<path d="M399.8 483.2 L536 220 L595.5 220 L595.5 220.0 " fill="none"></path>
+					<path d="M395.1 480.7 L399.8 483.2 L404.6 485.6 L393.7 495.0 Z"></path>
+					<path d="M409.8 484.2 L536 310 L555.5 310 L555.5 310.0 " fill="none"></path>
+					<path d="M405.5 481.1 L409.8 484.2 L414.1 487.3 L402.0 495.0 Z"></path>
+					<path d="M431.6 486.5 L536 400 L596.5 400 L596.5 400.0 " fill="none"></path>
+					<path d="M428.2 482.4 L431.6 486.5 L435.0 490.6 L421.3 495.0 Z"></path>
+					<path d="M486.9 503.6 L536 490 L556 490 L556.0 490.0 " fill="none"></path>
+					<path d="M485.4 498.4 L486.9 503.6 L488.3 508.7 L474.0 507.1 Z"></path>
+					<path d="M486.9 566.4 L536 580 L577 580 L577.0 580.0 " fill="none"></path>
+					<path d="M488.3 561.3 L486.9 566.4 L485.4 571.6 L474.0 562.9 Z"></path>
+					<path d="M431.6 583.5 L536 670 L577 670 L577.0 670.0 " fill="none"></path>
+					<path d="M435.0 579.4 L431.6 583.5 L428.2 587.6 L421.3 575.0 Z"></path>
+					<path d="M409.8 585.8 L536 760 L582 760 L582.0 760.0 " fill="none"></path>
+					<path d="M414.1 582.7 L409.8 585.8 L405.5 588.9 L402.0 575.0 Z"></path>
+					<path d="M399.2 586.9 L536 858.5 L567.5 858.5 L567.5 858.5 " fill="none"></path>
+					<path d="M403.9 584.5 L399.2 586.9 L394.4 589.3 L393.2 575.0 Z"></path>
+					<path d="M393.3 587.4 L536 957 L541 957 L541.0 957.0 " fill="none"></path>
+					<path d="M398.2 585.5 L393.3 587.4 L388.3 589.4 L388.5 575.0 Z"></path>
+					<path d="M389.8 587.7 L536 1047 L597.5 1047 L597.5 1047.0 " fill="none"></path>
+					<path d="M394.9 586.1 L389.8 587.7 L384.7 589.3 L385.7 575.0 Z"></path>
+					<path d="M777.0 997.3 L924 842 L937 842 L937.0 842.0 " fill="none"></path>
+					<path d="M773.1 993.6 L777.0 997.3 L780.9 1001.0 L767.9 1007.0 Z"></path>
+					<path d="M804.4 999.9 L924 924 L944 924 L944.0 924.0 " fill="none"></path>
+					<path d="M801.5 995.4 L804.4 999.9 L807.2 1004.4 L793.1 1007.0 Z"></path>
+					<path d="M875.5 1016.2 L924 1006 L929 1006 L929.0 1006.0 " fill="none"></path>
+					<path d="M874.4 1011.0 L875.5 1016.2 L876.6 1021.5 L862.5 1019.0 Z"></path>
+					<path d="M875.5 1077.8 L924 1088 L934 1088 L934.0 1088.0 " fill="none"></path>
+					<path d="M876.6 1072.5 L875.5 1077.8 L874.4 1083.0 L862.5 1075.0 Z"></path>
+					<path d="M804.4 1094.1 L924 1170 L930 1170 L930.0 1170.0 " fill="none"></path>
+					<path d="M807.2 1089.6 L804.4 1094.1 L801.5 1098.6 L793.1 1087.0 Z"></path>
+					<path d="M777.0 1096.7 L924 1252 L954 1252 L954.0 1252.0 " fill="none"></path>
+					<path d="M780.9 1093.0 L777.0 1096.7 L773.1 1100.4 L767.9 1087.0 Z"></path>
+					<g data-name="Attribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Attribute">
+							<rect x="0.0" y="654.8" height="80.0" width="205.0" data-name="Attribute"></rect>
+							<path d="M0.0 686.8 L205.0 686.8" fill="none" data-name="Attribute"></path>
+						</g>
+						<g transform="translate(0, 654.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Attribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Attribute">
+								<text x="94.5" y="14.1" stroke="none" text-anchor="middle" data-name="Attribute">Attribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 686.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Attribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Attribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="Attribute">Represents the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Attribute">for custom attributes.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValidationAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValidationAttribute">
+							<rect x="272.0" y="495.0" height="80.0" width="202.0" data-name="ValidationAttribute"></rect>
+							<path d="M272.0 527.0 L474.0 527.0" fill="none" data-name="ValidationAttribute"></path>
+						</g>
+						<g transform="translate(272, 495)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValidationAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValidationAttribute">
+								<text x="93.0" y="14.1" stroke="none" text-anchor="middle" data-name="ValidationAttribute">ValidationAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(272, 527)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValidationAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValidationAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValidationAttribute">Serves as the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValidationAttribute">for all validation attributes.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DisplayAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DisplayAttribute">
+							<rect x="235.5" y="585.0" height="113.0" width="275.0" data-name="DisplayAttribute"></rect>
+							<path d="M235.5 617.0 L510.5 617.0" fill="none" data-name="DisplayAttribute"></path>
+						</g>
+						<g transform="translate(235.5, 585)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DisplayAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DisplayAttribute">
+								<text x="129.5" y="14.1" stroke="none" text-anchor="middle" data-name="DisplayAttribute">DisplayAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(235.5, 617)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DisplayAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DisplayAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="DisplayAttribute">Provides a general-purpose attribute</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DisplayAttribute">that lets you specify localizable</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="DisplayAttribute">strings for types and members</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="DisplayAttribute">of entity partial classes.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DisplayFormatAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DisplayFormatAttribute">
+							<rect x="215.0" y="708.0" height="80.0" width="316.0" data-name="DisplayFormatAttribute"></rect>
+							<path d="M215.0 740.0 L531.0 740.0" fill="none" data-name="DisplayFormatAttribute"></path>
+						</g>
+						<g transform="translate(215, 708)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DisplayFormatAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DisplayFormatAttribute">
+								<text x="150.0" y="14.1" stroke="none" text-anchor="middle" data-name="DisplayFormatAttribute">DisplayFormatAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(215, 740)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DisplayFormatAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DisplayFormatAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="DisplayFormatAttribute">Specifies how data fields are displayed</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DisplayFormatAttribute">and formatted by ASP.NET Dynamic Data.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DescriptionAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DescriptionAttribute">
+							<rect x="284.0" y="798.0" height="80.0" width="178.0" data-name="DescriptionAttribute"></rect>
+							<path d="M284.0 830.0 L462.0 830.0" fill="none" data-name="DescriptionAttribute"></path>
+						</g>
+						<g transform="translate(284, 798)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DescriptionAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DescriptionAttribute">
+								<text x="81.0" y="14.1" stroke="none" text-anchor="middle" data-name="DescriptionAttribute">DescriptionAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(284, 830)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DescriptionAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DescriptionAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="DescriptionAttribute">Specifies a description</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DescriptionAttribute">for a property or event.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AllowedValuesAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="AllowedValuesAttribute">
+							<rect x="594.0" y="0.0" height="80.0" width="272.0" data-name="AllowedValuesAttribute"></rect>
+							<path d="M594.0 32.0 L866.0 32.0" fill="none" data-name="AllowedValuesAttribute"></path>
+						</g>
+						<g transform="translate(594, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AllowedValuesAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AllowedValuesAttribute">
+								<text x="128.0" y="14.1" stroke="none" text-anchor="middle" data-name="AllowedValuesAttribute">AllowedValuesAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(594, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="AllowedValuesAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AllowedValuesAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="AllowedValuesAttribute">Specifies a list of values</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="AllowedValuesAttribute">that should be allowed in a property.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Base64StringAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Base64StringAttribute">
+							<rect x="591.5" y="90.0" height="80.0" width="277.0" data-name="Base64StringAttribute"></rect>
+							<path d="M591.5 122.0 L868.5 122.0" fill="none" data-name="Base64StringAttribute"></path>
+						</g>
+						<g transform="translate(591.5, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Base64StringAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Base64StringAttribute">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="Base64StringAttribute">Base64StringAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(591.5, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Base64StringAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Base64StringAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="Base64StringAttribute">Specifies that a data field</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Base64StringAttribute">value is a well-formed Base64 string.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CompareAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CompareAttribute">
+							<rect x="595.5" y="180.0" height="80.0" width="269.0" data-name="CompareAttribute"></rect>
+							<path d="M595.5 212.0 L864.5 212.0" fill="none" data-name="CompareAttribute"></path>
+						</g>
+						<g transform="translate(595.5, 180)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CompareAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CompareAttribute">
+								<text x="126.5" y="14.1" stroke="none" text-anchor="middle" data-name="CompareAttribute">CompareAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(595.5, 212)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CompareAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CompareAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CompareAttribute">Provides an attribute that compares</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CompareAttribute">two properties.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CustomValidationAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CustomValidationAttribute">
+							<rect x="555.5" y="270.0" height="80.0" width="349.0" data-name="CustomValidationAttribute"></rect>
+							<path d="M555.5 302.0 L904.5 302.0" fill="none" data-name="CustomValidationAttribute"></path>
+						</g>
+						<g transform="translate(555.5, 270)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CustomValidationAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CustomValidationAttribute">
+								<text x="166.5" y="14.1" stroke="none" text-anchor="middle" data-name="CustomValidationAttribute">CustomValidationAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(555.5, 302)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CustomValidationAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CustomValidationAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CustomValidationAttribute">Specifies a custom validation method that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CustomValidationAttribute">is used to validate a property or class instance.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DeniedValuesAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DeniedValuesAttribute">
+							<rect x="596.5" y="360.0" height="80.0" width="267.0" data-name="DeniedValuesAttribute"></rect>
+							<path d="M596.5 392.0 L863.5 392.0" fill="none" data-name="DeniedValuesAttribute"></path>
+						</g>
+						<g transform="translate(596.5, 360)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeniedValuesAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DeniedValuesAttribute">
+								<text x="125.5" y="14.1" stroke="none" text-anchor="middle" data-name="DeniedValuesAttribute">DeniedValuesAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(596.5, 392)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeniedValuesAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DeniedValuesAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="DeniedValuesAttribute">Specifies a list of values that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DeniedValuesAttribute">should not be allowed in a property.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LengthAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LengthAttribute">
+							<rect x="556.0" y="450.0" height="80.0" width="348.0" data-name="LengthAttribute"></rect>
+							<path d="M556.0 482.0 L904.0 482.0" fill="none" data-name="LengthAttribute"></path>
+						</g>
+						<g transform="translate(556, 450)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LengthAttribute">
+								<text x="166.0" y="14.1" stroke="none" text-anchor="middle" data-name="LengthAttribute">LengthAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(556, 482)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="LengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="LengthAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="LengthAttribute">Specifies the minimum and maximum length of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="LengthAttribute">collection/string data allowed in a property.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MaxLengthAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MaxLengthAttribute">
+							<rect x="577.0" y="540.0" height="80.0" width="306.0" data-name="MaxLengthAttribute"></rect>
+							<path d="M577.0 572.0 L883.0 572.0" fill="none" data-name="MaxLengthAttribute"></path>
+						</g>
+						<g transform="translate(577, 540)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaxLengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MaxLengthAttribute">
+								<text x="145.0" y="14.1" stroke="none" text-anchor="middle" data-name="MaxLengthAttribute">MaxLengthAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(577, 572)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MaxLengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MaxLengthAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="MaxLengthAttribute">Specifies the maximum length of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MaxLengthAttribute">array or string data allowed in a property.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MinLengthAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MinLengthAttribute">
+							<rect x="577.0" y="630.0" height="80.0" width="306.0" data-name="MinLengthAttribute"></rect>
+							<path d="M577.0 662.0 L883.0 662.0" fill="none" data-name="MinLengthAttribute"></path>
+						</g>
+						<g transform="translate(577, 630)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MinLengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MinLengthAttribute">
+								<text x="145.0" y="14.1" stroke="none" text-anchor="middle" data-name="MinLengthAttribute">MinLengthAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(577, 662)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MinLengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MinLengthAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="MinLengthAttribute">Specifies the minimum length of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MinLengthAttribute">array or string data allowed in a property.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RangeAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RangeAttribute">
+							<rect x="582.0" y="720.0" height="80.0" width="296.0" data-name="RangeAttribute"></rect>
+							<path d="M582.0 752.0 L878.0 752.0" fill="none" data-name="RangeAttribute"></path>
+						</g>
+						<g transform="translate(582, 720)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RangeAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RangeAttribute">
+								<text x="140.0" y="14.1" stroke="none" text-anchor="middle" data-name="RangeAttribute">RangeAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(582, 752)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RangeAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RangeAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="RangeAttribute">Specifies the numeric range constraints</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RangeAttribute">for the value of a data field.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RegularExpressionAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RegularExpressionAttribute">
+							<rect x="567.5" y="810.0" height="97.0" width="325.0" data-name="RegularExpressionAttribute"></rect>
+							<path d="M567.5 842.0 L892.5 842.0" fill="none" data-name="RegularExpressionAttribute"></path>
+						</g>
+						<g transform="translate(567.5, 810)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RegularExpressionAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RegularExpressionAttribute">
+								<text x="154.5" y="14.1" stroke="none" text-anchor="middle" data-name="RegularExpressionAttribute">RegularExpressionAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(567.5, 842)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RegularExpressionAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RegularExpressionAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="RegularExpressionAttribute">Specifies that a data field value in ASP.NET</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RegularExpressionAttribute">Dynamic Data must match</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="RegularExpressionAttribute">the specified regular expression.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StringLengthAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="StringLengthAttribute">
+							<rect x="541.0" y="917.0" height="80.0" width="378.0" data-name="StringLengthAttribute"></rect>
+							<path d="M541.0 949.0 L919.0 949.0" fill="none" data-name="StringLengthAttribute"></path>
+						</g>
+						<g transform="translate(541, 917)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringLengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringLengthAttribute">
+								<text x="181.0" y="14.1" stroke="none" text-anchor="middle" data-name="StringLengthAttribute">StringLengthAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(541, 949)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringLengthAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringLengthAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="StringLengthAttribute">Specifies the minimum and maximum</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StringLengthAttribute">length of characters that are allowed in a data field.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DataTypeAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DataTypeAttribute">
+							<rect x="597.5" y="1007.0" height="80.0" width="265.0" data-name="DataTypeAttribute"></rect>
+							<path d="M597.5 1039.0 L862.5 1039.0" fill="none" data-name="DataTypeAttribute"></path>
+						</g>
+						<g transform="translate(597.5, 1007)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTypeAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTypeAttribute">
+								<text x="124.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataTypeAttribute">DataTypeAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(597.5, 1039)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DataTypeAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DataTypeAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="DataTypeAttribute">Specifies the name of an additional</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DataTypeAttribute">type to associate with a data field.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CreditCardAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CreditCardAttribute">
+							<rect x="937.0" y="802.0" height="80.0" width="225.0" data-name="CreditCardAttribute"></rect>
+							<path d="M937.0 834.0 L1162.0 834.0" fill="none" data-name="CreditCardAttribute"></path>
+						</g>
+						<g transform="translate(937, 802)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CreditCardAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CreditCardAttribute">
+								<text x="104.5" y="14.1" stroke="none" text-anchor="middle" data-name="CreditCardAttribute">CreditCardAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(937, 834)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CreditCardAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CreditCardAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="CreditCardAttribute">Specifies that a data field</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="CreditCardAttribute">value is a credit card number.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="EmailAddressAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="EmailAddressAttribute">
+							<rect x="944.0" y="892.0" height="64.0" width="211.0" data-name="EmailAddressAttribute"></rect>
+							<path d="M944.0 924.0 L1155.0 924.0" fill="none" data-name="EmailAddressAttribute"></path>
+						</g>
+						<g transform="translate(944, 892)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EmailAddressAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EmailAddressAttribute">
+								<text x="97.5" y="14.1" stroke="none" text-anchor="middle" data-name="EmailAddressAttribute">EmailAddressAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(944, 924)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EmailAddressAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EmailAddressAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="EmailAddressAttribute">Validates an email address.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="EnumDataTypeAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="EnumDataTypeAttribute">
+							<rect x="929.0" y="966.0" height="80.0" width="241.0" data-name="EnumDataTypeAttribute"></rect>
+							<path d="M929.0 998.0 L1170.0 998.0" fill="none" data-name="EnumDataTypeAttribute"></path>
+						</g>
+						<g transform="translate(929, 966)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EnumDataTypeAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EnumDataTypeAttribute">
+								<text x="112.5" y="14.1" stroke="none" text-anchor="middle" data-name="EnumDataTypeAttribute">EnumDataTypeAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(929, 998)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EnumDataTypeAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EnumDataTypeAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="EnumDataTypeAttribute">Enables a .NET enumeration</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="EnumDataTypeAttribute">to be mapped to a data column.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FileExtensionsAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FileExtensionsAttribute">
+							<rect x="934.0" y="1056.0" height="64.0" width="231.0" data-name="FileExtensionsAttribute"></rect>
+							<path d="M934.0 1088.0 L1165.0 1088.0" fill="none" data-name="FileExtensionsAttribute"></path>
+						</g>
+						<g transform="translate(934, 1056)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileExtensionsAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileExtensionsAttribute">
+								<text x="107.5" y="14.1" stroke="none" text-anchor="middle" data-name="FileExtensionsAttribute">FileExtensionsAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(934, 1088)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileExtensionsAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileExtensionsAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="FileExtensionsAttribute">Validates file name extensions</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PhoneAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PhoneAttribute">
+							<rect x="930.0" y="1130.0" height="80.0" width="239.0" data-name="PhoneAttribute"></rect>
+							<path d="M930.0 1162.0 L1169.0 1162.0" fill="none" data-name="PhoneAttribute"></path>
+						</g>
+						<g transform="translate(930, 1130)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PhoneAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PhoneAttribute">
+								<text x="111.5" y="14.1" stroke="none" text-anchor="middle" data-name="PhoneAttribute">PhoneAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(930, 1162)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="PhoneAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PhoneAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="PhoneAttribute">Specifies that a data field value</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="PhoneAttribute">is a well-formed phone number.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UrlAttribute">
+						<g fill="#eee8d5" stroke="#33322E" data-name="UrlAttribute">
+							<rect x="954.0" y="1220.0" height="64.0" width="191.0" data-name="UrlAttribute"></rect>
+							<path d="M954.0 1252.0 L1145.0 1252.0" fill="none" data-name="UrlAttribute"></path>
+						</g>
+						<g transform="translate(954, 1220)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UrlAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UrlAttribute">
+								<text x="87.5" y="14.1" stroke="none" text-anchor="middle" data-name="UrlAttribute">UrlAttribute</text>
+								
+							</g>
+						</g>
+						<g transform="translate(954, 1252)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="UrlAttribute">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UrlAttribute">
+								<text x="0.0" y="14.1" stroke="none" data-name="UrlAttribute">Provides URL validation.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Data annotation Attributes</figcaption>
+</figure>
+<h2 id="nullable-attributes">Nullable attributes</h2>
+<p>In a nullable enabled context, the compiler performs static analysis of code to determine the null-state of all reference type variables:</p>
+<ul>
+<li>not-null: Static analysis determines that a variable has a non-null value.</li>
+<li>maybe-null: Static analysis can't determine that a variable is assigned a non-null value.</li>
+</ul>
+<p>Attributes can be aplied to our code that gives the compiler more information about the rules for your API. When calling code is compiled in a nullable enabled context, the compiler will warn callers when they violate those rules. These attributes don't enable more checks on your implementation.</p>
+<h3 id="preconditions-allownull-and-disallownull">Preconditions: AllowNull and DisallowNull</h3>
+<ul>
+<li><code>AllowNull</code>: A non-nullable parameter, field, or property may be null.</li>
+<li><code>DisallowNull</code>: A nullable parameter, field, or property should never be null.</li>
+</ul>
+<pre><code class="language-csharp">[AllowNull]
+public string ScreenName
+{
+    get =&gt; _screenName;
+    set =&gt; _screenName = value ?? GenerateRandomScreenName();
+}
+private string _screenName = GenerateRandomScreenName();
+
+[DisallowNull]
+public string? ReviewComment
+{
+    get =&gt; _comment;
+    set =&gt; _comment = value ?? throw new ArgumentNullException(nameof(value), &quot;Cannot set to null&quot;);
+}
+string? _comment;
+</code></pre>
+<h3 id="postconditions-maybenull-and-notnull">Postconditions: MaybeNull and NotNull</h3>
+<ul>
+<li><code>MaybeNull</code>: A non-nullable parameter, field, property, or return value may be null.</li>
+<li><code>NotNull</code>: A nullable parameter, field, property, or return value will never be null.</li>
+</ul>
+<pre><code class="language-csharp">[return: MaybeNull]
+public T Find&lt;T&gt;(IEnumerable&lt;T&gt; sequence, Func&lt;T, bool&gt; predicate)
+{
+    //implementation
+}
+
+public static void ThrowWhenNull([NotNull] object? value, string valueExpression = &quot;&quot;)
+{
+    _ = value ?? throw new ArgumentNullException(nameof(value), valueExpression);
+}
+</code></pre>
+<h3 id="conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull">Conditional post-conditions: NotNullWhen, MaybeNullWhen, and NotNullIfNotNull</h3>
+<ul>
+<li><code>NotNullWhen</code>: A nullable argument won't be null when the method returns the specified <code>bool</code> value.</li>
+<li><code>MaybeNullWhen</code>: A non-nullable argument may be null when the method returns the specified <code>bool</code> value.</li>
+<li><code>NotNullIfNotNull</code>: A return value, property, or argument isn't null if the argument for the specified parameter isn't null.</li>
+</ul>
+<pre><code class="language-csharp">bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
+{
+    if (_messageMap.ContainsKey(key))
+        message = _messageMap[key];
+    else
+        message = null;
+    return message is not null;
+}
+
+[return: NotNullIfNotNull(nameof(url))]
+string? GetTopLevelDomainFromFullUrl(string? url)
+{
+    //implementation
+}
+
+</code></pre>
+<h3 id="membernotnull-and-membernotnullwhen">MemberNotNull and MemberNotNullWhen</h3>
+<ul>
+<li><code>MemberNotNull</code>: The listed member won't be null when the method returns.</li>
+<li><code>MemberNotNullWhen</code>: The listed member won't be null when the method returns the specified bool value.</li>
+</ul>
+<pre><code class="language-csharp">public class Container
+{
+    private string _uniqueIdentifier; // must be initialized.
+    private string? _optionalMessage;
+
+    public Container()
+    {
+        Helper();
+    }
+
+    public Container(string message)
+    {
+        Helper();
+        _optionalMessage = message;
+    }
+
+    [MemberNotNull(nameof(_uniqueIdentifier))]
+    private void Helper()
+    {
+        _uniqueIdentifier = DateTime.Now.Ticks.ToString();
+    }
+}
+</code></pre>
+<h3 id="doesnotreturn-and-doesnotreturnif">DoesNotReturn and DoesNotReturnIf</h3>
+<ul>
+<li><code>DoesNotReturn</code>: A method or property never returns. In other words, it always throws an exception.</li>
+<li><code>DoesNotReturnIf</code>: A method or property never returns if the associated bool parameter has the specified value.</li>
+</ul>
+<pre><code class="language-csharp">[DoesNotReturn]
+private void FailFast()
+{
+    throw new InvalidOperationException();
+}
+
+public void SetState(object containedField)
+{
+    if (containedField is null)
+    {
+        FailFast();
+    }
+
+    // containedField can't be null:
+    _field = containedField;
+}
+</code></pre>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

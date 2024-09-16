@@ -1,0 +1,150 @@
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: linq-execution
+
+[C# 1|January 2002|
+* Classes
+* Structs
+* Interfaces
+* Events
+* Properties
+* Delegates
+* Operators and expressions
+* Statements
+* Attributes] ->
+
+[C# 2.0|November 2005|
+* Generics
+* Partial types
+* Anonymous methods
+* Nullable value types
+* Iterators
+* Covariance and contravariance] ->
+
+[C# 3|November 2007|
+* Auto-implemented properties
+* Anonymous types
+* Query expressions
+* Lambda expressions
+* Expression trees
+* Extension methods
+* Implicitly typed local variables
+* Partial methods
+* Object and collection initializers]->
+ 
+[C# 4| April 2010|
+* Dynamic binding
+* Named/optional arguments
+* Generic covariant and contravariant
+* Embedded interop types]->
+
+#.box direction=down
+
+[<box>C# 5|August 2012|
+* Async / Await
+* Caller info attributes] ->
+
+[C# 6|July 2015|
+* Static imports
+* Exception filters
+* Auto-property initializers
+* Expression bodied members
+* Null propagator
+* String interpolation
+* nameof operator]
+
+[C# 7|March 2017|
+* Out variables
+* Tuples and deconstruction
+* Pattern matching
+* Local functions
+* Expanded expression bodied members
+* Ref locals
+* Ref returns
+* Discards
+* Binary Literals and Digit Separators
+* Throw expressions]
+
+[C# 8|September 2019|
+* Readonly members
+* Default interface methods
+* Switch expressions
+* Property, Tuple, Positional patterns
+* Using declarations
+* Static local functions
+* Disposable ref structs
+* Nullable reference types
+* Asynchronous streams
+* Indices and ranges
+* Null-coalescing assignment
+* Unmanaged constructed types
+* Stackalloc in nested expressions
+* Enhancement of interpolated verbatim strings]
+
+
+[C# 9|November 2020|
+* Records
+* Init only setters
+* Top-level statements
+* relational and logical patterns
+* Target-typed new expressions
+* Static anonymous functions
+* Target-typed conditional expressions
+* Covariant return types
+* Extension GetEnumerator support for foreach loops
+* Lambda discard parameters
+* Attributes on local functions]
+
+[C# 10|November 2021|
+* Record structs
+* Improvements of structure types
+* Interpolated string handlers
+* global using directives
+* File-scoped namespace declaration
+* Extended property patterns
+* Improvements on lambda expressions
+* Allow const interpolated strings
+* Record types can seal ToString()
+* Improved definite assignment
+* Allow both assignment and declaration in the same deconstruction
+* Allow AsyncMethodBuilder attribute on methods
+* CallerArgumentExpression attribute
+* Enhanced #line pragma]
+
+[C# 11|November 2022|
+* Raw string literals
+* Generic math support
+* Generic attributes
+* UTF-8 string literals
+* Newlines in string interpolation expressions
+* List patterns
+* File-local types
+* Required members
+* Auto-default structs
+* Pattern match Span<char> on a constant string
+* Extended nameof scope
+* Numeric IntPtr
+* ref fields and scoped ref
+]
+
+[C# 12|November 2023|
+* Primary constructors
+* Collection expressions
+* Inline arrays
+* Optional parameters in lambda expressions
+* ref readonly parameters
+* Alias any type
+]
+
+[C# 13|
+* params collections
+* New lock type and semantics.
+* New escape sequence - \e.
+* Method group natural type improvements
+* Implicit indexer access in object initializers
+* Enable ref locals and unsafe contexts in iterators and async methods
+* Enable ref struct types to implement interfaces.
+* Allow ref struct types as arguments for type parameters in generics.
+* Partial properties and indexers are now allowed in partial types.
+]

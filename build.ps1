@@ -1,1 +1,4 @@
-bookgen md2html
+bookgen build -a BuildWeb
+cd wwwRoot
+del search.html
+cd ..

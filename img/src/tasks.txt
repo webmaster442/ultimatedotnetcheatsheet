@@ -1,0 +1,42 @@
+#direction: right
+#gravity: .8
+#title: tasks
+
+[IAsyncResult|
+Represents the status of
+an asynchronous operation]
+
+[IDisposable|
+Provides a mechanism for 
+releasing unmanaged resources]
+
+[Task|
+Represents an 
+asynchronous operation]
+
+[Task<TResult>|
+Represents an 
+asynchronous operation 
+that can return a value]
+
+[IEquatable<T>|Defines a generalized method that 
+a value type or class implements to 
+create a type-specific method for
+determining equality of instances]
+
+[ValueTask|
+Provides an awaitable 
+result of an asynchronous
+operation.]
+
+[ValueTask<TResult>|
+Provides a value type that wraps 
+a Task<TResult> and a TResult, 
+only one of which is used.]
+
+
+[IAsyncResult] <:-- [Task]
+[IDisposable] <:-- [Task] <:- [Task<TResult>]
+
+[IEquatable<T>] <:-- [ValueTask<TResult>] 
+[IEquatable<T>] <:-- [ValueTask]

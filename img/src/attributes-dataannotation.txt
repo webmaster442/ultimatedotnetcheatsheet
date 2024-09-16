@@ -1,0 +1,65 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: attributes-dataannotation
+
+[Attribute|Represents the base class
+for custom attributes.]
+
+[ValidationAttribute|Serves as the base class
+for all validation attributes.]
+
+[DisplayAttribute|Provides a general-purpose attribute
+that lets you specify localizable
+strings for types and members
+of entity partial classes.]
+
+[DisplayFormatAttribute|Specifies how data fields are displayed 
+and formatted by ASP.NET Dynamic Data.]
+
+[Attribute] <:- [ValidationAttribute]
+[Attribute] <:- [DisplayAttribute]
+[Attribute] <:- [DescriptionAttribute]
+[Attribute] <:- [DisplayFormatAttribute]
+
+[DescriptionAttribute|Specifies a description
+for a property or event.]
+
+[ValidationAttribute] <:- [AllowedValuesAttribute|Specifies a list of values 
+that should be allowed in a property.]
+[ValidationAttribute] <:- [Base64StringAttribute|Specifies that a data field
+value is a well-formed Base64 string.]
+[ValidationAttribute] <:- [CompareAttribute|Provides an attribute that compares
+two properties.]
+[ValidationAttribute] <:- [CustomValidationAttribute|Specifies a custom validation method that
+is used to validate a property or class instance.]
+[ValidationAttribute] <:- [DeniedValuesAttribute|Specifies a list of values that
+should not be allowed in a property.]
+[ValidationAttribute] <:- [LengthAttribute|Specifies the minimum and maximum length of
+collection/string data allowed in a property.]
+[ValidationAttribute] <:- [MaxLengthAttribute|Specifies the maximum length of 
+array or string data allowed in a property.]
+[ValidationAttribute] <:- [MinLengthAttribute|Specifies the minimum length of
+array or string data allowed in a property.]
+[ValidationAttribute] <:- [RangeAttribute|Specifies the numeric range constraints
+for the value of a data field.]
+[ValidationAttribute] <:- [RegularExpressionAttribute|Specifies that a data field value in ASP.NET
+Dynamic Data must match 
+the specified regular expression.]
+[ValidationAttribute] <:- [StringLengthAttribute|Specifies the minimum and maximum 
+length of characters that are allowed in a data field.]
+[ValidationAttribute] <:- [DataTypeAttribute|Specifies the name of an additional
+type to associate with a data field.]
+
+[DataTypeAttribute] <:- [CreditCardAttribute|Specifies that a data field
+value is a credit card number.]
+[DataTypeAttribute] <:- [EmailAddressAttribute|Validates an email address.]
+[DataTypeAttribute] <:- [EnumDataTypeAttribute|Enables a .NET enumeration 
+to be mapped to a data column.]
+[DataTypeAttribute] <:- [FileExtensionsAttribute|Validates file name extensions]
+
+[DataTypeAttribute] <:- [PhoneAttribute|Specifies that a data field value
+is a well-formed phone number.]
+
+[DataTypeAttribute] <:- [UrlAttribute|Provides URL validation.]

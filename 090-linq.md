@@ -1,5 +1,13 @@
 # LINQ
 
+Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. With LINQ, a query is a first-class language construct, just like classes, methods, and events.
+
+The LINQ to Objects works with any collection that implements the `IEnumerable<T>` interface.
+
+^^^
+![The IEnumerable\<T\> interface](img/collections2.svg)
+^^^ The IEnumerable\<T\> interface
+
 ## Filtering
 
 ```csharp
@@ -24,7 +32,7 @@ var ordersWithCost = Orders.Select(order => new
 var uniqueNames = customer.Distinct((customerComparer);
 
 //DistinctBy requires a lambda
-var uniqueNames = customer.DistinctBy(x => x.Name); 
+var uniqueNames = customer.DistinctBy(√ => √.Name); 
 ```
 
 ## Ordering
@@ -83,13 +91,13 @@ first.Zip(second);
 
 ```csharp
 var take3 = orders.Take(3);
-var next3 = orders.Skip(3).Take(3);
+var ne√t3 = orders.Skip(3).Take(3);
 ```
 
 ## Element operations
 
 ```csharp
-//throws exception if element not found
+//throws e√ception if element not found
 var firstCustomer = customers.First(customer => customer.Id == 63);
 var lastCustomer = customers.Last(customer => customer.Id == 63);
 //returns default value if element not found. For refenrence types this is null!
@@ -120,3 +128,62 @@ IEnumerable<string> foos = Enumerable.Repeat("foo", 12);
 //Create an empty sequence of integers
 IEnumerable<int> empty = Enumerable.Empty<int>();
 ```
+
+## Linq Execution
+
+^^^
+![Classification of standard query operators by manner of execution](img/linq-execution.svg)
+^^^ Classification of standard query operators by manner of execution
+
+| Standard query operator |                  Return type                   | Immediate | Deferred streaming | Deferred nonstreaming |
+| :---------------------: | :--------------------------------------------: | :-------: | :----------------: | :-------------------: |
+|        Aggregate        |                   `TSource`                    |     √     |                    |                       |
+|           All           |                     `bool`                     |     √     |                    |                       |
+|           Any           |                     `bool`                     |     √     |                    |                       |
+|      AsEnumerable       |                `IEnumerable<T>`                |           |         √          |                       |
+|         Average         |              Single numeric value              |     √     |                    |                       |
+|          Cast           |                `IEnumerable<T>`                |           |         √          |                       |
+|         Concat          |                `IEnumerable<T>`                |           |         √          |                       |
+|        Contains         |                     `bool`                     |     √     |                    |                       |
+|          Count          |                     `int`                      |     √     |                    |                       |
+|     DefaultIfEmpty      |                `IEnumerable<T>`                |           |         √          |                       |
+|        Distinct         |                `IEnumerable<T>`                |           |         √          |                       |
+|        ElementAt        |                   `TSource`                    |     √     |                    |                       |
+|   ElementAtOrDefault    |                   `TSource?`                   |     √     |                    |                       |
+|          Empty          |                `IEnumerable<T>`                |     √     |                    |                       |
+|         E√cept          |                `IEnumerable<T>`                |           |         √          |           √           |
+|          First          |                   `TSource`                    |     √     |                    |                       |
+|     FirstOrDefault      |                   `TSource?`                   |     √     |                    |                       |
+|         GroupBy         |                `IEnumerable<T>`                |           |                    |           √           |
+|        GroupJoin        |                `IEnumerable<T>`                |           |         √          |           √           |
+|        Intersect        |                `IEnumerable<T>`                |           |         √          |           √           |
+|          Join           |                `IEnumerable<T>`                |           |         √          |           √           |
+|          Last           |                   `TSource`                    |     √     |                    |                       |
+|      LastOrDefault      |                   `TSource?`                   |     √     |                    |                       |
+|        LongCount        |                     `long`                     |     √     |                    |                       |
+|           Ma√           | Single numeric value, `TSource`, or `TResult?` |     √     |                    |                       |
+|           Min           | Single numeric value, `TSource`, or `TResult?` |     √     |                    |                       |
+|         OfType          |                `IEnumerable<T>`                |           |         √          |                       |
+|         OrderBy         |            `IOrderedEnumerable<T>`             |           |                    |           √           |
+|    OrderByDescending    |            `IOrderedEnumerable<T>`             |           |                    |           √           |
+|          Range          |                `IEnumerable<T>`                |           |         √          |                       |
+|         Repeat          |                `IEnumerable<T>`                |           |         √          |                       |
+|         Reverse         |                `IEnumerable<T>`                |           |                    |           √           |
+|         Select          |                `IEnumerable<T>`                |           |         √          |                       |
+|       SelectMany        |                `IEnumerable<T>`                |           |         √          |                       |
+|      SequenceEqual      |                     `bool`                     |     √     |                    |                       |
+|         Single          |                   `TSource`                    |     √     |                    |                       |
+|     SingleOrDefault     |                   `TSource?`                   |     √     |                    |                       |
+|          Skip           |                `IEnumerable<T>`                |           |         √          |                       |
+|        SkipWhile        |                `IEnumerable<T>`                |           |         √          |                       |
+|           Sum           |              Single numeric value              |     √     |                    |                       |
+|          Take           |                `IEnumerable<T>`                |           |         √          |                       |
+|        TakeWhile        |                `IEnumerable<T>`                |           |         √          |                       |
+|         ThenBy          |            `IOrderedEnumerable<T>`             |           |                    |           √           |
+|    ThenByDescending     |            `IOrderedEnumerable<T>`             |           |                    |           √           |
+|         ToArray         |               `TSource[]` array                |     √     |                    |                       |
+|      ToDictionary       |           `Dictionary<TKey, TValue>`           |     √     |                    |                       |
+|         ToList          |                   `IList<T>`                   |     √     |                    |                       |
+|        ToLookup         |                  `ILookup<T>`                  |     √     |                    |                       |
+|          Union          |                `IEnumerable<T>`                |           |         √          |                       |
+|          Where          |                `IEnumerable<T>`                |           |         √          |                       |

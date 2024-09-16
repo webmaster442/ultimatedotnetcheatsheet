@@ -1,0 +1,49 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: baseclasses
+
+[Object] <:- [ValueType] <:- [Enum]
+[Object] <:- [Array]
+[Object] <:- [DynamicObject]
+[Object] <:- [ExpandoObject]
+
+
+[DynamicObject|
+Provides a base class for specifying 
+dynamic behavior at run time.|
+❗This class must be inherited from\;
+you cannot instantiate it directly.]
+
+[ExpandoObject|
+Represents an object whose members 
+can be dynamically added
+and removed at run time.]
+
+[Array|
+Provides methods for creating, manipulating, 
+searching, and sorting arrays, 
+thereby serving as the base class  for 
+all arrays in the common language runtime.|
+⚠️ You cannot derive from
+this special class]
+
+[ValueType|
+Provides the base class
+for value types.for enumerations.|
+⚠️ You cannot derive from
+this special class]
+
+[Enum|
+Provides the base class
+for enumerations.|
+⚠️ You cannot derive from
+this special class]
+
+[Object|
+Supports all classes in the .NET 
+class hierarchy and provides 
+low-level services to derived classes.
+This is the ultimate base class of all
+.NET classes\; it is the root of the type hierarchy.]

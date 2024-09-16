@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+
+<head>
+    <title>Ultimate .NET cheat sheet - Tasks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="prism.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--OpenGraph meta-->
+    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Tasks">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="1134" />
+    <meta property="og:description"
+        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+        </symbol>
+    </svg>
+
+    <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pwa/i-192.png" height="40px"> version: 24-09-16</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <div id="toclinks">
+                        <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                    </div>
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                                title="Fork me on github">
+                                <svg>
+                                    <use href="#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid" style="margin-top:150px">
+        <div class="row">
+            <div class="col-xl-10 text-justify" id="content">
+                <h1 id="tasks">Tasks</h1>
+<p>A Task in .NET represents an asynchronous operation that can return a result or complete without one. Tasks are used to perform background operations, avoiding blocking the main thread.</p>
+<h2 id="creating-and-running-tasks">Creating and Running Tasks</h2>
+<p>A Task can be started with the <code>Task.Run</code> method or alternatively with the <code>Task.Factory.StartNew</code> method.</p>
+<pre><code class="language-csharp">Task.Run(() =&gt; DoWork());
+
+Task.Factory.StartNew(() =&gt; DoWork());
+</code></pre>
+<p>Tasks can return a result using <code>Task&lt;T&gt;</code> where <code>T</code> is the type of the result:</p>
+<pre><code class="language-csharp">Task&lt;int&gt; task = Task.Run(() =&gt; Compute());
+</code></pre>
+<h2 id="task-operations">Task operations</h2>
+<p>The <code>Task.Wait()</code> Blocks the calling thread until the task finishes.</p>
+<pre><code class="language-csharp">task.Wait();
+</code></pre>
+<p>You can chain tasks by continuing them with <code>ContinueWith</code>.</p>
+<pre><code class="language-csharp">Task.Run(() =&gt; DoWork())
+    .ContinueWith(t =&gt; Console.WriteLine(&quot;Task completed!&quot;));
+</code></pre>
+<p>Tasks can be cancelled using a CancellationToken</p>
+<pre><code class="language-csharp">var tokenSource = new CancellationTokenSource();
+var token = tokenSource.Token;
+
+Task task = Task.Run(() =&gt; DoWork(token), token);
+
+tokenSource.Cancel();  // Cancel the task
+</code></pre>
+<h2 id="async-await">Async await</h2>
+<p>The <code>async</code> and <code>await</code> keywords are used to write asynchronous code in a simplified manner. This is often combined with tasks to ensure non-blocking operations.</p>
+<pre><code class="language-csharp">public async Task DoWorkAsync() 
+{
+    await Task.Delay(1000);
+    Console.WriteLine(&quot;Work completed&quot;);
+}
+</code></pre>
+<h2 id="task-types">Task types</h2>
+<p>In C#, both <code>Task</code> and <code>ValueTask</code> are used to represent asynchronous operations, but they are optimized for different scenarios.</p>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="836.0" height="534.0" viewBox="0 0 836 534" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >tasks</title>
+	<desc >#direction: right
+	#gravity: .8
+	#title: tasks
+	
+	[IAsyncResult|
+	Represents the status of
+	an asynchronous operation]
+	
+	[IDisposable|
+	Provides a mechanism for 
+	releasing unmanaged resources]
+	
+	[Task|
+	Represents an 
+	asynchronous operation]
+	
+	[Task&lt;TResult&gt;|
+	Represents an 
+	asynchronous operation 
+	that can return a value]
+	
+	[IEquatable&lt;T&gt;|Defines a generalized method that 
+	a value type or class implements to 
+	create a type-specific method for
+	determining equality of instances]
+	
+	[ValueTask|
+	Provides an awaitable 
+	result of an asynchronous
+	operation.]
+	
+	[ValueTask&lt;TResult&gt;|
+	Provides a value type that wraps 
+	a Task&lt;TResult&gt; and a TResult, 
+	only one of which is used.]
+	
+	
+	[IAsyncResult] &lt;:-- [Task]
+	[IDisposable] &lt;:-- [Task] &lt;:- [Task&lt;TResult&gt;]
+	
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask&lt;TResult&gt;] 
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="534.0" width="836.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M250.8 40.0 L286 40 L336 60.90592334494774 L336.0 60.9 " fill="none"></path>
+					</g>
+					<path d="M250.8 34.7 L250.8 40.0 L250.8 45.3 L237.5 40.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M268.8 160.0 L286 160 L336 139.09407665505228 L336.0 139.1 " fill="none"></path>
+					</g>
+					<path d="M268.8 154.7 L268.8 160.0 L268.8 165.3 L255.5 160.0 Z"></path>
+					<path d="M536.3 100.0 L573 100 L593 100 L593.0 100.0 " fill="none"></path>
+					<path d="M536.3 94.7 L536.3 100.0 L536.3 105.3 L523.0 100.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M271.4 422.9 L286 429.5 L306 429.5 L306.0 429.5 " fill="none"></path>
+					</g>
+					<path d="M273.5 418.1 L271.4 422.9 L269.2 427.8 L259.2 417.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M271.4 299.1 L286 292.5 L330 292.5 L330.0 292.5 " fill="none"></path>
+					</g>
+					<path d="M269.2 294.2 L271.4 299.1 L273.5 303.9 L259.2 304.5 Z"></path>
+					<g data-name="IAsyncResult">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IAsyncResult">
+							<rect x="28.5" y="0.0" height="80.0" width="209.0" data-name="IAsyncResult"></rect>
+							<path d="M28.5 32.0 L237.5 32.0" fill="none" data-name="IAsyncResult"></path>
+						</g>
+						<g transform="translate(28.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncResult">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncResult">
+								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncResult">IAsyncResult</text>
+								
+							</g>
+						</g>
+						<g transform="translate(28.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IAsyncResult">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IAsyncResult">
+								<text x="0.0" y="14.1" stroke="none" data-name="IAsyncResult">Represents the status of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IAsyncResult">an asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IDisposable">
+							<rect x="10.5" y="120.0" height="80.0" width="245.0" data-name="IDisposable"></rect>
+							<path d="M10.5 152.0 L255.5 152.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(10.5, 120)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable">
+								<text x="114.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(10.5, 152)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable">Provides a mechanism for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable">releasing unmanaged resources</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Task">
+							<rect x="336.0" y="60.0" height="80.0" width="187.0" data-name="Task"></rect>
+							<path d="M336.0 92.0 L523.0 92.0" fill="none" data-name="Task"></path>
+						</g>
+						<g transform="translate(336, 60)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task">
+								<text x="85.5" y="14.1" stroke="none" text-anchor="middle" data-name="Task">Task</text>
+								
+							</g>
+						</g>
+						<g transform="translate(336, 92)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task">asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task&lt;TResult&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Task&lt;TResult&gt;">
+							<rect x="593.0" y="51.5" height="97.0" width="187.0" data-name="Task&lt;TResult&gt;"></rect>
+							<path d="M593.0 83.5 L780.0 83.5" fill="none" data-name="Task&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(593, 51.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task&lt;TResult&gt;">
+								<text x="85.5" y="14.1" stroke="none" text-anchor="middle" data-name="Task&lt;TResult&gt;">Task&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(593, 83.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task&lt;TResult&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task&lt;TResult&gt;">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task&lt;TResult&gt;">asynchronous operation</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Task&lt;TResult&gt;">that can return a value</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEquatable&lt;T&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="IEquatable&lt;T&gt;">
+							<rect x="0.0" y="304.5" height="113.0" width="266.0" data-name="IEquatable&lt;T&gt;"></rect>
+							<path d="M0.0 336.5 L266.0 336.5" fill="none" data-name="IEquatable&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 304.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEquatable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEquatable&lt;T&gt;">
+								<text x="125.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEquatable&lt;T&gt;">IEquatable&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 336.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEquatable&lt;T&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEquatable&lt;T&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEquatable&lt;T&gt;">Defines a generalized method that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEquatable&lt;T&gt;">a value type or class implements to</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEquatable&lt;T&gt;">create a type-specific method for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IEquatable&lt;T&gt;">determining equality of instances</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueTask">
+							<rect x="330.0" y="244.0" height="97.0" width="199.0" data-name="ValueTask"></rect>
+							<path d="M330.0 276.0 L529.0 276.0" fill="none" data-name="ValueTask"></path>
+						</g>
+						<g transform="translate(330, 244)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask">
+								<text x="91.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask">ValueTask</text>
+								
+							</g>
+						</g>
+						<g transform="translate(330, 276)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask">Provides an awaitable</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask">result of an asynchronous</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask">operation.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask&lt;TResult&gt;">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ValueTask&lt;TResult&gt;">
+							<rect x="306.0" y="381.0" height="97.0" width="247.0" data-name="ValueTask&lt;TResult&gt;"></rect>
+							<path d="M306.0 413.0 L553.0 413.0" fill="none" data-name="ValueTask&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(306, 381)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask&lt;TResult&gt;">
+								<text x="115.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask&lt;TResult&gt;">ValueTask&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(306, 413)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask&lt;TResult&gt;">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask&lt;TResult&gt;">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask&lt;TResult&gt;">Provides a value type that wraps</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask&lt;TResult&gt;">a Task&lt;TResult&gt; and a TResult,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask&lt;TResult&gt;">only one of which is used.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Task Types</figcaption>
+</figure>
+<h3 id="when-to-use-a-task">When to use a Task</h3>
+<ul>
+<li><p><strong>Asynchronous method always completes asynchronously</strong>:</p>
+<p>If the operation always runs asynchronously and returns a result in the future, use Task. The overhead of Task is justified for managing the state of the operation.</p>
+</li>
+<li><p><strong>Long-running or CPU-bound operations</strong>:</p>
+<p>When the operation involves long-running or CPU-intensive tasks, Task is the standard choice.</p>
+</li>
+<li><p><strong>Multiple await points or continuations</strong>:</p>
+<p>If the method has multiple asynchronous steps or continuations (e.g., several <code>await</code> calls), <code>Task</code> is better suited as it provides efficient memory management for complex operations.</p>
+</li>
+<li><p><strong>Memory management is not a major concern</strong>:</p>
+<p>In many scenarios, the additional memory overhead of <code>Task</code> is minimal and worth the simplicity it offers.</p>
+</li>
+<li><p><strong>You expect consumers to use <code>.Result</code>, <code>.Wait()</code>, or <code>Task.WhenAll</code></strong>:</p>
+<p>Task handles these scenarios better because it is reference type and has additional functionality for managing asynchronous flows.</p>
+</li>
+</ul>
+<h3 id="when-to-use-a-valuetask">When to use a ValueTask</h3>
+<ul>
+<li><p><strong>Operation may complete synchronously</strong>:</p>
+<p>If the operation sometimes completes synchronously (e.g., from a cache or optimized path), <code>ValueTask</code> avoids allocating a <code>Task</code> object unnecessarily.</p>
+</li>
+<li><p><strong>Performance-sensitive, high-frequency methods</strong>:</p>
+<p>In performance-critical code where the method is called frequently, and synchronous completions are common, It can reduce memory allocations and improve efficiency.</p>
+</li>
+<li><p><strong>Low memory pressure is essential</strong>:</p>
+<p>It is a value type, so it avoids heap allocations when it completes synchronously, which is useful in scenarios where memory allocation needs to be minimized.</p>
+</li>
+<li><p><strong>Limited continuation and lifetime</strong>:</p>
+<p>If you are sure that the <code>ValueTask</code> will only be awaited once (e.g., there are no complex continuations, multiple awaits, or reuse), it’s safe to use.</p>
+</li>
+<li><p><strong>Pooling or caching scenarios</strong>:</p>
+<p>When implementing methods that benefit from object pooling or where synchronous fast-path execution is common (like low-latency I/O or cached results), it is a good option.</p>
+</li>
+</ul>
+<h3 id="what-not-to-do-with-valuetasks">What not to do with ValueTasks</h3>
+<p><strong>If you do any of the following, then the results are undefined</strong>:</p>
+<ul>
+<li>Awaiting the instance multiple times.</li>
+<li>Calling <code>AsTask()</code> multiple times.</li>
+<li>Using more than one of these techniques to consume the instance.</li>
+</ul>
+<h2 id="asyncawait-best-practices">Async/await best practices</h2>
+<h3 id="avoid-async-void">Avoid async void</h3>
+<p>Void-returning async methods have a specific purpose: to make asynchronous event handlers possible. Async void methods have different error-handling semantics. When an exception is thrown out of an <code>async Task</code> or <code>async Task&lt;T&gt;</code> method, that exception is captured and placed on the <code>Task</code> object. With async void methods, there is no <code>Task</code> object, so any exceptions thrown out of an <code>async void</code> method will be raised directly on the SynchronizationContext that was active when the <code>async void</code> method started.</p>
+<pre><code class="language-csharp">private async void ThrowExceptionAsync()
+{
+  throw new InvalidOperationException();
+}
+
+public void AsyncVoidExceptions_CannotBeCaughtByCatch()
+{
+  try
+  {
+    ThrowExceptionAsync();
+  }
+  catch (Exception)
+  {
+    // The exception is never caught here!
+    throw;
+  }
+}
+</code></pre>
+<p>These exceptions can be observed using AppDomain.UnhandledException or a similar catch-all event.</p>
+<h3 id="async-all-the-way">Async All the Way</h3>
+<p>“Async all the way” means that you shouldn’t mix synchronous and asynchronous code without carefully considering the consequences. In particular, it’s usually a bad idea to block on async code by calling Task.Wait or Task.Result. This is an especially common problem that can cause deadlocks.</p>
+<pre><code class="language-csharp">public static class DeadlockDemo
+{
+  private static async Task DelayAsync()
+  {
+    await Task.Delay(1000);
+  }
+  // This method causes a deadlock when called in a GUI or ASP.NET context.
+  public static void Test()
+  {
+    // Start the delay.
+    var delayTask = DelayAsync();
+    // Wait for the delay to complete.
+    delayTask.Wait();
+  }
+}
+</code></pre>
+<h3 id="configure-context">Configure Context</h3>
+<p>By using <code>ConfigureAwait</code>, you enable a small amount of parallelism: Some asynchronous code can run in parallel with the GUI thread instead of constantly badgering it with bits of work to do. Aside from performance, ConfigureAwait has another important aspect: It can avoid deadlocks.</p>
+<p>You should not use ConfigureAwait when you have code after the await in the method that needs the context. For GUI apps, this includes any code that manipulates GUI elements, writes data-bound properties or depends on a GUI-specific type.</p>
+<pre><code class="language-csharp">private async Task HandleClickAsync()
+{
+  // Can use ConfigureAwait here.
+  await Task.Delay(1000).ConfigureAwait(continueOnCapturedContext: false);
+}
+private async void button1_Click(object sender, EventArgs e)
+{
+  button1.Enabled = false;
+  try
+  {
+    // Can't use ConfigureAwait here.
+    await HandleClickAsync();
+  }
+  finally
+  {
+    // We are back on the original context for this method.
+    button1.Enabled = true;
+  }
+}
+</code></pre>
+
+            </div>
+            <div class="col-xl-2">
+                <div class="card" id="pagenav">
+                    <h4 class="card-title">On this page</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
+
+    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

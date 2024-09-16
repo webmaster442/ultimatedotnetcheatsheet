@@ -1,6 +1,6 @@
 # Reflection
 
-### Get all types that implement a given interface
+## Get all types that implement a given interface
 
 ```csharp
 public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assembly,
@@ -17,7 +17,7 @@ public static IEnumerable<Type> GetTypesThatImplement<TInterface>(Assembly assem
 }
 ```
 
-### Get assembly version
+## Get assembly version
 
 ```csharp
 public static Version GetCurrentAssemblyVersion()
@@ -29,7 +29,7 @@ public static Version GetCurrentAssemblyVersion()
 }
 ```
 
-### Check if a type is a record class
+## Check if a type is a record class
 
 ```csharp
 public static bool IsRecordType(Type type)
@@ -46,7 +46,7 @@ public static bool IsRecordType(Type type)
 }
 ```
 
-### Check if a type is a ref struct
+## Check if a type is a ref struct
 
 ```csharp
 public static bool IsRefStruct(Type type)
@@ -55,7 +55,7 @@ public static bool IsRefStruct(Type type)
 }
 ```
 
-### Create an instance of a type with optional property initializers
+## Create an instance of a type with optional property initializers
 
 **Notes**
 
