@@ -13,7 +13,7 @@
     "Title": "Ultimate .NET cheat sheet"
   },
   "TargetWeb": {
-    "OutPutDirectory": "wwwRoot",
+    "OutPutDirectory": "docs",
     "TemplateFile": "frontend\\TemplateWeb.html",
     "TemplateAssets": [
       {

@@ -1,0 +1,215 @@
+:root {
+    --main: hsl(44, 87%, 94%);
+    --main-alt: hsl(46, 42%, 88%);
+    --main-alt2: hsl(44, 98%, 54%);
+    --text: hsl(48, 5%, 19%);
+    --dotnet: hsl(254, 69%, 49%);
+    --navbar: hsl(60, 4%, 14%);
+    --links: hsl(254, 69%, 49%);
+
+    --layer-nav: 10;
+    --layer-toc: 20;
+    --nav-iconsize: 36px;
+}
+
+/*HTML elements*/
+
+body {
+    margin: 0px;
+    color: var(--text);
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "Alef", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    border-bottom: 1px solid var(--dotnet);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dotnet);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    color: var(--links);
+}
+
+img {
+    margin: 0px auto;
+    display: block;
+}
+
+svg {
+    display: inherit;
+    margin: 0px auto;
+}
+
+code {
+    color: #dd4a68;
+    font-family: "Jetbrains Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+pre {
+    position: relative;
+    font-family: "Jetbrains Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+pre code {
+    overflow: auto;
+    display: block;
+    font-family: "Jetbrains Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid var(--main-alt);
+}
+
+th {
+    background-color: var(--main-alt);
+    border: 1px solid var(--color-text);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--main-alt);
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+/*Interactive elements*/
+
+#notify {
+    color: var(--main-alt2);
+    padding: 6px;
+    font-weight: bold;
+    display: none;
+}
+
+
+/* Main grid */
+
+.container {
+    display: block;
+    grid-template-rows: 1fr;
+    gap: 0px 8px;
+    grid-template-areas: "Toc Content";
+    transition: 0.5s;
+}
+
+/* Content */
+
+.content {
+    margin: 60px auto 0px auto;
+}
+
+#intro {
+    display: none;
+}
+
+@media print {
+
+    @page {
+        margin-top: 5mm;
+        margin-bottom: 5mm;
+        margin-left: 10mm;
+        margin-right: 10mm;
+    }
+
+    body {
+        color: black;
+        background: white;
+    }
+
+    h1 {
+        page-break-before: always;
+    }
+
+    img,
+    svg {
+        max-width: 235mm;
+        max-height: 345mm;
+        margin: 0 auto;
+        /*border: 1px solid red;*/
+    }
+
+    p,
+    pre,
+    code,
+    table {
+        break-inside: avoid;
+    }
+
+    :not(pre)>code[class*=language-], pre[class*=language-] {
+        border: none;
+    }
+
+    pre code {
+        line-break: anywhere;
+        overflow: hidden;
+    }
+
+    .pagebreak {
+        display: block;
+        visibility: collapse;
+        page-break-after: always;
+    }
+
+    /*Manual page break adjustments*/
+    #keywords,
+    #loops,
+    #classes-and-objects,
+    #inheritance,
+    #interfaces,
+    #tupples,
+    #delegates,
+    #multicast-delegates,
+    #predicate,
+    #creating-custom-eventargs,
+    #base-class-hierarchy-under-the-hood,
+    #idisposable-iasyncdisposable,
+    #custom-date-and-time-format-strings,
+    #implementing-an-own-exception,
+    #multiple-constraints,
+    #covariance,
+    #constant-pattern,
+    #property-pattern,
+    #list-patterns,
+    #task-types,
+    #configure-context,
+    #data-annotation,
+    #nullable-attributes,
+    #xml-serialization-example,
+    #json-serialization,
+    #defining-a-custom-validation-attribute,
+    #minimal-mvvm-implementation,
+    #wpf-class-hierarchy,
+    #windows-froms-class-hierarchy,
+    #maui-class-hierarchy {
+        page-break-before: always
+    }
+
+    #access-modifiers {
+        page-break-before: avoid
+    }
+}
