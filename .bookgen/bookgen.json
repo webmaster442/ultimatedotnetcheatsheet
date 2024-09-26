@@ -27,6 +27,11 @@
         "Minify": false
       },
       {
+        "Source": "frontend\\robots.txt",
+        "Target": "robots.txt",
+        "Minify": false
+      },
+      {
         "Source": "frontend\\style.css",
         "Target": "style.css",
         "Minify": false
