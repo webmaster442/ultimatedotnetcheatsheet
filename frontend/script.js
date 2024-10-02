@@ -172,6 +172,8 @@ function print() {
             <html>
             <head>
                 <title>Print content: ${document.title}</title>
+                <link rel="stylesheet" href="prism.css" type="text/css">
+                <script src="prism.js" type="text/javascript"></script>
                 <style>
                     body { font-family: Arial, sans-serif; }
                     h1 { color: #333; }
