@@ -1,6 +1,7 @@
 ### 2024.10.02
 
 * Added changelog to the website
+* Added per page print support
 
 ###  2024.09.16
 

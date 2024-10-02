@@ -164,6 +164,28 @@ function changelogModal() {
     });
 }
 
+function print() {
+    let divContents = document.getElementById("content").innerHTML;
+    let printWindow = window.open('', '', '');
+    printWindow.document.open();
+    printWindow.document.write(`
+            <html>
+            <head>
+                <title>Print content: ${document.title}</title>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    h1 { color: #333; }
+                </style>
+            </head>
+            <body>
+                ${divContents}
+            </body>
+            </html>
+        `);
+    printWindow.document.close();
+    printWindow.print();
+}
+
 window.onscroll = function () {
     const scrollBtn = document.getElementById('navigate-top');
     if (document.body.scrollTop > 100
