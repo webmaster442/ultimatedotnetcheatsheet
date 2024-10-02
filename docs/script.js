@@ -137,6 +137,54 @@ function themeSwitcher() {
     });
 }
 
+function changelogModal() {
+
+    let modalContent = document.getElementById("modalContent");
+    fetch('changelog.html').then(response => {
+        if (!response.ok) {
+            throw new Error("Network error");
+        }
+        return response.text();
+    }).then(data => {
+        modalContent.innerHTML = data;
+    })
+        .catch(error => {
+            modalContent.innerHTML = 'Error loading changelog.';
+            console.error(error);
+        });
+
+    let modalInstance = new bootstrap.Modal(document.getElementById("changelogModal"));
+    modalInstance.show();
+
+    document.getElementById("closeModalHeader").addEventListener('click', function () {
+        modalInstance.hide();
+    });
+    document.getElementById("closeModalFooter").addEventListener('click', function () {
+        modalInstance.hide();
+    });
+}
+
+function print() {
+    let divContents = document.getElementById("content").innerHTML;
+    let printWindow = window.open('', '', '');
+    printWindow.document.open();
+    printWindow.document.write(`
+            <html>
+            <head>
+                <title>Print content: ${document.title}</title>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    h1 { color: #333; }
+                </style>
+            </head>
+            <body>
+                ${divContents}
+            </body>
+            </html>
+        `);
+    printWindow.document.close();
+    printWindow.print();
+}
 
 window.onscroll = function () {
     const scrollBtn = document.getElementById('navigate-top');
