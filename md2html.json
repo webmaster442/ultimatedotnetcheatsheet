@@ -1,5 +1,16 @@
 [
   {
+    "Name": "Changelog",
+    "Arguments": [
+      "-i",
+      "changelog.md",
+      "-ns",
+      "-r",
+      "-o",
+      "docs\\changelog.html"
+    ]
+  },
+  {
     "Name": "Print generation",
     "Arguments": [
       "--svg",

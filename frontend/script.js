@@ -137,6 +137,32 @@ function themeSwitcher() {
     });
 }
 
+function changelogModal() {
+
+    let modalContent = document.getElementById("modalContent");
+    fetch('changelog.html').then(response => {
+        if (!response.ok) {
+            throw new Error("Network error");
+        }
+        return response.text();
+    }).then(data => {
+        modalContent.innerHTML = data;
+    })
+        .catch(error => {
+            modalContent.innerHTML = 'Error loading changelog.';
+            console.error(error);
+        });
+
+    let modalInstance = new bootstrap.Modal(document.getElementById("changelogModal"));
+    modalInstance.show();
+
+    document.getElementById("closeModalHeader").addEventListener('click', function () {
+        modalInstance.hide();
+    });
+    document.getElementById("closeModalFooter").addEventListener('click', function () {
+        modalInstance.hide();
+    });
+}
 
 window.onscroll = function () {
     const scrollBtn = document.getElementById('navigate-top');
