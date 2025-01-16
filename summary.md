@@ -9,6 +9,7 @@
 * [Generics](075-generics.md)
 * [Collections](080-collections.md)
 * [LINQ](090-linq.md)
+* [Regular Expressions](095-regex.md)
 * [Pattern matching](100-paternmatch.md)
 * [Tasks](105-tasks.md)
 * [I/O](110-io.md)
@@ -19,3 +20,5 @@
 * [Reflection](130-reflection.md)
 * [UI](140-ui.md)
 * [Useful NuGet packages](150-nuget.md)
+* [Keyboard Shortcuts](155-shortcuts.md)
+* [C# Version History](160-csharp-versions.md)

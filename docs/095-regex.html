@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
 
 <head>
-    <title>Ultimate .NET cheat sheet - Generics</title>
+    <title>Ultimate .NET cheat sheet - Regular Expressions</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -17,7 +17,7 @@
     <!--OpenGraph meta-->
     <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ultimate .NET cheat sheet - Generics">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Regular Expressions">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
     <meta property="og:image:type" content="image/webp" />
@@ -119,137 +119,316 @@
         <div class="container">
             <div class="row" style="margin: 0px auto;">
                 <div class="col-lg-10" id="content">
-                    <h1 id="generics">Generics</h1>
-<p>Generics in C# allow you to define classes, methods, interfaces, and delegates with type parameters, enabling type safety and code reuse without compromising performance.</p>
-<p>Type parameters can be defined for types and methods using angle brackets (<code>&lt;&gt;</code>).</p>
-<h2 id="constraints">Constraints</h2>
-<p>Generic constraints in C# provide a way to restrict the types that can be used as arguments for a generic type parameter. Without constraints, generic type parameters can be any type (class, struct, enum, etc.). However, sometimes you want to limit the generic type to certain kinds of types (e.g., reference types, value types, types that implement a specific interface, etc.). Constraints are declared using the <code>where</code> clause in the generic type or method declaration.</p>
-<h3 id="no-constraints">No Constraints</h3>
-<p>If you don't specify any constraints, the type parameter can be any type.</p>
-<pre><code class="language-csharp">public class GenericClass&lt;T&gt;
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="value-type">Value Type</h3>
-<pre><code class="language-csharp">public class ValueTypeOnly&lt;T&gt; where T : struct
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="reference-type">Reference Type</h3>
-<pre><code class="language-csharp">public class ReferenceTypeOnly&lt;T&gt; where T : class
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="parameterless-constructor">Parameterless Constructor</h3>
-<p>The <code>new()</code> constraint ensures that the type <code>T</code> has a parameterless constructor. This is useful when you need to create instances of the type within the generic class or method.</p>
-<pre><code class="language-csharp">public class InstantiateType&lt;T&gt; where T : new()
-{
-    public T CreateInstance()
-    {
-        return new T(); // Requires T to have a parameterless constructor
-    }
-}
-</code></pre>
-<h3 id="base-class-or-implemented-interface">Base Class or Implemented interface</h3>
-<pre><code class="language-csharp">public class BaseClass { }
-public class DerivedClass : BaseClass { }
-
-public class DerivedTypeOnly&lt;T&gt; where T : BaseClass
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="multiple-constraints">Multiple Constraints</h3>
-<pre><code class="language-csharp">public class MultiConstraint&lt;T&gt; where T : class, new()
-{
-    public T CreateInstance()
-    {
-        return new T(); // T must be a reference type and have a parameterless constructor
-    }
-}
-</code></pre>
-<h3 id="enum">Enum</h3>
-<pre><code class="language-csharp">public class EnumConstraint&lt;T&gt; where T : struct, Enum
-{
-    public void PrintEnumValues()
-    {
-        foreach (var value in Enum.GetValues(typeof(T)))
-        {
-            Console.WriteLine(value);
-        }
-    }
-}
-</code></pre>
-<h3 id="delegate">Delegate</h3>
-<pre><code class="language-csharp">public class DelegateConstraint&lt;T&gt; where T : Delegate
-{
-    public void InvokeDelegate(T del)
-    {
-        del.DynamicInvoke(); // Invoke delegate dynamically
-    }
-}
-</code></pre>
-<h3 id="notnull">notnull</h3>
-<p>The <code>notnull</code> constraint restricts the generic type parameter <code>T</code> to types that are not nullable, meaning:</p>
+                    <h1 id="regular-expressions">Regular Expressions</h1>
+<p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is commonly used for:</p>
 <ul>
-<li>It can be any value type</li>
-<li>It can be any non-nullable reference type</li>
-<li>It cannot be nullable types like int? (nullable value type) or string? (nullable reference type in C# 8.0 with nullable reference types enabled).</li>
+<li>Pattern Matching: Finding specific sequences in text (e.g., dates, phone numbers).</li>
+<li>Validation: Checking if a string meets a specific format (e.g., email addresses).</li>
+<li>Search and Replace: Modifying text by identifying and replacing patterns.</li>
+<li>Splitting Strings: Breaking strings into parts based on a pattern.</li>
 </ul>
-<pre><code class="language-csharp">public class NotNullConstraint&lt;T&gt; where T : notnull
+<p>The <code>System.Text.RegularExpressions</code> namespace provides the primary classes for regex operations.</p>
+<h2 id="anchors">Anchors</h2>
+<p>Anchors are special characters that allow you to specify where in the string a match should occur. They are useful for enforcing strict matching criteria and can be combined with other patterns to precisely define where a match should occur within the input string.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>^</code></td>
+<td style="text-align: center;">Start of string, or start of line in multi-line pattern</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\A</code></td>
+<td style="text-align: center;">Start of string</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>$</code></td>
+<td style="text-align: center;">End of string, or end of line in multi-line pattern</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\Z</code></td>
+<td style="text-align: center;">End of string</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\b</code></td>
+<td style="text-align: center;">Word boundary</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\B</code></td>
+<td style="text-align: center;">Not word boundary</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\&lt;</code></td>
+<td style="text-align: center;">Start of word</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\&gt;</code></td>
+<td style="text-align: center;">End of word</td>
+</tr>
+</tbody>
+</table>
+<h2 id="character-classes-and-special-chars">Character Classes and special chars</h2>
+<p>Character classes are patterns that match a single character from a specified set of characters.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\c</code></td>
+<td style="text-align: center;">Control character</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\s</code></td>
+<td style="text-align: center;">White space</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\S</code></td>
+<td style="text-align: center;">Not white space</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\d</code></td>
+<td style="text-align: center;">Digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\D</code></td>
+<td style="text-align: center;">Not digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\w</code></td>
+<td style="text-align: center;">Word</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\W</code></td>
+<td style="text-align: center;">Not word</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\x</code></td>
+<td style="text-align: center;">A Hexade­cimal digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\O</code></td>
+<td style="text-align: center;">Octal digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\n</code></td>
+<td style="text-align: center;">New line</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\r</code></td>
+<td style="text-align: center;">Carriage return</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\t</code></td>
+<td style="text-align: center;">Tab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\v</code></td>
+<td style="text-align: center;">Vertical tab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\f</code></td>
+<td style="text-align: center;">Form feed</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\xxx</code></td>
+<td style="text-align: center;">Octal character xxx</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\xhh</code></td>
+<td style="text-align: center;">Hex character hh</td>
+</tr>
+</tbody>
+</table>
+<h2 id="groups-and-ranges">Groups and Ranges</h2>
+<p>Groups are used to create subpatterns within a larger pattern. They are enclosed in parentheses <code>()</code> and allow you to apply quantifiers or modifiers to multiple characters. Groups can be referenced later in the expression or used for capturing matches.</p>
+<p>Ranges specify a range of characters to match within square brackets <code>[]</code>. For instance, <code>[a-z]</code> matches any lowercase letter from <code>a</code> to <code>z</code>. They provide a concise way to match characters within a specific set or range. Together, groups and ranges enhance the power and flexibility of regular expressions for pattern matching tasks.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>.</code></td>
+<td style="text-align: center;">Any character except new line (<code>\n</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(a \| b)</code></td>
+<td style="text-align: center;">a or b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(...)</code></td>
+<td style="text-align: center;">Group</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(?:...)</code></td>
+<td style="text-align: center;">Passive (non-c­apt­uring) group</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[abc]</code></td>
+<td style="text-align: center;">Range (a or b or c)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[^abc]</code></td>
+<td style="text-align: center;">Not (a or b or c)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[a-q]</code></td>
+<td style="text-align: center;">Lower case letter from a to q</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[A-Q]</code></td>
+<td style="text-align: center;">Upper case letter from A to Q</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[0-7]</code></td>
+<td style="text-align: center;">Digit from 0 to 7</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\x</code></td>
+<td style="text-align: center;">Group/­sub­pattern number &quot;­x&quot;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quantifiers">Quanti­fiers</h2>
+<p>Quantifiers specify the quantity of the preceding element in the pattern. They control how many times a character, group, or character class should be matched in the input string.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: center;">0 or more</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{3}</code></td>
+<td style="text-align: center;">Exactly 3</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: center;">1 or more</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{3,}</code></td>
+<td style="text-align: center;">3 or more</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>?</code></td>
+<td style="text-align: center;">0 or 1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{3,5}</code></td>
+<td style="text-align: center;">3, 4 or 5</td>
+</tr>
+</tbody>
+</table>
+<h1 id="regex-best-practices">Regex best practices</h1>
+<ol>
+<li><p>Avoid Overcomplication: Use simple patterns that are easy to understand. Complex regex can be hard to read and debug. E.g.: The Pattern <code>^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$</code> matches the string <code>2024-12-06</code>, so does the <code>^\d{4}-\d{2}-\d{2}$</code> regex, but the later one is easier to understand.</p>
+</li>
+<li><p>Anchor Patterns to the Start and End: Use <code>^</code> (start) and <code>$</code> (end) when matching the entire input. This avoids unintended partial matches. E.g.: <code>\d+</code> matches <code>123</code> in <code>abc123</code>. With anchors <code>^\d+$</code> matches only <code>123</code></p>
+</li>
+<li><p>Escape Special Characters: Use <code>\</code> to escape special regex characters (<code>.</code>, <code>*</code>, <code>?</code>, etc.) when matching them literally.</p>
+</li>
+<li><p>Avoid Backtracking: Patterns with multiple overlapping possibilities (e.g.: <code>(.*)*</code>) can lead to inefficient backtracking.</p>
+</li>
+<li><p>Use Named Groups for Clarity.: Use named capture groups to improve readability and make extracted values easier to work with. E.g.: <code>(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})</code></p>
+</li>
+<li><p>Avoid Overuse: Use regex only when necessary. Simple string operations (e.g., <code>Contains</code>, <code>StartsWith</code>) are often more efficient for straightforward tasks.</p>
+</li>
+<li><p>Document Your Regex: Add comments or documentation explaining the purpose of complex patterns.</p>
+</li>
+<li><p>Use OWASP recommended patterns: The Open Web Application Security Project (OWASP) provides guidelines and patterns to avoid common security risks, particularly around input validation and avoiding vulnerabilities like ReDoS (Regular Expression Denial of Service). - <a href="https://owasp.org/www-community/OWASP_Validation_Regex_Repository" target="_blank">https://owasp.org/www-community/OWASP_Validation_Regex_Repository</a></p>
+</li>
+</ol>
+<h2 id="regex-operations">Regex operations</h2>
+<h3 id="match-a-string">Match a string</h3>
+<pre><code class="language-csharp">Regex regex = new Regex(@&quot;^\$(a|b)$&quot;);
+Match match = regex.Match(input);
+if (match.Success)
 {
-    public T Value { get; set; }
-
-    public NotNullConstraint(T value)
-    {
-        Value = value ?? throw new ArgumentNullException(nameof(value), &quot;Value cannot be null&quot;);
-    }
+    //input string matches pattern
 }
-
-// Allowed: Non-nullable reference type (string)
-NotNullConstraint&lt;string&gt; stringConstraint = new NotNullConstraint&lt;string&gt;(&quot;Hello&quot;);
-
-// Allowed: Non-nullable reference type (string)
-NotNullConstraint&lt;string&gt; stringConstraint = new NotNullConstraint&lt;string&gt;(&quot;Hello&quot;);
-
-// Not allowed: Nullable reference type (string?) in C# 8.0ű
-// compile error
-NotNullConstraint&lt;string?&gt; nullableStringConstraint = new NotNullConstraint&lt;string?&gt;(null);
-
-// Not allowed: Nullable value type (int?)
-// compile error
-NotNullConstraint&lt;int?&gt; nullableValueConstraint = new NotNullConstraint&lt;int?&gt;(null);
 </code></pre>
-<h2 id="covariance">Covariance</h2>
-<p>Covariance allows you to use a more derived type than originally specified. In C#, covariance applies to generic type parameters in interfaces and delegates when used for output (return types). You declare a type parameter as covariant using the <code>out</code> keyword.</p>
-<pre><code class="language-csharp">public interface ICovariant&lt;out T&gt;
+<h3 id="multiple-matches">Multiple Matches</h3>
+<pre><code class="language-csharp">Regex pattern = new Regex(@&quot;^\$(a|b)$&quot;);
+foreach (Match m in pattern.Matches(input))
 {
-    T GetItem();
+    Console.WriteLine($&quot;Match: {m.Value}&quot;);
 }
 </code></pre>
-<p>Here, <code>T</code> is covariant because it is marked with the <code>out</code> keyword, and it can only be used as a return type. The <code>out</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>ICovariant&lt;Dog&gt;</code> can be treated as <code>ICovariant&lt;Animal&gt;</code>:</p>
-<pre><code class="language-csharp">ICovariant&lt;Animal&gt; animals = new CovariantImplementation&lt;Dog&gt;();
-Animal animal = animals.GetItem();
+<h3 id="check-for-match">Check for Match</h3>
+<pre><code class="language-csharp">Regex pattern = new Regex(@&quot;^\$(a|b)$&quot;);
+bool isMatch = pattern.IsMatch(input);
 </code></pre>
-<h2 id="contravariance">Contravariance</h2>
-<p>Contravariance allows you to use a more general (or base) type than originally specified. In C#, contravariance applies to generic type parameters in interfaces and delegates when used for input (method parameters). You declare a type parameter as contravariant using the <code>in</code> keyword.</p>
-<pre><code class="language-csharp">public interface IContravariant&lt;in T&gt;
+<h3 id="replacement">Replacement</h3>
+<pre><code class="language-csharp">Regex pattern = new Regex(@&quot;\d+&quot;);
+string result = pattern.Replace(input, &quot;number&quot;);
+</code></pre>
+<h3 id="regex-modifiers">Regex Modifiers</h3>
+<p><code>RegexOptions</code> enum can be used as parameter when creating a Regex to modify the behaviour.</p>
+<ul>
+<li><p><code>RegexOptions.None</code></p>
+<p>Use default behavior.</p>
+</li>
+<li><p><code>RegexOptions.IgnoreCase</code></p>
+<p>Use case-insensitive matching.</p>
+</li>
+<li><p><code>RegexOptions.Multiline</code></p>
+<p>Use multiline mode, where <code>^</code> and <code>$</code> indicate the beginning and end of each line (instead of the beginning and end of the input string).</p>
+</li>
+<li><p><code>RegexOptions.Singleline</code></p>
+<p>Use single-line mode, where the period (<code>.</code>) matches every character (instead of every character except <code>\n</code>).</p>
+</li>
+<li><p><code>RegexOptions.ExplicitCapture</code></p>
+<p>Do not capture unnamed groups. The only valid captures are explicitly named or numbered groups of the form <code>(?&lt;</code><em>name</em><code>&gt;</code> <em>subexpression</em><code>)</code>.</p>
+</li>
+<li><p><code>RegexOptions.Compiled</code></p>
+<p>Compile the regular expression to an assembly.</p>
+</li>
+<li><p><code>RegexOptions.IgnorePatternWhitespace</code></p>
+<p>Exclude unescaped white space from the pattern, and enable comments after a number sign (<code>#</code>).</p>
+</li>
+<li><p><code>RegexOptions.RightToLeft</code></p>
+<p>Change the search direction. Search moves from right to left instead of from left to right.</p>
+</li>
+<li><p><code>RegexOptions.ECMAScript</code></p>
+<p>Enable ECMAScript-compliant behavior for the expression.</p>
+</li>
+<li><p><code>RegexOptions.CultureInvariant</code></p>
+<p>Ignore cultural differences in language.</p>
+</li>
+<li><p><code>RegexOptions.NonBacktracking</code></p>
+<p>Match using an approach that avoids backtracking and guarantees linear-time processing in the length of the input. (Available in .NET 7 and later versions.)</p>
+</li>
+</ul>
+<h2 id="generatedregex">GeneratedRegex</h2>
+<p>The <code>GeneratedRegex</code> attribute is a feature introduced in C# 10 (with .NET 7) that allows you to create source-generated regular expressions. It generates highly optimized, compile-time regex code, eliminating the overhead of interpreting or compiling regex patterns at runtime.</p>
+<p>This approach improves both performance and maintainability, especially for frequently used regex patterns.</p>
+<p>Example:</p>
+<pre><code class="language-csharp">partial class Test
 {
-    void SetItem(T item);
+    // Define a source-generated regex
+    [GeneratedRegex(@&quot;\b\d{4}-\d{2}-\d{2}\b&quot;, RegexOptions.Compiled)]
+    private static partial Regex DateRegex();
 }
 </code></pre>
-<p>Here, <code>T</code> is contravariant because it is marked with the in keyword, and it can only be used as a method parameter. The <code>in</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>IContravariant&lt;Animal&gt;</code> can be treated as <code>IContravariant&lt;Dog&gt;</code>.</p>
-<pre><code class="language-csharp">IContravariant&lt;Dog&gt; dogs = new ContravariantImplementation&lt;Animal&gt;();
-dogs.SetItem(new Dog());
-</code></pre>
-<h2 id="invariance">Invariance</h2>
-<p>Invariance means that there is no relationship between <code>GenericType&lt;Derived&gt;</code> and <code>GenericType&lt;Base&gt;</code>, even if <code>Derived</code> inherits from <code>Base</code>. Most generic types in C# are invariant by default. This means that <code>List&lt;Dog&gt;</code> is not considered a subtype of <code>List&lt;Animal&gt;</code>, even though <code>Dog</code> is a subtype of <code>Animal</code>.</p>
-<pre><code class="language-csharp">//the following causes a compile error
-List&lt;Animal&gt; animals = new List&lt;Dog&gt;();
-</code></pre>
+<p>The <code>GeneratedRegex</code> attribute works only with a <code>partial</code> method declaration, which implies that the containing class must also have the <code>partial</code> modifier.</p>
 
                 </div>
                 <div class="col-lg-2">

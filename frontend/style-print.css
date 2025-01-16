@@ -205,7 +205,10 @@ figcaption {
     #minimal-mvvm-implementation,
     #wpf-class-hierarchy,
     #windows-froms-class-hierarchy,
-    #maui-class-hierarchy {
+    #maui-class-hierarchy
+    #creating-custom-attributes,
+    #section-11,
+    #section-14 {
         page-break-before: always
     }
 

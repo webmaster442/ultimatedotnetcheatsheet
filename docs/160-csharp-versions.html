@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
 
 <head>
-    <title>Ultimate .NET cheat sheet - Generics</title>
+    <title>Ultimate .NET cheat sheet - C# Version History</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -17,7 +17,7 @@
     <!--OpenGraph meta-->
     <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ultimate .NET cheat sheet - Generics">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - C# Version History">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
     <meta property="og:image:type" content="image/webp" />
@@ -119,137 +119,218 @@
         <div class="container">
             <div class="row" style="margin: 0px auto;">
                 <div class="col-lg-10" id="content">
-                    <h1 id="generics">Generics</h1>
-<p>Generics in C# allow you to define classes, methods, interfaces, and delegates with type parameters, enabling type safety and code reuse without compromising performance.</p>
-<p>Type parameters can be defined for types and methods using angle brackets (<code>&lt;&gt;</code>).</p>
-<h2 id="constraints">Constraints</h2>
-<p>Generic constraints in C# provide a way to restrict the types that can be used as arguments for a generic type parameter. Without constraints, generic type parameters can be any type (class, struct, enum, etc.). However, sometimes you want to limit the generic type to certain kinds of types (e.g., reference types, value types, types that implement a specific interface, etc.). Constraints are declared using the <code>where</code> clause in the generic type or method declaration.</p>
-<h3 id="no-constraints">No Constraints</h3>
-<p>If you don't specify any constraints, the type parameter can be any type.</p>
-<pre><code class="language-csharp">public class GenericClass&lt;T&gt;
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="value-type">Value Type</h3>
-<pre><code class="language-csharp">public class ValueTypeOnly&lt;T&gt; where T : struct
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="reference-type">Reference Type</h3>
-<pre><code class="language-csharp">public class ReferenceTypeOnly&lt;T&gt; where T : class
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="parameterless-constructor">Parameterless Constructor</h3>
-<p>The <code>new()</code> constraint ensures that the type <code>T</code> has a parameterless constructor. This is useful when you need to create instances of the type within the generic class or method.</p>
-<pre><code class="language-csharp">public class InstantiateType&lt;T&gt; where T : new()
-{
-    public T CreateInstance()
-    {
-        return new T(); // Requires T to have a parameterless constructor
-    }
-}
-</code></pre>
-<h3 id="base-class-or-implemented-interface">Base Class or Implemented interface</h3>
-<pre><code class="language-csharp">public class BaseClass { }
-public class DerivedClass : BaseClass { }
-
-public class DerivedTypeOnly&lt;T&gt; where T : BaseClass
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="multiple-constraints">Multiple Constraints</h3>
-<pre><code class="language-csharp">public class MultiConstraint&lt;T&gt; where T : class, new()
-{
-    public T CreateInstance()
-    {
-        return new T(); // T must be a reference type and have a parameterless constructor
-    }
-}
-</code></pre>
-<h3 id="enum">Enum</h3>
-<pre><code class="language-csharp">public class EnumConstraint&lt;T&gt; where T : struct, Enum
-{
-    public void PrintEnumValues()
-    {
-        foreach (var value in Enum.GetValues(typeof(T)))
-        {
-            Console.WriteLine(value);
-        }
-    }
-}
-</code></pre>
-<h3 id="delegate">Delegate</h3>
-<pre><code class="language-csharp">public class DelegateConstraint&lt;T&gt; where T : Delegate
-{
-    public void InvokeDelegate(T del)
-    {
-        del.DynamicInvoke(); // Invoke delegate dynamically
-    }
-}
-</code></pre>
-<h3 id="notnull">notnull</h3>
-<p>The <code>notnull</code> constraint restricts the generic type parameter <code>T</code> to types that are not nullable, meaning:</p>
+                    <h1 id="c-version-history">C# Version History</h1>
+<h2 id="section">1.0</h2>
+<p><em>Released  January 2002</em></p>
 <ul>
-<li>It can be any value type</li>
-<li>It can be any non-nullable reference type</li>
-<li>It cannot be nullable types like int? (nullable value type) or string? (nullable reference type in C# 8.0 with nullable reference types enabled).</li>
+<li>Classes</li>
+<li>Structs</li>
+<li>Interfaces</li>
+<li>Events</li>
+<li>Properties</li>
+<li>Delegates</li>
+<li>Operators and expressions</li>
+<li>Statements</li>
+<li>Attributes</li>
 </ul>
-<pre><code class="language-csharp">public class NotNullConstraint&lt;T&gt; where T : notnull
-{
-    public T Value { get; set; }
-
-    public NotNullConstraint(T value)
-    {
-        Value = value ?? throw new ArgumentNullException(nameof(value), &quot;Value cannot be null&quot;);
-    }
-}
-
-// Allowed: Non-nullable reference type (string)
-NotNullConstraint&lt;string&gt; stringConstraint = new NotNullConstraint&lt;string&gt;(&quot;Hello&quot;);
-
-// Allowed: Non-nullable reference type (string)
-NotNullConstraint&lt;string&gt; stringConstraint = new NotNullConstraint&lt;string&gt;(&quot;Hello&quot;);
-
-// Not allowed: Nullable reference type (string?) in C# 8.0ű
-// compile error
-NotNullConstraint&lt;string?&gt; nullableStringConstraint = new NotNullConstraint&lt;string?&gt;(null);
-
-// Not allowed: Nullable value type (int?)
-// compile error
-NotNullConstraint&lt;int?&gt; nullableValueConstraint = new NotNullConstraint&lt;int?&gt;(null);
-</code></pre>
-<h2 id="covariance">Covariance</h2>
-<p>Covariance allows you to use a more derived type than originally specified. In C#, covariance applies to generic type parameters in interfaces and delegates when used for output (return types). You declare a type parameter as covariant using the <code>out</code> keyword.</p>
-<pre><code class="language-csharp">public interface ICovariant&lt;out T&gt;
-{
-    T GetItem();
-}
-</code></pre>
-<p>Here, <code>T</code> is covariant because it is marked with the <code>out</code> keyword, and it can only be used as a return type. The <code>out</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>ICovariant&lt;Dog&gt;</code> can be treated as <code>ICovariant&lt;Animal&gt;</code>:</p>
-<pre><code class="language-csharp">ICovariant&lt;Animal&gt; animals = new CovariantImplementation&lt;Dog&gt;();
-Animal animal = animals.GetItem();
-</code></pre>
-<h2 id="contravariance">Contravariance</h2>
-<p>Contravariance allows you to use a more general (or base) type than originally specified. In C#, contravariance applies to generic type parameters in interfaces and delegates when used for input (method parameters). You declare a type parameter as contravariant using the <code>in</code> keyword.</p>
-<pre><code class="language-csharp">public interface IContravariant&lt;in T&gt;
-{
-    void SetItem(T item);
-}
-</code></pre>
-<p>Here, <code>T</code> is contravariant because it is marked with the in keyword, and it can only be used as a method parameter. The <code>in</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>IContravariant&lt;Animal&gt;</code> can be treated as <code>IContravariant&lt;Dog&gt;</code>.</p>
-<pre><code class="language-csharp">IContravariant&lt;Dog&gt; dogs = new ContravariantImplementation&lt;Animal&gt;();
-dogs.SetItem(new Dog());
-</code></pre>
-<h2 id="invariance">Invariance</h2>
-<p>Invariance means that there is no relationship between <code>GenericType&lt;Derived&gt;</code> and <code>GenericType&lt;Base&gt;</code>, even if <code>Derived</code> inherits from <code>Base</code>. Most generic types in C# are invariant by default. This means that <code>List&lt;Dog&gt;</code> is not considered a subtype of <code>List&lt;Animal&gt;</code>, even though <code>Dog</code> is a subtype of <code>Animal</code>.</p>
-<pre><code class="language-csharp">//the following causes a compile error
-List&lt;Animal&gt; animals = new List&lt;Dog&gt;();
-</code></pre>
+<h2 id="section-1">1.2</h2>
+<p><em>Released April 2003</em></p>
+<p>The code generated in a <code>foreach</code> loop called <code>Dispose</code> on an <code>IEnumerator</code> when that <code>IEnumerator</code> implemented <code>IDisposable</code>.</p>
+<h2 id="section-2">2.0</h2>
+<p><em>Released November 2005</em></p>
+<ul>
+<li>Generics</li>
+<li>Partial types</li>
+<li>Anonymous methods</li>
+<li>Nullable value types</li>
+<li>Iterators</li>
+<li>Covariance and contravariance</li>
+<li>Getter/setter separate accessibility</li>
+<li>Method group conversions (delegates)</li>
+<li>Static classes</li>
+<li>Delegate inference</li>
+</ul>
+<h2 id="section-3">3.0</h2>
+<p><em>Released November 2007</em></p>
+<ul>
+<li>Auto-implemented properties</li>
+<li>Anonymous types</li>
+<li>Query expressions</li>
+<li>Lambda expressions</li>
+<li>Expression trees</li>
+<li>Extension methods</li>
+<li>Implicitly typed local variables</li>
+<li>Partial methods</li>
+<li>Object and collection initializers</li>
+</ul>
+<h2 id="section-4">4.0</h2>
+<p><em>Released April 2010</em></p>
+<ul>
+<li>Dynamic binding</li>
+<li>Named/optional arguments</li>
+<li>Generic covariant and contravariant</li>
+<li>Embedded interop types</li>
+</ul>
+<h2 id="section-5">5.0</h2>
+<p><em>Released August 2012</em></p>
+<ul>
+<li>Asynchronous members</li>
+<li>Caller info attributes</li>
+</ul>
+<h2 id="section-6">6.0</h2>
+<p><em>Released July 2015</em></p>
+<ul>
+<li>Static imports</li>
+<li>Exception filters</li>
+<li>Auto-property initializers</li>
+<li>Expression bodied members</li>
+<li>Null propagator</li>
+<li>String interpolation</li>
+<li>nameof operator</li>
+<li>Index initializers</li>
+<li>Await in catch/finally blocks</li>
+<li>Default values for getter-only properties</li>
+</ul>
+<h2 id="section-7">7.0</h2>
+<p><em>Released March 2017</em></p>
+<ul>
+<li>Out variables</li>
+<li>Tuples and deconstruction</li>
+<li>Pattern matching</li>
+<li>Local functions</li>
+<li>Expanded expression bodied members</li>
+<li>Ref locals</li>
+<li>Ref returns</li>
+<li>Discards</li>
+<li>Binary Literals and Digit Separators</li>
+<li>Throw expressions</li>
+</ul>
+<h2 id="section-8">7.1</h2>
+<p><em>Released August 2017</em></p>
+<ul>
+<li>async Main method</li>
+<li>default literal expressions</li>
+<li>Inferred tuple element names</li>
+<li>Pattern matching on generic type parameters</li>
+</ul>
+<h2 id="section-9">7.2</h2>
+<p><em>Released November 2017</em></p>
+<ul>
+<li>Initializers on stackalloc arrays</li>
+<li>Use fixed statements with any type that supports a pattern</li>
+<li>Access fixed fields without pinning</li>
+<li>Reassign ref local variables</li>
+<li>readonly struct types</li>
+<li>ref readonly modifier on method returns</li>
+<li>private protected access modifier</li>
+<li>Conditional ref expressions</li>
+</ul>
+<h2 id="section-10">7.3</h2>
+<p><em>Released May 2018</em></p>
+<ul>
+<li>access fixed fields without pinning</li>
+<li>reassign ref local variables</li>
+<li>use initializers on stackalloc arrays</li>
+<li>fixed statements with any type that supports a pattern</li>
+</ul>
+<h2 id="section-11">8.0</h2>
+<p><em>Released September 2019</em></p>
+<ul>
+<li>Readonly members</li>
+<li>Default interface methods</li>
+<li>Pattern matching enhancements: Switch expressions, Property patterns, Tuple patterns, Positional patterns</li>
+<li>Using declarations</li>
+<li>Static local functions</li>
+<li>Disposable ref structs</li>
+<li>Nullable reference types</li>
+<li>Asynchronous streams</li>
+<li>Indices and ranges</li>
+<li>Null-coalescing assignment</li>
+<li>Unmanaged constructed types</li>
+<li>Stackalloc in nested expressions</li>
+<li>Enhancement of interpolated verbatim strings</li>
+</ul>
+<h2 id="section-12">9.0</h2>
+<p><em>Released November 2020</em></p>
+<ul>
+<li>Records</li>
+<li>Init only setters</li>
+<li>Top-level statements</li>
+<li>Pattern matching enhancements: relational patterns and logical patterns</li>
+<li>Native sized integers</li>
+<li>Function pointers</li>
+<li>Suppress emitting localsinit flag</li>
+<li>Module initializers</li>
+<li>New features for partial methods</li>
+<li>Target-typed new expressions</li>
+<li>static anonymous functions</li>
+<li>Target-typed conditional expressions</li>
+<li>Covariant return types</li>
+<li>Extension GetEnumerator support for foreach loops</li>
+<li>Lambda discard parameters</li>
+<li>Attributes on local functions</li>
+</ul>
+<h2 id="section-13">10.0</h2>
+<p><em>Released November 2021</em></p>
+<ul>
+<li>Record structs</li>
+<li>Improvements of structure types</li>
+<li>Interpolated string handlers</li>
+<li>global using directives</li>
+<li>File-scoped namespace declaration</li>
+<li>Extended property patterns</li>
+<li>Lambda expressions can have a natural type, where the compiler can infer a delegate type from the lambda expression or method group.</li>
+<li>Lambda expressions can declare a return type when the compiler can't infer it.</li>
+<li>Attributes can be applied to lambda expressions.</li>
+<li>In C# 10, const strings can be initialized using string interpolation if all the placeholders are themselves constant strings.</li>
+<li>In C# 10, you can add the sealed modifier when you override ToString in a record type.</li>
+<li>Warnings for definite assignment and null-state analysis are more accurate.</li>
+<li>Allow both assignment and declaration in the same deconstruction.</li>
+<li>Allow AsyncMethodBuilder attribute on methods</li>
+<li>CallerArgumentExpression attribute</li>
+<li>new format for the #line pragma.</li>
+</ul>
+<h2 id="section-14">11.0</h2>
+<p><em>Released November 2022</em></p>
+<ul>
+<li>Raw string literals</li>
+<li>Generic math support</li>
+<li>Generic attributes</li>
+<li>UTF-8 string literals</li>
+<li>Newlines in string interpolation expressions</li>
+<li>List patterns</li>
+<li>File-local types</li>
+<li>Required members</li>
+<li>Auto-default structs</li>
+<li>Pattern match Span<char> on a constant string</li>
+<li>Extended nameof scope</li>
+<li>Numeric IntPtr</li>
+<li>ref fields and scoped ref</li>
+<li>Improved method group conversion to delegate</li>
+</ul>
+<h2 id="section-15">12.0</h2>
+<p><em>Released November 2023</em></p>
+<ul>
+<li>Primary constructors</li>
+<li>Collection expressions</li>
+<li>Inline arrays</li>
+<li>Optional parameters in lambda expressions</li>
+<li>ref readonly parameters</li>
+<li>Alias any type</li>
+<li>Experimental attribute</li>
+</ul>
+<h2 id="section-16">13.0</h2>
+<p><em>Released November 2024</em></p>
+<ul>
+<li>Params collections</li>
+<li>New lock type</li>
+<li>New escape sequence - \e</li>
+<li>Implicit indexer access in object initializers</li>
+<li>ref locals and unsafe contexts in iterators and async methods</li>
+<li>ref struct types to implement interfaces.</li>
+<li>Partial properties and indexers</li>
+<li>field contextual keyword</li>
+</ul>
 
                 </div>
                 <div class="col-lg-2">

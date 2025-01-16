@@ -1,3 +1,10 @@
+### 2025.01.16
+
+* Added Regex section
+* Added Keyboard Shortcuts section
+* Added C# version history section
+* Extended attributes section with compiler recognized attributes and custom attribute creation
+
 ### 2024.10.02
 
 * Added changelog to the website

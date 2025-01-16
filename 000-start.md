@@ -23,6 +23,13 @@ The project is open-source and available on GitHub. You can contribute to it by 
 
 ## Latest changes
 
+* **2025.01.16**
+
+  * Added Regex section
+  * Added Keyboard Shortcuts section
+  * Added C# version history section
+  * Extended attributes section with compiler recognized attributes and custom attribute creation
+
 * **2024.09.16**
 
   * Updated website design

@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
 
 <head>
-    <title>Ultimate .NET cheat sheet - Generics</title>
+    <title>Ultimate .NET cheat sheet - Keyboard Shortcuts</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -17,7 +17,7 @@
     <!--OpenGraph meta-->
     <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ultimate .NET cheat sheet - Generics">
+    <meta property="og:title" content="Ultimate .NET cheat sheet - Keyboard Shortcuts">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
     <meta property="og:image:type" content="image/webp" />
@@ -119,137 +119,153 @@
         <div class="container">
             <div class="row" style="margin: 0px auto;">
                 <div class="col-lg-10" id="content">
-                    <h1 id="generics">Generics</h1>
-<p>Generics in C# allow you to define classes, methods, interfaces, and delegates with type parameters, enabling type safety and code reuse without compromising performance.</p>
-<p>Type parameters can be defined for types and methods using angle brackets (<code>&lt;&gt;</code>).</p>
-<h2 id="constraints">Constraints</h2>
-<p>Generic constraints in C# provide a way to restrict the types that can be used as arguments for a generic type parameter. Without constraints, generic type parameters can be any type (class, struct, enum, etc.). However, sometimes you want to limit the generic type to certain kinds of types (e.g., reference types, value types, types that implement a specific interface, etc.). Constraints are declared using the <code>where</code> clause in the generic type or method declaration.</p>
-<h3 id="no-constraints">No Constraints</h3>
-<p>If you don't specify any constraints, the type parameter can be any type.</p>
-<pre><code class="language-csharp">public class GenericClass&lt;T&gt;
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="value-type">Value Type</h3>
-<pre><code class="language-csharp">public class ValueTypeOnly&lt;T&gt; where T : struct
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="reference-type">Reference Type</h3>
-<pre><code class="language-csharp">public class ReferenceTypeOnly&lt;T&gt; where T : class
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="parameterless-constructor">Parameterless Constructor</h3>
-<p>The <code>new()</code> constraint ensures that the type <code>T</code> has a parameterless constructor. This is useful when you need to create instances of the type within the generic class or method.</p>
-<pre><code class="language-csharp">public class InstantiateType&lt;T&gt; where T : new()
-{
-    public T CreateInstance()
-    {
-        return new T(); // Requires T to have a parameterless constructor
-    }
-}
-</code></pre>
-<h3 id="base-class-or-implemented-interface">Base Class or Implemented interface</h3>
-<pre><code class="language-csharp">public class BaseClass { }
-public class DerivedClass : BaseClass { }
-
-public class DerivedTypeOnly&lt;T&gt; where T : BaseClass
-{
-    public T Value { get; set; }
-}
-</code></pre>
-<h3 id="multiple-constraints">Multiple Constraints</h3>
-<pre><code class="language-csharp">public class MultiConstraint&lt;T&gt; where T : class, new()
-{
-    public T CreateInstance()
-    {
-        return new T(); // T must be a reference type and have a parameterless constructor
-    }
-}
-</code></pre>
-<h3 id="enum">Enum</h3>
-<pre><code class="language-csharp">public class EnumConstraint&lt;T&gt; where T : struct, Enum
-{
-    public void PrintEnumValues()
-    {
-        foreach (var value in Enum.GetValues(typeof(T)))
-        {
-            Console.WriteLine(value);
-        }
-    }
-}
-</code></pre>
-<h3 id="delegate">Delegate</h3>
-<pre><code class="language-csharp">public class DelegateConstraint&lt;T&gt; where T : Delegate
-{
-    public void InvokeDelegate(T del)
-    {
-        del.DynamicInvoke(); // Invoke delegate dynamically
-    }
-}
-</code></pre>
-<h3 id="notnull">notnull</h3>
-<p>The <code>notnull</code> constraint restricts the generic type parameter <code>T</code> to types that are not nullable, meaning:</p>
-<ul>
-<li>It can be any value type</li>
-<li>It can be any non-nullable reference type</li>
-<li>It cannot be nullable types like int? (nullable value type) or string? (nullable reference type in C# 8.0 with nullable reference types enabled).</li>
-</ul>
-<pre><code class="language-csharp">public class NotNullConstraint&lt;T&gt; where T : notnull
-{
-    public T Value { get; set; }
-
-    public NotNullConstraint(T value)
-    {
-        Value = value ?? throw new ArgumentNullException(nameof(value), &quot;Value cannot be null&quot;);
-    }
-}
-
-// Allowed: Non-nullable reference type (string)
-NotNullConstraint&lt;string&gt; stringConstraint = new NotNullConstraint&lt;string&gt;(&quot;Hello&quot;);
-
-// Allowed: Non-nullable reference type (string)
-NotNullConstraint&lt;string&gt; stringConstraint = new NotNullConstraint&lt;string&gt;(&quot;Hello&quot;);
-
-// Not allowed: Nullable reference type (string?) in C# 8.0ű
-// compile error
-NotNullConstraint&lt;string?&gt; nullableStringConstraint = new NotNullConstraint&lt;string?&gt;(null);
-
-// Not allowed: Nullable value type (int?)
-// compile error
-NotNullConstraint&lt;int?&gt; nullableValueConstraint = new NotNullConstraint&lt;int?&gt;(null);
-</code></pre>
-<h2 id="covariance">Covariance</h2>
-<p>Covariance allows you to use a more derived type than originally specified. In C#, covariance applies to generic type parameters in interfaces and delegates when used for output (return types). You declare a type parameter as covariant using the <code>out</code> keyword.</p>
-<pre><code class="language-csharp">public interface ICovariant&lt;out T&gt;
-{
-    T GetItem();
-}
-</code></pre>
-<p>Here, <code>T</code> is covariant because it is marked with the <code>out</code> keyword, and it can only be used as a return type. The <code>out</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>ICovariant&lt;Dog&gt;</code> can be treated as <code>ICovariant&lt;Animal&gt;</code>:</p>
-<pre><code class="language-csharp">ICovariant&lt;Animal&gt; animals = new CovariantImplementation&lt;Dog&gt;();
-Animal animal = animals.GetItem();
-</code></pre>
-<h2 id="contravariance">Contravariance</h2>
-<p>Contravariance allows you to use a more general (or base) type than originally specified. In C#, contravariance applies to generic type parameters in interfaces and delegates when used for input (method parameters). You declare a type parameter as contravariant using the <code>in</code> keyword.</p>
-<pre><code class="language-csharp">public interface IContravariant&lt;in T&gt;
-{
-    void SetItem(T item);
-}
-</code></pre>
-<p>Here, <code>T</code> is contravariant because it is marked with the in keyword, and it can only be used as a method parameter. The <code>in</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>IContravariant&lt;Animal&gt;</code> can be treated as <code>IContravariant&lt;Dog&gt;</code>.</p>
-<pre><code class="language-csharp">IContravariant&lt;Dog&gt; dogs = new ContravariantImplementation&lt;Animal&gt;();
-dogs.SetItem(new Dog());
-</code></pre>
-<h2 id="invariance">Invariance</h2>
-<p>Invariance means that there is no relationship between <code>GenericType&lt;Derived&gt;</code> and <code>GenericType&lt;Base&gt;</code>, even if <code>Derived</code> inherits from <code>Base</code>. Most generic types in C# are invariant by default. This means that <code>List&lt;Dog&gt;</code> is not considered a subtype of <code>List&lt;Animal&gt;</code>, even though <code>Dog</code> is a subtype of <code>Animal</code>.</p>
-<pre><code class="language-csharp">//the following causes a compile error
-List&lt;Animal&gt; animals = new List&lt;Dog&gt;();
-</code></pre>
+                    <h1 id="keyboard-shortcuts">Keyboard Shortcuts</h1>
+<h2 id="visual-studio">Visual Studio</h2>
+<h3 id="search-and-navigation">Search and Navigation</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Visual Studio search</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>Q</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Go to all</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>T</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Go to definition</td>
+<td style="text-align: center;"><kbd>F12</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Peak to implementation</td>
+<td style="text-align: center;"><kbd>Alt</kbd> + <kbd>F12</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Go to implementation</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>F12</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Go to next error</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F12</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Go to next result</td>
+<td style="text-align: center;"><kbd>F8</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Go to previous result</td>
+<td style="text-align: center;"><kbd>Shift</kbd> + <kbd>F8</kbd></td>
+</tr>
+</tbody>
+</table>
+<h3 id="editing-and-refactoring">Editing and refactoring</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Quick Actions</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>.</kbd> or <kbd>Alt</kbd> + <kbd>Enter</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Method Info</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>K</kbd> , <kbd>Ctrl</kbd> + <kbd>I</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Comment</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>K</kbd> , <kbd>Ctrl</kbd> + <kbd>C</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">UnComment</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>K</kbd> , <kbd>Ctrl</kbd> + <kbd>U</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Delete Line</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Move code up</td>
+<td style="text-align: center;"><kbd>Alt</kbd> + <kbd>↑</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Move code down</td>
+<td style="text-align: center;"><kbd>Alt</kbd> + <kbd>↓</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Format Document</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>K</kbd> , <kbd>Ctrl</kbd> + <kbd>D</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Format Selection</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>K</kbd> , <kbd>Ctrl</kbd> + <kbd>F</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Rename</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>R</kbd> , <kbd>Ctrl</kbd> + <kbd>R</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Encapsulate Field</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>R</kbd> , <kbd>Ctrl</kbd> + <kbd>E</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Remove and Sort Usings</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>R</kbd> , <kbd>Ctrl</kbd> + <kbd>G</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Extract Method</td>
+<td style="text-align: center;"><kbd>Ctrl</kbd> + <kbd>R</kbd> , <kbd>Ctrl</kbd> + <kbd>M</kbd></td>
+</tr>
+</tbody>
+</table>
+<h3 id="debugging">Debugging</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Debug</td>
+<td style="text-align: center;"><kbd>F5</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Run</td>
+<td style="text-align: center;"><kbd>Crl</kbd> + <kbd>F5</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Stop</td>
+<td style="text-align: center;"><kbd>Shift</kbd> + <kbd>F5</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Toggle breakpoint</td>
+<td style="text-align: center;"><kbd>F9</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Step over</td>
+<td style="text-align: center;"><kbd>F10</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Step into</td>
+<td style="text-align: center;"><kbd>F11</kbd></td>
+</tr>
+<tr>
+<td style="text-align: center;">Step out</td>
+<td style="text-align: center;"><kbd>Shift</kbd> + <kbd>F11</kbd></td>
+</tr>
+</tbody>
+</table>
 
                 </div>
                 <div class="col-lg-2">

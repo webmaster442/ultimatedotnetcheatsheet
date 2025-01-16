@@ -47,6 +47,8 @@
       "-i",
       "090-linq.md",
       "-i",
+      "095-regex.md",
+      "-i",
       "100-paternmatch.md",
       "-i",
       "105-tasks.md",
@@ -65,7 +67,11 @@
       "-i",
       "140-ui.md",
       "-i",
-      "150-nuget.md"
+      "150-nuget.md",
+      "-i",
+      "155-shortcuts.md",
+      "-i",
+      "160-csharp-versions.md"
     ]
   }
 ]

@@ -37,7 +37,7 @@ Character classes are patterns that match a single character from a specified se
 |  `\D`  |      Not digit       |
 |  `\w`  |         Word         |
 |  `\W`  |       Not word       |
-|  `\x`  | A Hexade­cimal digit |
+|  `\x`  | A Hexade­cimal digit  |
 |  `\O`  |     Octal digit      |
 |  `\n`  |       New line       |
 |  `\r`  |   Carriage return    |

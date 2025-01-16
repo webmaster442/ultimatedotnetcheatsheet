@@ -72,12 +72,12 @@
         <aside id="nav" class="text-white bg-dark">
             <div>
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <img src="pwa/i-192.png" height="40px" style="margin: 7px;"> Version: 24-10-02
+                    <img src="pwa/i-192.png" height="40px" style="margin: 7px;"> Version: 25-01-16
                 </a>
             </div>
             <hr>
             <div id="toclinks">
-                <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li></ul>
+                <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/095-regex.html">Regular Expressions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/155-shortcuts.html">Keyboard Shortcuts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/160-csharp-versions.html">C# Version History</a></li></ul>
             </div>
             <hr>
             <div id="icons">
@@ -1104,6 +1104,77 @@
 </svg></p>
 <figcaption>Data annotation Attributes</figcaption>
 </figure>
+<h2 id="creating-custom-attributes">Creating custom attributes</h2>
+<p>All custom attributes must inherit from the <code>System.Attribute</code> class. This is the foundation that allows the attribute to be recognized by the .NET runtime.</p>
+<ul>
+<li>The attribute class must end with the name <code>Attribute</code></li>
+<li>The attribute class must be annotated with the <code>AttributeUsage</code> attribute, which determines how a custom attribute class can be used.</li>
+</ul>
+<pre><code class="language-csharp">[AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
+public class MyCustomAttribute : Attribute
+{
+    public string Description { get; }
+    public int Version { get; }
+
+    // Constructor to initialize the attribute
+    public MyCustomAttribute(string description, int version)
+    {
+        Description = description;
+        Version = version;
+    }
+}
+</code></pre>
+<p>In the above example the <code>MyCustomAttribute</code> is restricted to be used on methods and classes. The <code>Inherited = false</code> prevents the attribute from being inherited by derived classes. The <code>AllowMultiple = false</code> ensures that the attribute can only be applied once per element.</p>
+<h2 id="attributes-interpreted-by-the-c-compiler">Attributes interpreted by the C# compiler</h2>
+<h3 id="obsolete">Obsolete</h3>
+<p>It is used to mark program elements (like classes, methods, properties, etc.) as outdated or no longer recommended for use. The <code>[Obsolete]</code> attribute is typically applied to warn developers when they use a deprecated feature.</p>
+<pre><code class="language-csharp">[Obsolete(&quot;Use NewMethod instead.&quot;)]
+public static void OldMethod()
+{
+    Console.WriteLine(&quot;This is the old method.&quot;);
+}
+</code></pre>
+<p>During compile if any method calls the <code>OldMethod()</code> code, then a compiler warning will be produced with the message <code>Use NewMethod instead.</code></p>
+<h3 id="experimental">Experimental</h3>
+<p>Available since C# 12. It is used to indicate an experimental feature. The compiler issues a warning if you access a method or type annotated with the <code>[Experimental]</code> attribute. It is used to communicate that the feature is in a trial phase and not yet stable.</p>
+<h3 id="setsrequiredmembers">SetsRequiredMembers</h3>
+<p>The <code>[SetsRequiredMembers]</code> attribute informs the compiler that a constructor sets all <code>required</code> members in that class or struct. The compiler assumes any constructor with the <code>SetsRequiredMembers</code> attribute initializes all <code>required</code> members.</p>
+<h3 id="moduleinitializer">ModuleInitializer</h3>
+<p>The <code>[ModuleInitializer]</code> attribute marks a method that the runtime calls when the assembly loads. The ModuleInitializer attribute can only be applied to a method that:</p>
+<ul>
+<li>Is static.</li>
+<li>Is parameterless.</li>
+<li>Returns void.</li>
+<li>Is accessible from the containing module, that is, internal or public.</li>
+<li>Isn't a generic method.</li>
+<li>Isn't contained in a generic class.</li>
+<li>Isn't a local function.</li>
+</ul>
+<p><strong>The ModuleInitializer attribute can be applied to multiple methods. In that case, the order in which the runtime calls them is deterministic but not specified.</strong></p>
+<pre><code class="language-csharp">using System.Runtime.CompilerServices;
+
+internal static class Program
+{
+    [ModuleInitializer]
+    public static void BeforeMain()
+    {
+        Console.WriteLine(&quot;This is executed before main&quot;);
+    }
+
+    private static void Main(string[] args)
+    {
+        Console.WriteLine(&quot;Main&quot;);
+    }
+}
+</code></pre>
+<h3 id="overloadresolutionpriority">OverloadResolutionPriority</h3>
+<p>The <code>[OverloadResolutionPriority]</code> attribute enables library authors to prefer one overload over another when two overloads can be ambiguous. Its primary use case is for library authors to write better performing overloads while still supporting existing code without breaks.</p>
+<pre><code class="language-csharp">[OverloadResolutionPriority(1)]
+public void M(params ReadOnlySpan&lt;int&gt; s) =&gt; Console.WriteLine(&quot;Span&quot;);
+// Default overload resolution priority of 0
+public void M(params int[] a) =&gt; Console.WriteLine(&quot;Array&quot;);
+</code></pre>
+<p>Overload resolution considers the two methods equally good for some argument types. For an argument of <code>int[]</code>, it prefers the first overload. To get the compiler to prefer the <code>ReadOnlySpan</code> version, you can increase the priority of that overload. This way, when the user types in <code>M(</code> into the editor, the <code>void M(params ReadOnlySpan&lt;int&gt; s)</code> version will be suggested by the IntelliSense first.</p>
 <h2 id="nullable-attributes">Nullable attributes</h2>
 <p>In a nullable enabled context, the compiler performs static analysis of code to determine the null-state of all reference type variables:</p>
 <ul>

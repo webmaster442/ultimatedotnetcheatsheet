@@ -3,6 +3,7 @@ var CACHE_NAME = 'ultimate-dotnet-cheatsheet-cache-v2';
 var urlsToCache = [
   '/',
   '/index.html',
+  'changelog.html',
   '/010-basiccommands.html',
   '/020-project.html',
   '/030-powershell.html',
@@ -13,6 +14,7 @@ var urlsToCache = [
   '/070-exceptions.html',
   '/080-collections.html',
   '/090-linq.html',
+  '/095-regex.html',
   '/100-paternmatch.html',
   '/110-io.html',
   '/111-attribs.html',
@@ -23,6 +25,7 @@ var urlsToCache = [
   '/135-tasks.html',
   '/140-ui.html',
   '/150-nuget.html',
+  '/155-shortcuts.html',
   '/bootstrap.bundle.min.js',
   '/bootstrap.min.css',
   '/prism.css',
