@@ -44,3 +44,29 @@
 |     Step over     |          <kbd>F10</kbd>           |
 |     Step into     |          <kbd>F11</kbd>           |
 |     Step out      | <kbd>Shift</kbd> + <kbd>F11</kbd> |
+
+# Windows Terminal
+
+|           Function           |                        Key                        |
+| :--------------------------: | :-----------------------------------------------: |
+|        Open settings         |          <kbd>Ctrl</kbd> + <kbd>,</kbd>           |
+|       Change font size       |            <kbd>Ctrl</kbd> + Scrolling            |
+|  Adjust Background opacity   |  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + Scrolling   |
+|        Open Hyperlink        |              <kbd>Ctrl</kbd> + Click              |
+|             Find             | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
+|     Open Command palette     | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> |
+|          Close pane          | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>w</kbd> |
+|        Duplicate pane        | <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>d</kbd>  |
+| Duplicate pane, split: down  | <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd>  |
+| Duplicate pane, split: right | <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>+</kbd>  |
+
+## Tabs
+
+|            Function            |                                Key                                |
+| :----------------------------: | :---------------------------------------------------------------: |
+|          Previous Tab          |        <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>        |
+|            Next Tab            |                 <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                  |
+|     Open new tab dropdown      |       <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd>       |
+|            New tab             |         <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>         |
+| New tab, Profile index: 1 .. 8 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> .. <kbd>8</kbd> |
+|                                |
