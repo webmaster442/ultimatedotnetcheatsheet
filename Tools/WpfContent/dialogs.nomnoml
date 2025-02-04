@@ -1,0 +1,7 @@
+[Object] <:- [CommonDialog]
+[CommonDialog] <:- [CommonItemDialog]
+[CommonItemDialog] <:- [FileDialog]
+[FileDialog] <:- [SaveFileDialog]
+[FileDialog] <:- [OpenFileDialog]
+[CommonItemDialog] <:- [OpenFolderDialog]
+[Object] <:- [PrintDialog]
