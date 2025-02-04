@@ -1,0 +1,131 @@
+<svg version="1.1" baseProfile="full" width="751.0" height="172.0" viewBox="0 0 751 172" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf-dialogs</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: wpf-dialogs
+	
+	[Object] &lt;:- [CommonDialog]
+	[CommonDialog] &lt;:- [CommonItemDialog]
+	[CommonItemDialog] &lt;:- [FileDialog]
+	[FileDialog] &lt;:- [SaveFileDialog]
+	[FileDialog] &lt;:- [OpenFileDialog]
+	[CommonItemDialog] &lt;:- [OpenFolderDialog]
+	[Object] &lt;:- [PrintDialog]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="172.0" width="751.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M73.6 56.6 L71 58 L76 58 L76.0 58.0 " fill="none"></path>
+					<path d="M71.0 51.9 L73.6 56.6 L76.2 61.2 L62.0 63.0 Z"></path>
+					<path d="M223.3 58.0 L215 58 L220 58 L220.0 58.0 " fill="none"></path>
+					<path d="M223.3 52.7 L223.3 58.0 L223.3 63.3 L210.0 58.0 Z"></path>
+					<path d="M383.9 38.9 L392 37 L428.5 37 L428.5 37.0 " fill="none"></path>
+					<path d="M382.7 33.7 L383.9 38.9 L385.1 44.1 L370.9 42.0 Z"></path>
+					<path d="M533.4 22.0 L557 16 L563.5 16 L563.5 16.0 " fill="none"></path>
+					<path d="M532.1 16.8 L533.4 22.0 L534.7 27.2 L520.5 25.3 Z"></path>
+					<path d="M533.4 52.0 L557 58 L562 58 L562.0 58.0 " fill="none"></path>
+					<path d="M534.7 46.8 L533.4 52.0 L532.1 57.2 L520.5 48.7 Z"></path>
+					<path d="M383.9 77.1 L392 79 L397 79 L397.0 79.0 " fill="none"></path>
+					<path d="M385.1 71.9 L383.9 77.1 L382.7 82.3 L370.9 74.0 Z"></path>
+					<path d="M73.6 101.4 L71 100 L92.5 100 L92.5 100.0 " fill="none"></path>
+					<path d="M76.2 96.8 L73.6 101.4 L71.0 106.1 L62.0 95.0 Z"></path>
+					<g data-name="Object">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="63.0" height="32.0" width="66.0" data-name="Object"></rect>
+						</g>
+						<g transform="translate(0, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
+								<text x="25.0" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CommonDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CommonDialog">
+							<rect x="76.0" y="42.0" height="32.0" width="134.0" data-name="CommonDialog"></rect>
+						</g>
+						<g transform="translate(76, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CommonDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CommonDialog" data-compartment="0">
+								<text x="59.0" y="14.1" stroke="none" text-anchor="middle" data-name="CommonDialog" data-compartment="0">CommonDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CommonItemDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CommonItemDialog">
+							<rect x="220.0" y="42.0" height="32.0" width="167.0" data-name="CommonItemDialog"></rect>
+						</g>
+						<g transform="translate(220, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CommonItemDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CommonItemDialog" data-compartment="0">
+								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="CommonItemDialog" data-compartment="0">CommonItemDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FileDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FileDialog">
+							<rect x="428.5" y="21.0" height="32.0" width="92.0" data-name="FileDialog"></rect>
+						</g>
+						<g transform="translate(428.5, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileDialog" data-compartment="0">
+								<text x="38.0" y="14.1" stroke="none" text-anchor="middle" data-name="FileDialog" data-compartment="0">FileDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SaveFileDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SaveFileDialog">
+							<rect x="563.5" y="0.0" height="32.0" width="130.0" data-name="SaveFileDialog"></rect>
+						</g>
+						<g transform="translate(563.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SaveFileDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SaveFileDialog" data-compartment="0">
+								<text x="57.0" y="14.1" stroke="none" text-anchor="middle" data-name="SaveFileDialog" data-compartment="0">SaveFileDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="OpenFileDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="OpenFileDialog">
+							<rect x="562.0" y="42.0" height="32.0" width="133.0" data-name="OpenFileDialog"></rect>
+						</g>
+						<g transform="translate(562, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OpenFileDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OpenFileDialog" data-compartment="0">
+								<text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="OpenFileDialog" data-compartment="0">OpenFileDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="OpenFolderDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="OpenFolderDialog">
+							<rect x="397.0" y="63.0" height="32.0" width="155.0" data-name="OpenFolderDialog"></rect>
+						</g>
+						<g transform="translate(397, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OpenFolderDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OpenFolderDialog" data-compartment="0">
+								<text x="69.5" y="14.1" stroke="none" text-anchor="middle" data-name="OpenFolderDialog" data-compartment="0">OpenFolderDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PrintDialog">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PrintDialog">
+							<rect x="92.5" y="84.0" height="32.0" width="101.0" data-name="PrintDialog"></rect>
+						</g>
+						<g transform="translate(92.5, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PrintDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PrintDialog" data-compartment="0">
+								<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="PrintDialog" data-compartment="0">PrintDialog</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

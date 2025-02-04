@@ -1,8 +1,9 @@
-[Object] <:- [DispatcherObject]
-[DispatcherObject] <:- [DependencyObject]
-[DependencyObject] <:- [Visual]
-[Visual] <:- [UIElement]
-[UIElement] <:- [FrameworkElement]
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: wpf-controls
+
 [FrameworkElement] <:- [Control]
 [Control] <:- [ContentControl]
 [ContentControl] <:- [HeaderedContentControl]

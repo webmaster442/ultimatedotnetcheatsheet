@@ -1,0 +1,214 @@
+<svg version="1.1" baseProfile="full" width="786.0" height="298.0" viewBox="0 0 786 298" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf-templates</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: wpf-templates
+	
+	[DispatcherObject] &lt;:- [FrameworkTemplate]
+	[FrameworkTemplate] &lt;:- [ControlTemplate]
+	[FrameworkTemplate] &lt;:- [DataTemplate]
+	[DataTemplate] &lt;:- [HierarchicalDataTemplate]
+	[FrameworkTemplate] &lt;:- [ItemsPanelTemplate]
+	[DispatcherObject] &lt;:- [DependencyObject]
+	[DependencyObject] &lt;:- [TriggerBase]
+	[TriggerBase] &lt;:- [DataTrigger]
+	[TriggerBase] &lt;:- [MultiDataTrigger]
+	[TriggerBase] &lt;:- [MultiTrigger]
+	[TriggerBase] &lt;:- [Trigger]
+	[DispatcherObject] &lt;:- [Style]
+	[DependencyObject] &lt;:- [VisualState]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="298.0" width="786.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M89.5 156.3 L154 37 L159 37 L159.0 37.0 " fill="none"></path>
+					<path d="M84.8 153.7 L89.5 156.3 L94.2 158.8 L83.2 168.0 Z"></path>
+					<path d="M325.6 18.0 L334 16 L353 16 L353.0 16.0 " fill="none"></path>
+					<path d="M324.3 12.8 L325.6 18.0 L326.8 23.2 L312.6 21.0 Z"></path>
+					<path d="M325.6 56.0 L334 58 L364 58 L364.0 58.0 " fill="none"></path>
+					<path d="M326.8 50.8 L325.6 56.0 L324.3 61.2 L312.6 53.0 Z"></path>
+					<path d="M497.3 58.0 L514 58 L519 58 L519.0 58.0 " fill="none"></path>
+					<path d="M497.3 52.7 L497.3 58.0 L497.3 63.3 L484.0 58.0 Z"></path>
+					<path d="M277.8 60.6 L334 100 L339 100 L339.0 100.0 " fill="none"></path>
+					<path d="M280.8 56.3 L277.8 60.6 L274.7 65.0 L266.9 53.0 Z"></path>
+					<path d="M162.3 184.0 L154 184 L163.5 184 L163.5 184.0 " fill="none"></path>
+					<path d="M162.3 178.7 L162.3 184.0 L162.3 189.3 L149.0 184.0 Z"></path>
+					<path d="M325.6 165.0 L334 163 L370 163 L370.0 163.0 " fill="none"></path>
+					<path d="M324.3 159.8 L325.6 165.0 L326.8 170.2 L312.6 168.0 Z"></path>
+					<path d="M457.8 139.4 L514 100 L572 100 L572.0 100.0 " fill="none"></path>
+					<path d="M454.7 135.0 L457.8 139.4 L460.8 143.7 L446.9 147.0 Z"></path>
+					<path d="M491.0 147.4 L514 142 L553.5 142 L553.5 142.0 " fill="none"></path>
+					<path d="M489.8 142.2 L491.0 147.4 L492.2 152.6 L478.0 150.4 Z"></path>
+					<path d="M491.0 178.6 L514 184 L570.5 184 L570.5 184.0 " fill="none"></path>
+					<path d="M492.2 173.4 L491.0 178.6 L489.8 183.8 L478.0 175.6 Z"></path>
+					<path d="M457.8 186.6 L514 226 L589.5 226 L589.5 226.0 " fill="none"></path>
+					<path d="M460.8 182.3 L457.8 186.6 L454.7 191.0 L446.9 179.0 Z"></path>
+					<path d="M116.6 206.2 L154 226 L217 226 L217.0 226.0 " fill="none"></path>
+					<path d="M119.1 201.5 L116.6 206.2 L114.1 210.9 L104.8 200.0 Z"></path>
+					<path d="M325.6 203.0 L334 205 L373 205 L373.0 205.0 " fill="none"></path>
+					<path d="M326.8 197.8 L325.6 203.0 L324.3 208.2 L312.6 200.0 Z"></path>
+					<g data-name="DispatcherObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DispatcherObject">
+							<rect x="0.0" y="168.0" height="32.0" width="149.0" data-name="DispatcherObject"></rect>
+						</g>
+						<g transform="translate(0, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DispatcherObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DispatcherObject" data-compartment="0">
+								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="DispatcherObject" data-compartment="0">DispatcherObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FrameworkTemplate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkTemplate">
+							<rect x="159.0" y="21.0" height="32.0" width="170.0" data-name="FrameworkTemplate"></rect>
+						</g>
+						<g transform="translate(159, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkTemplate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkTemplate" data-compartment="0">
+								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkTemplate" data-compartment="0">FrameworkTemplate</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ControlTemplate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ControlTemplate">
+							<rect x="353.0" y="0.0" height="32.0" width="142.0" data-name="ControlTemplate"></rect>
+						</g>
+						<g transform="translate(353, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ControlTemplate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ControlTemplate" data-compartment="0">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="ControlTemplate" data-compartment="0">ControlTemplate</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DataTemplate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DataTemplate">
+							<rect x="364.0" y="42.0" height="32.0" width="120.0" data-name="DataTemplate"></rect>
+						</g>
+						<g transform="translate(364, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTemplate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTemplate" data-compartment="0">
+								<text x="52.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataTemplate" data-compartment="0">DataTemplate</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HierarchicalDataTemplate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="HierarchicalDataTemplate">
+							<rect x="519.0" y="42.0" height="32.0" width="211.0" data-name="HierarchicalDataTemplate"></rect>
+						</g>
+						<g transform="translate(519, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HierarchicalDataTemplate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HierarchicalDataTemplate" data-compartment="0">
+								<text x="97.5" y="14.1" stroke="none" text-anchor="middle" data-name="HierarchicalDataTemplate" data-compartment="0">HierarchicalDataTemplate</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ItemsPanelTemplate">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ItemsPanelTemplate">
+							<rect x="339.0" y="84.0" height="32.0" width="170.0" data-name="ItemsPanelTemplate"></rect>
+						</g>
+						<g transform="translate(339, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsPanelTemplate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemsPanelTemplate" data-compartment="0">
+								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="ItemsPanelTemplate" data-compartment="0">ItemsPanelTemplate</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DependencyObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DependencyObject">
+							<rect x="163.5" y="168.0" height="32.0" width="161.0" data-name="DependencyObject"></rect>
+						</g>
+						<g transform="translate(163.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DependencyObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DependencyObject" data-compartment="0">
+								<text x="72.5" y="14.1" stroke="none" text-anchor="middle" data-name="DependencyObject" data-compartment="0">DependencyObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TriggerBase">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TriggerBase">
+							<rect x="370.0" y="147.0" height="32.0" width="108.0" data-name="TriggerBase"></rect>
+						</g>
+						<g transform="translate(370, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TriggerBase" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TriggerBase" data-compartment="0">
+								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="TriggerBase" data-compartment="0">TriggerBase</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DataTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DataTrigger">
+							<rect x="572.0" y="84.0" height="32.0" width="105.0" data-name="DataTrigger"></rect>
+						</g>
+						<g transform="translate(572, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTrigger" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTrigger" data-compartment="0">
+								<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataTrigger" data-compartment="0">DataTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MultiDataTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MultiDataTrigger">
+							<rect x="553.5" y="126.0" height="32.0" width="142.0" data-name="MultiDataTrigger"></rect>
+						</g>
+						<g transform="translate(553.5, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MultiDataTrigger" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MultiDataTrigger" data-compartment="0">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="MultiDataTrigger" data-compartment="0">MultiDataTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MultiTrigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MultiTrigger">
+							<rect x="570.5" y="168.0" height="32.0" width="108.0" data-name="MultiTrigger"></rect>
+						</g>
+						<g transform="translate(570.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MultiTrigger" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MultiTrigger" data-compartment="0">
+								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="MultiTrigger" data-compartment="0">MultiTrigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Trigger">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Trigger">
+							<rect x="589.5" y="210.0" height="32.0" width="70.0" data-name="Trigger"></rect>
+						</g>
+						<g transform="translate(589.5, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Trigger" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Trigger" data-compartment="0">
+								<text x="27.0" y="14.1" stroke="none" text-anchor="middle" data-name="Trigger" data-compartment="0">Trigger</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Style">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Style">
+							<rect x="217.0" y="210.0" height="32.0" width="54.0" data-name="Style"></rect>
+						</g>
+						<g transform="translate(217, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Style" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Style" data-compartment="0">
+								<text x="19.0" y="14.1" stroke="none" text-anchor="middle" data-name="Style" data-compartment="0">Style</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="VisualState">
+						<g fill="#eee8d5" stroke="#33322E" data-name="VisualState">
+							<rect x="373.0" y="189.0" height="32.0" width="102.0" data-name="VisualState"></rect>
+						</g>
+						<g transform="translate(373, 189)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="VisualState" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VisualState" data-compartment="0">
+								<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="VisualState" data-compartment="0">VisualState</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

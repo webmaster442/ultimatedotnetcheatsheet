@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Markup;
 using System.Windows.Media;
@@ -12,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Shell;
 
 namespace ClassHierarchyTool;
 
@@ -31,6 +33,11 @@ internal sealed class WpfJob : IJob
         //freezables
         typeof(Freezable),
         typeof(Animatable),
+        typeof(InputBinding),
+        typeof(KeyBinding),
+        typeof(MouseBinding),
+        typeof(TaskbarItemInfo),
+        typeof(WindowChrome),
         typeof(Camera),
         typeof(ProjectionCamera),
         typeof(OrthographicCamera),
@@ -96,7 +103,7 @@ internal sealed class WpfJob : IJob
         typeof(TranslateTransform),
     ];
 
-    private readonly HashSet<Type> templates = 
+    private readonly HashSet<Type> templates =
     [
         typeof(FrameworkTemplate),
         typeof(ControlTemplate),
@@ -113,7 +120,7 @@ internal sealed class WpfJob : IJob
         typeof(VisualState),
     ];
 
-    private readonly HashSet<Type> frameworkElements = 
+    private readonly HashSet<Type> frameworkElements =
     [
         typeof(FrameworkElement),
         typeof(AccessText),
@@ -153,7 +160,7 @@ internal sealed class WpfJob : IJob
         typeof(HostVisual),
     ];
 
-    private readonly HashSet<Type> markupExtensions = 
+    private readonly HashSet<Type> markupExtensions =
     [
         typeof(MarkupExtension),
         typeof(ArrayExtension),
@@ -175,7 +182,7 @@ internal sealed class WpfJob : IJob
         typeof(ThemeDictionaryExtension),
     ];
 
-    private readonly HashSet<Type> controls = 
+    private readonly HashSet<Type> controls =
     [
         typeof(Control),
         typeof(ContentControl),
@@ -229,9 +236,18 @@ internal sealed class WpfJob : IJob
         typeof(StickyNoteControl),
     ];
 
+    private readonly HashSet<Type> baseTypes =
+    [
+        typeof(Animatable),
+        typeof(FrameworkElement),
+    ];
+
     public void Execute()
     {
         const string location = @"c:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\9.0.1\ref\net9.0";
+
+        File.WriteAllText("base.txt", baseTypes.GetNomnomlHierachy());
+        File.WriteAllText("base.md", baseTypes.GetSummaries(location).ToMarkdown());
 
         File.WriteAllText("dialogs.nomnoml", dialogs.GetNomnomlHierachy());
         File.WriteAllText("dialogs.md", dialogs.GetSummaries(location).ToMarkdown());

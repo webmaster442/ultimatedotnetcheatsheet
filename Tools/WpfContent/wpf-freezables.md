@@ -14,6 +14,26 @@
 
     Abstract class that provides animation support.
 
+* **InputBinding**
+
+    Represents a binding between an  and a command. The command is potentially a .
+
+* **KeyBinding**
+
+    Binds a  to a  (or another   implementation).
+
+* **MouseBinding**
+
+    Binds a  to a  (or another  implementation).
+
+* **TaskbarItemInfo**
+
+    Represents information about how the taskbar thumbnail is displayed.
+
+* **WindowChrome**
+
+    Represents an object that describes the customizations to the non-client area of a window.
+
 * **Camera**
 
     Specifies what portion of the 3D scene is rendered by the  or  element.

@@ -1,0 +1,1027 @@
+<svg version="1.1" baseProfile="full" width="1061.0" height="1537.0" viewBox="0 0 1061 1537" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf-frezables</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: wpf-frezables
+	
+	[Freezable] &lt;:- [Animatable]
+	[Freezable] &lt;:- [InputBinding]
+	[InputBinding] &lt;:- [KeyBinding]
+	[InputBinding] &lt;:- [MouseBinding]
+	[Freezable] &lt;:- [TaskbarItemInfo]
+	[Freezable] &lt;:- [WindowChrome]
+	[Animatable] &lt;:- [Camera]
+	[Camera] &lt;:- [ProjectionCamera]
+	[ProjectionCamera] &lt;:- [OrthographicCamera]
+	[ProjectionCamera] &lt;:- [PerspectiveCamera]
+	[Animatable] &lt;:- [Geometry3D]
+	[Geometry3D] &lt;:- [MeshGeometry3D]
+	[Animatable] &lt;:- [Model3D]
+	[Model3D] &lt;:- [GeometryModel3D]
+	[Model3D] &lt;:- [Model3DGroup]
+	[Animatable] &lt;:- [GeneralTransform3D]
+	[GeneralTransform3D] &lt;:- [Transform3D]
+	[Transform3D] &lt;:- [MatrixTransform3D]
+	[Transform3D] &lt;:- [AffineTransform3D]
+	[AffineTransform3D] &lt;:- [RotateTransform3D]
+	[AffineTransform3D] &lt;:- [ScaleTransform3D]
+	[Transform3D] &lt;:- [Transform3DGroup]
+	[AffineTransform3D] &lt;:- [TranslateTransform3D]
+	[Animatable] &lt;:- [Material]
+	[Material] &lt;:- [MaterialGroup]
+	[Material] &lt;:- [DiffuseMaterial]
+	[Material] &lt;:- [EmissiveMaterial]
+	[Material] &lt;:- [SpecularMaterial]
+	[Model3D] &lt;:- [Light]
+	[Light] &lt;:- [AmbientLight]
+	[Light] &lt;:- [DirectionalLight]
+	[Light] &lt;:- [PointLightBase]
+	[PointLightBase] &lt;:- [PointLight]
+	[PointLightBase] &lt;:- [SpotLight]
+	[Animatable] &lt;:- [Brush]
+	[Brush] &lt;:- [TileBrush]
+	[TileBrush] &lt;:- [ImageBrush]
+	[TileBrush] &lt;:- [VisualBrush]
+	[Brush] &lt;:- [GradientBrush]
+	[GradientBrush] &lt;:- [LinearGradientBrush]
+	[GradientBrush] &lt;:- [RadialGradientBrush]
+	[Brush] &lt;:- [SolidColorBrush]
+	[Brush] &lt;:- [BitmapCacheBrush]
+	[Animatable] &lt;:- [Drawing]
+	[Drawing] &lt;:- [DrawingGroup]
+	[Drawing] &lt;:- [GeometryDrawing]
+	[Drawing] &lt;:- [ImageDrawing]
+	[Drawing] &lt;:- [VideoDrawing]
+	[Drawing] &lt;:- [GlyphRunDrawing]
+	[Animatable] &lt;:- [Pen]
+	[Animatable] &lt;:- [ImageSource]
+	[ImageSource] &lt;:- [BitmapSource]
+	[ImageSource] &lt;:- [DrawingImage]
+	[BitmapSource] &lt;:- [BitmapImage]
+	[BitmapSource] &lt;:- [InteropBitmap]
+	[BitmapSource] &lt;:- [BitmapFrame]
+	[BitmapSource] &lt;:- [CachedBitmap]
+	[BitmapSource] &lt;:- [RenderTargetBitmap]
+	[BitmapSource] &lt;:- [ColorConvertedBitmap]
+	[BitmapSource] &lt;:- [CroppedBitmap]
+	[BitmapSource] &lt;:- [FormatConvertedBitmap]
+	[BitmapSource] &lt;:- [WriteableBitmap]
+	[BitmapSource] &lt;:- [TransformedBitmap]
+	[Animatable] &lt;:- [GeneralTransform]
+	[GeneralTransform] &lt;:- [Transform]
+	[Transform] &lt;:- [MatrixTransform]
+	[Transform] &lt;:- [RotateTransform]
+	[Transform] &lt;:- [ScaleTransform]
+	[Transform] &lt;:- [SkewTransform]
+	[Transform] &lt;:- [TransformGroup]
+	[Transform] &lt;:- [TranslateTransform]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="1537.0" width="1061.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M46.7 1372.7 L95 562 L118 562 L118.0 562.0 " fill="none"></path>
+					<path d="M41.4 1372.4 L46.7 1372.7 L52.1 1373.0 L46.0 1386.0 Z"></path>
+					<path d="M95.4 1380.8 L95 1381 L111.5 1381 L111.5 1381.0 " fill="none"></path>
+					<path d="M93.3 1375.9 L95.4 1380.8 L97.5 1385.8 L83.1 1386.0 Z"></path>
+					<path d="M238.2 1361.4 L243 1360 L282.5 1360 L282.5 1360.0 " fill="none"></path>
+					<path d="M236.8 1356.2 L238.2 1361.4 L239.7 1366.5 L225.4 1365.0 Z"></path>
+					<path d="M238.2 1400.6 L243 1402 L272 1402 L272.0 1402.0 " fill="none"></path>
+					<path d="M239.7 1395.5 L238.2 1400.6 L236.8 1405.8 L225.4 1397.0 Z"></path>
+					<path d="M95.4 1423.2 L95 1423 L100 1423 L100.0 1423.0 " fill="none"></path>
+					<path d="M97.5 1418.2 L95.4 1423.2 L93.3 1428.1 L83.1 1418.0 Z"></path>
+					<path d="M66.0 1428.4 L95 1465 L100 1465 L100.0 1465.0 " fill="none"></path>
+					<path d="M70.2 1425.1 L66.0 1428.4 L61.8 1431.8 L57.7 1418.0 Z"></path>
+					<path d="M173.1 532.8 L243 37 L297.5 37 L297.5 37.0 " fill="none"></path>
+					<path d="M167.8 532.1 L173.1 532.8 L178.4 533.5 L171.3 546.0 Z"></path>
+					<path d="M385.8 37.0 L427 37 L437.5 37 L437.5 37.0 " fill="none"></path>
+					<path d="M385.8 31.7 L385.8 37.0 L385.8 42.3 L372.5 37.0 Z"></path>
+					<path d="M593.2 17.9 L601 16 L620 16 L620.0 16.0 " fill="none"></path>
+					<path d="M592.0 12.7 L593.2 17.9 L594.5 23.1 L580.3 21.0 Z"></path>
+					<path d="M559.2 58.8 L601 79 L625.5 79 L625.5 79.0 " fill="none"></path>
+					<path d="M561.5 54.0 L559.2 58.8 L556.8 63.6 L547.1 53.0 Z"></path>
+					<path d="M173.5 532.8 L243 79 L279.5 79 L279.5 79.0 " fill="none"></path>
+					<path d="M168.2 532.0 L173.5 532.8 L178.7 533.6 L171.5 546.0 Z"></path>
+					<path d="M403.8 79.0 L427 79 L438 79 L438.0 79.0 " fill="none"></path>
+					<path d="M403.8 73.7 L403.8 79.0 L403.8 84.3 L390.5 79.0 Z"></path>
+					<path d="M174.4 532.9 L243 163 L293.5 163 L293.5 163.0 " fill="none"></path>
+					<path d="M169.2 531.9 L174.4 532.9 L179.6 533.9 L172.0 546.0 Z"></path>
+					<path d="M382.2 141.5 L427 121 L435.5 121 L435.5 121.0 " fill="none"></path>
+					<path d="M380.0 136.6 L382.2 141.5 L384.4 146.3 L370.0 147.0 Z"></path>
+					<path d="M389.8 163.0 L427 163 L448.5 163 L448.5 163.0 " fill="none"></path>
+					<path d="M389.8 157.7 L389.8 163.0 L389.8 168.3 L376.5 163.0 Z"></path>
+					<path d="M178.2 533.3 L243 331 L248 331 L248.0 331.0 " fill="none"></path>
+					<path d="M173.1 531.7 L178.2 533.3 L183.3 534.9 L174.1 546.0 Z"></path>
+					<path d="M435.3 331.0 L427 331 L456.5 331 L456.5 331.0 " fill="none"></path>
+					<path d="M435.3 325.7 L435.3 331.0 L435.3 336.3 L422.0 331.0 Z"></path>
+					<path d="M584.5 314.0 L601 310 L627 310 L627.0 310.0 " fill="none"></path>
+					<path d="M583.2 308.8 L584.5 314.0 L585.7 319.2 L571.5 317.1 Z"></path>
+					<path d="M584.5 348.0 L601 352 L628 352 L628.0 352.0 " fill="none"></path>
+					<path d="M585.7 342.8 L584.5 348.0 L583.2 353.2 L571.5 344.9 Z"></path>
+					<path d="M761.2 331.1 L815 310 L830.5 310 L830.5 310.0 " fill="none"></path>
+					<path d="M759.2 326.2 L761.2 331.1 L763.1 336.1 L748.8 336.0 Z"></path>
+					<path d="M801.3 352.0 L815 352 L834 352 L834.0 352.0 " fill="none"></path>
+					<path d="M801.3 346.7 L801.3 352.0 L801.3 357.3 L788.0 352.0 Z"></path>
+					<path d="M535.8 357.3 L601 436 L626.5 436 L626.5 436.0 " fill="none"></path>
+					<path d="M539.9 353.9 L535.8 357.3 L531.7 360.7 L527.3 347.0 Z"></path>
+					<path d="M761.2 372.9 L815 394 L820 394 L820.0 394.0 " fill="none"></path>
+					<path d="M763.1 367.9 L761.2 372.9 L759.2 377.8 L748.8 368.0 Z"></path>
+					<path d="M188.0 535.1 L243 457 L296.5 457 L296.5 457.0 " fill="none"></path>
+					<path d="M183.6 532.0 L188.0 535.1 L192.3 538.2 L180.3 546.0 Z"></path>
+					<path d="M362.4 432.0 L427 373 L452 373 L452.0 373.0 " fill="none"></path>
+					<path d="M358.8 428.1 L362.4 432.0 L366.0 435.9 L352.5 441.0 Z"></path>
+					<path d="M382.2 435.5 L427 415 L448.5 415 L448.5 415.0 " fill="none"></path>
+					<path d="M380.0 430.6 L382.2 435.5 L384.4 440.3 L370.0 441.0 Z"></path>
+					<path d="M386.8 457.0 L427 457 L441 457 L441.0 457.0 " fill="none"></path>
+					<path d="M386.8 451.7 L386.8 457.0 L386.8 462.3 L373.5 457.0 Z"></path>
+					<path d="M382.2 478.5 L427 499 L442 499 L442.0 499.0 " fill="none"></path>
+					<path d="M384.4 473.7 L382.2 478.5 L380.0 483.4 L370.0 473.0 Z"></path>
+					<path d="M382.2 184.5 L427 205 L486.5 205 L486.5 205.0 " fill="none"></path>
+					<path d="M384.4 179.7 L382.2 184.5 L380.0 189.4 L370.0 179.0 Z"></path>
+					<path d="M540.2 179.7 L601 121 L648.5 121 L648.5 121.0 " fill="none"></path>
+					<path d="M536.5 175.9 L540.2 179.7 L543.9 183.6 L530.6 189.0 Z"></path>
+					<path d="M554.8 205.0 L601 205 L639 205 L639.0 205.0 " fill="none"></path>
+					<path d="M554.8 199.7 L554.8 205.0 L554.8 210.3 L541.5 205.0 Z"></path>
+					<path d="M553.5 224.1 L601 247 L641.5 247 L641.5 247.0 " fill="none"></path>
+					<path d="M555.8 219.3 L553.5 224.1 L551.2 228.9 L541.5 218.3 Z"></path>
+					<path d="M787.6 231.4 L815 226 L865 226 L865.0 226.0 " fill="none"></path>
+					<path d="M786.6 226.1 L787.6 231.4 L788.6 236.6 L774.5 233.9 Z"></path>
+					<path d="M787.6 262.6 L815 268 L867 268 L867.0 268.0 " fill="none"></path>
+					<path d="M788.6 257.4 L787.6 262.6 L786.6 267.9 L774.5 260.1 Z"></path>
+					<path d="M188.0 588.9 L243 667 L304 667 L304.0 667.0 " fill="none"></path>
+					<path d="M192.3 585.8 L188.0 588.9 L183.6 592.0 L180.3 578.0 Z"></path>
+					<path d="M354.5 640.2 L427 541 L469 541 L469.0 541.0 " fill="none"></path>
+					<path d="M350.2 637.1 L354.5 640.2 L358.9 643.4 L346.7 651.0 Z"></path>
+					<path d="M546.9 517.2 L601 478 L654 478 L654.0 478.0 " fill="none"></path>
+					<path d="M543.8 512.9 L546.9 517.2 L550.0 521.5 L536.1 525.0 Z"></path>
+					<path d="M572.0 555.0 L601 562 L653.5 562 L653.5 562.0 " fill="none"></path>
+					<path d="M573.2 549.8 L572.0 555.0 L570.7 560.2 L559.0 551.9 Z"></path>
+					<path d="M378.1 647.3 L427 625 L450 625 L450.0 625.0 " fill="none"></path>
+					<path d="M375.9 642.5 L378.1 647.3 L380.3 652.2 L366.0 652.8 Z"></path>
+					<path d="M591.0 606.4 L601 604 L620 604 L620.0 604.0 " fill="none"></path>
+					<path d="M589.7 601.2 L591.0 606.4 L592.2 611.6 L578.0 609.6 Z"></path>
+					<path d="M540.2 650.3 L601 709 L620 709 L620.0 709.0 " fill="none"></path>
+					<path d="M543.9 646.4 L540.2 650.3 L536.5 654.1 L530.6 641.0 Z"></path>
+					<path d="M379.3 667.0 L427 667 L442.5 667 L442.5 667.0 " fill="none"></path>
+					<path d="M379.3 661.7 L379.3 667.0 L379.3 672.3 L366.0 667.0 Z"></path>
+					<path d="M378.1 686.7 L427 709 L432 709 L432.0 709.0 " fill="none"></path>
+					<path d="M380.3 681.8 L378.1 686.7 L375.9 691.5 L366.0 681.2 Z"></path>
+					<path d="M176.3 590.9 L243 856 L295.5 856 L295.5 856.0 " fill="none"></path>
+					<path d="M181.5 589.6 L176.3 590.9 L171.1 592.2 L173.0 578.0 Z"></path>
+					<path d="M357.8 830.0 L427 751 L450.5 751 L450.5 751.0 " fill="none"></path>
+					<path d="M353.8 826.5 L357.8 830.0 L361.8 833.5 L349.0 840.0 Z"></path>
+					<path d="M369.4 832.5 L427 793 L437 793 L437.0 793.0 " fill="none"></path>
+					<path d="M366.4 828.1 L369.4 832.5 L372.4 836.9 L358.4 840.0 Z"></path>
+					<path d="M387.5 844.0 L427 835 L451.5 835 L451.5 835.0 " fill="none"></path>
+					<path d="M386.3 838.8 L387.5 844.0 L388.7 849.2 L374.5 847.0 Z"></path>
+					<path d="M387.5 868.0 L427 877 L453 877 L453.0 877.0 " fill="none"></path>
+					<path d="M388.7 862.8 L387.5 868.0 L386.3 873.2 L374.5 865.0 Z"></path>
+					<path d="M369.4 879.5 L427 919 L436 919 L436.0 919.0 " fill="none"></path>
+					<path d="M372.4 875.1 L369.4 879.5 L366.4 883.9 L358.4 872.0 Z"></path>
+					<path d="M174.7 591.1 L243 940 L312.5 940 L312.5 940.0 " fill="none"></path>
+					<path d="M179.9 590.1 L174.7 591.1 L169.5 592.1 L172.1 578.0 Z"></path>
+					<path d="M173.9 591.1 L243 1003 L277 1003 L277.0 1003.0 " fill="none"></path>
+					<path d="M179.2 590.3 L173.9 591.1 L168.6 592.0 L171.7 578.0 Z"></path>
+					<path d="M406.0 986.8 L427 982 L452 982 L452.0 982.0 " fill="none"></path>
+					<path d="M404.8 981.6 L406.0 986.8 L407.2 992.0 L393.0 989.8 Z"></path>
+					<path d="M348.6 1031.0 L427 1192 L451.5 1192 L451.5 1192.0 " fill="none"></path>
+					<path d="M353.4 1028.7 L348.6 1031.0 L343.8 1033.3 L342.8 1019.0 Z"></path>
+					<path d="M524.7 953.5 L601 751 L650 751 L650.0 751.0 " fill="none"></path>
+					<path d="M519.7 951.6 L524.7 953.5 L529.7 955.4 L520.0 966.0 Z"></path>
+					<path d="M526.9 953.9 L601 793 L646 793 L646.0 793.0 " fill="none"></path>
+					<path d="M522.1 951.7 L526.9 953.9 L531.8 956.1 L521.4 966.0 Z"></path>
+					<path d="M530.3 954.5 L601 835 L649 835 L649.0 835.0 " fill="none"></path>
+					<path d="M525.7 951.8 L530.3 954.5 L534.9 957.2 L523.5 966.0 Z"></path>
+					<path d="M535.8 955.7 L601 877 L644 877 L644.0 877.0 " fill="none"></path>
+					<path d="M531.7 952.3 L535.8 955.7 L539.9 959.1 L527.3 966.0 Z"></path>
+					<path d="M546.9 958.2 L601 919 L621.5 919 L621.5 919.0 " fill="none"></path>
+					<path d="M543.8 953.9 L546.9 958.2 L550.0 962.5 L536.1 966.0 Z"></path>
+					<path d="M589.0 1000.1 L601 1003 L612.5 1003 L612.5 1003.0 " fill="none"></path>
+					<path d="M590.2 994.9 L589.0 1000.1 L587.7 1005.3 L576.0 997.0 Z"></path>
+					<path d="M546.9 1005.8 L601 1045 L640 1045 L640.0 1045.0 " fill="none"></path>
+					<path d="M550.0 1001.5 L546.9 1005.8 L543.8 1010.1 L536.1 998.0 Z"></path>
+					<path d="M535.8 1008.3 L601 1087 L606 1087 L606.0 1087.0 " fill="none"></path>
+					<path d="M539.9 1004.9 L535.8 1008.3 L531.7 1011.7 L527.3 998.0 Z"></path>
+					<path d="M530.3 1009.5 L601 1129 L637 1129 L637.0 1129.0 " fill="none"></path>
+					<path d="M534.9 1006.8 L530.3 1009.5 L525.7 1012.2 L523.5 998.0 Z"></path>
+					<path d="M526.9 1010.1 L601 1171 L624.5 1171 L624.5 1171.0 " fill="none"></path>
+					<path d="M531.8 1007.9 L526.9 1010.1 L522.1 1012.3 L521.4 998.0 Z"></path>
+					<path d="M171.9 591.3 L243 1318 L258 1318 L258.0 1318.0 " fill="none"></path>
+					<path d="M177.2 590.8 L171.9 591.3 L166.6 591.8 L170.6 578.0 Z"></path>
+					<path d="M425.3 1318.0 L427 1318 L467 1318 L467.0 1318.0 " fill="none"></path>
+					<path d="M425.3 1312.7 L425.3 1318.0 L425.3 1323.3 L412.0 1318.0 Z"></path>
+					<path d="M535.8 1291.7 L601 1213 L637.5 1213 L637.5 1213.0 " fill="none"></path>
+					<path d="M531.7 1288.3 L535.8 1291.7 L539.9 1295.1 L527.3 1302.0 Z"></path>
+					<path d="M546.9 1294.2 L601 1255 L636 1255 L636.0 1255.0 " fill="none"></path>
+					<path d="M543.8 1289.9 L546.9 1294.2 L550.0 1298.5 L536.1 1302.0 Z"></path>
+					<path d="M574.0 1303.5 L601 1297 L640 1297 L640.0 1297.0 " fill="none"></path>
+					<path d="M572.7 1298.3 L574.0 1303.5 L575.2 1308.7 L561.0 1306.7 Z"></path>
+					<path d="M574.0 1332.5 L601 1339 L640.5 1339 L640.5 1339.0 " fill="none"></path>
+					<path d="M575.2 1327.3 L574.0 1332.5 L572.7 1337.7 L561.0 1329.3 Z"></path>
+					<path d="M546.9 1341.8 L601 1381 L637 1381 L637.0 1381.0 " fill="none"></path>
+					<path d="M550.0 1337.5 L546.9 1341.8 L543.8 1346.1 L536.1 1334.0 Z"></path>
+					<path d="M535.8 1344.3 L601 1423 L625.5 1423 L625.5 1423.0 " fill="none"></path>
+					<path d="M539.9 1340.9 L535.8 1344.3 L531.7 1347.7 L527.3 1334.0 Z"></path>
+					<g data-name="Freezable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Freezable">
+							<rect x="0.0" y="1386.0" height="32.0" width="90.0" data-name="Freezable"></rect>
+						</g>
+						<g transform="translate(0, 1386)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Freezable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Freezable" data-compartment="0">
+								<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="Freezable" data-compartment="0">Freezable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Animatable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Animatable">
+							<rect x="118.0" y="546.0" height="32.0" width="102.0" data-name="Animatable"></rect>
+						</g>
+						<g transform="translate(118, 546)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Animatable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Animatable" data-compartment="0">
+								<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="Animatable" data-compartment="0">Animatable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="InputBinding">
+						<g fill="#eee8d5" stroke="#33322E" data-name="InputBinding">
+							<rect x="111.5" y="1365.0" height="32.0" width="115.0" data-name="InputBinding"></rect>
+						</g>
+						<g transform="translate(111.5, 1365)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="InputBinding" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="InputBinding" data-compartment="0">
+								<text x="49.5" y="14.1" stroke="none" text-anchor="middle" data-name="InputBinding" data-compartment="0">InputBinding</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="KeyBinding">
+						<g fill="#eee8d5" stroke="#33322E" data-name="KeyBinding">
+							<rect x="282.5" y="1344.0" height="32.0" width="105.0" data-name="KeyBinding"></rect>
+						</g>
+						<g transform="translate(282.5, 1344)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyBinding" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="KeyBinding" data-compartment="0">
+								<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="KeyBinding" data-compartment="0">KeyBinding</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MouseBinding">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MouseBinding">
+							<rect x="272.0" y="1386.0" height="32.0" width="126.0" data-name="MouseBinding"></rect>
+						</g>
+						<g transform="translate(272, 1386)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MouseBinding" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MouseBinding" data-compartment="0">
+								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="MouseBinding" data-compartment="0">MouseBinding</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TaskbarItemInfo">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TaskbarItemInfo">
+							<rect x="100.0" y="1407.0" height="32.0" width="138.0" data-name="TaskbarItemInfo"></rect>
+						</g>
+						<g transform="translate(100, 1407)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TaskbarItemInfo" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TaskbarItemInfo" data-compartment="0">
+								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="TaskbarItemInfo" data-compartment="0">TaskbarItemInfo</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WindowChrome">
+						<g fill="#eee8d5" stroke="#33322E" data-name="WindowChrome">
+							<rect x="100.0" y="1449.0" height="32.0" width="138.0" data-name="WindowChrome"></rect>
+						</g>
+						<g transform="translate(100, 1449)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WindowChrome" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WindowChrome" data-compartment="0">
+								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="WindowChrome" data-compartment="0">WindowChrome</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Camera">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Camera">
+							<rect x="297.5" y="21.0" height="32.0" width="75.0" data-name="Camera"></rect>
+						</g>
+						<g transform="translate(297.5, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Camera" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Camera" data-compartment="0">
+								<text x="29.5" y="14.1" stroke="none" text-anchor="middle" data-name="Camera" data-compartment="0">Camera</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ProjectionCamera">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ProjectionCamera">
+							<rect x="437.5" y="21.0" height="32.0" width="153.0" data-name="ProjectionCamera"></rect>
+						</g>
+						<g transform="translate(437.5, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ProjectionCamera" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ProjectionCamera" data-compartment="0">
+								<text x="68.5" y="14.1" stroke="none" text-anchor="middle" data-name="ProjectionCamera" data-compartment="0">ProjectionCamera</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="OrthographicCamera">
+						<g fill="#eee8d5" stroke="#33322E" data-name="OrthographicCamera">
+							<rect x="620.0" y="0.0" height="32.0" width="176.0" data-name="OrthographicCamera"></rect>
+						</g>
+						<g transform="translate(620, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OrthographicCamera" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OrthographicCamera" data-compartment="0">
+								<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="OrthographicCamera" data-compartment="0">OrthographicCamera</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PerspectiveCamera">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PerspectiveCamera">
+							<rect x="625.5" y="63.0" height="32.0" width="165.0" data-name="PerspectiveCamera"></rect>
+						</g>
+						<g transform="translate(625.5, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PerspectiveCamera" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PerspectiveCamera" data-compartment="0">
+								<text x="74.5" y="14.1" stroke="none" text-anchor="middle" data-name="PerspectiveCamera" data-compartment="0">PerspectiveCamera</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Geometry3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Geometry3D">
+							<rect x="279.5" y="63.0" height="32.0" width="111.0" data-name="Geometry3D"></rect>
+						</g>
+						<g transform="translate(279.5, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Geometry3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Geometry3D" data-compartment="0">
+								<text x="47.5" y="14.1" stroke="none" text-anchor="middle" data-name="Geometry3D" data-compartment="0">Geometry3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MeshGeometry3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MeshGeometry3D">
+							<rect x="438.0" y="63.0" height="32.0" width="152.0" data-name="MeshGeometry3D"></rect>
+						</g>
+						<g transform="translate(438, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MeshGeometry3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MeshGeometry3D" data-compartment="0">
+								<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="MeshGeometry3D" data-compartment="0">MeshGeometry3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Model3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Model3D">
+							<rect x="293.5" y="147.0" height="32.0" width="83.0" data-name="Model3D"></rect>
+						</g>
+						<g transform="translate(293.5, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Model3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Model3D" data-compartment="0">
+								<text x="33.5" y="14.1" stroke="none" text-anchor="middle" data-name="Model3D" data-compartment="0">Model3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GeometryModel3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GeometryModel3D">
+							<rect x="435.5" y="105.0" height="32.0" width="157.0" data-name="GeometryModel3D"></rect>
+						</g>
+						<g transform="translate(435.5, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryModel3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeometryModel3D" data-compartment="0">
+								<text x="70.5" y="14.1" stroke="none" text-anchor="middle" data-name="GeometryModel3D" data-compartment="0">GeometryModel3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Model3DGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Model3DGroup">
+							<rect x="448.5" y="147.0" height="32.0" width="131.0" data-name="Model3DGroup"></rect>
+						</g>
+						<g transform="translate(448.5, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Model3DGroup" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Model3DGroup" data-compartment="0">
+								<text x="57.5" y="14.1" stroke="none" text-anchor="middle" data-name="Model3DGroup" data-compartment="0">Model3DGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GeneralTransform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GeneralTransform3D">
+							<rect x="248.0" y="315.0" height="32.0" width="174.0" data-name="GeneralTransform3D"></rect>
+						</g>
+						<g transform="translate(248, 315)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeneralTransform3D" data-compartment="0">
+								<text x="79.0" y="14.1" stroke="none" text-anchor="middle" data-name="GeneralTransform3D" data-compartment="0">GeneralTransform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Transform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Transform3D">
+							<rect x="456.5" y="315.0" height="32.0" width="115.0" data-name="Transform3D"></rect>
+						</g>
+						<g transform="translate(456.5, 315)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform3D" data-compartment="0">
+								<text x="49.5" y="14.1" stroke="none" text-anchor="middle" data-name="Transform3D" data-compartment="0">Transform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MatrixTransform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MatrixTransform3D">
+							<rect x="627.0" y="294.0" height="32.0" width="162.0" data-name="MatrixTransform3D"></rect>
+						</g>
+						<g transform="translate(627, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MatrixTransform3D" data-compartment="0">
+								<text x="73.0" y="14.1" stroke="none" text-anchor="middle" data-name="MatrixTransform3D" data-compartment="0">MatrixTransform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AffineTransform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="AffineTransform3D">
+							<rect x="628.0" y="336.0" height="32.0" width="160.0" data-name="AffineTransform3D"></rect>
+						</g>
+						<g transform="translate(628, 336)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AffineTransform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AffineTransform3D" data-compartment="0">
+								<text x="72.0" y="14.1" stroke="none" text-anchor="middle" data-name="AffineTransform3D" data-compartment="0">AffineTransform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RotateTransform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RotateTransform3D">
+							<rect x="830.5" y="294.0" height="32.0" width="164.0" data-name="RotateTransform3D"></rect>
+						</g>
+						<g transform="translate(830.5, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RotateTransform3D" data-compartment="0">
+								<text x="74.0" y="14.1" stroke="none" text-anchor="middle" data-name="RotateTransform3D" data-compartment="0">RotateTransform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ScaleTransform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ScaleTransform3D">
+							<rect x="834.0" y="336.0" height="32.0" width="157.0" data-name="ScaleTransform3D"></rect>
+						</g>
+						<g transform="translate(834, 336)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScaleTransform3D" data-compartment="0">
+								<text x="70.5" y="14.1" stroke="none" text-anchor="middle" data-name="ScaleTransform3D" data-compartment="0">ScaleTransform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Transform3DGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Transform3DGroup">
+							<rect x="626.5" y="420.0" height="32.0" width="163.0" data-name="Transform3DGroup"></rect>
+						</g>
+						<g transform="translate(626.5, 420)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform3DGroup" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform3DGroup" data-compartment="0">
+								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="Transform3DGroup" data-compartment="0">Transform3DGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TranslateTransform3D">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TranslateTransform3D">
+							<rect x="820.0" y="378.0" height="32.0" width="185.0" data-name="TranslateTransform3D"></rect>
+						</g>
+						<g transform="translate(820, 378)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TranslateTransform3D" data-compartment="0">
+								<text x="84.5" y="14.1" stroke="none" text-anchor="middle" data-name="TranslateTransform3D" data-compartment="0">TranslateTransform3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Material">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Material">
+							<rect x="296.5" y="441.0" height="32.0" width="77.0" data-name="Material"></rect>
+						</g>
+						<g transform="translate(296.5, 441)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Material" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Material" data-compartment="0">
+								<text x="30.5" y="14.1" stroke="none" text-anchor="middle" data-name="Material" data-compartment="0">Material</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MaterialGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MaterialGroup">
+							<rect x="452.0" y="357.0" height="32.0" width="124.0" data-name="MaterialGroup"></rect>
+						</g>
+						<g transform="translate(452, 357)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaterialGroup" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MaterialGroup" data-compartment="0">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="MaterialGroup" data-compartment="0">MaterialGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DiffuseMaterial">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DiffuseMaterial">
+							<rect x="448.5" y="399.0" height="32.0" width="131.0" data-name="DiffuseMaterial"></rect>
+						</g>
+						<g transform="translate(448.5, 399)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DiffuseMaterial" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DiffuseMaterial" data-compartment="0">
+								<text x="57.5" y="14.1" stroke="none" text-anchor="middle" data-name="DiffuseMaterial" data-compartment="0">DiffuseMaterial</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="EmissiveMaterial">
+						<g fill="#eee8d5" stroke="#33322E" data-name="EmissiveMaterial">
+							<rect x="441.0" y="441.0" height="32.0" width="146.0" data-name="EmissiveMaterial"></rect>
+						</g>
+						<g transform="translate(441, 441)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EmissiveMaterial" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EmissiveMaterial" data-compartment="0">
+								<text x="65.0" y="14.1" stroke="none" text-anchor="middle" data-name="EmissiveMaterial" data-compartment="0">EmissiveMaterial</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SpecularMaterial">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SpecularMaterial">
+							<rect x="442.0" y="483.0" height="32.0" width="144.0" data-name="SpecularMaterial"></rect>
+						</g>
+						<g transform="translate(442, 483)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpecularMaterial" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SpecularMaterial" data-compartment="0">
+								<text x="64.0" y="14.1" stroke="none" text-anchor="middle" data-name="SpecularMaterial" data-compartment="0">SpecularMaterial</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Light">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Light">
+							<rect x="486.5" y="189.0" height="32.0" width="55.0" data-name="Light"></rect>
+						</g>
+						<g transform="translate(486.5, 189)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Light" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Light" data-compartment="0">
+								<text x="19.5" y="14.1" stroke="none" text-anchor="middle" data-name="Light" data-compartment="0">Light</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AmbientLight">
+						<g fill="#eee8d5" stroke="#33322E" data-name="AmbientLight">
+							<rect x="648.5" y="105.0" height="32.0" width="119.0" data-name="AmbientLight"></rect>
+						</g>
+						<g transform="translate(648.5, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AmbientLight" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AmbientLight" data-compartment="0">
+								<text x="51.5" y="14.1" stroke="none" text-anchor="middle" data-name="AmbientLight" data-compartment="0">AmbientLight</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DirectionalLight">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DirectionalLight">
+							<rect x="639.0" y="189.0" height="32.0" width="138.0" data-name="DirectionalLight"></rect>
+						</g>
+						<g transform="translate(639, 189)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DirectionalLight" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DirectionalLight" data-compartment="0">
+								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="DirectionalLight" data-compartment="0">DirectionalLight</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PointLightBase">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PointLightBase">
+							<rect x="641.5" y="231.0" height="32.0" width="133.0" data-name="PointLightBase"></rect>
+						</g>
+						<g transform="translate(641.5, 231)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PointLightBase" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PointLightBase" data-compartment="0">
+								<text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="PointLightBase" data-compartment="0">PointLightBase</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PointLight">
+						<g fill="#eee8d5" stroke="#33322E" data-name="PointLight">
+							<rect x="865.0" y="210.0" height="32.0" width="95.0" data-name="PointLight"></rect>
+						</g>
+						<g transform="translate(865, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PointLight" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PointLight" data-compartment="0">
+								<text x="39.5" y="14.1" stroke="none" text-anchor="middle" data-name="PointLight" data-compartment="0">PointLight</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SpotLight">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SpotLight">
+							<rect x="867.0" y="252.0" height="32.0" width="91.0" data-name="SpotLight"></rect>
+						</g>
+						<g transform="translate(867, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpotLight" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SpotLight" data-compartment="0">
+								<text x="37.5" y="14.1" stroke="none" text-anchor="middle" data-name="SpotLight" data-compartment="0">SpotLight</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Brush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Brush">
+							<rect x="304.0" y="651.0" height="32.0" width="62.0" data-name="Brush"></rect>
+						</g>
+						<g transform="translate(304, 651)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Brush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Brush" data-compartment="0">
+								<text x="23.0" y="14.1" stroke="none" text-anchor="middle" data-name="Brush" data-compartment="0">Brush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TileBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TileBrush">
+							<rect x="469.0" y="525.0" height="32.0" width="90.0" data-name="TileBrush"></rect>
+						</g>
+						<g transform="translate(469, 525)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TileBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TileBrush" data-compartment="0">
+								<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="TileBrush" data-compartment="0">TileBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ImageBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ImageBrush">
+							<rect x="654.0" y="462.0" height="32.0" width="108.0" data-name="ImageBrush"></rect>
+						</g>
+						<g transform="translate(654, 462)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageBrush" data-compartment="0">
+								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="ImageBrush" data-compartment="0">ImageBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="VisualBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="VisualBrush">
+							<rect x="653.5" y="546.0" height="32.0" width="109.0" data-name="VisualBrush"></rect>
+						</g>
+						<g transform="translate(653.5, 546)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="VisualBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VisualBrush" data-compartment="0">
+								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="VisualBrush" data-compartment="0">VisualBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GradientBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GradientBrush">
+							<rect x="450.0" y="609.0" height="32.0" width="128.0" data-name="GradientBrush"></rect>
+						</g>
+						<g transform="translate(450, 609)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GradientBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GradientBrush" data-compartment="0">
+								<text x="56.0" y="14.1" stroke="none" text-anchor="middle" data-name="GradientBrush" data-compartment="0">GradientBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LinearGradientBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="LinearGradientBrush">
+							<rect x="620.0" y="588.0" height="32.0" width="176.0" data-name="LinearGradientBrush"></rect>
+						</g>
+						<g transform="translate(620, 588)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LinearGradientBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LinearGradientBrush" data-compartment="0">
+								<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="LinearGradientBrush" data-compartment="0">LinearGradientBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RadialGradientBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RadialGradientBrush">
+							<rect x="620.0" y="693.0" height="32.0" width="176.0" data-name="RadialGradientBrush"></rect>
+						</g>
+						<g transform="translate(620, 693)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RadialGradientBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RadialGradientBrush" data-compartment="0">
+								<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="RadialGradientBrush" data-compartment="0">RadialGradientBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SolidColorBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SolidColorBrush">
+							<rect x="442.5" y="651.0" height="32.0" width="143.0" data-name="SolidColorBrush"></rect>
+						</g>
+						<g transform="translate(442.5, 651)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SolidColorBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SolidColorBrush" data-compartment="0">
+								<text x="63.5" y="14.1" stroke="none" text-anchor="middle" data-name="SolidColorBrush" data-compartment="0">SolidColorBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BitmapCacheBrush">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BitmapCacheBrush">
+							<rect x="432.0" y="693.0" height="32.0" width="164.0" data-name="BitmapCacheBrush"></rect>
+						</g>
+						<g transform="translate(432, 693)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapCacheBrush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapCacheBrush" data-compartment="0">
+								<text x="74.0" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapCacheBrush" data-compartment="0">BitmapCacheBrush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Drawing">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Drawing">
+							<rect x="295.5" y="840.0" height="32.0" width="79.0" data-name="Drawing"></rect>
+						</g>
+						<g transform="translate(295.5, 840)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Drawing" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Drawing" data-compartment="0">
+								<text x="31.5" y="14.1" stroke="none" text-anchor="middle" data-name="Drawing" data-compartment="0">Drawing</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DrawingGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DrawingGroup">
+							<rect x="450.5" y="735.0" height="32.0" width="127.0" data-name="DrawingGroup"></rect>
+						</g>
+						<g transform="translate(450.5, 735)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingGroup" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DrawingGroup" data-compartment="0">
+								<text x="55.5" y="14.1" stroke="none" text-anchor="middle" data-name="DrawingGroup" data-compartment="0">DrawingGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GeometryDrawing">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GeometryDrawing">
+							<rect x="437.0" y="777.0" height="32.0" width="154.0" data-name="GeometryDrawing"></rect>
+						</g>
+						<g transform="translate(437, 777)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryDrawing" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeometryDrawing" data-compartment="0">
+								<text x="69.0" y="14.1" stroke="none" text-anchor="middle" data-name="GeometryDrawing" data-compartment="0">GeometryDrawing</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ImageDrawing">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ImageDrawing">
+							<rect x="451.5" y="819.0" height="32.0" width="125.0" data-name="ImageDrawing"></rect>
+						</g>
+						<g transform="translate(451.5, 819)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageDrawing" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageDrawing" data-compartment="0">
+								<text x="54.5" y="14.1" stroke="none" text-anchor="middle" data-name="ImageDrawing" data-compartment="0">ImageDrawing</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="VideoDrawing">
+						<g fill="#eee8d5" stroke="#33322E" data-name="VideoDrawing">
+							<rect x="453.0" y="861.0" height="32.0" width="122.0" data-name="VideoDrawing"></rect>
+						</g>
+						<g transform="translate(453, 861)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="VideoDrawing" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VideoDrawing" data-compartment="0">
+								<text x="53.0" y="14.1" stroke="none" text-anchor="middle" data-name="VideoDrawing" data-compartment="0">VideoDrawing</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GlyphRunDrawing">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GlyphRunDrawing">
+							<rect x="436.0" y="903.0" height="32.0" width="156.0" data-name="GlyphRunDrawing"></rect>
+						</g>
+						<g transform="translate(436, 903)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GlyphRunDrawing" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GlyphRunDrawing" data-compartment="0">
+								<text x="70.0" y="14.1" stroke="none" text-anchor="middle" data-name="GlyphRunDrawing" data-compartment="0">GlyphRunDrawing</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Pen">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Pen">
+							<rect x="312.5" y="924.0" height="32.0" width="45.0" data-name="Pen"></rect>
+						</g>
+						<g transform="translate(312.5, 924)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Pen" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Pen" data-compartment="0">
+								<text x="14.5" y="14.1" stroke="none" text-anchor="middle" data-name="Pen" data-compartment="0">Pen</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ImageSource">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ImageSource">
+							<rect x="277.0" y="987.0" height="32.0" width="116.0" data-name="ImageSource"></rect>
+						</g>
+						<g transform="translate(277, 987)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageSource" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageSource" data-compartment="0">
+								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="ImageSource" data-compartment="0">ImageSource</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BitmapSource">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BitmapSource">
+							<rect x="452.0" y="966.0" height="32.0" width="124.0" data-name="BitmapSource"></rect>
+						</g>
+						<g transform="translate(452, 966)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapSource" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapSource" data-compartment="0">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapSource" data-compartment="0">BitmapSource</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DrawingImage">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DrawingImage">
+							<rect x="451.5" y="1176.0" height="32.0" width="125.0" data-name="DrawingImage"></rect>
+						</g>
+						<g transform="translate(451.5, 1176)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingImage" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DrawingImage" data-compartment="0">
+								<text x="54.5" y="14.1" stroke="none" text-anchor="middle" data-name="DrawingImage" data-compartment="0">DrawingImage</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BitmapImage">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BitmapImage">
+							<rect x="650.0" y="735.0" height="32.0" width="116.0" data-name="BitmapImage"></rect>
+						</g>
+						<g transform="translate(650, 735)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapImage" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapImage" data-compartment="0">
+								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapImage" data-compartment="0">BitmapImage</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="InteropBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="InteropBitmap">
+							<rect x="646.0" y="777.0" height="32.0" width="124.0" data-name="InteropBitmap"></rect>
+						</g>
+						<g transform="translate(646, 777)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="InteropBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="InteropBitmap" data-compartment="0">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="InteropBitmap" data-compartment="0">InteropBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BitmapFrame">
+						<g fill="#eee8d5" stroke="#33322E" data-name="BitmapFrame">
+							<rect x="649.0" y="819.0" height="32.0" width="118.0" data-name="BitmapFrame"></rect>
+						</g>
+						<g transform="translate(649, 819)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapFrame" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapFrame" data-compartment="0">
+								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapFrame" data-compartment="0">BitmapFrame</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CachedBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CachedBitmap">
+							<rect x="644.0" y="861.0" height="32.0" width="128.0" data-name="CachedBitmap"></rect>
+						</g>
+						<g transform="translate(644, 861)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CachedBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CachedBitmap" data-compartment="0">
+								<text x="56.0" y="14.1" stroke="none" text-anchor="middle" data-name="CachedBitmap" data-compartment="0">CachedBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RenderTargetBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RenderTargetBitmap">
+							<rect x="621.5" y="903.0" height="32.0" width="173.0" data-name="RenderTargetBitmap"></rect>
+						</g>
+						<g transform="translate(621.5, 903)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RenderTargetBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RenderTargetBitmap" data-compartment="0">
+								<text x="78.5" y="14.1" stroke="none" text-anchor="middle" data-name="RenderTargetBitmap" data-compartment="0">RenderTargetBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ColorConvertedBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ColorConvertedBitmap">
+							<rect x="612.5" y="987.0" height="32.0" width="191.0" data-name="ColorConvertedBitmap"></rect>
+						</g>
+						<g transform="translate(612.5, 987)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ColorConvertedBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ColorConvertedBitmap" data-compartment="0">
+								<text x="87.5" y="14.1" stroke="none" text-anchor="middle" data-name="ColorConvertedBitmap" data-compartment="0">ColorConvertedBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CroppedBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="CroppedBitmap">
+							<rect x="640.0" y="1029.0" height="32.0" width="136.0" data-name="CroppedBitmap"></rect>
+						</g>
+						<g transform="translate(640, 1029)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CroppedBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CroppedBitmap" data-compartment="0">
+								<text x="60.0" y="14.1" stroke="none" text-anchor="middle" data-name="CroppedBitmap" data-compartment="0">CroppedBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FormatConvertedBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FormatConvertedBitmap">
+							<rect x="606.0" y="1071.0" height="32.0" width="204.0" data-name="FormatConvertedBitmap"></rect>
+						</g>
+						<g transform="translate(606, 1071)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FormatConvertedBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FormatConvertedBitmap" data-compartment="0">
+								<text x="94.0" y="14.1" stroke="none" text-anchor="middle" data-name="FormatConvertedBitmap" data-compartment="0">FormatConvertedBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WriteableBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="WriteableBitmap">
+							<rect x="637.0" y="1113.0" height="32.0" width="142.0" data-name="WriteableBitmap"></rect>
+						</g>
+						<g transform="translate(637, 1113)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WriteableBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WriteableBitmap" data-compartment="0">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="WriteableBitmap" data-compartment="0">WriteableBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TransformedBitmap">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TransformedBitmap">
+							<rect x="624.5" y="1155.0" height="32.0" width="167.0" data-name="TransformedBitmap"></rect>
+						</g>
+						<g transform="translate(624.5, 1155)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TransformedBitmap" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TransformedBitmap" data-compartment="0">
+								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="TransformedBitmap" data-compartment="0">TransformedBitmap</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="GeneralTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="GeneralTransform">
+							<rect x="258.0" y="1302.0" height="32.0" width="154.0" data-name="GeneralTransform"></rect>
+						</g>
+						<g transform="translate(258, 1302)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeneralTransform" data-compartment="0">
+								<text x="69.0" y="14.1" stroke="none" text-anchor="middle" data-name="GeneralTransform" data-compartment="0">GeneralTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Transform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Transform">
+							<rect x="467.0" y="1302.0" height="32.0" width="94.0" data-name="Transform"></rect>
+						</g>
+						<g transform="translate(467, 1302)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform" data-compartment="0">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="Transform" data-compartment="0">Transform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MatrixTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="MatrixTransform">
+							<rect x="637.5" y="1197.0" height="32.0" width="141.0" data-name="MatrixTransform"></rect>
+						</g>
+						<g transform="translate(637.5, 1197)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MatrixTransform" data-compartment="0">
+								<text x="62.5" y="14.1" stroke="none" text-anchor="middle" data-name="MatrixTransform" data-compartment="0">MatrixTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RotateTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="RotateTransform">
+							<rect x="636.0" y="1239.0" height="32.0" width="144.0" data-name="RotateTransform"></rect>
+						</g>
+						<g transform="translate(636, 1239)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RotateTransform" data-compartment="0">
+								<text x="64.0" y="14.1" stroke="none" text-anchor="middle" data-name="RotateTransform" data-compartment="0">RotateTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ScaleTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="ScaleTransform">
+							<rect x="640.0" y="1281.0" height="32.0" width="136.0" data-name="ScaleTransform"></rect>
+						</g>
+						<g transform="translate(640, 1281)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScaleTransform" data-compartment="0">
+								<text x="60.0" y="14.1" stroke="none" text-anchor="middle" data-name="ScaleTransform" data-compartment="0">ScaleTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SkewTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="SkewTransform">
+							<rect x="640.5" y="1323.0" height="32.0" width="135.0" data-name="SkewTransform"></rect>
+						</g>
+						<g transform="translate(640.5, 1323)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SkewTransform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SkewTransform" data-compartment="0">
+								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="SkewTransform" data-compartment="0">SkewTransform</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TransformGroup">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TransformGroup">
+							<rect x="637.0" y="1365.0" height="32.0" width="142.0" data-name="TransformGroup"></rect>
+						</g>
+						<g transform="translate(637, 1365)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TransformGroup" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TransformGroup" data-compartment="0">
+								<text x="63.0" y="14.1" stroke="none" text-anchor="middle" data-name="TransformGroup" data-compartment="0">TransformGroup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TranslateTransform">
+						<g fill="#eee8d5" stroke="#33322E" data-name="TranslateTransform">
+							<rect x="625.5" y="1407.0" height="32.0" width="165.0" data-name="TranslateTransform"></rect>
+						</g>
+						<g transform="translate(625.5, 1407)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TranslateTransform" data-compartment="0">
+								<text x="74.5" y="14.1" stroke="none" text-anchor="middle" data-name="TranslateTransform" data-compartment="0">TranslateTransform</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

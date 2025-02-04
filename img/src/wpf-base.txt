@@ -1,0 +1,13 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: wpf-base
+
+[Object] <:- [DispatcherObject]
+[DispatcherObject] <:- [DependencyObject]
+[DependencyObject] <:- [Freezable]
+[Freezable] <:- [Animatable]
+[DependencyObject] <:- [Visual]
+[Visual] <:- [UIElement]
+[UIElement] <:- [FrameworkElement]

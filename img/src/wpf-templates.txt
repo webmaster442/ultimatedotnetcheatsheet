@@ -1,4 +1,9 @@
-[Object] <:- [DispatcherObject]
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: wpf-templates
+
 [DispatcherObject] <:- [FrameworkTemplate]
 [FrameworkTemplate] <:- [ControlTemplate]
 [FrameworkTemplate] <:- [DataTemplate]

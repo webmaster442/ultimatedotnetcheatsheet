@@ -1,3 +1,9 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#title: wpf-dialogs
+
 [Object] <:- [CommonDialog]
 [CommonDialog] <:- [CommonItemDialog]
 [CommonItemDialog] <:- [FileDialog]

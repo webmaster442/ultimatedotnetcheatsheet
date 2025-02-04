@@ -1,0 +1,131 @@
+<svg version="1.1" baseProfile="full" width="838.0" height="130.0" viewBox="0 0 838 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf-base</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#title: wpf-base
+	
+	[Object] &lt;:- [DispatcherObject]
+	[DispatcherObject] &lt;:- [DependencyObject]
+	[DependencyObject] &lt;:- [Freezable]
+	[Freezable] &lt;:- [Animatable]
+	[DependencyObject] &lt;:- [Visual]
+	[Visual] &lt;:- [UIElement]
+	[UIElement] &lt;:- [FrameworkElement]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="130.0" width="838.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M79.3 37.0 L71 37 L76 37 L76.0 37.0 " fill="none"></path>
+					<path d="M79.3 31.7 L79.3 37.0 L79.3 42.3 L66.0 37.0 Z"></path>
+					<path d="M238.3 37.0 L230 37 L235 37 L235.0 37.0 " fill="none"></path>
+					<path d="M238.3 31.7 L238.3 37.0 L238.3 42.3 L225.0 37.0 Z"></path>
+					<path d="M393.6 17.8 L401 16 L406 16 L406.0 16.0 " fill="none"></path>
+					<path d="M392.3 12.6 L393.6 17.8 L394.9 23.0 L380.6 21.0 Z"></path>
+					<path d="M509.3 16.0 L501 16 L506 16 L506.0 16.0 " fill="none"></path>
+					<path d="M509.3 10.7 L509.3 16.0 L509.3 21.3 L496.0 16.0 Z"></path>
+					<path d="M393.6 56.2 L401 58 L419.5 58 L419.5 58.0 " fill="none"></path>
+					<path d="M394.9 51.0 L393.6 56.2 L392.3 61.4 L380.6 53.0 Z"></path>
+					<path d="M495.8 58.0 L501 58 L510 58 L510.0 58.0 " fill="none"></path>
+					<path d="M495.8 52.7 L495.8 58.0 L495.8 63.3 L482.5 58.0 Z"></path>
+					<path d="M617.3 58.0 L613 58 L618 58 L618.0 58.0 " fill="none"></path>
+					<path d="M617.3 52.7 L617.3 58.0 L617.3 63.3 L604.0 58.0 Z"></path>
+					<g data-name="Object">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="21.0" height="32.0" width="66.0" data-name="Object"></rect>
+						</g>
+						<g transform="translate(0, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
+								<text x="25.0" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DispatcherObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DispatcherObject">
+							<rect x="76.0" y="21.0" height="32.0" width="149.0" data-name="DispatcherObject"></rect>
+						</g>
+						<g transform="translate(76, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DispatcherObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DispatcherObject" data-compartment="0">
+								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="DispatcherObject" data-compartment="0">DispatcherObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DependencyObject">
+						<g fill="#eee8d5" stroke="#33322E" data-name="DependencyObject">
+							<rect x="235.0" y="21.0" height="32.0" width="161.0" data-name="DependencyObject"></rect>
+						</g>
+						<g transform="translate(235, 21)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DependencyObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DependencyObject" data-compartment="0">
+								<text x="72.5" y="14.1" stroke="none" text-anchor="middle" data-name="DependencyObject" data-compartment="0">DependencyObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Freezable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Freezable">
+							<rect x="406.0" y="0.0" height="32.0" width="90.0" data-name="Freezable"></rect>
+						</g>
+						<g transform="translate(406, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Freezable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Freezable" data-compartment="0">
+								<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="Freezable" data-compartment="0">Freezable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Animatable">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Animatable">
+							<rect x="506.0" y="0.0" height="32.0" width="102.0" data-name="Animatable"></rect>
+						</g>
+						<g transform="translate(506, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Animatable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Animatable" data-compartment="0">
+								<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="Animatable" data-compartment="0">Animatable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Visual">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Visual">
+							<rect x="419.5" y="42.0" height="32.0" width="63.0" data-name="Visual"></rect>
+						</g>
+						<g transform="translate(419.5, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Visual" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Visual" data-compartment="0">
+								<text x="23.5" y="14.1" stroke="none" text-anchor="middle" data-name="Visual" data-compartment="0">Visual</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UIElement">
+						<g fill="#eee8d5" stroke="#33322E" data-name="UIElement">
+							<rect x="510.0" y="42.0" height="32.0" width="94.0" data-name="UIElement"></rect>
+						</g>
+						<g transform="translate(510, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UIElement" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UIElement" data-compartment="0">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="UIElement" data-compartment="0">UIElement</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FrameworkElement">
+						<g fill="#eee8d5" stroke="#33322E" data-name="FrameworkElement">
+							<rect x="618.0" y="42.0" height="32.0" width="164.0" data-name="FrameworkElement"></rect>
+						</g>
+						<g transform="translate(618, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkElement" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement" data-compartment="0">
+								<text x="74.0" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkElement" data-compartment="0">FrameworkElement</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
