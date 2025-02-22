@@ -55,7 +55,7 @@ kbd::after {
 
 #nav li a {
     display: inline-block;
-    padding: .2rem 1rem;
+    padding: .2rem 0.8rem;
     text-decoration: none;
     color: wheat;
 }
@@ -64,6 +64,14 @@ kbd::after {
     text-decoration: underline;
     font-weight: bold;
 }
+
+#nav li ul {
+    margin-left: -1.5rem;
+}
+
+#nav li ul li {
+    list-style-type: lower-alpha;
+  }
 
 [data-bs-theme="dark"] {
     #main svg {
