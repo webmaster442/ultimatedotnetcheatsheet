@@ -1,0 +1,24 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: winforms3
+
+[<box>Control] <:- [TabControl]
+[Control] <:- [ToolBar]
+[Control] <:- [TrackBar]
+[Control] <:- [TreeView]
+[Control] <:- [AxHost]
+[Control] <:- [DataGridView]
+[Control] <:- [Chart]
+[Control] <:- [DateTimePicker]
+[Control] <:- [GroupBox]
+[Control] <:- [ElementHost]
+[Control] <:- [ListView]
+[Control] <:- [MdiClient]
+[Control] <:- [MonthCalendar]
+[Control] <:- [PictureBox]
+[Control] <:- [PrintPreviewControl]
+[Control] <:- [ProgressBar]

@@ -1,0 +1,19 @@
+#.box: fill=#C06EF0
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: wpf2
+
+[<box>DispatcherObject] <:- [FrameworkTemplate]
+[FrameworkTemplate] <:- [ControlTemplate]
+[FrameworkTemplate] <:- [ItemsPanelTemplate]
+[FrameworkTemplate] <:- [DataTemplate]
+
+[DataTemplate] <:- [ItemContainerTemplate]
+[DataTemplate] <:- [HierarchicalDataTemplate]
+	
+	
+	

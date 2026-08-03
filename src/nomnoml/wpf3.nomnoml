@@ -1,0 +1,81 @@
+#direction: right
+#.box: fill=#C06EF0
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: wpf3
+
+[<box>Animatable] <:- [Camera] <:- [ProjectionCamera] <:- [PerspectiveCamera]
+
+[Animatable] <:- [Geometry3D] <:- [MeshGeometry3D]
+[Animatable] <:- [Model3D] <:- [Light] <:- [DirectionalLight]
+
+[Animatable] <:- [GeneralTransform3D] <:- [Transform3D]
+
+[Transform3D] <:- [AffineTransform3D]
+[Transform3D] <:- [MatrixTransform3D]
+[Transform3D] <:- [Transform3DGroup]
+
+[AffineTransform3D] <:- [RotateTransform3D]
+[AffineTransform3D] <:- [ScaleTransform3D]
+[AffineTransform3D] <:- [TranslateTransform3D]
+
+[GeneralTransform3D] <:-[GeneralTransform3DGroup]
+
+[Animatable] <:- [Material] <:- [MaterialGroup]
+[Material] <:- [DiffuseMaterial]
+[Material] <:- [EmissiveMaterial]
+[Material] <:- [SpecularMaterial]
+
+[Model3D] <:- [GeometryModel3D]
+[Model3D] <:- [Model3DGroup]
+
+[ProjectionCamera] <:- [OrthographicCamera]
+
+[Light] <:- [PointLightBase] <:- [SpotLight]
+[Light] <:- [AmbientLight]
+[PointLightBase] <:- [PointLight]
+
+[Animatable] <:-[Brush] <:- [TileBrush] <:- [VisualBrush]
+[Brush] <:- [BitmapCacheBrush]
+[TileBrush] <:- [DrawingBrush]
+[TileBrush] <:- [ImageBrush]
+
+[Animatable] <:- [Drawing]
+[Animatable] <:- [Pen]
+[Drawing] <:- [DrawingGroup]
+[Drawing] <:- [GeometryDrawing]
+[Drawing] <:- [GlyphRunDrawing]
+[Drawing] <:- [ImageDrawing]
+[Drawing] <:- [VideoDrawing]
+
+[ImageSource] <:- [D3DImage]
+[ImageSource] <:- [DrawingImage]
+
+[Animatable] <:- [ImageSource] <:- [BitmapSource] <:- [BitmapImage]
+[BitmapSource] <:- [InteropBitmap]
+[BitmapSource] <:- [BitmapFrame]
+[BitmapSource] <:- [CachedBitmap]
+[BitmapSource] <:- [ColorConvertedBitmap]
+[BitmapSource] <:- [CroppedBitmap]
+[BitmapSource] <:- [FormatConvertedBitmap]
+[BitmapSource] <:- [RenderTargetBitmap]
+[BitmapSource] <:- [TransformedBitmap]
+[BitmapSource] <:- [WriteableBitmap]
+
+
+[Animatable] <:- [GeneralTransform]
+[GeneralTransform] <:- [GeneralTransformGroup]
+[GeneralTransform] <:- [Transform]
+
+[Transform] <:- [MatrixTransform]
+[Transform] <:- [RotateTransform]
+[Transform] <:- [ScaleTransform]
+[Transform] <:- [SkewTransform]
+[Transform] <:- [TranslateTransform]
+
+
+

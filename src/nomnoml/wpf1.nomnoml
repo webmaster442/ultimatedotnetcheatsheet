@@ -1,0 +1,23 @@
+#.box: fill=#C06EF0
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: wpf1
+
+[Object ] <:- [<box>DispatcherObject] <:- [DependencyObject] <:- [Visual] <:- [UIElement] <:- [<box>FrameworkElement] <:- [<box>Control]
+[DependencyObject] <:- [Freezable] <- [<box>Animatable]
+
+[Visual] <:- [Viewport3DVisual]
+[Visual] <:- [Visual3D]
+
+[Visual3D] <:- [ModelVisual3D]
+[Visual3D] <:- [Viewport2DVisual3D]
+[Visual3D] <:- [UIElement3D] <:- [ContainerUIElement3D]
+
+[Object] <:- [PrintDialog]
+[Object] <:- [CommonDialog] <:- [CommonItemDialog] <:- [FileDialog] <:- [SaveFileDialog]
+[FileDialog] <:- [OpenFileDialog]
+[CommonItemDialog] <:- [OpenFolderDialog]

@@ -1,0 +1,65 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: maui2
+
+[Element] <:- [Application]
+[Element] <:- [AppLinkEntry]
+[Element] <:- [BaseMenuItem]
+
+[Element] <:- [Brush]
+[Brush] <:- [GradientBrush]
+[GradientBrush] <:- [LinearGradientBrush]
+[GradientBrush] <:- [RadialGradientBrush]
+[Brush] <:- [SolidColorBrush]
+
+[Element] <:- [FlyoutBase] <:- [MenuFlyout]
+[Element] <:- [FormattedString]
+[Element] <:- [GestureElement] <:- [Span]
+
+[Element] <:- [GestureRecognizer]
+[GestureRecognizer] <:-[DragGestureRecognizer]
+[GestureRecognizer] <:-[DropGestureRecognizer]
+[GestureRecognizer] <:-[PanGestureRecognizer]
+[GestureRecognizer] <:-[PinchGestureRecognizer]
+[GestureRecognizer] <:-[PointerGestureRecognizer]
+[GestureRecognizer] <:-[SwipeGestureRecognizer]
+[GestureRecognizer] <:-[TapGestureRecognizer]
+
+[Element] <:- [GradientStop]
+
+[Element] <:- [ImageSource]
+[ImageSource] <:- [FileImageSource]
+[ImageSource] <:- [FontImageSource]
+[ImageSource] <:- [StreamImageSource]
+[ImageSource] <:- [UriImageSource]
+
+[Element] <:- [MapElement]
+[MapElement] <:- [Circle]
+[MapElement] <:- [Polygon]
+[MapElement] <:- [Polyline]
+
+[Element] <:- [Pin]
+[Element] <:- [MenuBar]
+[Element] <:- [Shadow]
+[Element] <:- [SwipeItems]
+[Element] <:- [<box>NavigableElement]
+[Element] <:-[BaseMenuItem] <:- [MenuBarItem]
+
+[BaseMenuItem] <:- [MenuItem]
+[MenuItem] <:- [MenuFlyoutItem]
+[MenuFlyoutItem] <:- [MenuFlyoutSeparator]
+[MenuFlyoutItem] <:- [MenuFlyoutSubItem]
+[MenuItem] <:- [SwipeItem]
+[MenuItem] <:- [ToolbarItem]
+
+[Element] <:- [Cell]
+[Cell] <:- [EntryCell]
+[Cell] <:- [SwitchCell]
+[Cell] <:- [TextCell]
+[Cell] <:- [ViewCell]
+
+[Element] <:- [<box>NavigableElement]

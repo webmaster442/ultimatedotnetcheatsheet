@@ -1,0 +1,24 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: winforms1
+
+[IDisposable] <:-- [<box>Component]
+[Object] <:- [MarshalByRefObject] <:- [Component]
+
+[MarshalByRefObject] <:- [Brush]
+[MarshalByRefObject] <:- [Font]
+[MarshalByRefObject] <:- [FontFamily]
+[MarshalByRefObject] <:- [Graphics]
+[MarshalByRefObject] <:- [Icon]
+[MarshalByRefObject] <:- [Image]
+[MarshalByRefObject] <:- [Pen]
+[MarshalByRefObject] <:- [Region]
+
+[MarshalByRefObject] <:- [NativeWindow]
+[MarshalByRefObject] <:- [NumericUpDownAccelerationCollection]
+[MarshalByRefObject] <:- [OwnerDrawPropertyBag]
+[MarshalByRefObject] <:- [TreeNode]

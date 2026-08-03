@@ -1,0 +1,71 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: winforms4	
+
+[<box>Control] <:- [ScrollableControl]
+[Control] <:- [ButtonBase]
+[Control] <:- [Label] <:- [LinkLabel]
+
+[ButtonBase] -[Button]
+[ButtonBase] -[CheckBox]
+[ButtonBase] -[RadioButton]
+
+[TextBox] <:- [DataGridTextBox]
+[TextBox] <:- [DataGridViewTextBoxEditingControl]
+[ScrollableControl] <:- [ContainerControl]
+
+[ScrollableControl] <:- [ComponentTray]
+[ScrollableControl] <:- [Panel]
+[ScrollableControl] <:- [ToolStrip]
+
+[ToolStrip] <:- [ToolStripDropDown]
+[ToolStripDropDown] <:- [ToolStripDropDownMenu] <:- [ContextMenuStrip]
+[ToolStripDropDown] <:- [ToolStripOverflow]
+[ToolStrip] <:- [BindingNavigator]
+[ToolStrip] <:- [MenuStrip]
+[ToolStrip] <:- [StatusStrip]
+
+
+[ContainerControl] <:- [Form] <:- [PrintPreviewDialog]
+[Form] <:- [ThreadExceptionDialog]
+[ContainerControl] <:- [PropertyGrid]
+[ContainerControl] <:- [SplitContainer]
+[ContainerControl] <:- [ToolStripContainer]
+[ContainerControl] <:- [ToolStripPanel]
+[ContainerControl] <:- [UpDownBase] <:- [DomainUpDown]
+[UpDownBase] <:- [NumericUpDown]
+[ContainerControl] <:- [UserControl]
+
+[Control] <:- [ListControl] <:- [ComboBox] <:- [DataGridViewComboBoxEditingControl]
+[ListControl] <:- [ListBox] <:- [CheckedListBox]
+
+[Control] <:- [TextBoxBase]
+[TextBoxBase] <:- [MaskedTextBox]
+[TextBoxBase] <:- [RichTextBox]
+[TextBoxBase] <:- [TextBox]
+
+[ScrollBar] <:- [VScrollBar]
+[Control] <:- [Splitter]
+[Control] <:- [StatusBar]
+
+[Control] <:- [WebBrowserBase] <:- [WebBrowser]
+
+[Panel] <:- [ComponentEditorPage]
+[Panel] <:- [FlowLayoutPanel]
+[Panel] <:- [SplitterPanel]
+[Panel] <:- [TableLayoutPanel] <:- [ByteViewer]
+[Panel] <:- [TabPage]
+[Panel] <:- [ToolStripContentPanel]
+[Control] <:- [ScrollBar] <:- [HScrollBar]
+
+
+
+
+
+
+
+

@@ -1,0 +1,509 @@
+<svg version="1.1" baseProfile="full" width="780.0" height="970.0" viewBox="0 0 780 970" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf4</title>
+	<desc >#direction: right
+	#.box: fill=#C06EF0
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title: wpf4
+	
+	[&lt;box&gt;FrameworkElement] &lt;:- [AccessText]
+	[FrameworkElement] &lt;:- [Popup]
+	[FrameworkElement] &lt;:- [TextBlock]
+	[FrameworkElement] &lt;:- [Decorator] &lt;:- [Border]
+	[FrameworkElement] &lt;:- [Page]
+	[FrameworkElement] &lt;:- [Panel]
+	[FrameworkElement] &lt;:- [Viewport3D]
+	
+	[Decorator] &lt;:- [BulletDecorator]
+	[Decorator] &lt;:- [Viewbox]
+	
+	[Panel] &lt;:- [Canvas]
+	[Panel] &lt;:- [DockPanel]
+	[Panel] &lt;:- [Grid]
+	[Panel] &lt;:- [TabPanel]
+	[Panel] &lt;:- [ToolBarOverflowPanel]
+	[Panel] &lt;:- [UniformGrid]
+	[Panel] &lt;:- [StackPanel]
+	[Panel] &lt;:- [VirtualizingPanel] -[VirtualizingStackPanel]
+	[Panel] &lt;:- [WrapPanel]
+	[VirtualizingPanel] &lt;:- [DataGridCellsPanel]
+	
+	[FrameworkElement] &lt;:- [Shape] &lt;:- [Path]
+	[Shape] &lt;:- [Line]
+	[Shape] &lt;:- [Ellipse]
+	[Shape] &lt;:- [Polygon]
+	[Shape] &lt;:- [Polyline]
+	[Shape] &lt;:- [Rectangle]
+	
+	[FrameworkElement] &lt;:- [MediaElement]
+	[FrameworkElement] &lt;:- [Image]
+	[FrameworkElement] &lt;:- [HwndHost] &lt;:- [ActiveXHost] &lt;:- [WebBrowser]
+	[HwndHost] &lt;:- [WindowsFormsHost]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
+		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="970.0" width="780.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M93.5 365.0 L177.4 18.3 A3.0 3.0 0 0 1 180.4 16.0 L196.5 16.0 " fill="none"></path>
+					<path d="M88.3 363.8 L93.5 365.0 L98.7 366.3 L90.4 378.0 Z"></path>
+					<path d="M94.4 365.1 L177.4 60.2 A3.0 3.0 0 0 1 180.3 58.0 L215.0 58.0 " fill="none"></path>
+					<path d="M89.2 363.7 L94.4 365.1 L99.5 366.5 L90.9 378.0 Z"></path>
+					<path d="M95.4 365.3 L177.3 102.1 A3.0 3.0 0 0 1 180.2 100.0 L201.5 100.0 " fill="none"></path>
+					<path d="M90.3 363.7 L95.4 365.3 L100.5 366.9 L91.5 378.0 Z"></path>
+					<path d="M96.9 365.5 L177.3 144.0 A3.0 3.0 0 0 1 180.1 142.0 L200.5 142.0 " fill="none"></path>
+					<path d="M91.8 363.6 L96.9 365.5 L101.9 367.3 L92.3 378.0 Z"></path>
+					<path d="M286.8 119.2 L318.3 100.4 A3.0 3.0 0 0 1 319.8 100.0 L386.0 100.0 " fill="none"></path>
+					<path d="M284.1 114.6 L286.8 119.2 L289.5 123.8 L275.4 126.0 Z"></path>
+					<path d="M100.1 366.0 L177.2 206.7 A3.0 3.0 0 0 1 179.9 205.0 L221.5 205.0 " fill="none"></path>
+					<path d="M95.3 363.7 L100.1 366.0 L104.9 368.3 L94.2 378.0 Z"></path>
+					<path d="M186.3 394.0 L186.3 394.0 A0.0 0.0 0 0 0 186.3 394.0 L218.5 394.0 " fill="none"></path>
+					<path d="M186.3 388.7 L186.3 394.0 L186.3 399.3 L173.0 394.0 Z"></path>
+					<path d="M100.1 422.0 L177.2 581.3 A3.0 3.0 0 0 0 179.9 583.0 L194.0 583.0 " fill="none"></path>
+					<path d="M104.9 419.7 L100.1 422.0 L95.3 424.3 L94.2 410.0 Z"></path>
+					<path d="M309.8 142.0 L319.0 142.0 ANaN NaN 0 0 0 319.0 142.0 L349.5 142.0 " fill="none"></path>
+					<path d="M309.8 136.7 L309.8 142.0 L309.8 147.3 L296.5 142.0 Z"></path>
+					<path d="M286.8 164.8 L318.3 183.6 A3.0 3.0 0 0 0 319.8 184.0 L379.5 184.0 " fill="none"></path>
+					<path d="M289.5 160.2 L286.8 164.8 L284.1 169.4 L275.4 158.0 Z"></path>
+					<path d="M260.4 365.7 L318.2 227.8 A3.0 3.0 0 0 1 321.0 226.0 L385.0 226.0 " fill="none"></path>
+					<path d="M255.5 363.6 L260.4 365.7 L265.3 367.8 L255.2 378.0 Z"></path>
+					<path d="M264.0 366.4 L318.1 269.5 A3.0 3.0 0 0 1 320.8 268.0 L371.5 268.0 " fill="none"></path>
+					<path d="M259.3 363.8 L264.0 366.4 L268.6 369.0 L257.5 378.0 Z"></path>
+					<path d="M270.5 367.8 L318.1 311.1 A3.0 3.0 0 0 1 320.4 310.0 L396.5 310.0 " fill="none"></path>
+					<path d="M266.4 364.4 L270.5 367.8 L274.6 371.2 L261.9 378.0 Z"></path>
+					<path d="M286.8 371.2 L318.3 352.4 A3.0 3.0 0 0 1 319.8 352.0 L377.0 352.0 " fill="none"></path>
+					<path d="M284.1 366.6 L286.8 371.2 L289.5 375.8 L275.4 378.0 Z"></path>
+					<path d="M291.8 394.0 L319.0 394.0 ANaN NaN 0 0 0 319.0 394.0 L324.0 394.0 " fill="none"></path>
+					<path d="M291.8 388.7 L291.8 394.0 L291.8 399.3 L278.5 394.0 Z"></path>
+					<path d="M286.8 416.8 L318.3 435.6 A3.0 3.0 0 0 0 319.8 436.0 L363.5 436.0 " fill="none"></path>
+					<path d="M289.5 412.2 L286.8 416.8 L284.1 421.4 L275.4 410.0 Z"></path>
+					<path d="M270.5 420.2 L318.1 476.9 A3.0 3.0 0 0 0 320.4 478.0 L369.5 478.0 " fill="none"></path>
+					<path d="M274.6 416.8 L270.5 420.2 L266.4 423.6 L261.9 410.0 Z"></path>
+					<path d="M264.0 421.6 L318.1 518.5 A3.0 3.0 0 0 0 320.8 520.0 L345.5 520.0 " fill="none"></path>
+					<path d="M268.6 419.0 L264.0 421.6 L259.3 424.2 L257.5 410.0 Z"></path>
+					<path d="M497.5 504.4 L523.7 499.1 A3.0 3.0 0 0 1 524.3 499.0 L529.0 499.0 " fill="none"></path>
+					<path d="M260.4 422.3 L318.2 560.2 A3.0 3.0 0 0 0 321.0 562.0 L370.0 562.0 " fill="none"></path>
+					<path d="M265.3 420.2 L260.4 422.3 L255.5 424.4 L255.2 410.0 Z"></path>
+					<path d="M440.3 546.9 L523.1 665.7 A3.0 3.0 0 0 0 525.6 667.0 L541.5 667.0 " fill="none"></path>
+					<path d="M444.7 543.9 L440.3 546.9 L435.9 550.0 L432.7 536.0 Z"></path>
+					<path d="M94.9 422.8 L177.4 706.8 A3.0 3.0 0 0 0 180.3 709.0 L216.5 709.0 " fill="none"></path>
+					<path d="M100.0 421.3 L94.9 422.8 L89.7 424.3 L91.1 410.0 Z"></path>
+					<path d="M266.7 681.9 L318.1 605.3 A3.0 3.0 0 0 1 320.6 604.0 L395.0 604.0 " fill="none"></path>
+					<path d="M262.2 679.0 L266.7 681.9 L271.1 684.9 L259.2 693.0 Z"></path>
+					<path d="M276.3 684.1 L318.1 646.8 A3.0 3.0 0 0 1 320.1 646.0 L396.5 646.0 " fill="none"></path>
+					<path d="M272.8 680.1 L276.3 684.1 L279.9 688.1 L266.4 693.0 Z"></path>
+					<path d="M293.3 695.7 L318.6 688.1 A3.0 3.0 0 0 1 319.4 688.0 L388.0 688.0 " fill="none"></path>
+					<path d="M291.8 690.6 L293.3 695.7 L294.8 700.8 L280.5 699.5 Z"></path>
+					<path d="M293.3 722.3 L318.6 729.9 A3.0 3.0 0 0 0 319.4 730.0 L382.0 730.0 " fill="none"></path>
+					<path d="M294.8 717.2 L293.3 722.3 L291.8 727.4 L280.5 718.5 Z"></path>
+					<path d="M276.3 733.9 L318.1 771.2 A3.0 3.0 0 0 0 320.1 772.0 L381.5 772.0 " fill="none"></path>
+					<path d="M279.9 729.9 L276.3 733.9 L272.8 737.9 L266.4 725.0 Z"></path>
+					<path d="M266.7 736.1 L318.1 812.7 A3.0 3.0 0 0 0 320.6 814.0 L374.0 814.0 " fill="none"></path>
+					<path d="M271.1 733.1 L266.7 736.1 L262.2 739.0 L259.2 725.0 Z"></path>
+					<path d="M93.1 423.0 L177.5 790.7 A3.0 3.0 0 0 0 180.4 793.0 L183.0 793.0 " fill="none"></path>
+					<path d="M98.3 421.8 L93.1 423.0 L88.0 424.2 L90.2 410.0 Z"></path>
+					<path d="M92.5 423.1 L177.5 832.6 A3.0 3.0 0 0 0 180.4 835.0 L216.0 835.0 " fill="none"></path>
+					<path d="M97.8 422.0 L92.5 423.1 L87.3 424.1 L89.8 410.0 Z"></path>
+					<path d="M91.8 423.1 L177.6 895.5 A3.0 3.0 0 0 0 180.5 898.0 L199.0 898.0 " fill="none"></path>
+					<path d="M97.0 422.2 L91.8 423.1 L86.5 424.1 L89.4 410.0 Z"></path>
+					<path d="M286.8 875.2 L318.3 856.4 A3.0 3.0 0 0 1 319.8 856.0 L365.0 856.0 " fill="none"></path>
+					<path d="M284.1 870.6 L286.8 875.2 L289.5 879.8 L275.4 882.0 Z"></path>
+					<path d="M491.3 856.0 L524.0 856.0 ANaN NaN 0 0 0 524.0 856.0 L568.0 856.0 " fill="none"></path>
+					<path d="M491.3 850.7 L491.3 856.0 L491.3 861.3 L478.0 856.0 Z"></path>
+					<path d="M311.3 898.0 L319.0 898.0 ANaN NaN 0 0 0 319.0 898.0 L334.0 898.0 " fill="none"></path>
+					<path d="M311.3 892.7 L311.3 898.0 L311.3 903.3 L298.0 898.0 Z"></path>
+					<g data-name="FrameworkElement">
+						<g fill="#C06EF0" stroke="#33322E" data-name="FrameworkElement">
+							<rect x="0.0" y="378.0" height="32.0" width="173.0" data-name="FrameworkElement"></rect>
+						</g>
+						<g transform="translate(0, 378)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="FrameworkElement" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement" data-compartment="0">
+								<text x="78.5" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkElement" data-compartment="0">FrameworkElement</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AccessText">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="AccessText">
+							<rect x="196.5" y="0.0" height="32.0" width="104.0" data-name="AccessText"></rect>
+						</g>
+						<g transform="translate(196.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AccessText" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AccessText" data-compartment="0">
+								<text x="44.0" y="14.1" stroke="none" text-anchor="middle" data-name="AccessText" data-compartment="0">AccessText</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Popup">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Popup">
+							<rect x="215.0" y="42.0" height="32.0" width="67.0" data-name="Popup"></rect>
+						</g>
+						<g transform="translate(215, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Popup" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Popup" data-compartment="0">
+								<text x="25.5" y="14.1" stroke="none" text-anchor="middle" data-name="Popup" data-compartment="0">Popup</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TextBlock">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TextBlock">
+							<rect x="201.5" y="84.0" height="32.0" width="94.0" data-name="TextBlock"></rect>
+						</g>
+						<g transform="translate(201.5, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextBlock" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextBlock" data-compartment="0">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="TextBlock" data-compartment="0">TextBlock</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Decorator">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Decorator">
+							<rect x="200.5" y="126.0" height="32.0" width="96.0" data-name="Decorator"></rect>
+						</g>
+						<g transform="translate(200.5, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Decorator" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Decorator" data-compartment="0">
+								<text x="40.0" y="14.1" stroke="none" text-anchor="middle" data-name="Decorator" data-compartment="0">Decorator</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Border">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Border">
+							<rect x="386.0" y="84.0" height="32.0" width="71.0" data-name="Border"></rect>
+						</g>
+						<g transform="translate(386, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Border" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Border" data-compartment="0">
+								<text x="27.5" y="14.1" stroke="none" text-anchor="middle" data-name="Border" data-compartment="0">Border</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Page">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Page">
+							<rect x="221.5" y="189.0" height="32.0" width="54.0" data-name="Page"></rect>
+						</g>
+						<g transform="translate(221.5, 189)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Page" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Page" data-compartment="0">
+								<text x="19.0" y="14.1" stroke="none" text-anchor="middle" data-name="Page" data-compartment="0">Page</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Panel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Panel">
+							<rect x="218.5" y="378.0" height="32.0" width="60.0" data-name="Panel"></rect>
+						</g>
+						<g transform="translate(218.5, 378)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Panel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Panel" data-compartment="0">
+								<text x="22.0" y="14.1" stroke="none" text-anchor="middle" data-name="Panel" data-compartment="0">Panel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Viewport3D">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Viewport3D">
+							<rect x="194.0" y="567.0" height="32.0" width="109.0" data-name="Viewport3D"></rect>
+						</g>
+						<g transform="translate(194, 567)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewport3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewport3D" data-compartment="0">
+								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="Viewport3D" data-compartment="0">Viewport3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BulletDecorator">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="BulletDecorator">
+							<rect x="349.5" y="126.0" height="32.0" width="144.0" data-name="BulletDecorator"></rect>
+						</g>
+						<g transform="translate(349.5, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BulletDecorator" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BulletDecorator" data-compartment="0">
+								<text x="64.0" y="14.1" stroke="none" text-anchor="middle" data-name="BulletDecorator" data-compartment="0">BulletDecorator</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Viewbox">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Viewbox">
+							<rect x="379.5" y="168.0" height="32.0" width="84.0" data-name="Viewbox"></rect>
+						</g>
+						<g transform="translate(379.5, 168)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewbox" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewbox" data-compartment="0">
+								<text x="34.0" y="14.1" stroke="none" text-anchor="middle" data-name="Viewbox" data-compartment="0">Viewbox</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Canvas">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Canvas">
+							<rect x="385.0" y="210.0" height="32.0" width="73.0" data-name="Canvas"></rect>
+						</g>
+						<g transform="translate(385, 210)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Canvas" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Canvas" data-compartment="0">
+								<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Canvas" data-compartment="0">Canvas</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DockPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DockPanel">
+							<rect x="371.5" y="252.0" height="32.0" width="100.0" data-name="DockPanel"></rect>
+						</g>
+						<g transform="translate(371.5, 252)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DockPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DockPanel" data-compartment="0">
+								<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="DockPanel" data-compartment="0">DockPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Grid">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Grid">
+							<rect x="396.5" y="294.0" height="32.0" width="50.0" data-name="Grid"></rect>
+						</g>
+						<g transform="translate(396.5, 294)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Grid" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Grid" data-compartment="0">
+								<text x="17.0" y="14.1" stroke="none" text-anchor="middle" data-name="Grid" data-compartment="0">Grid</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TabPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TabPanel">
+							<rect x="377.0" y="336.0" height="32.0" width="89.0" data-name="TabPanel"></rect>
+						</g>
+						<g transform="translate(377, 336)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TabPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TabPanel" data-compartment="0">
+								<text x="36.5" y="14.1" stroke="none" text-anchor="middle" data-name="TabPanel" data-compartment="0">TabPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ToolBarOverflowPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ToolBarOverflowPanel">
+							<rect x="324.0" y="378.0" height="32.0" width="195.0" data-name="ToolBarOverflowPanel"></rect>
+						</g>
+						<g transform="translate(324, 378)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolBarOverflowPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolBarOverflowPanel" data-compartment="0">
+								<text x="89.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolBarOverflowPanel" data-compartment="0">ToolBarOverflowPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UniformGrid">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="UniformGrid">
+							<rect x="363.5" y="420.0" height="32.0" width="116.0" data-name="UniformGrid"></rect>
+						</g>
+						<g transform="translate(363.5, 420)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="UniformGrid" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UniformGrid" data-compartment="0">
+								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="UniformGrid" data-compartment="0">UniformGrid</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StackPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StackPanel">
+							<rect x="369.5" y="462.0" height="32.0" width="104.0" data-name="StackPanel"></rect>
+						</g>
+						<g transform="translate(369.5, 462)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="StackPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StackPanel" data-compartment="0">
+								<text x="44.0" y="14.1" stroke="none" text-anchor="middle" data-name="StackPanel" data-compartment="0">StackPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="VirtualizingPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="VirtualizingPanel">
+							<rect x="345.5" y="504.0" height="32.0" width="152.0" data-name="VirtualizingPanel"></rect>
+						</g>
+						<g transform="translate(345.5, 504)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="VirtualizingPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VirtualizingPanel" data-compartment="0">
+								<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="VirtualizingPanel" data-compartment="0">VirtualizingPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="VirtualizingStackPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="VirtualizingStackPanel">
+							<rect x="529.0" y="483.0" height="32.0" width="195.0" data-name="VirtualizingStackPanel"></rect>
+						</g>
+						<g transform="translate(529, 483)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="VirtualizingStackPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VirtualizingStackPanel" data-compartment="0">
+								<text x="89.5" y="14.1" stroke="none" text-anchor="middle" data-name="VirtualizingStackPanel" data-compartment="0">VirtualizingStackPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WrapPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="WrapPanel">
+							<rect x="370.0" y="546.0" height="32.0" width="103.0" data-name="WrapPanel"></rect>
+						</g>
+						<g transform="translate(370, 546)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="WrapPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WrapPanel" data-compartment="0">
+								<text x="43.5" y="14.1" stroke="none" text-anchor="middle" data-name="WrapPanel" data-compartment="0">WrapPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DataGridCellsPanel">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DataGridCellsPanel">
+							<rect x="541.5" y="651.0" height="32.0" width="170.0" data-name="DataGridCellsPanel"></rect>
+						</g>
+						<g transform="translate(541.5, 651)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridCellsPanel" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridCellsPanel" data-compartment="0">
+								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridCellsPanel" data-compartment="0">DataGridCellsPanel</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Shape">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Shape">
+							<rect x="216.5" y="693.0" height="32.0" width="64.0" data-name="Shape"></rect>
+						</g>
+						<g transform="translate(216.5, 693)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Shape" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Shape" data-compartment="0">
+								<text x="24.0" y="14.1" stroke="none" text-anchor="middle" data-name="Shape" data-compartment="0">Shape</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Path">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Path">
+							<rect x="395.0" y="588.0" height="32.0" width="53.0" data-name="Path"></rect>
+						</g>
+						<g transform="translate(395, 588)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Path" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Path" data-compartment="0">
+								<text x="18.5" y="14.1" stroke="none" text-anchor="middle" data-name="Path" data-compartment="0">Path</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Line">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Line">
+							<rect x="396.5" y="630.0" height="32.0" width="50.0" data-name="Line"></rect>
+						</g>
+						<g transform="translate(396.5, 630)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Line" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Line" data-compartment="0">
+								<text x="17.0" y="14.1" stroke="none" text-anchor="middle" data-name="Line" data-compartment="0">Line</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Ellipse">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Ellipse">
+							<rect x="388.0" y="672.0" height="32.0" width="67.0" data-name="Ellipse"></rect>
+						</g>
+						<g transform="translate(388, 672)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Ellipse" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Ellipse" data-compartment="0">
+								<text x="25.5" y="14.1" stroke="none" text-anchor="middle" data-name="Ellipse" data-compartment="0">Ellipse</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Polygon">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Polygon">
+							<rect x="382.0" y="714.0" height="32.0" width="79.0" data-name="Polygon"></rect>
+						</g>
+						<g transform="translate(382, 714)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Polygon" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Polygon" data-compartment="0">
+								<text x="31.5" y="14.1" stroke="none" text-anchor="middle" data-name="Polygon" data-compartment="0">Polygon</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Polyline">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Polyline">
+							<rect x="381.5" y="756.0" height="32.0" width="80.0" data-name="Polyline"></rect>
+						</g>
+						<g transform="translate(381.5, 756)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Polyline" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Polyline" data-compartment="0">
+								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="Polyline" data-compartment="0">Polyline</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Rectangle">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Rectangle">
+							<rect x="374.0" y="798.0" height="32.0" width="95.0" data-name="Rectangle"></rect>
+						</g>
+						<g transform="translate(374, 798)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Rectangle" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Rectangle" data-compartment="0">
+								<text x="39.5" y="14.1" stroke="none" text-anchor="middle" data-name="Rectangle" data-compartment="0">Rectangle</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MediaElement">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="MediaElement">
+							<rect x="183.0" y="777.0" height="32.0" width="131.0" data-name="MediaElement"></rect>
+						</g>
+						<g transform="translate(183, 777)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MediaElement" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MediaElement" data-compartment="0">
+								<text x="57.5" y="14.1" stroke="none" text-anchor="middle" data-name="MediaElement" data-compartment="0">MediaElement</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Image">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Image">
+							<rect x="216.0" y="819.0" height="32.0" width="65.0" data-name="Image"></rect>
+						</g>
+						<g transform="translate(216, 819)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Image" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Image" data-compartment="0">
+								<text x="24.5" y="14.1" stroke="none" text-anchor="middle" data-name="Image" data-compartment="0">Image</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HwndHost">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="HwndHost">
+							<rect x="199.0" y="882.0" height="32.0" width="99.0" data-name="HwndHost"></rect>
+						</g>
+						<g transform="translate(199, 882)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HwndHost" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HwndHost" data-compartment="0">
+								<text x="41.5" y="14.1" stroke="none" text-anchor="middle" data-name="HwndHost" data-compartment="0">HwndHost</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ActiveXHost">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ActiveXHost">
+							<rect x="365.0" y="840.0" height="32.0" width="113.0" data-name="ActiveXHost"></rect>
+						</g>
+						<g transform="translate(365, 840)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ActiveXHost" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ActiveXHost" data-compartment="0">
+								<text x="48.5" y="14.1" stroke="none" text-anchor="middle" data-name="ActiveXHost" data-compartment="0">ActiveXHost</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WebBrowser">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="WebBrowser">
+							<rect x="568.0" y="840.0" height="32.0" width="117.0" data-name="WebBrowser"></rect>
+						</g>
+						<g transform="translate(568, 840)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="WebBrowser" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WebBrowser" data-compartment="0">
+								<text x="50.5" y="14.1" stroke="none" text-anchor="middle" data-name="WebBrowser" data-compartment="0">WebBrowser</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="WindowsFormsHost">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="WindowsFormsHost">
+							<rect x="334.0" y="882.0" height="32.0" width="175.0" data-name="WindowsFormsHost"></rect>
+						</g>
+						<g transform="translate(334, 882)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="WindowsFormsHost" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WindowsFormsHost" data-compartment="0">
+								<text x="79.5" y="14.1" stroke="none" text-anchor="middle" data-name="WindowsFormsHost" data-compartment="0">WindowsFormsHost</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

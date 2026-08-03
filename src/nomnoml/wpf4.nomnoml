@@ -1,0 +1,43 @@
+#direction: right
+#.box: fill=#C06EF0
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: wpf4
+
+[<box>FrameworkElement] <:- [AccessText]
+[FrameworkElement] <:- [Popup]
+[FrameworkElement] <:- [TextBlock]
+[FrameworkElement] <:- [Decorator] <:- [Border]
+[FrameworkElement] <:- [Page]
+[FrameworkElement] <:- [Panel]
+[FrameworkElement] <:- [Viewport3D]
+
+[Decorator] <:- [BulletDecorator]
+[Decorator] <:- [Viewbox]
+
+[Panel] <:- [Canvas]
+[Panel] <:- [DockPanel]
+[Panel] <:- [Grid]
+[Panel] <:- [TabPanel]
+[Panel] <:- [ToolBarOverflowPanel]
+[Panel] <:- [UniformGrid]
+[Panel] <:- [StackPanel]
+[Panel] <:- [VirtualizingPanel] -[VirtualizingStackPanel]
+[Panel] <:- [WrapPanel]
+[VirtualizingPanel] <:- [DataGridCellsPanel]
+
+[FrameworkElement] <:- [Shape] <:- [Path]
+[Shape] <:- [Line]
+[Shape] <:- [Ellipse]
+[Shape] <:- [Polygon]
+[Shape] <:- [Polyline]
+[Shape] <:- [Rectangle]
+
+[FrameworkElement] <:- [MediaElement]
+[FrameworkElement] <:- [Image]
+[FrameworkElement] <:- [HwndHost] <:- [ActiveXHost] <:- [WebBrowser]
+[HwndHost] <:- [WindowsFormsHost]

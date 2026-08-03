@@ -1,0 +1,83 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: maui3
+
+[NavigableElement] <:- [Window]
+[NavigableElement] <:- [BaseShellItem]
+[BaseShellItem] <:- [ShellContent]
+[BaseShellItem] <:- [ShellGroupItem]
+[ShellGroupItem] <:- [ShellItem]
+[ShellItem] <:- [FlyoutItem]
+[ShellItem] <:- [TabBar]
+[ShellGroupItem] <:- [ShellSection]
+
+[NavigableElement] <:- [VisualElement]
+
+[VisualElement] <:- [Page]
+[Page] <:- [FlyoutPage]
+[Page] <:- [MultiPage\<T\>]
+[Page] <:- [NavigationPage]
+[Page] <:- [Shell]
+[Page] <:- [TemplatedPage]
+
+[VisualElement] <:- [<box id=b>View]
+
+[<box>View] <:- [BlazorWebView]
+[View] <:- [ActivityIndicator]
+[View] <:- [Border]
+[View] <:- [BoxView]
+[View] <:- [Button]
+[View] <:- [CheckBox]
+[View] <:- [DatePicker]
+[View] <:- [GraphicsView]
+[View] <:- [Image]
+[View] <:- [ImageButton]
+
+[View] <:- [InputView]
+[InputView] <:-[Editor]
+[InputView] <:-[Entry]
+[InputView] <:-[SearchBar]
+
+[View] <:- [ItemsView]
+[ItemsView] <:- [CarouselView]
+[ItemsView] <:- [StructuredItemsView] <:- [SelectableItemsView]
+
+[SelectableItemsView]  <:- [GroupableItemsView]
+[GroupableItemsView] <:- [ReorderableItemsView]
+
+[View] <:- [ItemsView\<TVisual\>] <:- [ListView]
+[View] <:- [Layout]
+
+[Layout] <:- [AbsoluteLayout]
+[Layout] <:- [FlexLayout]
+[Layout] <:- [Grid]
+[Layout] <:- [StackBase]
+
+[StackBase] <:- [HorizontalStackLayout]
+[StackBase] <:- [StackLayout]
+[StackBase] <:- [VerticalStackLayout]
+
+[View] <:- [Label]
+[View] <:- [Picker]
+[View] <:- [ProgressBar]
+[View] <:- [Shape]
+
+[Shape] <:-[Ellipse]
+[Shape] <:-[Line]
+[Shape] <:-[Path]
+[Shape] <:-[Polygon]
+[Shape] <:-[Polyline]
+[Shape] <:-[Rectangle]
+[Shape] <:-[RoundRectangle]
+
+
+[View] <:- [Slider]
+[View] <:- [Stepper]
+[View] <:- [Switch]
+[View] <:- [TableView]
+[View] <:- [TimePicker]
+[View] <:- [WebView]

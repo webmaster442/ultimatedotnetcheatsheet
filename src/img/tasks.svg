@@ -1,0 +1,217 @@
+<svg version="1.1" baseProfile="full" width="808.0" height="444.0" viewBox="0 0 808 444" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >tasks</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title: tasks
+	
+	[IAsyncResult|
+	Represents the status of
+	an asynchronous operation]
+	
+	[IDisposable|
+	Provides a mechanism for 
+	releasing unmanaged resources]
+	
+	[Task|
+	Represents an 
+	asynchronous operation]
+	
+	[Task&lt;TResult&gt;|
+	Represents an 
+	asynchronous operation 
+	that can return a value]
+	
+	[IEquatable&lt;T&gt;|Defines a generalized method that 
+	a value type or class implements to 
+	create a type-specific method for
+	determining equality of instances]
+	
+	[ValueTask|
+	Provides an awaitable 
+	result of an asynchronous
+	operation.]
+	
+	[ValueTask&lt;TResult&gt;|
+	Provides a value type that wraps 
+	a Task&lt;TResult&gt; and a TResult, 
+	only one of which is used.]
+	
+	
+	[IAsyncResult] &lt;:-- [Task]
+	[IDisposable] &lt;:-- [Task] &lt;:- [Task&lt;TResult&gt;]
+	
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask&lt;TResult&gt;] 
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
+		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="444.0" width="808.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M261.8 40.0 L281.5 40.0 A3.0 3.0 0 0 1 282.5 40.2 L316.5 51.6 " fill="none"></path>
+					</g>
+					<path d="M261.8 34.7 L261.8 40.0 L261.8 45.3 L248.5 40.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M278.8 130.0 L281.5 130.0 A3.0 3.0 0 0 0 282.5 129.8 L316.5 118.4 " fill="none"></path>
+					</g>
+					<path d="M278.8 124.7 L278.8 130.0 L278.8 135.3 L265.5 130.0 Z"></path>
+					<path d="M527.8 85.0 L549.0 85.0 ANaN NaN 0 0 0 549.0 85.0 L554.0 85.0 " fill="none"></path>
+					<path d="M527.8 79.7 L527.8 85.0 L527.8 90.3 L514.5 85.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M289.5 342.3 L286.7 341.2 A0.9 0.9 0 0 1 287.0 339.5 L287.0 339.5 " fill="none"></path>
+					</g>
+					<path d="M291.4 337.3 L289.5 342.3 L287.6 347.3 L277.0 337.6 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M289.5 229.7 L289.5 229.7 A1.4 1.4 0 0 0 290.0 232.5 L311.0 232.5 " fill="none"></path>
+					</g>
+					<path d="M287.6 224.7 L289.5 229.7 L291.4 234.7 L277.0 234.4 Z"></path>
+					<g data-name="IAsyncResult">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IAsyncResult">
+							<rect x="28.5" y="0.0" height="80.0" width="220.0" data-name="IAsyncResult"></rect>
+							<path d="M28.5 32.0 L248.5 32.0" fill="none" data-name="IAsyncResult"></path>
+						</g>
+						<g transform="translate(28.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncResult" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncResult" data-compartment="0">
+								<text x="102.0" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncResult" data-compartment="0">IAsyncResult</text>
+								
+							</g>
+						</g>
+						<g transform="translate(28.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IAsyncResult" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IAsyncResult" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IAsyncResult" data-compartment="1">Represents the status of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IAsyncResult" data-compartment="1">an asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="11.5" y="90.0" height="80.0" width="254.0" data-name="IDisposable"></rect>
+							<path d="M11.5 122.0 L265.5 122.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(11.5, 90)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="119.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(11.5, 122)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">Provides a mechanism for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable" data-compartment="1">releasing unmanaged resources</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Task">
+							<rect x="316.5" y="45.0" height="80.0" width="198.0" data-name="Task"></rect>
+							<path d="M316.5 77.0 L514.5 77.0" fill="none" data-name="Task"></path>
+						</g>
+						<g transform="translate(316.5, 45)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task" data-compartment="0">
+								<text x="91.0" y="14.1" stroke="none" text-anchor="middle" data-name="Task" data-compartment="0">Task</text>
+								
+							</g>
+						</g>
+						<g transform="translate(316.5, 77)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task" data-compartment="1">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task" data-compartment="1">asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task&lt;TResult&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Task&lt;TResult&gt;">
+							<rect x="554.0" y="36.5" height="97.0" width="198.0" data-name="Task&lt;TResult&gt;"></rect>
+							<path d="M554.0 68.5 L752.0 68.5" fill="none" data-name="Task&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(554, 36.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task&lt;TResult&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task&lt;TResult&gt;" data-compartment="0">
+								<text x="91.0" y="14.1" stroke="none" text-anchor="middle" data-name="Task&lt;TResult&gt;" data-compartment="0">Task&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(554, 68.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task&lt;TResult&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task&lt;TResult&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task&lt;TResult&gt;" data-compartment="1">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task&lt;TResult&gt;" data-compartment="1">asynchronous operation</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Task&lt;TResult&gt;" data-compartment="1">that can return a value</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEquatable&lt;T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEquatable&lt;T&gt;">
+							<rect x="0.0" y="229.5" height="113.0" width="277.0" data-name="IEquatable&lt;T&gt;"></rect>
+							<path d="M0.0 261.5 L277.0 261.5" fill="none" data-name="IEquatable&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 229.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEquatable&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEquatable&lt;T&gt;" data-compartment="0">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEquatable&lt;T&gt;" data-compartment="0">IEquatable&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 261.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEquatable&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEquatable&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">Defines a generalized method that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">a value type or class implements to</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">create a type-specific method for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">determining equality of instances</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueTask">
+							<rect x="311.0" y="184.0" height="97.0" width="209.0" data-name="ValueTask"></rect>
+							<path d="M311.0 216.0 L520.0 216.0" fill="none" data-name="ValueTask"></path>
+						</g>
+						<g transform="translate(311, 184)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask" data-compartment="0">
+								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask" data-compartment="0">ValueTask</text>
+								
+							</g>
+						</g>
+						<g transform="translate(311, 216)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask" data-compartment="1">Provides an awaitable</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask" data-compartment="1">result of an asynchronous</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask" data-compartment="1">operation.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask&lt;TResult&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueTask&lt;TResult&gt;">
+							<rect x="287.0" y="291.0" height="97.0" width="257.0" data-name="ValueTask&lt;TResult&gt;"></rect>
+							<path d="M287.0 323.0 L544.0 323.0" fill="none" data-name="ValueTask&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(287, 291)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask&lt;TResult&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask&lt;TResult&gt;" data-compartment="0">
+								<text x="120.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask&lt;TResult&gt;" data-compartment="0">ValueTask&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(287, 323)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">Provides a value type that wraps</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">a Task&lt;TResult&gt; and a TResult,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">only one of which is used.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

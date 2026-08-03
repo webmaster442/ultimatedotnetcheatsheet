@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Title}}</title>
+    <link rel="stylesheet" type="text/css" href="static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="#">Item 01</a></li>
+                        <li><a href="#">Item 02</a></li>
+                        <li><a href="#">Item 03</a></li>
+                        <li><a href="#">Item 04</a></li>
+                        <li><a href="#">Item 05</a></li>
+                        <li><a href="#">Item 06</a></li>
+                        <li><a href="#">Item 07</a></li>
+                        <li><a href="#">Item 08</a></li>
+                        <li><a href="#">Item 09</a></li>
+                        <li><a href="#">Item 10</a></li>
+                        <li><a href="#">Item 11</a></li>
+                        <li><a href="#">Item 12</a></li>
+                        <li><a href="#">Item 13</a></li>
+                        <li><a href="#">Item 14</a></li>
+                        <li><a href="#">Item 15</a></li>
+                        <li><a href="#">Item 16</a></li>
+                        <li><a href="#">Item 17</a></li>
+                        <li><a href="#">Item 18</a></li>
+                        <li><a href="#">Item 19</a></li>
+                        <li><a href="#">Item 20</a></li>
+                        <li><a href="#">Item 21</a></li>
+                        <li><a href="#">Item 22</a></li>
+                        <li><a href="#">Item 23</a></li>
+                        <li><a href="#">Item 24</a></li>
+                        <li><a href="#">Item 25</a></li>
+                        <li><a href="#">Item 26</a></li>
+                        <li><a href="#">Item 27</a></li>
+                        <li><a href="#">Item 28</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <a href="#" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="#" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank" class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <h2>Page Content</h2>
+                    <p>This area is intentionally minimal so you can drop in your own content.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="static/script.js"></script>
+</body>
+
+</html>

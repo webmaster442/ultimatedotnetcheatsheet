@@ -1,0 +1,58 @@
+#direction: right
+#.box: fill=#C06EF0
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: wpf5
+
+[ContentControl] <:- [ButtonBase]
+[ButtonBase] <:- [Button]
+[ButtonBase] <:- [RepeatButton]
+[ButtonBase] <:- [ToggleButton]
+[ToggleButton] <:- [RadioButton]
+[ToggleButton] <:- [CheckBox]
+
+[<box>Control] <:- [ContentControl]
+[ContentControl] <:- [HeaderedContentControl] <:- [Expander]
+[HeaderedContentControl] <:- [GroupBox]
+
+[ContentControl] <:- [ScrollViewer]
+[ContentControl] <:- [Window] <:- [NavigationWindow]
+[ContentControl] <:- [Frame]
+[ContentControl] <:- [Label]
+[ContentControl] <:- [ToolTip]
+
+[Control] <:- [ItemsControl] <:- [Selector]
+
+[Control] <:- [Thumb] <:- [GridSplitter]
+[Control] <:- [ResizeGrip]
+[Control] <:- [Separator]
+[Control] <:- [RangeBase] <:- [ScrollBar]
+[Control] <:- [TextBoxBase]
+[Control] <:- [DatePicker]
+[Control] <:- [Calendar]
+[TextBoxBase] <:- [TextBox]
+[TextBoxBase] <:- [RichTextBox]
+[Control] <:- [PasswordBox]
+[RangeBase] -[Slider]
+[RangeBase] <:- [ProgressBar]
+
+[Selector] <:- [TabControl]
+[Selector] <:- [MultiSelector] <:- [DataGrid]
+[Selector] <:- [ListBox] <:- [ListView]
+[Selector] <:- [ComboBox]
+
+[ItemsControl] <:- [StatusBar]
+[ItemsControl] <:- [TreeView]
+[ItemsControl] <:- [HeaderedItemsControl] <:- [ToolBar]
+[ItemsControl] <:- [MenuBase] <:- [ContextMenu]
+[MenuBase] <:- [Menu]
+
+[Control] <:- [DocumentViewerBase] <:- [DocumentViewer]
+[DocumentViewerBase] <:-[FlowDocumentPageViewer]
+[Control] <:- [FlowDocumentReader]
+[Control] <:- [FlowDocumentScrollViewer]
+[Control] <:- [StickyNoteControl]

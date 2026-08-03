@@ -16,33 +16,3 @@ The .NET Logo is copyright of the .NET authors. - https://github.com/dotnet/bran
 
 
 The project is open-source and available on GitHub. You can contribute to it by visiting project's GitHub repository: https://github.com/webmaster442/ultimatedotnetcheatsheet
-
-:::qrcode
-![QR Code](img/qrcode.svg)
-:::
-
-## Latest changes
-
-* **2025.01.16**
-
-  * Added Regex section
-  * Added Keyboard Shortcuts section
-  * Added C# version history section
-  * Extended attributes section with compiler recognized attributes and custom attribute creation
-
-* **2024.09.16**
-
-  * Updated website design
-  * Updated list of NuGet packages
-  * Extended collections section
-  * Attributes extended with Nullable atributes
-  * LINQ section extended
-  * Added Generics and Tasks sections
-
-* **2024.06.04**
-  
-  * Grammar fixes by JamesKidd87
-  * New PWA & website look and feel
-  * Added Basic C# syntax section
-  * Added XML and JSON serialization chapter
-  * Added Object validation chapter

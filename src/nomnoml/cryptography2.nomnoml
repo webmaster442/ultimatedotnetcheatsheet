@@ -1,0 +1,59 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: cryptography2
+
+[<note>Note: 
+SHA3 is only available on .NET 8
+or newer versions ]
+
+[HashAlgorithm|
+Represents the base class from which 
+all implementations of cryptographic
+hash algorithms must derive.]
+
+[KeyedHashAlgorithm|
+Represents the abstract class
+from which all implementations
+of keyed hash algorithms
+must derive.]
+
+[HMAC|
+Represents the abstract class
+from which all implementations
+of Hash-based Message
+AuthenticationCode (HMAC)
+must derive.]
+
+[MACTripleDES|
+Computes a Message Authentication
+Code (MAC) using TripleDES for
+the input data CryptoStream.]
+
+[HashAlgorithm] <:- [MD5]
+[HashAlgorithm] <:- [RIPEMD160]
+[HashAlgorithm] <:- [SHA1]
+[HashAlgorithm] <:- [SHA256]
+[HashAlgorithm] <:- [SHA384]
+[HashAlgorithm] <:- [SHA512]
+[HashAlgorithm] <:- [SHA3_256]
+[HashAlgorithm] <:- [SHA3_384]
+[HashAlgorithm] <:- [SHA3_512]
+[HashAlgorithm] <:- [KeyedHashAlgorithm]
+
+[KeyedHashAlgorithm] <:- [HMAC]
+[KeyedHashAlgorithm] <:-[MACTripleDES]
+
+[HMAC] <:- [HMACMD5]
+[HMAC] <:- [HMACRIPEMD160]
+[HMAC] <:- [HMACSHA1]
+[HMAC] <:- [HMACSHA256]
+[HMAC] <:- [HMACSHA384]
+[HMAC] <:- [HMACSHA512]
+[HMAC] <:- [HMACSHA3_256]
+[HMAC] <:- [HMACSHA3_384]
+[HMAC] <:- [HMACSHA3_512]

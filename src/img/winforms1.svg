@@ -1,0 +1,247 @@
+<svg version="1.1" baseProfile="full" width="660.0" height="622.0" viewBox="0 0 660 622" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >winforms1</title>
+	<desc >#direction: right
+	#spacing: 12
+	#.box: fill=#C06EF0
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title: winforms1
+	
+	[IDisposable] &lt;:-- [&lt;box&gt;Component]
+	[Object] &lt;:- [MarshalByRefObject] &lt;:- [Component]
+	
+	[MarshalByRefObject] &lt;:- [Brush]
+	[MarshalByRefObject] &lt;:- [Font]
+	[MarshalByRefObject] &lt;:- [FontFamily]
+	[MarshalByRefObject] &lt;:- [Graphics]
+	[MarshalByRefObject] &lt;:- [Icon]
+	[MarshalByRefObject] &lt;:- [Image]
+	[MarshalByRefObject] &lt;:- [Pen]
+	[MarshalByRefObject] &lt;:- [Region]
+	
+	[MarshalByRefObject] &lt;:- [NativeWindow]
+	[MarshalByRefObject] &lt;:- [NumericUpDownAccelerationCollection]
+	[MarshalByRefObject] &lt;:- [OwnerDrawPropertyBag]
+	[MarshalByRefObject] &lt;:- [TreeNode]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
+		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="622.0" width="660.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M227.5 16.0 L264.9 16.0 A3.6 3.6 0 0 1 265.1 16.0 L383.0 20.1 " fill="none"></path>
+					</g>
+					<path d="M227.5 14.4 L227.5 16.0 L227.5 17.6 L223.5 16.0 Z"></path>
+					<path d="M72.0 286.0 L74.0 286.0 ANaN NaN 0 0 0 74.0 286.0 L80.0 286.0 " fill="none"></path>
+					<path d="M72.0 284.4 L72.0 286.0 L72.0 287.6 L68.0 286.0 Z"></path>
+					<path d="M177.1 266.3 L264.2 40.1 A3.6 3.6 0 0 1 267.2 37.8 L383.0 27.1 " fill="none"></path>
+					<path d="M175.6 265.7 L177.1 266.3 L178.6 266.8 L175.7 270.0 Z"></path>
+					<path d="M178.0 266.3 L264.1 68.2 A3.6 3.6 0 0 1 267.4 66.0 L406.0 66.0 " fill="none"></path>
+					<path d="M176.6 265.7 L178.0 266.3 L179.5 267.0 L176.4 270.0 Z"></path>
+					<path d="M180.1 266.5 L264.0 111.9 A3.6 3.6 0 0 1 267.1 110.0 L411.5 110.0 " fill="none"></path>
+					<path d="M178.7 265.7 L180.1 266.5 L181.5 267.2 L178.2 270.0 Z"></path>
+					<path d="M183.4 266.8 L263.9 155.5 A3.6 3.6 0 0 1 266.8 154.0 L385.0 154.0 " fill="none"></path>
+					<path d="M182.1 265.8 L183.4 266.8 L184.7 267.7 L181.1 270.0 Z"></path>
+					<path d="M189.8 267.3 L264.0 199.0 A3.6 3.6 0 0 1 266.4 198.0 L394.5 198.0 " fill="none"></path>
+					<path d="M188.7 266.1 L189.8 267.3 L190.9 268.5 L186.9 270.0 Z"></path>
+					<path d="M207.9 268.3 L264.3 242.3 A3.6 3.6 0 0 1 265.8 242.0 L412.5 242.0 " fill="none"></path>
+					<path d="M207.2 266.9 L207.9 268.3 L208.5 269.8 L204.2 270.0 Z"></path>
+					<path d="M263.0 286.0 L265.0 286.0 ANaN NaN 0 0 0 265.0 286.0 L405.0 286.0 " fill="none"></path>
+					<path d="M263.0 284.4 L263.0 286.0 L263.0 287.6 L259.0 286.0 Z"></path>
+					<path d="M207.9 303.7 L264.3 329.7 A3.6 3.6 0 0 0 265.8 330.0 L414.5 330.0 " fill="none"></path>
+					<path d="M208.5 302.2 L207.9 303.7 L207.2 305.1 L204.2 302.0 Z"></path>
+					<path d="M189.8 304.7 L264.0 373.0 A3.6 3.6 0 0 0 266.4 374.0 L402.5 374.0 " fill="none"></path>
+					<path d="M190.9 303.5 L189.8 304.7 L188.7 305.9 L186.9 302.0 Z"></path>
+					<path d="M183.4 305.2 L263.9 416.5 A3.6 3.6 0 0 0 266.8 418.0 L371.0 418.0 " fill="none"></path>
+					<path d="M184.7 304.3 L183.4 305.2 L182.1 306.2 L181.1 302.0 Z"></path>
+					<path d="M180.1 305.5 L264.0 460.1 A3.6 3.6 0 0 0 267.1 462.0 L271.0 462.0 " fill="none"></path>
+					<path d="M181.5 304.8 L180.1 305.5 L178.7 306.3 L178.2 302.0 Z"></path>
+					<path d="M178.0 305.7 L264.1 503.8 A3.6 3.6 0 0 0 267.4 506.0 L332.0 506.0 " fill="none"></path>
+					<path d="M179.5 305.0 L178.0 305.7 L176.6 306.3 L176.4 302.0 Z"></path>
+					<path d="M176.6 305.8 L264.1 547.6 A3.6 3.6 0 0 0 267.5 550.0 L390.5 550.0 " fill="none"></path>
+					<path d="M178.2 305.2 L176.6 305.8 L175.1 306.3 L175.3 302.0 Z"></path>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="115.5" y="0.0" height="32.0" width="108.0" data-name="IDisposable"></rect>
+						</g>
+						<g transform="translate(115.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Component">
+						<g fill="#C06EF0" stroke="#33322E" data-name="Component">
+							<rect x="383.0" y="6.0" height="32.0" width="109.0" data-name="Component"></rect>
+						</g>
+						<g transform="translate(383, 6)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Component" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Component" data-compartment="0">
+								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="Component" data-compartment="0">Component</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Object">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="270.0" height="32.0" width="68.0" data-name="Object"></rect>
+						</g>
+						<g transform="translate(0, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
+								<text x="26.0" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MarshalByRefObject">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="MarshalByRefObject">
+							<rect x="80.0" y="270.0" height="32.0" width="179.0" data-name="MarshalByRefObject"></rect>
+						</g>
+						<g transform="translate(80, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject" data-compartment="0">
+								<text x="81.5" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject" data-compartment="0">MarshalByRefObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Brush">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Brush">
+							<rect x="406.0" y="50.0" height="32.0" width="63.0" data-name="Brush"></rect>
+						</g>
+						<g transform="translate(406, 50)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Brush" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Brush" data-compartment="0">
+								<text x="23.5" y="14.1" stroke="none" text-anchor="middle" data-name="Brush" data-compartment="0">Brush</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Font">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Font">
+							<rect x="411.5" y="94.0" height="32.0" width="52.0" data-name="Font"></rect>
+						</g>
+						<g transform="translate(411.5, 94)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Font" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Font" data-compartment="0">
+								<text x="18.0" y="14.1" stroke="none" text-anchor="middle" data-name="Font" data-compartment="0">Font</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FontFamily">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="FontFamily">
+							<rect x="385.0" y="138.0" height="32.0" width="105.0" data-name="FontFamily"></rect>
+						</g>
+						<g transform="translate(385, 138)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FontFamily" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FontFamily" data-compartment="0">
+								<text x="44.5" y="14.1" stroke="none" text-anchor="middle" data-name="FontFamily" data-compartment="0">FontFamily</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Graphics">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Graphics">
+							<rect x="394.5" y="182.0" height="32.0" width="86.0" data-name="Graphics"></rect>
+						</g>
+						<g transform="translate(394.5, 182)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Graphics" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Graphics" data-compartment="0">
+								<text x="35.0" y="14.1" stroke="none" text-anchor="middle" data-name="Graphics" data-compartment="0">Graphics</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Icon">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Icon">
+							<rect x="412.5" y="226.0" height="32.0" width="50.0" data-name="Icon"></rect>
+						</g>
+						<g transform="translate(412.5, 226)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Icon" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Icon" data-compartment="0">
+								<text x="17.0" y="14.1" stroke="none" text-anchor="middle" data-name="Icon" data-compartment="0">Icon</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Image">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Image">
+							<rect x="405.0" y="270.0" height="32.0" width="65.0" data-name="Image"></rect>
+						</g>
+						<g transform="translate(405, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Image" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Image" data-compartment="0">
+								<text x="24.5" y="14.1" stroke="none" text-anchor="middle" data-name="Image" data-compartment="0">Image</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Pen">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Pen">
+							<rect x="414.5" y="314.0" height="32.0" width="46.0" data-name="Pen"></rect>
+						</g>
+						<g transform="translate(414.5, 314)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Pen" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Pen" data-compartment="0">
+								<text x="15.0" y="14.1" stroke="none" text-anchor="middle" data-name="Pen" data-compartment="0">Pen</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Region">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Region">
+							<rect x="402.5" y="358.0" height="32.0" width="70.0" data-name="Region"></rect>
+						</g>
+						<g transform="translate(402.5, 358)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Region" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Region" data-compartment="0">
+								<text x="27.0" y="14.1" stroke="none" text-anchor="middle" data-name="Region" data-compartment="0">Region</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="NativeWindow">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="NativeWindow">
+							<rect x="371.0" y="402.0" height="32.0" width="133.0" data-name="NativeWindow"></rect>
+						</g>
+						<g transform="translate(371, 402)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="NativeWindow" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NativeWindow" data-compartment="0">
+								<text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="NativeWindow" data-compartment="0">NativeWindow</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="NumericUpDownAccelerationCollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="NumericUpDownAccelerationCollection">
+							<rect x="271.0" y="446.0" height="32.0" width="333.0" data-name="NumericUpDownAccelerationCollection"></rect>
+						</g>
+						<g transform="translate(271, 446)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="NumericUpDownAccelerationCollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NumericUpDownAccelerationCollection" data-compartment="0">
+								<text x="158.5" y="14.1" stroke="none" text-anchor="middle" data-name="NumericUpDownAccelerationCollection" data-compartment="0">NumericUpDownAccelerationCollection</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="OwnerDrawPropertyBag">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="OwnerDrawPropertyBag">
+							<rect x="332.0" y="490.0" height="32.0" width="211.0" data-name="OwnerDrawPropertyBag"></rect>
+						</g>
+						<g transform="translate(332, 490)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="OwnerDrawPropertyBag" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OwnerDrawPropertyBag" data-compartment="0">
+								<text x="97.5" y="14.1" stroke="none" text-anchor="middle" data-name="OwnerDrawPropertyBag" data-compartment="0">OwnerDrawPropertyBag</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TreeNode">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TreeNode">
+							<rect x="390.5" y="534.0" height="32.0" width="94.0" data-name="TreeNode"></rect>
+						</g>
+						<g transform="translate(390.5, 534)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TreeNode" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TreeNode" data-compartment="0">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="TreeNode" data-compartment="0">TreeNode</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

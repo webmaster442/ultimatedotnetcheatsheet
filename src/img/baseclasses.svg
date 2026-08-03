@@ -1,0 +1,227 @@
+<svg version="1.1" baseProfile="full" width="1011.0" height="600.0" viewBox="0 0 1011 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >baseclasses</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title: baseclasses
+	
+	[Object] &lt;:- [ValueType] &lt;:- [Enum]
+	[Object] &lt;:- [Array]
+	[Object] &lt;:- [DynamicObject]
+	[Object] &lt;:- [ExpandoObject]
+	
+	[DynamicObject|
+	Provides a base class for specifying 
+	dynamic behavior at run time.|
+	❗This class must be inherited from\;
+	you cannot instantiate it directly.]
+	
+	[ExpandoObject|
+	Represents an object whose members 
+	can be dynamically added
+	and removed at run time.]
+	
+	[Array|
+	Provides methods for creating, manipulating, 
+	searching, and sorting arrays, 
+	thereby serving as the base class  for 
+	all arrays in the common language runtime.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[ValueType|
+	Provides the base class
+	for value types.for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Enum|
+	Provides the base class
+	for enumerations.|
+	⚠️ You cannot derive from
+	this special class]
+	
+	[Object|
+	Supports all classes in the .NET 
+	class hierarchy and provides 
+	low-level services to derived classes.
+	This is the ultimate base class of all
+	.NET classes\; it is the root of the type hierarchy.]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
+		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="600.0" width="1011.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M244.4 220.9 L371.1 65.1 A3.0 3.0 0 0 1 373.4 64.0 L420.5 64.0 " fill="none"></path>
+					<path d="M240.2 217.5 L244.4 220.9 L248.5 224.3 L236.0 231.3 Z"></path>
+					<path d="M697.8 64.0 L733.0 64.0 ANaN NaN 0 0 0 733.0 64.0 L738.0 64.0 " fill="none"></path>
+					<path d="M697.8 58.7 L697.8 64.0 L697.8 69.3 L684.5 64.0 Z"></path>
+					<path d="M353.2 226.2 L371.5 218.7 A3.0 3.0 0 0 1 372.6 218.5 L377.0 218.5 " fill="none"></path>
+					<path d="M351.2 221.3 L353.2 226.2 L355.2 231.1 L340.9 231.3 Z"></path>
+					<path d="M353.2 365.3 L371.5 372.8 A3.0 3.0 0 0 0 372.6 373.0 L408.0 373.0 " fill="none"></path>
+					<path d="M355.2 360.4 L353.2 365.3 L351.2 370.2 L340.9 360.3 Z"></path>
+					<path d="M253.5 369.9 L371.1 494.6 A3.0 3.0 0 0 0 373.3 495.5 L402.5 495.5 " fill="none"></path>
+					<path d="M257.4 366.3 L253.5 369.9 L249.6 373.6 L244.4 360.3 Z"></path>
+					<g data-name="Object">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="231.3" height="129.0" width="367.0" data-name="Object"></rect>
+							<path d="M0.0 263.3 L367.0 263.3" fill="none" data-name="Object"></path>
+						</g>
+						<g transform="translate(0, 231.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
+								<text x="175.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 263.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Object" data-compartment="1">Supports all classes in the .NET</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Object" data-compartment="1">class hierarchy and provides</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Object" data-compartment="1">low-level services to derived classes.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Object" data-compartment="1">This is the ultimate base class of all</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Object" data-compartment="1">.NET classes; it is the root of the type hierarchy.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueType">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueType">
+							<rect x="420.5" y="0.0" height="128.0" width="264.0" data-name="ValueType"></rect>
+							<path d="M420.5 32.0 L684.5 32.0" fill="none" data-name="ValueType"></path>
+							<path d="M420.5 80.0 L684.5 80.0" fill="none" data-name="ValueType"></path>
+						</g>
+						<g transform="translate(420.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType" data-compartment="0">
+								<text x="124.0" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType" data-compartment="0">ValueType</text>
+								
+							</g>
+						</g>
+						<g transform="translate(420.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType" data-compartment="1">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType" data-compartment="1">for value types.for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(420.5, 80)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType" data-compartment="2">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType" data-compartment="2">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Enum">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Enum">
+							<rect x="738.0" y="0.0" height="128.0" width="217.0" data-name="Enum"></rect>
+							<path d="M738.0 32.0 L955.0 32.0" fill="none" data-name="Enum"></path>
+							<path d="M738.0 80.0 L955.0 80.0" fill="none" data-name="Enum"></path>
+						</g>
+						<g transform="translate(738, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum" data-compartment="0">
+								<text x="100.5" y="14.1" stroke="none" text-anchor="middle" data-name="Enum" data-compartment="0">Enum</text>
+								
+							</g>
+						</g>
+						<g transform="translate(738, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum" data-compartment="1">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum" data-compartment="1">for enumerations.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(738, 80)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum" data-compartment="2">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum" data-compartment="2">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Array">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Array">
+							<rect x="377.0" y="138.0" height="161.0" width="351.0" data-name="Array"></rect>
+							<path d="M377.0 170.0 L728.0 170.0" fill="none" data-name="Array"></path>
+							<path d="M377.0 251.0 L728.0 251.0" fill="none" data-name="Array"></path>
+						</g>
+						<g transform="translate(377, 138)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array" data-compartment="0">
+								<text x="167.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array" data-compartment="0">Array</text>
+								
+							</g>
+						</g>
+						<g transform="translate(377, 170)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array" data-compartment="1">Provides methods for creating, manipulating,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array" data-compartment="1">searching, and sorting arrays,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Array" data-compartment="1">thereby serving as the base class  for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Array" data-compartment="1">all arrays in the common language runtime.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(377, 251)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array" data-compartment="2">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array" data-compartment="2">this special class</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DynamicObject">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DynamicObject">
+							<rect x="408.0" y="309.0" height="128.0" width="289.0" data-name="DynamicObject"></rect>
+							<path d="M408.0 341.0 L697.0 341.0" fill="none" data-name="DynamicObject"></path>
+							<path d="M408.0 389.0 L697.0 389.0" fill="none" data-name="DynamicObject"></path>
+						</g>
+						<g transform="translate(408, 309)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject" data-compartment="0">
+								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject" data-compartment="0">DynamicObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(408, 341)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject" data-compartment="1">Provides a base class for specifying</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject" data-compartment="1">dynamic behavior at run time.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(408, 389)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject" data-compartment="2">❗This class must be inherited from;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject" data-compartment="2">you cannot instantiate it directly.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ExpandoObject">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ExpandoObject">
+							<rect x="402.5" y="447.0" height="97.0" width="300.0" data-name="ExpandoObject"></rect>
+							<path d="M402.5 479.0 L702.5 479.0" fill="none" data-name="ExpandoObject"></path>
+						</g>
+						<g transform="translate(402.5, 447)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject" data-compartment="0">
+								<text x="142.0" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject" data-compartment="0">ExpandoObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(402.5, 479)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject" data-compartment="1">Represents an object whose members</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject" data-compartment="1">can be dynamically added</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ExpandoObject" data-compartment="1">and removed at run time.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

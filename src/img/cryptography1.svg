@@ -1,0 +1,336 @@
+<svg version="1.1" baseProfile="full" width="1054.0" height="859.0" viewBox="0 0 1054 859" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >cryptography1</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title: cryptography1
+	
+	[SymmetricAlgorithm|
+	Represents the abstract base class
+	from which all implementations of
+	symmetric algorithms must inherit.]
+	
+	[Aes|
+	Represents the abstract base class 
+	from which all implementations of
+	the Advanced Encryption Standard 
+	(AES) must inherit.]
+	
+	[DES|
+	Represents the base class for the Data
+	Encryption Standard (DES) algorithm 
+	from which all DES implementations 
+	must derive.]
+	
+	[RC2|
+	Represents the base class from which 
+	all implementations of the RC2 
+	algorithm must derive.]
+	
+	[TripleDES|
+	Represents the base class for Triple
+	Data Encryption Standard algorithms
+	from which all TripleDES 
+	implementations must derive.]
+	
+	[AsymmetricAlgorithm|
+	Represents the abstract base class from
+	which all implementations of 
+	asymmetric algorithms must inherit.]
+	
+	[DSA|
+	Represents the abstract base class from 
+	which all implementations of the
+	Digital Signature Algorithm (DSA) 
+	must inherit.]
+	
+	[ECAlgorithm|
+	Represents the abstract class from which 
+	elliptic-curve asymmetric algorithms
+	can inherit.]
+	
+	[RSA|
+	Represents the base class from which 
+	all implementations of 
+	the RSA algorithm inherit.]
+	
+	[ECDiffieHellman|
+	Provides an abstract base class that 
+	Elliptic Curve Diffie-Hellman (ECDH) 
+	algorithm implementations can derive from.
+	]
+	
+	[ECDsa|
+	Provides an abstract base class that 
+	encapsulates the Elliptic Curve Digital
+	Signature Algorithm (ECDSA).]
+	
+	[SymmetricAlgorithm] &lt;:- [Aes]
+	[SymmetricAlgorithm] &lt;:- [DES]
+	[SymmetricAlgorithm] &lt;:- [RC2]
+	[SymmetricAlgorithm] &lt;:- [TripleDES]
+	
+	[AsymmetricAlgorithm] &lt;:- [RSA]
+	[AsymmetricAlgorithm] &lt;:- [DSA]
+	[AsymmetricAlgorithm] &lt;:- [ECAlgorithm]
+	
+	[ECAlgorithm] &lt;:- [ECDiffieHellman]
+	[ECAlgorithm] &lt;:- [ECDsa]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
+		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="859.0" width="1054.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M208.8 178.6 L317.1 57.5 A3.0 3.0 0 0 1 319.3 56.5 L347.0 56.5 " fill="none"></path>
+					<path d="M204.8 175.0 L208.8 178.6 L212.8 182.1 L199.9 188.5 Z"></path>
+					<path d="M305.3 184.0 L317.5 179.7 A3.0 3.0 0 0 1 318.5 179.5 L333.0 179.5 " fill="none"></path>
+					<path d="M303.5 179.0 L305.3 184.0 L307.1 189.1 L292.7 188.5 Z"></path>
+					<path d="M305.3 290.0 L317.5 294.3 A3.0 3.0 0 0 0 318.5 294.5 L335.5 294.5 " fill="none"></path>
+					<path d="M307.1 284.9 L305.3 290.0 L303.5 295.0 L292.7 285.5 Z"></path>
+					<path d="M211.0 295.2 L317.1 408.6 A3.0 3.0 0 0 0 319.3 409.5 L338.0 409.5 " fill="none"></path>
+					<path d="M214.9 291.6 L211.0 295.2 L207.1 298.9 L201.9 285.5 Z"></path>
+					<path d="M240.8 703.4 L317.2 754.0 A3.0 3.0 0 0 0 318.9 754.5 L335.5 754.5 " fill="none"></path>
+					<path d="M243.8 698.9 L240.8 703.4 L237.9 707.8 L229.7 696.0 Z"></path>
+					<path d="M235.5 591.3 L317.2 533.1 A3.0 3.0 0 0 1 319.0 532.5 L327.0 532.5 " fill="none"></path>
+					<path d="M232.4 586.9 L235.5 591.3 L238.6 595.6 L224.6 599.0 Z"></path>
+					<path d="M326.3 647.5 L323.0 647.5 A0.0 0.0 0 0 0 323.0 647.5 L323.0 647.5 " fill="none"></path>
+					<path d="M326.3 642.2 L326.3 647.5 L326.3 652.8 L313.0 647.5 Z"></path>
+					<path d="M646.2 594.9 L648.6 594.1 A3.0 3.0 0 0 1 649.5 594.0 L654.0 594.0 " fill="none"></path>
+					<path d="M644.6 589.8 L646.2 594.9 L647.9 600.0 L633.5 599.0 Z"></path>
+					<path d="M646.2 700.1 L648.6 700.9 A3.0 3.0 0 0 0 649.5 701.0 L679.5 701.0 " fill="none"></path>
+					<path d="M647.9 695.0 L646.2 700.1 L644.6 705.2 L633.5 696.0 Z"></path>
+					<g data-name="SymmetricAlgorithm">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="SymmetricAlgorithm">
+							<rect x="18.0" y="188.5" height="97.0" width="277.0" data-name="SymmetricAlgorithm"></rect>
+							<path d="M18.0 220.5 L295.0 220.5" fill="none" data-name="SymmetricAlgorithm"></path>
+						</g>
+						<g transform="translate(18, 188.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SymmetricAlgorithm" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SymmetricAlgorithm" data-compartment="0">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="SymmetricAlgorithm" data-compartment="0">SymmetricAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(18, 220.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SymmetricAlgorithm" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SymmetricAlgorithm" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SymmetricAlgorithm" data-compartment="1">Represents the abstract base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="SymmetricAlgorithm" data-compartment="1">from which all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="SymmetricAlgorithm" data-compartment="1">symmetric algorithms must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Aes">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Aes">
+							<rect x="347.0" y="0.0" height="113.0" width="273.0" data-name="Aes"></rect>
+							<path d="M347.0 32.0 L620.0 32.0" fill="none" data-name="Aes"></path>
+						</g>
+						<g transform="translate(347, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Aes" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Aes" data-compartment="0">
+								<text x="128.5" y="14.1" stroke="none" text-anchor="middle" data-name="Aes" data-compartment="0">Aes</text>
+								
+							</g>
+						</g>
+						<g transform="translate(347, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Aes" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Aes" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Aes" data-compartment="1">Represents the abstract base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Aes" data-compartment="1">from which all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Aes" data-compartment="1">the Advanced Encryption Standard</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Aes" data-compartment="1">(AES) must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DES">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DES">
+							<rect x="333.0" y="123.0" height="113.0" width="301.0" data-name="DES"></rect>
+							<path d="M333.0 155.0 L634.0 155.0" fill="none" data-name="DES"></path>
+						</g>
+						<g transform="translate(333, 123)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DES" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DES" data-compartment="0">
+								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="DES" data-compartment="0">DES</text>
+								
+							</g>
+						</g>
+						<g transform="translate(333, 155)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DES" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DES" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="DES" data-compartment="1">Represents the base class for the Data</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DES" data-compartment="1">Encryption Standard (DES) algorithm</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="DES" data-compartment="1">from which all DES implementations</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="DES" data-compartment="1">must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RC2">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="RC2">
+							<rect x="335.5" y="246.0" height="97.0" width="296.0" data-name="RC2"></rect>
+							<path d="M335.5 278.0 L631.5 278.0" fill="none" data-name="RC2"></path>
+						</g>
+						<g transform="translate(335.5, 246)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RC2" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RC2" data-compartment="0">
+								<text x="140.0" y="14.1" stroke="none" text-anchor="middle" data-name="RC2" data-compartment="0">RC2</text>
+								
+							</g>
+						</g>
+						<g transform="translate(335.5, 278)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="RC2" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RC2" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="RC2" data-compartment="1">Represents the base class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RC2" data-compartment="1">all implementations of the RC2</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="RC2" data-compartment="1">algorithm must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TripleDES">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TripleDES">
+							<rect x="338.0" y="353.0" height="113.0" width="291.0" data-name="TripleDES"></rect>
+							<path d="M338.0 385.0 L629.0 385.0" fill="none" data-name="TripleDES"></path>
+						</g>
+						<g transform="translate(338, 353)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TripleDES" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TripleDES" data-compartment="0">
+								<text x="137.5" y="14.1" stroke="none" text-anchor="middle" data-name="TripleDES" data-compartment="0">TripleDES</text>
+								
+							</g>
+						</g>
+						<g transform="translate(338, 385)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="TripleDES" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TripleDES" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="TripleDES" data-compartment="1">Represents the base class for Triple</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="TripleDES" data-compartment="1">Data Encryption Standard algorithms</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="TripleDES" data-compartment="1">from which all TripleDES</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="TripleDES" data-compartment="1">implementations must derive.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AsymmetricAlgorithm">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="AsymmetricAlgorithm">
+							<rect x="0.0" y="599.0" height="97.0" width="313.0" data-name="AsymmetricAlgorithm"></rect>
+							<path d="M0.0 631.0 L313.0 631.0" fill="none" data-name="AsymmetricAlgorithm"></path>
+						</g>
+						<g transform="translate(0, 599)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AsymmetricAlgorithm" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AsymmetricAlgorithm" data-compartment="0">
+								<text x="148.5" y="14.1" stroke="none" text-anchor="middle" data-name="AsymmetricAlgorithm" data-compartment="0">AsymmetricAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 631)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="AsymmetricAlgorithm" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AsymmetricAlgorithm" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="AsymmetricAlgorithm" data-compartment="1">Represents the abstract base class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="AsymmetricAlgorithm" data-compartment="1">which all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="AsymmetricAlgorithm" data-compartment="1">asymmetric algorithms must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DSA">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DSA">
+							<rect x="327.0" y="476.0" height="113.0" width="313.0" data-name="DSA"></rect>
+							<path d="M327.0 508.0 L640.0 508.0" fill="none" data-name="DSA"></path>
+						</g>
+						<g transform="translate(327, 476)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DSA" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DSA" data-compartment="0">
+								<text x="148.5" y="14.1" stroke="none" text-anchor="middle" data-name="DSA" data-compartment="0">DSA</text>
+								
+							</g>
+						</g>
+						<g transform="translate(327, 508)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DSA" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DSA" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="DSA" data-compartment="1">Represents the abstract base class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DSA" data-compartment="1">which all implementations of the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="DSA" data-compartment="1">Digital Signature Algorithm (DSA)</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="DSA" data-compartment="1">must inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ECAlgorithm">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ECAlgorithm">
+							<rect x="323.0" y="599.0" height="97.0" width="321.0" data-name="ECAlgorithm"></rect>
+							<path d="M323.0 631.0 L644.0 631.0" fill="none" data-name="ECAlgorithm"></path>
+						</g>
+						<g transform="translate(323, 599)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ECAlgorithm" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ECAlgorithm" data-compartment="0">
+								<text x="152.5" y="14.1" stroke="none" text-anchor="middle" data-name="ECAlgorithm" data-compartment="0">ECAlgorithm</text>
+								
+							</g>
+						</g>
+						<g transform="translate(323, 631)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ECAlgorithm" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ECAlgorithm" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ECAlgorithm" data-compartment="1">Represents the abstract class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ECAlgorithm" data-compartment="1">elliptic-curve asymmetric algorithms</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ECAlgorithm" data-compartment="1">can inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RSA">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="RSA">
+							<rect x="335.5" y="706.0" height="97.0" width="296.0" data-name="RSA"></rect>
+							<path d="M335.5 738.0 L631.5 738.0" fill="none" data-name="RSA"></path>
+						</g>
+						<g transform="translate(335.5, 706)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RSA" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RSA" data-compartment="0">
+								<text x="140.0" y="14.1" stroke="none" text-anchor="middle" data-name="RSA" data-compartment="0">RSA</text>
+								
+							</g>
+						</g>
+						<g transform="translate(335.5, 738)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="RSA" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RSA" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="RSA" data-compartment="1">Represents the base class from which</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RSA" data-compartment="1">all implementations of</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="RSA" data-compartment="1">the RSA algorithm inherit.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ECDiffieHellman">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ECDiffieHellman">
+							<rect x="654.0" y="545.5" height="97.0" width="344.0" data-name="ECDiffieHellman"></rect>
+							<path d="M654.0 577.5 L998.0 577.5" fill="none" data-name="ECDiffieHellman"></path>
+						</g>
+						<g transform="translate(654, 545.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ECDiffieHellman" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ECDiffieHellman" data-compartment="0">
+								<text x="164.0" y="14.1" stroke="none" text-anchor="middle" data-name="ECDiffieHellman" data-compartment="0">ECDiffieHellman</text>
+								
+							</g>
+						</g>
+						<g transform="translate(654, 577.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ECDiffieHellman" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ECDiffieHellman" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ECDiffieHellman" data-compartment="1">Provides an abstract base class that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ECDiffieHellman" data-compartment="1">Elliptic Curve Diffie-Hellman (ECDH)</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ECDiffieHellman" data-compartment="1">algorithm implementations can derive from.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ECDsa">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ECDsa">
+							<rect x="679.5" y="652.5" height="97.0" width="293.0" data-name="ECDsa"></rect>
+							<path d="M679.5 684.5 L972.5 684.5" fill="none" data-name="ECDsa"></path>
+						</g>
+						<g transform="translate(679.5, 652.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ECDsa" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ECDsa" data-compartment="0">
+								<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="ECDsa" data-compartment="0">ECDsa</text>
+								
+							</g>
+						</g>
+						<g transform="translate(679.5, 684.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ECDsa" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ECDsa" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ECDsa" data-compartment="1">Provides an abstract base class that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ECDsa" data-compartment="1">encapsulates the Elliptic Curve Digital</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ECDsa" data-compartment="1">Signature Algorithm (ECDSA).</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

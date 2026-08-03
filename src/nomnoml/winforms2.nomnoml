@@ -1,0 +1,62 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: winforms2
+
+[<box>Component] <:- [BindingSource]
+[Component] <:- [CommonDialog]
+
+[CommonDialog] <:- [ColorDialog]
+[CommonDialog] <:- [FileDialog]
+[FileDialog] <:- [OpenFileDialog]
+[FileDialog] <:- [SaveFileDialog]
+
+[CommonDialog] <:- [FolderBrowserDialog]
+[CommonDialog] <:- [FontDialog]
+[CommonDialog] <:- [PageSetupDialog]
+[CommonDialog] <:- [PrintDialog]
+[Component] <:- [BindableComponent] <:- [ToolStripItem]
+[Component] <:- [Menu]
+[Menu] <:- [CiontextMenu]
+[Menu] <:- [MainMenu]
+[Menu] <:- [MenuItem]
+
+[Component] <:- [DataGridColumnStyle]
+[DataGridColumnStyle] <:- [DataGridBoolColumn]
+[DataGridColumnStyle] <:- [DataGridTextBoxColumn]
+
+[ToolStripItem] <:- [ToolStripButton]
+[ToolStripItem] <:- [ToolStripControlHost]
+[ToolStripItem] <:- [ToolStripDropDownItem]
+[ToolStripItem] <:- [ToolStripLabel] <:- [ToolStripStatusLabel]
+[ToolStripItem] <:- [ToolStripSeparator]
+
+[ToolStripControlHost] <:- [ToolStripComboBox]
+[ToolStripControlHost] <:- [ToolStripProgressBar]
+[ToolStripControlHost] <:- [ToolStripTextBox]
+
+[ToolStripDropDownItem] <:- [ToolStripDropDownButton]
+[ToolStripDropDownItem] <:- [ToolStripMenuItem]
+
+[ToolStripDropDownItem] <:- [ToolStripSplitButton]
+
+[Component] <:- [DataGridTableStyle]
+[Component] <:- [HelpProvider]
+[Component] <:- [ImageList]
+[Component] <:- [NotifyIcon]
+[Component] <:- [StatusBarPanel]
+[Component] <:- [Timer]
+
+[Component] <:- [<box>Control]
+
+
+
+
+
+
+
+
+

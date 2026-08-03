@@ -1,0 +1,71 @@
+#direction: right
+#spacing: 12
+#.box: fill=#C06EF0
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: maui1
+
+[BindableObject] <:- [StateTriggerBase]
+[StateTriggerBase] <:- [AdaptiveTrigger]
+[StateTriggerBase] <:- [CompareStateTrigger]
+[StateTriggerBase] <:- [DeviceStateTrigger]
+[StateTriggerBase] <:- [SpanModeStateTrigger]
+[StateTriggerBase] <:- [WindowSpanModeStateTrigger]
+
+[BindableObject] <:- [TriggerBase]
+[TriggerBase] <:- [DataTrigger]
+[TriggerBase] <:- [EventTrigger]
+[TriggerBase] <:- [MultiTrigger]
+[TriggerBase] <:- [Trigger]
+
+[BindableObject] <:- [<box>Elelement]
+[BindableObject] <:- [BackButtonBehavior]
+[BindableObject] <:- [ColumnDefinition]
+
+[BindableObject] <:- [ItemsLayout]
+[ItemsLayout] <:- [GridItemsLayout]
+[ItemsLayout] <:- [LinearItemsLayout]
+
+[BindableObject] <:- [Behavior] <:- [Behavior\<T\>] <:- [PlatformBehavior
+\<TView,TPlatformView\>] <:- [PlatformBehavior\<TView\>]
+
+[BindableObject] <:- [WebViewSource]
+[WebViewSource] <:- [HtmlWebViewSource]
+[WebViewSource] <:- [UrlWebViewSource]
+
+[BindableObject] <:- [KeyboardAccelerator]
+[BindableObject] <:- [RowDefinition]
+[BindableObject] <:- [SearchHandler]
+[BindableObject] <:- [PathFigure]
+[BindableObject] <:- [TableSectionBase]
+[BindableObject] <:- [Geometry]
+[Geometry] <:- [EllipseGeometry]
+[Geometry] <:- [GeometryGroup]
+[Geometry] <:- [LineGeometry]
+[Geometry] <:- [PathGeometry]
+[Geometry] <:- [RectangleGeometry]
+
+[BindableObject] <:- [PathSegment]
+[PathSegment] <:- [ArcSegment]
+[PathSegment] <:- [BezierSegment]
+[PathSegment] <:- [LineSegment]
+[PathSegment] <:- [PolyBezierSegment]
+[PathSegment] <:- [PolyLineSegment ]
+[PathSegment] <:- [PolyQuadraticBezierSegment]
+[PathSegment] <:- [QuadraticBezierSegment]
+
+[BindableObject] <:- [Transform]
+[Transform] <:- [CompositeTransform]
+[Transform] <:- [MatrixTransform]
+[Transform] <:- [RotateTransform]
+[Transform] <:- [ScaleTransform]
+[Transform] <:- [SkewTransform]
+[Transform] <:- [TransformGroup]
+[Transform] <:- [TranslateTransform]
+
+
+
+
+
+
