@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{Title}}</title>
+    <title>Ultimate .NET Cheatsheet | {{Title}}</title>
     <link rel="stylesheet" type="text/css" href="static/normalize.css" />
     <link rel="stylesheet" type="text/css" href="static/style.css" />
     <link rel="stylesheet" type="text/css" href="static/print.css" media="print" />
@@ -21,7 +21,7 @@
                 <h1 class="sidebar__title">Navigation</h1>
                 <nav aria-label="Sidebar items">
                     <ul class="sidebar__list">
-                        <li><a href="#">Item 01</a></li>
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
                         <li><a href="#">Item 02</a></li>
                         <li><a href="#">Item 03</a></li>
                         <li><a href="#">Item 04</a></li>
@@ -66,7 +66,7 @@
 
                 <nav class="menubar__actions" aria-label="Top actions">
 
-                    <a href="#" class="menubar__button" aria-label="Home">
+                    <a href="index.html" class="menubar__button" aria-label="Home">
                         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -78,7 +78,7 @@
                         <span>Home</span>
                     </a>
 
-                    <a href="#" class="menubar__button" aria-label="Change log">
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
                         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
                             <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
@@ -120,8 +120,7 @@
 
             <main class="main" aria-label="Main content">
                 <section class="panel">
-                    <h2>Page Content</h2>
-                    <p>This area is intentionally minimal so you can drop in your own content.</p>
+					{{Content}}
                 </section>
             </main>
         </div>

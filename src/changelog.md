@@ -1,16 +1,22 @@
-### 2025.01.16
+# Changelog
+
+## 2026.
+
+* New layout
+
+## 2025.01.16
 
 * Added Regex section
 * Added Keyboard Shortcuts section
 * Added C# version history section
 * Extended attributes section with compiler recognized attributes and custom attribute creation
 
-### 2024.10.02
+## 2024.10.02
 
 * Added changelog to the website
 * Added per page print support
 
-###  2024.09.16
+##  2024.09.16
 
 * Updated website design
 * Updated list of NuGet packages
@@ -19,7 +25,7 @@
 * LINQ section extended
 * Added Generics and Tasks sections
 
-###  2024.06.04
+##  2024.06.04
   
 * Grammar fixes by JamesKidd87
 * New PWA & website look and feel
@@ -27,7 +33,7 @@
 * Added XML and JSON serialization chapter
 * Added Object validation chapter
 
-### 2024.05.12
+## 2024.05.12
 
 * PWA & website: added Github project link and print support
 * Extended LINQ chapter
@@ -36,7 +42,7 @@
 * Format strings: Added few examples
 * Extended Exceptions chapter
 
-### 2024.04.08
+## 2024.04.08
   
 * Grammar fixes by CsabaDu
 * dotnet commands extended with previously missing commands
@@ -44,10 +50,10 @@
 * Installable as a web app
 * Cryptography and UI chapters
 
-###  2024.03.08
+##  2024.03.08
 
 * Generic maths interfaces extended & various small improvements
 
-###  2024.02.29
+##  2024.02.29
 
 * Initial release
