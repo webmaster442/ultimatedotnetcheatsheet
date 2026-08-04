@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-	var THEME_KEY = "theme-preference";
+	var THEME_KEY = "theme-preference-ultimatedotnetcheatsheet";
 	var root = document.documentElement;
 	var sidebar = document.getElementById("sidebar");
 	var menuToggle = document.getElementById("menu-toggle");
