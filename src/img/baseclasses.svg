@@ -1,4 +1,4 @@
-<svg version="1.1" baseProfile="full" width="1011.0" height="600.0" viewBox="0 0 1011 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="1077.0" height="600.0" viewBox="0 0 1077 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >baseclasses</title>
 	<desc >#direction: right
 	#spacing: 10
@@ -54,28 +54,28 @@
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
 		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="600.0" width="1011.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="600.0" width="1077.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M244.4 220.9 L371.1 65.1 A3.0 3.0 0 0 1 373.4 64.0 L420.5 64.0 " fill="none"></path>
-					<path d="M240.2 217.5 L244.4 220.9 L248.5 224.3 L236.0 231.3 Z"></path>
-					<path d="M697.8 64.0 L733.0 64.0 ANaN NaN 0 0 0 733.0 64.0 L738.0 64.0 " fill="none"></path>
-					<path d="M697.8 58.7 L697.8 64.0 L697.8 69.3 L684.5 64.0 Z"></path>
-					<path d="M353.2 226.2 L371.5 218.7 A3.0 3.0 0 0 1 372.6 218.5 L377.0 218.5 " fill="none"></path>
-					<path d="M351.2 221.3 L353.2 226.2 L355.2 231.1 L340.9 231.3 Z"></path>
-					<path d="M353.2 365.3 L371.5 372.8 A3.0 3.0 0 0 0 372.6 373.0 L408.0 373.0 " fill="none"></path>
-					<path d="M355.2 360.4 L353.2 365.3 L351.2 370.2 L340.9 360.3 Z"></path>
-					<path d="M253.5 369.9 L371.1 494.6 A3.0 3.0 0 0 0 373.3 495.5 L402.5 495.5 " fill="none"></path>
-					<path d="M257.4 366.3 L253.5 369.9 L249.6 373.6 L244.4 360.3 Z"></path>
+					<path d="M262.6 221.2 L400 64 L451 64 L451.0 64.0 " fill="none"></path>
+					<path d="M258.6 217.7 L262.6 221.2 L266.6 224.7 L253.9 231.3 Z"></path>
+					<path d="M741.3 64.0 L779 64 L784 64 L784.0 64.0 " fill="none"></path>
+					<path d="M741.3 58.7 L741.3 64.0 L741.3 69.3 L728.0 64.0 Z"></path>
+					<path d="M379.0 226.5 L400 218.5 L405 218.5 L405.0 218.5 " fill="none"></path>
+					<path d="M377.1 221.5 L379.0 226.5 L380.9 231.5 L366.6 231.3 Z"></path>
+					<path d="M379.0 365.0 L400 373 L439 373 L439.0 373.0 " fill="none"></path>
+					<path d="M380.9 360.0 L379.0 365.0 L377.1 370.0 L366.6 360.3 Z"></path>
+					<path d="M272.4 369.6 L400 495.5 L430 495.5 L430.0 495.5 " fill="none"></path>
+					<path d="M276.1 365.8 L272.4 369.6 L268.6 373.4 L262.9 360.3 Z"></path>
 					<g data-name="Object">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Object">
-							<rect x="0.0" y="231.3" height="129.0" width="367.0" data-name="Object"></rect>
-							<path d="M0.0 263.3 L367.0 263.3" fill="none" data-name="Object"></path>
+							<rect x="0.0" y="231.3" height="129.0" width="395.0" data-name="Object"></rect>
+							<path d="M0.0 263.3 L395.0 263.3" fill="none" data-name="Object"></path>
 						</g>
 						<g transform="translate(0, 231.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
-								<text x="175.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
+								<text x="189.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
 								
 							</g>
 						</g>
@@ -92,24 +92,24 @@
 					</g>
 					<g data-name="ValueType">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueType">
-							<rect x="420.5" y="0.0" height="128.0" width="264.0" data-name="ValueType"></rect>
-							<path d="M420.5 32.0 L684.5 32.0" fill="none" data-name="ValueType"></path>
-							<path d="M420.5 80.0 L684.5 80.0" fill="none" data-name="ValueType"></path>
+							<rect x="451.0" y="0.0" height="128.0" width="277.0" data-name="ValueType"></rect>
+							<path d="M451.0 32.0 L728.0 32.0" fill="none" data-name="ValueType"></path>
+							<path d="M451.0 80.0 L728.0 80.0" fill="none" data-name="ValueType"></path>
 						</g>
-						<g transform="translate(420.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType" data-compartment="0">
+						<g transform="translate(451, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType" data-compartment="0">
-								<text x="124.0" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType" data-compartment="0">ValueType</text>
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType" data-compartment="0">ValueType</text>
 								
 							</g>
 						</g>
-						<g transform="translate(420.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="1">
+						<g transform="translate(451, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ValueType" data-compartment="1">Provides the base class</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ValueType" data-compartment="1">for value types.for enumerations.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(420.5, 80)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="2">
+						<g transform="translate(451, 80)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="2">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType" data-compartment="2">
 								<text x="0.0" y="14.1" stroke="none" data-name="ValueType" data-compartment="2">⚠️ You cannot derive from</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ValueType" data-compartment="2">this special class</text>
@@ -119,24 +119,24 @@
 					</g>
 					<g data-name="Enum">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Enum">
-							<rect x="738.0" y="0.0" height="128.0" width="217.0" data-name="Enum"></rect>
-							<path d="M738.0 32.0 L955.0 32.0" fill="none" data-name="Enum"></path>
-							<path d="M738.0 80.0 L955.0 80.0" fill="none" data-name="Enum"></path>
+							<rect x="784.0" y="0.0" height="128.0" width="237.0" data-name="Enum"></rect>
+							<path d="M784.0 32.0 L1021.0 32.0" fill="none" data-name="Enum"></path>
+							<path d="M784.0 80.0 L1021.0 80.0" fill="none" data-name="Enum"></path>
 						</g>
-						<g transform="translate(738, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum" data-compartment="0">
+						<g transform="translate(784, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum" data-compartment="0">
-								<text x="100.5" y="14.1" stroke="none" text-anchor="middle" data-name="Enum" data-compartment="0">Enum</text>
+								<text x="110.5" y="14.1" stroke="none" text-anchor="middle" data-name="Enum" data-compartment="0">Enum</text>
 								
 							</g>
 						</g>
-						<g transform="translate(738, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="1">
+						<g transform="translate(784, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Enum" data-compartment="1">Provides the base class</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Enum" data-compartment="1">for enumerations.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(738, 80)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="2">
+						<g transform="translate(784, 80)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="2">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum" data-compartment="2">
 								<text x="0.0" y="14.1" stroke="none" data-name="Enum" data-compartment="2">⚠️ You cannot derive from</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Enum" data-compartment="2">this special class</text>
@@ -146,17 +146,17 @@
 					</g>
 					<g data-name="Array">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Array">
-							<rect x="377.0" y="138.0" height="161.0" width="351.0" data-name="Array"></rect>
-							<path d="M377.0 170.0 L728.0 170.0" fill="none" data-name="Array"></path>
-							<path d="M377.0 251.0 L728.0 251.0" fill="none" data-name="Array"></path>
+							<rect x="405.0" y="138.0" height="161.0" width="369.0" data-name="Array"></rect>
+							<path d="M405.0 170.0 L774.0 170.0" fill="none" data-name="Array"></path>
+							<path d="M405.0 251.0 L774.0 251.0" fill="none" data-name="Array"></path>
 						</g>
-						<g transform="translate(377, 138)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array" data-compartment="0">
+						<g transform="translate(405, 138)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array" data-compartment="0">
-								<text x="167.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array" data-compartment="0">Array</text>
+								<text x="176.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array" data-compartment="0">Array</text>
 								
 							</g>
 						</g>
-						<g transform="translate(377, 170)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="1">
+						<g transform="translate(405, 170)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Array" data-compartment="1">Provides methods for creating, manipulating,</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Array" data-compartment="1">searching, and sorting arrays,</text>
@@ -165,7 +165,7 @@
 								
 							</g>
 						</g>
-						<g transform="translate(377, 251)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="2">
+						<g transform="translate(405, 251)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="2">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array" data-compartment="2">
 								<text x="0.0" y="14.1" stroke="none" data-name="Array" data-compartment="2">⚠️ You cannot derive from</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Array" data-compartment="2">this special class</text>
@@ -175,24 +175,24 @@
 					</g>
 					<g data-name="DynamicObject">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DynamicObject">
-							<rect x="408.0" y="309.0" height="128.0" width="289.0" data-name="DynamicObject"></rect>
-							<path d="M408.0 341.0 L697.0 341.0" fill="none" data-name="DynamicObject"></path>
-							<path d="M408.0 389.0 L697.0 389.0" fill="none" data-name="DynamicObject"></path>
+							<rect x="439.0" y="309.0" height="128.0" width="301.0" data-name="DynamicObject"></rect>
+							<path d="M439.0 341.0 L740.0 341.0" fill="none" data-name="DynamicObject"></path>
+							<path d="M439.0 389.0 L740.0 389.0" fill="none" data-name="DynamicObject"></path>
 						</g>
-						<g transform="translate(408, 309)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject" data-compartment="0">
+						<g transform="translate(439, 309)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject" data-compartment="0">
-								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject" data-compartment="0">DynamicObject</text>
+								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject" data-compartment="0">DynamicObject</text>
 								
 							</g>
 						</g>
-						<g transform="translate(408, 341)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="1">
+						<g transform="translate(439, 341)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject" data-compartment="1">Provides a base class for specifying</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject" data-compartment="1">dynamic behavior at run time.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(408, 389)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="2">
+						<g transform="translate(439, 389)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="2">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject" data-compartment="2">
 								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject" data-compartment="2">❗This class must be inherited from;</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject" data-compartment="2">you cannot instantiate it directly.</text>
@@ -202,16 +202,16 @@
 					</g>
 					<g data-name="ExpandoObject">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ExpandoObject">
-							<rect x="402.5" y="447.0" height="97.0" width="300.0" data-name="ExpandoObject"></rect>
-							<path d="M402.5 479.0 L702.5 479.0" fill="none" data-name="ExpandoObject"></path>
+							<rect x="430.0" y="447.0" height="97.0" width="319.0" data-name="ExpandoObject"></rect>
+							<path d="M430.0 479.0 L749.0 479.0" fill="none" data-name="ExpandoObject"></path>
 						</g>
-						<g transform="translate(402.5, 447)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject" data-compartment="0">
+						<g transform="translate(430, 447)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject" data-compartment="0">
-								<text x="142.0" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject" data-compartment="0">ExpandoObject</text>
+								<text x="151.5" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject" data-compartment="0">ExpandoObject</text>
 								
 							</g>
 						</g>
-						<g transform="translate(402.5, 479)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject" data-compartment="1">
+						<g transform="translate(430, 479)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject" data-compartment="1">Represents an object whose members</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject" data-compartment="1">can be dynamically added</text>

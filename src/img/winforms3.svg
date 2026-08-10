@@ -1,4 +1,4 @@
-<svg version="1.1" baseProfile="full" width="322.0" height="748.0" viewBox="0 0 322 748" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="312.0" height="748.0" viewBox="0 0 312 748" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >winforms3</title>
 	<desc >#direction: right
 	#spacing: 12
@@ -28,146 +28,146 @@
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
 		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="748.0" width="322.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="748.0" width="312.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M40.1 326.0 L80.6 19.1 A3.6 3.6 0 0 1 84.2 16.0 L124.5 16.0 " fill="none"></path>
-					<path d="M38.5 325.8 L40.1 326.0 L41.7 326.2 L39.6 330.0 Z"></path>
-					<path d="M40.5 326.0 L80.5 63.1 A3.6 3.6 0 0 1 84.1 60.0 L137.5 60.0 " fill="none"></path>
-					<path d="M39.0 325.8 L40.5 326.0 L42.1 326.3 L39.9 330.0 Z"></path>
-					<path d="M41.1 326.1 L80.5 107.0 A3.6 3.6 0 0 1 84.0 104.0 L132.5 104.0 " fill="none"></path>
-					<path d="M39.5 325.8 L41.1 326.1 L42.7 326.3 L40.4 330.0 Z"></path>
-					<path d="M41.9 326.1 L80.4 150.8 A3.6 3.6 0 0 1 83.9 148.0 L131.5 148.0 " fill="none"></path>
-					<path d="M40.3 325.7 L41.9 326.1 L43.4 326.4 L41.0 330.0 Z"></path>
-					<path d="M43.1 326.2 L80.3 194.6 A3.6 3.6 0 0 1 83.7 192.0 L140.0 192.0 " fill="none"></path>
-					<path d="M41.6 325.7 L43.1 326.2 L44.6 326.6 L42.0 330.0 Z"></path>
-					<path d="M45.3 326.3 L80.1 238.3 A3.6 3.6 0 0 1 83.4 236.0 L113.5 236.0 " fill="none"></path>
-					<path d="M43.8 325.7 L45.3 326.3 L46.8 326.9 L43.8 330.0 Z"></path>
-					<path d="M50.2 326.7 L79.9 281.6 A3.6 3.6 0 0 1 82.9 280.0 L146.5 280.0 " fill="none"></path>
-					<path d="M48.9 325.8 L50.2 326.7 L51.6 327.5 L48.0 330.0 Z"></path>
-					<path d="M72.7 328.2 L80.2 324.4 A3.6 3.6 0 0 1 81.9 324.0 L105.0 324.0 " fill="none"></path>
-					<path d="M72.0 326.8 L72.7 328.2 L73.4 329.6 L69.1 330.0 Z"></path>
-					<path d="M72.7 363.8 L80.2 367.6 A3.6 3.6 0 0 0 81.9 368.0 L129.0 368.0 " fill="none"></path>
-					<path d="M73.4 362.4 L72.7 363.8 L72.0 365.2 L69.1 362.0 Z"></path>
-					<path d="M50.2 365.3 L79.9 410.4 A3.6 3.6 0 0 0 82.9 412.0 L117.0 412.0 " fill="none"></path>
-					<path d="M51.6 364.5 L50.2 365.3 L48.9 366.2 L48.0 362.0 Z"></path>
-					<path d="M45.3 365.7 L80.1 453.7 A3.6 3.6 0 0 0 83.4 456.0 L135.0 456.0 " fill="none"></path>
-					<path d="M46.8 365.1 L45.3 365.7 L43.8 366.3 L43.8 362.0 Z"></path>
-					<path d="M43.1 365.8 L80.3 497.4 A3.6 3.6 0 0 0 83.7 500.0 L130.0 500.0 " fill="none"></path>
-					<path d="M44.6 365.4 L43.1 365.8 L41.6 366.3 L42.0 362.0 Z"></path>
-					<path d="M41.9 365.9 L80.4 541.2 A3.6 3.6 0 0 0 83.9 544.0 L106.5 544.0 " fill="none"></path>
-					<path d="M43.4 365.6 L41.9 365.9 L40.3 366.3 L41.0 362.0 Z"></path>
-					<path d="M41.1 365.9 L80.5 585.0 A3.6 3.6 0 0 0 84.0 588.0 L125.0 588.0 " fill="none"></path>
-					<path d="M42.7 365.7 L41.1 365.9 L39.5 366.2 L40.4 362.0 Z"></path>
-					<path d="M40.5 366.0 L80.5 628.9 A3.6 3.6 0 0 0 84.1 632.0 L87.0 632.0 " fill="none"></path>
-					<path d="M42.1 365.7 L40.5 366.0 L39.0 366.2 L39.9 362.0 Z"></path>
-					<path d="M40.1 366.0 L80.6 672.9 A3.6 3.6 0 0 0 84.2 676.0 L120.5 676.0 " fill="none"></path>
-					<path d="M41.7 365.8 L40.1 366.0 L38.5 366.2 L39.6 362.0 Z"></path>
+					<path d="M39.1 326.0 L79 16 L119 16 L119.0 16.0 " fill="none"></path>
+					<path d="M37.5 325.8 L39.1 326.0 L40.7 326.2 L38.6 330.0 Z"></path>
+					<path d="M39.5 326.0 L79 60 L132 60 L132.0 60.0 " fill="none"></path>
+					<path d="M37.9 325.8 L39.5 326.0 L41.0 326.3 L38.9 330.0 Z"></path>
+					<path d="M40.0 326.1 L79 104 L127 104 L127.0 104.0 " fill="none"></path>
+					<path d="M38.4 325.8 L40.0 326.1 L41.6 326.3 L39.3 330.0 Z"></path>
+					<path d="M40.8 326.1 L79 148 L126 148 L126.0 148.0 " fill="none"></path>
+					<path d="M39.2 325.8 L40.8 326.1 L42.3 326.4 L39.9 330.0 Z"></path>
+					<path d="M42.0 326.1 L79 192 L134.5 192 L134.5 192.0 " fill="none"></path>
+					<path d="M40.4 325.7 L42.0 326.1 L43.5 326.6 L40.9 330.0 Z"></path>
+					<path d="M44.1 326.3 L79 236 L109 236 L109.0 236.0 " fill="none"></path>
+					<path d="M42.6 325.7 L44.1 326.3 L45.6 326.8 L42.7 330.0 Z"></path>
+					<path d="M49.0 326.6 L79 280 L141 280 L141.0 280.0 " fill="none"></path>
+					<path d="M47.6 325.8 L49.0 326.6 L50.3 327.5 L46.8 330.0 Z"></path>
+					<path d="M71.0 328.2 L79 324 L100.5 324 L100.5 324.0 " fill="none"></path>
+					<path d="M70.2 326.7 L71.0 328.2 L71.7 329.6 L67.4 330.0 Z"></path>
+					<path d="M71.0 363.8 L79 368 L123 368 L123.0 368.0 " fill="none"></path>
+					<path d="M71.7 362.4 L71.0 363.8 L70.2 365.3 L67.4 362.0 Z"></path>
+					<path d="M49.0 365.4 L79 412 L112.5 412 L112.5 412.0 " fill="none"></path>
+					<path d="M50.3 364.5 L49.0 365.4 L47.6 366.2 L46.8 362.0 Z"></path>
+					<path d="M44.1 365.7 L79 456 L130 456 L130.0 456.0 " fill="none"></path>
+					<path d="M45.6 365.2 L44.1 365.7 L42.6 366.3 L42.7 362.0 Z"></path>
+					<path d="M42.0 365.9 L79 500 L126 500 L126.0 500.0 " fill="none"></path>
+					<path d="M43.5 365.4 L42.0 365.9 L40.4 366.3 L40.9 362.0 Z"></path>
+					<path d="M40.8 365.9 L79 544 L102 544 L102.0 544.0 " fill="none"></path>
+					<path d="M42.3 365.6 L40.8 365.9 L39.2 366.2 L39.9 362.0 Z"></path>
+					<path d="M40.0 365.9 L79 588 L120 588 L120.0 588.0 " fill="none"></path>
+					<path d="M41.6 365.7 L40.0 365.9 L38.4 366.2 L39.3 362.0 Z"></path>
+					<path d="M39.5 366.0 L79 632 L85 632 L85.0 632.0 " fill="none"></path>
+					<path d="M41.0 365.7 L39.5 366.0 L37.9 366.2 L38.9 362.0 Z"></path>
+					<path d="M39.1 366.0 L79 676 L113.5 676 L113.5 676.0 " fill="none"></path>
+					<path d="M40.7 365.8 L39.1 366.0 L37.5 366.2 L38.6 362.0 Z"></path>
 					<g data-name="Control">
 						<g fill="#C06EF0" stroke="#33322E" data-name="Control">
-							<rect x="0.0" y="330.0" height="32.0" width="75.0" data-name="Control"></rect>
+							<rect x="0.0" y="330.0" height="32.0" width="73.0" data-name="Control"></rect>
 						</g>
 						<g transform="translate(0, 330)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Control" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control" data-compartment="0">
-								<text x="29.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control" data-compartment="0">Control</text>
+								<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control" data-compartment="0">Control</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="TabControl">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TabControl">
-							<rect x="124.5" y="0.0" height="32.0" width="104.0" data-name="TabControl"></rect>
+							<rect x="119.0" y="0.0" height="32.0" width="103.0" data-name="TabControl"></rect>
 						</g>
-						<g transform="translate(124.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TabControl" data-compartment="0">
+						<g transform="translate(119, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TabControl" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TabControl" data-compartment="0">
-								<text x="44.0" y="14.1" stroke="none" text-anchor="middle" data-name="TabControl" data-compartment="0">TabControl</text>
+								<text x="43.5" y="14.1" stroke="none" text-anchor="middle" data-name="TabControl" data-compartment="0">TabControl</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ToolBar">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ToolBar">
-							<rect x="137.5" y="44.0" height="32.0" width="78.0" data-name="ToolBar"></rect>
+							<rect x="132.0" y="44.0" height="32.0" width="77.0" data-name="ToolBar"></rect>
 						</g>
-						<g transform="translate(137.5, 44)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolBar" data-compartment="0">
+						<g transform="translate(132, 44)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ToolBar" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ToolBar" data-compartment="0">
-								<text x="31.0" y="14.1" stroke="none" text-anchor="middle" data-name="ToolBar" data-compartment="0">ToolBar</text>
+								<text x="30.5" y="14.1" stroke="none" text-anchor="middle" data-name="ToolBar" data-compartment="0">ToolBar</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="TrackBar">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TrackBar">
-							<rect x="132.5" y="88.0" height="32.0" width="88.0" data-name="TrackBar"></rect>
+							<rect x="127.0" y="88.0" height="32.0" width="87.0" data-name="TrackBar"></rect>
 						</g>
-						<g transform="translate(132.5, 88)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TrackBar" data-compartment="0">
+						<g transform="translate(127, 88)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TrackBar" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TrackBar" data-compartment="0">
-								<text x="36.0" y="14.1" stroke="none" text-anchor="middle" data-name="TrackBar" data-compartment="0">TrackBar</text>
+								<text x="35.5" y="14.1" stroke="none" text-anchor="middle" data-name="TrackBar" data-compartment="0">TrackBar</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="TreeView">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TreeView">
-							<rect x="131.5" y="132.0" height="32.0" width="90.0" data-name="TreeView"></rect>
+							<rect x="126.0" y="132.0" height="32.0" width="89.0" data-name="TreeView"></rect>
 						</g>
-						<g transform="translate(131.5, 132)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TreeView" data-compartment="0">
+						<g transform="translate(126, 132)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TreeView" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TreeView" data-compartment="0">
-								<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="TreeView" data-compartment="0">TreeView</text>
+								<text x="36.5" y="14.1" stroke="none" text-anchor="middle" data-name="TreeView" data-compartment="0">TreeView</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="AxHost">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="AxHost">
-							<rect x="140.0" y="176.0" height="32.0" width="73.0" data-name="AxHost"></rect>
+							<rect x="134.5" y="176.0" height="32.0" width="72.0" data-name="AxHost"></rect>
 						</g>
-						<g transform="translate(140, 176)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AxHost" data-compartment="0">
+						<g transform="translate(134.5, 176)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AxHost" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AxHost" data-compartment="0">
-								<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="AxHost" data-compartment="0">AxHost</text>
+								<text x="28.0" y="14.1" stroke="none" text-anchor="middle" data-name="AxHost" data-compartment="0">AxHost</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="DataGridView">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DataGridView">
-							<rect x="113.5" y="220.0" height="32.0" width="126.0" data-name="DataGridView"></rect>
+							<rect x="109.0" y="220.0" height="32.0" width="123.0" data-name="DataGridView"></rect>
 						</g>
-						<g transform="translate(113.5, 220)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridView" data-compartment="0">
+						<g transform="translate(109, 220)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataGridView" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataGridView" data-compartment="0">
-								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridView" data-compartment="0">DataGridView</text>
+								<text x="53.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataGridView" data-compartment="0">DataGridView</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="Chart">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Chart">
-							<rect x="146.5" y="264.0" height="32.0" width="60.0" data-name="Chart"></rect>
+							<rect x="141.0" y="264.0" height="32.0" width="59.0" data-name="Chart"></rect>
 						</g>
-						<g transform="translate(146.5, 264)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Chart" data-compartment="0">
+						<g transform="translate(141, 264)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Chart" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Chart" data-compartment="0">
-								<text x="22.0" y="14.1" stroke="none" text-anchor="middle" data-name="Chart" data-compartment="0">Chart</text>
+								<text x="21.5" y="14.1" stroke="none" text-anchor="middle" data-name="Chart" data-compartment="0">Chart</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="DateTimePicker">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DateTimePicker">
-							<rect x="105.0" y="308.0" height="32.0" width="143.0" data-name="DateTimePicker"></rect>
+							<rect x="100.5" y="308.0" height="32.0" width="140.0" data-name="DateTimePicker"></rect>
 						</g>
-						<g transform="translate(105, 308)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DateTimePicker" data-compartment="0">
+						<g transform="translate(100.5, 308)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DateTimePicker" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DateTimePicker" data-compartment="0">
-								<text x="63.5" y="14.1" stroke="none" text-anchor="middle" data-name="DateTimePicker" data-compartment="0">DateTimePicker</text>
+								<text x="62.0" y="14.1" stroke="none" text-anchor="middle" data-name="DateTimePicker" data-compartment="0">DateTimePicker</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="GroupBox">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GroupBox">
-							<rect x="129.0" y="352.0" height="32.0" width="95.0" data-name="GroupBox"></rect>
+							<rect x="123.0" y="352.0" height="32.0" width="95.0" data-name="GroupBox"></rect>
 						</g>
-						<g transform="translate(129, 352)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GroupBox" data-compartment="0">
+						<g transform="translate(123, 352)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GroupBox" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GroupBox" data-compartment="0">
 								<text x="39.5" y="14.1" stroke="none" text-anchor="middle" data-name="GroupBox" data-compartment="0">GroupBox</text>
 								
@@ -176,77 +176,77 @@
 					</g>
 					<g data-name="ElementHost">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ElementHost">
-							<rect x="117.0" y="396.0" height="32.0" width="119.0" data-name="ElementHost"></rect>
+							<rect x="112.5" y="396.0" height="32.0" width="116.0" data-name="ElementHost"></rect>
 						</g>
-						<g transform="translate(117, 396)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ElementHost" data-compartment="0">
+						<g transform="translate(112.5, 396)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ElementHost" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ElementHost" data-compartment="0">
-								<text x="51.5" y="14.1" stroke="none" text-anchor="middle" data-name="ElementHost" data-compartment="0">ElementHost</text>
+								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="ElementHost" data-compartment="0">ElementHost</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ListView">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ListView">
-							<rect x="135.0" y="440.0" height="32.0" width="83.0" data-name="ListView"></rect>
+							<rect x="130.0" y="440.0" height="32.0" width="81.0" data-name="ListView"></rect>
 						</g>
-						<g transform="translate(135, 440)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ListView" data-compartment="0">
+						<g transform="translate(130, 440)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ListView" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ListView" data-compartment="0">
-								<text x="33.5" y="14.1" stroke="none" text-anchor="middle" data-name="ListView" data-compartment="0">ListView</text>
+								<text x="32.5" y="14.1" stroke="none" text-anchor="middle" data-name="ListView" data-compartment="0">ListView</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="MdiClient">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MdiClient">
-							<rect x="130.0" y="484.0" height="32.0" width="93.0" data-name="MdiClient"></rect>
+							<rect x="126.0" y="484.0" height="32.0" width="89.0" data-name="MdiClient"></rect>
 						</g>
-						<g transform="translate(130, 484)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MdiClient" data-compartment="0">
+						<g transform="translate(126, 484)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MdiClient" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MdiClient" data-compartment="0">
-								<text x="38.5" y="14.1" stroke="none" text-anchor="middle" data-name="MdiClient" data-compartment="0">MdiClient</text>
+								<text x="36.5" y="14.1" stroke="none" text-anchor="middle" data-name="MdiClient" data-compartment="0">MdiClient</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="MonthCalendar">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MonthCalendar">
-							<rect x="106.5" y="528.0" height="32.0" width="140.0" data-name="MonthCalendar"></rect>
+							<rect x="102.0" y="528.0" height="32.0" width="137.0" data-name="MonthCalendar"></rect>
 						</g>
-						<g transform="translate(106.5, 528)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MonthCalendar" data-compartment="0">
+						<g transform="translate(102, 528)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MonthCalendar" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MonthCalendar" data-compartment="0">
-								<text x="62.0" y="14.1" stroke="none" text-anchor="middle" data-name="MonthCalendar" data-compartment="0">MonthCalendar</text>
+								<text x="60.5" y="14.1" stroke="none" text-anchor="middle" data-name="MonthCalendar" data-compartment="0">MonthCalendar</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="PictureBox">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="PictureBox">
-							<rect x="125.0" y="572.0" height="32.0" width="103.0" data-name="PictureBox"></rect>
+							<rect x="120.0" y="572.0" height="32.0" width="101.0" data-name="PictureBox"></rect>
 						</g>
-						<g transform="translate(125, 572)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PictureBox" data-compartment="0">
+						<g transform="translate(120, 572)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PictureBox" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PictureBox" data-compartment="0">
-								<text x="43.5" y="14.1" stroke="none" text-anchor="middle" data-name="PictureBox" data-compartment="0">PictureBox</text>
+								<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="PictureBox" data-compartment="0">PictureBox</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="PrintPreviewControl">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="PrintPreviewControl">
-							<rect x="87.0" y="616.0" height="32.0" width="179.0" data-name="PrintPreviewControl"></rect>
+							<rect x="85.0" y="616.0" height="32.0" width="171.0" data-name="PrintPreviewControl"></rect>
 						</g>
-						<g transform="translate(87, 616)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PrintPreviewControl" data-compartment="0">
+						<g transform="translate(85, 616)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PrintPreviewControl" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PrintPreviewControl" data-compartment="0">
-								<text x="81.5" y="14.1" stroke="none" text-anchor="middle" data-name="PrintPreviewControl" data-compartment="0">PrintPreviewControl</text>
+								<text x="77.5" y="14.1" stroke="none" text-anchor="middle" data-name="PrintPreviewControl" data-compartment="0">PrintPreviewControl</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ProgressBar">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ProgressBar">
-							<rect x="120.5" y="660.0" height="32.0" width="112.0" data-name="ProgressBar"></rect>
+							<rect x="113.5" y="660.0" height="32.0" width="114.0" data-name="ProgressBar"></rect>
 						</g>
-						<g transform="translate(120.5, 660)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ProgressBar" data-compartment="0">
+						<g transform="translate(113.5, 660)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ProgressBar" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ProgressBar" data-compartment="0">
-								<text x="48.0" y="14.1" stroke="none" text-anchor="middle" data-name="ProgressBar" data-compartment="0">ProgressBar</text>
+								<text x="49.0" y="14.1" stroke="none" text-anchor="middle" data-name="ProgressBar" data-compartment="0">ProgressBar</text>
 								
 							</g>
 						</g>

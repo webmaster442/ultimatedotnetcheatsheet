@@ -1,4 +1,4 @@
-<svg version="1.1" baseProfile="full" width="1181.0" height="1138.0" viewBox="0 0 1181 1138" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="1262.0" height="1138.0" viewBox="0 0 1262 1138" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >streamtypes</title>
 	<desc >#direction: right
 	#spacing: 10
@@ -74,50 +74,50 @@
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
 		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="1138.0" width="1181.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="1138.0" width="1262.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M355.3 525.3 L355.3 525.3 A1.3 1.3 0 0 0 355.0 527.7 L405.7 543.5 " fill="none"></path>
-					<path d="M355.3 519.9 L355.3 525.3 L355.3 530.6 L342.0 525.3 Z"></path>
+					<path d="M385.3 525.3 L377 525.25 L440.4442060085837 543.5 L440.4 543.5 " fill="none"></path>
+					<path d="M385.3 519.9 L385.3 525.3 L385.3 530.6 L372.0 525.3 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M261.8 599.8 L346.9 599.8 A3.0 3.0 0 0 0 347.1 599.7 L352.0 599.3 " fill="none"></path>
+						<path d="M277.8 599.8 L377 599.75 L382 599.3487654320987 L382.0 599.3 " fill="none"></path>
 					</g>
-					<path d="M261.8 594.4 L261.8 599.8 L261.8 605.1 L248.5 599.8 Z"></path>
+					<path d="M277.8 594.4 L277.8 599.8 L277.8 605.1 L264.5 599.8 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M238.3 641.8 L346.5 641.8 A3.0 3.0 0 0 0 347.4 641.6 L405.7 623.5 " fill="none"></path>
+						<path d="M253.8 641.8 L377 641.75 L440.4442060085837 623.5 L440.4 623.5 " fill="none"></path>
 					</g>
-					<path d="M238.3 636.4 L238.3 641.8 L238.3 647.1 L225.0 641.8 Z"></path>
-					<path d="M552.9 530.9 L721.3 50.5 A3.0 3.0 0 0 1 724.1 48.5 L747.5 48.5 " fill="none"></path>
-					<path d="M547.9 529.2 L552.9 530.9 L558.0 532.7 L548.5 543.5 Z"></path>
-					<path d="M557.4 531.3 L721.2 157.3 A3.0 3.0 0 0 1 724.0 155.5 L752.5 155.5 " fill="none"></path>
-					<path d="M552.5 529.1 L557.4 531.3 L562.3 533.4 L552.0 543.5 Z"></path>
-					<path d="M564.6 532.0 L721.1 264.0 A3.0 3.0 0 0 1 723.7 262.5 L763.0 262.5 " fill="none"></path>
-					<path d="M560.0 529.3 L564.6 532.0 L569.2 534.7 L557.9 543.5 Z"></path>
-					<path d="M578.3 533.5 L721.1 370.5 A3.0 3.0 0 0 1 723.4 369.5 L745.0 369.5 " fill="none"></path>
-					<path d="M574.3 530.0 L578.3 533.5 L582.3 537.0 L569.5 543.5 Z"></path>
-					<path d="M616.2 536.9 L721.3 476.9 A3.0 3.0 0 0 1 722.8 476.5 L761.0 476.5 " fill="none"></path>
-					<path d="M613.5 532.3 L616.2 536.9 L618.8 541.5 L604.6 543.5 Z"></path>
-					<path d="M730.3 583.5 L730.3 583.5 A0.0 0.0 0 0 0 730.3 583.5 L765.0 583.5 " fill="none"></path>
-					<path d="M730.3 578.2 L730.3 583.5 L730.3 588.8 L717.0 583.5 Z"></path>
-					<path d="M622.4 629.7 L721.3 681.7 A3.0 3.0 0 0 0 722.7 682.0 L827.0 682.0 " fill="none"></path>
-					<path d="M624.9 625.0 L622.4 629.7 L620.0 634.4 L610.6 623.5 Z"></path>
-					<path d="M583.7 633.0 L721.1 771.1 A3.0 3.0 0 0 0 723.2 772.0 L727.0 772.0 " fill="none"></path>
-					<path d="M587.5 629.2 L583.7 633.0 L579.9 636.7 L574.3 623.5 Z"></path>
-					<path d="M568.9 634.6 L721.1 860.7 A3.0 3.0 0 0 0 723.6 862.0 L772.0 862.0 " fill="none"></path>
-					<path d="M573.3 631.6 L568.9 634.6 L564.5 637.5 L561.4 623.5 Z"></path>
-					<path d="M560.9 635.4 L721.2 950.4 A3.0 3.0 0 0 0 723.8 952.0 L801.5 952.0 " fill="none"></path>
-					<path d="M565.7 633.0 L560.9 635.4 L556.1 637.8 L554.9 623.5 Z"></path>
-					<path d="M555.9 635.8 L721.2 1040.1 A3.0 3.0 0 0 0 724.0 1042.0 L760.5 1042.0 " fill="none"></path>
-					<path d="M560.8 633.8 L555.9 635.8 L551.0 637.9 L550.9 623.5 Z"></path>
+					<path d="M253.8 636.4 L253.8 641.8 L253.8 647.1 L240.5 641.8 Z"></path>
+					<path d="M599.4 531.0 L782 48.5 L810 48.5 L810.0 48.5 " fill="none"></path>
+					<path d="M594.4 529.1 L599.4 531.0 L604.3 532.9 L594.6 543.5 Z"></path>
+					<path d="M604.1 531.4 L782 155.5 L811.5 155.5 L811.5 155.5 " fill="none"></path>
+					<path d="M599.3 529.2 L604.1 531.4 L608.9 533.7 L598.4 543.5 Z"></path>
+					<path d="M611.8 532.2 L782 262.5 L823.5 262.5 L823.5 262.5 " fill="none"></path>
+					<path d="M607.3 529.4 L611.8 532.2 L616.4 535.1 L604.7 543.5 Z"></path>
+					<path d="M626.5 533.8 L782 369.5 L803.5 369.5 L803.5 369.5 " fill="none"></path>
+					<path d="M622.6 530.1 L626.5 533.8 L630.4 537.5 L617.4 543.5 Z"></path>
+					<path d="M667.0 537.3 L782 476.5 L822 476.5 L822.0 476.5 " fill="none"></path>
+					<path d="M664.5 532.6 L667.0 537.3 L669.5 542.0 L655.2 543.5 Z"></path>
+					<path d="M790.3 583.5 L782 583.5 L826.5 583.5 L826.5 583.5 " fill="none"></path>
+					<path d="M790.3 578.2 L790.3 583.5 L790.3 588.8 L777.0 583.5 Z"></path>
+					<path d="M673.7 629.3 L782 682 L892 682 L892.0 682.0 " fill="none"></path>
+					<path d="M676.1 624.5 L673.7 629.3 L671.4 634.1 L661.7 623.5 Z"></path>
+					<path d="M632.2 632.6 L782 772 L787 772 L787.0 772.0 " fill="none"></path>
+					<path d="M635.9 628.7 L632.2 632.6 L628.6 636.5 L622.5 623.5 Z"></path>
+					<path d="M616.4 634.3 L782 862 L835 862 L835.0 862.0 " fill="none"></path>
+					<path d="M620.7 631.1 L616.4 634.3 L612.1 637.4 L608.6 623.5 Z"></path>
+					<path d="M607.9 635.2 L782 952 L865.5 952 L865.5 952.0 " fill="none"></path>
+					<path d="M612.6 632.6 L607.9 635.2 L603.2 637.8 L601.5 623.5 Z"></path>
+					<path d="M602.6 635.7 L782 1042 L824 1042 L824.0 1042.0 " fill="none"></path>
+					<path d="M607.4 633.5 L602.6 635.7 L597.7 637.9 L597.2 623.5 Z"></path>
 					<g data-name="MarshalByRefObject">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MarshalByRefObject">
-							<rect x="0.0" y="476.8" height="97.0" width="342.0" data-name="MarshalByRefObject"></rect>
-							<path d="M0.0 508.8 L342.0 508.8" fill="none" data-name="MarshalByRefObject"></path>
+							<rect x="0.0" y="476.8" height="97.0" width="372.0" data-name="MarshalByRefObject"></rect>
+							<path d="M0.0 508.8 L372.0 508.8" fill="none" data-name="MarshalByRefObject"></path>
 						</g>
 						<g transform="translate(0, 476.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject" data-compartment="0">
-								<text x="163.0" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject" data-compartment="0">MarshalByRefObject</text>
+								<text x="178.0" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject" data-compartment="0">MarshalByRefObject</text>
 								
 							</g>
 						</g>
@@ -132,16 +132,16 @@
 					</g>
 					<g data-name="Stream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Stream">
-							<rect x="352.0" y="543.5" height="80.0" width="365.0" data-name="Stream"></rect>
-							<path d="M352.0 575.5 L717.0 575.5" fill="none" data-name="Stream"></path>
+							<rect x="382.0" y="543.5" height="80.0" width="395.0" data-name="Stream"></rect>
+							<path d="M382.0 575.5 L777.0 575.5" fill="none" data-name="Stream"></path>
 						</g>
-						<g transform="translate(352, 543.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Stream" data-compartment="0">
+						<g transform="translate(382, 543.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Stream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Stream" data-compartment="0">
-								<text x="174.5" y="14.1" stroke="none" text-anchor="middle" data-name="Stream" data-compartment="0">Stream</text>
+								<text x="189.5" y="14.1" stroke="none" text-anchor="middle" data-name="Stream" data-compartment="0">Stream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(352, 575.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Stream" data-compartment="1">
+						<g transform="translate(382, 575.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Stream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Stream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Stream" data-compartment="1">Provides a generic view of a sequence of bytes.</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Stream" data-compartment="1">This is an abstract class.</text>
@@ -151,16 +151,16 @@
 					</g>
 					<g data-name="BufferedStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BufferedStream">
-							<rect x="747.5" y="0.0" height="97.0" width="357.0" data-name="BufferedStream"></rect>
-							<path d="M747.5 32.0 L1104.5 32.0" fill="none" data-name="BufferedStream"></path>
+							<rect x="810.0" y="0.0" height="97.0" width="373.0" data-name="BufferedStream"></rect>
+							<path d="M810.0 32.0 L1183.0 32.0" fill="none" data-name="BufferedStream"></path>
 						</g>
-						<g transform="translate(747.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BufferedStream" data-compartment="0">
+						<g transform="translate(810, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BufferedStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BufferedStream" data-compartment="0">
-								<text x="170.5" y="14.1" stroke="none" text-anchor="middle" data-name="BufferedStream" data-compartment="0">BufferedStream</text>
+								<text x="178.5" y="14.1" stroke="none" text-anchor="middle" data-name="BufferedStream" data-compartment="0">BufferedStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(747.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="BufferedStream" data-compartment="1">
+						<g transform="translate(810, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="BufferedStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BufferedStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="BufferedStream" data-compartment="1">Adds a buffering layer to</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="BufferedStream" data-compartment="1">read and write operations on another stream.</text>
@@ -171,16 +171,16 @@
 					</g>
 					<g data-name="BrotliStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BrotliStream">
-							<rect x="752.5" y="107.0" height="97.0" width="347.0" data-name="BrotliStream"></rect>
-							<path d="M752.5 139.0 L1099.5 139.0" fill="none" data-name="BrotliStream"></path>
+							<rect x="811.5" y="107.0" height="97.0" width="370.0" data-name="BrotliStream"></rect>
+							<path d="M811.5 139.0 L1181.5 139.0" fill="none" data-name="BrotliStream"></path>
 						</g>
-						<g transform="translate(752.5, 107)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BrotliStream" data-compartment="0">
+						<g transform="translate(811.5, 107)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BrotliStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BrotliStream" data-compartment="0">
-								<text x="165.5" y="14.1" stroke="none" text-anchor="middle" data-name="BrotliStream" data-compartment="0">BrotliStream</text>
+								<text x="177.0" y="14.1" stroke="none" text-anchor="middle" data-name="BrotliStream" data-compartment="0">BrotliStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(752.5, 139)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="BrotliStream" data-compartment="1">
+						<g transform="translate(811.5, 139)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="BrotliStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BrotliStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="BrotliStream" data-compartment="1">Provides methods and properties used to</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="BrotliStream" data-compartment="1">compress and decompress streams by using</text>
@@ -191,16 +191,16 @@
 					</g>
 					<g data-name="DeflateStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DeflateStream">
-							<rect x="763.0" y="214.0" height="97.0" width="326.0" data-name="DeflateStream"></rect>
-							<path d="M763.0 246.0 L1089.0 246.0" fill="none" data-name="DeflateStream"></path>
+							<rect x="823.5" y="214.0" height="97.0" width="346.0" data-name="DeflateStream"></rect>
+							<path d="M823.5 246.0 L1169.5 246.0" fill="none" data-name="DeflateStream"></path>
 						</g>
-						<g transform="translate(763, 214)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeflateStream" data-compartment="0">
+						<g transform="translate(823.5, 214)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeflateStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DeflateStream" data-compartment="0">
-								<text x="155.0" y="14.1" stroke="none" text-anchor="middle" data-name="DeflateStream" data-compartment="0">DeflateStream</text>
+								<text x="165.0" y="14.1" stroke="none" text-anchor="middle" data-name="DeflateStream" data-compartment="0">DeflateStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(763, 246)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeflateStream" data-compartment="1">
+						<g transform="translate(823.5, 246)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeflateStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DeflateStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DeflateStream" data-compartment="1">Provides methods and properties for</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DeflateStream" data-compartment="1">compressing and decompressing streams</text>
@@ -211,16 +211,16 @@
 					</g>
 					<g data-name="GZipStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GZipStream">
-							<rect x="745.0" y="321.0" height="97.0" width="362.0" data-name="GZipStream"></rect>
-							<path d="M745.0 353.0 L1107.0 353.0" fill="none" data-name="GZipStream"></path>
+							<rect x="803.5" y="321.0" height="97.0" width="386.0" data-name="GZipStream"></rect>
+							<path d="M803.5 353.0 L1189.5 353.0" fill="none" data-name="GZipStream"></path>
 						</g>
-						<g transform="translate(745, 321)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GZipStream" data-compartment="0">
+						<g transform="translate(803.5, 321)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GZipStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GZipStream" data-compartment="0">
-								<text x="173.0" y="14.1" stroke="none" text-anchor="middle" data-name="GZipStream" data-compartment="0">GZipStream</text>
+								<text x="185.0" y="14.1" stroke="none" text-anchor="middle" data-name="GZipStream" data-compartment="0">GZipStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(745, 353)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="GZipStream" data-compartment="1">
+						<g transform="translate(803.5, 353)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="GZipStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="GZipStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="GZipStream" data-compartment="1">Provides methods and properties</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="GZipStream" data-compartment="1">used to compress and decompress streams by</text>
@@ -231,16 +231,16 @@
 					</g>
 					<g data-name="ZLibStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ZLibStream">
-							<rect x="761.0" y="428.0" height="97.0" width="330.0" data-name="ZLibStream"></rect>
-							<path d="M761.0 460.0 L1091.0 460.0" fill="none" data-name="ZLibStream"></path>
+							<rect x="822.0" y="428.0" height="97.0" width="349.0" data-name="ZLibStream"></rect>
+							<path d="M822.0 460.0 L1171.0 460.0" fill="none" data-name="ZLibStream"></path>
 						</g>
-						<g transform="translate(761, 428)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ZLibStream" data-compartment="0">
+						<g transform="translate(822, 428)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ZLibStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ZLibStream" data-compartment="0">
-								<text x="157.0" y="14.1" stroke="none" text-anchor="middle" data-name="ZLibStream" data-compartment="0">ZLibStream</text>
+								<text x="166.5" y="14.1" stroke="none" text-anchor="middle" data-name="ZLibStream" data-compartment="0">ZLibStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(761, 460)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ZLibStream" data-compartment="1">
+						<g transform="translate(822, 460)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ZLibStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ZLibStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ZLibStream" data-compartment="1">Provides methods and properties used</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ZLibStream" data-compartment="1">to compress and decompress streams</text>
@@ -251,16 +251,16 @@
 					</g>
 					<g data-name="FileStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="FileStream">
-							<rect x="765.0" y="535.0" height="97.0" width="322.0" data-name="FileStream"></rect>
-							<path d="M765.0 567.0 L1087.0 567.0" fill="none" data-name="FileStream"></path>
+							<rect x="826.5" y="535.0" height="97.0" width="340.0" data-name="FileStream"></rect>
+							<path d="M826.5 567.0 L1166.5 567.0" fill="none" data-name="FileStream"></path>
 						</g>
-						<g transform="translate(765, 535)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileStream" data-compartment="0">
+						<g transform="translate(826.5, 535)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileStream" data-compartment="0">
-								<text x="153.0" y="14.1" stroke="none" text-anchor="middle" data-name="FileStream" data-compartment="0">FileStream</text>
+								<text x="162.0" y="14.1" stroke="none" text-anchor="middle" data-name="FileStream" data-compartment="0">FileStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(765, 567)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileStream" data-compartment="1">
+						<g transform="translate(826.5, 567)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="FileStream" data-compartment="1">Provides a Stream for a file,</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="FileStream" data-compartment="1">supporting both synchronous and</text>
@@ -271,16 +271,16 @@
 					</g>
 					<g data-name="MemoryStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MemoryStream">
-							<rect x="827.0" y="642.0" height="80.0" width="198.0" data-name="MemoryStream"></rect>
-							<path d="M827.0 674.0 L1025.0 674.0" fill="none" data-name="MemoryStream"></path>
+							<rect x="892.0" y="642.0" height="80.0" width="209.0" data-name="MemoryStream"></rect>
+							<path d="M892.0 674.0 L1101.0 674.0" fill="none" data-name="MemoryStream"></path>
 						</g>
-						<g transform="translate(827, 642)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MemoryStream" data-compartment="0">
+						<g transform="translate(892, 642)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MemoryStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MemoryStream" data-compartment="0">
-								<text x="91.0" y="14.1" stroke="none" text-anchor="middle" data-name="MemoryStream" data-compartment="0">MemoryStream</text>
+								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="MemoryStream" data-compartment="0">MemoryStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(827, 674)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MemoryStream" data-compartment="1">
+						<g transform="translate(892, 674)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MemoryStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MemoryStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="MemoryStream" data-compartment="1">Creates a stream whose</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="MemoryStream" data-compartment="1">backing store is memory</text>
@@ -290,16 +290,16 @@
 					</g>
 					<g data-name="PipeStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="PipeStream">
-							<rect x="727.0" y="732.0" height="80.0" width="398.0" data-name="PipeStream"></rect>
-							<path d="M727.0 764.0 L1125.0 764.0" fill="none" data-name="PipeStream"></path>
+							<rect x="787.0" y="732.0" height="80.0" width="419.0" data-name="PipeStream"></rect>
+							<path d="M787.0 764.0 L1206.0 764.0" fill="none" data-name="PipeStream"></path>
 						</g>
-						<g transform="translate(727, 732)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PipeStream" data-compartment="0">
+						<g transform="translate(787, 732)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PipeStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PipeStream" data-compartment="0">
-								<text x="191.0" y="14.1" stroke="none" text-anchor="middle" data-name="PipeStream" data-compartment="0">PipeStream</text>
+								<text x="201.5" y="14.1" stroke="none" text-anchor="middle" data-name="PipeStream" data-compartment="0">PipeStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(727, 764)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="PipeStream" data-compartment="1">
+						<g transform="translate(787, 764)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="PipeStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PipeStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="PipeStream" data-compartment="1">Exposes a Stream object around a pipe,</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="PipeStream" data-compartment="1">which supports both anonymous and named pipes.</text>
@@ -309,16 +309,16 @@
 					</g>
 					<g data-name="UnmanagedMemoryStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="UnmanagedMemoryStream">
-							<rect x="772.0" y="822.0" height="80.0" width="308.0" data-name="UnmanagedMemoryStream"></rect>
-							<path d="M772.0 854.0 L1080.0 854.0" fill="none" data-name="UnmanagedMemoryStream"></path>
+							<rect x="835.0" y="822.0" height="80.0" width="323.0" data-name="UnmanagedMemoryStream"></rect>
+							<path d="M835.0 854.0 L1158.0 854.0" fill="none" data-name="UnmanagedMemoryStream"></path>
 						</g>
-						<g transform="translate(772, 822)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="UnmanagedMemoryStream" data-compartment="0">
+						<g transform="translate(835, 822)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="UnmanagedMemoryStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UnmanagedMemoryStream" data-compartment="0">
-								<text x="146.0" y="14.1" stroke="none" text-anchor="middle" data-name="UnmanagedMemoryStream" data-compartment="0">UnmanagedMemoryStream</text>
+								<text x="153.5" y="14.1" stroke="none" text-anchor="middle" data-name="UnmanagedMemoryStream" data-compartment="0">UnmanagedMemoryStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(772, 854)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="UnmanagedMemoryStream" data-compartment="1">
+						<g transform="translate(835, 854)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="UnmanagedMemoryStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UnmanagedMemoryStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="UnmanagedMemoryStream" data-compartment="1">Provides access to unmanaged</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="UnmanagedMemoryStream" data-compartment="1">blocks of memory from managed code.</text>
@@ -328,16 +328,16 @@
 					</g>
 					<g data-name="NetworkStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="NetworkStream">
-							<rect x="801.5" y="912.0" height="80.0" width="249.0" data-name="NetworkStream"></rect>
-							<path d="M801.5 944.0 L1050.5 944.0" fill="none" data-name="NetworkStream"></path>
+							<rect x="865.5" y="912.0" height="80.0" width="262.0" data-name="NetworkStream"></rect>
+							<path d="M865.5 944.0 L1127.5 944.0" fill="none" data-name="NetworkStream"></path>
 						</g>
-						<g transform="translate(801.5, 912)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="NetworkStream" data-compartment="0">
+						<g transform="translate(865.5, 912)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="NetworkStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NetworkStream" data-compartment="0">
-								<text x="116.5" y="14.1" stroke="none" text-anchor="middle" data-name="NetworkStream" data-compartment="0">NetworkStream</text>
+								<text x="123.0" y="14.1" stroke="none" text-anchor="middle" data-name="NetworkStream" data-compartment="0">NetworkStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(801.5, 944)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="NetworkStream" data-compartment="1">
+						<g transform="translate(865.5, 944)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="NetworkStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="NetworkStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="NetworkStream" data-compartment="1">Provides the underlying stream</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="NetworkStream" data-compartment="1">of data for network access.</text>
@@ -347,16 +347,16 @@
 					</g>
 					<g data-name="CryptoStream">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="CryptoStream">
-							<rect x="760.5" y="1002.0" height="80.0" width="331.0" data-name="CryptoStream"></rect>
-							<path d="M760.5 1034.0 L1091.5 1034.0" fill="none" data-name="CryptoStream"></path>
+							<rect x="824.0" y="1002.0" height="80.0" width="345.0" data-name="CryptoStream"></rect>
+							<path d="M824.0 1034.0 L1169.0 1034.0" fill="none" data-name="CryptoStream"></path>
 						</g>
-						<g transform="translate(760.5, 1002)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CryptoStream" data-compartment="0">
+						<g transform="translate(824, 1002)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CryptoStream" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CryptoStream" data-compartment="0">
-								<text x="157.5" y="14.1" stroke="none" text-anchor="middle" data-name="CryptoStream" data-compartment="0">CryptoStream</text>
+								<text x="164.5" y="14.1" stroke="none" text-anchor="middle" data-name="CryptoStream" data-compartment="0">CryptoStream</text>
 								
 							</g>
 						</g>
-						<g transform="translate(760.5, 1034)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="CryptoStream" data-compartment="1">
+						<g transform="translate(824, 1034)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="CryptoStream" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CryptoStream" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="CryptoStream" data-compartment="1">Defines a stream that links data</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="CryptoStream" data-compartment="1">streams to cryptographic transformations.</text>
@@ -366,22 +366,22 @@
 					</g>
 					<g data-name="IAsyncDisposable">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IAsyncDisposable">
-							<rect x="93.5" y="583.8" height="32.0" width="155.0" data-name="IAsyncDisposable"></rect>
+							<rect x="107.5" y="583.8" height="32.0" width="157.0" data-name="IAsyncDisposable"></rect>
 						</g>
-						<g transform="translate(93.5, 583.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncDisposable" data-compartment="0">
+						<g transform="translate(107.5, 583.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncDisposable" data-compartment="0">
-								<text x="69.5" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncDisposable" data-compartment="0">IAsyncDisposable</text>
+								<text x="70.5" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncDisposable" data-compartment="0">IAsyncDisposable</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IDisposable">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
-							<rect x="117.0" y="625.8" height="32.0" width="108.0" data-name="IDisposable"></rect>
+							<rect x="131.5" y="625.8" height="32.0" width="109.0" data-name="IDisposable"></rect>
 						</g>
-						<g transform="translate(117, 625.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+						<g transform="translate(131.5, 625.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
-								<text x="46.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
 								
 							</g>
 						</g>

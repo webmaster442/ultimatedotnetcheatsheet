@@ -1,4 +1,4 @@
-<svg version="1.1" baseProfile="full" width="699.0" height="214.0" viewBox="0 0 699 214" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<svg version="1.1" baseProfile="full" width="682.0" height="214.0" viewBox="0 0 682 214" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >wpf2</title>
 	<desc >#.box: fill=#C06EF0
 	#spacing: 10
@@ -22,95 +22,95 @@
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
 		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="214.0" width="699.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="214.0" width="682.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M251.5 45.3 L251.5 42.0 A0.0 0.0 0 0 0 251.5 42.0 L251.5 42.0 " fill="none"></path>
-					<path d="M256.8 45.3 L251.5 45.3 L246.2 45.3 L251.5 32.0 Z"></path>
-					<path d="M146.8 70.5 L78.1 78.7 A3.0 3.0 0 0 0 75.5 81.7 L75.5 84.0 " fill="none"></path>
-					<path d="M147.4 75.8 L146.8 70.5 L146.1 65.2 L160.0 68.9 Z"></path>
-					<path d="M251.5 87.3 L251.5 84.0 A0.0 0.0 0 0 0 251.5 84.0 L251.5 84.0 " fill="none"></path>
-					<path d="M256.8 87.3 L251.5 87.3 L246.2 87.3 L251.5 74.0 Z"></path>
-					<path d="M356.2 71.3 L413.9 78.7 A3.0 3.0 0 0 1 416.5 81.6 L416.5 84.0 " fill="none"></path>
-					<path d="M356.9 66.0 L356.2 71.3 L355.6 76.6 L343.0 69.6 Z"></path>
-					<path d="M338.9 114.4 L305.5 120.5 A3.0 3.0 0 0 0 303.0 123.5 L303.0 126.0 " fill="none"></path>
-					<path d="M339.9 119.6 L338.9 114.4 L337.9 109.1 L352.0 111.9 Z"></path>
-					<path d="M494.1 114.4 L527.5 120.5 A3.0 3.0 0 0 1 530.0 123.5 L530.0 126.0 " fill="none"></path>
-					<path d="M495.1 109.1 L494.1 114.4 L493.1 119.6 L481.0 111.9 Z"></path>
+					<path d="M244.5 45.3 L244.5 37 L244.5 42 L244.5 42.0 " fill="none"></path>
+					<path d="M249.8 45.3 L244.5 45.3 L239.2 45.3 L244.5 32.0 Z"></path>
+					<path d="M143.3 70.4 L73 79 L73 84 L73.0 84.0 " fill="none"></path>
+					<path d="M143.9 75.7 L143.3 70.4 L142.6 65.1 L156.5 68.8 Z"></path>
+					<path d="M244.5 87.3 L244.5 79 L244.5 84 L244.5 84.0 " fill="none"></path>
+					<path d="M249.8 87.3 L244.5 87.3 L239.2 87.3 L244.5 74.0 Z"></path>
+					<path d="M345.7 71.2 L406 79 L406 84 L406.0 84.0 " fill="none"></path>
+					<path d="M346.4 65.9 L345.7 71.2 L345.0 76.5 L332.5 69.4 Z"></path>
+					<path d="M329.9 114.5 L296 121 L296 126 L296.0 126.0 " fill="none"></path>
+					<path d="M330.9 119.8 L329.9 114.5 L328.9 109.3 L343.0 112.0 Z"></path>
+					<path d="M482.1 114.5 L516 121 L516 126 L516.0 126.0 " fill="none"></path>
+					<path d="M483.1 109.3 L482.1 114.5 L481.1 119.8 L469.0 112.0 Z"></path>
 					<g data-name="DispatcherObject">
 						<g fill="#C06EF0" stroke="#33322E" data-name="DispatcherObject">
-							<rect x="174.0" y="0.0" height="32.0" width="155.0" data-name="DispatcherObject"></rect>
+							<rect x="168.5" y="0.0" height="32.0" width="152.0" data-name="DispatcherObject"></rect>
 						</g>
-						<g transform="translate(174, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DispatcherObject" data-compartment="0">
+						<g transform="translate(168.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DispatcherObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DispatcherObject" data-compartment="0">
-								<text x="69.5" y="14.1" stroke="none" text-anchor="middle" data-name="DispatcherObject" data-compartment="0">DispatcherObject</text>
+								<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="DispatcherObject" data-compartment="0">DispatcherObject</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="FrameworkTemplate">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="FrameworkTemplate">
-							<rect x="160.0" y="42.0" height="32.0" width="183.0" data-name="FrameworkTemplate"></rect>
+							<rect x="156.5" y="42.0" height="32.0" width="176.0" data-name="FrameworkTemplate"></rect>
 						</g>
-						<g transform="translate(160, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkTemplate" data-compartment="0">
+						<g transform="translate(156.5, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkTemplate" data-compartment="0">
-								<text x="83.5" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkTemplate" data-compartment="0">FrameworkTemplate</text>
+								<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkTemplate" data-compartment="0">FrameworkTemplate</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ControlTemplate">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ControlTemplate">
-							<rect x="0.0" y="84.0" height="32.0" width="151.0" data-name="ControlTemplate"></rect>
+							<rect x="0.0" y="84.0" height="32.0" width="146.0" data-name="ControlTemplate"></rect>
 						</g>
 						<g transform="translate(0, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ControlTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ControlTemplate" data-compartment="0">
-								<text x="67.5" y="14.1" stroke="none" text-anchor="middle" data-name="ControlTemplate" data-compartment="0">ControlTemplate</text>
+								<text x="65.0" y="14.1" stroke="none" text-anchor="middle" data-name="ControlTemplate" data-compartment="0">ControlTemplate</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ItemsPanelTemplate">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ItemsPanelTemplate">
-							<rect x="161.0" y="84.0" height="32.0" width="181.0" data-name="ItemsPanelTemplate"></rect>
+							<rect x="156.0" y="84.0" height="32.0" width="177.0" data-name="ItemsPanelTemplate"></rect>
 						</g>
-						<g transform="translate(161, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsPanelTemplate" data-compartment="0">
+						<g transform="translate(156, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsPanelTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemsPanelTemplate" data-compartment="0">
-								<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="ItemsPanelTemplate" data-compartment="0">ItemsPanelTemplate</text>
+								<text x="80.5" y="14.1" stroke="none" text-anchor="middle" data-name="ItemsPanelTemplate" data-compartment="0">ItemsPanelTemplate</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="DataTemplate">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DataTemplate">
-							<rect x="352.0" y="84.0" height="32.0" width="129.0" data-name="DataTemplate"></rect>
+							<rect x="343.0" y="84.0" height="32.0" width="126.0" data-name="DataTemplate"></rect>
 						</g>
-						<g transform="translate(352, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTemplate" data-compartment="0">
+						<g transform="translate(343, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTemplate" data-compartment="0">
-								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="DataTemplate" data-compartment="0">DataTemplate</text>
+								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataTemplate" data-compartment="0">DataTemplate</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ItemContainerTemplate">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ItemContainerTemplate">
-							<rect x="199.0" y="126.0" height="32.0" width="208.0" data-name="ItemContainerTemplate"></rect>
+							<rect x="196.0" y="126.0" height="32.0" width="200.0" data-name="ItemContainerTemplate"></rect>
 						</g>
-						<g transform="translate(199, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemContainerTemplate" data-compartment="0">
+						<g transform="translate(196, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemContainerTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemContainerTemplate" data-compartment="0">
-								<text x="96.0" y="14.1" stroke="none" text-anchor="middle" data-name="ItemContainerTemplate" data-compartment="0">ItemContainerTemplate</text>
+								<text x="92.0" y="14.1" stroke="none" text-anchor="middle" data-name="ItemContainerTemplate" data-compartment="0">ItemContainerTemplate</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HierarchicalDataTemplate">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HierarchicalDataTemplate">
-							<rect x="417.0" y="126.0" height="32.0" width="226.0" data-name="HierarchicalDataTemplate"></rect>
+							<rect x="406.0" y="126.0" height="32.0" width="220.0" data-name="HierarchicalDataTemplate"></rect>
 						</g>
-						<g transform="translate(417, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HierarchicalDataTemplate" data-compartment="0">
+						<g transform="translate(406, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HierarchicalDataTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HierarchicalDataTemplate" data-compartment="0">
-								<text x="105.0" y="14.1" stroke="none" text-anchor="middle" data-name="HierarchicalDataTemplate" data-compartment="0">HierarchicalDataTemplate</text>
+								<text x="102.0" y="14.1" stroke="none" text-anchor="middle" data-name="HierarchicalDataTemplate" data-compartment="0">HierarchicalDataTemplate</text>
 								
 							</g>
 						</g>
