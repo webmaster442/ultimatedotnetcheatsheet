@@ -39,3 +39,9 @@ Hash-based Message Authentication Code (HMAG), is a mechanism for generating a c
 HMAC takes two inputs - the message to be authenticated and a secret key known only to the sender and the receiver. It uses a cryptographic hash function (such as MD5, SHA-1, SHA-256) to process the message. The secret key is mixed with the message in a specific way, usually by XOR operations and padding, to create a unique digest. The mixed data is then hashed using the chosen hash function and the output of the hash function is the HMAC.
 
 The recipient, who knows the secret key, can generate the HMAC using the received message and compare it to the transmitted HMAC. If they match, it indicates that the message has not been tampered with during transmission and that it was sent by someone with knowledge of the secret key.
+
+## Certificates
+
+^^^
+![Certificates](img/certificates.svg)
+^^^ Certificates

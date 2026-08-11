@@ -1,0 +1,326 @@
+<svg version="1.1" baseProfile="full" width="1073.0" height="808.0" viewBox="0 0 1073 808" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >certificates</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title:certificates
+	
+	[IDisposable|Provides a mechanism for 
+	releasing unmanaged resources.]
+	
+	[X509Certificate|Provides methods that help 
+	you use X.509 v.3 certificates.]
+	[X509Certificate2|Represents an X.509 certificate]
+	
+	[AsnEncodedData|Represents Abstract Syntax 
+	Notation One (ASN.1)-encoded data.]
+	
+	[X509Extension|Represents an X509 extension.]
+	
+	[X509AuthorityInformationAccessExtension|Represents the Authority Information Access
+	X.509 Extension (1.3.6.1.5.5.7.1.1).]
+	
+	[X509AuthorityKeyIdentifierExtension|Represents the Authority Key Identifier 
+	X.509 Extension (2.5.29.35).]
+	
+	[X509BasicConstraintsExtension|Defines the constraints set on a certificate. 
+	This class cannot be inherited.]
+	
+	[X509EnhancedKeyUsageExtension|Defines the collection of 
+	object identifiers (OIDs) that indicates
+	the applications that use the key. 
+	This class cannot be inherited.]
+	
+	[X509KeyUsageExtension|Defines the usage of a key contained within 
+	an X.509 certificate.  This class cannot be inherited.]
+	
+	[X509SubjectAlternativeNameExtension|Represents the Subject Alternative Name 
+	X.509 Extension (2.5.29.17).]
+	
+	[X509SubjectKeyIdentifierExtension|Defines a string that identifies 
+	a certificate&apos;s subject key identifier (SKI).
+	This class cannot be inherited.]
+	
+	[IDisposable] &lt;:-- [X509Certificate]
+	[X509Certificate] &lt;:- [X509Certificate2]
+	
+	[AsnEncodedData] &lt;:- [X509Extension]
+	[X509Extension] &lt;:- [X509AuthorityInformationAccessExtension]
+	[X509Extension] &lt;:- [X509AuthorityKeyIdentifierExtension]
+	[X509Extension] &lt;:- [X509BasicConstraintsExtension]
+	[X509Extension] &lt;:- [X509EnhancedKeyUsageExtension]
+	[X509Extension] &lt;:- [X509KeyUsageExtension]
+	[X509Extension] &lt;:- [X509SubjectAlternativeNameExtension]
+	[X509Extension] &lt;:- [X509SubjectKeyIdentifierExtension]
+	[X509Extension] &lt;:- [X509AuthorityInformationAccessExtension]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
+		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="808.0" width="1073.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M304.8 40.0 L311 40 L321 40 L321.0 40.0 " fill="none"></path>
+					</g>
+					<path d="M304.8 34.7 L304.8 40.0 L304.8 45.3 L291.5 40.0 Z"></path>
+					<path d="M589.3 40.0 L586 40 L671.5 40 L671.5 40.0 " fill="none"></path>
+					<path d="M589.3 34.7 L589.3 40.0 L589.3 45.3 L576.0 40.0 Z"></path>
+					<path d="M319.3 355.3 L311 355.25 L316 355.25 L316.0 355.3 " fill="none"></path>
+					<path d="M319.3 349.9 L319.3 355.3 L319.3 360.6 L306.0 355.3 Z"></path>
+					<path d="M470.9 311.4 L586 86 L620 91.61467889908258 L620.0 91.6 " fill="none"></path>
+					<path d="M466.2 308.9 L470.9 311.4 L475.7 313.8 L464.8 323.3 Z"></path>
+					<path d="M488.4 313.6 L586 212 L643.5 212 L643.5 212.0 " fill="none"></path>
+					<path d="M484.6 309.9 L488.4 313.6 L492.3 317.3 L479.2 323.3 Z"></path>
+					<path d="M543.6 318.4 L586 302 L627 302 L627.0 302.0 " fill="none"></path>
+					<path d="M541.6 313.5 L543.6 318.4 L545.5 323.4 L531.1 323.3 Z"></path>
+					<path d="M543.6 392.1 L586 408.5 L647.5 408.5 L647.5 408.5 " fill="none"></path>
+					<path d="M545.5 387.1 L543.6 392.1 L541.6 397.0 L531.1 387.3 Z"></path>
+					<path d="M484.7 397.4 L586 515 L591 515 L591.0 515.0 " fill="none"></path>
+					<path d="M488.8 393.9 L484.7 397.4 L480.7 400.8 L476.0 387.3 Z"></path>
+					<path d="M472.5 398.9 L586 605 L633.5 605 L633.5 605.0 " fill="none"></path>
+					<path d="M477.2 396.4 L472.5 398.9 L467.9 401.5 L466.1 387.3 Z"></path>
+					<path d="M466.0 399.7 L586 703.5 L635 703.5 L635.0 703.5 " fill="none"></path>
+					<path d="M471.0 397.7 L466.0 399.7 L461.1 401.6 L461.1 387.3 Z"></path>
+					<path d="M479.0 312.4 L586 162 L620 155.76146788990826 L620.0 155.8 " fill="none"></path>
+					<path d="M474.7 309.3 L479.0 312.4 L483.3 315.5 L471.3 323.3 Z"></path>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="14.5" y="0.0" height="80.0" width="277.0" data-name="IDisposable"></rect>
+							<path d="M14.5 32.0 L291.5 32.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(14.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(14.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">Provides a mechanism for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable" data-compartment="1">releasing unmanaged resources.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509Certificate">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509Certificate">
+							<rect x="321.0" y="0.0" height="80.0" width="255.0" data-name="X509Certificate"></rect>
+							<path d="M321.0 32.0 L576.0 32.0" fill="none" data-name="X509Certificate"></path>
+						</g>
+						<g transform="translate(321, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509Certificate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509Certificate" data-compartment="0">
+								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="X509Certificate" data-compartment="0">X509Certificate</text>
+								
+							</g>
+						</g>
+						<g transform="translate(321, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509Certificate" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509Certificate" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509Certificate" data-compartment="1">Provides methods that help</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509Certificate" data-compartment="1">you use X.509 v.3 certificates.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509Certificate2">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509Certificate2">
+							<rect x="671.5" y="8.0" height="64.0" width="265.0" data-name="X509Certificate2"></rect>
+							<path d="M671.5 40.0 L936.5 40.0" fill="none" data-name="X509Certificate2"></path>
+						</g>
+						<g transform="translate(671.5, 8)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509Certificate2" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509Certificate2" data-compartment="0">
+								<text x="124.5" y="14.1" stroke="none" text-anchor="middle" data-name="X509Certificate2" data-compartment="0">X509Certificate2</text>
+								
+							</g>
+						</g>
+						<g transform="translate(671.5, 40)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509Certificate2" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509Certificate2" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509Certificate2" data-compartment="1">Represents an X.509 certificate</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="AsnEncodedData">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="AsnEncodedData">
+							<rect x="0.0" y="315.3" height="80.0" width="306.0" data-name="AsnEncodedData"></rect>
+							<path d="M0.0 347.3 L306.0 347.3" fill="none" data-name="AsnEncodedData"></path>
+						</g>
+						<g transform="translate(0, 315.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AsnEncodedData" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AsnEncodedData" data-compartment="0">
+								<text x="145.0" y="14.1" stroke="none" text-anchor="middle" data-name="AsnEncodedData" data-compartment="0">AsnEncodedData</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 347.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="AsnEncodedData" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AsnEncodedData" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="AsnEncodedData" data-compartment="1">Represents Abstract Syntax</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="AsnEncodedData" data-compartment="1">Notation One (ASN.1)-encoded data.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509Extension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509Extension">
+							<rect x="316.0" y="323.3" height="64.0" width="265.0" data-name="X509Extension"></rect>
+							<path d="M316.0 355.3 L581.0 355.3" fill="none" data-name="X509Extension"></path>
+						</g>
+						<g transform="translate(316, 323.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509Extension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509Extension" data-compartment="0">
+								<text x="124.5" y="14.1" stroke="none" text-anchor="middle" data-name="X509Extension" data-compartment="0">X509Extension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(316, 355.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509Extension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509Extension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509Extension" data-compartment="1">Represents an X509 extension.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509AuthorityInformationAccessExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509AuthorityInformationAccessExtension">
+							<rect x="620.0" y="82.0" height="80.0" width="368.0" data-name="X509AuthorityInformationAccessExtension"></rect>
+							<path d="M620.0 114.0 L988.0 114.0" fill="none" data-name="X509AuthorityInformationAccessExtension"></path>
+						</g>
+						<g transform="translate(620, 82)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509AuthorityInformationAccessExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509AuthorityInformationAccessExtension" data-compartment="0">
+								<text x="176.0" y="14.1" stroke="none" text-anchor="middle" data-name="X509AuthorityInformationAccessExtension" data-compartment="0">X509AuthorityInformationAccessExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(620, 114)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509AuthorityInformationAccessExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509AuthorityInformationAccessExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509AuthorityInformationAccessExtension" data-compartment="1">Represents the Authority Information Access</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509AuthorityInformationAccessExtension" data-compartment="1">X.509 Extension (1.3.6.1.5.5.7.1.1).</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509AuthorityKeyIdentifierExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509AuthorityKeyIdentifierExtension">
+							<rect x="643.5" y="172.0" height="80.0" width="321.0" data-name="X509AuthorityKeyIdentifierExtension"></rect>
+							<path d="M643.5 204.0 L964.5 204.0" fill="none" data-name="X509AuthorityKeyIdentifierExtension"></path>
+						</g>
+						<g transform="translate(643.5, 172)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="0">
+								<text x="152.5" y="14.1" stroke="none" text-anchor="middle" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="0">X509AuthorityKeyIdentifierExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(643.5, 204)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="1">Represents the Authority Key Identifier</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509AuthorityKeyIdentifierExtension" data-compartment="1">X.509 Extension (2.5.29.35).</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509BasicConstraintsExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509BasicConstraintsExtension">
+							<rect x="627.0" y="262.0" height="80.0" width="354.0" data-name="X509BasicConstraintsExtension"></rect>
+							<path d="M627.0 294.0 L981.0 294.0" fill="none" data-name="X509BasicConstraintsExtension"></path>
+						</g>
+						<g transform="translate(627, 262)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509BasicConstraintsExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509BasicConstraintsExtension" data-compartment="0">
+								<text x="169.0" y="14.1" stroke="none" text-anchor="middle" data-name="X509BasicConstraintsExtension" data-compartment="0">X509BasicConstraintsExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(627, 294)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509BasicConstraintsExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509BasicConstraintsExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509BasicConstraintsExtension" data-compartment="1">Defines the constraints set on a certificate.</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509BasicConstraintsExtension" data-compartment="1">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509EnhancedKeyUsageExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509EnhancedKeyUsageExtension">
+							<rect x="647.5" y="352.0" height="113.0" width="313.0" data-name="X509EnhancedKeyUsageExtension"></rect>
+							<path d="M647.5 384.0 L960.5 384.0" fill="none" data-name="X509EnhancedKeyUsageExtension"></path>
+						</g>
+						<g transform="translate(647.5, 352)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509EnhancedKeyUsageExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509EnhancedKeyUsageExtension" data-compartment="0">
+								<text x="148.5" y="14.1" stroke="none" text-anchor="middle" data-name="X509EnhancedKeyUsageExtension" data-compartment="0">X509EnhancedKeyUsageExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(647.5, 384)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509EnhancedKeyUsageExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509EnhancedKeyUsageExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509EnhancedKeyUsageExtension" data-compartment="1">Defines the collection of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509EnhancedKeyUsageExtension" data-compartment="1">object identifiers (OIDs) that indicates</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="X509EnhancedKeyUsageExtension" data-compartment="1">the applications that use the key.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="X509EnhancedKeyUsageExtension" data-compartment="1">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509KeyUsageExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509KeyUsageExtension">
+							<rect x="591.0" y="475.0" height="80.0" width="426.0" data-name="X509KeyUsageExtension"></rect>
+							<path d="M591.0 507.0 L1017.0 507.0" fill="none" data-name="X509KeyUsageExtension"></path>
+						</g>
+						<g transform="translate(591, 475)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509KeyUsageExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509KeyUsageExtension" data-compartment="0">
+								<text x="205.0" y="14.1" stroke="none" text-anchor="middle" data-name="X509KeyUsageExtension" data-compartment="0">X509KeyUsageExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(591, 507)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509KeyUsageExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509KeyUsageExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509KeyUsageExtension" data-compartment="1">Defines the usage of a key contained within</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509KeyUsageExtension" data-compartment="1">an X.509 certificate.  This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509SubjectAlternativeNameExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509SubjectAlternativeNameExtension">
+							<rect x="633.5" y="565.0" height="80.0" width="341.0" data-name="X509SubjectAlternativeNameExtension"></rect>
+							<path d="M633.5 597.0 L974.5 597.0" fill="none" data-name="X509SubjectAlternativeNameExtension"></path>
+						</g>
+						<g transform="translate(633.5, 565)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509SubjectAlternativeNameExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509SubjectAlternativeNameExtension" data-compartment="0">
+								<text x="162.5" y="14.1" stroke="none" text-anchor="middle" data-name="X509SubjectAlternativeNameExtension" data-compartment="0">X509SubjectAlternativeNameExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(633.5, 597)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509SubjectAlternativeNameExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509SubjectAlternativeNameExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509SubjectAlternativeNameExtension" data-compartment="1">Represents the Subject Alternative Name</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509SubjectAlternativeNameExtension" data-compartment="1">X.509 Extension (2.5.29.17).</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="X509SubjectKeyIdentifierExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="X509SubjectKeyIdentifierExtension">
+							<rect x="635.0" y="655.0" height="97.0" width="338.0" data-name="X509SubjectKeyIdentifierExtension"></rect>
+							<path d="M635.0 687.0 L973.0 687.0" fill="none" data-name="X509SubjectKeyIdentifierExtension"></path>
+						</g>
+						<g transform="translate(635, 655)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="X509SubjectKeyIdentifierExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="X509SubjectKeyIdentifierExtension" data-compartment="0">
+								<text x="161.0" y="14.1" stroke="none" text-anchor="middle" data-name="X509SubjectKeyIdentifierExtension" data-compartment="0">X509SubjectKeyIdentifierExtension</text>
+								
+							</g>
+						</g>
+						<g transform="translate(635, 687)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="X509SubjectKeyIdentifierExtension" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="X509SubjectKeyIdentifierExtension" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="X509SubjectKeyIdentifierExtension" data-compartment="1">Defines a string that identifies</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="X509SubjectKeyIdentifierExtension" data-compartment="1">a certificate&apos;s subject key identifier (SKI).</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="X509SubjectKeyIdentifierExtension" data-compartment="1">This class cannot be inherited.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

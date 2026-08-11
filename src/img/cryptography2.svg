@@ -1,5 +1,5 @@
-<svg version="1.1" baseProfile="full" width="1127.0" height="697.5" viewBox="0 0 1127 697.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-	<title >cryptography2</title>
+<svg version="1.1" baseProfile="full" width="1831.0" height="1140.3" viewBox="0 0 1831 1140.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >certificates</title>
 	<desc >#direction: right
 	#spacing: 10
 	#gravity: .8
@@ -13,29 +13,122 @@
 	SHA3 is only available on .NET 8
 	or newer versions ]
 	
+	#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#font: &apos;Open Sans&apos;
+	#background: transparent
+	#fill: #f4f6fb
+	#title:certificates
+	
+	[&lt;note&gt;Note: 
+	SHA3 is only available on .NET 8
+	or newer versions ]
+	
+	[IDisposable|Provides a mechanism for 
+	releasing unmanaged resources.]
+	
+	
+	
 	[HashAlgorithm|
 	Represents the base class from which 
 	all implementations of cryptographic
 	hash algorithms must derive.]
 	
 	[KeyedHashAlgorithm|
-	Represents the abstract class
-	from which all implementations
-	of keyed hash algorithms
-	must derive.]
+	Represents the abstract class from
+	which all implementations of keyed 
+	hash algorithms must derive.]
 	
-	[HMAC|
-	Represents the abstract class
-	from which all implementations
-	of Hash-based Message
-	AuthenticationCode (HMAC)
-	must derive.]
+	[MD5|
+	Represents the abstract class from 
+	which all implementations 
+	of the MD5 hash algorithm inherit.]
+	
+	[RIPEMD160|
+	Represents the abstract class from 
+	which all implementations of the 
+	MD160 hash algorithm inherit.]
+	
+	[SHA1|
+	Computes the SHA1 hash for the input data.]
+	
+	[SHA256|
+	Computes the SHA256 hash for the input data.]
+	
+	[SHA512|
+	Computes the SHA512 hash for the input data.]
+	
+	[SHA384|
+	Computes the SHA384 hash for the input data.]
+	
+	[SHA3_256|
+	Computes the SHA-3-256 hash for the input data.]
+	
+	[SHA3_384|
+	Computes the SHA-3-384 hash for the input data.]
+	
+	[SHA3_512|
+	Computes the SHA-3-512 hash for the input data.]
 	
 	[MACTripleDES|
-	Computes a Message Authentication
-	Code (MAC) using TripleDES for
-	the input data CryptoStream.]
+	Computes a Message Authentication Code (MAC)
+	using TripleDES for the input data CryptoStream.]
 	
+	[HMAC|
+	Represents the abstract class from
+	which all implementations of Hash-based 
+	Message Authentication Code (HMAC) must derive.]
+	
+	[HMACMD5|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the MD5 hash function.]
+	
+	[HMACRIPEMD160|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the RIPEMD160 hash function.]
+	
+	[HMACSHA1|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA1 hash function.]
+	
+	[HMACSHA256|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA256 hash function.]
+	
+	[HMACSHA384|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA384 hash function.]
+	
+	[HMACSHA512|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA512 hash function.]
+	
+	[HMACSHA3_256|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA3_256 hash function.]
+	
+	[HMACSHA3_384|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA3_384 hash function.]
+	
+	[HMACSHA3_512|
+	Computes a Hash-based Message 
+	Authentication Code (HMAC) by using
+	the SHA3_512 hash function.]
+	
+	
+	[IDisposable] &lt;:-- [HashAlgorithm]
+	[HashAlgorithm] &lt;:- [KeyedHashAlgorithm]
 	[HashAlgorithm] &lt;:- [MD5]
 	[HashAlgorithm] &lt;:- [RIPEMD160]
 	[HashAlgorithm] &lt;:- [SHA1]
@@ -45,11 +138,9 @@
 	[HashAlgorithm] &lt;:- [SHA3_256]
 	[HashAlgorithm] &lt;:- [SHA3_384]
 	[HashAlgorithm] &lt;:- [SHA3_512]
-	[HashAlgorithm] &lt;:- [KeyedHashAlgorithm]
 	
 	[KeyedHashAlgorithm] &lt;:- [HMAC]
-	[KeyedHashAlgorithm] &lt;:-[MACTripleDES]
-	
+	[KeyedHashAlgorithm] &lt;:- [MACTripleDES]
 	[HMAC] &lt;:- [HMACMD5]
 	[HMAC] &lt;:- [HMACRIPEMD160]
 	[HMAC] &lt;:- [HMACSHA1]
@@ -58,62 +149,67 @@
 	[HMAC] &lt;:- [HMACSHA512]
 	[HMAC] &lt;:- [HMACSHA3_256]
 	[HMAC] &lt;:- [HMACSHA3_384]
-	[HMAC] &lt;:- [HMACSHA3_512]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
+	[HMAC] &lt;:- [HMACSHA3_512]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
 		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="697.5" width="1127.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="1140.3" width="1831.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M210.1 416.5 L322 289.5 L430 289.5 L430.0 289.5 " fill="none"></path>
-					<path d="M206.1 413.0 L210.1 416.5 L214.1 420.0 L201.2 426.5 Z"></path>
-					<path d="M223.8 417.7 L322 331.5 L400.5 331.5 L400.5 331.5 " fill="none"></path>
-					<path d="M220.3 413.7 L223.8 417.7 L227.3 421.7 L213.8 426.5 Z"></path>
-					<path d="M248.0 419.5 L322 373.5 L426 373.5 L426.0 373.5 " fill="none"></path>
-					<path d="M245.1 414.9 L248.0 419.5 L250.8 424.0 L236.6 426.5 Z"></path>
-					<path d="M304.3 421.9 L322 415.5 L416 415.5 L416.0 415.5 " fill="none"></path>
-					<path d="M302.5 416.9 L304.3 421.9 L306.1 427.0 L291.8 426.5 Z"></path>
-					<path d="M330.3 456.6 L322 457.5 L416 457.5 L416.0 457.5 " fill="none"></path>
-					<path d="M329.7 451.3 L330.3 456.6 L330.8 461.9 L317.0 458.0 Z"></path>
-					<path d="M330.2 500.7 L322 499.5 L416 499.5 L416.0 499.5 " fill="none"></path>
-					<path d="M331.0 495.5 L330.2 500.7 L329.4 506.0 L317.0 498.8 Z"></path>
-					<path d="M290.1 528.5 L322 541.5 L406 541.5 L406.0 541.5 " fill="none"></path>
-					<path d="M292.1 523.6 L290.1 528.5 L288.1 533.5 L277.7 523.5 Z"></path>
-					<path d="M242.7 530.9 L322 583.5 L406 583.5 L406.0 583.5 " fill="none"></path>
-					<path d="M245.6 526.4 L242.7 530.9 L239.7 535.3 L231.6 523.5 Z"></path>
-					<path d="M221.0 532.5 L322 625.5 L406 625.5 L406.0 625.5 " fill="none"></path>
-					<path d="M224.6 528.6 L221.0 532.5 L217.4 536.5 L211.2 523.5 Z"></path>
-					<path d="M195.0 415.1 L322 207 L327 207 L327.0 207.0 " fill="none"></path>
-					<path d="M190.5 412.3 L195.0 415.1 L199.6 417.9 L188.1 426.5 Z"></path>
-					<path d="M591.2 144.9 L590 145.5 L619 145.5 L619.0 145.5 " fill="none"></path>
-					<path d="M589.0 140.1 L591.2 144.9 L593.4 149.8 L579.1 150.5 Z"></path>
-					<path d="M591.2 269.1 L590 268.5 L595 268.5 L595.0 268.5 " fill="none"></path>
-					<path d="M593.4 264.2 L591.2 269.1 L589.0 273.9 L579.1 263.5 Z"></path>
-					<path d="M837.0 72.5 L906 16 L940.5 16 L940.5 16.0 " fill="none"></path>
-					<path d="M833.6 68.4 L837.0 72.5 L840.4 76.7 L826.7 81.0 Z"></path>
-					<path d="M876.1 74.5 L906 58 L911 58 L911.0 58.0 " fill="none"></path>
-					<path d="M873.5 69.9 L876.1 74.5 L878.7 79.2 L864.5 81.0 Z"></path>
-					<path d="M889.8 104.7 L906 100 L936.5 100 L936.5 100.0 " fill="none"></path>
-					<path d="M888.3 99.5 L889.8 104.7 L891.3 109.8 L877.0 108.4 Z"></path>
-					<path d="M890.3 142.3 L906 142 L926.5 142 L926.5 142.0 " fill="none"></path>
-					<path d="M890.2 137.0 L890.3 142.3 L890.4 147.7 L877.0 142.6 Z"></path>
-					<path d="M890.0 180.1 L906 184 L926.5 184 L926.5 184.0 " fill="none"></path>
-					<path d="M891.2 174.9 L890.0 180.1 L888.7 185.3 L877.0 176.9 Z"></path>
-					<path d="M886.5 216.1 L906 226 L926.5 226 L926.5 226.0 " fill="none"></path>
-					<path d="M888.9 211.3 L886.5 216.1 L884.1 220.8 L874.6 210.0 Z"></path>
-					<path d="M841.7 218.2 L906 268 L916.5 268 L916.5 268.0 " fill="none"></path>
-					<path d="M845.0 214.0 L841.7 218.2 L838.5 222.4 L831.2 210.0 Z"></path>
-					<path d="M819.2 219.6 L906 310 L916.5 310 L916.5 310.0 " fill="none"></path>
-					<path d="M823.0 215.9 L819.2 219.6 L815.3 223.3 L810.0 210.0 Z"></path>
-					<path d="M805.5 220.6 L906 352 L916.5 352 L916.5 352.0 " fill="none"></path>
-					<path d="M809.7 217.3 L805.5 220.6 L801.2 223.8 L797.4 210.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M290.3 678.0 L282 678 L287 678 L287.0 678.0 " fill="none"></path>
+					</g>
+					<path d="M290.3 672.7 L290.3 678.0 L290.3 683.3 L277.0 678.0 Z"></path>
+					<path d="M472.0 617.3 L609 303.75 L671 303.75 L671.0 303.8 " fill="none"></path>
+					<path d="M467.1 615.1 L472.0 617.3 L476.9 619.4 L466.7 629.5 Z"></path>
+					<path d="M482.1 618.1 L609 410.75 L671 410.75 L671.0 410.8 " fill="none"></path>
+					<path d="M477.6 615.3 L482.1 618.1 L486.7 620.9 L475.2 629.5 Z"></path>
+					<path d="M504.5 620.2 L609 517.75 L671 517.75 L671.0 517.8 " fill="none"></path>
+					<path d="M500.8 616.4 L504.5 620.2 L508.2 624.0 L495.0 629.5 Z"></path>
+					<path d="M571.5 624.3 L609 608.25 L635 608.25 L635.0 608.3 " fill="none"></path>
+					<path d="M569.4 619.4 L571.5 624.3 L573.5 629.2 L559.2 629.5 Z"></path>
+					<path d="M617.3 682.5 L609 682.25 L625 682.25 L625.0 682.3 " fill="none"></path>
+					<path d="M617.5 677.1 L617.3 682.5 L617.2 687.8 L604.0 682.1 Z"></path>
+					<path d="M507.3 735.6 L609 830.25 L625 830.25 L625.0 830.3 " fill="none"></path>
+					<path d="M511.0 731.7 L507.3 735.6 L503.7 739.5 L497.6 726.5 Z"></path>
+					<path d="M558.9 732.3 L609 756.25 L625 756.25 L625.0 756.3 " fill="none"></path>
+					<path d="M561.2 727.4 L558.9 732.3 L556.6 737.1 L546.8 726.5 Z"></path>
+					<path d="M488.4 737.3 L609 904.25 L614 904.25 L614.0 904.3 " fill="none"></path>
+					<path d="M492.7 734.2 L488.4 737.3 L484.0 740.4 L480.5 726.5 Z"></path>
+					<path d="M478.3 738.2 L609 978.25 L614 978.25 L614.0 978.3 " fill="none"></path>
+					<path d="M483.0 735.7 L478.3 738.2 L473.6 740.8 L471.9 726.5 Z"></path>
+					<path d="M472.0 738.7 L609 1052.25 L614 1052.25 L614.0 1052.3 " fill="none"></path>
+					<path d="M476.9 736.6 L472.0 738.7 L467.1 740.9 L466.7 726.5 Z"></path>
+					<path d="M976.0 341.4 L1025 353 L1030 353 L1030.0 353.0 " fill="none"></path>
+					<path d="M977.2 336.2 L976.0 341.4 L974.7 346.6 L963.0 338.3 Z"></path>
+					<path d="M946.6 250.2 L1025 217.75 L1037 217.75 L1037.0 217.8 " fill="none"></path>
+					<path d="M944.6 245.2 L946.6 250.2 L948.7 255.1 L934.3 255.3 Z"></path>
+					<path d="M1282.5 293.6 L1456 48.5 L1461 48.5 L1461.0 48.5 " fill="none"></path>
+					<path d="M1278.2 290.5 L1282.5 293.6 L1286.9 296.7 L1274.8 304.5 Z"></path>
+					<path d="M1303.2 295.5 L1456 155.5 L1461 155.5 L1461.0 155.5 " fill="none"></path>
+					<path d="M1299.6 291.6 L1303.2 295.5 L1306.9 299.4 L1293.4 304.5 Z"></path>
+					<path d="M1368.3 299.3 L1456 262.5 L1461 262.5 L1461.0 262.5 " fill="none"></path>
+					<path d="M1366.2 294.4 L1368.3 299.3 L1370.3 304.3 L1356.0 304.5 Z"></path>
+					<path d="M1464.3 370.1 L1456 369.5 L1461 369.5 L1461.0 369.5 " fill="none"></path>
+					<path d="M1464.7 364.8 L1464.3 370.1 L1463.9 375.5 L1451.0 369.1 Z"></path>
+					<path d="M1336.7 408.1 L1456 476.5 L1461 476.5 L1461.0 476.5 " fill="none"></path>
+					<path d="M1339.3 403.5 L1336.7 408.1 L1334.0 412.8 L1325.1 401.5 Z"></path>
+					<path d="M1294.9 411.2 L1456 583.5 L1461 583.5 L1461.0 583.5 " fill="none"></path>
+					<path d="M1298.8 407.6 L1294.9 411.2 L1291.1 414.9 L1285.8 401.5 Z"></path>
+					<path d="M1278.6 412.7 L1456 690.5 L1461 690.5 L1461.0 690.5 " fill="none"></path>
+					<path d="M1283.1 409.9 L1278.6 412.7 L1274.1 415.6 L1271.5 401.5 Z"></path>
+					<path d="M1269.8 413.5 L1456 797.5 L1461 797.5 L1461.0 797.5 " fill="none"></path>
+					<path d="M1274.6 411.2 L1269.8 413.5 L1265.0 415.8 L1264.0 401.5 Z"></path>
+					<path d="M1264.3 413.9 L1456 904.5 L1461 904.5 L1461.0 904.5 " fill="none"></path>
+					<path d="M1269.3 412.0 L1264.3 413.9 L1259.3 415.9 L1259.5 401.5 Z"></path>
 					<g data-name="Note:">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Note:">
-							<path d="M21.0 351.5 L288.0 351.5 L296.0 359.5 L296.0 416.5 L21.0 416.5 L21.0 351.5 Z" data-name="Note:"></path>
-							<path d="M288.0 351.5 L288.0 359.5 L296.0 359.5" fill="none" data-name="Note:"></path>
+							<path d="M1.0 563.0 L268.0 563.0 L276.0 571.0 L276.0 628.0 L1.0 628.0 L1.0 563.0 Z" data-name="Note:"></path>
+							<path d="M268.0 563.0 L268.0 571.0 L276.0 571.0" fill="none" data-name="Note:"></path>
 						</g>
-						<g transform="translate(21, 351.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Note:" data-compartment="0">
+						<g transform="translate(1, 563)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Note:" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Note:" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Note:" data-compartment="0">Note:</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Note:" data-compartment="0">SHA3 is only available on .NET 8</text>
@@ -122,18 +218,37 @@
 							</g>
 						</g>
 					</g>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="0.0" y="638.0" height="80.0" width="277.0" data-name="IDisposable"></rect>
+							<path d="M0.0 670.0 L277.0 670.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(0, 638)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 670)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">Provides a mechanism for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable" data-compartment="1">releasing unmanaged resources.</text>
+								
+							</g>
+						</g>
+					</g>
 					<g data-name="HashAlgorithm">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HashAlgorithm">
-							<rect x="0.0" y="426.5" height="97.0" width="317.0" data-name="HashAlgorithm"></rect>
-							<path d="M0.0 458.5 L317.0 458.5" fill="none" data-name="HashAlgorithm"></path>
+							<rect x="287.0" y="629.5" height="97.0" width="317.0" data-name="HashAlgorithm"></rect>
+							<path d="M287.0 661.5 L604.0 661.5" fill="none" data-name="HashAlgorithm"></path>
 						</g>
-						<g transform="translate(0, 426.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HashAlgorithm" data-compartment="0">
+						<g transform="translate(287, 629.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HashAlgorithm" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HashAlgorithm" data-compartment="0">
 								<text x="150.5" y="14.1" stroke="none" text-anchor="middle" data-name="HashAlgorithm" data-compartment="0">HashAlgorithm</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 458.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HashAlgorithm" data-compartment="1">
+						<g transform="translate(287, 661.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HashAlgorithm" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HashAlgorithm" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="HashAlgorithm" data-compartment="1">Represents the base class from which</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="HashAlgorithm" data-compartment="1">all implementations of cryptographic</text>
@@ -144,261 +259,405 @@
 					</g>
 					<g data-name="KeyedHashAlgorithm">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="KeyedHashAlgorithm">
-							<rect x="327.0" y="150.5" height="113.0" width="258.0" data-name="KeyedHashAlgorithm"></rect>
-							<path d="M327.0 182.5 L585.0 182.5" fill="none" data-name="KeyedHashAlgorithm"></path>
+							<rect x="671.0" y="255.3" height="97.0" width="292.0" data-name="KeyedHashAlgorithm"></rect>
+							<path d="M671.0 287.3 L963.0 287.3" fill="none" data-name="KeyedHashAlgorithm"></path>
 						</g>
-						<g transform="translate(327, 150.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyedHashAlgorithm" data-compartment="0">
+						<g transform="translate(671, 255.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="KeyedHashAlgorithm" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="KeyedHashAlgorithm" data-compartment="0">
-								<text x="121.0" y="14.1" stroke="none" text-anchor="middle" data-name="KeyedHashAlgorithm" data-compartment="0">KeyedHashAlgorithm</text>
+								<text x="138.0" y="14.1" stroke="none" text-anchor="middle" data-name="KeyedHashAlgorithm" data-compartment="0">KeyedHashAlgorithm</text>
 								
 							</g>
 						</g>
-						<g transform="translate(327, 182.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="KeyedHashAlgorithm" data-compartment="1">
+						<g transform="translate(671, 287.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="KeyedHashAlgorithm" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="KeyedHashAlgorithm" data-compartment="1">
-								<text x="0.0" y="14.1" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">Represents the abstract class</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">from which all implementations</text>
-								<text x="0.0" y="46.5" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">of keyed hash algorithms</text>
-								<text x="0.0" y="62.7" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">must derive.</text>
-								
-							</g>
-						</g>
-					</g>
-					<g data-name="HMAC">
-						<g fill="#f4f6fb" stroke="#33322E" data-name="HMAC">
-							<rect x="619.0" y="81.0" height="129.0" width="258.0" data-name="HMAC"></rect>
-							<path d="M619.0 113.0 L877.0 113.0" fill="none" data-name="HMAC"></path>
-						</g>
-						<g transform="translate(619, 81)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMAC" data-compartment="0">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMAC" data-compartment="0">
-								<text x="121.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMAC" data-compartment="0">HMAC</text>
-								
-							</g>
-						</g>
-						<g transform="translate(619, 113)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMAC" data-compartment="1">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMAC" data-compartment="1">
-								<text x="0.0" y="14.1" stroke="none" data-name="HMAC" data-compartment="1">Represents the abstract class</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="HMAC" data-compartment="1">from which all implementations</text>
-								<text x="0.0" y="46.5" stroke="none" data-name="HMAC" data-compartment="1">of Hash-based Message</text>
-								<text x="0.0" y="62.7" stroke="none" data-name="HMAC" data-compartment="1">AuthenticationCode (HMAC)</text>
-								<text x="0.0" y="78.9" stroke="none" data-name="HMAC" data-compartment="1">must derive.</text>
-								
-							</g>
-						</g>
-					</g>
-					<g data-name="MACTripleDES">
-						<g fill="#f4f6fb" stroke="#33322E" data-name="MACTripleDES">
-							<rect x="595.0" y="220.0" height="97.0" width="306.0" data-name="MACTripleDES"></rect>
-							<path d="M595.0 252.0 L901.0 252.0" fill="none" data-name="MACTripleDES"></path>
-						</g>
-						<g transform="translate(595, 220)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MACTripleDES" data-compartment="0">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MACTripleDES" data-compartment="0">
-								<text x="145.0" y="14.1" stroke="none" text-anchor="middle" data-name="MACTripleDES" data-compartment="0">MACTripleDES</text>
-								
-							</g>
-						</g>
-						<g transform="translate(595, 252)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MACTripleDES" data-compartment="1">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MACTripleDES" data-compartment="1">
-								<text x="0.0" y="14.1" stroke="none" data-name="MACTripleDES" data-compartment="1">Computes a Message Authentication</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="MACTripleDES" data-compartment="1">Code (MAC) using TripleDES for</text>
-								<text x="0.0" y="46.5" stroke="none" data-name="MACTripleDES" data-compartment="1">the input data CryptoStream.</text>
+								<text x="0.0" y="14.1" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">Represents the abstract class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">which all implementations of keyed</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="KeyedHashAlgorithm" data-compartment="1">hash algorithms must derive.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="MD5">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MD5">
-							<rect x="430.0" y="273.5" height="32.0" width="52.0" data-name="MD5"></rect>
+							<rect x="671.0" y="362.3" height="97.0" width="292.0" data-name="MD5"></rect>
+							<path d="M671.0 394.3 L963.0 394.3" fill="none" data-name="MD5"></path>
 						</g>
-						<g transform="translate(430, 273.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MD5" data-compartment="0">
+						<g transform="translate(671, 362.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MD5" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MD5" data-compartment="0">
-								<text x="18.0" y="14.1" stroke="none" text-anchor="middle" data-name="MD5" data-compartment="0">MD5</text>
+								<text x="138.0" y="14.1" stroke="none" text-anchor="middle" data-name="MD5" data-compartment="0">MD5</text>
+								
+							</g>
+						</g>
+						<g transform="translate(671, 394.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MD5" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MD5" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="MD5" data-compartment="1">Represents the abstract class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MD5" data-compartment="1">which all implementations</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="MD5" data-compartment="1">of the MD5 hash algorithm inherit.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="RIPEMD160">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="RIPEMD160">
-							<rect x="400.5" y="315.5" height="32.0" width="111.0" data-name="RIPEMD160"></rect>
+							<rect x="671.0" y="469.3" height="97.0" width="292.0" data-name="RIPEMD160"></rect>
+							<path d="M671.0 501.3 L963.0 501.3" fill="none" data-name="RIPEMD160"></path>
 						</g>
-						<g transform="translate(400.5, 315.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RIPEMD160" data-compartment="0">
+						<g transform="translate(671, 469.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RIPEMD160" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RIPEMD160" data-compartment="0">
-								<text x="47.5" y="14.1" stroke="none" text-anchor="middle" data-name="RIPEMD160" data-compartment="0">RIPEMD160</text>
+								<text x="138.0" y="14.1" stroke="none" text-anchor="middle" data-name="RIPEMD160" data-compartment="0">RIPEMD160</text>
+								
+							</g>
+						</g>
+						<g transform="translate(671, 501.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="RIPEMD160" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RIPEMD160" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="RIPEMD160" data-compartment="1">Represents the abstract class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="RIPEMD160" data-compartment="1">which all implementations of the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="RIPEMD160" data-compartment="1">MD160 hash algorithm inherit.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="SHA1">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA1">
-							<rect x="426.0" y="357.5" height="32.0" width="60.0" data-name="SHA1"></rect>
+							<rect x="635.0" y="576.3" height="64.0" width="364.0" data-name="SHA1"></rect>
+							<path d="M635.0 608.3 L999.0 608.3" fill="none" data-name="SHA1"></path>
 						</g>
-						<g transform="translate(426, 357.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA1" data-compartment="0">
+						<g transform="translate(635, 576.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA1" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA1" data-compartment="0">
-								<text x="22.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA1" data-compartment="0">SHA1</text>
+								<text x="174.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA1" data-compartment="0">SHA1</text>
+								
+							</g>
+						</g>
+						<g transform="translate(635, 608.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA1" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA1" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA1" data-compartment="1">Computes the SHA1 hash for the input data.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="SHA256">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA256">
-							<rect x="416.0" y="399.5" height="32.0" width="80.0" data-name="SHA256"></rect>
+							<rect x="625.0" y="650.3" height="64.0" width="384.0" data-name="SHA256"></rect>
+							<path d="M625.0 682.3 L1009.0 682.3" fill="none" data-name="SHA256"></path>
 						</g>
-						<g transform="translate(416, 399.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA256" data-compartment="0">
+						<g transform="translate(625, 650.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA256" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA256" data-compartment="0">
-								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA256" data-compartment="0">SHA256</text>
+								<text x="184.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA256" data-compartment="0">SHA256</text>
 								
 							</g>
 						</g>
-					</g>
-					<g data-name="SHA384">
-						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA384">
-							<rect x="416.0" y="441.5" height="32.0" width="80.0" data-name="SHA384"></rect>
-						</g>
-						<g transform="translate(416, 441.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA384" data-compartment="0">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA384" data-compartment="0">
-								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA384" data-compartment="0">SHA384</text>
+						<g transform="translate(625, 682.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA256" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA256" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA256" data-compartment="1">Computes the SHA256 hash for the input data.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="SHA512">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA512">
-							<rect x="416.0" y="483.5" height="32.0" width="80.0" data-name="SHA512"></rect>
+							<rect x="625.0" y="724.3" height="64.0" width="384.0" data-name="SHA512"></rect>
+							<path d="M625.0 756.3 L1009.0 756.3" fill="none" data-name="SHA512"></path>
 						</g>
-						<g transform="translate(416, 483.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA512" data-compartment="0">
+						<g transform="translate(625, 724.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA512" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA512" data-compartment="0">
-								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA512" data-compartment="0">SHA512</text>
+								<text x="184.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA512" data-compartment="0">SHA512</text>
+								
+							</g>
+						</g>
+						<g transform="translate(625, 756.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA512" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA512" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA512" data-compartment="1">Computes the SHA512 hash for the input data.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SHA384">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA384">
+							<rect x="625.0" y="798.3" height="64.0" width="384.0" data-name="SHA384"></rect>
+							<path d="M625.0 830.3 L1009.0 830.3" fill="none" data-name="SHA384"></path>
+						</g>
+						<g transform="translate(625, 798.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA384" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA384" data-compartment="0">
+								<text x="184.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA384" data-compartment="0">SHA384</text>
+								
+							</g>
+						</g>
+						<g transform="translate(625, 830.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA384" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA384" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA384" data-compartment="1">Computes the SHA384 hash for the input data.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="SHA3_256">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA3_256">
-							<rect x="406.0" y="525.5" height="32.0" width="100.0" data-name="SHA3_256"></rect>
+							<rect x="614.0" y="872.3" height="64.0" width="406.0" data-name="SHA3_256"></rect>
+							<path d="M614.0 904.3 L1020.0 904.3" fill="none" data-name="SHA3_256"></path>
 						</g>
-						<g transform="translate(406, 525.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_256" data-compartment="0">
+						<g transform="translate(614, 872.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_256" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_256" data-compartment="0">
-								<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_256" data-compartment="0">SHA3_256</text>
+								<text x="195.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_256" data-compartment="0">SHA3_256</text>
+								
+							</g>
+						</g>
+						<g transform="translate(614, 904.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA3_256" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA3_256" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA3_256" data-compartment="1">Computes the SHA-3-256 hash for the input data.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="SHA3_384">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA3_384">
-							<rect x="406.0" y="567.5" height="32.0" width="100.0" data-name="SHA3_384"></rect>
+							<rect x="614.0" y="946.3" height="64.0" width="406.0" data-name="SHA3_384"></rect>
+							<path d="M614.0 978.3 L1020.0 978.3" fill="none" data-name="SHA3_384"></path>
 						</g>
-						<g transform="translate(406, 567.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_384" data-compartment="0">
+						<g transform="translate(614, 946.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_384" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_384" data-compartment="0">
-								<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_384" data-compartment="0">SHA3_384</text>
+								<text x="195.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_384" data-compartment="0">SHA3_384</text>
+								
+							</g>
+						</g>
+						<g transform="translate(614, 978.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA3_384" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA3_384" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA3_384" data-compartment="1">Computes the SHA-3-384 hash for the input data.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="SHA3_512">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SHA3_512">
-							<rect x="406.0" y="609.5" height="32.0" width="100.0" data-name="SHA3_512"></rect>
+							<rect x="614.0" y="1020.3" height="64.0" width="406.0" data-name="SHA3_512"></rect>
+							<path d="M614.0 1052.3 L1020.0 1052.3" fill="none" data-name="SHA3_512"></path>
 						</g>
-						<g transform="translate(406, 609.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_512" data-compartment="0">
+						<g transform="translate(614, 1020.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SHA3_512" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SHA3_512" data-compartment="0">
-								<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_512" data-compartment="0">SHA3_512</text>
+								<text x="195.0" y="14.1" stroke="none" text-anchor="middle" data-name="SHA3_512" data-compartment="0">SHA3_512</text>
+								
+							</g>
+						</g>
+						<g transform="translate(614, 1052.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="SHA3_512" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="SHA3_512" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="SHA3_512" data-compartment="1">Computes the SHA-3-512 hash for the input data.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MACTripleDES">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="MACTripleDES">
+							<rect x="1037.0" y="177.8" height="80.0" width="407.0" data-name="MACTripleDES"></rect>
+							<path d="M1037.0 209.8 L1444.0 209.8" fill="none" data-name="MACTripleDES"></path>
+						</g>
+						<g transform="translate(1037, 177.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MACTripleDES" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MACTripleDES" data-compartment="0">
+								<text x="195.5" y="14.1" stroke="none" text-anchor="middle" data-name="MACTripleDES" data-compartment="0">MACTripleDES</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1037, 209.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MACTripleDES" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MACTripleDES" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="MACTripleDES" data-compartment="1">Computes a Message Authentication Code (MAC)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MACTripleDES" data-compartment="1">using TripleDES for the input data CryptoStream.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="HMAC">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="HMAC">
+							<rect x="1030.0" y="304.5" height="97.0" width="421.0" data-name="HMAC"></rect>
+							<path d="M1030.0 336.5 L1451.0 336.5" fill="none" data-name="HMAC"></path>
+						</g>
+						<g transform="translate(1030, 304.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMAC" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMAC" data-compartment="0">
+								<text x="202.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMAC" data-compartment="0">HMAC</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1030, 336.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMAC" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMAC" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMAC" data-compartment="1">Represents the abstract class from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMAC" data-compartment="1">which all implementations of Hash-based</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMAC" data-compartment="1">Message Authentication Code (HMAC) must derive.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACMD5">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACMD5">
-							<rect x="940.5" y="0.0" height="32.0" width="101.0" data-name="HMACMD5"></rect>
+							<rect x="1461.0" y="0.0" height="97.0" width="314.0" data-name="HMACMD5"></rect>
+							<path d="M1461.0 32.0 L1775.0 32.0" fill="none" data-name="HMACMD5"></path>
 						</g>
-						<g transform="translate(940.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACMD5" data-compartment="0">
+						<g transform="translate(1461, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACMD5" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACMD5" data-compartment="0">
-								<text x="42.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACMD5" data-compartment="0">HMACMD5</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACMD5" data-compartment="0">HMACMD5</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACMD5" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACMD5" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACMD5" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACMD5" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACMD5" data-compartment="1">the MD5 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACRIPEMD160">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACRIPEMD160">
-							<rect x="911.0" y="42.0" height="32.0" width="160.0" data-name="HMACRIPEMD160"></rect>
+							<rect x="1461.0" y="107.0" height="97.0" width="314.0" data-name="HMACRIPEMD160"></rect>
+							<path d="M1461.0 139.0 L1775.0 139.0" fill="none" data-name="HMACRIPEMD160"></path>
 						</g>
-						<g transform="translate(911, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACRIPEMD160" data-compartment="0">
+						<g transform="translate(1461, 107)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACRIPEMD160" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACRIPEMD160" data-compartment="0">
-								<text x="72.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACRIPEMD160" data-compartment="0">HMACRIPEMD160</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACRIPEMD160" data-compartment="0">HMACRIPEMD160</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 139)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACRIPEMD160" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACRIPEMD160" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACRIPEMD160" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACRIPEMD160" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACRIPEMD160" data-compartment="1">the RIPEMD160 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA1">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA1">
-							<rect x="936.5" y="84.0" height="32.0" width="109.0" data-name="HMACSHA1"></rect>
+							<rect x="1461.0" y="214.0" height="97.0" width="314.0" data-name="HMACSHA1"></rect>
+							<path d="M1461.0 246.0 L1775.0 246.0" fill="none" data-name="HMACSHA1"></path>
 						</g>
-						<g transform="translate(936.5, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA1" data-compartment="0">
+						<g transform="translate(1461, 214)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA1" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA1" data-compartment="0">
-								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA1" data-compartment="0">HMACSHA1</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA1" data-compartment="0">HMACSHA1</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 246)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA1" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA1" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA1" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA1" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA1" data-compartment="1">the SHA1 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA256">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA256">
-							<rect x="926.5" y="126.0" height="32.0" width="129.0" data-name="HMACSHA256"></rect>
+							<rect x="1461.0" y="321.0" height="97.0" width="314.0" data-name="HMACSHA256"></rect>
+							<path d="M1461.0 353.0 L1775.0 353.0" fill="none" data-name="HMACSHA256"></path>
 						</g>
-						<g transform="translate(926.5, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA256" data-compartment="0">
+						<g transform="translate(1461, 321)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA256" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA256" data-compartment="0">
-								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA256" data-compartment="0">HMACSHA256</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA256" data-compartment="0">HMACSHA256</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 353)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA256" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA256" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA256" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA256" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA256" data-compartment="1">the SHA256 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA384">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA384">
-							<rect x="926.5" y="168.0" height="32.0" width="129.0" data-name="HMACSHA384"></rect>
+							<rect x="1461.0" y="428.0" height="97.0" width="314.0" data-name="HMACSHA384"></rect>
+							<path d="M1461.0 460.0 L1775.0 460.0" fill="none" data-name="HMACSHA384"></path>
 						</g>
-						<g transform="translate(926.5, 168)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA384" data-compartment="0">
+						<g transform="translate(1461, 428)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA384" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA384" data-compartment="0">
-								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA384" data-compartment="0">HMACSHA384</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA384" data-compartment="0">HMACSHA384</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 460)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA384" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA384" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA384" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA384" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA384" data-compartment="1">the SHA384 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA512">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA512">
-							<rect x="926.5" y="210.0" height="32.0" width="129.0" data-name="HMACSHA512"></rect>
+							<rect x="1461.0" y="535.0" height="97.0" width="314.0" data-name="HMACSHA512"></rect>
+							<path d="M1461.0 567.0 L1775.0 567.0" fill="none" data-name="HMACSHA512"></path>
 						</g>
-						<g transform="translate(926.5, 210)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA512" data-compartment="0">
+						<g transform="translate(1461, 535)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA512" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA512" data-compartment="0">
-								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA512" data-compartment="0">HMACSHA512</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA512" data-compartment="0">HMACSHA512</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 567)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA512" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA512" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA512" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA512" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA512" data-compartment="1">the SHA512 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA3_256">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA3_256">
-							<rect x="916.5" y="252.0" height="32.0" width="149.0" data-name="HMACSHA3_256"></rect>
+							<rect x="1461.0" y="642.0" height="97.0" width="314.0" data-name="HMACSHA3_256"></rect>
+							<path d="M1461.0 674.0 L1775.0 674.0" fill="none" data-name="HMACSHA3_256"></path>
 						</g>
-						<g transform="translate(916.5, 252)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_256" data-compartment="0">
+						<g transform="translate(1461, 642)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_256" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_256" data-compartment="0">
-								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_256" data-compartment="0">HMACSHA3_256</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_256" data-compartment="0">HMACSHA3_256</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 674)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA3_256" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA3_256" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA3_256" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA3_256" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA3_256" data-compartment="1">the SHA3_256 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA3_384">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA3_384">
-							<rect x="916.5" y="294.0" height="32.0" width="149.0" data-name="HMACSHA3_384"></rect>
+							<rect x="1461.0" y="749.0" height="97.0" width="314.0" data-name="HMACSHA3_384"></rect>
+							<path d="M1461.0 781.0 L1775.0 781.0" fill="none" data-name="HMACSHA3_384"></path>
 						</g>
-						<g transform="translate(916.5, 294)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_384" data-compartment="0">
+						<g transform="translate(1461, 749)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_384" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_384" data-compartment="0">
-								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_384" data-compartment="0">HMACSHA3_384</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_384" data-compartment="0">HMACSHA3_384</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 781)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA3_384" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA3_384" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA3_384" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA3_384" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA3_384" data-compartment="1">the SHA3_384 hash function.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="HMACSHA3_512">
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HMACSHA3_512">
-							<rect x="916.5" y="336.0" height="32.0" width="149.0" data-name="HMACSHA3_512"></rect>
+							<rect x="1461.0" y="856.0" height="97.0" width="314.0" data-name="HMACSHA3_512"></rect>
+							<path d="M1461.0 888.0 L1775.0 888.0" fill="none" data-name="HMACSHA3_512"></path>
 						</g>
-						<g transform="translate(916.5, 336)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_512" data-compartment="0">
+						<g transform="translate(1461, 856)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HMACSHA3_512" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HMACSHA3_512" data-compartment="0">
-								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_512" data-compartment="0">HMACSHA3_512</text>
+								<text x="149.0" y="14.1" stroke="none" text-anchor="middle" data-name="HMACSHA3_512" data-compartment="0">HMACSHA3_512</text>
+								
+							</g>
+						</g>
+						<g transform="translate(1461, 888)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="HMACSHA3_512" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="HMACSHA3_512" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="HMACSHA3_512" data-compartment="1">Computes a Hash-based Message</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="HMACSHA3_512" data-compartment="1">Authentication Code (HMAC) by using</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="HMACSHA3_512" data-compartment="1">the SHA3_512 hash function.</text>
 								
 							</g>
 						</g>

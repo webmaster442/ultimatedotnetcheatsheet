@@ -24,3 +24,4 @@ convert diagram2svg -i "src\nomnoml\collections1.nomnoml" -o "src\img\collection
 convert diagram2svg -i "src\nomnoml\baseclasses.nomnoml" -o "src\img\baseclasses.svg"
 convert diagram2svg -i "src\nomnoml\attributes-dataannotation.nomnoml" -o "src\img\attributes-dataannotation.svg"
 convert diagram2svg -i "src\nomnoml\attributes.nomnoml" -o "src\img\attributes.svg"
+convert diagram2svg -i "src\nomnoml\certificates.nomnoml" -o "src\img\certificates.svg"

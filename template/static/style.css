@@ -63,6 +63,17 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "JetBrains Mono Light";
+	src: url("./static/JetBrainsMono-Light.woff2") format("woff2"),
+		url("./static/JetBrainsMono-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+
+
+
 * {
 	box-sizing: border-box;
 }
@@ -113,7 +124,7 @@ main tr:hover {
 }
 
 main code {
-	font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: 'JetBrains Mono Light', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	color: var(--syntax-token-class-name);
 }
 
@@ -121,7 +132,7 @@ code[class*=language-],
 pre[class*=language-] {
 	color: var(--color-text);
 	background: 0 0;
-	font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: 'JetBrains Mono Light', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;
@@ -359,6 +370,14 @@ pre[class*=language-] {
 	border: 1px solid var(--color-border);
 	border-radius: var(--radius);
 	background: var(--color-panel);
+}
+
+.scroll-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	display: none;
 }
 
 @media (max-width: 960px) {

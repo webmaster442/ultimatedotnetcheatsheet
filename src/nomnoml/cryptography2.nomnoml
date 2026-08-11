@@ -7,9 +7,13 @@
 #fill: #f4f6fb
 #title: cryptography2
 
-[<note>Note: 
+[<note>Note:
 SHA3 is only available on .NET 8
-or newer versions ]
+or newer versions]
+
+[IDisposable|Provides a mechanism
+for releasing unmanaged
+resources]
 
 [HashAlgorithm|
 Represents the base class from which 
@@ -33,6 +37,8 @@ must derive.]
 Computes a Message Authentication
 Code (MAC) using TripleDES for
 the input data CryptoStream.]
+
+[IDisposable] <:-- [HashAlgorithm]
 
 [HashAlgorithm] <:- [MD5]
 [HashAlgorithm] <:- [RIPEMD160]
