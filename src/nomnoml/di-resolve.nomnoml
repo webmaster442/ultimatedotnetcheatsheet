@@ -1,0 +1,35 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: di-resolve
+
+[ServiceProvider|
+The default IServiceProvider.]
+
+[IKeyedServiceProvider|
+Retrieves services
+using a key and a type.]
+
+[IAsyncDisposable|
+Provides a mechanism for 
+releasing unmanaged resources
+asynchronously.]
+
+[IDisposable|
+Provides a mechanism for 
+releasing unmanaged resources.]
+
+[IServiceProvider|
+Defines a mechanism for 
+retrieving a service object 
+that is, an object that provides
+custom support to other objects.]
+
+[IServiceProvider] <:-- [IKeyedServiceProvider]
+[IKeyedServiceProvider] <:-- [ServiceProvider]
+[IAsyncDisposable] <:-- [ServiceProvider]
+[IDisposable] <:-- [ServiceProvider]

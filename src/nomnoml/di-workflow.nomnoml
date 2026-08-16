@@ -1,0 +1,17 @@
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: di-workflow
+
+[<actor>] -[<label>Create]->
+
+[IServiceCollection] -[<frame>Register services|
+[Singleton
+]
+[Scoped]
+[Transient]
+] -[<label>Call]-> [BuildServiceProvider()] -[<label>Creates]-> [IServiceProvider]
+[IServiceProvider] -> [Resolve]

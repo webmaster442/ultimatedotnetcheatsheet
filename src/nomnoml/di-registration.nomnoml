@@ -1,0 +1,30 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: di-registration
+
+[IServiceCollection|
+Specifies the contract for a 
+collection of service descriptors.]
+
+[IServiceCollection|Default implementation
+of IServiceCollection.]
+
+[ServiceCollection|
+Default implementation of
+IServiceCollection.]
+
+[ServiceDescriptor|
+Describes a service with its 
+service type, implementation,
+and lifetime.]
+
+[IServiceCollection] <:-- [ServiceCollection]
+
+[ICollection<ServiceDescriptor>]  <:-- [IServiceCollection]
+[IEnumerable<ServiceDescriptor>]  <:-- [IServiceCollection]
+[IList<ServiceDescriptor>] <:-- [IServiceCollection]

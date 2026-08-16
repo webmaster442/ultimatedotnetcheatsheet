@@ -1,0 +1,21 @@
+#font: 'Open Sans'
+#background: transparent
+#fill: #f4f6fb
+#title: di-lifetime
+
+[Singleton] <- [Scoped] <:- [Transient]
+
+[Singleton|One instance for the container 
+lifetime, Created on first use]
+[Transient|New instance on every resolution]
+[Scoped|One instance per scope]
+
+[<note>Longest lifetime 
+Shared, thread-safe, 
+expensive-to-create services] -- [Singleton]
+
+[<note>Services that should 
+share state during a request] -- [Transient]
+
+[<note>Lightweight,
+stateless services] -- [Scoped]

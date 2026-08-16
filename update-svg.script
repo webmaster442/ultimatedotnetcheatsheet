@@ -25,3 +25,7 @@ convert diagram2svg -i "src\nomnoml\baseclasses.nomnoml" -o "src\img\baseclasses
 convert diagram2svg -i "src\nomnoml\attributes-dataannotation.nomnoml" -o "src\img\attributes-dataannotation.svg"
 convert diagram2svg -i "src\nomnoml\attributes.nomnoml" -o "src\img\attributes.svg"
 convert diagram2svg -i "src\nomnoml\certificates.nomnoml" -o "src\img\certificates.svg"
+convert diagram2svg -i "src\nomnoml\di-workflow.nomnoml" -o "src\img\di-workflow.svg"
+convert diagram2svg -i "src\nomnoml\di-registration.nomnoml" -o "src\img\di-registration.svg"
+convert diagram2svg -i "src\nomnoml\di-resolve.nomnoml" -o "src\img\di-resolve.svg"
+convert diagram2svg -i "src\nomnoml\di-lifetime.nomnoml" -o "src\img\di-lifetime.svg"
