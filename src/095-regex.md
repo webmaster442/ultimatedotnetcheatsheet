@@ -11,7 +11,7 @@ The `System.Text.RegularExpressions` namespace provides the primary classes for 
 
 ## Anchors
 
-Anchors are special characters that allow you to specify where in the string a match should occur. They are useful for enforcing strict matching criteria and can be combined with other patterns to precisely define where a match should occur within the input string. 
+Anchors are special characters that allow you to specify where in the string a match should occur. They are useful for enforcing strict matching criteria and can be combined with other patterns to precisely define where a match should occur within the input string.
 
 | Regex |                         Meaning                         |
 | :---: | :-----------------------------------------------------: |
@@ -49,7 +49,7 @@ Character classes are patterns that match a single character from a specified se
 
 ## Groups and Ranges
 
-Groups are used to create subpatterns within a larger pattern. They are enclosed in parentheses `()` and allow you to apply quantifiers or modifiers to multiple characters. Groups can be referenced later in the expression or used for capturing matches. 
+Groups are used to create subpatterns within a larger pattern. They are enclosed in parentheses `()` and allow you to apply quantifiers or modifiers to multiple characters. Groups can be referenced later in the expression or used for capturing matches.
 
 Ranges specify a range of characters to match within square brackets `[]`. For instance, `[a-z]` matches any lowercase letter from `a` to `z`. They provide a concise way to match characters within a specific set or range. Together, groups and ranges enhance the power and flexibility of regular expressions for pattern matching tasks.
 
@@ -68,7 +68,7 @@ Ranges specify a range of characters to match within square brackets `[]`. For i
 
 ## Quanti­fiers
 
-Quantifiers specify the quantity of the preceding element in the pattern. They control how many times a character, group, or character class should be matched in the input string. 
+Quantifiers specify the quantity of the preceding element in the pattern. They control how many times a character, group, or character class should be matched in the input string.
 
 |  Regex  |  Meaning  |
 | :-----: | :-------: |
@@ -79,7 +79,7 @@ Quantifiers specify the quantity of the preceding element in the pattern. They c
 |   `?`   |  0 or 1   |
 | `{3,5}` | 3, 4 or 5 |
 
-# Regex best practices
+## Regex best practices
 
 1. Avoid Overcomplication: Use simple patterns that are easy to understand. Complex regex can be hard to read and debug. E.g.: The Pattern `^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$` matches the string `2024-12-06`, so does the `^\d{4}-\d{2}-\d{2}$` regex, but the later one is easier to understand.
 
@@ -87,7 +87,7 @@ Quantifiers specify the quantity of the preceding element in the pattern. They c
 
 3. Escape Special Characters: Use `\` to escape special regex characters (`.`, `*`, `?`, etc.) when matching them literally.
 
-4. Avoid Backtracking: Patterns with multiple overlapping possibilities (e.g.: `(.*)*`) can lead to inefficient backtracking. 
+4. Avoid Backtracking: Patterns with multiple overlapping possibilities (e.g.: `(.*)*`) can lead to inefficient backtracking.
 
 5. Use Named Groups for Clarity.: Use named capture groups to improve readability and make extracted values easier to work with. E.g.: `(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})`
 
@@ -99,7 +99,7 @@ Quantifiers specify the quantity of the preceding element in the pattern. They c
 
 ## Regex operations
 
-### Match a string 
+### Match a string
 
 ```csharp
 Regex regex = new Regex(@"^\$(a|b)$");
@@ -134,7 +134,7 @@ Regex pattern = new Regex(@"\d+");
 string result = pattern.Replace(input, "number");
 ```
 
-### Regex Modifiers 
+### Regex Modifiers
 
 `RegexOptions` enum can be used as parameter when creating a Regex to modify the behaviour.
 

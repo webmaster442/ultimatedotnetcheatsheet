@@ -82,13 +82,13 @@ In C#, both `Task` and `ValueTask` are used to represent asynchronous operations
 
     In many scenarios, the additional memory overhead of `Task` is minimal and worth the simplicity it offers.
 
-* **You expect consumers to use `.Result`, `.Wait()`, or `Task.WhenAll`**: 
+* **You expect consumers to use `.Result`, `.Wait()`, or `Task.WhenAll`**:
 
     Task handles these scenarios better because it is reference type and has additional functionality for managing asynchronous flows.
 
 ### When to use a ValueTask
 
-* **Operation may complete synchronously**: 
+* **Operation may complete synchronously**:
   
   If the operation sometimes completes synchronously (e.g., from a cache or optimized path), `ValueTask` avoids allocating a `Task` object unnecessarily.
 
@@ -168,7 +168,7 @@ public static class DeadlockDemo
 
 ### Configure Context
 
-By using `ConfigureAwait`, you enable a small amount of parallelism: Some asynchronous code can run in parallel with the GUI thread instead of constantly badgering it with bits of work to do. Aside from performance, ConfigureAwait has another important aspect: It can avoid deadlocks. 
+By using `ConfigureAwait`, you enable a small amount of parallelism: Some asynchronous code can run in parallel with the GUI thread instead of constantly badgering it with bits of work to do. Aside from performance, ConfigureAwait has another important aspect: It can avoid deadlocks.
 
 You should not use ConfigureAwait when you have code after the await in the method that needs the context. For GUI apps, this includes any code that manipulates GUI elements, writes data-bound properties or depends on a GUI-specific type.
 

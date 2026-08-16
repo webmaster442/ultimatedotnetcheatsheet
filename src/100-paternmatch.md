@@ -29,7 +29,7 @@ bool isFloatingPointNumber(string input)
 object greeting = "Hello, World!";
 if (greeting is string message)
 {
-	//greeting is a string and casted to message variable
+    //greeting is a string and casted to message variable
 }
 ```
 

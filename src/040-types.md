@@ -85,7 +85,7 @@ Note: `nint` and `nuint` represent the platforms native integer type. For 32 bit
 
 * `IComparisonOperators<TSelf,TSelf,bool>`
 
-    Defines a mechanism for comparing two values to determine relative order. Provides operators: `>`, `>=`, `<`, `<=` 
+    Defines a mechanism for comparing two values to determine relative order. Provides operators: `>`, `>=`, `<`, `<=`
 
 * `IDecrementOperators<T>`
 

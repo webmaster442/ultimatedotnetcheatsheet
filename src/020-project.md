@@ -9,7 +9,7 @@
     ```
 
 * Enable nullable reference types
-    
+
     ```xml
     <PropertyGroup>
         <Nullable>enable</Nullable>

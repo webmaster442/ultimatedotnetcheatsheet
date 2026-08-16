@@ -26,8 +26,6 @@
 
 More info: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/
 
-
-
 ## Keywords
 
 Keywords are predefined, reserved identifiers that have special meanings to the compiler. They can't be used as identifiers in your program unless they include `@` as a prefix. For example, `@if` is a valid identifier, but `if` isn't because `if` is a keyword.
@@ -416,15 +414,15 @@ public class NumberGenerator
 {
     public IEnumerable<int> GetNumbers()
     {
-		for (int i=0; i<10; i++)
-		{
-		    if (i == 5)
+        for (int i=0; i<10; i++)
+        {
+            if (i == 5)
             {
                 yield break; // Exit the method when i equals 5
             }
-			yield return i;
-		}
-	}
+            yield return i;
+        }
+    }
 }
 
 class Program
@@ -465,7 +463,6 @@ public class Program
 ```
 
 ### Delegate as parameter
-
 
 ```csharp
 public delegate void MyDelegate(string message);

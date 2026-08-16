@@ -6,12 +6,11 @@ XML serialization is part of .NET since the 1.0 release. It uses attributes and 
 
 Important attributes and their hierarchy for XML serialization:
 
-
-* **XmlArray**: 
+* **XmlArray**:
   
   Specifies that the XmlSerializer must serialize a particular class member as an array of XML elements.
 
-* **XmlArrayItem**: 
+* **XmlArrayItem**:
   
   Represents an attribute that specifies the derived types that the XmlSerializer can place in a serialized array.
 
@@ -24,7 +23,7 @@ Important attributes and their hierarchy for XML serialization:
    Indicates that a public field or property represents an XML element when the XmlSerializer serializes or deserializes the object that contains it.
 
 * **XmlEnum**:
-   
+
    Controls how the XmlSerializer serializes an enumeration member.
 
 * **XmlIgnore**:
@@ -35,7 +34,7 @@ Important attributes and their hierarchy for XML serialization:
   
   Controls XML serialization of the attribute target as an XML root element.
 
-* **XmlTextAttribute**: 
+* **XmlTextAttribute**:
 
     Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or de-serialized.
 
@@ -191,44 +190,44 @@ Serialization and de serialization options can be controlled via the `JsonSerial
 
 * `bool AllowTrailingCommas`:
   
-	Get or sets a value that indicates whether an extra comma at the end of a list of JSON values in an object or array is allowed (and ignored) within the JSON payload being de-serialized.
+    Get or sets a value that indicates whether an extra comma at the end of a list of JSON values in an object or array is allowed (and ignored) within the JSON payload being de-serialized.
 
 * `bool WriteIndented`:
 
-	Gets or sets a value that indicates whether JSON should use pretty printing. By default, JSON is serialized without any extra white space.
+    Gets or sets a value that indicates whether JSON should use pretty printing. By default, JSON is serialized without any extra white space.
 
 * `bool PropertyNameCaseInsensitive`:
 
-	Gets or sets a value that indicates whether a property's name uses a case-insensitive comparison during deserialization. The default value is false.
-	
+    Gets or sets a value that indicates whether a property's name uses a case-insensitive comparison during deserialization. The default value is false.
+
 * `JsonNamingPolicy? PropertyNamingPolicy`:
 
-	Gets or sets a value that specifies the policy used to convert a property's name on an object to another format, such as camel-casing, or null to leave property  names unchanged.
-	
-	Possible built-in values, that can be set:
-	
-	* `JsonNamingPolicy.CamelCase` - `propertyName`
-	* `JsonNamingPolicy.KebabCaseLower` - `property-name`
-	* `JsonNamingPolicy.KebabCaseUpper` - `PROPERTY-NAME`
-	* `JsonNamingPolicy.SnakeCaseLower` - `property_name`
-	* `JsonNamingPolicy.SnakeCaseUpper` - `PROPERTY_NAME`
-	
-	Custom values can be set, by implementing the `JsonNamingPolicy` class.
-	
+    Gets or sets a value that specifies the policy used to convert a property's name on an object to another format, such as camel-casing, or null to leave property  names unchanged.
+
+    Possible built-in values, that can be set:
+
+  * `JsonNamingPolicy.CamelCase` - `propertyName`
+  * `JsonNamingPolicy.KebabCaseLower` - `property-name`
+  * `JsonNamingPolicy.KebabCaseUpper` - `PROPERTY-NAME`
+  * `JsonNamingPolicy.SnakeCaseLower` - `property_name`
+  * `JsonNamingPolicy.SnakeCaseUpper` - `PROPERTY_NAME`
+
+    Custom values can be set, by implementing the `JsonNamingPolicy` class.
+
 * `bool IncludeFields`:
 
-	Gets or sets a value that indicates whether fields are handled during serialization and de-serialization. The default value is false.
-	
+    Gets or sets a value that indicates whether fields are handled during serialization and de-serialization. The default value is false.
+
 * `bool IgnoreReadOnlyProperties`:
 
-	Gets or sets a value that indicates whether null values are ignored during serialization and de-serialization. The default value is false.
-	
+    Gets or sets a value that indicates whether null values are ignored during serialization and de-serialization. The default value is false.
+
 * `JsonCommentHandling ReadCommentHandling`:
 
 	Gets or sets a value that defines how comments are handled during de-serialization.
-	
+
 	Possible values:
-	
+
 	* `JsonCommentHandling.Disallow`
 	
 		Doesn't allow comments within the JSON input. Comments are treated as invalid JSON if found, and a `System.Text.Json.JsonException` is thrown. This is the default value.
@@ -242,23 +241,23 @@ Serialization and de serialization options can be controlled via the `JsonSerial
 * `JsonNumberHandling NumberHandling`:
 
 	Gets or sets an object that specifies how number types should be handled when serializing or de-serializing.
-	
+
 	Possible values:
-	
+
 	* `JsonNumberHandling.Strict`
-	
+
 		Numbers will only be read from System.Text.Json.JsonTokenType.Number tokens and will only be written as JSON numbers (without quotes).
-	
+
 	* `JsonNumberHandling.AllowReadingFromString`
-	
+
 	Numbers can be read from System.Text.Json.JsonTokenType.String tokens. Does not prevent numbers from being read from System.Text.Json.JsonTokenType.Number token.
-	
+
 	* `JsonNumberHandling.WriteAsString`
-	
+
 		Numbers will be written as JSON strings (with quotes), not as JSON numbers.
-	
+
 	* `JsonNumberHandling.AllowNamedFloatingPointLiterals`
-	
+
 		The `NaN`, `Infinity` and `-Infinity` `System.Text.Json.JsonTokenType.String` tokens can be read as floating-point constants, and the `System.Single` and `System.Double` values for these constants will be written as their corresponding JSON string representations.
 	
 * `JsonIgnoreCondition DefaultIgnoreCondition`:
@@ -266,19 +265,19 @@ Serialization and de serialization options can be controlled via the `JsonSerial
 	Gets or sets a value that determines when properties with default values are ignored during serialization or de-serialization. The default value is `JsonIgnoreCondition.Never`.
 
 	Possible values:
-	
+
 	* `JsonIgnoreCondition.Never`
   
 		Property is always serialized and de-serialized, regardless of IgnoreNullValues configuration.
-	
+
 	* `JsonIgnoreCondition.Always`
   
 		Property is always ignored.
-	
+
 	* `JsonIgnoreCondition.WhenWritingDefault`
-	
+
 		Property is ignored only if it equals the default value for its type.
-	
+
 	* `JsonIgnoreCondition.WhenWritingNull`
 
 		Property is ignored if its value is null. This is applied only to reference-type properties and fields.

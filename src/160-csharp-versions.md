@@ -199,7 +199,7 @@ _Released November 2022_
 * File-local types
 * Required members
 * Auto-default structs
-* Pattern match Span<char> on a constant string
+* Pattern match `Span<char>` on a constant string
 * Extended nameof scope
 * Numeric IntPtr
 * ref fields and scoped ref
@@ -223,10 +223,22 @@ _Released November 2024_
 
 * Params collections
 * New lock type
-* New escape sequence - \e
+* New escape sequence - `\e`
 * Implicit indexer access in object initializers
 * ref locals and unsafe contexts in iterators and async methods
 * ref struct types to implement interfaces.
 * Partial properties and indexers
 * field contextual keyword
 
+## 14.0
+
+_Relased November 2025_
+
+* Extension members
+* Null-conditional assignment
+* nameof supports unbound generic types
+* More implicit conversions for `Span<T>` and `ReadOnlySpan<T>`
+* Modifiers on simple lambda parameters
+* field backed properties
+* partial events and constructors
+* user-defined compound assignment operators

@@ -1,10 +1,12 @@
 # Changelog
 
-## 2026.
+## 2026.08.31
 
 * New layout
+* Linted markdown code
 * Added new section about dependency Injection
-* 
+* Extended Powershell script section
+* Extended C# version history with C# 14
 
 ## 2025.01.16
 

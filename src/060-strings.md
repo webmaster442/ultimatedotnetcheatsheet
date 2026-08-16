@@ -144,21 +144,21 @@ To produce this behaviour, a custom format string can contain up to three sectio
 
 ## Format string examples
 
-**Apply thousand sepperator**
+### Apply thousand sepperator
 
 ```csharp
 int number = 123456;
 Console.WriteLine($"{number:N0}") //123 456
 ```
 
-**Format with fixed number of decimal places**
+### Format with fixed number of decimal places
 
 ```csharp
 double number = 123.456;
 Console.WriteLine($"{number:F2}") //123,46
 ```
 
-**Date and time formatting**
+### Date and time formatting
 
 ```csharp
 Console.WriteLine($"{DateTime.Now:yyyy-MM-dd}"); //2024-05-12

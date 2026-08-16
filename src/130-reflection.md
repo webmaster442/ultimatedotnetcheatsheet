@@ -57,7 +57,7 @@ public static bool IsRefStruct(Type type)
 
 ## Create an instance of a type with optional property initializers
 
-**Notes**
+**Notes:**
 
 1. This method will fail with an exception if, the `type` has no parameterless constructor
 2. Reflection doesn't enforce that properties marked with the `required` keyword have to have a value set. If you don't set these values, then they can be `null`

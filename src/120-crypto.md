@@ -20,7 +20,7 @@ Asymmetric encryption, also known as public-key cryptography, is a cryptographic
 ![Hash Algorithms](img/cryptography2.svg)
 ^^^ Hash Algorithms
 
-**Hash Algorithms**
+### Hash Algorithms
 
 A hash algorithm, also known as a cryptographic hash function, is a mathematical algorithm that takes an input (or "message") and produces a fixed-size string of bytes, which are typically represented as a hexadecimal number or it is base64 encoded.
 
@@ -32,7 +32,7 @@ Hash algorithms are widely used in cryptography for various purposes, including 
 
 It's worth noting that while MD5 and SHA-1 were once widely used, they are now considered vulnerable to various attacks, and it's generally recommended to use stronger hash functions such as SHA-256 or SHA-3 for cryptographic purposes.
 
-**HMAC**
+### HMAC
 
 Hash-based Message Authentication Code (HMAG), is a mechanism for generating a cryptographic hash of data in combination with a secret key. It provides a way to verify both the integrity and authenticity of a message.
 

@@ -30,7 +30,7 @@ The default implementation of this interface is the `Comparer<T>` class. The `St
 ```csharp
 interface IComparer<T>
 {
-	int Compare (T? x, T? y);
+    int Compare (T? x, T? y);
 }
 ```
 
@@ -49,7 +49,7 @@ Defines a generalized method that a value type or class implements to create a t
 ```csharp
 interface IEquatable<T>
 {
-	bool Equals (T? other);
+    bool Equals (T? other);
 }
 ```
 
@@ -62,8 +62,8 @@ Defines methods to support the comparison of objects for equality. This interfac
 ```csharp
 interface IEqualityComparer<T>
 {
-	bool Equals (T? x, T? y);
-	int GetHashCode (T obj);
+    bool Equals (T? x, T? y);
+    int GetHashCode (T obj);
 }
 ```
 

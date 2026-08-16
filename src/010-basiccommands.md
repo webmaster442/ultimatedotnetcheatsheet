@@ -98,8 +98,8 @@ Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windo
 
 * **dotnet-ef**
 
-	The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects. 
-    
+    The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects. 
+
     Install with: `dotnet tool install --global dotnet-ef`
 
     More info: https://learn.microsoft.com/en-us/ef/core/cli/dotnet
@@ -107,15 +107,15 @@ Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windo
 * **csharprepl**
 
     A cross-platform command line REPL for the rapid experimentation and exploration of C#. It supports IntelliSense, installing NuGet packages, and referencing local .NET projects and assemblies. 
-    
+
     Install with: `dotnet tool install -g csharprepl`
 
     More info: https://github.com/waf/CSharpRepl
-	
+
 * **IronPython**
 
-	IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily.
-    
+    IronPython is an open-source implementation of the Python programming language that is tightly integrated with .NET. IronPython can use .NET and Python libraries, and other .NET languages can use Python code just as easily.
+
     Install with: `dotnet tool install -g IronPython.Console`
 
     More info: https://ironpython.net/
@@ -123,15 +123,15 @@ Global tools are installed in `$HOME/.dotnet/tools` on Linux and macOS. On Windo
 * **dotnet-format**
 
     Dotnet-format is a code formatter for dotnet that applies style preferences to a project or solution. Preferences will be read from an `.editorconfig` file, if present, otherwise a default set of preferences will be used.
-    
+
     Install with: `dotnet tool install -g dotnet-format`
 
     More info: https://github.com/dotnet/format
 
 * **.NET Upgrade Assistant**
   
-	The .NET Upgrade Assistant is a Visual Studio extension and command-line tool that's designed to assist with upgrading apps to the latest version of .NET.
-    
+    The .NET Upgrade Assistant is a Visual Studio extension and command-line tool that's designed to assist with upgrading apps to the latest version of .NET.
+
     Install with: `dotnet tool install -g upgrade-assistant`
 
     More info: https://dotnet.microsoft.com/en-us/platform/upgrade-assistant
