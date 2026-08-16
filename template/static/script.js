@@ -55,7 +55,26 @@
 
 	if (printButton) {
 		printButton.addEventListener("click", function () {
-			window.print();
+			let divContents = document.getElementById("article-content").innerHTML;
+			let printWindow = window.open('', '', '');
+			printWindow.document.open();
+			printWindow.document.write(`
+            <html>
+            <head>
+                <title>Print content: ${document.title}</title>
+                <link rel="stylesheet" href="prism.css" type="text/css">
+                <script src="prism.js" type="text/javascript"></script>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    h1 { color: #333; }
+                </style>
+            </head>
+            <body>
+                ${divContents}
+            </body>
+            </html>`);
+			printWindow.document.close();
+			printWindow.print();
 		});
 	}
 
