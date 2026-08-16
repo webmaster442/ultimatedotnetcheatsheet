@@ -8,6 +8,8 @@
     var themeToggle = document.getElementById("theme-toggle");
     var printButton = document.getElementById("print-button");
     var scrollTopButton = document.getElementById("scroll-top-button");
+    var article = document.getElementById("article-content");
+    var articleHeadings = document.getElementById("article-headings");
 
     function getPreferredTheme() {
         var saved = localStorage.getItem(THEME_KEY);
@@ -78,6 +80,55 @@
             };
             printWindow.document.close();
         });
+    }
+
+    if (article && articleHeadings) {
+        const headers = article.querySelectorAll('h2, h3, h4, h5, h6');
+        const offset = 150;
+
+        let lastLevels = [articleHeadings];
+        let counter = 0;
+
+        headers.forEach((header, index) => {
+            ++counter;
+            const level = parseInt(header.tagName.substring(1));
+            if (!header.id) {
+                header.id = `header-${index}`;
+            }
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.textContent = header.textContent;
+            a.href = `#`;
+
+            a.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetPosition = header.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+
+            li.appendChild(a);
+
+            // Create a new list element if necessary
+            if (level > lastLevels.length) {
+                const ul = document.createElement('ul');
+                lastLevels[lastLevels.length - 1].appendChild(ul);
+                lastLevels.push(ul);
+            }
+
+            // Move up the hierarchy if the header level is lower
+            while (level < lastLevels.length) {
+                lastLevels.pop();
+            }
+
+            lastLevels[lastLevels.length - 1].appendChild(li);
+        });
+
+        if (counter < 2) {
+            articleHeadings.style.display = "none";
+        }
     }
 
     if (scrollTopButton) {

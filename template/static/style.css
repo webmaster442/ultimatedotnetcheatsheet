@@ -380,6 +380,40 @@ pre[class*=language-] {
 	display: none;
 }
 
+.article-headings {
+	position: relative;
+	width: 300px;
+	margin-left: auto;
+}
+
+.article-headings summary {
+	padding: var(--space-2);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	background: var(--color-panel);
+	cursor: pointer;
+}
+
+.article-headings>ul {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	z-index: 10;
+	width: 300px;
+	max-height: 60vh;
+	overflow-y: auto;
+	margin: var(--space-1) 0 0;
+	padding: var(--space-2);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	background: var(--color-panel);
+	list-style: none;
+}
+
+.article-headings ul ul {
+	padding-left: 20px;
+}
+
 @media (max-width: 960px) {
 	.layout {
 		grid-template-columns: 1fr;
