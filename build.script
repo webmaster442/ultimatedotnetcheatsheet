@@ -20,6 +20,7 @@ convert md2html --svg -i .\src\112-serialization.md -tf .\template\template.html
 convert md2html --svg -i .\src\114-validation.md -tf .\template\template.html -o .\docs --title "Validation"
 convert md2html --svg -i .\src\120-crypto.md -tf .\template\template.html -o .\docs --title "Cryptography"
 convert md2html --svg -i .\src\130-reflection.md -tf .\template\template.html -o .\docs --title "Reflection"
+convert md2html --svg -i .\src\135-di.md -tf .\template\template.html -o .\docs --title "Dependency Injection"
 convert md2html --svg -i .\src\140-ui.md -tf .\template\template.html -o .\docs --title "UI"
 convert md2html --svg -i .\src\150-nuget.md -tf .\template\template.html -o .\docs --title "Useful NuGet packagest"
 convert md2html --svg -i .\src\155-shortcuts.md -tf .\template\template.html -o .\docs --title "Keyboard Shortcuts"

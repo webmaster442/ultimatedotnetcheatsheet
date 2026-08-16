@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: mvvm
@@ -34,13 +33,13 @@
 	converter that is either an
 	IValueConverter or
 	IMultiValueConverter instance] -- [Binding]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="295.0" width="1297.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#33322E" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M59.7 74.0 L58 74 L63 74 L63.0 74.0 " fill="none"></path>
 					<path d="M66.3 68.7 L59.7 74.0 L66.3 79.3 L53.0 74.0 Z"></path>
 					<path d="M147.0 74.0 L152 74 L150.33333333333334 74 L150.3 74.0 " fill="none"></path>
@@ -79,7 +78,7 @@
 							<path d="M22.5 66.0 L30.5 66.0" fill="none" data-name="User"></path>
 							<path d="M22.5 74.0 L26.5 70.0 L30.5 74.0" fill="none" data-name="User"></path>
 						</g>
-						<g transform="translate(0, 70)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="User" data-compartment="0">
+						<g transform="translate(0, 70)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="User" data-compartment="0">
 								<text x="18.5" y="14.1" stroke="none" text-anchor="middle" data-name="User" data-compartment="0">User</text>
 								
@@ -88,7 +87,7 @@
 					</g>
 					<g data-name="interacts">
 						
-						<g transform="translate(63, 58)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="interacts" data-compartment="0">
+						<g transform="translate(63, 58)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="interacts" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="interacts" data-compartment="0">
 								<text x="34.0" y="14.1" stroke="none" text-anchor="middle" data-name="interacts" data-compartment="0">interacts</text>
 								
@@ -99,7 +98,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="View">
 							<path d="M149.0 58.0 L202.0 58.0 L210.0 74.0 L202.0 90.0 L149.0 90.0 L157.0 74.0 Z" data-name="View"></path>
 						</g>
-						<g transform="translate(157, 58)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="View" data-compartment="0">
+						<g transform="translate(157, 58)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="View" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="View" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="View" data-compartment="0">View</text>
 								
@@ -110,7 +109,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="View Model">
 							<path d="M908.0 87.0 L1014.0 87.0 L1022.0 103.0 L1014.0 119.0 L908.0 119.0 L916.0 103.0 Z" data-name="View Model"></path>
 						</g>
-						<g transform="translate(916, 87)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="View Model" data-compartment="0">
+						<g transform="translate(916, 87)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="View Model" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="View Model" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="View Model" data-compartment="0">View Model</text>
 								
@@ -121,7 +120,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Model">
 							<path d="M1169.0 87.0 L1233.0 87.0 L1241.0 103.0 L1233.0 119.0 L1169.0 119.0 L1177.0 103.0 Z" data-name="Model"></path>
 						</g>
-						<g transform="translate(1177, 87)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Model" data-compartment="0">
+						<g transform="translate(1177, 87)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Model" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Model" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Model" data-compartment="0">Model</text>
 								
@@ -133,7 +132,7 @@
 							<path d="M627.0 29.0 L898.0 29.0 L906.0 37.0 L906.0 77.0 L627.0 77.0 L627.0 29.0 Z" data-name="Implements the"></path>
 							<path d="M898.0 29.0 L898.0 37.0 L906.0 37.0" fill="none" data-name="Implements the"></path>
 						</g>
-						<g transform="translate(627, 29)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Implements the" data-compartment="0">
+						<g transform="translate(627, 29)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Implements the" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Implements the" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Implements the" data-compartment="0">Implements the</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Implements the" data-compartment="0">INotifyPropertyChanged interface</text>
@@ -146,7 +145,7 @@
 							<path d="M220.0 0.0 L524.0 0.0 L532.0 8.0 L532.0 48.0 L220.0 48.0 L220.0 0.0 Z" data-name="Binding is possible"></path>
 							<path d="M524.0 0.0 L524.0 8.0 L532.0 8.0" fill="none" data-name="Binding is possible"></path>
 						</g>
-						<g transform="translate(220, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding is possible" data-compartment="0">
+						<g transform="translate(220, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding is possible" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Binding is possible" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Binding is possible" data-compartment="0">Binding is possible</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Binding is possible" data-compartment="0">to Dependency properties of Controls</text>
@@ -158,7 +157,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Binding">
 							<path d="M534.0 108.0 L609.0 108.0 L617.0 124.0 L609.0 140.0 L534.0 140.0 L542.0 124.0 Z" data-name="Binding"></path>
 						</g>
-						<g transform="translate(542, 108)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding" data-compartment="0">
+						<g transform="translate(542, 108)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Binding" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Binding" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Binding" data-compartment="0">Binding</text>
 								
@@ -167,7 +166,7 @@
 					</g>
 					<g data-name="Updates view">
 						
-						<g transform="translate(315, 58)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates view" data-compartment="0">
+						<g transform="translate(315, 58)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates view" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Updates view" data-compartment="0">
 								<text x="53.0" y="14.1" stroke="none" text-anchor="middle" data-name="Updates view" data-compartment="0">Updates view</text>
 								
@@ -176,7 +175,7 @@
 					</g>
 					<g data-name="Observes View Model">
 						
-						<g transform="translate(673, 87)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Observes View Model" data-compartment="0">
+						<g transform="translate(673, 87)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Observes View Model" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Observes View Model" data-compartment="0">
 								<text x="85.5" y="14.1" stroke="none" text-anchor="middle" data-name="Observes View Model" data-compartment="0">Observes View Model</text>
 								
@@ -185,7 +184,7 @@
 					</g>
 					<g data-name="Dependency Property">
 						
-						<g transform="translate(282, 100)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dependency Property" data-compartment="0">
+						<g transform="translate(282, 100)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dependency Property" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Dependency Property" data-compartment="0">
 								<text x="86.0" y="14.1" stroke="none" text-anchor="middle" data-name="Dependency Property" data-compartment="0">Dependency Property</text>
 								<text x="86.0" y="30.3" stroke="none" text-anchor="middle" data-name="Dependency Property" data-compartment="0">changes updae it</text>
@@ -195,7 +194,7 @@
 					</g>
 					<g data-name="Updates">
 						
-						<g transform="translate(725.5, 129)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates" data-compartment="0">
+						<g transform="translate(725.5, 129)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Updates" data-compartment="0">
 								<text x="33.0" y="14.1" stroke="none" text-anchor="middle" data-name="Updates" data-compartment="0">Updates</text>
 								
@@ -204,7 +203,7 @@
 					</g>
 					<g data-name="Reads model">
 						
-						<g transform="translate(1039.5, 66)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Reads model" data-compartment="0">
+						<g transform="translate(1039.5, 66)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Reads model" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Reads model" data-compartment="0">
 								<text x="52.0" y="14.1" stroke="none" text-anchor="middle" data-name="Reads model" data-compartment="0">Reads model</text>
 								
@@ -213,7 +212,7 @@
 					</g>
 					<g data-name="Updates model">
 						
-						<g transform="translate(1032, 108)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates model" data-compartment="0">
+						<g transform="translate(1032, 108)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Updates model" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Updates model" data-compartment="0">
 								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="Updates model" data-compartment="0">Updates model</text>
 								
@@ -225,7 +224,7 @@
 							<path d="M249.5 158.0 L494.5 158.0 L502.5 166.0 L502.5 239.0 L249.5 239.0 L249.5 158.0 Z" data-name="May include an optional"></path>
 							<path d="M494.5 158.0 L494.5 166.0 L502.5 166.0" fill="none" data-name="May include an optional"></path>
 						</g>
-						<g transform="translate(249.5, 158)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="May include an optional" data-compartment="0">
+						<g transform="translate(249.5, 158)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="May include an optional" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="May include an optional" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="May include an optional" data-compartment="0">May include an optional</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="May include an optional" data-compartment="0">converter that is either an</text>

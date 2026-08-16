@@ -3,6 +3,8 @@
 ## 2026.
 
 * New layout
+* Added new section about dependency Injection
+* 
 
 ## 2025.01.16
 

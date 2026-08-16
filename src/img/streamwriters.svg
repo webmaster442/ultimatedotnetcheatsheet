@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: streamwriters
@@ -56,13 +55,13 @@
 	[TextWriter] &lt;:- [StringWriter]
 	
 	</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="600.5" width="1079.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M385.3 92.3 L377 92.75 L389.5 93.14808917197452 L389.5 93.1 " fill="none"></path>
 					<path d="M385.0 87.0 L385.3 92.3 L385.6 97.6 L372.0 93.0 Z"></path>
 					<path d="M291.9 157.4 L377 201.25 L456.10230179028133 250.5 L456.1 250.5 " fill="none"></path>
@@ -96,13 +95,13 @@
 							<rect x="0.0" y="54.3" height="97.0" width="372.0" data-name="MarshalByRefObject"></rect>
 							<path d="M0.0 86.3 L372.0 86.3" fill="none" data-name="MarshalByRefObject"></path>
 						</g>
-						<g transform="translate(0, 54.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
+						<g transform="translate(0, 54.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject" data-compartment="0">
 								<text x="178.0" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject" data-compartment="0">MarshalByRefObject</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 86.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MarshalByRefObject" data-compartment="1">
+						<g transform="translate(0, 86.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MarshalByRefObject" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MarshalByRefObject" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="MarshalByRefObject" data-compartment="1">Enables access to objects across application</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="MarshalByRefObject" data-compartment="1">domain boundaries in applications</text>
@@ -116,13 +115,13 @@
 							<rect x="393.5" y="250.5" height="97.0" width="281.0" data-name="TextWriter"></rect>
 							<path d="M393.5 282.5 L674.5 282.5" fill="none" data-name="TextWriter"></path>
 						</g>
-						<g transform="translate(393.5, 250.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextWriter" data-compartment="0">
+						<g transform="translate(393.5, 250.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextWriter" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextWriter" data-compartment="0">
 								<text x="132.5" y="14.1" stroke="none" text-anchor="middle" data-name="TextWriter" data-compartment="0">TextWriter</text>
 								
 							</g>
 						</g>
-						<g transform="translate(393.5, 282.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextWriter" data-compartment="1">
+						<g transform="translate(393.5, 282.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextWriter" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TextWriter" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="TextWriter" data-compartment="1">Represents a writer that can write</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="TextWriter" data-compartment="1">a sequential series of characters.</text>
@@ -136,13 +135,13 @@
 							<rect x="389.5" y="57.8" height="80.0" width="289.0" data-name="TextReader"></rect>
 							<path d="M389.5 89.8 L678.5 89.8" fill="none" data-name="TextReader"></path>
 						</g>
-						<g transform="translate(389.5, 57.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextReader" data-compartment="0">
+						<g transform="translate(389.5, 57.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextReader" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextReader" data-compartment="0">
 								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="TextReader" data-compartment="0">TextReader</text>
 								
 							</g>
 						</g>
-						<g transform="translate(389.5, 89.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextReader" data-compartment="1">
+						<g transform="translate(389.5, 89.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextReader" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TextReader" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="TextReader" data-compartment="1">Represents a reader that can read</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="TextReader" data-compartment="1">a sequential series of characters.</text>
@@ -155,13 +154,13 @@
 							<rect x="708.0" y="0.0" height="97.0" width="303.0" data-name="StreamReader"></rect>
 							<path d="M708.0 32.0 L1011.0 32.0" fill="none" data-name="StreamReader"></path>
 						</g>
-						<g transform="translate(708, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamReader" data-compartment="0">
+						<g transform="translate(708, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamReader" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StreamReader" data-compartment="0">
 								<text x="143.5" y="14.1" stroke="none" text-anchor="middle" data-name="StreamReader" data-compartment="0">StreamReader</text>
 								
 							</g>
 						</g>
-						<g transform="translate(708, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamReader" data-compartment="1">
+						<g transform="translate(708, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamReader" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StreamReader" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="StreamReader" data-compartment="1">Implements a TextReader that</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="StreamReader" data-compartment="1">reads characters from a byte stream</text>
@@ -175,13 +174,13 @@
 							<rect x="732.5" y="107.0" height="80.0" width="254.0" data-name="StringReader"></rect>
 							<path d="M732.5 139.0 L986.5 139.0" fill="none" data-name="StringReader"></path>
 						</g>
-						<g transform="translate(732.5, 107)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringReader" data-compartment="0">
+						<g transform="translate(732.5, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringReader" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringReader" data-compartment="0">
 								<text x="119.0" y="14.1" stroke="none" text-anchor="middle" data-name="StringReader" data-compartment="0">StringReader</text>
 								
 							</g>
 						</g>
-						<g transform="translate(732.5, 139)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringReader" data-compartment="1">
+						<g transform="translate(732.5, 139)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringReader" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringReader" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="StringReader" data-compartment="1">Implements a TextReader that</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="StringReader" data-compartment="1">reads from a string.</text>
@@ -194,13 +193,13 @@
 							<rect x="708.5" y="197.0" height="97.0" width="302.0" data-name="StreamWriter"></rect>
 							<path d="M708.5 229.0 L1010.5 229.0" fill="none" data-name="StreamWriter"></path>
 						</g>
-						<g transform="translate(708.5, 197)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamWriter" data-compartment="0">
+						<g transform="translate(708.5, 197)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamWriter" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StreamWriter" data-compartment="0">
 								<text x="143.0" y="14.1" stroke="none" text-anchor="middle" data-name="StreamWriter" data-compartment="0">StreamWriter</text>
 								
 							</g>
 						</g>
-						<g transform="translate(708.5, 229)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamWriter" data-compartment="1">
+						<g transform="translate(708.5, 229)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamWriter" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StreamWriter" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="StreamWriter" data-compartment="1">Implements a TextWriter for writing</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="StreamWriter" data-compartment="1">characters to a stream ina particular</text>
@@ -214,13 +213,13 @@
 							<rect x="696.0" y="304.0" height="97.0" width="327.0" data-name="StringWriter"></rect>
 							<path d="M696.0 336.0 L1023.0 336.0" fill="none" data-name="StringWriter"></path>
 						</g>
-						<g transform="translate(696, 304)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringWriter" data-compartment="0">
+						<g transform="translate(696, 304)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringWriter" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringWriter" data-compartment="0">
 								<text x="155.5" y="14.1" stroke="none" text-anchor="middle" data-name="StringWriter" data-compartment="0">StringWriter</text>
 								
 							</g>
 						</g>
-						<g transform="translate(696, 336)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringWriter" data-compartment="1">
+						<g transform="translate(696, 336)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringWriter" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringWriter" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="StringWriter" data-compartment="1">Implements a TextWriter for writing</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="StringWriter" data-compartment="1">information to a string. The information</text>
@@ -234,13 +233,13 @@
 							<rect x="382.0" y="357.5" height="80.0" width="304.0" data-name="BinaryReader"></rect>
 							<path d="M382.0 389.5 L686.0 389.5" fill="none" data-name="BinaryReader"></path>
 						</g>
-						<g transform="translate(382, 357.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryReader" data-compartment="0">
+						<g transform="translate(382, 357.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryReader" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BinaryReader" data-compartment="0">
 								<text x="144.0" y="14.1" stroke="none" text-anchor="middle" data-name="BinaryReader" data-compartment="0">BinaryReader</text>
 								
 							</g>
 						</g>
-						<g transform="translate(382, 389.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryReader" data-compartment="1">
+						<g transform="translate(382, 389.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryReader" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BinaryReader" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="BinaryReader" data-compartment="1">Reads primitive data types as binary</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="BinaryReader" data-compartment="1">values in a specific encoding.</text>
@@ -253,13 +252,13 @@
 							<rect x="399.0" y="447.5" height="97.0" width="270.0" data-name="BinaryWriter"></rect>
 							<path d="M399.0 479.5 L669.0 479.5" fill="none" data-name="BinaryWriter"></path>
 						</g>
-						<g transform="translate(399, 447.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryWriter" data-compartment="0">
+						<g transform="translate(399, 447.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryWriter" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BinaryWriter" data-compartment="0">
 								<text x="127.0" y="14.1" stroke="none" text-anchor="middle" data-name="BinaryWriter" data-compartment="0">BinaryWriter</text>
 								
 							</g>
 						</g>
-						<g transform="translate(399, 479.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryWriter" data-compartment="1">
+						<g transform="translate(399, 479.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryWriter" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BinaryWriter" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="BinaryWriter" data-compartment="1">Writes primitive types in binary</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="BinaryWriter" data-compartment="1">to a stream and supports writing</text>
@@ -272,7 +271,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
 							<rect x="131.5" y="376.5" height="32.0" width="109.0" data-name="IDisposable"></rect>
 						</g>
-						<g transform="translate(131.5, 376.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+						<g transform="translate(131.5, 376.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
 								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
 								

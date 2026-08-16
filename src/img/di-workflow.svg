@@ -3,7 +3,6 @@
 	<desc >#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: di-workflow
@@ -17,13 +16,13 @@
 	[Transient]
 	] -[&lt;label&gt;Call]-&gt; [BuildServiceProvider()] -[&lt;label&gt;Creates]-&gt; [IServiceProvider]
 	[IServiceProvider] -&gt; [Resolve]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="512.0" width="388.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#33322E" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M166.0 32.0 L166 37 L166 42 L166.0 42.0 " fill="none"></path>
 					<path d="M166.0 74.0 L166 79 L166 77.33333333333333 L166.0 77.3 " fill="none"></path>
 					<path d="M160.7 70.7 L166.0 77.3 L171.3 70.7 L166.0 84.0 Z"></path>
@@ -43,7 +42,7 @@
 							<path d="M162.0 20.0 L170.0 20.0" fill="none"></path>
 							<path d="M162.0 28.0 L166.0 24.0 L170.0 28.0" fill="none"></path>
 						</g>
-						<g transform="translate(158, 24)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-compartment="0">
+						<g transform="translate(158, 24)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" data-compartment="0">
 								
 							</g>
@@ -51,7 +50,7 @@
 					</g>
 					<g data-name="Create">
 						
-						<g transform="translate(131.5, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Create" data-compartment="0">
+						<g transform="translate(131.5, 42)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Create" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Create" data-compartment="0">
 								<text x="26.5" y="14.1" stroke="none" text-anchor="middle" data-name="Create" data-compartment="0">Create</text>
 								
@@ -62,7 +61,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IServiceCollection">
 							<rect x="87.0" y="84.0" height="32.0" width="158.0" data-name="IServiceCollection"></rect>
 						</g>
-						<g transform="translate(87, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
+						<g transform="translate(87, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceCollection" data-compartment="0">
 								<text x="71.0" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceCollection" data-compartment="0">IServiceCollection</text>
 								
@@ -74,20 +73,20 @@
 							<rect x="0.0" y="126.0" height="120.0" width="332.0" data-name="Register services"></rect>
 							<path d="M0.0 158.0 L145.0 158.0 L161.0 142.0 L161.0 126.0" fill="none" data-name="Register services"></path>
 						</g>
-						<g transform="translate(0, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Register services" data-compartment="0">
+						<g transform="translate(0, 126)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Register services" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Register services" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Register services" data-compartment="0">Register services</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 158)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Register services" data-compartment="1">
+						<g transform="translate(0, 158)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Register services" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" data-name="Register services" data-compartment="1">
 								<g transform="translate(20, 20)" data-name="Register services" data-compartment="1">
 									<g data-name="Singleton">
 										<g fill="#f4f6fb" stroke="#33322E" data-name="Singleton">
 											<rect x="0.0" y="0.0" height="32.0" width="90.0" data-name="Singleton"></rect>
 										</g>
-										<g transform="translate(0, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Singleton" data-compartment="0">
+										<g transform="translate(0, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Singleton" data-compartment="0">
 											<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Singleton" data-compartment="0">
 												<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="Singleton" data-compartment="0">Singleton</text>
 												
@@ -98,7 +97,7 @@
 										<g fill="#f4f6fb" stroke="#33322E" data-name="Scoped">
 											<rect x="100.0" y="0.0" height="32.0" width="76.0" data-name="Scoped"></rect>
 										</g>
-										<g transform="translate(100, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Scoped" data-compartment="0">
+										<g transform="translate(100, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Scoped" data-compartment="0">
 											<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Scoped" data-compartment="0">
 												<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="Scoped" data-compartment="0">Scoped</text>
 												
@@ -109,7 +108,7 @@
 										<g fill="#f4f6fb" stroke="#33322E" data-name="Transient">
 											<rect x="186.0" y="0.0" height="32.0" width="90.0" data-name="Transient"></rect>
 										</g>
-										<g transform="translate(186, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transient" data-compartment="0">
+										<g transform="translate(186, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transient" data-compartment="0">
 											<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transient" data-compartment="0">
 												<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="Transient" data-compartment="0">Transient</text>
 												
@@ -122,7 +121,7 @@
 					</g>
 					<g data-name="Call">
 						
-						<g transform="translate(143, 256)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Call" data-compartment="0">
+						<g transform="translate(143, 256)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Call" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Call" data-compartment="0">
 								<text x="15.0" y="14.1" stroke="none" text-anchor="middle" data-name="Call" data-compartment="0">Call</text>
 								
@@ -133,7 +132,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BuildServiceProvider()">
 							<rect x="70.0" y="298.0" height="32.0" width="192.0" data-name="BuildServiceProvider()"></rect>
 						</g>
-						<g transform="translate(70, 298)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BuildServiceProvider()" data-compartment="0">
+						<g transform="translate(70, 298)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BuildServiceProvider()" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BuildServiceProvider()" data-compartment="0">
 								<text x="88.0" y="14.1" stroke="none" text-anchor="middle" data-name="BuildServiceProvider()" data-compartment="0">BuildServiceProvider()</text>
 								
@@ -142,7 +141,7 @@
 					</g>
 					<g data-name="Creates">
 						
-						<g transform="translate(127, 340)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Creates" data-compartment="0">
+						<g transform="translate(127, 340)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Creates" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Creates" data-compartment="0">
 								<text x="31.0" y="14.1" stroke="none" text-anchor="middle" data-name="Creates" data-compartment="0">Creates</text>
 								
@@ -153,7 +152,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IServiceProvider">
 							<rect x="93.0" y="382.0" height="32.0" width="146.0" data-name="IServiceProvider"></rect>
 						</g>
-						<g transform="translate(93, 382)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceProvider" data-compartment="0">
+						<g transform="translate(93, 382)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceProvider" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceProvider" data-compartment="0">
 								<text x="65.0" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceProvider" data-compartment="0">IServiceProvider</text>
 								
@@ -164,7 +163,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Resolve">
 							<rect x="126.0" y="424.0" height="32.0" width="80.0" data-name="Resolve"></rect>
 						</g>
-						<g transform="translate(126, 424)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Resolve" data-compartment="0">
+						<g transform="translate(126, 424)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Resolve" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Resolve" data-compartment="0">
 								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="Resolve" data-compartment="0">Resolve</text>
 								

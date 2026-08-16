@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: wpf2
@@ -19,13 +18,13 @@
 		
 		
 		</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="214.0" width="682.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M244.5 45.3 L244.5 37 L244.5 42 L244.5 42.0 " fill="none"></path>
 					<path d="M249.8 45.3 L244.5 45.3 L239.2 45.3 L244.5 32.0 Z"></path>
 					<path d="M143.3 70.4 L73 79 L73 84 L73.0 84.0 " fill="none"></path>
@@ -42,7 +41,7 @@
 						<g fill="#C06EF0" stroke="#33322E" data-name="DispatcherObject">
 							<rect x="168.5" y="0.0" height="32.0" width="152.0" data-name="DispatcherObject"></rect>
 						</g>
-						<g transform="translate(168.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DispatcherObject" data-compartment="0">
+						<g transform="translate(168.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DispatcherObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DispatcherObject" data-compartment="0">
 								<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="DispatcherObject" data-compartment="0">DispatcherObject</text>
 								
@@ -53,7 +52,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="FrameworkTemplate">
 							<rect x="156.5" y="42.0" height="32.0" width="176.0" data-name="FrameworkTemplate"></rect>
 						</g>
-						<g transform="translate(156.5, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkTemplate" data-compartment="0">
+						<g transform="translate(156.5, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FrameworkTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkTemplate" data-compartment="0">
 								<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkTemplate" data-compartment="0">FrameworkTemplate</text>
 								
@@ -64,7 +63,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ControlTemplate">
 							<rect x="0.0" y="84.0" height="32.0" width="146.0" data-name="ControlTemplate"></rect>
 						</g>
-						<g transform="translate(0, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ControlTemplate" data-compartment="0">
+						<g transform="translate(0, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ControlTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ControlTemplate" data-compartment="0">
 								<text x="65.0" y="14.1" stroke="none" text-anchor="middle" data-name="ControlTemplate" data-compartment="0">ControlTemplate</text>
 								
@@ -75,7 +74,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ItemsPanelTemplate">
 							<rect x="156.0" y="84.0" height="32.0" width="177.0" data-name="ItemsPanelTemplate"></rect>
 						</g>
-						<g transform="translate(156, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsPanelTemplate" data-compartment="0">
+						<g transform="translate(156, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemsPanelTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemsPanelTemplate" data-compartment="0">
 								<text x="80.5" y="14.1" stroke="none" text-anchor="middle" data-name="ItemsPanelTemplate" data-compartment="0">ItemsPanelTemplate</text>
 								
@@ -86,7 +85,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DataTemplate">
 							<rect x="343.0" y="84.0" height="32.0" width="126.0" data-name="DataTemplate"></rect>
 						</g>
-						<g transform="translate(343, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTemplate" data-compartment="0">
+						<g transform="translate(343, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTemplate" data-compartment="0">
 								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataTemplate" data-compartment="0">DataTemplate</text>
 								
@@ -97,7 +96,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ItemContainerTemplate">
 							<rect x="196.0" y="126.0" height="32.0" width="200.0" data-name="ItemContainerTemplate"></rect>
 						</g>
-						<g transform="translate(196, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemContainerTemplate" data-compartment="0">
+						<g transform="translate(196, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ItemContainerTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ItemContainerTemplate" data-compartment="0">
 								<text x="92.0" y="14.1" stroke="none" text-anchor="middle" data-name="ItemContainerTemplate" data-compartment="0">ItemContainerTemplate</text>
 								
@@ -108,7 +107,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="HierarchicalDataTemplate">
 							<rect x="406.0" y="126.0" height="32.0" width="220.0" data-name="HierarchicalDataTemplate"></rect>
 						</g>
-						<g transform="translate(406, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="HierarchicalDataTemplate" data-compartment="0">
+						<g transform="translate(406, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="HierarchicalDataTemplate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="HierarchicalDataTemplate" data-compartment="0">
 								<text x="102.0" y="14.1" stroke="none" text-anchor="middle" data-name="HierarchicalDataTemplate" data-compartment="0">HierarchicalDataTemplate</text>
 								

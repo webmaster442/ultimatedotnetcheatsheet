@@ -5,7 +5,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: wpf3
@@ -82,13 +81,13 @@
 	
 	
 	</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="1369.0" width="1010.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M55.6 448.8 L109 16 L165.5 16 L165.5 16.0 " fill="none"></path>
 					<path d="M50.3 448.1 L55.6 448.8 L60.9 449.4 L54.0 462.0 Z"></path>
 					<path d="M256.8 16.0 L300 16 L341.5 16 L341.5 16.0 " fill="none"></path>
@@ -221,7 +220,7 @@
 						<g fill="#C06EF0" stroke="#33322E" data-name="Animatable">
 							<rect x="0.0" y="462.0" height="32.0" width="104.0" data-name="Animatable"></rect>
 						</g>
-						<g transform="translate(0, 462)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Animatable" data-compartment="0">
+						<g transform="translate(0, 462)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Animatable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Animatable" data-compartment="0">
 								<text x="44.0" y="14.1" stroke="none" text-anchor="middle" data-name="Animatable" data-compartment="0">Animatable</text>
 								
@@ -232,7 +231,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Camera">
 							<rect x="165.5" y="0.0" height="32.0" width="78.0" data-name="Camera"></rect>
 						</g>
-						<g transform="translate(165.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Camera" data-compartment="0">
+						<g transform="translate(165.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Camera" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Camera" data-compartment="0">
 								<text x="31.0" y="14.1" stroke="none" text-anchor="middle" data-name="Camera" data-compartment="0">Camera</text>
 								
@@ -243,7 +242,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ProjectionCamera">
 							<rect x="341.5" y="0.0" height="32.0" width="157.0" data-name="ProjectionCamera"></rect>
 						</g>
-						<g transform="translate(341.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ProjectionCamera" data-compartment="0">
+						<g transform="translate(341.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ProjectionCamera" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ProjectionCamera" data-compartment="0">
 								<text x="70.5" y="14.1" stroke="none" text-anchor="middle" data-name="ProjectionCamera" data-compartment="0">ProjectionCamera</text>
 								
@@ -254,7 +253,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="PerspectiveCamera">
 							<rect x="563.0" y="0.0" height="32.0" width="171.0" data-name="PerspectiveCamera"></rect>
 						</g>
-						<g transform="translate(563, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PerspectiveCamera" data-compartment="0">
+						<g transform="translate(563, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PerspectiveCamera" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PerspectiveCamera" data-compartment="0">
 								<text x="77.5" y="14.1" stroke="none" text-anchor="middle" data-name="PerspectiveCamera" data-compartment="0">PerspectiveCamera</text>
 								
@@ -265,7 +264,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Geometry3D">
 							<rect x="147.0" y="63.0" height="32.0" width="115.0" data-name="Geometry3D"></rect>
 						</g>
-						<g transform="translate(147, 63)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Geometry3D" data-compartment="0">
+						<g transform="translate(147, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Geometry3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Geometry3D" data-compartment="0">
 								<text x="49.5" y="14.1" stroke="none" text-anchor="middle" data-name="Geometry3D" data-compartment="0">Geometry3D</text>
 								
@@ -276,7 +275,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MeshGeometry3D">
 							<rect x="341.0" y="63.0" height="32.0" width="158.0" data-name="MeshGeometry3D"></rect>
 						</g>
-						<g transform="translate(341, 63)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MeshGeometry3D" data-compartment="0">
+						<g transform="translate(341, 63)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MeshGeometry3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MeshGeometry3D" data-compartment="0">
 								<text x="71.0" y="14.1" stroke="none" text-anchor="middle" data-name="MeshGeometry3D" data-compartment="0">MeshGeometry3D</text>
 								
@@ -287,7 +286,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Model3D">
 							<rect x="161.5" y="168.0" height="32.0" width="86.0" data-name="Model3D"></rect>
 						</g>
-						<g transform="translate(161.5, 168)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Model3D" data-compartment="0">
+						<g transform="translate(161.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Model3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Model3D" data-compartment="0">
 								<text x="35.0" y="14.1" stroke="none" text-anchor="middle" data-name="Model3D" data-compartment="0">Model3D</text>
 								
@@ -298,7 +297,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Light">
 							<rect x="392.5" y="105.0" height="32.0" width="55.0" data-name="Light"></rect>
 						</g>
-						<g transform="translate(392.5, 105)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Light" data-compartment="0">
+						<g transform="translate(392.5, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Light" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Light" data-compartment="0">
 								<text x="19.5" y="14.1" stroke="none" text-anchor="middle" data-name="Light" data-compartment="0">Light</text>
 								
@@ -309,7 +308,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DirectionalLight">
 							<rect x="579.0" y="84.0" height="32.0" width="139.0" data-name="DirectionalLight"></rect>
 						</g>
-						<g transform="translate(579, 84)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DirectionalLight" data-compartment="0">
+						<g transform="translate(579, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DirectionalLight" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DirectionalLight" data-compartment="0">
 								<text x="61.5" y="14.1" stroke="none" text-anchor="middle" data-name="DirectionalLight" data-compartment="0">DirectionalLight</text>
 								
@@ -320,7 +319,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GeneralTransform3D">
 							<rect x="114.0" y="273.0" height="32.0" width="181.0" data-name="GeneralTransform3D"></rect>
 						</g>
-						<g transform="translate(114, 273)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform3D" data-compartment="0">
+						<g transform="translate(114, 273)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeneralTransform3D" data-compartment="0">
 								<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="GeneralTransform3D" data-compartment="0">GeneralTransform3D</text>
 								
@@ -331,7 +330,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Transform3D">
 							<rect x="361.0" y="252.0" height="32.0" width="118.0" data-name="Transform3D"></rect>
 						</g>
-						<g transform="translate(361, 252)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform3D" data-compartment="0">
+						<g transform="translate(361, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform3D" data-compartment="0">
 								<text x="51.0" y="14.1" stroke="none" text-anchor="middle" data-name="Transform3D" data-compartment="0">Transform3D</text>
 								
@@ -342,7 +341,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="AffineTransform3D">
 							<rect x="567.0" y="231.0" height="32.0" width="163.0" data-name="AffineTransform3D"></rect>
 						</g>
-						<g transform="translate(567, 231)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AffineTransform3D" data-compartment="0">
+						<g transform="translate(567, 231)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AffineTransform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AffineTransform3D" data-compartment="0">
 								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="AffineTransform3D" data-compartment="0">AffineTransform3D</text>
 								
@@ -353,7 +352,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MatrixTransform3D">
 							<rect x="565.5" y="294.0" height="32.0" width="166.0" data-name="MatrixTransform3D"></rect>
 						</g>
-						<g transform="translate(565.5, 294)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform3D" data-compartment="0">
+						<g transform="translate(565.5, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MatrixTransform3D" data-compartment="0">
 								<text x="75.0" y="14.1" stroke="none" text-anchor="middle" data-name="MatrixTransform3D" data-compartment="0">MatrixTransform3D</text>
 								
@@ -364,7 +363,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Transform3DGroup">
 							<rect x="565.0" y="378.0" height="32.0" width="167.0" data-name="Transform3DGroup"></rect>
 						</g>
-						<g transform="translate(565, 378)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform3DGroup" data-compartment="0">
+						<g transform="translate(565, 378)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform3DGroup" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform3DGroup" data-compartment="0">
 								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="Transform3DGroup" data-compartment="0">Transform3DGroup</text>
 								
@@ -375,7 +374,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="RotateTransform3D">
 							<rect x="773.0" y="189.0" height="32.0" width="170.0" data-name="RotateTransform3D"></rect>
 						</g>
-						<g transform="translate(773, 189)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform3D" data-compartment="0">
+						<g transform="translate(773, 189)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RotateTransform3D" data-compartment="0">
 								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="RotateTransform3D" data-compartment="0">RotateTransform3D</text>
 								
@@ -386,7 +385,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ScaleTransform3D">
 							<rect x="777.0" y="231.0" height="32.0" width="162.0" data-name="ScaleTransform3D"></rect>
 						</g>
-						<g transform="translate(777, 231)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform3D" data-compartment="0">
+						<g transform="translate(777, 231)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScaleTransform3D" data-compartment="0">
 								<text x="73.0" y="14.1" stroke="none" text-anchor="middle" data-name="ScaleTransform3D" data-compartment="0">ScaleTransform3D</text>
 								
@@ -397,7 +396,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TranslateTransform3D">
 							<rect x="762.0" y="273.0" height="32.0" width="192.0" data-name="TranslateTransform3D"></rect>
 						</g>
-						<g transform="translate(762, 273)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform3D" data-compartment="0">
+						<g transform="translate(762, 273)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TranslateTransform3D" data-compartment="0">
 								<text x="88.0" y="14.1" stroke="none" text-anchor="middle" data-name="TranslateTransform3D" data-compartment="0">TranslateTransform3D</text>
 								
@@ -408,7 +407,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GeneralTransform3DGroup">
 							<rect x="305.0" y="294.0" height="32.0" width="230.0" data-name="GeneralTransform3DGroup"></rect>
 						</g>
-						<g transform="translate(305, 294)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform3DGroup" data-compartment="0">
+						<g transform="translate(305, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform3DGroup" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeneralTransform3DGroup" data-compartment="0">
 								<text x="107.0" y="14.1" stroke="none" text-anchor="middle" data-name="GeneralTransform3DGroup" data-compartment="0">GeneralTransform3DGroup</text>
 								
@@ -419,7 +418,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Material">
 							<rect x="165.0" y="399.0" height="32.0" width="79.0" data-name="Material"></rect>
 						</g>
-						<g transform="translate(165, 399)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Material" data-compartment="0">
+						<g transform="translate(165, 399)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Material" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Material" data-compartment="0">
 								<text x="31.5" y="14.1" stroke="none" text-anchor="middle" data-name="Material" data-compartment="0">Material</text>
 								
@@ -430,7 +429,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MaterialGroup">
 							<rect x="356.0" y="336.0" height="32.0" width="128.0" data-name="MaterialGroup"></rect>
 						</g>
-						<g transform="translate(356, 336)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaterialGroup" data-compartment="0">
+						<g transform="translate(356, 336)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaterialGroup" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MaterialGroup" data-compartment="0">
 								<text x="56.0" y="14.1" stroke="none" text-anchor="middle" data-name="MaterialGroup" data-compartment="0">MaterialGroup</text>
 								
@@ -441,7 +440,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DiffuseMaterial">
 							<rect x="353.0" y="378.0" height="32.0" width="134.0" data-name="DiffuseMaterial"></rect>
 						</g>
-						<g transform="translate(353, 378)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DiffuseMaterial" data-compartment="0">
+						<g transform="translate(353, 378)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DiffuseMaterial" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DiffuseMaterial" data-compartment="0">
 								<text x="59.0" y="14.1" stroke="none" text-anchor="middle" data-name="DiffuseMaterial" data-compartment="0">DiffuseMaterial</text>
 								
@@ -452,7 +451,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="EmissiveMaterial">
 							<rect x="345.5" y="420.0" height="32.0" width="149.0" data-name="EmissiveMaterial"></rect>
 						</g>
-						<g transform="translate(345.5, 420)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="EmissiveMaterial" data-compartment="0">
+						<g transform="translate(345.5, 420)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EmissiveMaterial" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EmissiveMaterial" data-compartment="0">
 								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="EmissiveMaterial" data-compartment="0">EmissiveMaterial</text>
 								
@@ -463,7 +462,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SpecularMaterial">
 							<rect x="345.5" y="462.0" height="32.0" width="149.0" data-name="SpecularMaterial"></rect>
 						</g>
-						<g transform="translate(345.5, 462)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpecularMaterial" data-compartment="0">
+						<g transform="translate(345.5, 462)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpecularMaterial" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SpecularMaterial" data-compartment="0">
 								<text x="66.5" y="14.1" stroke="none" text-anchor="middle" data-name="SpecularMaterial" data-compartment="0">SpecularMaterial</text>
 								
@@ -474,7 +473,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GeometryModel3D">
 							<rect x="338.5" y="168.0" height="32.0" width="163.0" data-name="GeometryModel3D"></rect>
 						</g>
-						<g transform="translate(338.5, 168)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryModel3D" data-compartment="0">
+						<g transform="translate(338.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryModel3D" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeometryModel3D" data-compartment="0">
 								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="GeometryModel3D" data-compartment="0">GeometryModel3D</text>
 								
@@ -485,7 +484,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Model3DGroup">
 							<rect x="352.5" y="210.0" height="32.0" width="135.0" data-name="Model3DGroup"></rect>
 						</g>
-						<g transform="translate(352.5, 210)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Model3DGroup" data-compartment="0">
+						<g transform="translate(352.5, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Model3DGroup" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Model3DGroup" data-compartment="0">
 								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="Model3DGroup" data-compartment="0">Model3DGroup</text>
 								
@@ -496,7 +495,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="OrthographicCamera">
 							<rect x="558.0" y="42.0" height="32.0" width="181.0" data-name="OrthographicCamera"></rect>
 						</g>
-						<g transform="translate(558, 42)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="OrthographicCamera" data-compartment="0">
+						<g transform="translate(558, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OrthographicCamera" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OrthographicCamera" data-compartment="0">
 								<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="OrthographicCamera" data-compartment="0">OrthographicCamera</text>
 								
@@ -507,7 +506,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="PointLightBase">
 							<rect x="581.0" y="126.0" height="32.0" width="135.0" data-name="PointLightBase"></rect>
 						</g>
-						<g transform="translate(581, 126)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PointLightBase" data-compartment="0">
+						<g transform="translate(581, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PointLightBase" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PointLightBase" data-compartment="0">
 								<text x="59.5" y="14.1" stroke="none" text-anchor="middle" data-name="PointLightBase" data-compartment="0">PointLightBase</text>
 								
@@ -518,7 +517,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SpotLight">
 							<rect x="812.5" y="105.0" height="32.0" width="91.0" data-name="SpotLight"></rect>
 						</g>
-						<g transform="translate(812.5, 105)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpotLight" data-compartment="0">
+						<g transform="translate(812.5, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SpotLight" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SpotLight" data-compartment="0">
 								<text x="37.5" y="14.1" stroke="none" text-anchor="middle" data-name="SpotLight" data-compartment="0">SpotLight</text>
 								
@@ -529,7 +528,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="AmbientLight">
 							<rect x="589.0" y="168.0" height="32.0" width="119.0" data-name="AmbientLight"></rect>
 						</g>
-						<g transform="translate(589, 168)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AmbientLight" data-compartment="0">
+						<g transform="translate(589, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AmbientLight" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AmbientLight" data-compartment="0">
 								<text x="51.5" y="14.1" stroke="none" text-anchor="middle" data-name="AmbientLight" data-compartment="0">AmbientLight</text>
 								
@@ -540,7 +539,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="PointLight">
 							<rect x="810.5" y="147.0" height="32.0" width="95.0" data-name="PointLight"></rect>
 						</g>
-						<g transform="translate(810.5, 147)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PointLight" data-compartment="0">
+						<g transform="translate(810.5, 147)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PointLight" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PointLight" data-compartment="0">
 								<text x="39.5" y="14.1" stroke="none" text-anchor="middle" data-name="PointLight" data-compartment="0">PointLight</text>
 								
@@ -551,7 +550,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Brush">
 							<rect x="173.5" y="525.0" height="32.0" width="62.0" data-name="Brush"></rect>
 						</g>
-						<g transform="translate(173.5, 525)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Brush" data-compartment="0">
+						<g transform="translate(173.5, 525)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Brush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Brush" data-compartment="0">
 								<text x="23.0" y="14.1" stroke="none" text-anchor="middle" data-name="Brush" data-compartment="0">Brush</text>
 								
@@ -562,7 +561,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TileBrush">
 							<rect x="375.0" y="504.0" height="32.0" width="90.0" data-name="TileBrush"></rect>
 						</g>
-						<g transform="translate(375, 504)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TileBrush" data-compartment="0">
+						<g transform="translate(375, 504)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TileBrush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TileBrush" data-compartment="0">
 								<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="TileBrush" data-compartment="0">TileBrush</text>
 								
@@ -573,7 +572,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="VisualBrush">
 							<rect x="593.5" y="420.0" height="32.0" width="110.0" data-name="VisualBrush"></rect>
 						</g>
-						<g transform="translate(593.5, 420)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="VisualBrush" data-compartment="0">
+						<g transform="translate(593.5, 420)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="VisualBrush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VisualBrush" data-compartment="0">
 								<text x="47.0" y="14.1" stroke="none" text-anchor="middle" data-name="VisualBrush" data-compartment="0">VisualBrush</text>
 								
@@ -584,7 +583,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BitmapCacheBrush">
 							<rect x="336.5" y="546.0" height="32.0" width="167.0" data-name="BitmapCacheBrush"></rect>
 						</g>
-						<g transform="translate(336.5, 546)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapCacheBrush" data-compartment="0">
+						<g transform="translate(336.5, 546)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapCacheBrush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapCacheBrush" data-compartment="0">
 								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapCacheBrush" data-compartment="0">BitmapCacheBrush</text>
 								
@@ -595,7 +594,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DrawingBrush">
 							<rect x="585.5" y="504.0" height="32.0" width="126.0" data-name="DrawingBrush"></rect>
 						</g>
-						<g transform="translate(585.5, 504)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingBrush" data-compartment="0">
+						<g transform="translate(585.5, 504)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingBrush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DrawingBrush" data-compartment="0">
 								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="DrawingBrush" data-compartment="0">DrawingBrush</text>
 								
@@ -606,7 +605,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ImageBrush">
 							<rect x="593.0" y="651.0" height="32.0" width="111.0" data-name="ImageBrush"></rect>
 						</g>
-						<g transform="translate(593, 651)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageBrush" data-compartment="0">
+						<g transform="translate(593, 651)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageBrush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageBrush" data-compartment="0">
 								<text x="47.5" y="14.1" stroke="none" text-anchor="middle" data-name="ImageBrush" data-compartment="0">ImageBrush</text>
 								
@@ -617,7 +616,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Drawing">
 							<rect x="164.5" y="672.0" height="32.0" width="80.0" data-name="Drawing"></rect>
 						</g>
-						<g transform="translate(164.5, 672)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Drawing" data-compartment="0">
+						<g transform="translate(164.5, 672)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Drawing" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Drawing" data-compartment="0">
 								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="Drawing" data-compartment="0">Drawing</text>
 								
@@ -628,7 +627,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Pen">
 							<rect x="181.0" y="777.0" height="32.0" width="47.0" data-name="Pen"></rect>
 						</g>
-						<g transform="translate(181, 777)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Pen" data-compartment="0">
+						<g transform="translate(181, 777)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Pen" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Pen" data-compartment="0">
 								<text x="15.5" y="14.1" stroke="none" text-anchor="middle" data-name="Pen" data-compartment="0">Pen</text>
 								
@@ -639,7 +638,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DrawingGroup">
 							<rect x="355.5" y="588.0" height="32.0" width="129.0" data-name="DrawingGroup"></rect>
 						</g>
-						<g transform="translate(355.5, 588)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingGroup" data-compartment="0">
+						<g transform="translate(355.5, 588)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingGroup" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DrawingGroup" data-compartment="0">
 								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="DrawingGroup" data-compartment="0">DrawingGroup</text>
 								
@@ -650,7 +649,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GeometryDrawing">
 							<rect x="341.5" y="630.0" height="32.0" width="157.0" data-name="GeometryDrawing"></rect>
 						</g>
-						<g transform="translate(341.5, 630)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryDrawing" data-compartment="0">
+						<g transform="translate(341.5, 630)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeometryDrawing" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeometryDrawing" data-compartment="0">
 								<text x="70.5" y="14.1" stroke="none" text-anchor="middle" data-name="GeometryDrawing" data-compartment="0">GeometryDrawing</text>
 								
@@ -661,7 +660,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GlyphRunDrawing">
 							<rect x="341.0" y="672.0" height="32.0" width="158.0" data-name="GlyphRunDrawing"></rect>
 						</g>
-						<g transform="translate(341, 672)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GlyphRunDrawing" data-compartment="0">
+						<g transform="translate(341, 672)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GlyphRunDrawing" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GlyphRunDrawing" data-compartment="0">
 								<text x="71.0" y="14.1" stroke="none" text-anchor="middle" data-name="GlyphRunDrawing" data-compartment="0">GlyphRunDrawing</text>
 								
@@ -672,7 +671,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ImageDrawing">
 							<rect x="355.5" y="714.0" height="32.0" width="129.0" data-name="ImageDrawing"></rect>
 						</g>
-						<g transform="translate(355.5, 714)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageDrawing" data-compartment="0">
+						<g transform="translate(355.5, 714)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageDrawing" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageDrawing" data-compartment="0">
 								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="ImageDrawing" data-compartment="0">ImageDrawing</text>
 								
@@ -683,7 +682,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="VideoDrawing">
 							<rect x="357.5" y="756.0" height="32.0" width="125.0" data-name="VideoDrawing"></rect>
 						</g>
-						<g transform="translate(357.5, 756)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="VideoDrawing" data-compartment="0">
+						<g transform="translate(357.5, 756)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="VideoDrawing" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="VideoDrawing" data-compartment="0">
 								<text x="54.5" y="14.1" stroke="none" text-anchor="middle" data-name="VideoDrawing" data-compartment="0">VideoDrawing</text>
 								
@@ -694,7 +693,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ImageSource">
 							<rect x="144.0" y="840.0" height="32.0" width="121.0" data-name="ImageSource"></rect>
 						</g>
-						<g transform="translate(144, 840)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageSource" data-compartment="0">
+						<g transform="translate(144, 840)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ImageSource" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ImageSource" data-compartment="0">
 								<text x="52.5" y="14.1" stroke="none" text-anchor="middle" data-name="ImageSource" data-compartment="0">ImageSource</text>
 								
@@ -705,7 +704,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="D3DImage">
 							<rect x="370.5" y="798.0" height="32.0" width="99.0" data-name="D3DImage"></rect>
 						</g>
-						<g transform="translate(370.5, 798)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="D3DImage" data-compartment="0">
+						<g transform="translate(370.5, 798)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="D3DImage" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="D3DImage" data-compartment="0">
 								<text x="41.5" y="14.1" stroke="none" text-anchor="middle" data-name="D3DImage" data-compartment="0">D3DImage</text>
 								
@@ -716,7 +715,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="DrawingImage">
 							<rect x="355.5" y="840.0" height="32.0" width="129.0" data-name="DrawingImage"></rect>
 						</g>
-						<g transform="translate(355.5, 840)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingImage" data-compartment="0">
+						<g transform="translate(355.5, 840)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DrawingImage" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DrawingImage" data-compartment="0">
 								<text x="56.5" y="14.1" stroke="none" text-anchor="middle" data-name="DrawingImage" data-compartment="0">DrawingImage</text>
 								
@@ -727,7 +726,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BitmapSource">
 							<rect x="357.0" y="882.0" height="32.0" width="126.0" data-name="BitmapSource"></rect>
 						</g>
-						<g transform="translate(357, 882)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapSource" data-compartment="0">
+						<g transform="translate(357, 882)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapSource" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapSource" data-compartment="0">
 								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapSource" data-compartment="0">BitmapSource</text>
 								
@@ -738,7 +737,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BitmapImage">
 							<rect x="589.0" y="693.0" height="32.0" width="119.0" data-name="BitmapImage"></rect>
 						</g>
-						<g transform="translate(589, 693)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapImage" data-compartment="0">
+						<g transform="translate(589, 693)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapImage" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapImage" data-compartment="0">
 								<text x="51.5" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapImage" data-compartment="0">BitmapImage</text>
 								
@@ -749,7 +748,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="InteropBitmap">
 							<rect x="585.5" y="735.0" height="32.0" width="126.0" data-name="InteropBitmap"></rect>
 						</g>
-						<g transform="translate(585.5, 735)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="InteropBitmap" data-compartment="0">
+						<g transform="translate(585.5, 735)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="InteropBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="InteropBitmap" data-compartment="0">
 								<text x="55.0" y="14.1" stroke="none" text-anchor="middle" data-name="InteropBitmap" data-compartment="0">InteropBitmap</text>
 								
@@ -760,7 +759,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="BitmapFrame">
 							<rect x="588.5" y="777.0" height="32.0" width="120.0" data-name="BitmapFrame"></rect>
 						</g>
-						<g transform="translate(588.5, 777)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapFrame" data-compartment="0">
+						<g transform="translate(588.5, 777)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BitmapFrame" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BitmapFrame" data-compartment="0">
 								<text x="52.0" y="14.1" stroke="none" text-anchor="middle" data-name="BitmapFrame" data-compartment="0">BitmapFrame</text>
 								
@@ -771,7 +770,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="CachedBitmap">
 							<rect x="583.0" y="819.0" height="32.0" width="131.0" data-name="CachedBitmap"></rect>
 						</g>
-						<g transform="translate(583, 819)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CachedBitmap" data-compartment="0">
+						<g transform="translate(583, 819)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CachedBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CachedBitmap" data-compartment="0">
 								<text x="57.5" y="14.1" stroke="none" text-anchor="middle" data-name="CachedBitmap" data-compartment="0">CachedBitmap</text>
 								
@@ -782,7 +781,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ColorConvertedBitmap">
 							<rect x="551.5" y="861.0" height="32.0" width="194.0" data-name="ColorConvertedBitmap"></rect>
 						</g>
-						<g transform="translate(551.5, 861)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ColorConvertedBitmap" data-compartment="0">
+						<g transform="translate(551.5, 861)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ColorConvertedBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ColorConvertedBitmap" data-compartment="0">
 								<text x="89.0" y="14.1" stroke="none" text-anchor="middle" data-name="ColorConvertedBitmap" data-compartment="0">ColorConvertedBitmap</text>
 								
@@ -793,7 +792,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="CroppedBitmap">
 							<rect x="579.5" y="903.0" height="32.0" width="138.0" data-name="CroppedBitmap"></rect>
 						</g>
-						<g transform="translate(579.5, 903)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CroppedBitmap" data-compartment="0">
+						<g transform="translate(579.5, 903)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CroppedBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CroppedBitmap" data-compartment="0">
 								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="CroppedBitmap" data-compartment="0">CroppedBitmap</text>
 								
@@ -804,7 +803,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="FormatConvertedBitmap">
 							<rect x="545.0" y="945.0" height="32.0" width="207.0" data-name="FormatConvertedBitmap"></rect>
 						</g>
-						<g transform="translate(545, 945)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FormatConvertedBitmap" data-compartment="0">
+						<g transform="translate(545, 945)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FormatConvertedBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FormatConvertedBitmap" data-compartment="0">
 								<text x="95.5" y="14.1" stroke="none" text-anchor="middle" data-name="FormatConvertedBitmap" data-compartment="0">FormatConvertedBitmap</text>
 								
@@ -815,7 +814,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="RenderTargetBitmap">
 							<rect x="559.0" y="987.0" height="32.0" width="179.0" data-name="RenderTargetBitmap"></rect>
 						</g>
-						<g transform="translate(559, 987)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RenderTargetBitmap" data-compartment="0">
+						<g transform="translate(559, 987)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RenderTargetBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RenderTargetBitmap" data-compartment="0">
 								<text x="81.5" y="14.1" stroke="none" text-anchor="middle" data-name="RenderTargetBitmap" data-compartment="0">RenderTargetBitmap</text>
 								
@@ -826,7 +825,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TransformedBitmap">
 							<rect x="563.5" y="1029.0" height="32.0" width="170.0" data-name="TransformedBitmap"></rect>
 						</g>
-						<g transform="translate(563.5, 1029)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TransformedBitmap" data-compartment="0">
+						<g transform="translate(563.5, 1029)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TransformedBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TransformedBitmap" data-compartment="0">
 								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="TransformedBitmap" data-compartment="0">TransformedBitmap</text>
 								
@@ -837,7 +836,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="WriteableBitmap">
 							<rect x="576.0" y="1071.0" height="32.0" width="145.0" data-name="WriteableBitmap"></rect>
 						</g>
-						<g transform="translate(576, 1071)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="WriteableBitmap" data-compartment="0">
+						<g transform="translate(576, 1071)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="WriteableBitmap" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="WriteableBitmap" data-compartment="0">
 								<text x="64.5" y="14.1" stroke="none" text-anchor="middle" data-name="WriteableBitmap" data-compartment="0">WriteableBitmap</text>
 								
@@ -848,7 +847,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GeneralTransform">
 							<rect x="125.0" y="1218.0" height="32.0" width="159.0" data-name="GeneralTransform"></rect>
 						</g>
-						<g transform="translate(125, 1218)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform" data-compartment="0">
+						<g transform="translate(125, 1218)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeneralTransform" data-compartment="0">
 								<text x="71.5" y="14.1" stroke="none" text-anchor="middle" data-name="GeneralTransform" data-compartment="0">GeneralTransform</text>
 								
@@ -859,7 +858,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="GeneralTransformGroup">
 							<rect x="316.0" y="1134.0" height="32.0" width="208.0" data-name="GeneralTransformGroup"></rect>
 						</g>
-						<g transform="translate(316, 1134)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransformGroup" data-compartment="0">
+						<g transform="translate(316, 1134)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="GeneralTransformGroup" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="GeneralTransformGroup" data-compartment="0">
 								<text x="96.0" y="14.1" stroke="none" text-anchor="middle" data-name="GeneralTransformGroup" data-compartment="0">GeneralTransformGroup</text>
 								
@@ -870,7 +869,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Transform">
 							<rect x="372.0" y="1239.0" height="32.0" width="96.0" data-name="Transform"></rect>
 						</g>
-						<g transform="translate(372, 1239)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform" data-compartment="0">
+						<g transform="translate(372, 1239)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transform" data-compartment="0">
 								<text x="40.0" y="14.1" stroke="none" text-anchor="middle" data-name="Transform" data-compartment="0">Transform</text>
 								
@@ -881,7 +880,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MatrixTransform">
 							<rect x="576.5" y="1113.0" height="32.0" width="144.0" data-name="MatrixTransform"></rect>
 						</g>
-						<g transform="translate(576.5, 1113)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform" data-compartment="0">
+						<g transform="translate(576.5, 1113)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MatrixTransform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MatrixTransform" data-compartment="0">
 								<text x="64.0" y="14.1" stroke="none" text-anchor="middle" data-name="MatrixTransform" data-compartment="0">MatrixTransform</text>
 								
@@ -892,7 +891,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="RotateTransform">
 							<rect x="574.5" y="1155.0" height="32.0" width="148.0" data-name="RotateTransform"></rect>
 						</g>
-						<g transform="translate(574.5, 1155)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform" data-compartment="0">
+						<g transform="translate(574.5, 1155)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RotateTransform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RotateTransform" data-compartment="0">
 								<text x="66.0" y="14.1" stroke="none" text-anchor="middle" data-name="RotateTransform" data-compartment="0">RotateTransform</text>
 								
@@ -903,7 +902,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ScaleTransform">
 							<rect x="578.5" y="1197.0" height="32.0" width="140.0" data-name="ScaleTransform"></rect>
 						</g>
-						<g transform="translate(578.5, 1197)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform" data-compartment="0">
+						<g transform="translate(578.5, 1197)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ScaleTransform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ScaleTransform" data-compartment="0">
 								<text x="62.0" y="14.1" stroke="none" text-anchor="middle" data-name="ScaleTransform" data-compartment="0">ScaleTransform</text>
 								
@@ -914,7 +913,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="SkewTransform">
 							<rect x="579.5" y="1239.0" height="32.0" width="138.0" data-name="SkewTransform"></rect>
 						</g>
-						<g transform="translate(579.5, 1239)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="SkewTransform" data-compartment="0">
+						<g transform="translate(579.5, 1239)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SkewTransform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SkewTransform" data-compartment="0">
 								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="SkewTransform" data-compartment="0">SkewTransform</text>
 								
@@ -925,7 +924,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TranslateTransform">
 							<rect x="563.5" y="1281.0" height="32.0" width="170.0" data-name="TranslateTransform"></rect>
 						</g>
-						<g transform="translate(563.5, 1281)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform" data-compartment="0">
+						<g transform="translate(563.5, 1281)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TranslateTransform" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TranslateTransform" data-compartment="0">
 								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="TranslateTransform" data-compartment="0">TranslateTransform</text>
 								

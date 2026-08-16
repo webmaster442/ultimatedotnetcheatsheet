@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: di-resolve
@@ -35,13 +34,13 @@
 	[IKeyedServiceProvider] &lt;:-- [ServiceProvider]
 	[IAsyncDisposable] &lt;:-- [ServiceProvider]
 	[IDisposable] &lt;:-- [ServiceProvider]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="349.5" width="869.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<g stroke-dasharray="6 6">
 						<path d="M284.3 56.5 L276 56.5 L319 56.5 L319.0 56.5 " fill="none"></path>
 					</g>
@@ -63,13 +62,13 @@
 							<rect x="568.0" y="123.0" height="64.0" width="245.0" data-name="ServiceProvider"></rect>
 							<path d="M568.0 155.0 L813.0 155.0" fill="none" data-name="ServiceProvider"></path>
 						</g>
-						<g transform="translate(568, 123)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceProvider" data-compartment="0">
+						<g transform="translate(568, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceProvider" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceProvider" data-compartment="0">
 								<text x="114.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceProvider" data-compartment="0">ServiceProvider</text>
 								
 							</g>
 						</g>
-						<g transform="translate(568, 155)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceProvider" data-compartment="1">
+						<g transform="translate(568, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceProvider" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceProvider" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ServiceProvider" data-compartment="1">The default IServiceProvider.</text>
 								
@@ -81,13 +80,13 @@
 							<rect x="319.0" y="16.5" height="80.0" width="201.0" data-name="IKeyedServiceProvider"></rect>
 							<path d="M319.0 48.5 L520.0 48.5" fill="none" data-name="IKeyedServiceProvider"></path>
 						</g>
-						<g transform="translate(319, 16.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IKeyedServiceProvider" data-compartment="0">
+						<g transform="translate(319, 16.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IKeyedServiceProvider" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IKeyedServiceProvider" data-compartment="0">
 								<text x="92.5" y="14.1" stroke="none" text-anchor="middle" data-name="IKeyedServiceProvider" data-compartment="0">IKeyedServiceProvider</text>
 								
 							</g>
 						</g>
-						<g transform="translate(319, 48.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IKeyedServiceProvider" data-compartment="1">
+						<g transform="translate(319, 48.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IKeyedServiceProvider" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IKeyedServiceProvider" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IKeyedServiceProvider" data-compartment="1">Retrieves services</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IKeyedServiceProvider" data-compartment="1">using a key and a type.</text>
@@ -100,13 +99,13 @@
 							<rect x="283.5" y="106.5" height="97.0" width="272.0" data-name="IAsyncDisposable"></rect>
 							<path d="M283.5 138.5 L555.5 138.5" fill="none" data-name="IAsyncDisposable"></path>
 						</g>
-						<g transform="translate(283.5, 106.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncDisposable" data-compartment="0">
+						<g transform="translate(283.5, 106.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncDisposable" data-compartment="0">
 								<text x="128.0" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncDisposable" data-compartment="0">IAsyncDisposable</text>
 								
 							</g>
 						</g>
-						<g transform="translate(283.5, 138.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IAsyncDisposable" data-compartment="1">
+						<g transform="translate(283.5, 138.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IAsyncDisposable" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IAsyncDisposable" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IAsyncDisposable" data-compartment="1">Provides a mechanism for</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IAsyncDisposable" data-compartment="1">releasing unmanaged resources</text>
@@ -120,13 +119,13 @@
 							<rect x="281.0" y="213.5" height="80.0" width="277.0" data-name="IDisposable"></rect>
 							<path d="M281.0 245.5 L558.0 245.5" fill="none" data-name="IDisposable"></path>
 						</g>
-						<g transform="translate(281, 213.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+						<g transform="translate(281, 213.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
 								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
 								
 							</g>
 						</g>
-						<g transform="translate(281, 245.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+						<g transform="translate(281, 245.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">Provides a mechanism for</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable" data-compartment="1">releasing unmanaged resources.</text>
@@ -139,13 +138,13 @@
 							<rect x="0.0" y="0.0" height="113.0" width="271.0" data-name="IServiceProvider"></rect>
 							<path d="M0.0 32.0 L271.0 32.0" fill="none" data-name="IServiceProvider"></path>
 						</g>
-						<g transform="translate(0, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceProvider" data-compartment="0">
+						<g transform="translate(0, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceProvider" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceProvider" data-compartment="0">
 								<text x="127.5" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceProvider" data-compartment="0">IServiceProvider</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IServiceProvider" data-compartment="1">
+						<g transform="translate(0, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IServiceProvider" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IServiceProvider" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IServiceProvider" data-compartment="1">Defines a mechanism for</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IServiceProvider" data-compartment="1">retrieving a service object</text>

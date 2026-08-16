@@ -55,9 +55,9 @@
 }
 
 @font-face {
-	font-family: "Open Sans Cyrillic Ext";
-	src: url("./static/open-sans-cyrillic-ext-300-normal.woff2") format("woff2"),
-		url("./static/open-sans-cyrillic-ext-300-normal.ttf") format("truetype");
+	font-family: "Open Sans";
+	src: url("./open-sans-cyrillic-ext-300-normal.woff2") format("woff2"),
+		url("./open-sans-cyrillic-ext-300-normal.ttf") format("truetype");
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
@@ -65,8 +65,8 @@
 
 @font-face {
 	font-family: "JetBrains Mono Light";
-	src: url("./static/JetBrainsMono-Light.woff2") format("woff2"),
-		url("./static/JetBrainsMono-Light.ttf") format("truetype");
+	src: url("./JetBrainsMono-Light.woff2") format("woff2"),
+		url("./JetBrainsMono-Light.ttf") format("truetype");
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
@@ -86,7 +86,7 @@ body {
 
 body {
 	margin: 0;
-	font-family: "Open Sans Cyrillic Ext", "Segoe UI", "Noto Sans", sans-serif;
+	font-family: "Open Sans", "Segoe UI", "Noto Sans", sans-serif;
 	font-size: var(--text-size);
 	line-height: var(--line-height);
 	color: var(--color-text);

@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: collections2
@@ -50,13 +49,13 @@
 	void Dispose()]
 	
 	[IDisposable] &lt;:-- [IEnumerator&lt;out T&gt;]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="515.3" width="1366.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<g stroke-dasharray="6 6">
 						<path d="M233.8 163.9 L260 155 L265 155 L265.0 155.0 " fill="none"></path>
 					</g>
@@ -102,13 +101,13 @@
 							<rect x="0.0" y="168.3" height="64.0" width="255.0" data-name="IEnumerable"></rect>
 							<path d="M0.0 200.3 L255.0 200.3" fill="none" data-name="IEnumerable"></path>
 						</g>
-						<g transform="translate(0, 168.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable" data-compartment="0">
+						<g transform="translate(0, 168.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable" data-compartment="0">
 								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable" data-compartment="0">IEnumerable</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 200.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable" data-compartment="1">
+						<g transform="translate(0, 200.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable" data-compartment="1">IEnumerator GetEnumerator ()</text>
 								
@@ -120,13 +119,13 @@
 							<rect x="265.0" y="123.0" height="64.0" width="315.0" data-name="IEnumerable&lt;out T&gt;"></rect>
 							<path d="M265.0 155.0 L580.0 155.0" fill="none" data-name="IEnumerable&lt;out T&gt;"></path>
 						</g>
-						<g transform="translate(265, 123)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">
+						<g transform="translate(265, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">
 								<text x="149.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">IEnumerable&lt;out T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(265, 155)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">
+						<g transform="translate(265, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">IEnumerator&lt;out T&gt; GetEnumerator ()</text>
 								
@@ -138,13 +137,13 @@
 							<rect x="590.0" y="0.0" height="113.0" width="327.0" data-name="IOrderedEnumerable&lt;out TElement&gt;"></rect>
 							<path d="M590.0 32.0 L917.0 32.0" fill="none" data-name="IOrderedEnumerable&lt;out TElement&gt;"></path>
 						</g>
-						<g transform="translate(590, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">
+						<g transform="translate(590, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">
 								<text x="155.5" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">IOrderedEnumerable&lt;out TElement&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(590, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">
+						<g transform="translate(590, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">CreateOrderedEnumerable&lt;TKey&gt;(</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">Func&lt;out TElement,TKey&gt; keySelector,</text>
@@ -159,13 +158,13 @@
 							<rect x="607.0" y="123.0" height="64.0" width="293.0" data-name="IGrouping&lt;out TKey,out TElement&gt;"></rect>
 							<path d="M607.0 155.0 L900.0 155.0" fill="none" data-name="IGrouping&lt;out TKey,out TElement&gt;"></path>
 						</g>
-						<g transform="translate(607, 123)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">
+						<g transform="translate(607, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">
 								<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">IGrouping&lt;out TKey,out TElement&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(607, 155)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">
+						<g transform="translate(607, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">TKey Key { get; }</text>
 								
@@ -178,20 +177,20 @@
 							<path d="M927.0 131.0 L1310.0 131.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
 							<path d="M927.0 179.0 L1310.0 179.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
 						</g>
-						<g transform="translate(927, 99)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">
+						<g transform="translate(927, 99)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">
 								<text x="183.5" y="14.1" stroke="none" text-anchor="middle" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">ILookup&lt;TKey,TElement&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(927, 131)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">
+						<g transform="translate(927, 131)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">int Count { get; }</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">IEnumerable&lt;TElement&gt; this[TKey key] { get; }</text>
 								
 							</g>
 						</g>
-						<g transform="translate(927, 179)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">
+						<g transform="translate(927, 179)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">
 								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">bool Contains (TKey key)</text>
 								
@@ -202,7 +201,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IQueryable&lt;out T&gt;">
 							<rect x="672.0" y="225.3" height="32.0" width="163.0" data-name="IQueryable&lt;out T&gt;"></rect>
 						</g>
-						<g transform="translate(672, 225.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable&lt;out T&gt;" data-compartment="0">
+						<g transform="translate(672, 225.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable&lt;out T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IQueryable&lt;out T&gt;" data-compartment="0">
 								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="IQueryable&lt;out T&gt;" data-compartment="0">IQueryable&lt;out T&gt;</text>
 								
@@ -213,7 +212,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IOrderedQueryable&lt;out T&gt;">
 							<rect x="1004.5" y="225.3" height="32.0" width="228.0" data-name="IOrderedQueryable&lt;out T&gt;"></rect>
 						</g>
-						<g transform="translate(1004.5, 225.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">
+						<g transform="translate(1004.5, 225.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">
 								<text x="106.0" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">IOrderedQueryable&lt;out T&gt;</text>
 								
@@ -225,13 +224,13 @@
 							<rect x="291.0" y="197.8" height="97.0" width="263.0" data-name="IQueryable"></rect>
 							<path d="M291.0 229.8 L554.0 229.8" fill="none" data-name="IQueryable"></path>
 						</g>
-						<g transform="translate(291, 197.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable" data-compartment="0">
+						<g transform="translate(291, 197.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IQueryable" data-compartment="0">
 								<text x="123.5" y="14.1" stroke="none" text-anchor="middle" data-name="IQueryable" data-compartment="0">IQueryable</text>
 								
 							</g>
 						</g>
-						<g transform="translate(291, 229.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IQueryable" data-compartment="1">
+						<g transform="translate(291, 229.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IQueryable" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IQueryable" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IQueryable" data-compartment="1">Type ElementType { get; }</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IQueryable" data-compartment="1">Expression Expression { get; }</text>
@@ -245,13 +244,13 @@
 							<rect x="35.0" y="288.3" height="97.0" width="185.0" data-name="IEnumerator"></rect>
 							<path d="M35.0 320.3 L220.0 320.3" fill="none" data-name="IEnumerator"></path>
 						</g>
-						<g transform="translate(35, 288.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator" data-compartment="0">
+						<g transform="translate(35, 288.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator" data-compartment="0">
 								<text x="84.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator" data-compartment="0">IEnumerator</text>
 								
 							</g>
 						</g>
-						<g transform="translate(35, 320.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator" data-compartment="1">
+						<g transform="translate(35, 320.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator" data-compartment="1">object Current { get; }</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IEnumerator" data-compartment="1">bool MoveNext()</text>
@@ -265,13 +264,13 @@
 							<rect x="336.0" y="350.0" height="64.0" width="173.0" data-name="IEnumerator&lt;out T&gt;"></rect>
 							<path d="M336.0 382.0 L509.0 382.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
 						</g>
-						<g transform="translate(336, 350)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">
+						<g transform="translate(336, 350)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">
 								<text x="78.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">IEnumerator&lt;out T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(336, 382)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">
+						<g transform="translate(336, 382)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">T Current { get; }</text>
 								
@@ -283,13 +282,13 @@
 							<rect x="62.5" y="395.3" height="64.0" width="130.0" data-name="IDisposable"></rect>
 							<path d="M62.5 427.3 L192.5 427.3" fill="none" data-name="IDisposable"></path>
 						</g>
-						<g transform="translate(62.5, 395.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+						<g transform="translate(62.5, 395.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
 								<text x="57.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
 								
 							</g>
 						</g>
-						<g transform="translate(62.5, 427.25)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+						<g transform="translate(62.5, 427.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">void Dispose()</text>
 								

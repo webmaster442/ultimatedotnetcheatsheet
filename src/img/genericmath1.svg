@@ -3,7 +3,6 @@
 	<desc >#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: genericmath1
@@ -29,13 +28,13 @@
 	[INumberBase\&lt;T\&gt;] &lt;:-- [ISignedNumber\&lt;T\&gt;] &lt;:-- [IFloatingPoint\&lt;T\&gt;] &lt;:-- [IFloatingPointIeee754\&lt;T\&gt;] &lt;:-- [IBinaryFloatingPointIeee754\&lt;T\&gt;]
 	[INumberBase\&lt;T\&gt;] &lt;:-- [IUnsignedNumber&lt;Tself&gt;]
 	[INumberBase\&lt;T\&gt;] &lt;:-- [INumber\&lt;T\&gt;] &lt;:-- [IBinaryNumber\&lt;T\&gt;] &lt;:-- [IBinaryInteger\&lt;T\&gt;]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="480.0" width="1007.5" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<g stroke-dasharray="6 6">
 						<path d="M459.5 77.3 L459.5 69 L459.5 74 L459.5 74.0 " fill="none"></path>
 					</g>
@@ -73,13 +72,13 @@
 							<rect x="292.5" y="0.0" height="64.0" width="334.0" data-name="INumberBase&lt;T&gt;"></rect>
 							<path d="M292.5 32.0 L626.5 32.0" fill="none" data-name="INumberBase&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(292.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumberBase&lt;T&gt;" data-compartment="0">
+						<g transform="translate(292.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumberBase&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumberBase&lt;T&gt;" data-compartment="0">
 								<text x="159.0" y="14.1" stroke="none" text-anchor="middle" data-name="INumberBase&lt;T&gt;" data-compartment="0">INumberBase&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(292.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumberBase&lt;T&gt;" data-compartment="1">
+						<g transform="translate(292.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumberBase&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumberBase&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="INumberBase&lt;T&gt;" data-compartment="1">Defines the base of other number types.</text>
 								
@@ -91,13 +90,13 @@
 							<rect x="42.0" y="82.0" height="64.0" width="200.0" data-name="INumber&lt;T&gt;"></rect>
 							<path d="M42.0 114.0 L242.0 114.0" fill="none" data-name="INumber&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(42, 82)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumber&lt;T&gt;" data-compartment="0">
+						<g transform="translate(42, 82)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumber&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumber&lt;T&gt;" data-compartment="0">
 								<text x="92.0" y="14.1" stroke="none" text-anchor="middle" data-name="INumber&lt;T&gt;" data-compartment="0">INumber&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(42, 114)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumber&lt;T&gt;" data-compartment="1">
+						<g transform="translate(42, 114)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumber&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumber&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="INumber&lt;T&gt;" data-compartment="1">Defines a number type.</text>
 								
@@ -109,13 +108,13 @@
 							<rect x="279.5" y="74.0" height="80.0" width="360.0" data-name="ISignedNumber&lt;T&gt;"></rect>
 							<path d="M279.5 106.0 L639.5 106.0" fill="none" data-name="ISignedNumber&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(279.5, 74)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">
+						<g transform="translate(279.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">
 								<text x="172.0" y="14.1" stroke="none" text-anchor="middle" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">ISignedNumber&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(279.5, 106)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">
+						<g transform="translate(279.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">Defines a number type which can represent</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">both positive and negative values.</text>
@@ -128,13 +127,13 @@
 							<rect x="649.5" y="74.0" height="80.0" width="302.0" data-name="IUnsignedNumber&lt;Tself&gt;"></rect>
 							<path d="M649.5 106.0 L951.5 106.0" fill="none" data-name="IUnsignedNumber&lt;Tself&gt;"></path>
 						</g>
-						<g transform="translate(649.5, 74)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">
+						<g transform="translate(649.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">
 								<text x="143.0" y="14.1" stroke="none" text-anchor="middle" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">IUnsignedNumber&lt;Tself&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(649.5, 106)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">
+						<g transform="translate(649.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">Defines a number type that can only</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">represent positive values.</text>
@@ -147,13 +146,13 @@
 							<rect x="0.0" y="164.0" height="80.0" width="284.0" data-name="IBinaryNumber&lt;T&gt;"></rect>
 							<path d="M0.0 196.0 L284.0 196.0" fill="none" data-name="IBinaryNumber&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(0, 164)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">
+						<g transform="translate(0, 164)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">
 								<text x="134.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">IBinaryNumber&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 196)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">
+						<g transform="translate(0, 196)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">Defines a number that</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">is represented in a base-2 format.</text>
@@ -166,13 +165,13 @@
 							<rect x="0.0" y="254.0" height="80.0" width="284.0" data-name="IBinaryInteger&lt;T&gt;"></rect>
 							<path d="M0.0 286.0 L284.0 286.0" fill="none" data-name="IBinaryInteger&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(0, 254)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">
+						<g transform="translate(0, 254)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">
 								<text x="134.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">IBinaryInteger&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 286)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">
+						<g transform="translate(0, 286)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">Defines an integer type that</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">is represented in a base-2 format.</text>
@@ -185,13 +184,13 @@
 							<rect x="338.0" y="172.0" height="64.0" width="243.0" data-name="IFloatingPoint&lt;T&gt;"></rect>
 							<path d="M338.0 204.0 L581.0 204.0" fill="none" data-name="IFloatingPoint&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(338, 172)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">
+						<g transform="translate(338, 172)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">
 								<text x="113.5" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">IFloatingPoint&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(338, 204)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">
+						<g transform="translate(338, 204)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">Defines a floating-point type.</text>
 								
@@ -203,13 +202,13 @@
 							<rect x="294.0" y="262.0" height="64.0" width="331.0" data-name="IFloatingPointIeee754&lt;T&gt;"></rect>
 							<path d="M294.0 294.0 L625.0 294.0" fill="none" data-name="IFloatingPointIeee754&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(294, 262)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">
+						<g transform="translate(294, 262)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">
 								<text x="157.5" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">IFloatingPointIeee754&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(294, 294)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">
+						<g transform="translate(294, 294)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">Defines an IEEE 754 floating-point type.</text>
 								
@@ -221,13 +220,13 @@
 							<rect x="280.5" y="344.0" height="80.0" width="358.0" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></rect>
 							<path d="M280.5 376.0 L638.5 376.0" fill="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(280.5, 344)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">
+						<g transform="translate(280.5, 344)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">
 								<text x="171.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">IBinaryFloatingPointIeee754&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(280.5, 376)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">
+						<g transform="translate(280.5, 376)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">Defines an IEEE 754 floating-point</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">type that is represented in a base-2 format.</text>

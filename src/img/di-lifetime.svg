@@ -1,7 +1,6 @@
 <svg version="1.1" baseProfile="full" width="690.0" height="449.0" viewBox="0 0 690 449" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >di-lifetime</title>
-	<desc >#font: &apos;Open Sans&apos;
-	#background: transparent
+	<desc >#background: transparent
 	#fill: #f4f6fb
 	#title: di-lifetime
 	
@@ -21,13 +20,13 @@
 	
 	[&lt;note&gt;Lightweight,
 	stateless services] -- [Scoped]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="449.0" width="690.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#33322E" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M128.0 191.7 L128 205 L175.5 225 L175.5 225.0 " fill="none"></path>
 					<path d="M133.3 198.3 L128.0 191.7 L122.7 198.3 L128.0 185.0 Z"></path>
 					<path d="M251.5 302.3 L251.5 309 L301.9807692307692 329 L302.0 329.0 " fill="none"></path>
@@ -46,13 +45,13 @@
 							<rect x="0.0" y="105.0" height="80.0" width="256.0" data-name="Singleton"></rect>
 							<path d="M0.0 137.0 L256.0 137.0" fill="none" data-name="Singleton"></path>
 						</g>
-						<g transform="translate(0, 105)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Singleton" data-compartment="0">
+						<g transform="translate(0, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Singleton" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Singleton" data-compartment="0">
 								<text x="120.0" y="14.1" stroke="none" text-anchor="middle" data-name="Singleton" data-compartment="0">Singleton</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 137)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Singleton" data-compartment="1">
+						<g transform="translate(0, 137)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Singleton" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Singleton" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Singleton" data-compartment="1">One instance for the container</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Singleton" data-compartment="1">lifetime, Created on first use</text>
@@ -65,13 +64,13 @@
 							<rect x="149.0" y="225.0" height="64.0" width="205.0" data-name="Scoped"></rect>
 							<path d="M149.0 257.0 L354.0 257.0" fill="none" data-name="Scoped"></path>
 						</g>
-						<g transform="translate(149, 225)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Scoped" data-compartment="0">
+						<g transform="translate(149, 225)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Scoped" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Scoped" data-compartment="0">
 								<text x="94.5" y="14.1" stroke="none" text-anchor="middle" data-name="Scoped" data-compartment="0">Scoped</text>
 								
 							</g>
 						</g>
-						<g transform="translate(149, 257)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Scoped" data-compartment="1">
+						<g transform="translate(149, 257)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Scoped" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Scoped" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Scoped" data-compartment="1">One instance per scope</text>
 								
@@ -83,13 +82,13 @@
 							<rect x="243.3" y="329.0" height="64.0" width="279.0" data-name="Transient"></rect>
 							<path d="M243.3 361.0 L522.3 361.0" fill="none" data-name="Transient"></path>
 						</g>
-						<g transform="translate(243.25, 329)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transient" data-compartment="0">
+						<g transform="translate(243.25, 329)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transient" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transient" data-compartment="0">
 								<text x="131.5" y="14.1" stroke="none" text-anchor="middle" data-name="Transient" data-compartment="0">Transient</text>
 								
 							</g>
 						</g>
-						<g transform="translate(243.25, 361)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Transient" data-compartment="1">
+						<g transform="translate(243.25, 361)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Transient" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Transient" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Transient" data-compartment="1">New instance on every resolution</text>
 								
@@ -101,7 +100,7 @@
 							<path d="M5.5 0.0 L242.5 0.0 L250.5 8.0 L250.5 65.0 L5.5 65.0 L5.5 0.0 Z" data-name="Longest lifetime"></path>
 							<path d="M242.5 0.0 L242.5 8.0 L250.5 8.0" fill="none" data-name="Longest lifetime"></path>
 						</g>
-						<g transform="translate(5.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Longest lifetime" data-compartment="0">
+						<g transform="translate(5.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Longest lifetime" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Longest lifetime" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Longest lifetime" data-compartment="0">Longest lifetime</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Longest lifetime" data-compartment="0">Shared, thread-safe,</text>
@@ -115,7 +114,7 @@
 							<path d="M394.0 233.0 L626.0 233.0 L634.0 241.0 L634.0 281.0 L394.0 281.0 L394.0 233.0 Z" data-name="Services that should"></path>
 							<path d="M626.0 233.0 L626.0 241.0 L634.0 241.0" fill="none" data-name="Services that should"></path>
 						</g>
-						<g transform="translate(394, 233)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Services that should" data-compartment="0">
+						<g transform="translate(394, 233)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Services that should" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Services that should" data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Services that should" data-compartment="0">Services that should</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Services that should" data-compartment="0">share state during a request</text>
@@ -128,7 +127,7 @@
 							<path d="M296.0 121.0 L446.0 121.0 L454.0 129.0 L454.0 169.0 L296.0 169.0 L296.0 121.0 Z" data-name="Lightweight,"></path>
 							<path d="M446.0 121.0 L446.0 129.0 L454.0 129.0" fill="none" data-name="Lightweight,"></path>
 						</g>
-						<g transform="translate(296, 121)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Lightweight," data-compartment="0">
+						<g transform="translate(296, 121)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Lightweight," data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Lightweight," data-compartment="0">
 								<text x="0.0" y="14.1" stroke="none" data-name="Lightweight," data-compartment="0">Lightweight,</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Lightweight," data-compartment="0">stateless services</text>

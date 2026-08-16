@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: attributes-dataannotation
@@ -68,13 +67,13 @@
 	is a well-formed phone number.]
 	
 	[DataTypeAttribute] &lt;:- [UrlAttribute|Provides URL validation.]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="normal" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="1340.0" width="1348.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M151.1 644.0 L232 535 L297.5 535 L297.5 535.0 " fill="none"></path>
 					<path d="M146.8 640.9 L151.1 644.0 L155.4 647.2 L143.2 654.8 Z"></path>
 					<path d="M214.7 649.3 L232 641.5 L257 641.5 L257.0 641.5 " fill="none"></path>
@@ -124,13 +123,13 @@
 							<rect x="0.0" y="654.8" height="80.0" width="227.0" data-name="Attribute"></rect>
 							<path d="M0.0 686.8 L227.0 686.8" fill="none" data-name="Attribute"></path>
 						</g>
-						<g transform="translate(0, 654.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Attribute" data-compartment="0">
+						<g transform="translate(0, 654.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Attribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Attribute" data-compartment="0">
 								<text x="105.5" y="14.1" stroke="none" text-anchor="middle" data-name="Attribute" data-compartment="0">Attribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 686.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Attribute" data-compartment="1">
+						<g transform="translate(0, 686.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Attribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Attribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Attribute" data-compartment="1">Represents the base class</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Attribute" data-compartment="1">for custom attributes.</text>
@@ -143,13 +142,13 @@
 							<rect x="297.5" y="495.0" height="80.0" width="225.0" data-name="ValidationAttribute"></rect>
 							<path d="M297.5 527.0 L522.5 527.0" fill="none" data-name="ValidationAttribute"></path>
 						</g>
-						<g transform="translate(297.5, 495)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValidationAttribute" data-compartment="0">
+						<g transform="translate(297.5, 495)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValidationAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValidationAttribute" data-compartment="0">
 								<text x="104.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValidationAttribute" data-compartment="0">ValidationAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(297.5, 527)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValidationAttribute" data-compartment="1">
+						<g transform="translate(297.5, 527)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValidationAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValidationAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ValidationAttribute" data-compartment="1">Serves as the base class</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ValidationAttribute" data-compartment="1">for all validation attributes.</text>
@@ -162,13 +161,13 @@
 							<rect x="257.0" y="585.0" height="113.0" width="306.0" data-name="DisplayAttribute"></rect>
 							<path d="M257.0 617.0 L563.0 617.0" fill="none" data-name="DisplayAttribute"></path>
 						</g>
-						<g transform="translate(257, 585)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DisplayAttribute" data-compartment="0">
+						<g transform="translate(257, 585)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DisplayAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DisplayAttribute" data-compartment="0">
 								<text x="145.0" y="14.1" stroke="none" text-anchor="middle" data-name="DisplayAttribute" data-compartment="0">DisplayAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(257, 617)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DisplayAttribute" data-compartment="1">
+						<g transform="translate(257, 617)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DisplayAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DisplayAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DisplayAttribute" data-compartment="1">Provides a general-purpose attribute</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DisplayAttribute" data-compartment="1">that lets you specify localizable</text>
@@ -183,13 +182,13 @@
 							<rect x="237.0" y="708.0" height="80.0" width="346.0" data-name="DisplayFormatAttribute"></rect>
 							<path d="M237.0 740.0 L583.0 740.0" fill="none" data-name="DisplayFormatAttribute"></path>
 						</g>
-						<g transform="translate(237, 708)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DisplayFormatAttribute" data-compartment="0">
+						<g transform="translate(237, 708)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DisplayFormatAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DisplayFormatAttribute" data-compartment="0">
 								<text x="165.0" y="14.1" stroke="none" text-anchor="middle" data-name="DisplayFormatAttribute" data-compartment="0">DisplayFormatAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(237, 740)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DisplayFormatAttribute" data-compartment="1">
+						<g transform="translate(237, 740)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DisplayFormatAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DisplayFormatAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DisplayFormatAttribute" data-compartment="1">Specifies how data fields are displayed</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DisplayFormatAttribute" data-compartment="1">and formatted by ASP.NET Dynamic Data.</text>
@@ -202,13 +201,13 @@
 							<rect x="311.0" y="798.0" height="80.0" width="198.0" data-name="DescriptionAttribute"></rect>
 							<path d="M311.0 830.0 L509.0 830.0" fill="none" data-name="DescriptionAttribute"></path>
 						</g>
-						<g transform="translate(311, 798)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DescriptionAttribute" data-compartment="0">
+						<g transform="translate(311, 798)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DescriptionAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DescriptionAttribute" data-compartment="0">
 								<text x="91.0" y="14.1" stroke="none" text-anchor="middle" data-name="DescriptionAttribute" data-compartment="0">DescriptionAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(311, 830)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DescriptionAttribute" data-compartment="1">
+						<g transform="translate(311, 830)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DescriptionAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DescriptionAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DescriptionAttribute" data-compartment="1">Specifies a description</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DescriptionAttribute" data-compartment="1">for a property or event.</text>
@@ -221,13 +220,13 @@
 							<rect x="652.0" y="0.0" height="80.0" width="304.0" data-name="AllowedValuesAttribute"></rect>
 							<path d="M652.0 32.0 L956.0 32.0" fill="none" data-name="AllowedValuesAttribute"></path>
 						</g>
-						<g transform="translate(652, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="AllowedValuesAttribute" data-compartment="0">
+						<g transform="translate(652, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="AllowedValuesAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="AllowedValuesAttribute" data-compartment="0">
 								<text x="144.0" y="14.1" stroke="none" text-anchor="middle" data-name="AllowedValuesAttribute" data-compartment="0">AllowedValuesAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(652, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="AllowedValuesAttribute" data-compartment="1">
+						<g transform="translate(652, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="AllowedValuesAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="AllowedValuesAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="AllowedValuesAttribute" data-compartment="1">Specifies a list of values</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="AllowedValuesAttribute" data-compartment="1">that should be allowed in a property.</text>
@@ -240,13 +239,13 @@
 							<rect x="650.5" y="90.0" height="80.0" width="307.0" data-name="Base64StringAttribute"></rect>
 							<path d="M650.5 122.0 L957.5 122.0" fill="none" data-name="Base64StringAttribute"></path>
 						</g>
-						<g transform="translate(650.5, 90)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Base64StringAttribute" data-compartment="0">
+						<g transform="translate(650.5, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Base64StringAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Base64StringAttribute" data-compartment="0">
 								<text x="145.5" y="14.1" stroke="none" text-anchor="middle" data-name="Base64StringAttribute" data-compartment="0">Base64StringAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(650.5, 122)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Base64StringAttribute" data-compartment="1">
+						<g transform="translate(650.5, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Base64StringAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Base64StringAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Base64StringAttribute" data-compartment="1">Specifies that a data field</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Base64StringAttribute" data-compartment="1">value is a well-formed Base64 string.</text>
@@ -259,13 +258,13 @@
 							<rect x="655.0" y="180.0" height="80.0" width="298.0" data-name="CompareAttribute"></rect>
 							<path d="M655.0 212.0 L953.0 212.0" fill="none" data-name="CompareAttribute"></path>
 						</g>
-						<g transform="translate(655, 180)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CompareAttribute" data-compartment="0">
+						<g transform="translate(655, 180)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CompareAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CompareAttribute" data-compartment="0">
 								<text x="141.0" y="14.1" stroke="none" text-anchor="middle" data-name="CompareAttribute" data-compartment="0">CompareAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(655, 212)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="CompareAttribute" data-compartment="1">
+						<g transform="translate(655, 212)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CompareAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CompareAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="CompareAttribute" data-compartment="1">Provides an attribute that compares</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="CompareAttribute" data-compartment="1">two properties.</text>
@@ -278,13 +277,13 @@
 							<rect x="609.0" y="270.0" height="80.0" width="390.0" data-name="CustomValidationAttribute"></rect>
 							<path d="M609.0 302.0 L999.0 302.0" fill="none" data-name="CustomValidationAttribute"></path>
 						</g>
-						<g transform="translate(609, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CustomValidationAttribute" data-compartment="0">
+						<g transform="translate(609, 270)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CustomValidationAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CustomValidationAttribute" data-compartment="0">
 								<text x="187.0" y="14.1" stroke="none" text-anchor="middle" data-name="CustomValidationAttribute" data-compartment="0">CustomValidationAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(609, 302)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="CustomValidationAttribute" data-compartment="1">
+						<g transform="translate(609, 302)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CustomValidationAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CustomValidationAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="CustomValidationAttribute" data-compartment="1">Specifies a custom validation method that</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="CustomValidationAttribute" data-compartment="1">is used to validate a property or class instance.</text>
@@ -297,13 +296,13 @@
 							<rect x="654.5" y="360.0" height="80.0" width="299.0" data-name="DeniedValuesAttribute"></rect>
 							<path d="M654.5 392.0 L953.5 392.0" fill="none" data-name="DeniedValuesAttribute"></path>
 						</g>
-						<g transform="translate(654.5, 360)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeniedValuesAttribute" data-compartment="0">
+						<g transform="translate(654.5, 360)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DeniedValuesAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DeniedValuesAttribute" data-compartment="0">
 								<text x="141.5" y="14.1" stroke="none" text-anchor="middle" data-name="DeniedValuesAttribute" data-compartment="0">DeniedValuesAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(654.5, 392)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeniedValuesAttribute" data-compartment="1">
+						<g transform="translate(654.5, 392)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DeniedValuesAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DeniedValuesAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DeniedValuesAttribute" data-compartment="1">Specifies a list of values that</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DeniedValuesAttribute" data-compartment="1">should not be allowed in a property.</text>
@@ -316,13 +315,13 @@
 							<rect x="613.0" y="450.0" height="80.0" width="382.0" data-name="LengthAttribute"></rect>
 							<path d="M613.0 482.0 L995.0 482.0" fill="none" data-name="LengthAttribute"></path>
 						</g>
-						<g transform="translate(613, 450)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="LengthAttribute" data-compartment="0">
+						<g transform="translate(613, 450)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LengthAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LengthAttribute" data-compartment="0">
 								<text x="183.0" y="14.1" stroke="none" text-anchor="middle" data-name="LengthAttribute" data-compartment="0">LengthAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(613, 482)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="LengthAttribute" data-compartment="1">
+						<g transform="translate(613, 482)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="LengthAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="LengthAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="LengthAttribute" data-compartment="1">Specifies the minimum and maximum length of</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="LengthAttribute" data-compartment="1">collection/string data allowed in a property.</text>
@@ -335,13 +334,13 @@
 							<rect x="633.0" y="540.0" height="80.0" width="342.0" data-name="MaxLengthAttribute"></rect>
 							<path d="M633.0 572.0 L975.0 572.0" fill="none" data-name="MaxLengthAttribute"></path>
 						</g>
-						<g transform="translate(633, 540)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaxLengthAttribute" data-compartment="0">
+						<g transform="translate(633, 540)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MaxLengthAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MaxLengthAttribute" data-compartment="0">
 								<text x="163.0" y="14.1" stroke="none" text-anchor="middle" data-name="MaxLengthAttribute" data-compartment="0">MaxLengthAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(633, 572)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MaxLengthAttribute" data-compartment="1">
+						<g transform="translate(633, 572)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MaxLengthAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MaxLengthAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="MaxLengthAttribute" data-compartment="1">Specifies the maximum length of</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="MaxLengthAttribute" data-compartment="1">array or string data allowed in a property.</text>
@@ -354,13 +353,13 @@
 							<rect x="633.0" y="630.0" height="80.0" width="342.0" data-name="MinLengthAttribute"></rect>
 							<path d="M633.0 662.0 L975.0 662.0" fill="none" data-name="MinLengthAttribute"></path>
 						</g>
-						<g transform="translate(633, 630)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MinLengthAttribute" data-compartment="0">
+						<g transform="translate(633, 630)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MinLengthAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MinLengthAttribute" data-compartment="0">
 								<text x="163.0" y="14.1" stroke="none" text-anchor="middle" data-name="MinLengthAttribute" data-compartment="0">MinLengthAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(633, 662)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="MinLengthAttribute" data-compartment="1">
+						<g transform="translate(633, 662)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MinLengthAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MinLengthAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="MinLengthAttribute" data-compartment="1">Specifies the minimum length of</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="MinLengthAttribute" data-compartment="1">array or string data allowed in a property.</text>
@@ -373,13 +372,13 @@
 							<rect x="639.5" y="720.0" height="80.0" width="329.0" data-name="RangeAttribute"></rect>
 							<path d="M639.5 752.0 L968.5 752.0" fill="none" data-name="RangeAttribute"></path>
 						</g>
-						<g transform="translate(639.5, 720)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RangeAttribute" data-compartment="0">
+						<g transform="translate(639.5, 720)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RangeAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RangeAttribute" data-compartment="0">
 								<text x="156.5" y="14.1" stroke="none" text-anchor="middle" data-name="RangeAttribute" data-compartment="0">RangeAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(639.5, 752)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="RangeAttribute" data-compartment="1">
+						<g transform="translate(639.5, 752)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RangeAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RangeAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="RangeAttribute" data-compartment="1">Specifies the numeric range constraints</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="RangeAttribute" data-compartment="1">for the value of a data field.</text>
@@ -392,13 +391,13 @@
 							<rect x="624.5" y="810.0" height="97.0" width="359.0" data-name="RegularExpressionAttribute"></rect>
 							<path d="M624.5 842.0 L983.5 842.0" fill="none" data-name="RegularExpressionAttribute"></path>
 						</g>
-						<g transform="translate(624.5, 810)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="RegularExpressionAttribute" data-compartment="0">
+						<g transform="translate(624.5, 810)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RegularExpressionAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RegularExpressionAttribute" data-compartment="0">
 								<text x="171.5" y="14.1" stroke="none" text-anchor="middle" data-name="RegularExpressionAttribute" data-compartment="0">RegularExpressionAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(624.5, 842)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="RegularExpressionAttribute" data-compartment="1">
+						<g transform="translate(624.5, 842)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="RegularExpressionAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="RegularExpressionAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="RegularExpressionAttribute" data-compartment="1">Specifies that a data field value in ASP.NET</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="RegularExpressionAttribute" data-compartment="1">Dynamic Data must match</text>
@@ -412,13 +411,13 @@
 							<rect x="593.0" y="917.0" height="80.0" width="422.0" data-name="StringLengthAttribute"></rect>
 							<path d="M593.0 949.0 L1015.0 949.0" fill="none" data-name="StringLengthAttribute"></path>
 						</g>
-						<g transform="translate(593, 917)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringLengthAttribute" data-compartment="0">
+						<g transform="translate(593, 917)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringLengthAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringLengthAttribute" data-compartment="0">
 								<text x="203.0" y="14.1" stroke="none" text-anchor="middle" data-name="StringLengthAttribute" data-compartment="0">StringLengthAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(593, 949)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringLengthAttribute" data-compartment="1">
+						<g transform="translate(593, 949)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringLengthAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringLengthAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="StringLengthAttribute" data-compartment="1">Specifies the minimum and maximum</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="StringLengthAttribute" data-compartment="1">length of characters that are allowed in a data field.</text>
@@ -431,13 +430,13 @@
 							<rect x="657.0" y="1007.0" height="80.0" width="294.0" data-name="DataTypeAttribute"></rect>
 							<path d="M657.0 1039.0 L951.0 1039.0" fill="none" data-name="DataTypeAttribute"></path>
 						</g>
-						<g transform="translate(657, 1007)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTypeAttribute" data-compartment="0">
+						<g transform="translate(657, 1007)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DataTypeAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DataTypeAttribute" data-compartment="0">
 								<text x="139.0" y="14.1" stroke="none" text-anchor="middle" data-name="DataTypeAttribute" data-compartment="0">DataTypeAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(657, 1039)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="DataTypeAttribute" data-compartment="1">
+						<g transform="translate(657, 1039)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DataTypeAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DataTypeAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="DataTypeAttribute" data-compartment="1">Specifies the name of an additional</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="DataTypeAttribute" data-compartment="1">type to associate with a data field.</text>
@@ -450,13 +449,13 @@
 							<rect x="1033.0" y="802.0" height="80.0" width="251.0" data-name="CreditCardAttribute"></rect>
 							<path d="M1033.0 834.0 L1284.0 834.0" fill="none" data-name="CreditCardAttribute"></path>
 						</g>
-						<g transform="translate(1033, 802)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="CreditCardAttribute" data-compartment="0">
+						<g transform="translate(1033, 802)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CreditCardAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CreditCardAttribute" data-compartment="0">
 								<text x="117.5" y="14.1" stroke="none" text-anchor="middle" data-name="CreditCardAttribute" data-compartment="0">CreditCardAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(1033, 834)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="CreditCardAttribute" data-compartment="1">
+						<g transform="translate(1033, 834)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="CreditCardAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="CreditCardAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="CreditCardAttribute" data-compartment="1">Specifies that a data field</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="CreditCardAttribute" data-compartment="1">value is a credit card number.</text>
@@ -469,13 +468,13 @@
 							<rect x="1041.0" y="892.0" height="64.0" width="235.0" data-name="EmailAddressAttribute"></rect>
 							<path d="M1041.0 924.0 L1276.0 924.0" fill="none" data-name="EmailAddressAttribute"></path>
 						</g>
-						<g transform="translate(1041, 892)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="EmailAddressAttribute" data-compartment="0">
+						<g transform="translate(1041, 892)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EmailAddressAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EmailAddressAttribute" data-compartment="0">
 								<text x="109.5" y="14.1" stroke="none" text-anchor="middle" data-name="EmailAddressAttribute" data-compartment="0">EmailAddressAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(1041, 924)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="EmailAddressAttribute" data-compartment="1">
+						<g transform="translate(1041, 924)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EmailAddressAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EmailAddressAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="EmailAddressAttribute" data-compartment="1">Validates an email address.</text>
 								
@@ -487,13 +486,13 @@
 							<rect x="1025.0" y="966.0" height="80.0" width="267.0" data-name="EnumDataTypeAttribute"></rect>
 							<path d="M1025.0 998.0 L1292.0 998.0" fill="none" data-name="EnumDataTypeAttribute"></path>
 						</g>
-						<g transform="translate(1025, 966)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="EnumDataTypeAttribute" data-compartment="0">
+						<g transform="translate(1025, 966)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="EnumDataTypeAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="EnumDataTypeAttribute" data-compartment="0">
 								<text x="125.5" y="14.1" stroke="none" text-anchor="middle" data-name="EnumDataTypeAttribute" data-compartment="0">EnumDataTypeAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(1025, 998)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="EnumDataTypeAttribute" data-compartment="1">
+						<g transform="translate(1025, 998)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="EnumDataTypeAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="EnumDataTypeAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="EnumDataTypeAttribute" data-compartment="1">Enables a .NET enumeration</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="EnumDataTypeAttribute" data-compartment="1">to be mapped to a data column.</text>
@@ -506,13 +505,13 @@
 							<rect x="1030.0" y="1056.0" height="64.0" width="257.0" data-name="FileExtensionsAttribute"></rect>
 							<path d="M1030.0 1088.0 L1287.0 1088.0" fill="none" data-name="FileExtensionsAttribute"></path>
 						</g>
-						<g transform="translate(1030, 1056)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileExtensionsAttribute" data-compartment="0">
+						<g transform="translate(1030, 1056)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileExtensionsAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileExtensionsAttribute" data-compartment="0">
 								<text x="120.5" y="14.1" stroke="none" text-anchor="middle" data-name="FileExtensionsAttribute" data-compartment="0">FileExtensionsAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(1030, 1088)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileExtensionsAttribute" data-compartment="1">
+						<g transform="translate(1030, 1088)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FileExtensionsAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="FileExtensionsAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="FileExtensionsAttribute" data-compartment="1">Validates file name extensions</text>
 								
@@ -524,13 +523,13 @@
 							<rect x="1026.0" y="1130.0" height="80.0" width="265.0" data-name="PhoneAttribute"></rect>
 							<path d="M1026.0 1162.0 L1291.0 1162.0" fill="none" data-name="PhoneAttribute"></path>
 						</g>
-						<g transform="translate(1026, 1130)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="PhoneAttribute" data-compartment="0">
+						<g transform="translate(1026, 1130)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PhoneAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PhoneAttribute" data-compartment="0">
 								<text x="124.5" y="14.1" stroke="none" text-anchor="middle" data-name="PhoneAttribute" data-compartment="0">PhoneAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(1026, 1162)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="PhoneAttribute" data-compartment="1">
+						<g transform="translate(1026, 1162)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="PhoneAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="PhoneAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="PhoneAttribute" data-compartment="1">Specifies that a data field value</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="PhoneAttribute" data-compartment="1">is a well-formed phone number.</text>
@@ -543,13 +542,13 @@
 							<rect x="1053.5" y="1220.0" height="64.0" width="210.0" data-name="UrlAttribute"></rect>
 							<path d="M1053.5 1252.0 L1263.5 1252.0" fill="none" data-name="UrlAttribute"></path>
 						</g>
-						<g transform="translate(1053.5, 1220)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="UrlAttribute" data-compartment="0">
+						<g transform="translate(1053.5, 1220)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UrlAttribute" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UrlAttribute" data-compartment="0">
 								<text x="97.0" y="14.1" stroke="none" text-anchor="middle" data-name="UrlAttribute" data-compartment="0">UrlAttribute</text>
 								
 							</g>
 						</g>
-						<g transform="translate(1053.5, 1252)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="UrlAttribute" data-compartment="1">
+						<g transform="translate(1053.5, 1252)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="UrlAttribute" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="UrlAttribute" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="UrlAttribute" data-compartment="1">Provides URL validation.</text>
 								

@@ -3,7 +3,6 @@
 	<desc >#direction: right
 	#spacing: 12
 	#.box: fill=#C06EF0
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: winforms1
@@ -25,13 +24,13 @@
 	[MarshalByRefObject] &lt;:- [OwnerDrawPropertyBag]
 	[MarshalByRefObject] &lt;:- [TreeNode]
 	</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="622.0" width="647.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<g stroke-dasharray="6 6">
 						<path d="M226.0 16.0 L262 16 L376 20.083582089552237 L376.0 20.1 " fill="none"></path>
 					</g>
@@ -68,7 +67,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
 							<rect x="113.0" y="0.0" height="32.0" width="109.0" data-name="IDisposable"></rect>
 						</g>
-						<g transform="translate(113, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+						<g transform="translate(113, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
 								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
 								
@@ -79,7 +78,7 @@
 						<g fill="#C06EF0" stroke="#33322E" data-name="Component">
 							<rect x="376.0" y="6.0" height="32.0" width="107.0" data-name="Component"></rect>
 						</g>
-						<g transform="translate(376, 6)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Component" data-compartment="0">
+						<g transform="translate(376, 6)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Component" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Component" data-compartment="0">
 								<text x="45.5" y="14.1" stroke="none" text-anchor="middle" data-name="Component" data-compartment="0">Component</text>
 								
@@ -90,7 +89,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Object">
 							<rect x="0.0" y="270.0" height="32.0" width="67.0" data-name="Object"></rect>
 						</g>
-						<g transform="translate(0, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+						<g transform="translate(0, 270)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
 								<text x="25.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
 								
@@ -101,7 +100,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="MarshalByRefObject">
 							<rect x="79.0" y="270.0" height="32.0" width="177.0" data-name="MarshalByRefObject"></rect>
 						</g>
-						<g transform="translate(79, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
+						<g transform="translate(79, 270)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject" data-compartment="0">
 								<text x="80.5" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject" data-compartment="0">MarshalByRefObject</text>
 								
@@ -112,7 +111,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Brush">
 							<rect x="398.5" y="50.0" height="32.0" width="62.0" data-name="Brush"></rect>
 						</g>
-						<g transform="translate(398.5, 50)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Brush" data-compartment="0">
+						<g transform="translate(398.5, 50)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Brush" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Brush" data-compartment="0">
 								<text x="23.0" y="14.1" stroke="none" text-anchor="middle" data-name="Brush" data-compartment="0">Brush</text>
 								
@@ -123,7 +122,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Font">
 							<rect x="404.0" y="94.0" height="32.0" width="51.0" data-name="Font"></rect>
 						</g>
-						<g transform="translate(404, 94)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Font" data-compartment="0">
+						<g transform="translate(404, 94)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Font" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Font" data-compartment="0">
 								<text x="17.5" y="14.1" stroke="none" text-anchor="middle" data-name="Font" data-compartment="0">Font</text>
 								
@@ -134,7 +133,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="FontFamily">
 							<rect x="378.5" y="138.0" height="32.0" width="102.0" data-name="FontFamily"></rect>
 						</g>
-						<g transform="translate(378.5, 138)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="FontFamily" data-compartment="0">
+						<g transform="translate(378.5, 138)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FontFamily" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FontFamily" data-compartment="0">
 								<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="FontFamily" data-compartment="0">FontFamily</text>
 								
@@ -145,7 +144,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Graphics">
 							<rect x="386.0" y="182.0" height="32.0" width="87.0" data-name="Graphics"></rect>
 						</g>
-						<g transform="translate(386, 182)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Graphics" data-compartment="0">
+						<g transform="translate(386, 182)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Graphics" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Graphics" data-compartment="0">
 								<text x="35.5" y="14.1" stroke="none" text-anchor="middle" data-name="Graphics" data-compartment="0">Graphics</text>
 								
@@ -156,7 +155,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Icon">
 							<rect x="404.5" y="226.0" height="32.0" width="50.0" data-name="Icon"></rect>
 						</g>
-						<g transform="translate(404.5, 226)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Icon" data-compartment="0">
+						<g transform="translate(404.5, 226)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Icon" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Icon" data-compartment="0">
 								<text x="17.0" y="14.1" stroke="none" text-anchor="middle" data-name="Icon" data-compartment="0">Icon</text>
 								
@@ -167,7 +166,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Image">
 							<rect x="397.0" y="270.0" height="32.0" width="65.0" data-name="Image"></rect>
 						</g>
-						<g transform="translate(397, 270)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Image" data-compartment="0">
+						<g transform="translate(397, 270)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Image" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Image" data-compartment="0">
 								<text x="24.5" y="14.1" stroke="none" text-anchor="middle" data-name="Image" data-compartment="0">Image</text>
 								
@@ -178,7 +177,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Pen">
 							<rect x="406.0" y="314.0" height="32.0" width="47.0" data-name="Pen"></rect>
 						</g>
-						<g transform="translate(406, 314)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Pen" data-compartment="0">
+						<g transform="translate(406, 314)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Pen" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Pen" data-compartment="0">
 								<text x="15.5" y="14.1" stroke="none" text-anchor="middle" data-name="Pen" data-compartment="0">Pen</text>
 								
@@ -189,7 +188,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="Region">
 							<rect x="393.5" y="358.0" height="32.0" width="72.0" data-name="Region"></rect>
 						</g>
-						<g transform="translate(393.5, 358)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Region" data-compartment="0">
+						<g transform="translate(393.5, 358)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Region" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Region" data-compartment="0">
 								<text x="28.0" y="14.1" stroke="none" text-anchor="middle" data-name="Region" data-compartment="0">Region</text>
 								
@@ -200,7 +199,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="NativeWindow">
 							<rect x="365.5" y="402.0" height="32.0" width="128.0" data-name="NativeWindow"></rect>
 						</g>
-						<g transform="translate(365.5, 402)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="NativeWindow" data-compartment="0">
+						<g transform="translate(365.5, 402)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NativeWindow" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NativeWindow" data-compartment="0">
 								<text x="56.0" y="14.1" stroke="none" text-anchor="middle" data-name="NativeWindow" data-compartment="0">NativeWindow</text>
 								
@@ -211,7 +210,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="NumericUpDownAccelerationCollection">
 							<rect x="268.0" y="446.0" height="32.0" width="323.0" data-name="NumericUpDownAccelerationCollection"></rect>
 						</g>
-						<g transform="translate(268, 446)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="NumericUpDownAccelerationCollection" data-compartment="0">
+						<g transform="translate(268, 446)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NumericUpDownAccelerationCollection" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NumericUpDownAccelerationCollection" data-compartment="0">
 								<text x="153.5" y="14.1" stroke="none" text-anchor="middle" data-name="NumericUpDownAccelerationCollection" data-compartment="0">NumericUpDownAccelerationCollection</text>
 								
@@ -222,7 +221,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="OwnerDrawPropertyBag">
 							<rect x="327.0" y="490.0" height="32.0" width="205.0" data-name="OwnerDrawPropertyBag"></rect>
 						</g>
-						<g transform="translate(327, 490)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="OwnerDrawPropertyBag" data-compartment="0">
+						<g transform="translate(327, 490)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OwnerDrawPropertyBag" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OwnerDrawPropertyBag" data-compartment="0">
 								<text x="94.5" y="14.1" stroke="none" text-anchor="middle" data-name="OwnerDrawPropertyBag" data-compartment="0">OwnerDrawPropertyBag</text>
 								
@@ -233,7 +232,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="TreeNode">
 							<rect x="382.5" y="534.0" height="32.0" width="94.0" data-name="TreeNode"></rect>
 						</g>
-						<g transform="translate(382.5, 534)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="TreeNode" data-compartment="0">
+						<g transform="translate(382.5, 534)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TreeNode" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TreeNode" data-compartment="0">
 								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="TreeNode" data-compartment="0">TreeNode</text>
 								

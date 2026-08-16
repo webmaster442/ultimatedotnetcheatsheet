@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: di-registration
@@ -30,13 +29,13 @@
 	[ICollection&lt;ServiceDescriptor&gt;]  &lt;:-- [IServiceCollection]
 	[IEnumerable&lt;ServiceDescriptor&gt;]  &lt;:-- [IServiceCollection]
 	[IList&lt;ServiceDescriptor&gt;] &lt;:-- [IServiceCollection]</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="279.0" width="840.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<g stroke-dasharray="6 6">
 						<path d="M570.3 165.0 L562 165 L567 165 L567.0 165.0 " fill="none"></path>
 					</g>
@@ -58,13 +57,13 @@
 							<rect x="286.0" y="125.0" height="80.0" width="271.0" data-name="IServiceCollection"></rect>
 							<path d="M286.0 157.0 L557.0 157.0" fill="none" data-name="IServiceCollection"></path>
 						</g>
-						<g transform="translate(286, 125)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
+						<g transform="translate(286, 125)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceCollection" data-compartment="0">
 								<text x="127.5" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceCollection" data-compartment="0">IServiceCollection</text>
 								
 							</g>
 						</g>
-						<g transform="translate(286, 157)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="IServiceCollection" data-compartment="1">
+						<g transform="translate(286, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IServiceCollection" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IServiceCollection" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="IServiceCollection" data-compartment="1">Specifies the contract for a</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="IServiceCollection" data-compartment="1">collection of service descriptors.</text>
@@ -77,13 +76,13 @@
 							<rect x="567.0" y="125.0" height="80.0" width="217.0" data-name="ServiceCollection"></rect>
 							<path d="M567.0 157.0 L784.0 157.0" fill="none" data-name="ServiceCollection"></path>
 						</g>
-						<g transform="translate(567, 125)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceCollection" data-compartment="0">
+						<g transform="translate(567, 125)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceCollection" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceCollection" data-compartment="0">
 								<text x="100.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceCollection" data-compartment="0">ServiceCollection</text>
 								
 							</g>
 						</g>
-						<g transform="translate(567, 157)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceCollection" data-compartment="1">
+						<g transform="translate(567, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceCollection" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceCollection" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ServiceCollection" data-compartment="1">Default implementation of</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ServiceCollection" data-compartment="1">IServiceCollection.</text>
@@ -96,13 +95,13 @@
 							<rect x="14.5" y="0.0" height="97.0" width="247.0" data-name="ServiceDescriptor"></rect>
 							<path d="M14.5 32.0 L261.5 32.0" fill="none" data-name="ServiceDescriptor"></path>
 						</g>
-						<g transform="translate(14.5, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceDescriptor" data-compartment="0">
+						<g transform="translate(14.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceDescriptor" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceDescriptor" data-compartment="0">
 								<text x="115.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceDescriptor" data-compartment="0">ServiceDescriptor</text>
 								
 							</g>
 						</g>
-						<g transform="translate(14.5, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceDescriptor" data-compartment="1">
+						<g transform="translate(14.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceDescriptor" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceDescriptor" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="ServiceDescriptor" data-compartment="1">Describes a service with its</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="ServiceDescriptor" data-compartment="1">service type, implementation,</text>
@@ -115,7 +114,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="ICollection&lt;ServiceDescriptor&gt;">
 							<rect x="8.5" y="107.0" height="32.0" width="259.0" data-name="ICollection&lt;ServiceDescriptor&gt;"></rect>
 						</g>
-						<g transform="translate(8.5, 107)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
+						<g transform="translate(8.5, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
 								<text x="121.5" y="14.1" stroke="none" text-anchor="middle" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">ICollection&lt;ServiceDescriptor&gt;</text>
 								
@@ -126,7 +125,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable&lt;ServiceDescriptor&gt;">
 							<rect x="0.0" y="149.0" height="32.0" width="276.0" data-name="IEnumerable&lt;ServiceDescriptor&gt;"></rect>
 						</g>
-						<g transform="translate(0, 149)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
+						<g transform="translate(0, 149)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
 								<text x="130.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">IEnumerable&lt;ServiceDescriptor&gt;</text>
 								
@@ -137,7 +136,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="IList&lt;ServiceDescriptor&gt;">
 							<rect x="33.5" y="191.0" height="32.0" width="209.0" data-name="IList&lt;ServiceDescriptor&gt;"></rect>
 						</g>
-						<g transform="translate(33.5, 191)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
+						<g transform="translate(33.5, 191)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
 								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">IList&lt;ServiceDescriptor&gt;</text>
 								

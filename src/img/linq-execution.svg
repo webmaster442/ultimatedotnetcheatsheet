@@ -4,7 +4,6 @@
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
-	#font: &apos;Open Sans&apos;
 	#background: transparent
 	#fill: #f4f6fb
 	#title: linq-execution
@@ -31,13 +30,13 @@
 	[Deferred] - [Streaming]
 	[Deferred] - [Nonstreaming]
 		</desc>
-	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="&apos;Open Sans&apos;" font-weight="bold" font-style="normal">
-		<g font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="283.8" width="869.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#33322E" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<path d="M93.7 154.5 L144 187.75 L149 187.75 L149.0 187.8 " fill="none"></path>
 					<path d="M93.7 122.5 L144 89.25 L160.5 89.25 L160.5 89.3 " fill="none"></path>
 					<path d="M441.5 45.2 L458 40 L463 40 L463.0 40.0 " fill="none"></path>
@@ -47,13 +46,13 @@
 							<rect x="160.5" y="40.8" height="97.0" width="281.0" data-name="Deferred"></rect>
 							<path d="M160.5 72.8 L441.5 72.8" fill="none" data-name="Deferred"></path>
 						</g>
-						<g transform="translate(160.5, 40.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Deferred" data-compartment="0">
+						<g transform="translate(160.5, 40.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Deferred" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Deferred" data-compartment="0">
 								<text x="132.5" y="14.1" stroke="none" text-anchor="middle" data-name="Deferred" data-compartment="0">Deferred</text>
 								
 							</g>
 						</g>
-						<g transform="translate(160.5, 72.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Deferred" data-compartment="1">
+						<g transform="translate(160.5, 72.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Deferred" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Deferred" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Deferred" data-compartment="1">The operation isn&apos;t performed</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Deferred" data-compartment="1">at the point in the code where the</text>
@@ -67,13 +66,13 @@
 							<rect x="149.0" y="147.8" height="80.0" width="304.0" data-name="Immediate"></rect>
 							<path d="M149.0 179.8 L453.0 179.8" fill="none" data-name="Immediate"></path>
 						</g>
-						<g transform="translate(149, 147.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Immediate" data-compartment="0">
+						<g transform="translate(149, 147.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Immediate" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Immediate" data-compartment="0">
 								<text x="144.0" y="14.1" stroke="none" text-anchor="middle" data-name="Immediate" data-compartment="0">Immediate</text>
 								
 							</g>
 						</g>
-						<g transform="translate(149, 179.75)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Immediate" data-compartment="1">
+						<g transform="translate(149, 179.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Immediate" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Immediate" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Immediate" data-compartment="1">The data source is read</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Immediate" data-compartment="1">and the operation is performed once</text>
@@ -86,13 +85,13 @@
 							<rect x="463.0" y="0.0" height="80.0" width="350.0" data-name="Streaming"></rect>
 							<path d="M463.0 32.0 L813.0 32.0" fill="none" data-name="Streaming"></path>
 						</g>
-						<g transform="translate(463, 0)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Streaming" data-compartment="0">
+						<g transform="translate(463, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Streaming" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Streaming" data-compartment="0">
 								<text x="167.0" y="14.1" stroke="none" text-anchor="middle" data-name="Streaming" data-compartment="0">Streaming</text>
 								
 							</g>
 						</g>
-						<g transform="translate(463, 32)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Streaming" data-compartment="1">
+						<g transform="translate(463, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Streaming" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Streaming" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Streaming" data-compartment="1">Operations that desn&apos;t have to read all</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Streaming" data-compartment="1">the source data before they yield element.</text>
@@ -105,13 +104,13 @@
 							<rect x="471.0" y="90.0" height="97.0" width="334.0" data-name="Nonstreaming"></rect>
 							<path d="M471.0 122.0 L805.0 122.0" fill="none" data-name="Nonstreaming"></path>
 						</g>
-						<g transform="translate(471, 90)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="Nonstreaming" data-compartment="0">
+						<g transform="translate(471, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Nonstreaming" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Nonstreaming" data-compartment="0">
 								<text x="159.0" y="14.1" stroke="none" text-anchor="middle" data-name="Nonstreaming" data-compartment="0">Nonstreaming</text>
 								
 							</g>
 						</g>
-						<g transform="translate(471, 122)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="normal" font-style="normal" data-name="Nonstreaming" data-compartment="1">
+						<g transform="translate(471, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Nonstreaming" data-compartment="1">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Nonstreaming" data-compartment="1">
 								<text x="0.0" y="14.1" stroke="none" data-name="Nonstreaming" data-compartment="1">Operations that must read all the source</text>
 								<text x="0.0" y="30.3" stroke="none" data-name="Nonstreaming" data-compartment="1">data before they can yie</text>
@@ -124,7 +123,7 @@
 						<g fill="#f4f6fb" stroke="#33322E" data-name="LINQ Execution">
 							<rect x="0.0" y="122.5" height="32.0" width="139.0" data-name="LINQ Execution"></rect>
 						</g>
-						<g transform="translate(0, 122.5)" font-family="&apos;Open Sans&apos;" font-size="12pt" font-weight="bold" font-style="normal" data-name="LINQ Execution" data-compartment="0">
+						<g transform="translate(0, 122.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LINQ Execution" data-compartment="0">
 							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LINQ Execution" data-compartment="0">
 								<text x="61.5" y="14.1" stroke="none" text-anchor="middle" data-name="LINQ Execution" data-compartment="0">LINQ Execution</text>
 								
