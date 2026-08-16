@@ -18,7 +18,8 @@
 
 * List projects in solution: `dotnet sln [solution.sln] list `
 * Add project to solution: `dotnet sln [solution.sln] add [project.csproj]`
-* Remove project from solution: `dotnet sln [solution.sln] remove [project.csproj]`  
+* Remove project from solution: `dotnet sln [solution.sln] remove [project.csproj]`
+* Convert an sln solution to slnx format: `dotnet sln [solution.sln] migrate`  
 
 Note: solution file name can be ignored if folder only contains one `.sln` file.
 
