@@ -153,3 +153,61 @@ The Sysinternals web site was created in 1996 by Mark Russinovich to host his ad
 
 Sysinternals is available as a live service at the `\\live.sysinternals.com\tools\`. You can mount this folder as a network drive and access the hosted tools from there. The following section is an excerpt about the tools, that are usefull for .NET developers.
 
+### Process Explorer
+
+Process Explorer shows you information about which handles and DLLs processes have opened or loaded. It can be used to inspect process trees, threads, loaded DLLs, handles, environment variables, CPU usage and command-line arguments. It can replace Task Manager for investigating running applications.
+
+```powershell
+procexp64.exe
+```
+
+Full documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
+
+### Process Monitor
+
+Process Monitor is an advanced monitoring tool for Windows that shows real-time file system, Registry and process/thread activity. It combines the features of two legacy Sysinternals utilities, Filemon and Regmon.
+
+```powershell
+Procmon64.exe
+```
+
+Full documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/procmon
+
+### ProcDump
+
+ProcDump is a command-line utility whose primary purpose is monitoring an application for CPU spikes and generating crash dumps during a spike that an administrator or developer can use to determine the cause of the spike. ProcDump also includes hung window monitoring (using the same definition of a window hang that Windows and Task Manager use), unhandled exception monitoring and can generate dumps based on the values of system performance counters. It also can serve as a general process dump utility that you can embed in other scripts.
+
+* Write a mini dump of a process named 'notepad': `procdump64.exe notepad`
+* Write a Mini dump for a process named 'hang.exe' when one of its windows is unresponsive for more than 5 seconds: `procdump64.exe -h hang.exe`
+* Write a Mini dump of a process named 'outlook' when total system CPU usage exceeds 20% for 10 seconds: `procdump64.exe outlook -s 10 -p "\Processor(_Total)\% Processor Time" 20`
+
+Full documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+
+### VMMap
+
+VMMap is a process virtual and physical memory analysis utility. It shows a breakdown of a process's committed virtual memory types as well as the amount of physical memory (working set) assigned by the operating system to those types. Besides graphical representations of memory usage, VMMap also shows summary information and a detailed process memory map.
+
+```powershell
+vmmap64.exe
+```
+
+Full documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/vmmap
+
+### TCPView
+
+TCPView is a Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections. TCPView also reports the name of the process that owns the endpoint. TCPView provides a more informative and conveniently presented subset of the Netstat program that ships with Windows.
+
+```powershell
+tcpview64.exe
+```
+
+Full documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview
+
+### ListDLLs
+
+ListDLLs is a utility that reports the DLLs loaded into processes. You can use it to list all DLLs loaded into all processes, into a specific process, or to list the processes that have a particular DLL loaded.
+
+* List the DLLs loaded into Outlook.exe, including their version information: `listdlls64.exe -v outlook`
+* Show processes that have loaded MSO.DLL: `listdlls -d mso.dll`
+
+Full documentation: https://learn.microsoft.com/en-us/sysinternals/downloads/listdlls
