@@ -63,6 +63,17 @@
 
                 <nav class="menubar__actions" aria-label="Top actions">
 
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
                     <a href="index.html" class="menubar__button" aria-label="Home">
                         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
@@ -118,9 +129,6 @@
 
             <main class="main" aria-label="Main content">
                 <section class="panel">
-                    <details id="article-headings" class="article-headings">
-                        <summary>On this page</summary>
-                    </details>
                     <article id="article-content" class="text-container">
                         {{Content}}
                     </article>

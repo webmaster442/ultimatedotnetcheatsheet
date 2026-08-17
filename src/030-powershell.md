@@ -146,3 +146,10 @@ function Get-ProcessEnvironmentVariables {
     }
 }
 ```
+
+## Sysinternals
+
+The Sysinternals web site was created in 1996 by Mark Russinovich to host his advanced system utilities and technical information. Whether you’re an IT Pro or a developer, you’ll find Sysinternals utilities to help you manage, troubleshoot and diagnose your Windows and Linux systems and applications.
+
+Sysinternals is available as a live service at the `\\live.sysinternals.com\tools\`. You can mount this folder as a network drive and access the hosted tools from there. The following section is an excerpt about the tools, that are usefull for .NET developers.
+

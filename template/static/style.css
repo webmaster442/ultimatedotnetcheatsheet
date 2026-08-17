@@ -321,6 +321,56 @@ pre[class*=language-] {
     margin-left: auto;
 }
 
+.page-menu {
+    position: relative;
+}
+
+.page-menu__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 40;
+    display: none;
+    width: max-content;
+    min-width: 220px;
+    max-width: min(420px, calc(100vw - 24px));
+    max-height: calc(100vh - var(--topbar-height) - 16px);
+    margin: 0;
+    padding: var(--space-2);
+    overflow: auto;
+    list-style: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-panel);
+    box-shadow: 0 8px 24px rgb(31 42 61 / 18%);
+}
+
+.page-menu:hover .page-menu__dropdown,
+.page-menu:focus-within .page-menu__dropdown {
+    display: block;
+}
+
+.page-menu__dropdown ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style: none;
+}
+
+.page-menu__dropdown a {
+    display: block;
+    padding: 5px var(--space-2);
+    overflow-wrap: anywhere;
+    border-radius: var(--radius);
+    color: var(--color-muted);
+}
+
+.page-menu__dropdown a:hover,
+.page-menu__dropdown a:focus-visible {
+    color: var(--color-text);
+    background: var(--color-hover);
+    outline: none;
+}
+
 .menubar__button {
     height: 34px;
     padding: 0 var(--space-2);
@@ -378,40 +428,6 @@ pre[class*=language-] {
     right: 20px;
     width: 40px;
     display: none;
-}
-
-.article-headings {
-    position: relative;
-    width: 300px;
-    margin-left: auto;
-}
-
-.article-headings summary {
-    padding: var(--space-2);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    background: var(--color-panel);
-    cursor: pointer;
-}
-
-.article-headings>ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 10;
-    width: 300px;
-    max-height: 60vh;
-    overflow-y: auto;
-    margin: var(--space-1) 0 0;
-    padding: var(--space-2);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    background: var(--color-panel);
-    list-style: none;
-}
-
-.article-headings ul ul {
-    padding-left: 20px;
 }
 
 @media (max-width: 960px) {

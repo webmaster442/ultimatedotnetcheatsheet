@@ -86,47 +86,56 @@
         const headers = article.querySelectorAll('h2, h3, h4, h5, h6');
         const offset = 150;
 
-        let lastLevels = [articleHeadings];
-        let counter = 0;
+        const headingTree = { level: 1, children: [] };
+        const parentHeadings = [headingTree];
 
         headers.forEach((header, index) => {
-            ++counter;
-            const level = parseInt(header.tagName.substring(1));
+            const level = parseInt(header.tagName.substring(1), 10);
             if (!header.id) {
                 header.id = `header-${index}`;
             }
+
+            while (parentHeadings[parentHeadings.length - 1].level >= level) {
+                parentHeadings.pop();
+            }
+
+            const heading = { element: header, level: level, children: [] };
+            parentHeadings[parentHeadings.length - 1].children.push(heading);
+            parentHeadings.push(heading);
+        });
+
+        function renderHeadings(headings, list) {
+            headings.forEach((heading) => {
             const li = document.createElement('li');
             const a = document.createElement('a');
-            a.textContent = header.textContent;
-            a.href = `#`;
+                a.textContent = heading.element.textContent;
+                a.href = `#${heading.element.id}`;
 
             a.addEventListener('click', (event) => {
                 event.preventDefault();
-                const targetPosition = header.getBoundingClientRect().top + window.scrollY - offset;
+                    const targetPosition = heading.element.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                    history.replaceState(null, '', a.href);
             });
 
             li.appendChild(a);
 
-            // Create a new list element if necessary
-            if (level > lastLevels.length) {
+                if (heading.children.length > 0) {
                 const ul = document.createElement('ul');
-                lastLevels[lastLevels.length - 1].appendChild(ul);
-                lastLevels.push(ul);
+                    renderHeadings(heading.children, ul);
+                    li.appendChild(ul);
             }
 
-            // Move up the hierarchy if the header level is lower
-            while (level < lastLevels.length) {
-                lastLevels.pop();
-            }
+                list.appendChild(li);
+            });
+        }
 
-            lastLevels[lastLevels.length - 1].appendChild(li);
-        });
+        renderHeadings(headingTree.children, articleHeadings);
 
-        if (counter < 2) {
+        if (headers.length < 2) {
             articleHeadings.style.display = "none";
         }
     }

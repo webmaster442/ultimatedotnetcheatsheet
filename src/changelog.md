@@ -6,6 +6,7 @@
 * Linted markdown code
 * Added new section about dependency Injection
 * Extended Powershell script section
+* Reworked collections section
 * Extended C# version history with C# 14
 
 ## 2025.01.16
