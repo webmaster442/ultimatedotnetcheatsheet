@@ -17,6 +17,7 @@
     --color-border: #d5deeb;
     --color-hover: #eaf0f8;
     --color-focus: #2b64d8;
+    --text-max-width: 1200px;
 
     --syntax-selection-bg: #b3d4fc;
     --syntax-token-comment: #708090;
@@ -245,7 +246,7 @@ pre[class*=language-] {
 /* Classes */
 
 .text-container {
-    max-width: 1200px;
+    max-width: var(--text-max-width);
     text-align: justify;
     font-size: 1rem;
 }
