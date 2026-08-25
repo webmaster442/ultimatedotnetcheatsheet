@@ -1,0 +1,244 @@
+<svg version="1.1" baseProfile="full" width="1328.0" height="589.0" viewBox="0 0 1328 589" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >dictionary</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: dictionary
+	
+	[ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[IDictionary&lt;TKey,TValue&gt;]  &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[IReadOnlyDictionary&lt;TKey,TValue&gt;] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[ICollection] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[IDictionary] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	[IEnumerable] &lt;:-- [Dictionary&lt;TKey,TValue&gt;]
+	
+	[Dictionary&lt;TKey,TValue&gt;|
+	Represents a collection of keys and values.|
+	Dictionary()
+	Dictionary(IDictionary&lt;TKey,TValue&gt; dictionary)
+	Dictionary(IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt; collection)
+	Dictionary(System.Collections.Generic.IEqualityComparer&lt;TKey&gt;? comparer)
+	Dictionary(int capacity)
+	Dictionary(IDictionary&lt;TKey,TValue&gt; dictionary, IEqualityComparer&lt;TKey&gt;? comparer)
+	Dictionary(IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt; collection, IEqualityComparer&lt;TKey&gt;? comparer)
+	Dictionary(int capacity, IEqualityComparer&lt;TKey&gt;? comparer)|
+	int Capacity { get }
+	System.Collections.Generic.IEqualityComparer&lt;TKey&gt; Comparer { get }
+	int Count { get }
+	TValue this\[TKey key\] { get set }
+	Dictionary&lt;TKey,TValue&gt;.KeyCollection Keys { get }
+	Dictionary&lt;TKey,TValue&gt;.ValueCollection Values { get }|
+	void Add(TKey key, TValue value);
+	void Clear()
+	bool ContainsKey(TKey key)
+	bool ContainsValue(TValue value)
+	int EnsureCapacity(int capacity)
+	Dictionary&lt;TKey,TValue&gt;.Enumerator GetEnumerator()
+	bool Remove(TKey key)
+	bool Remove(TKey key, out TValue value)
+	void TrimExcess(int capacity)
+	void TrimExcess()
+	bool TryAdd(TKey key, TValue value)
+	bool TryGetValue(TKey key, out TValue value)
+	]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="589.0" width="1328.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M397.3 119.5 L428 119.5 L433 121.23144876325088 L433.0 121.2 " fill="none"></path>
+					</g>
+					<path d="M397.3 114.2 L397.3 119.5 L397.3 124.8 L384.0 119.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M334.8 161.5 L428 161.5 L433 162.73674911660777 L433.0 162.7 " fill="none"></path>
+					</g>
+					<path d="M334.8 156.2 L334.8 161.5 L334.8 166.8 L321.5 161.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M405.8 203.5 L428 203.5 L433 204.24204946996466 L433.0 204.2 " fill="none"></path>
+					</g>
+					<path d="M405.8 198.2 L405.8 203.5 L405.8 208.8 L392.5 203.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M436.3 245.5 L428 245.5 L433 245.74734982332154 L433.0 245.7 " fill="none"></path>
+					</g>
+					<path d="M436.3 240.2 L436.3 245.5 L436.3 250.8 L423.0 245.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M373.8 287.5 L428 287.5 L433 287.25265017667846 L433.0 287.3 " fill="none"></path>
+					</g>
+					<path d="M373.8 282.2 L373.8 287.5 L373.8 292.8 L360.5 287.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M274.3 329.5 L428 329.5 L433 328.7579505300353 L433.0 328.8 " fill="none"></path>
+					</g>
+					<path d="M274.3 324.2 L274.3 329.5 L274.3 334.8 L261.0 329.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M274.8 371.5 L428 371.5 L433 370.26325088339223 L433.0 370.3 " fill="none"></path>
+					</g>
+					<path d="M274.8 366.2 L274.8 371.5 L274.8 376.8 L261.5 371.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M282.8 413.5 L428 413.5 L433 411.7685512367491 L433.0 411.8 " fill="none"></path>
+					</g>
+					<path d="M282.8 408.2 L282.8 413.5 L282.8 418.8 L269.5 413.5 Z"></path>
+					<g data-name="ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;">
+							<rect x="39.0" y="103.5" height="32.0" width="345.0" data-name="ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;"></rect>
+						</g>
+						<g transform="translate(39, 103.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">
+								<text x="164.5" y="14.1" stroke="none" text-anchor="middle" data-name="ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Dictionary&lt;TKey,TValue&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Dictionary&lt;TKey,TValue&gt;">
+							<rect x="433.0" y="0.0" height="533.0" width="839.0" data-name="Dictionary&lt;TKey,TValue&gt;"></rect>
+							<path d="M433.0 32.0 L1272.0 32.0" fill="none" data-name="Dictionary&lt;TKey,TValue&gt;"></path>
+							<path d="M433.0 64.0 L1272.0 64.0" fill="none" data-name="Dictionary&lt;TKey,TValue&gt;"></path>
+							<path d="M433.0 210.0 L1272.0 210.0" fill="none" data-name="Dictionary&lt;TKey,TValue&gt;"></path>
+							<path d="M433.0 323.0 L1272.0 323.0" fill="none" data-name="Dictionary&lt;TKey,TValue&gt;"></path>
+						</g>
+						<g transform="translate(433, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="0">
+								<text x="411.5" y="14.1" stroke="none" text-anchor="middle" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="0">Dictionary&lt;TKey,TValue&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(433, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="1">Represents a collection of keys and values.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(433, 64)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary()</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(IDictionary&lt;TKey,TValue&gt; dictionary)</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt; collection)</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(System.Collections.Generic.IEqualityComparer&lt;TKey&gt;? comparer)</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(int capacity)</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(IDictionary&lt;TKey,TValue&gt; dictionary, IEqualityComparer&lt;TKey&gt;? comparer)</text>
+								<text x="0.0" y="111.3" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt; collection, IEqualityComparer&lt;TKey&gt;? comparer)</text>
+								<text x="0.0" y="127.5" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="2">Dictionary(int capacity, IEqualityComparer&lt;TKey&gt;? comparer)</text>
+								
+							</g>
+						</g>
+						<g transform="translate(433, 210)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">
+								<text x="0.0" y="14.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">int Capacity { get }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">System.Collections.Generic.IEqualityComparer&lt;TKey&gt; Comparer { get }</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">int Count { get }</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">TValue this[TKey key] { get set }</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">Dictionary&lt;TKey,TValue&gt;.KeyCollection Keys { get }</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="3">Dictionary&lt;TKey,TValue&gt;.ValueCollection Values { get }</text>
+								
+							</g>
+						</g>
+						<g transform="translate(433, 323)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">
+								<text x="0.0" y="14.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">void Add(TKey key, TValue value)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">void Clear()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">bool ContainsKey(TKey key)</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">bool ContainsValue(TValue value)</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">int EnsureCapacity(int capacity)</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">Dictionary&lt;TKey,TValue&gt;.Enumerator GetEnumerator()</text>
+								<text x="0.0" y="111.3" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">bool Remove(TKey key)</text>
+								<text x="0.0" y="127.5" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">bool Remove(TKey key, out TValue value)</text>
+								<text x="0.0" y="143.7" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">void TrimExcess(int capacity)</text>
+								<text x="0.0" y="159.9" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">void TrimExcess()</text>
+								<text x="0.0" y="176.1" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">bool TryAdd(TKey key, TValue value)</text>
+								<text x="0.0" y="192.3" stroke="none" data-name="Dictionary&lt;TKey,TValue&gt;" data-compartment="4">bool TryGetValue(TKey key, out TValue value)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDictionary&lt;TKey,TValue&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDictionary&lt;TKey,TValue&gt;">
+							<rect x="101.5" y="145.5" height="32.0" width="220.0" data-name="IDictionary&lt;TKey,TValue&gt;"></rect>
+						</g>
+						<g transform="translate(101.5, 145.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDictionary&lt;TKey,TValue&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDictionary&lt;TKey,TValue&gt;" data-compartment="0">
+								<text x="102.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDictionary&lt;TKey,TValue&gt;" data-compartment="0">IDictionary&lt;TKey,TValue&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;">
+							<rect x="30.5" y="187.5" height="32.0" width="362.0" data-name="IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;"></rect>
+						</g>
+						<g transform="translate(30.5, 187.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">
+								<text x="173.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;">
+							<rect x="0.0" y="229.5" height="32.0" width="423.0" data-name="IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;"></rect>
+						</g>
+						<g transform="translate(0, 229.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">
+								<text x="203.5" y="14.1" stroke="none" text-anchor="middle" data-name="IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;" data-compartment="0">IReadOnlyCollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IReadOnlyDictionary&lt;TKey,TValue&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IReadOnlyDictionary&lt;TKey,TValue&gt;">
+							<rect x="62.5" y="271.5" height="32.0" width="298.0" data-name="IReadOnlyDictionary&lt;TKey,TValue&gt;"></rect>
+						</g>
+						<g transform="translate(62.5, 271.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IReadOnlyDictionary&lt;TKey,TValue&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IReadOnlyDictionary&lt;TKey,TValue&gt;" data-compartment="0">
+								<text x="141.0" y="14.1" stroke="none" text-anchor="middle" data-name="IReadOnlyDictionary&lt;TKey,TValue&gt;" data-compartment="0">IReadOnlyDictionary&lt;TKey,TValue&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ICollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ICollection">
+							<rect x="162.0" y="313.5" height="32.0" width="99.0" data-name="ICollection"></rect>
+						</g>
+						<g transform="translate(162, 313.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICollection" data-compartment="0">
+								<text x="41.5" y="14.1" stroke="none" text-anchor="middle" data-name="ICollection" data-compartment="0">ICollection</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDictionary">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDictionary">
+							<rect x="161.5" y="355.5" height="32.0" width="100.0" data-name="IDictionary"></rect>
+						</g>
+						<g transform="translate(161.5, 355.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDictionary" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDictionary" data-compartment="0">
+								<text x="42.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDictionary" data-compartment="0">IDictionary</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable">
+							<rect x="153.5" y="397.5" height="32.0" width="116.0" data-name="IEnumerable"></rect>
+						</g>
+						<g transform="translate(153.5, 397.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable" data-compartment="0">
+								<text x="50.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable" data-compartment="0">IEnumerable</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

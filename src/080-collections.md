@@ -6,8 +6,18 @@
 
 ## Generic collections
 
-* `Dictionary<TKey,TValue>` - Represents a collection of keys and values.
-* `OrderedDictionary<TKey,TValue>` - Represents a collection of key/value pairs that are accessible by the key or index.
+* `Dictionary<TKey,TValue>`
+
+^^^
+![Dictionary\<TKey,TValue\>](img/dictionary.svg)
+^^^ Dictionary\<TKey,TValue\>]
+
+* `OrderedDictionary<TKey,TValue>`
+
+^^^
+![OrderedDictionary\<TKey,TValue\>](img/ordereddictionary.svg)
+^^^ OrderedDictionary\<TKey,TValue\>
+
 * `SortedDictionary<TKey,TValue>` - Represents a collection of key/value pairs that are sorted on the key.
 * `SortedList<TKey,TValue>` - Represents a collection of key/value pairs that are sorted by key based on the associated `IComparer<T>` implementation.
 * `HashSet<T>` - Represents a set of values.

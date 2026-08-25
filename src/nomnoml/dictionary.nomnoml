@@ -1,0 +1,47 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#background: transparent
+#fill: #f4f6fb
+#title: dictionary
+
+[ICollection<KeyValuePair<TKey,TValue>>] <:-- [Dictionary<TKey,TValue>]
+[IDictionary<TKey,TValue>]  <:-- [Dictionary<TKey,TValue>]
+[IEnumerable<KeyValuePair<TKey,TValue>>] <:-- [Dictionary<TKey,TValue>]
+[IReadOnlyCollection<KeyValuePair<TKey,TValue>>] <:-- [Dictionary<TKey,TValue>]
+[IReadOnlyDictionary<TKey,TValue>] <:-- [Dictionary<TKey,TValue>]
+[ICollection] <:-- [Dictionary<TKey,TValue>]
+[IDictionary] <:-- [Dictionary<TKey,TValue>]
+[IEnumerable] <:-- [Dictionary<TKey,TValue>]
+
+[Dictionary<TKey,TValue>|
+Represents a collection of keys and values.|
+Dictionary()
+Dictionary(IDictionary<TKey,TValue> dictionary)
+Dictionary(IEnumerable<KeyValuePair<TKey,TValue>> collection)
+Dictionary(System.Collections.Generic.IEqualityComparer<TKey>? comparer)
+Dictionary(int capacity)
+Dictionary(IDictionary<TKey,TValue> dictionary, IEqualityComparer<TKey>? comparer)
+Dictionary(IEnumerable<KeyValuePair<TKey,TValue>> collection, IEqualityComparer<TKey>? comparer)
+Dictionary(int capacity, IEqualityComparer<TKey>? comparer)|
+int Capacity { get }
+System.Collections.Generic.IEqualityComparer<TKey> Comparer { get }
+int Count { get }
+TValue this\[TKey key\] { get set }
+Dictionary<TKey,TValue>.KeyCollection Keys { get }
+Dictionary<TKey,TValue>.ValueCollection Values { get }|
+void Add(TKey key, TValue value);
+void Clear()
+bool ContainsKey(TKey key)
+bool ContainsValue(TValue value)
+int EnsureCapacity(int capacity)
+Dictionary<TKey,TValue>.Enumerator GetEnumerator()
+bool Remove(TKey key)
+bool Remove(TKey key, out TValue value)
+void TrimExcess(int capacity)
+void TrimExcess()
+bool TryAdd(TKey key, TValue value)
+bool TryGetValue(TKey key, out TValue value)
+]
+

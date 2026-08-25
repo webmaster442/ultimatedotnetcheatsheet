@@ -1,0 +1,57 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#background: transparent
+#fill: #f4f6fb
+#title: orderedDictionary
+
+[ICollection<KeyValuePair<TKey,TValue>>] <:-- [OrderedDictionary<TKey,TValue>]
+[IDictionary<TKey,TValue>]  <:-- [OrderedDictionary<TKey,TValue>]
+[IEnumerable<KeyValuePair<TKey,TValue>>] <:-- [OrderedDictionary<TKey,TValue>]
+[IList<KeyValuePair<TKey,TValue>>] <:-- [OrderedDictionary<TKey,TValue>]
+[IReadOnlyCollection<KeyValuePair<TKey,TValue>>] <:-- [OrderedDictionary<TKey,TValue>]
+[IReadOnlyDictionary<TKey,TValue>] <:-- [OrderedDictionary<TKey,TValue>]
+[IReadOnlyList<TKey,TValue>] <:-- [OrderedDictionary<TKey,TValue>]
+[ICollection] <:-- [OrderedDictionary<TKey,TValue>]
+[IDictionary] <:-- [OrderedDictionary<TKey,TValue>]
+[IEnumerable] <:-- [OrderedDictionary<TKey,TValue>]
+
+[OrderedDictionary<TKey,TValue>|
+Represents a collection of key/value pairs that are accessible by the key or index.|
+OrderedDictionary()
+OrderedDictionary(IDictionary<TKey,TValue> dictionary)
+OrderedDictionary(IEnumerable<KeyValuePair<TKey,TValue>> collection)
+OrderedDictionary(IEqualityComparer<TKey>? comparer)
+OrderedDictionary(int capacity)
+OrderedDictionary(IDictionary<TKey,TValue> dictionary, IEqualityComparer<TKey>? comparer)
+OrderedDictionary(IEnumerable<KeyValuePair<TKey,TValue>> collection, IEqualityComparer<TKey>? comparer)
+OrderedDictionary(int capacity, IEqualityComparer<TKey>? comparer)|
+int Capacity { get}
+System.Collections.Generic.IEqualityComparer<TKey> Comparer { get }
+int Count { get }
+TValue this\[TKey key\] { get set }
+OrderedDictionary<TKey,TValue>.KeyCollection Keys { get }
+OrderedDictionary<TKey,TValue>.ValueCollection Values { get }|
+void Add(TKey key, TValue value);
+void Clear();
+bool ContainsKey(TKey key);
+bool ContainsValue(TValue value);
+int EnsureCapacity(int capacity);
+KeyValuePair<TKey,TValue> GetAt(int index);
+OrderedDictionary<TKey,TValue>.Enumerator GetEnumerator();
+int IndexOf(TKey key);
+void Insert(int index, TKey key, TValue value);
+bool Remove(TKey key);
+bool Remove(TKey key, out TValue value);
+void RemoveAt(int index);
+void SetAt(int index, TValue value);
+void SetAt(int index, TKey key, TValue value);
+void TrimExcess(int capacity);
+void TrimExcess();
+bool TryAdd(TKey key, TValue value, out int index);
+bool TryAdd(TKey key, TValue value);
+bool TryGetValue(TKey key, out TValue value
+bool TryGetValue(TKey key, out TValue value, out int index);
+]
+
