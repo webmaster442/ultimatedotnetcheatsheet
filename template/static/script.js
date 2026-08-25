@@ -1,18 +1,18 @@
 "use strict";
 
 (function () {
-    var THEME_KEY = "theme-preference-ultimatedotnetcheatsheet";
-    var root = document.documentElement;
-    var sidebar = document.getElementById("sidebar");
-    var menuToggle = document.getElementById("menu-toggle");
-    var themeToggle = document.getElementById("theme-toggle");
-    var printButton = document.getElementById("print-button");
-    var scrollTopButton = document.getElementById("scroll-top-button");
-    var article = document.getElementById("article-content");
-    var articleHeadings = document.getElementById("article-headings");
+    let THEME_KEY = "theme-preference-ultimatedotnetcheatsheet";
+    let root = document.documentElement;
+    let sidebar = document.getElementById("sidebar");
+    let menuToggle = document.getElementById("menu-toggle");
+    let themeToggle = document.getElementById("theme-toggle");
+    let printButton = document.getElementById("print-button");
+    let scrollTopButton = document.getElementById("scroll-top-button");
+    let article = document.getElementById("article-content");
+    let articleHeadings = document.getElementById("article-headings");
 
     function getPreferredTheme() {
-        var saved = localStorage.getItem(THEME_KEY);
+        let saved = localStorage.getItem(THEME_KEY);
         if (saved === "dark" || saved === "light") {
             return saved;
         }
@@ -22,14 +22,14 @@
     function applyTheme(theme) {
         root.setAttribute("data-theme", theme);
         if (themeToggle) {
-            var next = theme === "dark" ? "light" : "dark";
+            let next = theme === "dark" ? "light" : "dark";
             themeToggle.setAttribute("aria-label", "Switch to " + next + " mode");
         }
     }
 
     function toggleTheme() {
-        var current = root.getAttribute("data-theme") || "light";
-        var next = current === "dark" ? "light" : "dark";
+        let current = root.getAttribute("data-theme") || "light";
+        let next = current === "dark" ? "light" : "dark";
         applyTheme(next);
         localStorage.setItem(THEME_KEY, next);
     }
@@ -50,7 +50,7 @@
 
     if (menuToggle) {
         menuToggle.addEventListener("click", function () {
-            var isOpen = !!(sidebar && sidebar.classList.contains("is-open"));
+            let isOpen = !!(sidebar && sidebar.classList.contains("is-open"));
             setMenuState(!isOpen);
         });
     }
@@ -142,7 +142,7 @@
 
     if (scrollTopButton) {
         function updateScrollTopVisibility() {
-            var scrolled = (window.pageYOffset || document.documentElement.scrollTop) > 0;
+            let scrolled = (window.pageYOffset || document.documentElement.scrollTop) > 0;
             scrollTopButton.style.display = scrolled ? "block" : "none";
         }
 
@@ -155,12 +155,12 @@
     }
 
     document.addEventListener("click", function (event) {
-        var mobile = window.matchMedia("(max-width: 960px)").matches;
+        let mobile = window.matchMedia("(max-width: 960px)").matches;
         if (!mobile || !sidebar || !menuToggle || !sidebar.classList.contains("is-open")) {
             return;
         }
 
-        var target = event.target;
+        let target = event.target;
         if (!(target instanceof Node)) {
             return;
         }
@@ -171,7 +171,7 @@
     });
 
     window.addEventListener("resize", function () {
-        var desktop = window.matchMedia("(min-width: 961px)").matches;
+        let desktop = window.matchMedia("(min-width: 961px)").matches;
         if (desktop) {
             setMenuState(false);
         }

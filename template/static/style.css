@@ -73,7 +73,27 @@
     font-display: swap;
 }
 
+@view-transition {
+    navigation: auto;
+}
 
+::view-transition-old(root) {
+    animation: fade-out 200ms ease;
+}
+
+::view-transition-new(root) {
+    animation: fade-in 200ms ease;
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 * {
     box-sizing: border-box;
@@ -92,6 +112,11 @@ body {
     line-height: var(--line-height);
     color: var(--color-text);
     background: var(--color-bg);
+}
+
+figure {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 a {
@@ -159,9 +184,12 @@ pre[class*=language-]::selection {
 }
 
 pre[class*=language-] {
+    max-width: var(--text-max-width);
     padding: 1em;
     margin: .5em 0;
-    overflow: auto
+    overflow: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 :not(pre)>code[class*=language-] {
