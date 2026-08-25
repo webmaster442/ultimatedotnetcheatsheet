@@ -29,3 +29,5 @@ convert diagram2svg -i "src\nomnoml\di-workflow.nomnoml" -o "src\img\di-workflow
 convert diagram2svg -i "src\nomnoml\di-registration.nomnoml" -o "src\img\di-registration.svg"
 convert diagram2svg -i "src\nomnoml\di-resolve.nomnoml" -o "src\img\di-resolve.svg"
 convert diagram2svg -i "src\nomnoml\di-lifetime.nomnoml" -o "src\img\di-lifetime.svg"
+convert diagram2svg -i "src\nomnoml\span.nomnoml" -o "src\img\span.svg"
+convert diagram2svg -i "src\nomnoml\memory.nomnoml" -o "src\img\memory.svg"

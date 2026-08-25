@@ -1,0 +1,172 @@
+<svg version="1.1" baseProfile="full" width="1201.0" height="427.0" viewBox="0 0 1201 427" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >memory</title>
+	<desc >#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: memory
+	
+	[Memory&lt;T&gt;|
+	Represents a contiguous region of memory|
+	Memory(T\[\]? array)
+	Memory(T\[\]? array, int start, int length)|
+	static Memory&lt;T&gt; Empty { get }
+	bool IsEmpty { get }
+	int Length { get }
+	Span&lt;T&gt; Span { get } |
+	void CopyTo(Memory&lt;T&gt; destination)
+	MemoryHandle Pin()
+	Memory&lt;T&gt; Slice(int start)
+	Memory&lt;T&gt; Slice(int start, int length)
+	T\[\] ToArray()
+	bool TryCopyTo(Memory&lt;T&gt; destination)|
+	static implicit operator Memory&lt;T&gt;(T\[\]? array)
+	static implicit operator Memory&lt;T&gt;(ArraySegment&lt;T&gt; segment)
+	static implicit operator ReadOnlyMemory&lt;T&gt;(Memory&lt;T&gt; memory)
+	]
+	
+	[ReadOnlyMemory&lt;T&gt;|
+	Represents a contiguous region of memory, similar to ReadOnlySpan&lt;T&gt;.
+	Unlike ReadOnlySpan&lt;T&gt;, it is not a byref-like type.|
+	ReadOnlyMemory(T\[\]? array)
+	ReadOnlyMemory(T\[\]? array, int start, int length)|
+	static ReadOnlyMemory&lt;T&gt; Empty { get }
+	bool IsEmpty { get }
+	int Length { get }
+	ReadOnlySpan&lt;T&gt; Span { get }|
+	void CopyTo(Memory&lt;T&gt; destination)
+	MemoryHandle Pin()
+	ReadOnlyMemory&lt;T&gt; Slice(int start)
+	ReadOnlyMemory&lt;T&gt; Slice(int start, int length)
+	T\[\] ToArray()
+	bool TryCopyTo(Memory&lt;T&gt; destination)|
+	static implicit operator ReadOnlyMemory&lt;T&gt;(ArraySegment&lt;T&gt; segment)
+	static implicit operator ReadOnlyMemory&lt;T&gt;(T\[\]? array)
+	]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="427.0" width="1201.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)">
+					<g data-name="Memory&lt;T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Memory&lt;T&gt;">
+							<rect x="0.0" y="0.0" height="371.0" width="538.0" data-name="Memory&lt;T&gt;"></rect>
+							<path d="M0.0 32.0 L538.0 32.0" fill="none" data-name="Memory&lt;T&gt;"></path>
+							<path d="M0.0 64.0 L538.0 64.0" fill="none" data-name="Memory&lt;T&gt;"></path>
+							<path d="M0.0 112.0 L538.0 112.0" fill="none" data-name="Memory&lt;T&gt;"></path>
+							<path d="M0.0 193.0 L538.0 193.0" fill="none" data-name="Memory&lt;T&gt;"></path>
+							<path d="M0.0 306.0 L538.0 306.0" fill="none" data-name="Memory&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Memory&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Memory&lt;T&gt;" data-compartment="0">
+								<text x="261.0" y="14.1" stroke="none" text-anchor="middle" data-name="Memory&lt;T&gt;" data-compartment="0">Memory&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Memory&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Memory&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="1">Represents a contiguous region of memory</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 64)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Memory&lt;T&gt;" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Memory&lt;T&gt;" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="2">Memory(T[]? array)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="2">Memory(T[]? array, int start, int length)</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 112)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Memory&lt;T&gt;" data-compartment="3">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Memory&lt;T&gt;" data-compartment="3">
+								<text x="0.0" y="14.1" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="3">static Memory&lt;T&gt; Empty { get }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="3">bool IsEmpty { get }</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="3">int Length { get }</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="3">Span&lt;T&gt; Span { get }</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 193)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Memory&lt;T&gt;" data-compartment="4">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Memory&lt;T&gt;" data-compartment="4">
+								<text x="0.0" y="14.1" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="4">void CopyTo(Memory&lt;T&gt; destination)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="4">MemoryHandle Pin()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="4">Memory&lt;T&gt; Slice(int start)</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="4">Memory&lt;T&gt; Slice(int start, int length)</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="4">T[] ToArray()</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="4">bool TryCopyTo(Memory&lt;T&gt; destination)</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 306)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Memory&lt;T&gt;" data-compartment="5">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Memory&lt;T&gt;" data-compartment="5">
+								<text x="0.0" y="14.1" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="5">static implicit operator Memory&lt;T&gt;(T[]? array)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="5">static implicit operator Memory&lt;T&gt;(ArraySegment&lt;T&gt; segment)</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Memory&lt;T&gt;" data-compartment="5">static implicit operator ReadOnlyMemory&lt;T&gt;(Memory&lt;T&gt; memory)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ReadOnlyMemory&lt;T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ReadOnlyMemory&lt;T&gt;">
+							<rect x="548.0" y="0.5" height="370.0" width="597.0" data-name="ReadOnlyMemory&lt;T&gt;"></rect>
+							<path d="M548.0 32.5 L1145.0 32.5" fill="none" data-name="ReadOnlyMemory&lt;T&gt;"></path>
+							<path d="M548.0 80.5 L1145.0 80.5" fill="none" data-name="ReadOnlyMemory&lt;T&gt;"></path>
+							<path d="M548.0 128.5 L1145.0 128.5" fill="none" data-name="ReadOnlyMemory&lt;T&gt;"></path>
+							<path d="M548.0 209.5 L1145.0 209.5" fill="none" data-name="ReadOnlyMemory&lt;T&gt;"></path>
+							<path d="M548.0 322.5 L1145.0 322.5" fill="none" data-name="ReadOnlyMemory&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(548, 0.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="0">
+								<text x="290.5" y="14.1" stroke="none" text-anchor="middle" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="0">ReadOnlyMemory&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(548, 32.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="1">Represents a contiguous region of memory, similar to ReadOnlySpan&lt;T&gt;.</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="1">Unlike ReadOnlySpan&lt;T&gt;, it is not a byref-like type.</text>
+								
+							</g>
+						</g>
+						<g transform="translate(548, 80.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="2">ReadOnlyMemory(T[]? array)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="2">ReadOnlyMemory(T[]? array, int start, int length)</text>
+								
+							</g>
+						</g>
+						<g transform="translate(548, 128.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="3">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="3">
+								<text x="0.0" y="14.1" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="3">static ReadOnlyMemory&lt;T&gt; Empty { get }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="3">bool IsEmpty { get }</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="3">int Length { get }</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="3">ReadOnlySpan&lt;T&gt; Span { get }</text>
+								
+							</g>
+						</g>
+						<g transform="translate(548, 209.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">
+								<text x="0.0" y="14.1" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">void CopyTo(Memory&lt;T&gt; destination)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">MemoryHandle Pin()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">ReadOnlyMemory&lt;T&gt; Slice(int start)</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">ReadOnlyMemory&lt;T&gt; Slice(int start, int length)</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">T[] ToArray()</text>
+								<text x="0.0" y="95.1" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="4">bool TryCopyTo(Memory&lt;T&gt; destination)</text>
+								
+							</g>
+						</g>
+						<g transform="translate(548, 322.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="5">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="5">
+								<text x="0.0" y="14.1" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="5">static implicit operator ReadOnlyMemory&lt;T&gt;(ArraySegment&lt;T&gt; segment)</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ReadOnlyMemory&lt;T&gt;" data-compartment="5">static implicit operator ReadOnlyMemory&lt;T&gt;(T[]? array)</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

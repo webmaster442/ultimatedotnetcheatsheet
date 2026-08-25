@@ -1,6 +1,6 @@
 # Project file XML settings
 
-## Enable implicit usings:
+## Enable implicit usings
 
 ```xml
 <PropertyGroup>

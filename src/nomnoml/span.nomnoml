@@ -1,0 +1,60 @@
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#background: transparent
+#fill: #f4f6fb
+#title: span
+
+[Span<T>|
+Provides a type-safe and memory-safe
+representation of a contiguous region
+of arbitrary memory.|
+Span(ref T reference)
+Span(T\[\]? array)
+Span(void* pointer, int length)
+Span(T\[\]? array, int start, int length)|
+static Span<T> Empty { get }
+bool IsEmpty { get }
+ref T this\[int index\] { get }
+int Length { get }|
+void Clear()
+void CopyTo(Span<T> destination)
+void Fill(T value)
+Span<T>.Enumerator GetEnumerator()
+ref T GetPinnableReference()
+Span<T> Slice(int start)
+Span<T> Slice(int start, int length)
+T\[\] ToArray()
+bool TryCopyTo(Span<T> destination)|
+static bool operator ==(Span<T> left, Span<T> right)
+static bool operator !=(Span<T> left, Span<T> right)
+static implicit operator Span<T>(ArraySegment<T> segment)
+static implicit operator ReadOnlySpan<T>(Span<T> span)
+static implicit operator Span<T>(T\[\]? array);
+]
+
+[ReadOnlySpan<T>|
+Provides a type-safe and memory-safe 
+read-only representation of a contiguous
+region of arbitrary memory.|
+ReadOnlySpan(ref readonly T reference)
+ReadOnlySpan(T\[\]? array)
+ReadOnlySpan(void* pointer, int length)
+ReadOnlySpan(T\[\]? array, int start, int length)|
+static ReadOnlySpan<T> Empty { get }
+bool IsEmpty { get }
+ref readonly T this\[int index\] { get }
+int Length { get } |
+ReadOnlySpan<T> CastUp<TDerived>(ReadOnlySpan<TDerived> items)
+void CopyTo(Span<T> destination)
+ReadOnlySpan<T>.Enumerator GetEnumerator()
+ref readonly T GetPinnableReference()
+ReadOnlySpan<T> Slice(int start)
+ReadOnlySpan<T> Slice(int start, int length)
+T\[\] ToArray()
+bool TryCopyTo(Span<T> destination)|
+static bool operator ==(ReadOnlySpan<T> left, ReadOnlySpan<T> right)
+static bool operator !=(ReadOnlySpan<T> left, ReadOnlySpan<T> right);
+static implicit operator ReadOnlySpan<T>(ArraySegment<T> segment);
+static implicit operator ReadOnlySpan<T>(T\[\]? array);
+]

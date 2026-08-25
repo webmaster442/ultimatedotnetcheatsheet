@@ -1,0 +1,44 @@
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#background: transparent
+#fill: #f4f6fb
+#title: memory
+
+[Memory<T>|
+Represents a contiguous region of memory|
+Memory(T\[\]? array)
+Memory(T\[\]? array, int start, int length)|
+static Memory<T> Empty { get }
+bool IsEmpty { get }
+int Length { get }
+Span<T> Span { get } |
+void CopyTo(Memory<T> destination)
+MemoryHandle Pin()
+Memory<T> Slice(int start)
+Memory<T> Slice(int start, int length)
+T\[\] ToArray()
+bool TryCopyTo(Memory<T> destination)|
+static implicit operator Memory<T>(T\[\]? array)
+static implicit operator Memory<T>(ArraySegment<T> segment)
+static implicit operator ReadOnlyMemory<T>(Memory<T> memory)
+]
+
+[ReadOnlyMemory<T>|
+Represents a contiguous region of memory, similar to ReadOnlySpan<T>.
+Unlike ReadOnlySpan<T>, it is not a byref-like type.|
+ReadOnlyMemory(T\[\]? array)
+ReadOnlyMemory(T\[\]? array, int start, int length)|
+static ReadOnlyMemory<T> Empty { get }
+bool IsEmpty { get }
+int Length { get }
+ReadOnlySpan<T> Span { get }|
+void CopyTo(Memory<T> destination)
+MemoryHandle Pin()
+ReadOnlyMemory<T> Slice(int start)
+ReadOnlyMemory<T> Slice(int start, int length)
+T\[\] ToArray()
+bool TryCopyTo(Memory<T> destination)|
+static implicit operator ReadOnlyMemory<T>(ArraySegment<T> segment)
+static implicit operator ReadOnlyMemory<T>(T\[\]? array)
+]
