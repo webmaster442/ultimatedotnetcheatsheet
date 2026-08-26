@@ -1,0 +1,23 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#background: transparent
+#fill: #f4f6fb
+#title: wpf6
+
+[MarkupExtension] <:- [ArrayExtension]
+[MarkupExtension] <:- [NullExtension]
+[MarkupExtension] <:- [Reference]
+[MarkupExtension] <:- [StaticExtension]
+[MarkupExtension] <:- [TypeExtension]
+
+[MarkupExtension] <:- [RelativeSource]
+[MarkupExtension] <:- [DynamicResourceExtension]
+[MarkupExtension] <:- [StaticResourceExtension]
+[MarkupExtension] <:- [TemplateBindingExtension]
+[MarkupExtension] <:- [BindingBase]
+
+[BindingBase] <:- [Binding]
+[BindingBase] <:- [MultiBinding]
+[BindingBase] <:- [PriorityBinding]

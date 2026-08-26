@@ -1,4 +1,3 @@
-convert md2html --svg -i .\src\changelog.md -tf .\template\template.html -o .\docs --title "Changelog"
 convert md2html --svg -i .\src\000-start.md -tf .\template\template.html -o .\docs\index.html --title "Home"
 convert md2html --svg -i .\src\010-basiccommands.md -tf .\template\template.html -o .\docs --title "Dotnet basic commands"
 convert md2html --svg -i .\src\020-project.md -tf .\template\template.html -o .\docs --title "Project file XML settings"
@@ -25,3 +24,4 @@ convert md2html --svg -i .\src\140-ui.md -tf .\template\template.html -o .\docs 
 convert md2html --svg -i .\src\150-nuget.md -tf .\template\template.html -o .\docs --title "Useful NuGet packagest"
 convert md2html --svg -i .\src\155-shortcuts.md -tf .\template\template.html -o .\docs --title "Keyboard Shortcuts"
 convert md2html --svg -i .\src\160-csharp-versions.md -tf .\template\template.html -o .\docs --title "C# Version History"
+convert md2html --svg -i .\src\changelog.md -tf .\template\template.html -o .\docs --title "Changelog"

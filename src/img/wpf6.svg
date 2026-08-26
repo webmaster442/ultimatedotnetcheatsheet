@@ -1,0 +1,218 @@
+<svg version="1.1" baseProfile="full" width="597.0" height="487.0" viewBox="0 0 597 487" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf6</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: wpf6
+	
+	[MarkupExtension] &lt;:- [ArrayExtension]
+	[MarkupExtension] &lt;:- [NullExtension]
+	[MarkupExtension] &lt;:- [Reference]
+	[MarkupExtension] &lt;:- [StaticExtension]
+	[MarkupExtension] &lt;:- [TypeExtension]
+	
+	[MarkupExtension] &lt;:- [RelativeSource]
+	[MarkupExtension] &lt;:- [DynamicResourceExtension]
+	[MarkupExtension] &lt;:- [StaticResourceExtension]
+	[MarkupExtension] &lt;:- [TemplateBindingExtension]
+	[MarkupExtension] &lt;:- [BindingBase]
+	
+	[BindingBase] &lt;:- [Binding]
+	[BindingBase] &lt;:- [MultiBinding]
+	[BindingBase] &lt;:- [PriorityBinding]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="487.0" width="597.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M90.1 156.0 L158 16 L214 16 L214.0 16.0 " fill="none"></path>
+					<path d="M85.3 153.7 L90.1 156.0 L94.9 158.3 L84.3 168.0 Z"></path>
+					<path d="M94.1 156.8 L158 58 L220 58 L220.0 58.0 " fill="none"></path>
+					<path d="M89.6 153.9 L94.1 156.8 L98.6 159.7 L86.8 168.0 Z"></path>
+					<path d="M101.3 158.4 L158 100 L233 100 L233.0 100.0 " fill="none"></path>
+					<path d="M97.5 154.7 L101.3 158.4 L105.1 162.1 L92.0 168.0 Z"></path>
+					<path d="M119.4 161.9 L158 142 L213 142 L213.0 142.0 " fill="none"></path>
+					<path d="M117.0 157.2 L119.4 161.9 L121.8 166.6 L107.5 168.0 Z"></path>
+					<path d="M166.3 184.0 L158 184 L215.5 184 L215.5 184.0 " fill="none"></path>
+					<path d="M166.3 178.7 L166.3 184.0 L166.3 189.3 L153.0 184.0 Z"></path>
+					<path d="M119.4 206.1 L158 226 L214 226 L214.0 226.0 " fill="none"></path>
+					<path d="M121.8 201.4 L119.4 206.1 L117.0 210.8 L107.5 200.0 Z"></path>
+					<path d="M101.3 209.6 L158 268 L163 268 L163.0 268.0 " fill="none"></path>
+					<path d="M105.1 205.9 L101.3 209.6 L97.5 213.3 L92.0 200.0 Z"></path>
+					<path d="M94.1 211.2 L158 310 L175 310 L175.0 310.0 " fill="none"></path>
+					<path d="M98.6 208.3 L94.1 211.2 L89.6 214.1 L86.8 200.0 Z"></path>
+					<path d="M90.1 212.0 L158 352 L169 352 L169.0 352.0 " fill="none"></path>
+					<path d="M94.9 209.7 L90.1 212.0 L85.3 214.3 L84.3 200.0 Z"></path>
+					<path d="M87.5 212.4 L158 394 L224.5 394 L224.5 394.0 " fill="none"></path>
+					<path d="M92.5 210.5 L87.5 212.4 L82.6 214.4 L82.7 200.0 Z"></path>
+					<path d="M325.4 372.0 L406 331 L438.5 331 L438.5 331.0 " fill="none"></path>
+					<path d="M323.0 367.2 L325.4 372.0 L327.8 376.7 L313.5 378.0 Z"></path>
+					<path d="M352.6 382.0 L406 373 L420 373 L420.0 373.0 " fill="none"></path>
+					<path d="M351.8 376.8 L352.6 382.0 L353.5 387.3 L339.5 384.3 Z"></path>
+					<path d="M352.6 406.0 L406 415 L411 415 L411.0 415.0 " fill="none"></path>
+					<path d="M353.5 400.7 L352.6 406.0 L351.8 411.2 L339.5 403.7 Z"></path>
+					<g data-name="MarkupExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="MarkupExtension">
+							<rect x="0.0" y="168.0" height="32.0" width="153.0" data-name="MarkupExtension"></rect>
+						</g>
+						<g transform="translate(0, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarkupExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarkupExtension" data-compartment="0">
+								<text x="68.5" y="14.1" stroke="none" text-anchor="middle" data-name="MarkupExtension" data-compartment="0">MarkupExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ArrayExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ArrayExtension">
+							<rect x="214.0" y="0.0" height="32.0" width="136.0" data-name="ArrayExtension"></rect>
+						</g>
+						<g transform="translate(214, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ArrayExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ArrayExtension" data-compartment="0">
+								<text x="60.0" y="14.1" stroke="none" text-anchor="middle" data-name="ArrayExtension" data-compartment="0">ArrayExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="NullExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="NullExtension">
+							<rect x="220.0" y="42.0" height="32.0" width="124.0" data-name="NullExtension"></rect>
+						</g>
+						<g transform="translate(220, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="NullExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="NullExtension" data-compartment="0">
+								<text x="54.0" y="14.1" stroke="none" text-anchor="middle" data-name="NullExtension" data-compartment="0">NullExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Reference">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Reference">
+							<rect x="233.0" y="84.0" height="32.0" width="98.0" data-name="Reference"></rect>
+						</g>
+						<g transform="translate(233, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Reference" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Reference" data-compartment="0">
+								<text x="41.0" y="14.1" stroke="none" text-anchor="middle" data-name="Reference" data-compartment="0">Reference</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StaticExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StaticExtension">
+							<rect x="213.0" y="126.0" height="32.0" width="138.0" data-name="StaticExtension"></rect>
+						</g>
+						<g transform="translate(213, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StaticExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StaticExtension" data-compartment="0">
+								<text x="61.0" y="14.1" stroke="none" text-anchor="middle" data-name="StaticExtension" data-compartment="0">StaticExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TypeExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TypeExtension">
+							<rect x="215.5" y="168.0" height="32.0" width="133.0" data-name="TypeExtension"></rect>
+						</g>
+						<g transform="translate(215.5, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TypeExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TypeExtension" data-compartment="0">
+								<text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="TypeExtension" data-compartment="0">TypeExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="RelativeSource">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="RelativeSource">
+							<rect x="214.0" y="210.0" height="32.0" width="136.0" data-name="RelativeSource"></rect>
+						</g>
+						<g transform="translate(214, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="RelativeSource" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="RelativeSource" data-compartment="0">
+								<text x="60.0" y="14.1" stroke="none" text-anchor="middle" data-name="RelativeSource" data-compartment="0">RelativeSource</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DynamicResourceExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DynamicResourceExtension">
+							<rect x="163.0" y="252.0" height="32.0" width="238.0" data-name="DynamicResourceExtension"></rect>
+						</g>
+						<g transform="translate(163, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicResourceExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicResourceExtension" data-compartment="0">
+								<text x="111.0" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicResourceExtension" data-compartment="0">DynamicResourceExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StaticResourceExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StaticResourceExtension">
+							<rect x="175.0" y="294.0" height="32.0" width="214.0" data-name="StaticResourceExtension"></rect>
+						</g>
+						<g transform="translate(175, 294)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StaticResourceExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StaticResourceExtension" data-compartment="0">
+								<text x="99.0" y="14.1" stroke="none" text-anchor="middle" data-name="StaticResourceExtension" data-compartment="0">StaticResourceExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TemplateBindingExtension">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TemplateBindingExtension">
+							<rect x="169.0" y="336.0" height="32.0" width="226.0" data-name="TemplateBindingExtension"></rect>
+						</g>
+						<g transform="translate(169, 336)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TemplateBindingExtension" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TemplateBindingExtension" data-compartment="0">
+								<text x="105.0" y="14.1" stroke="none" text-anchor="middle" data-name="TemplateBindingExtension" data-compartment="0">TemplateBindingExtension</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BindingBase">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="BindingBase">
+							<rect x="224.5" y="378.0" height="32.0" width="115.0" data-name="BindingBase"></rect>
+						</g>
+						<g transform="translate(224.5, 378)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BindingBase" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BindingBase" data-compartment="0">
+								<text x="49.5" y="14.1" stroke="none" text-anchor="middle" data-name="BindingBase" data-compartment="0">BindingBase</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Binding">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Binding">
+							<rect x="438.5" y="315.0" height="32.0" width="75.0" data-name="Binding"></rect>
+						</g>
+						<g transform="translate(438.5, 315)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Binding" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Binding" data-compartment="0">
+								<text x="29.5" y="14.1" stroke="none" text-anchor="middle" data-name="Binding" data-compartment="0">Binding</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="MultiBinding">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="MultiBinding">
+							<rect x="420.0" y="357.0" height="32.0" width="112.0" data-name="MultiBinding"></rect>
+						</g>
+						<g transform="translate(420, 357)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MultiBinding" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MultiBinding" data-compartment="0">
+								<text x="48.0" y="14.1" stroke="none" text-anchor="middle" data-name="MultiBinding" data-compartment="0">MultiBinding</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PriorityBinding">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="PriorityBinding">
+							<rect x="411.0" y="399.0" height="32.0" width="130.0" data-name="PriorityBinding"></rect>
+						</g>
+						<g transform="translate(411, 399)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PriorityBinding" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PriorityBinding" data-compartment="0">
+								<text x="57.0" y="14.1" stroke="none" text-anchor="middle" data-name="PriorityBinding" data-compartment="0">PriorityBinding</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
