@@ -6,18 +6,8 @@
 
 ## Generic collections
 
-* `Dictionary<TKey,TValue>`
-
-^^^
-![Dictionary\<TKey,TValue\>](img/dictionary.svg)
-^^^ Dictionary\<TKey,TValue\>]
-
-* `OrderedDictionary<TKey,TValue>`
-
-^^^
-![OrderedDictionary\<TKey,TValue\>](img/ordereddictionary.svg)
-^^^ OrderedDictionary\<TKey,TValue\>
-
+* `Dictionary<TKey,TValue>` - Represents a collection of keys and values.
+* `OrderedDictionary<TKey,TValue>` - Represents a collection of key/value pairs that are accessible by the key or index.
 * `SortedDictionary<TKey,TValue>` - Represents a collection of key/value pairs that are sorted on the key.
 * `SortedList<TKey,TValue>` - Represents a collection of key/value pairs that are sorted by key based on the associated `IComparer<T>` implementation.
 * `HashSet<T>` - Represents a set of values.
@@ -87,12 +77,84 @@ Use `Memory<T>` or `ReadOnlyMemory<T>` when:
 * You need to store the "view" of the data as a field in a class.
 * You are passing data to a background task or storing it for later processing.
 
-^^^
-![Span\<T\> Types](img/span.svg)
-^^^ Span\<T\> Types
-
-^^^
-![Memory\<T\> Types](img/memory.svg)
-^^^ Memory\<T\> Types
-
 Note: **`Equals()` on `Span<T>` or `ReadOnlySpan<T>` will always throw an exception. Use the equality operator instead.**
+
+## Pitfalls
+
+### Don't modify a collection while enumerating it.
+
+```csharp
+foreach (var item in numbers)
+{
+    if (item < 0)
+        numbers.Remove(item); // InvalidOperationException
+}
+```
+
+### Dictionary Add and Indexer behave differently
+
+```csharp
+dictionary.Add("a", 1);
+dictionary.Add("a", 2); // Exception, since "a" has been added
+```
+
+```csharp
+dictionary["a"] = 2;
+dictionary["a"] = 3; // Indexer replaces existing value
+```
+
+### Prefer non-null collections when possible
+
+When "no items" is a valid state return an empty collection, instead of `null`, that way you can eliminate a lot of null checks.
+
+## Time complexity
+
+| Collection / operation                        | Typical complexity |
+| --------------------------------------------- | -----------------: |
+| `List<T>` index access                        |               O(1) |
+| `List<T>` append                              |     O(1) amortized |
+| `List<T>` insert/remove at beginning          |               O(n) |
+| `List<T>` search                              |               O(n) |
+| `LinkedList<T>` insert/remove with node       |               O(1) |
+| `LinkedList<T>` search                        |               O(n) |
+| `Dictionary<TKey,TValue>` lookup              |       O(1) average |
+| `Dictionary<TKey,TValue>` insert              |       O(1) average |
+| `Dictionary<TKey,TValue>` remove              |       O(1) average |
+| `HashSet<T>` lookup                           |       O(1) average |
+| `HashSet<T>` add/remove                       |       O(1) average |
+| `SortedDictionary<TKey,TValue>` lookup        |           O(log n) |
+| `SortedDictionary<TKey,TValue>` insert/remove |           O(log n) |
+| `SortedSet<T>` lookup                         |           O(log n) |
+| `Queue<T>` enqueue/dequeue                    |               O(1) |
+| `Stack<T>` push/pop                           |               O(1) |
+
+## Custom collection initializer
+
+When creating a custom collection using the Collection initializer syntax is possible, if the collection meets following criterias:
+
+* The collection has a `public void Add()` methdod to add elements
+* The collection implements the `IEnumerable<T>` interface:
+
+```csharp
+public class Team : IEnumerable<string>
+{
+    private readonly List<string> members = new();
+
+    public void Add(string member)
+    {
+        members.Add(member);
+    }
+
+    public IEnumerator<string> GetEnumerator() => members.GetEnumerator();
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}
+
+var team = new Team
+{
+    "Alice",
+    "Bob",
+    "Charlie"
+};
+
+```
