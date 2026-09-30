@@ -1,127 +1,138 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+<html>
 
 <head>
-    <title>Ultimate .NET cheat sheet - Basic type system</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
-    <link rel="manifest" href="manifest.json">
-    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="prism.css" type="text/css">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="prism.js" type="text/javascript"></script>
-    <script src="script.js" type="text/javascript"></script>
-
-    <!--OpenGraph meta-->
-    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ultimate .NET cheat sheet - Basic type system">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:width" content="945" />
-    <meta property="og:image:height" content="1134" />
-    <meta property="og:description"
-        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Basic type system</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path
-                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path
-                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-            <path
-                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path
-                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-        </symbol>
-    </svg>
-
-    <div class="modal fade" id="changelogModal" tabindex="-1" role="dialog" aria-labelledby="changeModal"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="changeModal">Change log</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModalHeader">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="modalContent">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        id="closeModalFooter">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: flex;">
-        <aside id="nav" class="text-white bg-dark">
-            <div>
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <img src="pwa/i-192.png" height="40px" style="margin: 7px;"> Version: 25-01-16
-                </a>
-            </div>
-            <hr>
-            <div id="toclinks">
-                <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/095-regex.html">Regular Expressions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/155-shortcuts.html">Keyboard Shortcuts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/160-csharp-versions.html">C# Version History</a></li></ul>
-            </div>
-            <hr>
-            <div id="icons">
-                <a class="btn btn-link" href="https://github.com/webmaster442/ultimatedotnetcheatsheet/issues"
-                    title="Report a bug/Request a feature..." target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Report a bug/Request a feature...</title>
-                        <path
-                            d="M14,12H10V10H14M14,16H10V14H14M20,8H17.19C16.74,7.22 16.12,6.55 15.37,6.04L17,4.41L15.59,3L13.42,5.17C12.96,5.06 12.5,5 12,5C11.5,5 11.04,5.06 10.59,5.17L8.41,3L7,4.41L8.62,6.04C7.88,6.55 7.26,7.22 6.81,8H4V10H6.09C6.04,10.33 6,10.66 6,11V12H4V14H6V15C6,15.34 6.04,15.67 6.09,16H4V18H6.81C7.85,19.79 9.78,21 12,21C14.22,21 16.15,19.79 17.19,18H20V16H17.91C17.96,15.67 18,15.34 18,15V14H20V12H18V11C18,10.66 17.96,10.33 17.91,10H20V8Z" />
-                    </svg>
-                </a>
-                <a class="btn btn-link" href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
-                    title="Fork me on github">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Fork me on github</title>
-                        <path
-                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                    </svg>
-                </a>
-                <a class="btn btn-link" href="#" onclick="changelogModal()" title="Show changelog">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Show changelog</title>
-                        <path
-                            d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" />
-                    </svg>
-                </a>
-                <a class="btn btn-link" href="#" onclick="print()" title="Print this page">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Print this page</title>
-                        <path
-                            d="M19 8C20.66 8 22 9.34 22 11V17H18V21H6V17H2V11C2 9.34 3.34 8 5 8H6V3H18V8H19M8 5V8H16V5H8M16 19V15H8V19H16M18 15H20V11C20 10.45 19.55 10 19 10H5C4.45 10 4 10.45 4 11V15H6V13H18V15M19 11.5C19 12.05 18.55 12.5 18 12.5C17.45 12.5 17 12.05 17 11.5C17 10.95 17.45 10.5 18 10.5C18.55 10.5 19 10.95 19 11.5Z" />
-                    </svg>
-                </a>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
             </div>
         </aside>
-    </div>
 
-    <div id="main">
-        <div class="container">
-            <div class="row" style="margin: 0px auto;">
-                <div class="col-lg-10" id="content">
-                    <h1 id="basic-type-system">Basic type system</h1>
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="basic-type-system">Basic type system</h1>
 <h2 id="numerical-types">Numerical types</h2>
-<table class="table table-striped">
+<table>
 <thead>
 <tr>
 <th style="text-align: center;">Type</th>
@@ -269,19 +280,20 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </ul>
 <h2 id="base-class-hierarchy-under-the-hood">Base class hierarchy under the hood</h2>
 <figure>
-<p><svg version="1.1" baseProfile="full" width="970.0" height="600.0" viewBox="0 0 970 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<p><svg version="1.1" baseProfile="full" width="1077.0" height="600.0" viewBox="0 0 1077 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >baseclasses</title>
 	<desc >#direction: right
 	#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
 	#title: baseclasses
 	
 	[Object] &lt;:- [ValueType] &lt;:- [Enum]
 	[Object] &lt;:- [Array]
 	[Object] &lt;:- [DynamicObject]
 	[Object] &lt;:- [ExpandoObject]
-	
 	
 	[DynamicObject|
 	Provides a base class for specifying 
@@ -323,168 +335,168 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
 		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="600.0" width="970.0" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="600.0" width="1077.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M236.5 220.8 L360 64 L407 64 L407.0 64.0 " fill="none"></path>
-					<path d="M232.4 217.5 L236.5 220.8 L240.7 224.1 L228.3 231.3 Z"></path>
-					<path d="M669.3 64.0 L703 64 L708 64 L708.0 64.0 " fill="none"></path>
-					<path d="M669.3 58.7 L669.3 64.0 L669.3 69.3 L656.0 64.0 Z"></path>
-					<path d="M342.2 226.1 L360 218.5 L365 218.5 L365.0 218.5 " fill="none"></path>
-					<path d="M340.1 221.1 L342.2 226.1 L344.2 231.0 L329.9 231.3 Z"></path>
-					<path d="M342.2 365.4 L360 373 L393 373 L393.0 373.0 " fill="none"></path>
-					<path d="M344.2 360.5 L342.2 365.4 L340.1 370.4 L329.9 360.3 Z"></path>
-					<path d="M245.4 370.1 L360 495.5 L387 495.5 L387.0 495.5 " fill="none"></path>
-					<path d="M249.4 366.5 L245.4 370.1 L241.5 373.7 L236.4 360.3 Z"></path>
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M262.6 221.2 L400 64 L451 64 L451.0 64.0 " fill="none"></path>
+					<path d="M258.6 217.7 L262.6 221.2 L266.6 224.7 L253.9 231.3 Z"></path>
+					<path d="M741.3 64.0 L779 64 L784 64 L784.0 64.0 " fill="none"></path>
+					<path d="M741.3 58.7 L741.3 64.0 L741.3 69.3 L728.0 64.0 Z"></path>
+					<path d="M379.0 226.5 L400 218.5 L405 218.5 L405.0 218.5 " fill="none"></path>
+					<path d="M377.1 221.5 L379.0 226.5 L380.9 231.5 L366.6 231.3 Z"></path>
+					<path d="M379.0 365.0 L400 373 L439 373 L439.0 373.0 " fill="none"></path>
+					<path d="M380.9 360.0 L379.0 365.0 L377.1 370.0 L366.6 360.3 Z"></path>
+					<path d="M272.4 369.6 L400 495.5 L430 495.5 L430.0 495.5 " fill="none"></path>
+					<path d="M276.1 365.8 L272.4 369.6 L268.6 373.4 L262.9 360.3 Z"></path>
 					<g data-name="Object">
-						<g fill="#eee8d5" stroke="#33322E" data-name="Object">
-							<rect x="0.0" y="231.3" height="129.0" width="355.0" data-name="Object"></rect>
-							<path d="M0.0 263.3 L355.0 263.3" fill="none" data-name="Object"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Object">
+							<rect x="0.0" y="231.3" height="129.0" width="395.0" data-name="Object"></rect>
+							<path d="M0.0 263.3 L395.0 263.3" fill="none" data-name="Object"></path>
 						</g>
-						<g transform="translate(0, 231.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object">
-								<text x="169.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object">Object</text>
+						<g transform="translate(0, 231.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
+								<text x="189.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 263.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object">
-								<text x="0.0" y="14.1" stroke="none" data-name="Object">Supports all classes in the .NET</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="Object">class hierarchy and provides</text>
-								<text x="0.0" y="46.5" stroke="none" data-name="Object">low-level services to derived classes.</text>
-								<text x="0.0" y="62.7" stroke="none" data-name="Object">This is the ultimate base class of all</text>
-								<text x="0.0" y="78.9" stroke="none" data-name="Object">.NET classes; it is the root of the type hierarchy.</text>
+						<g transform="translate(0, 263.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Object" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Object" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Object" data-compartment="1">Supports all classes in the .NET</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Object" data-compartment="1">class hierarchy and provides</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Object" data-compartment="1">low-level services to derived classes.</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Object" data-compartment="1">This is the ultimate base class of all</text>
+								<text x="0.0" y="78.9" stroke="none" data-name="Object" data-compartment="1">.NET classes; it is the root of the type hierarchy.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ValueType">
-						<g fill="#eee8d5" stroke="#33322E" data-name="ValueType">
-							<rect x="407.0" y="0.0" height="128.0" width="249.0" data-name="ValueType"></rect>
-							<path d="M407.0 32.0 L656.0 32.0" fill="none" data-name="ValueType"></path>
-							<path d="M407.0 80.0 L656.0 80.0" fill="none" data-name="ValueType"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueType">
+							<rect x="451.0" y="0.0" height="128.0" width="277.0" data-name="ValueType"></rect>
+							<path d="M451.0 32.0 L728.0 32.0" fill="none" data-name="ValueType"></path>
+							<path d="M451.0 80.0 L728.0 80.0" fill="none" data-name="ValueType"></path>
 						</g>
-						<g transform="translate(407, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType">
-								<text x="116.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType">ValueType</text>
+						<g transform="translate(451, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueType" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueType" data-compartment="0">
+								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="ValueType" data-compartment="0">ValueType</text>
 								
 							</g>
 						</g>
-						<g transform="translate(407, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
-								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">Provides the base class</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">for value types.for enumerations.</text>
+						<g transform="translate(451, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType" data-compartment="1">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType" data-compartment="1">for value types.for enumerations.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(407, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType">
-								<text x="0.0" y="14.1" stroke="none" data-name="ValueType">⚠️ You cannot derive from</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="ValueType">this special class</text>
+						<g transform="translate(451, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueType" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueType" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueType" data-compartment="2">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueType" data-compartment="2">this special class</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="Enum">
-						<g fill="#eee8d5" stroke="#33322E" data-name="Enum">
-							<rect x="708.0" y="0.0" height="128.0" width="206.0" data-name="Enum"></rect>
-							<path d="M708.0 32.0 L914.0 32.0" fill="none" data-name="Enum"></path>
-							<path d="M708.0 80.0 L914.0 80.0" fill="none" data-name="Enum"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Enum">
+							<rect x="784.0" y="0.0" height="128.0" width="237.0" data-name="Enum"></rect>
+							<path d="M784.0 32.0 L1021.0 32.0" fill="none" data-name="Enum"></path>
+							<path d="M784.0 80.0 L1021.0 80.0" fill="none" data-name="Enum"></path>
 						</g>
-						<g transform="translate(708, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum">
-								<text x="95.0" y="14.1" stroke="none" text-anchor="middle" data-name="Enum">Enum</text>
+						<g transform="translate(784, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Enum" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Enum" data-compartment="0">
+								<text x="110.5" y="14.1" stroke="none" text-anchor="middle" data-name="Enum" data-compartment="0">Enum</text>
 								
 							</g>
 						</g>
-						<g transform="translate(708, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
-								<text x="0.0" y="14.1" stroke="none" data-name="Enum">Provides the base class</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="Enum">for enumerations.</text>
+						<g transform="translate(784, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum" data-compartment="1">Provides the base class</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum" data-compartment="1">for enumerations.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(708, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum">
-								<text x="0.0" y="14.1" stroke="none" data-name="Enum">⚠️ You cannot derive from</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="Enum">this special class</text>
+						<g transform="translate(784, 80)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Enum" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Enum" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="Enum" data-compartment="2">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Enum" data-compartment="2">this special class</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="Array">
-						<g fill="#eee8d5" stroke="#33322E" data-name="Array">
-							<rect x="365.0" y="138.0" height="161.0" width="333.0" data-name="Array"></rect>
-							<path d="M365.0 170.0 L698.0 170.0" fill="none" data-name="Array"></path>
-							<path d="M365.0 251.0 L698.0 251.0" fill="none" data-name="Array"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Array">
+							<rect x="405.0" y="138.0" height="161.0" width="369.0" data-name="Array"></rect>
+							<path d="M405.0 170.0 L774.0 170.0" fill="none" data-name="Array"></path>
+							<path d="M405.0 251.0 L774.0 251.0" fill="none" data-name="Array"></path>
 						</g>
-						<g transform="translate(365, 138)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array">
-								<text x="158.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array">Array</text>
+						<g transform="translate(405, 138)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Array" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Array" data-compartment="0">
+								<text x="176.5" y="14.1" stroke="none" text-anchor="middle" data-name="Array" data-compartment="0">Array</text>
 								
 							</g>
 						</g>
-						<g transform="translate(365, 170)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
-								<text x="0.0" y="14.1" stroke="none" data-name="Array">Provides methods for creating, manipulating,</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="Array">searching, and sorting arrays,</text>
-								<text x="0.0" y="46.5" stroke="none" data-name="Array">thereby serving as the base class  for</text>
-								<text x="0.0" y="62.7" stroke="none" data-name="Array">all arrays in the common language runtime.</text>
+						<g transform="translate(405, 170)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array" data-compartment="1">Provides methods for creating, manipulating,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array" data-compartment="1">searching, and sorting arrays,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Array" data-compartment="1">thereby serving as the base class  for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="Array" data-compartment="1">all arrays in the common language runtime.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(365, 251)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array">
-								<text x="0.0" y="14.1" stroke="none" data-name="Array">⚠️ You cannot derive from</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="Array">this special class</text>
+						<g transform="translate(405, 251)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Array" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Array" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="Array" data-compartment="2">⚠️ You cannot derive from</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Array" data-compartment="2">this special class</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="DynamicObject">
-						<g fill="#eee8d5" stroke="#33322E" data-name="DynamicObject">
-							<rect x="393.0" y="309.0" height="128.0" width="277.0" data-name="DynamicObject"></rect>
-							<path d="M393.0 341.0 L670.0 341.0" fill="none" data-name="DynamicObject"></path>
-							<path d="M393.0 389.0 L670.0 389.0" fill="none" data-name="DynamicObject"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DynamicObject">
+							<rect x="439.0" y="309.0" height="128.0" width="301.0" data-name="DynamicObject"></rect>
+							<path d="M439.0 341.0 L740.0 341.0" fill="none" data-name="DynamicObject"></path>
+							<path d="M439.0 389.0 L740.0 389.0" fill="none" data-name="DynamicObject"></path>
 						</g>
-						<g transform="translate(393, 309)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject">
-								<text x="130.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject">DynamicObject</text>
+						<g transform="translate(439, 309)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DynamicObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DynamicObject" data-compartment="0">
+								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="DynamicObject" data-compartment="0">DynamicObject</text>
 								
 							</g>
 						</g>
-						<g transform="translate(393, 341)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
-								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">Provides a base class for specifying</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">dynamic behavior at run time.</text>
+						<g transform="translate(439, 341)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject" data-compartment="1">Provides a base class for specifying</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject" data-compartment="1">dynamic behavior at run time.</text>
 								
 							</g>
 						</g>
-						<g transform="translate(393, 389)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject">
-								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject">❗This class must be inherited from;</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject">you cannot instantiate it directly.</text>
+						<g transform="translate(439, 389)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DynamicObject" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="DynamicObject" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="DynamicObject" data-compartment="2">❗This class must be inherited from;</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="DynamicObject" data-compartment="2">you cannot instantiate it directly.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ExpandoObject">
-						<g fill="#eee8d5" stroke="#33322E" data-name="ExpandoObject">
-							<rect x="387.0" y="447.0" height="97.0" width="289.0" data-name="ExpandoObject"></rect>
-							<path d="M387.0 479.0 L676.0 479.0" fill="none" data-name="ExpandoObject"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ExpandoObject">
+							<rect x="430.0" y="447.0" height="97.0" width="319.0" data-name="ExpandoObject"></rect>
+							<path d="M430.0 479.0 L749.0 479.0" fill="none" data-name="ExpandoObject"></path>
 						</g>
-						<g transform="translate(387, 447)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject">
-								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject">ExpandoObject</text>
+						<g transform="translate(430, 447)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ExpandoObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ExpandoObject" data-compartment="0">
+								<text x="151.5" y="14.1" stroke="none" text-anchor="middle" data-name="ExpandoObject" data-compartment="0">ExpandoObject</text>
 								
 							</g>
 						</g>
-						<g transform="translate(387, 479)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject">
-								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject">Represents an object whose members</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject">can be dynamically added</text>
-								<text x="0.0" y="46.5" stroke="none" data-name="ExpandoObject">and removed at run time.</text>
+						<g transform="translate(430, 479)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ExpandoObject" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ExpandoObject" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ExpandoObject" data-compartment="1">Represents an object whose members</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ExpandoObject" data-compartment="1">can be dynamically added</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ExpandoObject" data-compartment="1">and removed at run time.</text>
 								
 							</g>
 						</g>
@@ -498,11 +510,13 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </figure>
 <h2 id="generic-math-interfaces">Generic Math Interfaces</h2>
 <figure>
-<p><svg version="1.1" baseProfile="full" width="915.5" height="480.0" viewBox="0 0 915.5 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<p><svg version="1.1" baseProfile="full" width="1007.5" height="480.0" viewBox="0 0 1007.5 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
 	<title >genericmath1</title>
 	<desc >#spacing: 10
 	#gravity: .8
 	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
 	#title: genericmath1
 	
 	[INumberBase\&lt;T\&gt;|
@@ -529,205 +543,205 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
 		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
-				<rect x="0.0" y="0.0" height="480.0" width="915.5" stroke="none"></rect>
+				<rect x="0.0" y="0.0" height="480.0" width="1007.5" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
-				<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
 					<g stroke-dasharray="6 6">
-						<path d="M415.0 77.3 L415 69 L415 74 L415.0 74.0 " fill="none"></path>
+						<path d="M459.5 77.3 L459.5 69 L459.5 74 L459.5 74.0 " fill="none"></path>
 					</g>
-					<path d="M420.3 77.3 L415.0 77.3 L409.7 77.3 L415.0 64.0 Z"></path>
+					<path d="M464.8 77.3 L459.5 77.3 L454.2 77.3 L459.5 64.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M415.0 167.3 L415 159 L415 172 L415.0 172.0 " fill="none"></path>
+						<path d="M459.5 167.3 L459.5 159 L459.5 172 L459.5 172.0 " fill="none"></path>
 					</g>
-					<path d="M420.3 167.3 L415.0 167.3 L409.7 167.3 L415.0 154.0 Z"></path>
+					<path d="M464.8 167.3 L459.5 167.3 L454.2 167.3 L459.5 154.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M415.0 249.3 L415 249 L415 262 L415.0 262.0 " fill="none"></path>
+						<path d="M459.5 249.3 L459.5 249 L459.5 262 L459.5 262.0 " fill="none"></path>
 					</g>
-					<path d="M420.3 249.3 L415.0 249.3 L409.7 249.3 L415.0 236.0 Z"></path>
+					<path d="M464.8 249.3 L459.5 249.3 L454.2 249.3 L459.5 236.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M415.0 339.3 L415 339 L415 344 L415.0 344.0 " fill="none"></path>
+						<path d="M459.5 339.3 L459.5 339 L459.5 344 L459.5 344.0 " fill="none"></path>
 					</g>
-					<path d="M420.3 339.3 L415.0 339.3 L409.7 339.3 L415.0 326.0 Z"></path>
+					<path d="M464.8 339.3 L459.5 339.3 L454.2 339.3 L459.5 326.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M578.7 51.6 L723.5 69 L723.5 74 L723.5 74.0 " fill="none"></path>
+						<path d="M639.8 51.6 L800.5 69 L800.5 74 L800.5 74.0 " fill="none"></path>
 					</g>
-					<path d="M579.4 46.3 L578.7 51.6 L578.1 56.9 L565.5 50.1 Z"></path>
+					<path d="M640.3 46.3 L639.8 51.6 L639.2 56.9 L626.5 50.1 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M251.3 53.1 L127.5 69 L127.5 82 L127.5 82.0 " fill="none"></path>
+						<path d="M279.3 53.0 L142 69 L142 82 L142.0 82.0 " fill="none"></path>
 					</g>
-					<path d="M252.0 58.4 L251.3 53.1 L250.6 47.8 L264.5 51.4 Z"></path>
+					<path d="M279.9 58.3 L279.3 53.0 L278.6 47.7 L292.5 51.5 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M127.5 159.3 L127.5 159 L127.5 164 L127.5 164.0 " fill="none"></path>
+						<path d="M142.0 159.3 L142 159 L142 164 L142.0 164.0 " fill="none"></path>
 					</g>
-					<path d="M132.8 159.3 L127.5 159.3 L122.2 159.3 L127.5 146.0 Z"></path>
+					<path d="M147.3 159.3 L142.0 159.3 L136.7 159.3 L142.0 146.0 Z"></path>
 					<g stroke-dasharray="6 6">
-						<path d="M127.5 257.3 L127.5 249 L127.5 254 L127.5 254.0 " fill="none"></path>
+						<path d="M142.0 257.3 L142 249 L142 254 L142.0 254.0 " fill="none"></path>
 					</g>
-					<path d="M132.8 257.3 L127.5 257.3 L122.2 257.3 L127.5 244.0 Z"></path>
+					<path d="M147.3 257.3 L142.0 257.3 L136.7 257.3 L142.0 244.0 Z"></path>
 					<g data-name="INumberBase&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="INumberBase&lt;T&gt;">
-							<rect x="264.5" y="0.0" height="64.0" width="301.0" data-name="INumberBase&lt;T&gt;"></rect>
-							<path d="M264.5 32.0 L565.5 32.0" fill="none" data-name="INumberBase&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="INumberBase&lt;T&gt;">
+							<rect x="292.5" y="0.0" height="64.0" width="334.0" data-name="INumberBase&lt;T&gt;"></rect>
+							<path d="M292.5 32.0 L626.5 32.0" fill="none" data-name="INumberBase&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(264.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumberBase&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumberBase&lt;T&gt;">
-								<text x="142.5" y="14.1" stroke="none" text-anchor="middle" data-name="INumberBase&lt;T&gt;">INumberBase&lt;T&gt;</text>
+						<g transform="translate(292.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumberBase&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumberBase&lt;T&gt;" data-compartment="0">
+								<text x="159.0" y="14.1" stroke="none" text-anchor="middle" data-name="INumberBase&lt;T&gt;" data-compartment="0">INumberBase&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(264.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumberBase&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumberBase&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="INumberBase&lt;T&gt;">Defines the base of other number types.</text>
+						<g transform="translate(292.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumberBase&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumberBase&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="INumberBase&lt;T&gt;" data-compartment="1">Defines the base of other number types.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="INumber&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="INumber&lt;T&gt;">
-							<rect x="37.0" y="82.0" height="64.0" width="181.0" data-name="INumber&lt;T&gt;"></rect>
-							<path d="M37.0 114.0 L218.0 114.0" fill="none" data-name="INumber&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="INumber&lt;T&gt;">
+							<rect x="42.0" y="82.0" height="64.0" width="200.0" data-name="INumber&lt;T&gt;"></rect>
+							<path d="M42.0 114.0 L242.0 114.0" fill="none" data-name="INumber&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(37, 82)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumber&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumber&lt;T&gt;">
-								<text x="82.5" y="14.1" stroke="none" text-anchor="middle" data-name="INumber&lt;T&gt;">INumber&lt;T&gt;</text>
+						<g transform="translate(42, 82)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="INumber&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="INumber&lt;T&gt;" data-compartment="0">
+								<text x="92.0" y="14.1" stroke="none" text-anchor="middle" data-name="INumber&lt;T&gt;" data-compartment="0">INumber&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(37, 114)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumber&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumber&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="INumber&lt;T&gt;">Defines a number type.</text>
+						<g transform="translate(42, 114)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="INumber&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="INumber&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="INumber&lt;T&gt;" data-compartment="1">Defines a number type.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="ISignedNumber&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="ISignedNumber&lt;T&gt;">
-							<rect x="252.5" y="74.0" height="80.0" width="325.0" data-name="ISignedNumber&lt;T&gt;"></rect>
-							<path d="M252.5 106.0 L577.5 106.0" fill="none" data-name="ISignedNumber&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ISignedNumber&lt;T&gt;">
+							<rect x="279.5" y="74.0" height="80.0" width="360.0" data-name="ISignedNumber&lt;T&gt;"></rect>
+							<path d="M279.5 106.0 L639.5 106.0" fill="none" data-name="ISignedNumber&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(252.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ISignedNumber&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ISignedNumber&lt;T&gt;">
-								<text x="154.5" y="14.1" stroke="none" text-anchor="middle" data-name="ISignedNumber&lt;T&gt;">ISignedNumber&lt;T&gt;</text>
+						<g transform="translate(279.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">
+								<text x="172.0" y="14.1" stroke="none" text-anchor="middle" data-name="ISignedNumber&lt;T&gt;" data-compartment="0">ISignedNumber&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(252.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ISignedNumber&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ISignedNumber&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="ISignedNumber&lt;T&gt;">Defines a number type which can represent</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="ISignedNumber&lt;T&gt;">both positive and negative values.</text>
+						<g transform="translate(279.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">Defines a number type which can represent</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ISignedNumber&lt;T&gt;" data-compartment="1">both positive and negative values.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IUnsignedNumber&lt;Tself&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="IUnsignedNumber&lt;Tself&gt;">
-							<rect x="587.5" y="74.0" height="80.0" width="272.0" data-name="IUnsignedNumber&lt;Tself&gt;"></rect>
-							<path d="M587.5 106.0 L859.5 106.0" fill="none" data-name="IUnsignedNumber&lt;Tself&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IUnsignedNumber&lt;Tself&gt;">
+							<rect x="649.5" y="74.0" height="80.0" width="302.0" data-name="IUnsignedNumber&lt;Tself&gt;"></rect>
+							<path d="M649.5 106.0 L951.5 106.0" fill="none" data-name="IUnsignedNumber&lt;Tself&gt;"></path>
 						</g>
-						<g transform="translate(587.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IUnsignedNumber&lt;Tself&gt;">
-								<text x="128.0" y="14.1" stroke="none" text-anchor="middle" data-name="IUnsignedNumber&lt;Tself&gt;">IUnsignedNumber&lt;Tself&gt;</text>
+						<g transform="translate(649.5, 74)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">
+								<text x="143.0" y="14.1" stroke="none" text-anchor="middle" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="0">IUnsignedNumber&lt;Tself&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(587.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IUnsignedNumber&lt;Tself&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;">Defines a number type that can only</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;">represent positive values.</text>
+						<g transform="translate(649.5, 106)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">Defines a number type that can only</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IUnsignedNumber&lt;Tself&gt;" data-compartment="1">represent positive values.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IBinaryNumber&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="IBinaryNumber&lt;T&gt;">
-							<rect x="0.0" y="164.0" height="80.0" width="255.0" data-name="IBinaryNumber&lt;T&gt;"></rect>
-							<path d="M0.0 196.0 L255.0 196.0" fill="none" data-name="IBinaryNumber&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IBinaryNumber&lt;T&gt;">
+							<rect x="0.0" y="164.0" height="80.0" width="284.0" data-name="IBinaryNumber&lt;T&gt;"></rect>
+							<path d="M0.0 196.0 L284.0 196.0" fill="none" data-name="IBinaryNumber&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(0, 164)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryNumber&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryNumber&lt;T&gt;">
-								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryNumber&lt;T&gt;">IBinaryNumber&lt;T&gt;</text>
+						<g transform="translate(0, 164)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">
+								<text x="134.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryNumber&lt;T&gt;" data-compartment="0">IBinaryNumber&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 196)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryNumber&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryNumber&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryNumber&lt;T&gt;">Defines a number that</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryNumber&lt;T&gt;">is represented in a base-2 format.</text>
+						<g transform="translate(0, 196)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">Defines a number that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryNumber&lt;T&gt;" data-compartment="1">is represented in a base-2 format.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IBinaryInteger&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="IBinaryInteger&lt;T&gt;">
-							<rect x="0.0" y="254.0" height="80.0" width="255.0" data-name="IBinaryInteger&lt;T&gt;"></rect>
-							<path d="M0.0 286.0 L255.0 286.0" fill="none" data-name="IBinaryInteger&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IBinaryInteger&lt;T&gt;">
+							<rect x="0.0" y="254.0" height="80.0" width="284.0" data-name="IBinaryInteger&lt;T&gt;"></rect>
+							<path d="M0.0 286.0 L284.0 286.0" fill="none" data-name="IBinaryInteger&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(0, 254)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryInteger&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryInteger&lt;T&gt;">
-								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryInteger&lt;T&gt;">IBinaryInteger&lt;T&gt;</text>
+						<g transform="translate(0, 254)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">
+								<text x="134.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryInteger&lt;T&gt;" data-compartment="0">IBinaryInteger&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(0, 286)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryInteger&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryInteger&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryInteger&lt;T&gt;">Defines an integer type that</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryInteger&lt;T&gt;">is represented in a base-2 format.</text>
+						<g transform="translate(0, 286)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">Defines an integer type that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryInteger&lt;T&gt;" data-compartment="1">is represented in a base-2 format.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IFloatingPoint&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="IFloatingPoint&lt;T&gt;">
-							<rect x="305.5" y="172.0" height="64.0" width="219.0" data-name="IFloatingPoint&lt;T&gt;"></rect>
-							<path d="M305.5 204.0 L524.5 204.0" fill="none" data-name="IFloatingPoint&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IFloatingPoint&lt;T&gt;">
+							<rect x="338.0" y="172.0" height="64.0" width="243.0" data-name="IFloatingPoint&lt;T&gt;"></rect>
+							<path d="M338.0 204.0 L581.0 204.0" fill="none" data-name="IFloatingPoint&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(305.5, 172)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPoint&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPoint&lt;T&gt;">
-								<text x="101.5" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPoint&lt;T&gt;">IFloatingPoint&lt;T&gt;</text>
+						<g transform="translate(338, 172)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">
+								<text x="113.5" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPoint&lt;T&gt;" data-compartment="0">IFloatingPoint&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(305.5, 204)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPoint&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPoint&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPoint&lt;T&gt;">Defines a floating-point type.</text>
+						<g transform="translate(338, 204)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPoint&lt;T&gt;" data-compartment="1">Defines a floating-point type.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IFloatingPointIeee754&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="IFloatingPointIeee754&lt;T&gt;">
-							<rect x="265.0" y="262.0" height="64.0" width="300.0" data-name="IFloatingPointIeee754&lt;T&gt;"></rect>
-							<path d="M265.0 294.0 L565.0 294.0" fill="none" data-name="IFloatingPointIeee754&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IFloatingPointIeee754&lt;T&gt;">
+							<rect x="294.0" y="262.0" height="64.0" width="331.0" data-name="IFloatingPointIeee754&lt;T&gt;"></rect>
+							<path d="M294.0 294.0 L625.0 294.0" fill="none" data-name="IFloatingPointIeee754&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(265, 262)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPointIeee754&lt;T&gt;">
-								<text x="142.0" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPointIeee754&lt;T&gt;">IFloatingPointIeee754&lt;T&gt;</text>
+						<g transform="translate(294, 262)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">
+								<text x="157.5" y="14.1" stroke="none" text-anchor="middle" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="0">IFloatingPointIeee754&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(265, 294)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPointIeee754&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPointIeee754&lt;T&gt;">Defines an IEEE 754 floating-point type.</text>
+						<g transform="translate(294, 294)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IFloatingPointIeee754&lt;T&gt;" data-compartment="1">Defines an IEEE 754 floating-point type.</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
-						<g fill="#eee8d5" stroke="#33322E" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
-							<rect x="254.5" y="344.0" height="80.0" width="321.0" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></rect>
-							<path d="M254.5 376.0 L575.5 376.0" fill="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></path>
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
+							<rect x="280.5" y="344.0" height="80.0" width="358.0" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></rect>
+							<path d="M280.5 376.0 L638.5 376.0" fill="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;"></path>
 						</g>
-						<g transform="translate(254.5, 344)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
-								<text x="152.5" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">IBinaryFloatingPointIeee754&lt;T&gt;</text>
+						<g transform="translate(280.5, 344)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">
+								<text x="171.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="0">IBinaryFloatingPointIeee754&lt;T&gt;</text>
 								
 							</g>
 						</g>
-						<g transform="translate(254.5, 376)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">
-								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">Defines an IEEE 754 floating-point</text>
-								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;">type that is represented in a base-2 format.</text>
+						<g transform="translate(280.5, 376)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">Defines an IEEE 754 floating-point</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IBinaryFloatingPointIeee754&lt;T&gt;" data-compartment="1">type that is represented in a base-2 format.</text>
 								
 							</g>
 						</g>
@@ -825,7 +839,7 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 <p>Defines support for trigonometric functions.</p>
 </li>
 </ul>
-<table class="table table-striped">
+<table>
 <thead>
 <tr>
 <th style="text-align: center;">Interfaces / Types</th>
@@ -1288,73 +1302,20 @@ or <code>uint</code> aplies. On 64 bit systems the limitations and properties of
 </tbody>
 </table>
 
-                </div>
-                <div class="col-lg-2">
-                    <div class="card" id="pagenav">
-                        <h4 class="card-title">On this page</h4>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
-
     </div>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-                <use href="#circle-half"></use>
-            </svg>
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-                    aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
-                        <use href="#sun-fill"></use>
-                    </svg>
-                    Light
-                    <svg class="bi ms-auto d-none" width="1em" height="1em">
-                        <use href="#check2"></use>
-                    </svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-                    aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
-                        <use href="#moon-stars-fill"></use>
-                    </svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" width="1em" height="1em">
-                        <use href="#check2"></use>
-                    </svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-                    aria-pressed="true">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
-                        <use href="#circle-half"></use>
-                    </svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" width="1em" height="1em">
-                        <use href="#check2"></use>
-                    </svg>
-                </button>
-            </li>
-        </ul>
-    </div>
-
-    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
-        </svg>
-    </button>
-
-    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
-
+    <script type="text/javascript" src="./static/script.js"></script>
 </body>
 
 </html>

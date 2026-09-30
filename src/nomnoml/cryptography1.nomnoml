@@ -1,0 +1,86 @@
+#direction: right
+#spacing: 10
+#gravity: .8
+#arrowSize: 4
+#background: transparent
+#fill: #f4f6fb
+#title: cryptography1
+
+[IDisposable|Provides a mechanism
+for releasing unmanaged
+resources]
+
+[AsymmetricAlgorithm|
+Represents the abstract base class from
+which all implementations of asymmetric
+algorithms must inherit.]
+
+[DSA|
+Represents the abstract base class from 
+which all implementations of the 
+Digital Signature Algorithm (DSA)
+must inherit.]
+
+[RSA|
+Represents the base class from 
+which all implementations of
+the RSA algorithm inherit.]
+
+[ECAlgorithm|
+Represents the abstract class 
+from which elliptic-curve asymmetric
+algorithms can inherit.]
+
+[ECDiffieHellman|
+Provides an abstract base class that 
+Elliptic Curve Diffie-Hellman (ECDH) 
+algorithm implementations can derive from.]
+
+[ECDSA|
+Provides an abstract base class that 
+encapsulates the Elliptic Curve
+Digital Signature Algorithm (ECDSA).]
+
+[SymmetricAlgorithm|
+Represents the abstract base class from
+which all implementations of symmetric 
+algorithms must inherit.]
+
+[Aes|
+Represents the abstract base class 
+from which all implementations of 
+the Advanced Encryption Standard (AES)
+must inherit.]
+
+[DES|
+Represents the base class for the Data 
+Encryption Standard (DES) algorithm 
+from which all DES implementations
+must derive.]
+
+[RC2|
+Represents the base class from which
+all implementations of the RC2 
+algorithm must derive.]
+
+[TripleDES|
+Represents the base class for 
+Triple Data Encryption Standard
+algorithms from which all 
+TripleDES implementations must derive.]
+
+[IDisposable] <:-- [AsymmetricAlgorithm]
+[AsymmetricAlgorithm] <:- [DSA]
+[AsymmetricAlgorithm] <:- [ECAlgorithm]
+[AsymmetricAlgorithm] <:- [RSA]
+[ECAlgorithm] <:- [ECDiffieHellman]
+[ECAlgorithm] <:- [ECDSA]
+
+[IDisposable] <:-- [SymmetricAlgorithm] 
+[SymmetricAlgorithm] <:- [Aes]
+[SymmetricAlgorithm] <:- [DES]
+[SymmetricAlgorithm] <:- [RC2]
+[SymmetricAlgorithm] <:- [TripleDES]
+
+
+

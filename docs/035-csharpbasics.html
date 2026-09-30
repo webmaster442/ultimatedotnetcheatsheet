@@ -1,125 +1,136 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#" data-bs-theme="auto">
+<html>
 
 <head>
-    <title>Ultimate .NET cheat sheet - C# basics</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="pwa/apple-touch-icon.png">
-    <link rel="manifest" href="manifest.json">
-    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="prism.css" type="text/css">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="prism.js" type="text/javascript"></script>
-    <script src="script.js" type="text/javascript"></script>
-
-    <!--OpenGraph meta-->
-    <meta property="og:url" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ultimate .NET cheat sheet - C# basics">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://webmaster442.github.io/ultimatedotnetcheatsheet/header.webp">
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:width" content="945" />
-    <meta property="og:image:height" content="1134" />
-    <meta property="og:description"
-        content="Welcome to the Ultimate .NET Cheatsheet! This project aims to provide a comprehensive and useful guide for developers working with C# on a daily basis. Whether you're a beginner getting started with C# or an experienced developer looking for quick references, this cheatsheet has got you covered.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | C# basics</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path
-                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path
-                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-            <path
-                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path
-                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-        </symbol>
-    </svg>
-
-    <div class="modal fade" id="changelogModal" tabindex="-1" role="dialog" aria-labelledby="changeModal"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="changeModal">Change log</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModalHeader">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="modalContent">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        id="closeModalFooter">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: flex;">
-        <aside id="nav" class="text-white bg-dark">
-            <div>
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <img src="pwa/i-192.png" height="40px" style="margin: 7px;"> Version: 25-01-16
-                </a>
-            </div>
-            <hr>
-            <div id="toclinks">
-                <ul><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/010-basiccommands.html">Dotnet CLI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/020-project.html">Project XML Settings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/030-powershell.html">Usefull Powershell commands & scripts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/035-csharpbasics.html">C# basics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/040-types.html">Basic type system</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/045-type-interfaces.html">Important interfaces for types</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/060-strings.html">Strings</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/070-exceptions.html">Exceptions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/075-generics.html">Generics</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/080-collections.html">Collections</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/090-linq.html">LINQ</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/095-regex.html">Regular Expressions</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/100-paternmatch.html">Pattern matching</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/105-tasks.html">Tasks</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/110-io.html">I/O</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/111-attribs.html">Attributes</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/112-serialization.html">Serialization</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/114-validation.html">Object validation</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/120-crypto.html">Cryptography</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/130-reflection.html">Reflection</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/140-ui.html">UI</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/150-nuget.html">Useful NuGet packages</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/155-shortcuts.html">Keyboard Shortcuts</a></li><li><a href="https://webmaster442.github.io/ultimatedotnetcheatsheet/160-csharp-versions.html">C# Version History</a></li></ul>
-            </div>
-            <hr>
-            <div id="icons">
-                <a class="btn btn-link" href="https://github.com/webmaster442/ultimatedotnetcheatsheet/issues"
-                    title="Report a bug/Request a feature..." target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Report a bug/Request a feature...</title>
-                        <path
-                            d="M14,12H10V10H14M14,16H10V14H14M20,8H17.19C16.74,7.22 16.12,6.55 15.37,6.04L17,4.41L15.59,3L13.42,5.17C12.96,5.06 12.5,5 12,5C11.5,5 11.04,5.06 10.59,5.17L8.41,3L7,4.41L8.62,6.04C7.88,6.55 7.26,7.22 6.81,8H4V10H6.09C6.04,10.33 6,10.66 6,11V12H4V14H6V15C6,15.34 6.04,15.67 6.09,16H4V18H6.81C7.85,19.79 9.78,21 12,21C14.22,21 16.15,19.79 17.19,18H20V16H17.91C17.96,15.67 18,15.34 18,15V14H20V12H18V11C18,10.66 17.96,10.33 17.91,10H20V8Z" />
-                    </svg>
-                </a>
-                <a class="btn btn-link" href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
-                    title="Fork me on github">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Fork me on github</title>
-                        <path
-                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                    </svg>
-                </a>
-                <a class="btn btn-link" href="#" onclick="changelogModal()" title="Show changelog">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Show changelog</title>
-                        <path
-                            d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" />
-                    </svg>
-                </a>
-                <a class="btn btn-link" href="#" onclick="print()" title="Print this page">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>Print this page</title>
-                        <path
-                            d="M19 8C20.66 8 22 9.34 22 11V17H18V21H6V17H2V11C2 9.34 3.34 8 5 8H6V3H18V8H19M8 5V8H16V5H8M16 19V15H8V19H16M18 15H20V11C20 10.45 19.55 10 19 10H5C4.45 10 4 10.45 4 11V15H6V13H18V15M19 11.5C19 12.05 18.55 12.5 18 12.5C17.45 12.5 17 12.05 17 11.5C17 10.95 17.45 10.5 18 10.5C18.55 10.5 19 10.95 19 11.5Z" />
-                    </svg>
-                </a>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
             </div>
         </aside>
-    </div>
 
-    <div id="main">
-        <div class="container">
-            <div class="row" style="margin: 0px auto;">
-                <div class="col-lg-10" id="content">
-                    <h1 id="c-basics">C# basics</h1>
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="c-basics">C# basics</h1>
 <h2 id="operator-precedence">Operator Precedence</h2>
 <ol>
 <li><p>Primary:</p>
@@ -159,10 +170,10 @@
 <p><code>x = y</code>, <code>x += y</code>, <code>x -= y</code>, <code>x *= y</code>, <code>x /= y</code>, <code>x %= y</code>, <code>x &amp;= y</code>, <code>x |= y</code>, <code>x ^= y</code>, <code>x &lt;&lt;= y</code>, <code>x &gt;&gt;= y</code>, <code>x &gt;&gt;&gt;= y</code>, <code>x ??= y</code>, <code>=&gt;</code></p>
 </li>
 </ol>
-<p>More info: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/" target="_blank">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/</a></p>
+<p>More info: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/</a></p>
 <h2 id="keywords">Keywords</h2>
 <p>Keywords are predefined, reserved identifiers that have special meanings to the compiler. They can't be used as identifiers in your program unless they include <code>@</code> as a prefix. For example, <code>@if</code> is a valid identifier, but <code>if</code> isn't because <code>if</code> is a keyword.</p>
-<table class="table table-striped">
+<table>
 <thead>
 <tr>
 <th style="text-align: center;">A-E</th>
@@ -296,7 +307,7 @@
 </table>
 <h2 id="contextual-keywords">Contextual keywords</h2>
 <p>A contextual keyword is used to provide a specific meaning in the code, but it isn't a reserved word in C#. Some contextual keywords, such as <code>partial</code> and <code>where</code>, have special meanings in two or more contexts.</p>
-<table class="table table-striped">
+<table>
 <thead>
 <tr>
 <th style="text-align: center;">A-E</th>
@@ -375,137 +386,138 @@
 </tbody>
 </table>
 <h2 id="basic-program-structure">Basic program Structure</h2>
-<pre><code class="language-csharp">using System;
+<pre><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
 
-namespace HelloWorld
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(&quot;Hello, World!&quot;);
-        }
-    }
-}
+<span class="token keyword">namespace</span> <span class="token namespace">HelloWorld</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">class</span> <span class="token class-name">Program</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
+
 <p>With Top level statements (.NET &gt; 5):</p>
-<pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
+<pre><code class="language-csharp">Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="comments">Comments</h2>
-<pre><code class="language-csharp">// Single-line comment
+<pre><code class="language-csharp"><span class="token comment">// Single-line comment</span>
 
-/*
+<span class="token comment">/*
 This is a 
 multi-line comment
-*/
+*/</span>
 </code></pre>
 <h2 id="variables-and-data-types">Variables and Data Types</h2>
-<pre><code class="language-csharp">//Variable declaration and initialization
-int number = 10;
-double decimalNumber = 10.5;
-char character = 'A';
-string text = &quot;Hello&quot;;
-bool isTrue = true;
+<pre><code class="language-csharp"><span class="token comment">//Variable declaration and initialization</span>
+<span class="token class-name"><span class="token keyword">int</span></span> number <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">double</span></span> decimalNumber <span class="token operator">=</span> <span class="token number">10.5</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">char</span></span> character <span class="token operator">=</span> <span class="token char">'A'</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">string</span></span> text <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">bool</span></span> isTrue <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 
-// Implicitly typed variable
-var autoVariable = 100;
+<span class="token comment">// Implicitly typed variable</span>
+<span class="token class-name"><span class="token keyword">var</span></span> autoVariable <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="control-structures">Control Structures</h2>
 <h3 id="conditional-statements">Conditional Statements</h3>
-<pre><code class="language-csharp">if (condition)
-{
-    // code to be executed if condition is true
-}
-else if (anotherCondition)
-{
-    // code to be executed if anotherCondition is true
-}
-else
-{
-    // code to be executed if all conditions are false
-}
+<pre><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed if condition is true</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>anotherCondition<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed if anotherCondition is true</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed if all conditions are false</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="switch">Switch</h3>
-<pre><code class="language-csharp">switch (variable)
-{
-    case value1:
-        // code to be executed if variable == value1
-        break;
-    case value2:
-        // code to be executed if variable == value2
-        break;
-    default:
-        // code to be executed if variable doesn't match any case
-        break;
-}
+<pre><code class="language-csharp"><span class="token keyword">switch</span> <span class="token punctuation">(</span>variable<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">case</span> value1<span class="token punctuation">:</span>
+        <span class="token comment">// code to be executed if variable == value1</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> value2<span class="token punctuation">:</span>
+        <span class="token comment">// code to be executed if variable == value2</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span>
+        <span class="token comment">// code to be executed if variable doesn't match any case</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="loops">Loops</h3>
-<pre><code class="language-csharp">// For Loop
-for (int i = 0; i &lt; 10; i++)
-{
-    // code to be executed
-}
+<pre><code class="language-csharp"><span class="token comment">// For Loop</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed</span>
+<span class="token punctuation">}</span>
 
-// While Loop
-while (condition)
-{
-    // code to be executed
-}
+<span class="token comment">// While Loop</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed</span>
+<span class="token punctuation">}</span>
 
-// Do-While Loop
-do
-{
-    // code to be executed
-} while (condition);
+<span class="token comment">// Do-While Loop</span>
+<span class="token keyword">do</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// Foreach Loop
-foreach (var item in collection)
-{
-    // code to be executed
-}
+<span class="token comment">// Foreach Loop</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> item <span class="token keyword">in</span> collection<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// code to be executed</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="methods">Methods</h2>
-<pre><code class="language-csharp">class Program
-{
-    static void Main(string[] args)
-    {
-        int result = Add(5, 10);
-        Console.WriteLine(result);
-    }
+<pre><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> result <span class="token operator">=</span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    static int Add(int a, int b)
-    {
-        return a + b;
-    }
-}
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> a<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> b<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="classes-and-objects">Classes and Objects</h2>
-<pre><code class="language-csharp">class Person
-{
-    // Fields
-    private string name;
-    private int age;
+<pre><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Person</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Fields</span>
+    <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span></span> age<span class="token punctuation">;</span>
 
-    // Constructor
-    public Person(string name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
+    <span class="token comment">// Constructor</span>
+    <span class="token keyword">public</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> age<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // Method
-    public void Greet()
-    {
-        Console.WriteLine($&quot;Hello, my name is {name} and I am {age} years old.&quot;);
-    }
-}
+    <span class="token comment">// Method</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Hello, my name is </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">name</span><span class="token punctuation">}</span></span><span class="token string"> and I am </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">age</span><span class="token punctuation">}</span></span><span class="token string"> years old."</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// Creating an object
-Person person = new Person(&quot;John&quot;, 30);
-person.Greet();
+<span class="token comment">// Creating an object</span>
+<span class="token class-name">Person</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Person</span><span class="token punctuation">(</span><span class="token string">"John"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+person<span class="token punctuation">.</span><span class="token function">Greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="access-modifiers">Access modifiers</h3>
-<table class="table table-striped">
+<table>
 <thead>
 <tr>
 <th style="text-align: center;">Caller's location</th>
@@ -568,419 +580,366 @@ person.Greet();
 <p>Beginning with C# 11, the <code>file</code> contextual keyword is a type modifier.</p>
 <p>The <code>file</code> modifier restricts a top-level type's scope and visibility to the file in which it's declared. The <code>file</code> modifier will generally be applied to types written by a source generator. File-local types provide source generators with a convenient way to avoid name collisions among generated types.</p>
 <h3 id="properties">Properties</h3>
-<pre><code class="language-csharp">class Person
-{
-    public string Name { get; set; }
-    public int Age { get; set; }
-}
+<pre><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Person</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Age <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="inheritance">Inheritance</h3>
-<pre><code class="language-csharp">class Animal
-{
-    public void Eat()
-    {
-        Console.WriteLine(&quot;Eating...&quot;);
-    }
-}
+<pre><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Animal</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Eating..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-class Dog : Animal
-{
-    public void Bark()
-    {
-        Console.WriteLine(&quot;Barking...&quot;);
-    }
-}
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Animal</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Bark</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Barking..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-Dog dog = new Dog();
-dog.Eat();  // Inherited method
-dog.Bark(); // Dog's method
+<span class="token class-name">Dog</span> dog <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dog<span class="token punctuation">.</span><span class="token function">Eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Inherited method</span>
+dog<span class="token punctuation">.</span><span class="token function">Bark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Dog's method</span>
 </code></pre>
 <h3 id="polymorphism">Polymorphism</h3>
-<pre><code class="language-csharp">class Animal
-{
-    public virtual void MakeSound()
-    {
-        Console.WriteLine(&quot;Some generic animal sound&quot;);
-    }
-}
+<pre><code class="language-csharp"><span class="token keyword">class</span> <span class="token class-name">Animal</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Some generic animal sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-class Dog : Animal
-{
-    public override void MakeSound()
-    {
-        Console.WriteLine(&quot;Woof!&quot;);
-    }
-}
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Animal</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Woof!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-class Cat : Animal
-{
-    public override void MakeSound()
-    {
-        Console.WriteLine(&quot;Meow!&quot;);
-    }
-}
+<span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Animal</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Meow!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-Animal myDog = new Dog();
-Animal myCat = new Cat();
+<span class="token class-name">Animal</span> myDog <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Animal</span> myCat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-myDog.MakeSound(); // Output: Woof!
-myCat.MakeSound(); // Output: Meow!
+myDog<span class="token punctuation">.</span><span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Woof!</span>
+myCat<span class="token punctuation">.</span><span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Meow!</span>
 </code></pre>
 <h3 id="interfaces">Interfaces</h3>
-<pre><code class="language-csharp">interface IAnimal
-{
-    void MakeSound();
-}
+<pre><code class="language-csharp"><span class="token keyword">interface</span> <span class="token class-name">IAnimal</span>
+<span class="token punctuation">{</span>
+    <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-class Dog : IAnimal
-{
-    public void MakeSound()
-    {
-        Console.WriteLine(&quot;Woof!&quot;);
-    }
-}
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IAnimal</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MakeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Woof!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="generics">Generics</h3>
-<pre><code class="language-csharp">// Generic Class
-public class GenericList&lt;T&gt;
-{
-    private T[] items = new T[100];
-    private int count;
+<pre><code class="language-csharp"><span class="token comment">// Generic Class</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GenericList<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">T<span class="token punctuation">[</span><span class="token punctuation">]</span></span> items <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">T</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span></span> count<span class="token punctuation">;</span>
 
-    public void Add(T item)
-    {
-        items[count++] = item;
-    }
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name">T</span> item<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        items<span class="token punctuation">[</span>count<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public T Get(int index)
-    {
-        return items[index];
-    }
-}
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> <span class="token function">Get</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> index<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-GenericList&lt;int&gt; intList = new GenericList&lt;int&gt;();
-intList.Add(1);
-intList.Add(2);
-Console.WriteLine(intList.Get(0)); // Output: 1
+<span class="token class-name">GenericList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> intList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">GenericList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+intList<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+intList<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>intList<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 1</span>
 
-GenericList&lt;string&gt; stringList = new GenericList&lt;string&gt;();
-stringList.Add(&quot;Hello&quot;);
-stringList.Add(&quot;World&quot;);
-Console.WriteLine(stringList.Get(1)); // Output: World
+<span class="token class-name">GenericList<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> stringList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">GenericList<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+stringList<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+stringList<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token string">"World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>stringList<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: World</span>
 
-// Generic Method
-public class Utilities
-{
-    public void Print&lt;T&gt;(T item)
-    {
-        Console.WriteLine(item);
-    }
-}
+<span class="token comment">// Generic Method</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Utilities</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token generic-method"><span class="token function">Print</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">T</span> item<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-Utilities utilities = new Utilities();
-utilities.Print(123);    // Output: 123
-utilities.Print(&quot;abc&quot;);  // Output: abc
+<span class="token class-name">Utilities</span> utilities <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Utilities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+utilities<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Output: 123</span>
+utilities<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Output: abc</span>
 </code></pre>
 <h2 id="tupples">Tupples</h2>
-<pre><code class="language-csharp">var tuple = new Tuple&lt;int, string, double&gt;(1, &quot;apple&quot;, 3.14);
-Console.WriteLine(tuple.Item1); // Output: 1
-Console.WriteLine(tuple.Item2); // Output: apple
-Console.WriteLine(tuple.Item3); // Output: 3.14
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> tuple <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Tuple<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>tuple<span class="token punctuation">.</span>Item1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 1</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>tuple<span class="token punctuation">.</span>Item2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: apple</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>tuple<span class="token punctuation">.</span>Item3<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 3.14</span>
 </code></pre>
 <h3 id="value-tupples">Value tupples</h3>
-<pre><code class="language-csharp">var valueTuple = (1, &quot;apple&quot;, 3.14);
-Console.WriteLine(valueTuple.Item1); // Output: 1
-Console.WriteLine(valueTuple.Item2); // Output: apple
-Console.WriteLine(valueTuple.Item3); // Output: 3.14
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> valueTuple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>valueTuple<span class="token punctuation">.</span>Item1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 1</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>valueTuple<span class="token punctuation">.</span>Item2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: apple</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>valueTuple<span class="token punctuation">.</span>Item3<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 3.14</span>
 </code></pre>
-<pre><code class="language-csharp">var valueTuple = (Id: 1, Name: &quot;apple&quot;, Price: 3.14);
-Console.WriteLine(valueTuple.Id);    // Output: 1
-Console.WriteLine(valueTuple.Name);  // Output: apple
-Console.WriteLine(valueTuple.Price); // Output: 3.14
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> valueTuple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token named-parameter punctuation">Id</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">Name</span><span class="token punctuation">:</span> <span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">Price</span><span class="token punctuation">:</span> <span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>valueTuple<span class="token punctuation">.</span>Id<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Output: 1</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>valueTuple<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Output: apple</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>valueTuple<span class="token punctuation">.</span>Price<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 3.14</span>
 </code></pre>
 <h3 id="deconstruct">Deconstruct</h3>
-<pre><code class="language-csharp">var valueTuple = (1, &quot;apple&quot;, 3.14);
-var (id, name, price) = valueTuple;
-Console.WriteLine(id);    // Output: 1
-Console.WriteLine(name);  // Output: apple
-Console.WriteLine(price); // Output: 3.14
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> valueTuple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span> <span class="token operator">=</span> valueTuple<span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Output: 1</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Output: apple</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>price<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 3.14</span>
 </code></pre>
 <h2 id="yield">Yield</h2>
-<pre><code class="language-csharp">public class NumberGenerator
-{
-    public IEnumerable&lt;int&gt; GetNumbers()
-    {
-		for (int i=0; i&lt;10; i++)
-		{
-		    if (i == 5)
-            {
-                yield break; // Exit the method when i equals 5
-            }
-			yield return i;
-		}
-	}
-}
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NumberGenerator</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">GetNumbers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">yield</span> <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">// Exit the method when i equals 5</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">yield</span> <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        NumberGenerator generator = new NumberGenerator();
+<span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">NumberGenerator</span> generator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">NumberGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         
-        foreach (int number in generator.GetNumbers())
-        {
-            Console.WriteLine(number); // Output: 0 1 2 3 4 
-        }
-    }
-}
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> number <span class="token keyword">in</span> generator<span class="token punctuation">.</span><span class="token function">GetNumbers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 0 1 2 3 4 </span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="delegates">Delegates</h2>
-<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MyDelegate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-public class Program
-{
-    public static void DisplayMessage(string message)
-    {
-        Console.WriteLine(message);
-    }
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DisplayMessage</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public static void Main(string[] args)
-    {
-        // Creating an instance of the delegate
-        MyDelegate del = new MyDelegate(DisplayMessage);
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Creating an instance of the delegate</span>
+        <span class="token class-name">MyDelegate</span> del <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MyDelegate</span><span class="token punctuation">(</span>DisplayMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        // Calling the delegate
-        del(&quot;Hello, Delegates!&quot;); // Output: Hello, Delegates!
-    }
-}
+        <span class="token comment">// Calling the delegate</span>
+        <span class="token function">del</span><span class="token punctuation">(</span><span class="token string">"Hello, Delegates!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Hello, Delegates!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="delegate-as-parameter">Delegate as parameter</h3>
-<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MyDelegate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-public class Program
-{
-    public static void DisplayMessage(string message)
-        =&gt; Console.WriteLine(message);
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DisplayMessage</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+        <span class="token operator">=></span> Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    public static void ProcessMessage(MyDelegate del, string message)
-    {
-        del(message);
-    }
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ProcessMessage</span><span class="token punctuation">(</span><span class="token class-name">MyDelegate</span> del<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">del</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public static void Main(string[] args)
-    {
-        MyDelegate del = new MyDelegate(DisplayMessage);
-        ProcessMessage(del, &quot;Hello, Delegates with Parameters!&quot;); // Output: Hello, Delegates with Parameters!
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">MyDelegate</span> del <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MyDelegate</span><span class="token punctuation">(</span>DisplayMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">ProcessMessage</span><span class="token punctuation">(</span>del<span class="token punctuation">,</span> <span class="token string">"Hello, Delegates with Parameters!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Hello, Delegates with Parameters!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="multicast-delegates">Multicast Delegates</h3>
-<pre><code class="language-csharp">public delegate void MyDelegate(string message);
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">MyDelegate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-public class Program
-{
-    public static void DisplayMessage1(string message)
-        =&gt; Console.WriteLine(&quot;Message1: &quot; + message);
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DisplayMessage1</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+        <span class="token operator">=></span> Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Message1: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    public static void DisplayMessage2(string message)
-        =&gt; Console.WriteLine(&quot;Message2: &quot; + message);
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DisplayMessage2</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+        <span class="token operator">=></span> Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Message2: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    public static void Main(string[] args)
-    {
-        MyDelegate del1 = new MyDelegate(DisplayMessage1);
-        MyDelegate del2 = new MyDelegate(DisplayMessage2);
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">MyDelegate</span> del1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MyDelegate</span><span class="token punctuation">(</span>DisplayMessage1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyDelegate</span> del2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MyDelegate</span><span class="token punctuation">(</span>DisplayMessage2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        // Combining delegates
-        MyDelegate del = del1 + del2;
-        del(&quot;Hello, Multicast Delegates!&quot;); 
-        // Output:
-        // Message1: Hello, Multicast Delegates!
-        // Message2: Hello, Multicast Delegates!
-    }
-}
+        <span class="token comment">// Combining delegates</span>
+        <span class="token class-name">MyDelegate</span> del <span class="token operator">=</span> del1 <span class="token operator">+</span> del2<span class="token punctuation">;</span>
+        <span class="token function">del</span><span class="token punctuation">(</span><span class="token string">"Hello, Multicast Delegates!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token comment">// Output:</span>
+        <span class="token comment">// Message1: Hello, Multicast Delegates!</span>
+        <span class="token comment">// Message2: Hello, Multicast Delegates!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="generic-delegates">Generic Delegates</h3>
 <h4 id="action">Action</h4>
-<pre><code class="language-csharp">public class Program
-{
-    public static void DisplayMessage(string message)
-        =&gt; Console.WriteLine(message);
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DisplayMessage</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+        <span class="token operator">=></span> Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    public static void Main(string[] args)
-    {
-        Action&lt;string&gt; messageAction = DisplayMessage;
-        messageAction(&quot;Hello, Action Delegate!&quot;); // Output: Hello, Action Delegate!
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Action<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> messageAction <span class="token operator">=</span> DisplayMessage<span class="token punctuation">;</span>
+        <span class="token function">messageAction</span><span class="token punctuation">(</span><span class="token string">"Hello, Action Delegate!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Hello, Action Delegate!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h4 id="func">Func</h4>
-<pre><code class="language-csharp">public class Program
-{
-    public static int Add(int x, int y)
-        =&gt; x + y;
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> x<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> y<span class="token punctuation">)</span>
+        <span class="token operator">=></span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
 
-    public static void Main(string[] args)
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
     
-        Func&lt;int, int, int&gt; addFunc = Add;
-        int result = addFunc(5, 3);
-        Console.WriteLine(result); // Output: 8
-    }
-}
+        <span class="token class-name">Func<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">></span></span> addFunc <span class="token operator">=</span> Add<span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> result <span class="token operator">=</span> <span class="token function">addFunc</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 8</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h4 id="predicate">Predicate</h4>
-<pre><code class="language-csharp">public class Program
-{
-    public static bool IsPositive(int number)
-        =&gt; number &gt; 0;
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsPositive</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> number<span class="token punctuation">)</span>
+        <span class="token operator">=></span> number <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-    public static void Main(string[] args)
-    {
-        Predicate&lt;int&gt; isPositivePredicate = IsPositive;
-        bool result = isPositivePredicate(5);
-        Console.WriteLine(result); // Output: True
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Predicate<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> isPositivePredicate <span class="token operator">=</span> IsPositive<span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">bool</span></span> result <span class="token operator">=</span> <span class="token function">isPositivePredicate</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: True</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="events">Events</h2>
 <h3 id="declaring-an-event">Declaring an Event</h3>
-<pre><code class="language-csharp">public class Publisher
-{
-    // Define the delegate for the event handler
-    public delegate void EventHandler(object sender, EventArgs e);
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Publisher</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Define the delegate for the event handler</span>
+    <span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">EventHandler</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">EventArgs</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    // Declare the event using the delegate
-    public event EventHandler OnNotify;
+    <span class="token comment">// Declare the event using the delegate</span>
+    <span class="token keyword">public</span> <span class="token keyword">event</span> <span class="token class-name">EventHandler</span> OnNotify<span class="token punctuation">;</span>
 
-    // Method to raise the event
-    protected virtual void RaiseEvent()
-    {
-        if (OnNotify != null)
-        {
-            OnNotify(this, EventArgs.Empty);
-        }
-    }
-}
+    <span class="token comment">// Method to raise the event</span>
+    <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">RaiseEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>OnNotify <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">OnNotify</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> EventArgs<span class="token punctuation">.</span>Empty<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="subscribing-to-an-event">Subscribing to an event</h3>
-<pre><code class="language-csharp">public class Subscriber
-{
-    public void OnNotified(object sender, EventArgs e)
-    {
-        Console.WriteLine(&quot;Standard event received!&quot;);
-    }
-}
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Subscriber</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">OnNotified</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">EventArgs</span> e<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Standard event received!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Publisher pub = new Publisher();
-        Subscriber sub = new Subscriber();
+<span class="token keyword">class</span> <span class="token class-name">Program</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">Publisher</span> pub <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Publisher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Subscriber</span> sub <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Subscriber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        // Subscribe to the event
-        pub.OnNotify += sub.OnNotified; 
+        <span class="token comment">// Subscribe to the event</span>
+        pub<span class="token punctuation">.</span>OnNotify <span class="token operator">+=</span> sub<span class="token punctuation">.</span>OnNotified<span class="token punctuation">;</span> 
 
-        // Raise the event
-        pub.RaiseEvent(); // Output: Standard event received!
-    }
-}
+        <span class="token comment">// Raise the event</span>
+        pub<span class="token punctuation">.</span><span class="token function">RaiseEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: Standard event received!</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="creating-custom-eventargs">Creating Custom EventArgs</h3>
-<pre><code class="language-csharp">public class CustomEventArgs : EventArgs
-{
-    public string Message { get; set; }
-    public CustomEventArgs(string message)
-    {
-        Message = message;
-    }
-}
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomEventArgs</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">EventArgs</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Message <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token function">CustomEventArgs</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Message <span class="token operator">=</span> message<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-public class Publisher
-{
-    // Define the delegate with custom EventArgs
-    public delegate void CustomEventHandler(object sender, CustomEventArgs e);
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Publisher</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Define the delegate with custom EventArgs</span>
+    <span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">CustomEventHandler</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">CustomEventArgs</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    // Declare the event using the delegate
-    public event CustomEventHandler OnNotify;
+    <span class="token comment">// Declare the event using the delegate</span>
+    <span class="token keyword">public</span> <span class="token keyword">event</span> <span class="token class-name">CustomEventHandler</span> OnNotify<span class="token punctuation">;</span>
 
-    // Method to raise the event
-    protected virtual void RaiseEvent(string message)
-    {
-        if (OnNotify != null)
-        {
-            OnNotify(this, new CustomEventArgs(message));
-        }
-    }
-}
+    <span class="token comment">// Method to raise the event</span>
+    <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">RaiseEvent</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>OnNotify <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">OnNotify</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">CustomEventArgs</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
-                </div>
-                <div class="col-lg-2">
-                    <div class="card" id="pagenav">
-                        <h4 class="card-title">On this page</h4>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
-
     </div>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-                <use href="#circle-half"></use>
-            </svg>
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-                    aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
-                        <use href="#sun-fill"></use>
-                    </svg>
-                    Light
-                    <svg class="bi ms-auto d-none" width="1em" height="1em">
-                        <use href="#check2"></use>
-                    </svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-                    aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
-                        <use href="#moon-stars-fill"></use>
-                    </svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" width="1em" height="1em">
-                        <use href="#check2"></use>
-                    </svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-                    aria-pressed="true">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
-                        <use href="#circle-half"></use>
-                    </svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" width="1em" height="1em">
-                        <use href="#check2"></use>
-                    </svg>
-                </button>
-            </li>
-        </ul>
-    </div>
-
-    <button id="navigate-top" onclick="scrollToTop()" type="button" title="Scroll to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
-        </svg>
-    </button>
-
-    <script src="bootstrap.bundle.min.js" type="text/javascript"></script>
-
+    <script type="text/javascript" src="./static/script.js"></script>
 </body>
 
 </html>

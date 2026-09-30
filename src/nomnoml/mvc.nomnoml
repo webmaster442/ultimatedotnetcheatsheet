@@ -1,0 +1,27 @@
+#direction: right
+#spacing: 14
+#gravity: .8
+#arrowSize: 2
+#background: transparent
+#fill: #f4f6fb
+#title: mvc
+
+[<note>
+Represents the state of the 
+application and any business
+logic or operations that should 
+be performed by it.] -- [Model]
+
+[<note>Component that handle
+user interaction, work with the
+model, and ultimately select
+a view to render] --[Controller]
+
+[Controller] -[<label>Writes model]-> [Model]
+[Controller] <-[<label>Reads model]- [Model]
+[<actor>User] -[<label>HTTP;Request] -> [Controller] -[<label>Renders view]-> [View]
+[<actor>User] <-[<label>HTTP Response]- [View]
+
+[<note>
+Responsible for presenting 
+content through the user interface] -- [View]

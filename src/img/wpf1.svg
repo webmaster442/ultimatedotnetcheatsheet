@@ -1,0 +1,320 @@
+<svg version="1.1" baseProfile="full" width="962.3" height="340.0" viewBox="0 0 962.25 340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >wpf1</title>
+	<desc >#.box: fill=#C06EF0
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: wpf1
+	
+	[Object ] &lt;:- [&lt;box&gt;DispatcherObject] &lt;:- [DependencyObject] &lt;:- [Visual] &lt;:- [UIElement] &lt;:- [&lt;box&gt;FrameworkElement] &lt;:- [&lt;box&gt;Control]
+	[DependencyObject] &lt;:- [Freezable] &lt;- [&lt;box&gt;Animatable]
+	
+	[Visual] &lt;:- [Viewport3DVisual]
+	[Visual] &lt;:- [Visual3D]
+	
+	[Visual3D] &lt;:- [ModelVisual3D]
+	[Visual3D] &lt;:- [Viewport2DVisual3D]
+	[Visual3D] &lt;:- [UIElement3D] &lt;:- [ContainerUIElement3D]
+	
+	[Object] &lt;:- [PrintDialog]
+	[Object] &lt;:- [CommonDialog] &lt;:- [CommonItemDialog] &lt;:- [FileDialog] &lt;:- [SaveFileDialog]
+	[FileDialog] &lt;:- [OpenFileDialog]
+	[CommonItemDialog] &lt;:- [OpenFolderDialog]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="340.0" width="962.3" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M535.8 21.3 L396.5 37 L396.5 42 L396.5 42.0 " fill="none"></path>
+					<path d="M536.3 26.6 L535.8 21.3 L535.2 16.0 L549.0 19.8 Z"></path>
+					<path d="M396.5 87.3 L396.5 79 L396.5 84 L396.5 84.0 " fill="none"></path>
+					<path d="M401.8 87.3 L396.5 87.3 L391.2 87.3 L396.5 74.0 Z"></path>
+					<path d="M299.8 113.5 L246.25 121 L246.25 126 L246.3 126.0 " fill="none"></path>
+					<path d="M300.5 118.8 L299.8 113.5 L299.1 108.2 L313.0 111.7 Z"></path>
+					<path d="M201.0 147.8 L83.5 163 L83.5 168 L83.5 168.0 " fill="none"></path>
+					<path d="M201.7 153.1 L201.0 147.8 L200.3 142.5 L214.3 146.1 Z"></path>
+					<path d="M83.5 213.3 L83.5 205 L83.5 210 L83.5 210.0 " fill="none"></path>
+					<path d="M88.8 213.3 L83.5 213.3 L78.2 213.3 L83.5 200.0 Z"></path>
+					<path d="M83.5 255.3 L83.5 247 L83.5 252 L83.5 252.0 " fill="none"></path>
+					<path d="M88.8 255.3 L83.5 255.3 L78.2 255.3 L83.5 242.0 Z"></path>
+					<path d="M476.1 119.1 L484 121 L484 126 L484.0 126.0 " fill="none"></path>
+					<path d="M477.4 113.9 L476.1 119.1 L474.9 124.3 L463.2 116.0 Z"></path>
+					<path d="M484.0 164.7 L484 163 L484 168 L484.0 168.0 " fill="none"></path>
+					<path d="M489.3 171.3 L484.0 164.7 L478.7 171.3 L484.0 158.0 Z"></path>
+					<path d="M214.9 166.1 L219 163 L219 168 L219.0 168.0 " fill="none"></path>
+					<path d="M218.2 170.4 L214.9 166.1 L211.7 161.9 L225.5 158.0 Z"></path>
+					<path d="M291.4 149.1 L379 163 L379 168 L379.0 168.0 " fill="none"></path>
+					<path d="M292.3 143.9 L291.4 149.1 L290.6 154.4 L278.3 147.1 Z"></path>
+					<path d="M322.8 192.7 L244 205 L244 210 L244.0 210.0 " fill="none"></path>
+					<path d="M323.6 198.0 L322.8 192.7 L322.0 187.5 L336.0 190.7 Z"></path>
+					<path d="M412.8 207.6 L409 205 L409 210 L409.0 210.0 " fill="none"></path>
+					<path d="M415.8 203.3 L412.8 207.6 L409.7 212.0 L401.9 200.0 Z"></path>
+					<path d="M435.3 190.3 L566.5 205 L566.5 210 L566.5 210.0 " fill="none"></path>
+					<path d="M435.8 185.0 L435.3 190.3 L434.7 195.6 L422.0 188.8 Z"></path>
+					<path d="M566.5 255.3 L566.5 247 L566.5 252 L566.5 252.0 " fill="none"></path>
+					<path d="M571.8 255.3 L566.5 255.3 L561.2 255.3 L566.5 242.0 Z"></path>
+					<path d="M548.9 39.7 L552.75 37 L552.75 42 L552.8 42.0 " fill="none"></path>
+					<path d="M552.0 44.0 L548.9 39.7 L545.9 35.3 L559.8 32.0 Z"></path>
+					<path d="M629.3 20.9 L784 37 L784 42 L784.0 42.0 " fill="none"></path>
+					<path d="M629.8 15.6 L629.3 20.9 L628.7 26.2 L616.0 19.5 Z"></path>
+					<path d="M784.0 87.3 L784 79 L784 84 L784.0 84.0 " fill="none"></path>
+					<path d="M789.3 87.3 L784.0 87.3 L778.7 87.3 L784.0 74.0 Z"></path>
+					<path d="M699.6 118.9 L690.25 121 L690.25 126 L690.3 126.0 " fill="none"></path>
+					<path d="M700.7 124.1 L699.6 118.9 L698.4 113.7 L712.6 116.0 Z"></path>
+					<path d="M630.4 158.3 L613 163 L613 168 L613.0 168.0 " fill="none"></path>
+					<path d="M631.8 163.4 L630.4 158.3 L629.0 153.1 L643.3 154.8 Z"></path>
+					<path d="M750.0 160.4 L758.5 163 L758.5 168 L758.5 168.0 " fill="none"></path>
+					<path d="M751.6 155.3 L750.0 160.4 L748.4 165.5 L737.3 156.5 Z"></path>
+					<path d="M828.5 121.9 L826.75 121 L826.75 126 L826.8 126.0 " fill="none"></path>
+					<path d="M830.9 117.1 L828.5 121.9 L826.2 126.7 L816.6 116.0 Z"></path>
+					<g data-name="Object">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Object">
+							<rect x="549.0" y="0.0" height="32.0" width="67.0" data-name="Object"></rect>
+						</g>
+						<g transform="translate(549, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Object" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Object" data-compartment="0">
+								<text x="25.5" y="14.1" stroke="none" text-anchor="middle" data-name="Object" data-compartment="0">Object</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DispatcherObject">
+						<g fill="#C06EF0" stroke="#33322E" data-name="DispatcherObject">
+							<rect x="320.5" y="42.0" height="32.0" width="152.0" data-name="DispatcherObject"></rect>
+						</g>
+						<g transform="translate(320.5, 42)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="DispatcherObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DispatcherObject" data-compartment="0">
+								<text x="68.0" y="14.1" stroke="none" text-anchor="middle" data-name="DispatcherObject" data-compartment="0">DispatcherObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="DependencyObject">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="DependencyObject">
+							<rect x="313.0" y="84.0" height="32.0" width="167.0" data-name="DependencyObject"></rect>
+						</g>
+						<g transform="translate(313, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="DependencyObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="DependencyObject" data-compartment="0">
+								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="DependencyObject" data-compartment="0">DependencyObject</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Visual">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Visual">
+							<rect x="214.3" y="126.0" height="32.0" width="64.0" data-name="Visual"></rect>
+						</g>
+						<g transform="translate(214.25, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Visual" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Visual" data-compartment="0">
+								<text x="24.0" y="14.1" stroke="none" text-anchor="middle" data-name="Visual" data-compartment="0">Visual</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UIElement">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="UIElement">
+							<rect x="35.0" y="168.0" height="32.0" width="97.0" data-name="UIElement"></rect>
+						</g>
+						<g transform="translate(35, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UIElement" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UIElement" data-compartment="0">
+								<text x="40.5" y="14.1" stroke="none" text-anchor="middle" data-name="UIElement" data-compartment="0">UIElement</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FrameworkElement">
+						<g fill="#C06EF0" stroke="#33322E" data-name="FrameworkElement">
+							<rect x="0.0" y="210.0" height="32.0" width="167.0" data-name="FrameworkElement"></rect>
+						</g>
+						<g transform="translate(0, 210)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="FrameworkElement" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FrameworkElement" data-compartment="0">
+								<text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="FrameworkElement" data-compartment="0">FrameworkElement</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Control">
+						<g fill="#C06EF0" stroke="#33322E" data-name="Control">
+							<rect x="47.0" y="252.0" height="32.0" width="73.0" data-name="Control"></rect>
+						</g>
+						<g transform="translate(47, 252)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Control" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Control" data-compartment="0">
+								<text x="28.5" y="14.1" stroke="none" text-anchor="middle" data-name="Control" data-compartment="0">Control</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Freezable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Freezable">
+							<rect x="436.5" y="126.0" height="32.0" width="95.0" data-name="Freezable"></rect>
+						</g>
+						<g transform="translate(436.5, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Freezable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Freezable" data-compartment="0">
+								<text x="39.5" y="14.1" stroke="none" text-anchor="middle" data-name="Freezable" data-compartment="0">Freezable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Animatable">
+						<g fill="#C06EF0" stroke="#33322E" data-name="Animatable">
+							<rect x="432.0" y="168.0" height="32.0" width="104.0" data-name="Animatable"></rect>
+						</g>
+						<g transform="translate(432, 168)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Animatable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Animatable" data-compartment="0">
+								<text x="44.0" y="14.1" stroke="none" text-anchor="middle" data-name="Animatable" data-compartment="0">Animatable</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Viewport3DVisual">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Viewport3DVisual">
+							<rect x="142.0" y="168.0" height="32.0" width="154.0" data-name="Viewport3DVisual"></rect>
+						</g>
+						<g transform="translate(142, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewport3DVisual" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewport3DVisual" data-compartment="0">
+								<text x="69.0" y="14.1" stroke="none" text-anchor="middle" data-name="Viewport3DVisual" data-compartment="0">Viewport3DVisual</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Visual3D">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Visual3D">
+							<rect x="336.0" y="168.0" height="32.0" width="86.0" data-name="Visual3D"></rect>
+						</g>
+						<g transform="translate(336, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Visual3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Visual3D" data-compartment="0">
+								<text x="35.0" y="14.1" stroke="none" text-anchor="middle" data-name="Visual3D" data-compartment="0">Visual3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ModelVisual3D">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ModelVisual3D">
+							<rect x="177.0" y="210.0" height="32.0" width="134.0" data-name="ModelVisual3D"></rect>
+						</g>
+						<g transform="translate(177, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ModelVisual3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ModelVisual3D" data-compartment="0">
+								<text x="59.0" y="14.1" stroke="none" text-anchor="middle" data-name="ModelVisual3D" data-compartment="0">ModelVisual3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Viewport2DVisual3D">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Viewport2DVisual3D">
+							<rect x="321.0" y="210.0" height="32.0" width="176.0" data-name="Viewport2DVisual3D"></rect>
+						</g>
+						<g transform="translate(321, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Viewport2DVisual3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Viewport2DVisual3D" data-compartment="0">
+								<text x="80.0" y="14.1" stroke="none" text-anchor="middle" data-name="Viewport2DVisual3D" data-compartment="0">Viewport2DVisual3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="UIElement3D">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="UIElement3D">
+							<rect x="507.0" y="210.0" height="32.0" width="119.0" data-name="UIElement3D"></rect>
+						</g>
+						<g transform="translate(507, 210)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="UIElement3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="UIElement3D" data-compartment="0">
+								<text x="51.5" y="14.1" stroke="none" text-anchor="middle" data-name="UIElement3D" data-compartment="0">UIElement3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ContainerUIElement3D">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ContainerUIElement3D">
+							<rect x="468.5" y="252.0" height="32.0" width="196.0" data-name="ContainerUIElement3D"></rect>
+						</g>
+						<g transform="translate(468.5, 252)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ContainerUIElement3D" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ContainerUIElement3D" data-compartment="0">
+								<text x="90.0" y="14.1" stroke="none" text-anchor="middle" data-name="ContainerUIElement3D" data-compartment="0">ContainerUIElement3D</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="PrintDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="PrintDialog">
+							<rect x="501.8" y="42.0" height="32.0" width="102.0" data-name="PrintDialog"></rect>
+						</g>
+						<g transform="translate(501.75, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="PrintDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="PrintDialog" data-compartment="0">
+								<text x="43.0" y="14.1" stroke="none" text-anchor="middle" data-name="PrintDialog" data-compartment="0">PrintDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CommonDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="CommonDialog">
+							<rect x="716.0" y="42.0" height="32.0" width="136.0" data-name="CommonDialog"></rect>
+						</g>
+						<g transform="translate(716, 42)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CommonDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CommonDialog" data-compartment="0">
+								<text x="60.0" y="14.1" stroke="none" text-anchor="middle" data-name="CommonDialog" data-compartment="0">CommonDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="CommonItemDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="CommonItemDialog">
+							<rect x="699.0" y="84.0" height="32.0" width="170.0" data-name="CommonItemDialog"></rect>
+						</g>
+						<g transform="translate(699, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="CommonItemDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="CommonItemDialog" data-compartment="0">
+								<text x="77.0" y="14.1" stroke="none" text-anchor="middle" data-name="CommonItemDialog" data-compartment="0">CommonItemDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="FileDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="FileDialog">
+							<rect x="643.3" y="126.0" height="32.0" width="94.0" data-name="FileDialog"></rect>
+						</g>
+						<g transform="translate(643.25, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="FileDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="FileDialog" data-compartment="0">
+								<text x="39.0" y="14.1" stroke="none" text-anchor="middle" data-name="FileDialog" data-compartment="0">FileDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="SaveFileDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="SaveFileDialog">
+							<rect x="546.0" y="168.0" height="32.0" width="134.0" data-name="SaveFileDialog"></rect>
+						</g>
+						<g transform="translate(546, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="SaveFileDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="SaveFileDialog" data-compartment="0">
+								<text x="59.0" y="14.1" stroke="none" text-anchor="middle" data-name="SaveFileDialog" data-compartment="0">SaveFileDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="OpenFileDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="OpenFileDialog">
+							<rect x="690.0" y="168.0" height="32.0" width="137.0" data-name="OpenFileDialog"></rect>
+						</g>
+						<g transform="translate(690, 168)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OpenFileDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OpenFileDialog" data-compartment="0">
+								<text x="60.5" y="14.1" stroke="none" text-anchor="middle" data-name="OpenFileDialog" data-compartment="0">OpenFileDialog</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="OpenFolderDialog">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="OpenFolderDialog">
+							<rect x="747.3" y="126.0" height="32.0" width="159.0" data-name="OpenFolderDialog"></rect>
+						</g>
+						<g transform="translate(747.25, 126)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="OpenFolderDialog" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="OpenFolderDialog" data-compartment="0">
+								<text x="71.5" y="14.1" stroke="none" text-anchor="middle" data-name="OpenFolderDialog" data-compartment="0">OpenFolderDialog</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

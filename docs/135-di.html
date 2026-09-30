@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Dependency Injection</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="dependency-injection">Dependency Injection</h1>
+<p>Dependency Injection (DI) is a design pattern where a class receives its dependencies (for example, services it needs) from the outside instead of creating them itself, which improves testability, flexibility, and separation of concerns.</p>
+<p>In modern .NET, <code>Microsoft.Extensions.DependencyInjection</code> is the go-to standard container because it is built into ASP.NET Core. The DI stack is intentionally split into an abstractions package: <code>Microsoft.Extensions.DependencyInjection.Abstractions</code> and an implementation package: <code>Microsoft.Extensions.DependencyInjection</code>.</p>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="388.0" height="512.0" viewBox="0 0 388 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >di-workflow</title>
+	<desc >#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: di-workflow
+	
+	[&lt;actor&gt;] -[&lt;label&gt;Create]-&gt;
+	
+	[IServiceCollection] -[&lt;frame&gt;Register services|
+	[Singleton
+	]
+	[Scoped]
+	[Transient]
+	] -[&lt;label&gt;Call]-&gt; [BuildServiceProvider()] -[&lt;label&gt;Creates]-&gt; [IServiceProvider]
+	[IServiceProvider] -&gt; [Resolve]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="512.0" width="388.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M166.0 32.0 L166 37 L166 42 L166.0 42.0 " fill="none"></path>
+					<path d="M166.0 74.0 L166 79 L166 77.33333333333333 L166.0 77.3 " fill="none"></path>
+					<path d="M160.7 70.7 L166.0 77.3 L171.3 70.7 L166.0 84.0 Z"></path>
+					<path d="M166.0 116.0 L166 121 L166 126 L166.0 126.0 " fill="none"></path>
+					<path d="M166.0 246.0 L166 251 L166 256 L166.0 256.0 " fill="none"></path>
+					<path d="M166.0 288.0 L166 293 L166 291.3333333333333 L166.0 291.3 " fill="none"></path>
+					<path d="M160.7 284.7 L166.0 291.3 L171.3 284.7 L166.0 298.0 Z"></path>
+					<path d="M166.0 330.0 L166 335 L166 340 L166.0 340.0 " fill="none"></path>
+					<path d="M166.0 372.0 L166 377 L166 375.3333333333333 L166.0 375.3 " fill="none"></path>
+					<path d="M160.7 368.7 L166.0 375.3 L171.3 368.7 L166.0 382.0 Z"></path>
+					<path d="M166.0 414.0 L166 419 L166 417.3333333333333 L166.0 417.3 " fill="none"></path>
+					<path d="M160.7 410.7 L166.0 417.3 L171.3 410.7 L166.0 424.0 Z"></path>
+					<g >
+						<g fill="#f4f6fb" stroke="#33322E">
+							<circle r="4.0" cx="166.0" cy="12.0"></circle>
+							<path d="M166.0 16.0 L166.0 24.0" fill="none"></path>
+							<path d="M162.0 20.0 L170.0 20.0" fill="none"></path>
+							<path d="M162.0 28.0 L166.0 24.0 L170.0 28.0" fill="none"></path>
+						</g>
+						<g transform="translate(158, 24)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" data-compartment="0">
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Create">
+						
+						<g transform="translate(131.5, 42)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Create" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Create" data-compartment="0">
+								<text x="26.5" y="14.1" stroke="none" text-anchor="middle" data-name="Create" data-compartment="0">Create</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IServiceCollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IServiceCollection">
+							<rect x="87.0" y="84.0" height="32.0" width="158.0" data-name="IServiceCollection"></rect>
+						</g>
+						<g transform="translate(87, 84)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceCollection" data-compartment="0">
+								<text x="71.0" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceCollection" data-compartment="0">IServiceCollection</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Register services">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Register services">
+							<rect x="0.0" y="126.0" height="120.0" width="332.0" data-name="Register services"></rect>
+							<path d="M0.0 158.0 L145.0 158.0 L161.0 142.0 L161.0 126.0" fill="none" data-name="Register services"></path>
+						</g>
+						<g transform="translate(0, 126)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Register services" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Register services" data-compartment="0">
+								<text x="0.0" y="14.1" stroke="none" data-name="Register services" data-compartment="0">Register services</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 158)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Register services" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" data-name="Register services" data-compartment="1">
+								<g transform="translate(20, 20)" data-name="Register services" data-compartment="1">
+									<g data-name="Singleton">
+										<g fill="#f4f6fb" stroke="#33322E" data-name="Singleton">
+											<rect x="0.0" y="0.0" height="32.0" width="90.0" data-name="Singleton"></rect>
+										</g>
+										<g transform="translate(0, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Singleton" data-compartment="0">
+											<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Singleton" data-compartment="0">
+												<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="Singleton" data-compartment="0">Singleton</text>
+												
+											</g>
+										</g>
+									</g>
+									<g data-name="Scoped">
+										<g fill="#f4f6fb" stroke="#33322E" data-name="Scoped">
+											<rect x="100.0" y="0.0" height="32.0" width="76.0" data-name="Scoped"></rect>
+										</g>
+										<g transform="translate(100, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Scoped" data-compartment="0">
+											<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Scoped" data-compartment="0">
+												<text x="30.0" y="14.1" stroke="none" text-anchor="middle" data-name="Scoped" data-compartment="0">Scoped</text>
+												
+											</g>
+										</g>
+									</g>
+									<g data-name="Transient">
+										<g fill="#f4f6fb" stroke="#33322E" data-name="Transient">
+											<rect x="186.0" y="0.0" height="32.0" width="90.0" data-name="Transient"></rect>
+										</g>
+										<g transform="translate(186, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transient" data-compartment="0">
+											<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transient" data-compartment="0">
+												<text x="37.0" y="14.1" stroke="none" text-anchor="middle" data-name="Transient" data-compartment="0">Transient</text>
+												
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g data-name="Call">
+						
+						<g transform="translate(143, 256)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Call" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Call" data-compartment="0">
+								<text x="15.0" y="14.1" stroke="none" text-anchor="middle" data-name="Call" data-compartment="0">Call</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BuildServiceProvider()">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="BuildServiceProvider()">
+							<rect x="70.0" y="298.0" height="32.0" width="192.0" data-name="BuildServiceProvider()"></rect>
+						</g>
+						<g transform="translate(70, 298)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BuildServiceProvider()" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BuildServiceProvider()" data-compartment="0">
+								<text x="88.0" y="14.1" stroke="none" text-anchor="middle" data-name="BuildServiceProvider()" data-compartment="0">BuildServiceProvider()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Creates">
+						
+						<g transform="translate(127, 340)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Creates" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Creates" data-compartment="0">
+								<text x="31.0" y="14.1" stroke="none" text-anchor="middle" data-name="Creates" data-compartment="0">Creates</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IServiceProvider">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IServiceProvider">
+							<rect x="93.0" y="382.0" height="32.0" width="146.0" data-name="IServiceProvider"></rect>
+						</g>
+						<g transform="translate(93, 382)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceProvider" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceProvider" data-compartment="0">
+								<text x="65.0" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceProvider" data-compartment="0">IServiceProvider</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Resolve">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Resolve">
+							<rect x="126.0" y="424.0" height="32.0" width="80.0" data-name="Resolve"></rect>
+						</g>
+						<g transform="translate(126, 424)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Resolve" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Resolve" data-compartment="0">
+								<text x="32.0" y="14.1" stroke="none" text-anchor="middle" data-name="Resolve" data-compartment="0">Resolve</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Dependency Injection Workflow</figcaption>
+</figure>
+<h2 id="service-lifetime">Service lifetime</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="690.0" height="449.0" viewBox="0 0 690 449" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >di-lifetime</title>
+	<desc >#background: transparent
+	#fill: #f4f6fb
+	#title: di-lifetime
+	
+	[Singleton] &lt;- [Scoped] &lt;:- [Transient]
+	
+	[Singleton|One instance for the container 
+	lifetime, Created on first use]
+	[Transient|New instance on every resolution]
+	[Scoped|One instance per scope]
+	
+	[&lt;note&gt;Longest lifetime 
+	Shared, thread-safe, 
+	expensive-to-create services] -- [Singleton]
+	
+	[&lt;note&gt;Services that should 
+	share state during a request] -- [Transient]
+	
+	[&lt;note&gt;Lightweight,
+	stateless services] -- [Scoped]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="449.0" width="690.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M128.0 191.7 L128 205 L175.5 225 L175.5 225.0 " fill="none"></path>
+					<path d="M133.3 198.3 L128.0 191.7 L122.7 198.3 L128.0 185.0 Z"></path>
+					<path d="M251.5 302.3 L251.5 309 L301.9807692307692 329 L302.0 329.0 " fill="none"></path>
+					<path d="M256.8 302.3 L251.5 302.3 L246.2 302.3 L251.5 289.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M128.0 65.0 L128 85 L128 105 L128.0 105.0 " fill="none"></path>
+					</g>
+					<g stroke-dasharray="6 6">
+						<path d="M514.0 281.0 L514 309 L463.5192307692308 329 L463.5 329.0 " fill="none"></path>
+					</g>
+					<g stroke-dasharray="6 6">
+						<path d="M375.0 169.0 L375 205 L327.5 225 L327.5 225.0 " fill="none"></path>
+					</g>
+					<g data-name="Singleton">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Singleton">
+							<rect x="0.0" y="105.0" height="80.0" width="256.0" data-name="Singleton"></rect>
+							<path d="M0.0 137.0 L256.0 137.0" fill="none" data-name="Singleton"></path>
+						</g>
+						<g transform="translate(0, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Singleton" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Singleton" data-compartment="0">
+								<text x="120.0" y="14.1" stroke="none" text-anchor="middle" data-name="Singleton" data-compartment="0">Singleton</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 137)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Singleton" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Singleton" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Singleton" data-compartment="1">One instance for the container</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Singleton" data-compartment="1">lifetime, Created on first use</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Scoped">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Scoped">
+							<rect x="149.0" y="225.0" height="64.0" width="205.0" data-name="Scoped"></rect>
+							<path d="M149.0 257.0 L354.0 257.0" fill="none" data-name="Scoped"></path>
+						</g>
+						<g transform="translate(149, 225)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Scoped" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Scoped" data-compartment="0">
+								<text x="94.5" y="14.1" stroke="none" text-anchor="middle" data-name="Scoped" data-compartment="0">Scoped</text>
+								
+							</g>
+						</g>
+						<g transform="translate(149, 257)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Scoped" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Scoped" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Scoped" data-compartment="1">One instance per scope</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Transient">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Transient">
+							<rect x="243.3" y="329.0" height="64.0" width="279.0" data-name="Transient"></rect>
+							<path d="M243.3 361.0 L522.3 361.0" fill="none" data-name="Transient"></path>
+						</g>
+						<g transform="translate(243.25, 329)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Transient" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Transient" data-compartment="0">
+								<text x="131.5" y="14.1" stroke="none" text-anchor="middle" data-name="Transient" data-compartment="0">Transient</text>
+								
+							</g>
+						</g>
+						<g transform="translate(243.25, 361)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Transient" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Transient" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Transient" data-compartment="1">New instance on every resolution</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Longest lifetime">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Longest lifetime">
+							<path d="M5.5 0.0 L242.5 0.0 L250.5 8.0 L250.5 65.0 L5.5 65.0 L5.5 0.0 Z" data-name="Longest lifetime"></path>
+							<path d="M242.5 0.0 L242.5 8.0 L250.5 8.0" fill="none" data-name="Longest lifetime"></path>
+						</g>
+						<g transform="translate(5.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Longest lifetime" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Longest lifetime" data-compartment="0">
+								<text x="0.0" y="14.1" stroke="none" data-name="Longest lifetime" data-compartment="0">Longest lifetime</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Longest lifetime" data-compartment="0">Shared, thread-safe,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Longest lifetime" data-compartment="0">expensive-to-create services</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Services that should">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Services that should">
+							<path d="M394.0 233.0 L626.0 233.0 L634.0 241.0 L634.0 281.0 L394.0 281.0 L394.0 233.0 Z" data-name="Services that should"></path>
+							<path d="M626.0 233.0 L626.0 241.0 L634.0 241.0" fill="none" data-name="Services that should"></path>
+						</g>
+						<g transform="translate(394, 233)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Services that should" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Services that should" data-compartment="0">
+								<text x="0.0" y="14.1" stroke="none" data-name="Services that should" data-compartment="0">Services that should</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Services that should" data-compartment="0">share state during a request</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Lightweight,">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Lightweight,">
+							<path d="M296.0 121.0 L446.0 121.0 L454.0 129.0 L454.0 169.0 L296.0 169.0 L296.0 121.0 Z" data-name="Lightweight,"></path>
+							<path d="M446.0 121.0 L446.0 129.0 L454.0 129.0" fill="none" data-name="Lightweight,"></path>
+						</g>
+						<g transform="translate(296, 121)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Lightweight," data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Lightweight," data-compartment="0">
+								<text x="0.0" y="14.1" stroke="none" data-name="Lightweight," data-compartment="0">Lightweight,</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Lightweight," data-compartment="0">stateless services</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Service lifetimes</figcaption>
+</figure>
+<p>Sope: In ASP.NET one HTTP request one scope.</p>
+<h2 id="dependency-injection-guidelines">Dependency injection guidelines</h2>
+<ul>
+<li>Avoid stateful, static classes and members. Avoid creating global state by designing apps to use singleton services instead.</li>
+<li>Avoid direct instantiation of dependent classes within services. Direct instantiation couples the code to a particular implementation.</li>
+<li>Make services small, well-factored, and easily tested.</li>
+<li>The container is responsible for cleanup of types it creates, and calls Dispose on IDisposable instances. Services resolved from the container should never be disposed by the developer. The container disposes services automatically based on their lifetime:
+<ul>
+<li>Transient and scoped services are disposed at the end of the scope in which they were resolved. In apps that process requests, this is typically at the end of the request.</li>
+<li>Singleton services are disposed when the service container is disposed, usually at application shutdown.</li>
+</ul>
+</li>
+<li>Don't register <code>IDisposable</code> instances with a transient lifetime. Use the factory pattern instead so the solved service can be manually disposed when it's no longer in use.</li>
+<li>Don't resolve <code>IDisposable</code> instances with a transient or scoped lifetime in the root scope. The only exception to this is if the app creates or recreates and disposes IServiceProvider, but this isn't an ideal pattern.</li>
+<li>Receiving an <code>IDisposable</code> dependency via DI doesn't require that the receiver implement <code>IDisposable</code> itself. The receiver of the <code>IDisposable</code> dependency shouldn't call <code>Dispose()</code> on that dependency.</li>
+<li>Use scopes to control the lifetimes of services. Scopes aren't hierarchical, and there's no special connection among scopes.</li>
+</ul>
+<h2 id="service-registration">Service Registration</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="840.0" height="279.0" viewBox="0 0 840 279" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >di-registration</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: di-registration
+	
+	[IServiceCollection|
+	Specifies the contract for a 
+	collection of service descriptors.]
+	
+	[IServiceCollection|Default implementation
+	of IServiceCollection.]
+	
+	[ServiceCollection|
+	Default implementation of
+	IServiceCollection.]
+	
+	[ServiceDescriptor|
+	Describes a service with its 
+	service type, implementation,
+	and lifetime.]
+	
+	[IServiceCollection] &lt;:-- [ServiceCollection]
+	
+	[ICollection&lt;ServiceDescriptor&gt;]  &lt;:-- [IServiceCollection]
+	[IEnumerable&lt;ServiceDescriptor&gt;]  &lt;:-- [IServiceCollection]
+	[IList&lt;ServiceDescriptor&gt;] &lt;:-- [IServiceCollection]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="279.0" width="840.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M570.3 165.0 L562 165 L567 165 L567.0 165.0 " fill="none"></path>
+					</g>
+					<path d="M570.3 159.7 L570.3 165.0 L570.3 170.3 L557.0 165.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M280.8 123.0 L281 123 L287.6904761904762 125 L287.7 125.0 " fill="none"></path>
+					</g>
+					<path d="M280.8 117.7 L280.8 123.0 L280.8 128.3 L267.5 123.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M289.3 165.0 L281 165 L286 165 L286.0 165.0 " fill="none"></path>
+					</g>
+					<path d="M289.3 159.7 L289.3 165.0 L289.3 170.3 L276.0 165.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M255.8 207.0 L281 207 L287.6904761904762 205 L287.7 205.0 " fill="none"></path>
+					</g>
+					<path d="M255.8 201.7 L255.8 207.0 L255.8 212.3 L242.5 207.0 Z"></path>
+					<g data-name="IServiceCollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IServiceCollection">
+							<rect x="286.0" y="125.0" height="80.0" width="271.0" data-name="IServiceCollection"></rect>
+							<path d="M286.0 157.0 L557.0 157.0" fill="none" data-name="IServiceCollection"></path>
+						</g>
+						<g transform="translate(286, 125)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceCollection" data-compartment="0">
+								<text x="127.5" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceCollection" data-compartment="0">IServiceCollection</text>
+								
+							</g>
+						</g>
+						<g transform="translate(286, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IServiceCollection" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IServiceCollection" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IServiceCollection" data-compartment="1">Specifies the contract for a</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IServiceCollection" data-compartment="1">collection of service descriptors.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ServiceCollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ServiceCollection">
+							<rect x="567.0" y="125.0" height="80.0" width="217.0" data-name="ServiceCollection"></rect>
+							<path d="M567.0 157.0 L784.0 157.0" fill="none" data-name="ServiceCollection"></path>
+						</g>
+						<g transform="translate(567, 125)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceCollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceCollection" data-compartment="0">
+								<text x="100.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceCollection" data-compartment="0">ServiceCollection</text>
+								
+							</g>
+						</g>
+						<g transform="translate(567, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceCollection" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceCollection" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ServiceCollection" data-compartment="1">Default implementation of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ServiceCollection" data-compartment="1">IServiceCollection.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ServiceDescriptor">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ServiceDescriptor">
+							<rect x="14.5" y="0.0" height="97.0" width="247.0" data-name="ServiceDescriptor"></rect>
+							<path d="M14.5 32.0 L261.5 32.0" fill="none" data-name="ServiceDescriptor"></path>
+						</g>
+						<g transform="translate(14.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceDescriptor" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceDescriptor" data-compartment="0">
+								<text x="115.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceDescriptor" data-compartment="0">ServiceDescriptor</text>
+								
+							</g>
+						</g>
+						<g transform="translate(14.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceDescriptor" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceDescriptor" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ServiceDescriptor" data-compartment="1">Describes a service with its</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ServiceDescriptor" data-compartment="1">service type, implementation,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ServiceDescriptor" data-compartment="1">and lifetime.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ICollection&lt;ServiceDescriptor&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ICollection&lt;ServiceDescriptor&gt;">
+							<rect x="8.5" y="107.0" height="32.0" width="259.0" data-name="ICollection&lt;ServiceDescriptor&gt;"></rect>
+						</g>
+						<g transform="translate(8.5, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
+								<text x="121.5" y="14.1" stroke="none" text-anchor="middle" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">ICollection&lt;ServiceDescriptor&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerable&lt;ServiceDescriptor&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable&lt;ServiceDescriptor&gt;">
+							<rect x="0.0" y="149.0" height="32.0" width="276.0" data-name="IEnumerable&lt;ServiceDescriptor&gt;"></rect>
+						</g>
+						<g transform="translate(0, 149)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
+								<text x="130.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">IEnumerable&lt;ServiceDescriptor&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IList&lt;ServiceDescriptor&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IList&lt;ServiceDescriptor&gt;">
+							<rect x="33.5" y="191.0" height="32.0" width="209.0" data-name="IList&lt;ServiceDescriptor&gt;"></rect>
+						</g>
+						<g transform="translate(33.5, 191)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
+								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">IList&lt;ServiceDescriptor&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Dependency Registratgion related types</figcaption>
+</figure>
+<p>Rule of thumb: Avoid Captive dependencies! A captive dependency happens when a service with a longer lifetime captures a service with a shorter lifetime.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyService</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">MyDbContext</span> _dbContext<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">MyService</span><span class="token punctuation">(</span><span class="token class-name">MyDbContext</span> dbContext<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        _dbContext <span class="token operator">=</span> dbContext<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>MyDbContext<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//captive dependency, since MyService is singleton</span>
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>MyService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>In this example this is bad, because an instance of <code>MyDbContext</code> outlives the scope and will not be disposed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Depender</th>
+<th style="text-align: center;">Dependency</th>
+<th style="text-align: center;">State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Sigleton</td>
+<td style="text-align: center;">Sigleton</td>
+<td style="text-align: center;">Okay</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sigleton</td>
+<td style="text-align: center;">Scoped</td>
+<td style="text-align: center;">Captive dependency</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sigleton</td>
+<td style="text-align: center;">Transient</td>
+<td style="text-align: center;">Captive dependency</td>
+</tr>
+<tr>
+<td style="text-align: center;">Scoped</td>
+<td style="text-align: center;">Sigleton</td>
+<td style="text-align: center;">Okay</td>
+</tr>
+<tr>
+<td style="text-align: center;">Scoped</td>
+<td style="text-align: center;">Scoped</td>
+<td style="text-align: center;">Okay</td>
+</tr>
+<tr>
+<td style="text-align: center;">Scoped</td>
+<td style="text-align: center;">Transient</td>
+<td style="text-align: center;">Captive dependency</td>
+</tr>
+<tr>
+<td style="text-align: center;">Transient</td>
+<td style="text-align: center;">Singleton</td>
+<td style="text-align: center;">Okay</td>
+</tr>
+<tr>
+<td style="text-align: center;">Transient</td>
+<td style="text-align: center;">Scoped</td>
+<td style="text-align: center;">Okay</td>
+</tr>
+<tr>
+<td style="text-align: center;">Transient</td>
+<td style="text-align: center;">Transient</td>
+<td style="text-align: center;">Okay</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> collection <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SServiceCollection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Singleton registration methods</span>
+collection<span class="token punctuation">.</span><span class="token function">AddSingleton</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddSingleton</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">object</span></span> implementation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddSingleton</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name">Type</span> implementationType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddSingleton</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span><span class="token keyword">object</span><span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span>TService<span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">TService</span> implementation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Scoped registrations</span>
+collection<span class="token punctuation">.</span><span class="token function">AddScoped</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddScoped</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name">Type</span> implementationType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddScoped</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span><span class="token keyword">object</span><span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span>TService<span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Transient registrations</span>
+collection<span class="token punctuation">.</span><span class="token function">AddTransient</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddTransient</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name">Type</span> implementationType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">AddTransient</span><span class="token punctuation">(</span><span class="token class-name">Type</span> serviceType<span class="token punctuation">,</span> <span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span><span class="token keyword">object</span><span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span>TService<span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TService<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Func<span class="token punctuation">&lt;</span>IServiceProvider<span class="token punctuation">,</span>TImplementation<span class="token punctuation">></span></span> implementationFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="keyed-services">keyed services</h3>
+<p>Keyed services allow multiple implementations of the same service type to be registered under unique keys. They are available in .NET 8 and later. Keys are <code>object</code> values, but constants or enums help avoid mismatches between registration and resolution.</p>
+<pre><code class="language-csharp"><span class="token keyword">const</span> <span class="token class-name"><span class="token keyword">string</span></span> SmallCache <span class="token operator">=</span> <span class="token string">"small"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token class-name"><span class="token keyword">string</span></span> LargeCache <span class="token operator">=</span> <span class="token string">"large"</span><span class="token punctuation">;</span>
+
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddKeyedSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>ICache<span class="token punctuation">,</span> SmallCache<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>SmallCache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddKeyedScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>ICache<span class="token punctuation">,</span> LargeCache<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>LargeCache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddKeyedTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IFormatter<span class="token punctuation">,</span> JsonFormatter<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token string">"json"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Use <code>GetKeyedService&lt;TService&gt;(key)</code> when the registration is optional, or <code>GetRequiredKeyedService&lt;TService&gt;(key)</code> when a missing registration should throw an exception.</p>
+<h2 id="resolving-services">Resolving services</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="840.0" height="279.0" viewBox="0 0 840 279" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >di-registration</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: di-registration
+	
+	[IServiceCollection|
+	Specifies the contract for a 
+	collection of service descriptors.]
+	
+	[IServiceCollection|Default implementation
+	of IServiceCollection.]
+	
+	[ServiceCollection|
+	Default implementation of
+	IServiceCollection.]
+	
+	[ServiceDescriptor|
+	Describes a service with its 
+	service type, implementation,
+	and lifetime.]
+	
+	[IServiceCollection] &lt;:-- [ServiceCollection]
+	
+	[ICollection&lt;ServiceDescriptor&gt;]  &lt;:-- [IServiceCollection]
+	[IEnumerable&lt;ServiceDescriptor&gt;]  &lt;:-- [IServiceCollection]
+	[IList&lt;ServiceDescriptor&gt;] &lt;:-- [IServiceCollection]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="279.0" width="840.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M570.3 165.0 L562 165 L567 165 L567.0 165.0 " fill="none"></path>
+					</g>
+					<path d="M570.3 159.7 L570.3 165.0 L570.3 170.3 L557.0 165.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M280.8 123.0 L281 123 L287.6904761904762 125 L287.7 125.0 " fill="none"></path>
+					</g>
+					<path d="M280.8 117.7 L280.8 123.0 L280.8 128.3 L267.5 123.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M289.3 165.0 L281 165 L286 165 L286.0 165.0 " fill="none"></path>
+					</g>
+					<path d="M289.3 159.7 L289.3 165.0 L289.3 170.3 L276.0 165.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M255.8 207.0 L281 207 L287.6904761904762 205 L287.7 205.0 " fill="none"></path>
+					</g>
+					<path d="M255.8 201.7 L255.8 207.0 L255.8 212.3 L242.5 207.0 Z"></path>
+					<g data-name="IServiceCollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IServiceCollection">
+							<rect x="286.0" y="125.0" height="80.0" width="271.0" data-name="IServiceCollection"></rect>
+							<path d="M286.0 157.0 L557.0 157.0" fill="none" data-name="IServiceCollection"></path>
+						</g>
+						<g transform="translate(286, 125)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IServiceCollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IServiceCollection" data-compartment="0">
+								<text x="127.5" y="14.1" stroke="none" text-anchor="middle" data-name="IServiceCollection" data-compartment="0">IServiceCollection</text>
+								
+							</g>
+						</g>
+						<g transform="translate(286, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IServiceCollection" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IServiceCollection" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IServiceCollection" data-compartment="1">Specifies the contract for a</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IServiceCollection" data-compartment="1">collection of service descriptors.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ServiceCollection">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ServiceCollection">
+							<rect x="567.0" y="125.0" height="80.0" width="217.0" data-name="ServiceCollection"></rect>
+							<path d="M567.0 157.0 L784.0 157.0" fill="none" data-name="ServiceCollection"></path>
+						</g>
+						<g transform="translate(567, 125)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceCollection" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceCollection" data-compartment="0">
+								<text x="100.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceCollection" data-compartment="0">ServiceCollection</text>
+								
+							</g>
+						</g>
+						<g transform="translate(567, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceCollection" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceCollection" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ServiceCollection" data-compartment="1">Default implementation of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ServiceCollection" data-compartment="1">IServiceCollection.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ServiceDescriptor">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ServiceDescriptor">
+							<rect x="14.5" y="0.0" height="97.0" width="247.0" data-name="ServiceDescriptor"></rect>
+							<path d="M14.5 32.0 L261.5 32.0" fill="none" data-name="ServiceDescriptor"></path>
+						</g>
+						<g transform="translate(14.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ServiceDescriptor" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ServiceDescriptor" data-compartment="0">
+								<text x="115.5" y="14.1" stroke="none" text-anchor="middle" data-name="ServiceDescriptor" data-compartment="0">ServiceDescriptor</text>
+								
+							</g>
+						</g>
+						<g transform="translate(14.5, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ServiceDescriptor" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ServiceDescriptor" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ServiceDescriptor" data-compartment="1">Describes a service with its</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ServiceDescriptor" data-compartment="1">service type, implementation,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ServiceDescriptor" data-compartment="1">and lifetime.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ICollection&lt;ServiceDescriptor&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ICollection&lt;ServiceDescriptor&gt;">
+							<rect x="8.5" y="107.0" height="32.0" width="259.0" data-name="ICollection&lt;ServiceDescriptor&gt;"></rect>
+						</g>
+						<g transform="translate(8.5, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">
+								<text x="121.5" y="14.1" stroke="none" text-anchor="middle" data-name="ICollection&lt;ServiceDescriptor&gt;" data-compartment="0">ICollection&lt;ServiceDescriptor&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerable&lt;ServiceDescriptor&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable&lt;ServiceDescriptor&gt;">
+							<rect x="0.0" y="149.0" height="32.0" width="276.0" data-name="IEnumerable&lt;ServiceDescriptor&gt;"></rect>
+						</g>
+						<g transform="translate(0, 149)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">
+								<text x="130.0" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;ServiceDescriptor&gt;" data-compartment="0">IEnumerable&lt;ServiceDescriptor&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IList&lt;ServiceDescriptor&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IList&lt;ServiceDescriptor&gt;">
+							<rect x="33.5" y="191.0" height="32.0" width="209.0" data-name="IList&lt;ServiceDescriptor&gt;"></rect>
+						</g>
+						<g transform="translate(33.5, 191)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">
+								<text x="96.5" y="14.1" stroke="none" text-anchor="middle" data-name="IList&lt;ServiceDescriptor&gt;" data-compartment="0">IList&lt;ServiceDescriptor&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Dependency Resolve related types</figcaption>
+</figure>
+<p>After all services have been registered, an <code>IServiceProvider</code> must be built from the <code>IServiceCollection</code>. It is recommended to enable <code>ValidateOnBuild</code> and <code>ValidateScopes</code> so invalid registrations and lifetime issues are detected when the provider is created, rather than later when a service is resolved:</p>
+<pre><code class="language-csharp"><span class="token class-name">IServiceProvider</span> serviceProvider <span class="token operator">=</span> collection<span class="token punctuation">.</span><span class="token function">BuildServiceProvider</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">ServiceProviderOptions</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Validate service registrations when building the service provider.</span>
+    <span class="token comment">// Ensures that all dependencies can be resolved.</span>
+    ValidateOnBuild <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token comment">// Validate scopes when building the service provider.</span>
+    <span class="token comment">// This is useful for detecting captive dependencies.</span>
+    ValidateScopes <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<ul>
+<li><p>Use <code>GetService&lt;TService&gt;()</code> when a service is optional. It returns <code>null</code> if the service type is not registered.</p>
+<pre><code class="language-csharp"><span class="token class-name">IMyService<span class="token punctuation">?</span></span> service <span class="token operator">=</span> serviceProvider<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetService</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMyService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Use <code>GetRequiredService&lt;TService&gt;()</code> when the service must be registered. It throws an <code>InvalidOperationException</code> if the service cannot be resolved.</p>
+<pre><code class="language-csharp"><span class="token class-name">IMyService</span> service <span class="token operator">=</span> serviceProvider<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetRequiredService</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMyService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Keyed services are resolved by supplying the same key used during registration. <code>GetKeyedService&lt;TService&gt;()</code> returns <code>null</code> when no matching registration exists.</p>
+<pre><code class="language-csharp"><span class="token class-name">ICache<span class="token punctuation">?</span></span> cache <span class="token operator">=</span> serviceProvider<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetKeyedService</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>ICache<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>SmallCache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Use <code>GetRequiredKeyedService&lt;TService&gt;()</code> when the keyed service must exist. It throws an <code>InvalidOperationException</code> if no service is registered for the specified type and key.</p>
+<pre><code class="language-csharp"><span class="token class-name">ICache</span> cache <span class="token operator">=</span> serviceProvider<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetRequiredKeyedService</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>ICache<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>SmallCache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="multiple-implementations">Multiple implementations</h2>
+<p>Multiple implementations can be registered for the same service type. When resolving a single service with <code>GetService&lt;TService&gt;()</code> or <code>GetRequiredService&lt;TService&gt;()</code>, the built-in container returns the last registered implementation.</p>
+<pre><code class="language-csharp">services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMessageWriter<span class="token punctuation">,</span> ConsoleMessageWriter<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddTransient</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMessageWriter<span class="token punctuation">,</span> FileMessageWriter<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Resolves FileMessageWriter because it was registered last.</span>
+<span class="token class-name">IMessageWriter</span> writer <span class="token operator">=</span> serviceProvider<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetRequiredService</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMessageWriter<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Use <code>GetServices&lt;TService&gt;()</code> to resolve all registered implementations. They are returned in registration order; if none are registered, an empty collection is returned.</p>
+<pre><code class="language-csharp"><span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span>IMessageWriter<span class="token punctuation">></span></span> writers <span class="token operator">=</span>
+    serviceProvider<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetServices</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMessageWriter<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ConsoleMessageWriter, then FileMessageWriter</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">IMessageWriter</span> writer <span class="token keyword">in</span> writers<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    writer<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

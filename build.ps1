@@ -1,5 +1,4 @@
-bookgen build -a BuildWeb
-Set-Location docs
-Remove-Item search.html
-Set-Location ..
-bookgen md2html
+Remove-Item -r .\docs
+Copy-Item template .\docs -Recurse
+Remove-Item .\docs\template.html
+bookgen script build.script

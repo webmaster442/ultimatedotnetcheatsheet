@@ -1,0 +1,285 @@
+<svg version="1.1" baseProfile="full" width="1079.0" height="600.5" viewBox="0 0 1079 600.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >streamwriters</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: streamwriters
+	
+	[MarshalByRefObject|Enables access to objects across application
+	domain boundaries in applications 
+	that support remoting.]
+	
+	[TextWriter|Represents a writer that can write
+	a sequential series of characters.
+	This class is abstract.]
+	
+	[TextReader|Represents a reader that can read 
+	a sequential series of characters.]
+	
+	[StreamReader|Implements a TextReader that 
+	reads characters from a byte stream
+	in a particular encoding.]
+	
+	[StringReader|Implements a TextReader that
+	reads from a string.]
+	
+	[StreamWriter|Implements a TextWriter for writing
+	characters to a stream ina particular 
+	encoding.]
+	
+	[StringWriter|Implements a TextWriter for writing 
+	information to a string. The information
+	is stored in an underlying StringBuilder.]
+	
+	[BinaryReader|Reads primitive data types as binary
+	values in a specific encoding.]
+	
+	[BinaryWriter|Writes primitive types in binary 
+	to a stream and supports writing 
+	strings in a specific encoding.]
+	
+	[MarshalByRefObject] &lt;:- [TextReader]
+	[MarshalByRefObject] &lt;:- [TextWriter]
+	
+	[IDisposable] &lt;:-- [TextReader]
+	[IDisposable] &lt;:-- [TextWriter]
+	[IDisposable] &lt;:-- [BinaryWriter]
+	[IDisposable] &lt;:-- [BinaryReader]
+	
+	[TextReader] &lt;:- [StreamReader]
+	[TextReader] &lt;:- [StringReader]
+	[TextWriter] &lt;:- [StreamWriter]
+	[TextWriter] &lt;:- [StringWriter]
+	
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="600.5" width="1079.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M385.3 92.3 L377 92.75 L389.5 93.14808917197452 L389.5 93.1 " fill="none"></path>
+					<path d="M385.0 87.0 L385.3 92.3 L385.6 97.6 L372.0 93.0 Z"></path>
+					<path d="M291.9 157.4 L377 201.25 L456.10230179028133 250.5 L456.1 250.5 " fill="none"></path>
+					<path d="M294.3 152.6 L291.9 157.4 L289.5 162.1 L280.0 151.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M210.4 366.8 L377 191.25 L466.83422459893046 137.75 L466.8 137.8 " fill="none"></path>
+					</g>
+					<path d="M206.5 363.2 L210.4 366.8 L214.2 370.5 L201.2 376.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M253.4 375.1 L377 343.25 L393.5 338.59952229299364 L393.5 338.6 " fill="none"></path>
+					</g>
+					<path d="M252.1 370.0 L253.4 375.1 L254.7 380.3 L240.5 378.4 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M227.2 414.9 L377 496 L399 496 L399.0 496.0 " fill="none"></path>
+					</g>
+					<path d="M229.8 410.2 L227.2 414.9 L224.7 419.5 L215.5 408.5 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M253.8 394.3 L377 397.5 L382 397.5 L382.0 397.5 " fill="none"></path>
+					</g>
+					<path d="M254.0 388.9 L253.8 394.3 L253.7 399.6 L240.5 393.9 Z"></path>
+					<path d="M674.2 53.8 L691 48.5 L708 48.5 L708.0 48.5 " fill="none"></path>
+					<path d="M672.6 48.7 L674.2 53.8 L675.8 58.8 L661.5 57.8 Z"></path>
+					<path d="M674.2 141.7 L691 147 L732.5 147 L732.5 147.0 " fill="none"></path>
+					<path d="M675.8 136.7 L674.2 141.7 L672.6 146.8 L661.5 137.8 Z"></path>
+					<path d="M687.1 246.8 L691 245.5 L708.5 245.5 L708.5 245.5 " fill="none"></path>
+					<path d="M685.4 241.8 L687.1 246.8 L688.8 251.9 L674.5 251.1 Z"></path>
+					<path d="M687.1 351.2 L691 352.5 L696 352.5 L696.0 352.5 " fill="none"></path>
+					<path d="M688.8 346.1 L687.1 351.2 L685.4 356.2 L674.5 346.9 Z"></path>
+					<g data-name="MarshalByRefObject">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="MarshalByRefObject">
+							<rect x="0.0" y="54.3" height="97.0" width="372.0" data-name="MarshalByRefObject"></rect>
+							<path d="M0.0 86.3 L372.0 86.3" fill="none" data-name="MarshalByRefObject"></path>
+						</g>
+						<g transform="translate(0, 54.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MarshalByRefObject" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MarshalByRefObject" data-compartment="0">
+								<text x="178.0" y="14.1" stroke="none" text-anchor="middle" data-name="MarshalByRefObject" data-compartment="0">MarshalByRefObject</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 86.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MarshalByRefObject" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MarshalByRefObject" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="MarshalByRefObject" data-compartment="1">Enables access to objects across application</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="MarshalByRefObject" data-compartment="1">domain boundaries in applications</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="MarshalByRefObject" data-compartment="1">that support remoting.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TextWriter">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TextWriter">
+							<rect x="393.5" y="250.5" height="97.0" width="281.0" data-name="TextWriter"></rect>
+							<path d="M393.5 282.5 L674.5 282.5" fill="none" data-name="TextWriter"></path>
+						</g>
+						<g transform="translate(393.5, 250.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextWriter" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextWriter" data-compartment="0">
+								<text x="132.5" y="14.1" stroke="none" text-anchor="middle" data-name="TextWriter" data-compartment="0">TextWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(393.5, 282.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextWriter" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TextWriter" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="TextWriter" data-compartment="1">Represents a writer that can write</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="TextWriter" data-compartment="1">a sequential series of characters.</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="TextWriter" data-compartment="1">This class is abstract.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="TextReader">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="TextReader">
+							<rect x="389.5" y="57.8" height="80.0" width="289.0" data-name="TextReader"></rect>
+							<path d="M389.5 89.8 L678.5 89.8" fill="none" data-name="TextReader"></path>
+						</g>
+						<g transform="translate(389.5, 57.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="TextReader" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="TextReader" data-compartment="0">
+								<text x="136.5" y="14.1" stroke="none" text-anchor="middle" data-name="TextReader" data-compartment="0">TextReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(389.5, 89.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="TextReader" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="TextReader" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="TextReader" data-compartment="1">Represents a reader that can read</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="TextReader" data-compartment="1">a sequential series of characters.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StreamReader">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StreamReader">
+							<rect x="708.0" y="0.0" height="97.0" width="303.0" data-name="StreamReader"></rect>
+							<path d="M708.0 32.0 L1011.0 32.0" fill="none" data-name="StreamReader"></path>
+						</g>
+						<g transform="translate(708, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamReader" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StreamReader" data-compartment="0">
+								<text x="143.5" y="14.1" stroke="none" text-anchor="middle" data-name="StreamReader" data-compartment="0">StreamReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(708, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamReader" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StreamReader" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="StreamReader" data-compartment="1">Implements a TextReader that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StreamReader" data-compartment="1">reads characters from a byte stream</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="StreamReader" data-compartment="1">in a particular encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StringReader">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StringReader">
+							<rect x="732.5" y="107.0" height="80.0" width="254.0" data-name="StringReader"></rect>
+							<path d="M732.5 139.0 L986.5 139.0" fill="none" data-name="StringReader"></path>
+						</g>
+						<g transform="translate(732.5, 107)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringReader" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringReader" data-compartment="0">
+								<text x="119.0" y="14.1" stroke="none" text-anchor="middle" data-name="StringReader" data-compartment="0">StringReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(732.5, 139)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringReader" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringReader" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="StringReader" data-compartment="1">Implements a TextReader that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StringReader" data-compartment="1">reads from a string.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StreamWriter">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StreamWriter">
+							<rect x="708.5" y="197.0" height="97.0" width="302.0" data-name="StreamWriter"></rect>
+							<path d="M708.5 229.0 L1010.5 229.0" fill="none" data-name="StreamWriter"></path>
+						</g>
+						<g transform="translate(708.5, 197)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StreamWriter" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StreamWriter" data-compartment="0">
+								<text x="143.0" y="14.1" stroke="none" text-anchor="middle" data-name="StreamWriter" data-compartment="0">StreamWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(708.5, 229)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StreamWriter" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StreamWriter" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="StreamWriter" data-compartment="1">Implements a TextWriter for writing</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StreamWriter" data-compartment="1">characters to a stream ina particular</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="StreamWriter" data-compartment="1">encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="StringWriter">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="StringWriter">
+							<rect x="696.0" y="304.0" height="97.0" width="327.0" data-name="StringWriter"></rect>
+							<path d="M696.0 336.0 L1023.0 336.0" fill="none" data-name="StringWriter"></path>
+						</g>
+						<g transform="translate(696, 304)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="StringWriter" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="StringWriter" data-compartment="0">
+								<text x="155.5" y="14.1" stroke="none" text-anchor="middle" data-name="StringWriter" data-compartment="0">StringWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(696, 336)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="StringWriter" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="StringWriter" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="StringWriter" data-compartment="1">Implements a TextWriter for writing</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="StringWriter" data-compartment="1">information to a string. The information</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="StringWriter" data-compartment="1">is stored in an underlying StringBuilder.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BinaryReader">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="BinaryReader">
+							<rect x="382.0" y="357.5" height="80.0" width="304.0" data-name="BinaryReader"></rect>
+							<path d="M382.0 389.5 L686.0 389.5" fill="none" data-name="BinaryReader"></path>
+						</g>
+						<g transform="translate(382, 357.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryReader" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BinaryReader" data-compartment="0">
+								<text x="144.0" y="14.1" stroke="none" text-anchor="middle" data-name="BinaryReader" data-compartment="0">BinaryReader</text>
+								
+							</g>
+						</g>
+						<g transform="translate(382, 389.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryReader" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BinaryReader" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="BinaryReader" data-compartment="1">Reads primitive data types as binary</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="BinaryReader" data-compartment="1">values in a specific encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="BinaryWriter">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="BinaryWriter">
+							<rect x="399.0" y="447.5" height="97.0" width="270.0" data-name="BinaryWriter"></rect>
+							<path d="M399.0 479.5 L669.0 479.5" fill="none" data-name="BinaryWriter"></path>
+						</g>
+						<g transform="translate(399, 447.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="BinaryWriter" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="BinaryWriter" data-compartment="0">
+								<text x="127.0" y="14.1" stroke="none" text-anchor="middle" data-name="BinaryWriter" data-compartment="0">BinaryWriter</text>
+								
+							</g>
+						</g>
+						<g transform="translate(399, 479.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="BinaryWriter" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="BinaryWriter" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="BinaryWriter" data-compartment="1">Writes primitive types in binary</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="BinaryWriter" data-compartment="1">to a stream and supports writing</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="BinaryWriter" data-compartment="1">strings in a specific encoding.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="131.5" y="376.5" height="32.0" width="109.0" data-name="IDisposable"></rect>
+						</g>
+						<g transform="translate(131.5, 376.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="46.5" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
