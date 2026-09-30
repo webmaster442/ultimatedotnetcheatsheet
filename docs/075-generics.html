@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Generics</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="generics">Generics</h1>
+<p>Generics in C# allow you to define classes, methods, interfaces, and delegates with type parameters, enabling type safety and code reuse without compromising performance.</p>
+<p>Type parameters can be defined for types and methods using angle brackets (<code>&lt;&gt;</code>).</p>
+<h2 id="constraints">Constraints</h2>
+<p>Generic constraints in C# provide a way to restrict the types that can be used as arguments for a generic type parameter. Without constraints, generic type parameters can be any type (class, struct, enum, etc.). However, sometimes you want to limit the generic type to certain kinds of types (e.g., reference types, value types, types that implement a specific interface, etc.). Constraints are declared using the <code>where</code> clause in the generic type or method declaration.</p>
+<h3 id="no-constraints">No Constraints</h3>
+<p>If you don't specify any constraints, the type parameter can be any type.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GenericClass<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> Value <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="value-type">Value Type</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ValueTypeOnly<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">struct</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> Value <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="reference-type">Reference Type</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ReferenceTypeOnly<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> Value <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="parameterless-constructor">Parameterless Constructor</h3>
+<p>The <code>new()</code> constraint ensures that the type <code>T</code> has a parameterless constructor. This is useful when you need to create instances of the type within the generic class or method.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">InstantiateType<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> <span class="token function">CreateInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">T</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Requires T to have a parameterless constructor</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="base-class-or-implemented-interface">Base Class or Implemented interface</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BaseClass</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DerivedClass</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">BaseClass</span></span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DerivedTypeOnly<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">BaseClass</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> Value <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="multiple-constraints">Multiple Constraints</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MultiConstraint<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> <span class="token function">CreateInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">T</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// T must be a reference type and have a parameterless constructor</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="enum">Enum</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EnumConstraint<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">struct</span><span class="token punctuation">,</span> <span class="token class-name">Enum</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">PrintEnumValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> <span class="token keyword">value</span> <span class="token keyword">in</span> Enum<span class="token punctuation">.</span><span class="token function">GetValues</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">T</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="delegate">Delegate</h3>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DelegateConstraint<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Delegate</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">InvokeDelegate</span><span class="token punctuation">(</span><span class="token class-name">T</span> del<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        del<span class="token punctuation">.</span><span class="token function">DynamicInvoke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Invoke delegate dynamically</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="notnull">notnull</h3>
+<p>The <code>notnull</code> constraint restricts the generic type parameter <code>T</code> to types that are not nullable, meaning:</p>
+<ul>
+<li>It can be any value type</li>
+<li>It can be any non-nullable reference type</li>
+<li>It cannot be nullable types like int? (nullable value type) or string? (nullable reference type in C# 8.0 with nullable reference types enabled).</li>
+</ul>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NotNullConstraint<span class="token punctuation">&lt;</span>T<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">T</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">notnull</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">T</span> Value <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">NotNullConstraint</span><span class="token punctuation">(</span><span class="token class-name">T</span> <span class="token keyword">value</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Value <span class="token operator">=</span> <span class="token keyword">value</span> <span class="token operator">??</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Value cannot be null"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Allowed: Non-nullable reference type (string)</span>
+<span class="token class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> stringConstraint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Allowed: Non-nullable reference type (string)</span>
+<span class="token class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> stringConstraint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Not allowed: Nullable reference type (string?) in C# 8.0ű</span>
+<span class="token comment">// compile error</span>
+<span class="token class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">?</span><span class="token punctuation">></span></span> nullableStringConstraint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">?</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Not allowed: Nullable value type (int?)</span>
+<span class="token comment">// compile error</span>
+<span class="token class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">?</span><span class="token punctuation">></span></span> nullableValueConstraint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">NotNullConstraint<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">?</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="covariance">Covariance</h2>
+<p>Covariance allows you to use a more derived type than originally specified. In C#, covariance applies to generic type parameters in interfaces and delegates when used for output (return types). You declare a type parameter as covariant using the <code>out</code> keyword.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ICovariant<span class="token punctuation">&lt;</span><span class="token keyword">out</span> T<span class="token punctuation">></span></span>
+<span class="token punctuation">{</span>
+    <span class="token return-type class-name">T</span> <span class="token function">GetItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>Here, <code>T</code> is covariant because it is marked with the <code>out</code> keyword, and it can only be used as a return type. The <code>out</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>ICovariant&lt;Dog&gt;</code> can be treated as <code>ICovariant&lt;Animal&gt;</code>:</p>
+<pre><code class="language-csharp"><span class="token class-name">ICovariant<span class="token punctuation">&lt;</span>Animal<span class="token punctuation">></span></span> animals <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">CovariantImplementation<span class="token punctuation">&lt;</span>Dog<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Animal</span> animal <span class="token operator">=</span> animals<span class="token punctuation">.</span><span class="token function">GetItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="contravariance">Contravariance</h2>
+<p>Contravariance allows you to use a more general (or base) type than originally specified. In C#, contravariance applies to generic type parameters in interfaces and delegates when used for input (method parameters). You declare a type parameter as contravariant using the <code>in</code> keyword.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IContravariant<span class="token punctuation">&lt;</span><span class="token keyword">in</span> T<span class="token punctuation">></span></span>
+<span class="token punctuation">{</span>
+    <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetItem</span><span class="token punctuation">(</span><span class="token class-name">T</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>Here, <code>T</code> is contravariant because it is marked with the in keyword, and it can only be used as a method parameter. The <code>in</code> keyword means that if <code>Dog</code> inherits from <code>Animal</code>, then <code>IContravariant&lt;Animal&gt;</code> can be treated as <code>IContravariant&lt;Dog&gt;</code>.</p>
+<pre><code class="language-csharp"><span class="token class-name">IContravariant<span class="token punctuation">&lt;</span>Dog<span class="token punctuation">></span></span> dogs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ContravariantImplementation<span class="token punctuation">&lt;</span>Animal<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dogs<span class="token punctuation">.</span><span class="token function">SetItem</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="invariance">Invariance</h2>
+<p>Invariance means that there is no relationship between <code>GenericType&lt;Derived&gt;</code> and <code>GenericType&lt;Base&gt;</code>, even if <code>Derived</code> inherits from <code>Base</code>. Most generic types in C# are invariant by default. This means that <code>List&lt;Dog&gt;</code> is not considered a subtype of <code>List&lt;Animal&gt;</code>, even though <code>Dog</code> is a subtype of <code>Animal</code>.</p>
+<pre><code class="language-csharp"><span class="token comment">//the following causes a compile error</span>
+<span class="token class-name">List<span class="token punctuation">&lt;</span>Animal<span class="token punctuation">></span></span> animals <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span>Dog<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

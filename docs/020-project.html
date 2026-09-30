@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Project file XML settings</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="project-file-xml-settings">Project file XML settings</h1>
+<h2 id="enable-implicit-usings">Enable implicit usings</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ImplicitUsings</span><span class="token punctuation">></span></span>enable<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ImplicitUsings</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="enable-nullable-reference-types">Enable nullable reference types</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Nullable</span><span class="token punctuation">></span></span>enable<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Nullable</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="set-internals-visible-to-an-other-project">Set internals visible to an other project</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>InternalsVisibleTo</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ProjectName<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="do-not-append-target-framework-to-output-path">Do not append target framework to output path</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppendTargetFrameworkToOutputPath</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AppendTargetFrameworkToOutputPath</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="set-assembly-version-based-on-build-date-year.month.date">Set Assembly version based on build date (year.month.date)</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Version</span><span class="token punctuation">></span></span>
+        $([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM"))
+        .$([System.DateTime]::UtcNow.ToString("dd")).0
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AssemblyVersion</span><span class="token punctuation">></span></span>
+        $([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM"))
+        .$([System.DateTime]::UtcNow.ToString("dd")).0
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AssemblyVersion</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FileVersion</span><span class="token punctuation">></span></span>
+        $([System.DateTime]::UtcNow.ToString("yyyy")).$([System.DateTime]::UtcNow.ToString("MM"))
+        .$([System.DateTime]::UtcNow.ToString("dd")).0
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>FileVersion</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="disable-source-link-source-revision-including-in-assembly-info">Disable Source Link Source Revision including in Assembly info</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IncludeSourceRevisionInInformationalVersion</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>IncludeSourceRevisionInInformationalVersion</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="allow-unsafe-code">Allow Unsafe code</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AllowUnsafeBlocks</span><span class="token punctuation">></span></span>True<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AllowUnsafeBlocks</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="enable-native-aot-support-for-a-class-library">Enable Native AOT support for a class library</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IsAotCompatible</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>IsAotCompatible</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="enable-native-aot-publishing">Enable Native AOT publishing</h2>
+<pre><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PublishAot</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PublishAot</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+</code></pre>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

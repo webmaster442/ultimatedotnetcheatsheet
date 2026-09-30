@@ -1,6 +1,6 @@
 # Changelog
 
-## 2026.08.31
+## 2026.09.30
 
 * New layout
 * Linted markdown code
@@ -8,6 +8,7 @@
 * Extended Powershell script section
 * Reworked collections section
 * Extended C# version history with C# 14
+* Added Markup extensions for WPF to the UI section
 
 ## 2025.01.16
 

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Pattern Matching</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="pattern-matching">Pattern matching</h1>
+<h2 id="discard-pattern">Discard pattern</h2>
+<p>The discard pattern can be used to match any expression, including <code>null</code>. It's represented by the <code>_</code> symbol.</p>
+<pre><code class="language-csharp"><span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">isFloatingPointNumber</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> input<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//the out value of the conversion is discarded</span>
+    <span class="token keyword">return</span> <span class="token keyword">double</span><span class="token punctuation">.</span><span class="token function">TryParse</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">double</span></span> _<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="var-pattern">var pattern</h2>
+<p>The <code>var</code> pattern can be used to match any expression, including <code>null</code>, and assign its result to a new local variable:</p>
+<pre><code class="language-csharp"><span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">isFloatingPointNumber</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> input<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">double</span><span class="token punctuation">.</span><span class="token function">TryParse</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">var</span></span> _<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="declaration-and-type-patterns">Declaration and type patterns</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">object</span></span> greeting <span class="token operator">=</span> <span class="token string">"Hello, World!"</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>greeting <span class="token keyword">is</span> <span class="token class-name"><span class="token keyword">string</span></span> message<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//greeting is a string and casted to message variable</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>A declaration pattern with type T matches an expression when an expression result is non-null and any of the following conditions are true:</p>
+<ul>
+<li>The run-time type of an expression result is T.</li>
+<li>The run-time type of an expression result derives from type T, implements interface T, or another implicit reference conversion exists from it to T.</li>
+</ul>
+<p><strong>Null checking:</strong></p>
+<pre><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>input <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p><strong>Type checking in switch:</strong></p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Vehicle</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Vehicle</span></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Truck</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Vehicle</span></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">TollCalculator</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">decimal</span></span> <span class="token function">CalculateToll</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token class-name">Vehicle</span> vehicle<span class="token punctuation">)</span> <span class="token operator">=></span> vehicle <span class="token keyword">switch</span>
+    <span class="token punctuation">{</span>
+        <span class="token return-type class-name">Car</span> _ <span class="token operator">=></span> <span class="token number">2.00m</span><span class="token punctuation">,</span>
+        <span class="token return-type class-name">Truck</span> _ <span class="token operator">=></span> <span class="token number">7.50m</span><span class="token punctuation">,</span>
+        <span class="token keyword">null</span> <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>vehicle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Unknown type of a vehicle"</span><span class="token punctuation">,</span> <span class="token keyword">nameof</span><span class="token punctuation">(</span>vehicle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="constant-pattern">Constant pattern</h2>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">decimal</span></span> <span class="token function">GetGroupTicketPrice</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> visitorCount<span class="token punctuation">)</span> <span class="token operator">=></span> visitorCount <span class="token keyword">switch</span>
+<span class="token punctuation">{</span>
+    <span class="token number">1</span> <span class="token operator">=></span> <span class="token number">12.0m</span><span class="token punctuation">,</span>
+    <span class="token number">2</span> <span class="token operator">=></span> <span class="token number">20.0m</span><span class="token punctuation">,</span>
+    <span class="token number">3</span> <span class="token operator">=></span> <span class="token number">27.0m</span><span class="token punctuation">,</span>
+    <span class="token number">0</span> <span class="token operator">=></span> <span class="token number">0.0m</span><span class="token punctuation">,</span>
+    _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Not supported number of visitors: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">visitorCount</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> <span class="token keyword">nameof</span><span class="token punctuation">(</span>visitorCount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>In a constant pattern, you can use any constant expression, such as integers, floating-point numbers, char, string, boolean, enums, name of a declared const field or local and null. Note: <code>Span&lt;char&gt;</code> or <code>ReadOnlySpan&lt;char&gt;</code> can also be matched in the constant pattern, but in C# 11 and later versions</p>
+<h2 id="relational-patterns">Relational patterns</h2>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">Classify</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">double</span></span> measurement<span class="token punctuation">)</span> <span class="token operator">=></span> measurement <span class="token keyword">switch</span>
+<span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">4.0</span> <span class="token operator">=></span> <span class="token string">"Too low"</span><span class="token punctuation">,</span>
+    <span class="token operator">></span> <span class="token number">10.0</span> <span class="token operator">=></span> <span class="token string">"Too high"</span><span class="token punctuation">,</span>
+    <span class="token keyword">double</span><span class="token punctuation">.</span>NaN <span class="token operator">=></span> <span class="token string">"Unknown"</span><span class="token punctuation">,</span>
+    _ <span class="token operator">=></span> <span class="token string">"Acceptable"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>In a relational pattern, you can use any of the relational operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, or <code>&gt;=</code>. The right-hand part of a relational pattern must be a constant expression. For the constant expression, the constant pattern limitations apply.</p>
+<h2 id="logical-patterns">Logical patterns</h2>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">Classify</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">double</span></span> measurement<span class="token punctuation">)</span> <span class="token operator">=></span> measurement <span class="token keyword">switch</span>
+<span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">40.0</span> <span class="token operator">=></span> <span class="token string">"Too low"</span><span class="token punctuation">,</span>
+    <span class="token operator">>=</span> <span class="token operator">-</span><span class="token number">40.0</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">=></span> <span class="token string">"Low"</span><span class="token punctuation">,</span>
+    <span class="token operator">>=</span> <span class="token number">0</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">10.0</span> <span class="token operator">=></span> <span class="token string">"Acceptable"</span><span class="token punctuation">,</span>
+    <span class="token operator">>=</span> <span class="token number">10.0</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">20.0</span> <span class="token operator">=></span> <span class="token string">"High"</span><span class="token punctuation">,</span>
+    <span class="token operator">>=</span> <span class="token number">20.0</span> <span class="token operator">=></span> <span class="token string">"Too high"</span><span class="token punctuation">,</span>
+    <span class="token keyword">double</span><span class="token punctuation">.</span>NaN <span class="token operator">=></span> <span class="token string">"Unknown"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">GetCalendarSeason</span><span class="token punctuation">(</span><span class="token class-name">DateTime</span> date<span class="token punctuation">)</span> <span class="token operator">=></span> date<span class="token punctuation">.</span>Month <span class="token keyword">switch</span>
+<span class="token punctuation">{</span>
+    <span class="token number">3</span> <span class="token keyword">or</span> <span class="token number">4</span> <span class="token keyword">or</span> <span class="token number">5</span> <span class="token operator">=></span> <span class="token string">"spring"</span><span class="token punctuation">,</span>
+    <span class="token number">6</span> <span class="token keyword">or</span> <span class="token number">7</span> <span class="token keyword">or</span> <span class="token number">8</span> <span class="token operator">=></span> <span class="token string">"summer"</span><span class="token punctuation">,</span>
+    <span class="token number">9</span> <span class="token keyword">or</span> <span class="token number">10</span> <span class="token keyword">or</span> <span class="token number">11</span> <span class="token operator">=></span> <span class="token string">"autumn"</span><span class="token punctuation">,</span>
+    <span class="token number">12</span> <span class="token keyword">or</span> <span class="token number">1</span> <span class="token keyword">or</span> <span class="token number">2</span> <span class="token operator">=></span> <span class="token string">"winter"</span><span class="token punctuation">,</span>
+    _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentOutOfRangeException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token interpolation-string"><span class="token string">$"Date with unexpected month: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">date<span class="token punctuation">.</span>Month</span><span class="token punctuation">}</span></span><span class="token string">."</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Precedence: <code>not</code>, <code>and</code>, <code>or</code>. To explicitly specify the precedence, use parentheses:</p>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsLetter</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">char</span></span> c<span class="token punctuation">)</span> <span class="token operator">=></span> c <span class="token keyword">is</span> <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token char">'a'</span> <span class="token keyword">and</span> <span class="token operator">&lt;=</span> <span class="token char">'z'</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token char">'A'</span> <span class="token keyword">and</span> <span class="token operator">&lt;=</span> <span class="token char">'Z'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="property-pattern">Property Pattern</h2>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">IsConferenceDay</span><span class="token punctuation">(</span><span class="token class-name">DateTime</span> date<span class="token punctuation">)</span> <span class="token operator">=></span> date <span class="token keyword">is</span> <span class="token punctuation">{</span> Year<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">Month</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">Day</span><span class="token punctuation">:</span> <span class="token number">19</span> <span class="token keyword">or</span> <span class="token number">20</span> <span class="token keyword">or</span> <span class="token number">21</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>A property pattern matches an expression when an expression result is non-null and every nested pattern matches the corresponding property or field of the expression result. It can be combined with run-time type check and variable declaration:</p>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">TakeFive</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> input<span class="token punctuation">)</span> <span class="token operator">=></span> input <span class="token keyword">switch</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">string</span> <span class="token punctuation">{</span> Length<span class="token punctuation">:</span> <span class="token operator">>=</span> <span class="token number">5</span> <span class="token punctuation">}</span> s <span class="token operator">=></span> s<span class="token punctuation">.</span><span class="token function">Substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token return-type class-name"><span class="token keyword">string</span></span> s <span class="token operator">=></span> s<span class="token punctuation">,</span>
+
+    ICollection<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span> <span class="token punctuation">{</span> Count<span class="token punctuation">:</span> <span class="token operator">>=</span> <span class="token number">5</span> <span class="token punctuation">}</span> symbols <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">string</span></span><span class="token punctuation">(</span>symbols<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token return-type class-name">ICollection<span class="token punctuation">&lt;</span><span class="token keyword">char</span><span class="token punctuation">></span></span> symbols <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">string</span></span><span class="token punctuation">(</span>symbols<span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token keyword">null</span> <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    _ <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Not supported input type."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="positional-pattern">Positional pattern</h2>
+<p>You use a positional pattern to deconstruct an expression result and match the resulting values against the corresponding nested patterns.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">readonly</span> <span class="token keyword">struct</span> <span class="token class-name">Point</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> X <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Y <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">Point</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> x<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> y<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Deconstruct</span><span class="token punctuation">(</span><span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">int</span></span> x<span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">int</span></span> y<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">Classify</span><span class="token punctuation">(</span><span class="token class-name">Point</span> point<span class="token punctuation">)</span> <span class="token operator">=></span> point <span class="token keyword">switch</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"Origin"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"positive X basis end"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"positive Y basis end"</span><span class="token punctuation">,</span>
+    _ <span class="token operator">=></span> <span class="token string">"Just a point"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>At the preceding example, the type of an expression contains the Deconstruct method, which is used to deconstruct an expression result. You can also match expressions of tuple types against positional patterns. In that way, you can match multiple inputs against various patterns:</p>
+<pre><code class="language-csharp"><span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">decimal</span></span> <span class="token function">GetGroupTicketPriceDiscount</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> groupSize<span class="token punctuation">,</span> <span class="token class-name">DateTime</span> visitDate<span class="token punctuation">)</span>
+    <span class="token operator">=></span> <span class="token punctuation">(</span>groupSize<span class="token punctuation">,</span> visitDate<span class="token punctuation">.</span>DayOfWeek<span class="token punctuation">)</span> <span class="token keyword">switch</span>
+    <span class="token punctuation">{</span>
+        <span class="token punctuation">(</span><span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Group size must be positive."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>_<span class="token punctuation">,</span> DayOfWeek<span class="token punctuation">.</span>Saturday <span class="token keyword">or</span> DayOfWeek<span class="token punctuation">.</span>Sunday<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">0.0m</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">5</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">,</span> DayOfWeek<span class="token punctuation">.</span>Monday<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">20.0m</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">,</span> DayOfWeek<span class="token punctuation">.</span>Monday<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">30.0m</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">5</span> <span class="token keyword">and</span> <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">12.0m</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">15.0m</span><span class="token punctuation">,</span>
+        _ <span class="token operator">=></span> <span class="token number">0.0m</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="list-patterns">List patterns</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+numbers <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">or</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">>=</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+</code></pre>
+
+<p>To match elements only at the start or/and the end of an input sequence, use the slice pattern (<code>..</code>);  A slice pattern matches zero or more elements. You can use at most one slice pattern in a list pattern. The slice pattern can only appear in a list pattern.</p>
+<pre><code class="language-csharp"><span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span> _<span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
+
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token keyword">or</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// True</span>
+<span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">is</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token range operator">..</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// False</span>
+</code></pre>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

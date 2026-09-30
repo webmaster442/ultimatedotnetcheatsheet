@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Tasks</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="tasks">Tasks</h1>
+<p>A Task in .NET represents an asynchronous operation that can return a result or complete without one. Tasks are used to perform background operations, avoiding blocking the main thread.</p>
+<h2 id="creating-and-running-tasks">Creating and Running Tasks</h2>
+<p>A Task can be started with the <code>Task.Run</code> method or alternatively with the <code>Task.Factory.StartNew</code> method.</p>
+<pre><code class="language-csharp">Task<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">DoWork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Task<span class="token punctuation">.</span>Factory<span class="token punctuation">.</span><span class="token function">StartNew</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">DoWork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Tasks can return a result using <code>Task&lt;T&gt;</code> where <code>T</code> is the type of the result:</p>
+<pre><code class="language-csharp"><span class="token class-name">Task<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> task <span class="token operator">=</span> Task<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">Compute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="task-operations">Task operations</h2>
+<p>The <code>Task.Wait()</code> Blocks the calling thread until the task finishes.</p>
+<pre><code class="language-csharp">task<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>You can chain tasks by continuing them with <code>ContinueWith</code>.</p>
+<pre><code class="language-csharp">Task<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">DoWork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">ContinueWith</span><span class="token punctuation">(</span>t <span class="token operator">=></span> Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Task completed!"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Tasks can be cancelled using a CancellationToken</p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> tokenSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">CancellationTokenSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> token <span class="token operator">=</span> tokenSource<span class="token punctuation">.</span>Token<span class="token punctuation">;</span>
+
+<span class="token class-name">Task</span> task <span class="token operator">=</span> Task<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">DoWork</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">,</span> token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+tokenSource<span class="token punctuation">.</span><span class="token function">Cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Cancel the task</span>
+</code></pre>
+<h2 id="async-await">Async await</h2>
+<p>The <code>async</code> and <code>await</code> keywords are used to write asynchronous code in a simplified manner. This is often combined with tasks to ensure non-blocking operations.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task</span> <span class="token function">DoWorkAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">await</span> Task<span class="token punctuation">.</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Work completed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="task-types">Task types</h2>
+<p>In C#, both <code>Task</code> and <code>ValueTask</code> are used to represent asynchronous operations, but they are optimized for different scenarios.</p>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="853.0" height="444.0" viewBox="0 0 853 444" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >tasks</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: tasks
+	
+	[IAsyncResult|
+	Represents the status of
+	an asynchronous operation]
+	
+	[IDisposable|
+	Provides a mechanism for 
+	releasing unmanaged resources]
+	
+	[Task|
+	Represents an 
+	asynchronous operation]
+	
+	[Task&lt;TResult&gt;|
+	Represents an 
+	asynchronous operation 
+	that can return a value]
+	
+	[IEquatable&lt;T&gt;|Defines a generalized method that 
+	a value type or class implements to 
+	create a type-specific method for
+	determining equality of instances]
+	
+	[ValueTask|
+	Provides an awaitable 
+	result of an asynchronous
+	operation.]
+	
+	[ValueTask&lt;TResult&gt;|
+	Provides a value type that wraps 
+	a Task&lt;TResult&gt; and a TResult, 
+	only one of which is used.]
+	
+	
+	[IAsyncResult] &lt;:-- [Task]
+	[IDisposable] &lt;:-- [Task] &lt;:- [Task&lt;TResult&gt;]
+	
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask&lt;TResult&gt;] 
+	[IEquatable&lt;T&gt;] &lt;:-- [ValueTask]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="444.0" width="853.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M277.3 40.0 L300 40 L338 52.04225352112676 L338.0 52.0 " fill="none"></path>
+					</g>
+					<path d="M277.3 34.7 L277.3 40.0 L277.3 45.3 L264.0 40.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M296.8 130.0 L300 130 L338 117.95774647887325 L338.0 118.0 " fill="none"></path>
+					</g>
+					<path d="M296.8 124.7 L296.8 130.0 L296.8 135.3 L283.5 130.0 Z"></path>
+					<path d="M559.3 85.0 L584 85 L589 85 L589.0 85.0 " fill="none"></path>
+					<path d="M559.3 79.7 L559.3 85.0 L559.3 90.3 L546.0 85.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M307.6 342.2 L300 339.5 L305 339.5 L305.0 339.5 " fill="none"></path>
+					</g>
+					<path d="M309.3 337.1 L307.6 342.2 L305.8 347.2 L295.0 337.7 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M307.6 229.8 L300 232.5 L331 232.5 L331.0 232.5 " fill="none"></path>
+					</g>
+					<path d="M305.8 224.8 L307.6 229.8 L309.3 234.9 L295.0 234.3 Z"></path>
+					<g data-name="IAsyncResult">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IAsyncResult">
+							<rect x="31.0" y="0.0" height="80.0" width="233.0" data-name="IAsyncResult"></rect>
+							<path d="M31.0 32.0 L264.0 32.0" fill="none" data-name="IAsyncResult"></path>
+						</g>
+						<g transform="translate(31, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IAsyncResult" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IAsyncResult" data-compartment="0">
+								<text x="108.5" y="14.1" stroke="none" text-anchor="middle" data-name="IAsyncResult" data-compartment="0">IAsyncResult</text>
+								
+							</g>
+						</g>
+						<g transform="translate(31, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IAsyncResult" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IAsyncResult" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IAsyncResult" data-compartment="1">Represents the status of</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IAsyncResult" data-compartment="1">an asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="11.5" y="90.0" height="80.0" width="272.0" data-name="IDisposable"></rect>
+							<path d="M11.5 122.0 L283.5 122.0" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(11.5, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="128.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(11.5, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">Provides a mechanism for</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IDisposable" data-compartment="1">releasing unmanaged resources</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Task">
+							<rect x="338.0" y="45.0" height="80.0" width="208.0" data-name="Task"></rect>
+							<path d="M338.0 77.0 L546.0 77.0" fill="none" data-name="Task"></path>
+						</g>
+						<g transform="translate(338, 45)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task" data-compartment="0">
+								<text x="96.0" y="14.1" stroke="none" text-anchor="middle" data-name="Task" data-compartment="0">Task</text>
+								
+							</g>
+						</g>
+						<g transform="translate(338, 77)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task" data-compartment="1">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task" data-compartment="1">asynchronous operation</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Task&lt;TResult&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Task&lt;TResult&gt;">
+							<rect x="589.0" y="36.5" height="97.0" width="208.0" data-name="Task&lt;TResult&gt;"></rect>
+							<path d="M589.0 68.5 L797.0 68.5" fill="none" data-name="Task&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(589, 36.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Task&lt;TResult&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Task&lt;TResult&gt;" data-compartment="0">
+								<text x="96.0" y="14.1" stroke="none" text-anchor="middle" data-name="Task&lt;TResult&gt;" data-compartment="0">Task&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(589, 68.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Task&lt;TResult&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Task&lt;TResult&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Task&lt;TResult&gt;" data-compartment="1">Represents an</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Task&lt;TResult&gt;" data-compartment="1">asynchronous operation</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Task&lt;TResult&gt;" data-compartment="1">that can return a value</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEquatable&lt;T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEquatable&lt;T&gt;">
+							<rect x="0.0" y="229.5" height="113.0" width="295.0" data-name="IEquatable&lt;T&gt;"></rect>
+							<path d="M0.0 261.5 L295.0 261.5" fill="none" data-name="IEquatable&lt;T&gt;"></path>
+						</g>
+						<g transform="translate(0, 229.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEquatable&lt;T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEquatable&lt;T&gt;" data-compartment="0">
+								<text x="139.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEquatable&lt;T&gt;" data-compartment="0">IEquatable&lt;T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 261.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEquatable&lt;T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEquatable&lt;T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">Defines a generalized method that</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">a value type or class implements to</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">create a type-specific method for</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IEquatable&lt;T&gt;" data-compartment="1">determining equality of instances</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueTask">
+							<rect x="331.0" y="184.0" height="97.0" width="222.0" data-name="ValueTask"></rect>
+							<path d="M331.0 216.0 L553.0 216.0" fill="none" data-name="ValueTask"></path>
+						</g>
+						<g transform="translate(331, 184)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask" data-compartment="0">
+								<text x="103.0" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask" data-compartment="0">ValueTask</text>
+								
+							</g>
+						</g>
+						<g transform="translate(331, 216)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask" data-compartment="1">Provides an awaitable</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask" data-compartment="1">result of an asynchronous</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask" data-compartment="1">operation.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ValueTask&lt;TResult&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ValueTask&lt;TResult&gt;">
+							<rect x="305.0" y="291.0" height="97.0" width="274.0" data-name="ValueTask&lt;TResult&gt;"></rect>
+							<path d="M305.0 323.0 L579.0 323.0" fill="none" data-name="ValueTask&lt;TResult&gt;"></path>
+						</g>
+						<g transform="translate(305, 291)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ValueTask&lt;TResult&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ValueTask&lt;TResult&gt;" data-compartment="0">
+								<text x="129.0" y="14.1" stroke="none" text-anchor="middle" data-name="ValueTask&lt;TResult&gt;" data-compartment="0">ValueTask&lt;TResult&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(305, 323)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">Provides a value type that wraps</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">a Task&lt;TResult&gt; and a TResult,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="ValueTask&lt;TResult&gt;" data-compartment="1">only one of which is used.</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Task Types</figcaption>
+</figure>
+<h3 id="when-to-use-a-task">When to use a Task</h3>
+<ul>
+<li><p><strong>Asynchronous method always completes asynchronously</strong>:</p>
+<p>If the operation always runs asynchronously and returns a result in the future, use Task. The overhead of Task is justified for managing the state of the operation.</p>
+</li>
+<li><p><strong>Long-running or CPU-bound operations</strong>:</p>
+<p>When the operation involves long-running or CPU-intensive tasks, Task is the standard choice.</p>
+</li>
+<li><p><strong>Multiple await points or continuations</strong>:</p>
+<p>If the method has multiple asynchronous steps or continuations (e.g., several <code>await</code> calls), <code>Task</code> is better suited as it provides efficient memory management for complex operations.</p>
+</li>
+<li><p><strong>Memory management is not a major concern</strong>:</p>
+<p>In many scenarios, the additional memory overhead of <code>Task</code> is minimal and worth the simplicity it offers.</p>
+</li>
+<li><p><strong>You expect consumers to use <code>.Result</code>, <code>.Wait()</code>, or <code>Task.WhenAll</code></strong>:</p>
+<p>Task handles these scenarios better because it is reference type and has additional functionality for managing asynchronous flows.</p>
+</li>
+</ul>
+<h3 id="when-to-use-a-valuetask">When to use a ValueTask</h3>
+<ul>
+<li><p><strong>Operation may complete synchronously</strong>:</p>
+<p>If the operation sometimes completes synchronously (e.g., from a cache or optimized path), <code>ValueTask</code> avoids allocating a <code>Task</code> object unnecessarily.</p>
+</li>
+<li><p><strong>Performance-sensitive, high-frequency methods</strong>:</p>
+<p>In performance-critical code where the method is called frequently, and synchronous completions are common, It can reduce memory allocations and improve efficiency.</p>
+</li>
+<li><p><strong>Low memory pressure is essential</strong>:</p>
+<p>It is a value type, so it avoids heap allocations when it completes synchronously, which is useful in scenarios where memory allocation needs to be minimized.</p>
+</li>
+<li><p><strong>Limited continuation and lifetime</strong>:</p>
+<p>If you are sure that the <code>ValueTask</code> will only be awaited once (e.g., there are no complex continuations, multiple awaits, or reuse), it’s safe to use.</p>
+</li>
+<li><p><strong>Pooling or caching scenarios</strong>:</p>
+<p>When implementing methods that benefit from object pooling or where synchronous fast-path execution is common (like low-latency I/O or cached results), it is a good option.</p>
+</li>
+</ul>
+<h3 id="what-not-to-do-with-valuetasks">What not to do with ValueTasks</h3>
+<p><strong>If you do any of the following, then the results are undefined</strong>:</p>
+<ul>
+<li>Awaiting the instance multiple times.</li>
+<li>Calling <code>AsTask()</code> multiple times.</li>
+<li>Using more than one of these techniques to consume the instance.</li>
+</ul>
+<h2 id="asyncawait-best-practices">Async/await best practices</h2>
+<h3 id="avoid-async-void">Avoid async void</h3>
+<p>Void-returning async methods have a specific purpose: to make asynchronous event handlers possible. Async void methods have different error-handling semantics. When an exception is thrown out of an <code>async Task</code> or <code>async Task&lt;T&gt;</code> method, that exception is captured and placed on the <code>Task</code> object. With async void methods, there is no <code>Task</code> object, so any exceptions thrown out of an <code>async void</code> method will be raised directly on the SynchronizationContext that was active when the <code>async void</code> method started.</p>
+<pre><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ThrowExceptionAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">InvalidOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">AsyncVoidExceptions_CannotBeCaughtByCatch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">try</span>
+  <span class="token punctuation">{</span>
+    <span class="token function">ThrowExceptionAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// The exception is never caught here!</span>
+    <span class="token keyword">throw</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>These exceptions can be observed using AppDomain.UnhandledException or a similar catch-all event.</p>
+<h3 id="async-all-the-way">Async All the Way</h3>
+<p>“Async all the way” means that you shouldn’t mix synchronous and asynchronous code without carefully considering the consequences. In particular, it’s usually a bad idea to block on async code by calling Task.Wait or Task.Result. This is an especially common problem that can cause deadlocks.</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">DeadlockDemo</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task</span> <span class="token function">DelayAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> Task<span class="token punctuation">.</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// This method causes a deadlock when called in a GUI or ASP.NET context.</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// Start the delay.</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> delayTask <span class="token operator">=</span> <span class="token function">DelayAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Wait for the delay to complete.</span>
+    delayTask<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="configure-context">Configure Context</h3>
+<p>By using <code>ConfigureAwait</code>, you enable a small amount of parallelism: Some asynchronous code can run in parallel with the GUI thread instead of constantly badgering it with bits of work to do. Aside from performance, ConfigureAwait has another important aspect: It can avoid deadlocks.</p>
+<p>You should not use ConfigureAwait when you have code after the await in the method that needs the context. For GUI apps, this includes any code that manipulates GUI elements, writes data-bound properties or depends on a GUI-specific type.</p>
+<pre><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task</span> <span class="token function">HandleClickAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token comment">// Can use ConfigureAwait here.</span>
+  <span class="token keyword">await</span> Task<span class="token punctuation">.</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ConfigureAwait</span><span class="token punctuation">(</span><span class="token named-parameter punctuation">continueOnCapturedContext</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">button1_Click</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">EventArgs</span> e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  button1<span class="token punctuation">.</span>Enabled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// Can't use ConfigureAwait here.</span>
+    <span class="token keyword">await</span> <span class="token function">HandleClickAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">finally</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// We are back on the original context for this method.</span>
+    button1<span class="token punctuation">.</span>Enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

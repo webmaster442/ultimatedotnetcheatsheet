@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Strings</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="strings">Strings</h1>
+<p>More infos:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
+</ul>
+<h2 id="string-escape-sequences">String escape sequences</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Escape sequence</th>
+<th style="text-align: center;">Character name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\'</code></td>
+<td style="text-align: center;">Single quote</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\</code></td>
+<td style="text-align: center;">Double quote</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\\</code></td>
+<td style="text-align: center;">Backslash</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\0</code></td>
+<td style="text-align: center;">Null</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\a</code></td>
+<td style="text-align: center;">Alert</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\b</code></td>
+<td style="text-align: center;">Backspace</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\f</code></td>
+<td style="text-align: center;">Form feed</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\n</code></td>
+<td style="text-align: center;">New line</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\r</code></td>
+<td style="text-align: center;">Carriage return</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\t</code></td>
+<td style="text-align: center;">Horizontal tab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\v</code></td>
+<td style="text-align: center;">Vertical tab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\u</code></td>
+<td style="text-align: center;">Unicode escape sequence (UTF-16) followed by 4 hex digits</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\U</code></td>
+<td style="text-align: center;">Unicode escape sequence (UTF-32) followed by 8 hex digits</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\x</code></td>
+<td style="text-align: center;">Unicode escape sequence similar to &quot;\u&quot; except with variable length</td>
+</tr>
+</tbody>
+</table>
+<h2 id="numeric-format-strings">Numeric format strings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Format specifier</th>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Supported</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>C</code> or <code>c</code></td>
+<td style="text-align: center;">Currency</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">Formats value as currency</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>D</code> or <code>d</code></td>
+<td style="text-align: center;">Decimal</td>
+<td style="text-align: center;">Integral types</td>
+<td style="text-align: center;">Integer digits with optional negative sign.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>E</code> or <code>e</code></td>
+<td style="text-align: center;">Exponential</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">Exponential notation</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>F</code> or <code>f</code></td>
+<td style="text-align: center;">Fixed-point</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">Integral and decimal digits with optional negative sign.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>G</code> or  <code>g</code></td>
+<td style="text-align: center;">General</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">The more compact of either fixed-point or scientific notation.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>N</code> or <code>n</code></td>
+<td style="text-align: center;">Number</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">Integral and decimal digits, group separators, and a decimal separator with optional negative sign.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>P</code> or <code>p</code></td>
+<td style="text-align: center;">Percent</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">Number multiplied by 100 and displayed with a percent symbol.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>R</code> or <code>r</code></td>
+<td style="text-align: center;">Round-trip</td>
+<td style="text-align: center;">Single, Double, BigInteger</td>
+<td style="text-align: center;">A string that can round-trip to an identical number.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>X</code> or <code>x</code></td>
+<td style="text-align: center;">Hexadecimal</td>
+<td style="text-align: center;">Integral types</td>
+<td style="text-align: center;">A hexadecimal string.</td>
+</tr>
+<tr>
+<td style="text-align: center;">any other</td>
+<td style="text-align: center;">Unknown</td>
+<td style="text-align: center;">All numeric types</td>
+<td style="text-align: center;">Throws a <code>FormatException</code> at run time.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-numeric-format-strings">Custom numeric format strings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Format specifier</th>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>0</code></td>
+<td style="text-align: center;">Zero placeholder</td>
+<td style="text-align: center;">Replaces the zero with the corresponding digit if one is present; otherwise, zero appears in the result string.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>#</code></td>
+<td style="text-align: center;">Digit placeholder</td>
+<td style="text-align: center;">Replaces the &quot;#&quot; symbol with the corresponding digit if one is present; otherwise, no digit appears in the result string.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>.</code></td>
+<td style="text-align: center;">Decimal point</td>
+<td style="text-align: center;">Determines the location of the decimal separator in the result string.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>,</code></td>
+<td style="text-align: center;">Group separator, number scaling <sup>I</sup></td>
+<td style="text-align: center;">Serves as both a group separator and a number scaling specifier.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>%</code></td>
+<td style="text-align: center;">Percentage placeholder</td>
+<td style="text-align: center;">Multiplies a number by 100 and inserts a localized percentage symbol in the result string.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>‰</code></td>
+<td style="text-align: center;">Per mille placeholder</td>
+<td style="text-align: center;">Multiplies a number by 1000 and inserts a localized per mille symbol in the result string.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>E0</code></td>
+<td style="text-align: center;">Exponential notation <sup>II</sup></td>
+<td style="text-align: center;">If followed by at least one 0 (zero), formats the result using exponential notation.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\</code></td>
+<td style="text-align: center;">Escape character <sup>III</sup></td>
+<td style="text-align: center;">Causes the next character to be interpreted as a literal rather than as a custom format specifier.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>;</code></td>
+<td style="text-align: center;">Section separator <sup>IV</sup></td>
+<td style="text-align: center;">Defines sections with separate format strings for positive, negative, and zero numbers.</td>
+</tr>
+<tr>
+<td style="text-align: center;">any other</td>
+<td style="text-align: center;">All other characters</td>
+<td style="text-align: center;">The character is copied to the result string unchanged.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>I</strong>: . As a group separator, it inserts a localized group separator character between each group. As a number scaling specifier, it divides a number
+by 1000 for each comma specified.</p>
+<p><strong>II</strong>: The case of &quot;E&quot; or &quot;e&quot; indicates the case of the exponent symbol in the result string. The number of zeros following the &quot;E&quot; or &quot;e&quot; character determines
+the minimum number of digits in the exponent. A plus sign (+) indicates that a sign character always precedes the exponent.
+A minus sign (-) indicates that a sign character precedes only negative exponents.</p>
+<p><strong>III</strong>: The <code>#</code>, <code>0</code>, <code>.</code>, <code>,</code>, <code>%</code>, and <code>‰</code> symbols in a format string are interpreted as format specifiers rather than as literal characters.
+Depending on their position in a custom format string, the uppercase and lowercase &quot;E&quot; as well as the + and - symbols may also be interpreted as format specifiers.</p>
+<p><strong>IV</strong>: The semicolon (;) is a conditional format specifier that applies different formatting to a number depending on whether its value is positive, negative, or zero.
+To produce this behaviour, a custom format string can contain up to three sections separated by semicolons. These sections are:</p>
+<ul>
+<li><p>One section:
+The format string applies to all values.</p>
+</li>
+<li><p>Two sections:
+The first section applies to positive values and zeros, and the second section applies to negative values.</p>
+<p>If the number to be formatted is negative, but becomes zero after rounding according to the format in the second section,
+the resulting zero is formatted according to the first section.</p>
+</li>
+<li><p>Three sections:
+The first section applies to positive values, the second section applies to negative values, and the third section applies to zeros.</p>
+<p>The second section can be left empty (by having nothing between the semicolons), in which case the first section applies to all non-zero values.</p>
+<p>If the number to be formatted is non-zero, but becomes zero after rounding according to the format in the first or second section,
+the resulting zero is formatted according to the third section.</p>
+</li>
+</ul>
+<h2 id="standard-date-and-time-format-strings">Standard date and time format strings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Format specifier</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Example (en-Us culture)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>d</code></td>
+<td style="text-align: center;">Short date pattern</td>
+<td style="text-align: center;">6/15/2009</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>D</code></td>
+<td style="text-align: center;">Long date pattern</td>
+<td style="text-align: center;">Monday, June 15, 2009</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>f</code></td>
+<td style="text-align: center;">Full date/time pattern (short time)</td>
+<td style="text-align: center;">Monday, June 15, 2009 1:45 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>F</code></td>
+<td style="text-align: center;">Full date/time pattern (long time)</td>
+<td style="text-align: center;">Monday, June 15, 2009 1:45:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>g</code></td>
+<td style="text-align: center;">General date/time pattern (long time)</td>
+<td style="text-align: center;">6/15/2009 1:45:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>m</code> or <code>M</code></td>
+<td style="text-align: center;">Month/day pattern</td>
+<td style="text-align: center;">June 15</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>O</code> or <code>o</code></td>
+<td style="text-align: center;">Round-trip date/time pattern</td>
+<td style="text-align: center;">2009-06-15T13:45:30.0000000-07:00</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>R</code> or <code>r</code></td>
+<td style="text-align: center;">RFC1123 pattern</td>
+<td style="text-align: center;">Mon, 15 Jun 2009 20:45:30</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>s</code></td>
+<td style="text-align: center;">Sortable date/time pattern</td>
+<td style="text-align: center;">2009-06-15T13:45:30</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>t</code></td>
+<td style="text-align: center;">Short time pattern</td>
+<td style="text-align: center;">1:45 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>T</code></td>
+<td style="text-align: center;">Long time pattern</td>
+<td style="text-align: center;">1:45:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>u</code></td>
+<td style="text-align: center;">Universal sortable date/time pattern</td>
+<td style="text-align: center;">2009-06-15 13:45:30Z</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>U</code></td>
+<td style="text-align: center;">Universal full date/time pattern</td>
+<td style="text-align: center;">Monday, June 15, 2009 8:45:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Y</code> or <code>y</code></td>
+<td style="text-align: center;">Year month pattern</td>
+<td style="text-align: center;">June 2009</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-date-and-time-format-strings">Custom date and time format strings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Format specifier</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>d</code></td>
+<td style="text-align: center;">The day of the month, from 1 through 31.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>dd</code></td>
+<td style="text-align: center;">The day of the month, from 01 through 31</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ddd</code></td>
+<td style="text-align: center;">The abbreviated name of the day of the week</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>dddd</code></td>
+<td style="text-align: center;">The full name of the day of the week</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>g</code> or <code>gg</code></td>
+<td style="text-align: center;">The period or era</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>h</code></td>
+<td style="text-align: center;">The hour, using a 12-hour clock from 1 to 12</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>hh</code></td>
+<td style="text-align: center;">The hour, using a 12-hour clock from 01 to 12</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>H</code></td>
+<td style="text-align: center;">The hour, using a 24-hour clock from 0 to 23</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>HH</code></td>
+<td style="text-align: center;">The hour, using a 24-hour clock from 00 to 23</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>K</code></td>
+<td style="text-align: center;">Time zone information</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>m</code></td>
+<td style="text-align: center;">The minute, from 0 through 59</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>mm</code></td>
+<td style="text-align: center;">The minute, from 00 through 59</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>M</code></td>
+<td style="text-align: center;">The month, from 1 through 12</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MM</code></td>
+<td style="text-align: center;">The month, from 01 through 12</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MMM</code></td>
+<td style="text-align: center;">The abbreviated name of the month</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>MMMM</code></td>
+<td style="text-align: center;">The full name of the month</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>s</code></td>
+<td style="text-align: center;">The second, from 0 through 59</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ss</code></td>
+<td style="text-align: center;">The second, from 00 through 59</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>t</code></td>
+<td style="text-align: center;">The first character of the AM/PM designator</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>tt</code></td>
+<td style="text-align: center;">The AM/PM designator</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>y</code></td>
+<td style="text-align: center;">The year, from 0 to 99</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>yy</code></td>
+<td style="text-align: center;">The year, from 00 to 99</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>yyy</code></td>
+<td style="text-align: center;">The year, with a minimum of three digits</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>yyyy</code></td>
+<td style="text-align: center;">The year as a four-digit number</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>yyyyy</code></td>
+<td style="text-align: center;">The year as a five-digit number</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>z</code></td>
+<td style="text-align: center;">Hours offset from UTC, with no leading zeros</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>zz</code></td>
+<td style="text-align: center;">Hours offset from UTC, with a leading zero for a single-digit value</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>zzz</code></td>
+<td style="text-align: center;">Hours and minutes offset from UTC</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>:</code></td>
+<td style="text-align: center;">The time separator</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>/</code></td>
+<td style="text-align: center;">The date separator</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\</code></td>
+<td style="text-align: center;">The escape character</td>
+</tr>
+</tbody>
+</table>
+<h2 id="format-string-examples">Format string examples</h2>
+<h3 id="apply-thousand-sepperator">Apply thousand sepperator</h3>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span></span> number <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>N0</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123 456</span>
+</code></pre>
+<h3 id="format-with-fixed-number-of-decimal-places">Format with fixed number of decimal places</h3>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">double</span></span> number <span class="token operator">=</span> <span class="token number">123.456</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">number</span><span class="token format-string"><span class="token punctuation">:</span>F2</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment">//123,46</span>
+</code></pre>
+<h3 id="date-and-time-formatting">Date and time formatting</h3>
+<pre><code class="language-csharp">Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>yyyy-MM-dd</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//2024-05-12</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>HH\\:mm\\:ss</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10:01:48</span>
+</code></pre>
+
+<p>Note: the <code>:</code> must be escaped with <code>\\</code> chars.</p>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

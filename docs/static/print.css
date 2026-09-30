@@ -1,0 +1,106 @@
+@page {
+	size: A4;
+	margin: 14mm;
+}
+
+@media print {
+	:root {
+		--color-bg: #ffffff;
+		--color-panel: #ffffff;
+		--color-text: #000000;
+		--color-muted: #222222;
+		--color-border: #b3b3b3;
+		--color-hover: transparent;
+		--color-focus: #000000;
+
+		--space-1: 2px;
+		--space-2: 6px;
+		--space-3: 10px;
+		--space-4: 12px;
+		--text-size: 11pt;
+		--line-height: 1.4;
+	}
+
+	* {
+		box-shadow: none !important;
+		text-shadow: none !important;
+		animation: none !important;
+		transition: none !important;
+	}
+
+	html,
+	body {
+		height: auto;
+	}
+
+	body {
+		margin: 0;
+		background: #ffffff !important;
+		color: #000000 !important;
+		font-size: var(--text-size);
+		line-height: var(--line-height);
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+
+	.layout {
+		display: block;
+		min-height: auto;
+	}
+
+	.sidebar,
+	.menubar,
+	#menu-toggle,
+	#print-button,
+	#theme-toggle {
+		display: none !important;
+	}
+
+	.content {
+		min-width: 0;
+	}
+
+	.main {
+		padding: 0;
+	}
+
+	.panel {
+		margin: 0;
+		padding: var(--space-3);
+		border: 1px solid var(--color-border);
+		border-radius: 0;
+		background: #ffffff !important;
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 0;
+		break-after: avoid;
+		page-break-after: avoid;
+	}
+
+	p,
+	li,
+	blockquote {
+		orphans: 3;
+		widows: 3;
+	}
+
+	a,
+	a:visited {
+		color: #000000 !important;
+		text-decoration: underline;
+	}
+
+	a[href^="http"]::after {
+		content: " (" attr(href) ")";
+		font-size: 9pt;
+		word-break: break-all;
+	}
+}

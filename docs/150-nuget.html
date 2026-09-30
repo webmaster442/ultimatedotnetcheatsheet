@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Useful NuGet packagest</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="useful-nuget-packages">Useful NuGet packages</h1>
+<ul>
+<li><p><strong>AngleSharp</strong></p>
+<p>AngleSharp is a .NET library that gives you the ability to parse angle bracket based hyper-texts like HTML, SVG, and MathML. XML without validation is also supported by the library. An important aspect of AngleSharp is that CSS can also be parsed. The included parser is built upon the official W3C specification. This produces a perfectly portable HTML5 DOM representation of the given source code and ensures compatibility with results in evergreen browsers.</p>
+<p>Website: <a href="https://anglesharp.github.io/">https://anglesharp.github.io/</a>
+Install with: <code>dotnet add package AngleSharp</code></p>
+</li>
+<li><p><strong>Bouncy Castle</strong></p>
+<p>The Bouncy Castle project offers open-source APIs for Java, C# and Kotlin that support cryptography and cryptographic protocols. They cover many security areas, such as public key infrastructure, digital signatures, authentication, and secure communication. Additionally, FIPS certified versions are available for both Java and C#.</p>
+<p>Website: <a href="https://www.bouncycastle.org">https://www.bouncycastle.org</a>
+Install with: <code>dotnet add package BouncyCastle.Cryptography</code></p>
+</li>
+<li><p><strong>ClearScript</strong></p>
+<p>ClearScript is a library that makes it easy to add scripting to your .NET applications. It currently supports JavaScript (via V8 and JScript) and VBScript.</p>
+<p>Website: <a href="https://anglesharp.github.io/">https://anglesharp.github.io/</a>
+Install with: <code>dotnet add package Microsoft.ClearScript.Complete</code></p>
+</li>
+<li><p><strong>CliWrap</strong></p>
+<p>CliWrap is a library for interacting with external command-line interfaces. It provides a convenient model for launching processes, redirecting input and output streams, awaiting completion, handling cancellation, and more.</p>
+<p>Website: <a href="https://github.com/Tyrrrz/CliWrap">https://github.com/Tyrrrz/CliWrap</a>
+Install with: <code>dotnet add package CliWrap</code></p>
+</li>
+<li><p><strong>CsWin32</strong></p>
+<p>A source generator to add a user-defined set of Win32 P/Invoke methods and supporting types to a C# project.</p>
+<p>Website: <a href="https://github.com/microsoft/CsWin32">https://github.com/microsoft/CsWin32</a>
+Install with: <code>dotnet add package Microsoft.Windows.CsWin32</code></p>
+</li>
+<li><p><strong>Humanizer</strong></p>
+<p>Humanizer meets all your .NET needs for manipulating and displaying strings, enums, dates, times, timespans, numbers and quantities.</p>
+<p>Website: <a href="https://github.com/Humanizr/Humanizer">https://github.com/Humanizr/Humanizer</a>
+Install with: <code>dotnet add package Humanizer</code></p>
+</li>
+<li><p><strong>LiteDB</strong></p>
+<p>LiteDB is a small, fast and lightweight .NET NoSQL embedded database.</p>
+<p>Website: <a href="https://github.com/mbdavid/LiteDB">https://github.com/mbdavid/LiteDB</a>
+Install with: <code>dotnet add package LiteDB</code></p>
+</li>
+<li><p><strong>Markdig</strong></p>
+<p>Markdig is a fast, powerful, CommonMark compliant, extensible Markdown processor for .NET.</p>
+<p>website: <a href="https://github.com/xoofx/markdig">https://github.com/xoofx/markdig</a>
+Install with: <code>dotnet add package Markdig</code></p>
+</li>
+<li><p><strong>NSubstitute</strong></p>
+<p>A friendly substitute for .NET mocking libraries. Perfect for those new to testing, and for others who would just like to to get their tests written with less noise and fewer lambdas.</p>
+<p>Website: <a href="https://nsubstitute.github.io/">https://nsubstitute.github.io/</a>
+Install with: <code>dotnet add package NSubstitute</code></p>
+</li>
+<li><p><strong>NUnit</strong></p>
+<p>NUnit is a unit-testing framework for all .Net languages. Initially ported from JUnit, the current production release, version 3, has been completely rewritten with many new features and support for a wide range of .NET platforms.</p>
+<p>Website: <a href="https://nunit.org/">https://nunit.org/</a>
+Install with: <code>dotnet add package NUnit</code></p>
+</li>
+<li><p><strong>OxyPlot</strong></p>
+<p>OxyPlot is a cross-platform plotting library for .NET. OxyPlot contains many different types of axes and series. The plots can be exported to file formats like png, pdf and svg.</p>
+<p>Website: <a href="https://oxyplot.github.io/">https://oxyplot.github.io/</a>
+Install with: <code>dotnet add package OxyPlot.Core</code></p>
+</li>
+<li><p><strong>SkiaSharp</strong></p>
+<p>SkiaSharp is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library (skia.org). It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.</p>
+<p>Website: <a href="https://github.com/mono/SkiaSharp">https://github.com/mono/SkiaSharp</a>
+Install with: <code>dotnet add package SkiaSharp</code></p>
+</li>
+<li><p><strong>Spectre.Console</strong></p>
+<p>Spectre.Console is a .NET library that makes it easier to create beautiful console applications.</p>
+<p>Website: <a href="https://spectreconsole.net/">https://spectreconsole.net/</a>
+Install with: <code>dotnet add package Spectre.Console</code></p>
+</li>
+<li><p><strong>Units.NET</strong></p>
+<p>Add strongly typed quantities to your code and get merrily on with your life. No more magic constants found on Stack Overflow, no more second-guessing the unit of parameters and variables.</p>
+<p>Website: <a href="https://github.com/angularsen/UnitsNet">https://github.com/angularsen/UnitsNet</a>
+Install with: <code>dotnet add package UnitsNet</code></p>
+</li>
+<li><p><strong>xUnit.net</strong></p>
+<p>xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework. Written by the original inventor of NUnit v2, xUnit.net is the latest technology for unit testing C#, F#, VB.NET and other .NET languages. xUnit.net works with ReSharper, CodeRush, TestDriven.NET and Xamarin. It is part of the .NET Foundation, and operates under their code of conduct. It is licensed under Apache 2 (an OSI approved license).</p>
+<p>Website: <a href="https://xunit.net/">https://xunit.net/</a>
+Install with: <code>dotnet add package xunit</code></p>
+</li>
+</ul>
+<h2 id="awesome.net">Awesome .NET!</h2>
+<p>Awesome .NET is a collection of awesome .NET libraries, tools, frameworks, and software. Inspired by awesome-ruby, awesome-php, awesome-python, frontend-dev-bookmarks and ruby-bookmarks.</p>
+<p><a href="https://github.com/quozd/awesome-dotnet/blob/master/README.md">https://github.com/quozd/awesome-dotnet/blob/master/README.md</a></p>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

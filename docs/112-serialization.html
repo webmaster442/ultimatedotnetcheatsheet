@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Serialization</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="serialization">Serialization</h1>
+<h2 id="xml-serialization">XML Serialization</h2>
+<p>XML serialization is part of .NET since the 1.0 release. It uses attributes and under the hood reflection to serialize data into the XML (<a href="https://en.wikipedia.org/wiki/XML">https://en.wikipedia.org/wiki/XML</a>) format. To use XML serialization you must reference the <code>System.Xml.Serialization</code> namespace. <strong>Warning</strong>: The XmlSerializer class <strong>does not serializes objects that are marked as <code>[Obsolete]</code></strong>.</p>
+<p>Important attributes and their hierarchy for XML serialization:</p>
+<ul>
+<li><p><strong>XmlArray</strong>:</p>
+<p>Specifies that the XmlSerializer must serialize a particular class member as an array of XML elements.</p>
+</li>
+<li><p><strong>XmlArrayItem</strong>:</p>
+<p>Represents an attribute that specifies the derived types that the XmlSerializer can place in a serialized array.</p>
+</li>
+<li><p><strong>XmlAttribute</strong>:</p>
+<p>Specifies that the XmlSerializer must serialize the class member as an XML attribute.</p>
+</li>
+<li><p><strong>XmlElement</strong>:</p>
+<p>Indicates that a public field or property represents an XML element when the XmlSerializer serializes or deserializes the object that contains it.</p>
+</li>
+<li><p><strong>XmlEnum</strong>:</p>
+<p>Controls how the XmlSerializer serializes an enumeration member.</p>
+</li>
+<li><p><strong>XmlIgnore</strong>:</p>
+<p>Instructs the Serialize(TextWriter, Object) method of the XmlSerializer not to serialize the public field or public read/write property value.</p>
+</li>
+<li><p><strong>XmlRoot</strong>:</p>
+<p>Controls XML serialization of the attribute target as an XML root element.</p>
+</li>
+<li><p><strong>XmlTextAttribute</strong>:</p>
+<p>Indicates to the XmlSerializer that the member must be treated as XML text when the class that contains it is serialized or de-serialized.</p>
+</li>
+</ul>
+<h3 id="xml-serialization-example">XML serialization example</h3>
+<p><strong>Object model that will be serialized:</strong></p>
+<pre><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlType</span><span class="token attribute-arguments"><span class="token punctuation">(</span>Namespace <span class="token operator">=</span> <span class="token string">"myxmlNamespace"</span><span class="token punctuation">,</span> TypeName <span class="token operator">=</span> <span class="token string">"SerializedTypeName"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlRoot</span><span class="token attribute-arguments"><span class="token punctuation">(</span>ElementName <span class="token operator">=</span> <span class="token string">"rootName"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClassToSerialize</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span>AttributeName <span class="token operator">=</span> <span class="token string">"attribute"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> MyAttribute <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token comment">//This value will be ignored</span>
+    <span class="token punctuation">[</span>XmlIgnore<span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Ignored <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlElement</span><span class="token attribute-arguments"><span class="token punctuation">(</span>ElementName <span class="token operator">=</span> <span class="token string">"subElement"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">SubClass</span> SubClass <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlArray</span><span class="token attribute-arguments"><span class="token punctuation">(</span>ElementName <span class="token operator">=</span> <span class="token string">"array"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlArrayItem</span><span class="token attribute-arguments"><span class="token punctuation">(</span>ElementName <span class="token operator">=</span> <span class="token string">"item1"</span><span class="token punctuation">,</span> Type <span class="token operator">=</span> <span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">Item1</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlArrayItem</span><span class="token attribute-arguments"><span class="token punctuation">(</span>ElementName <span class="token operator">=</span> <span class="token string">"item2"</span><span class="token punctuation">,</span> Type <span class="token operator">=</span> <span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">Item2</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">BaseItem<span class="token punctuation">[</span><span class="token punctuation">]</span></span> Array <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//An enum with custom values</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">TestEnum</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlEnum</span><span class="token attribute-arguments"><span class="token punctuation">(</span>Name <span class="token operator">=</span> <span class="token string">"FirstValue"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    First<span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlEnum</span><span class="token attribute-arguments"><span class="token punctuation">(</span>Name <span class="token operator">=</span> <span class="token string">"SecondValue"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    Second
+<span class="token punctuation">}</span>
+
+<span class="token comment">//A sub class, that is part of the root class that needs to be serialized</span>
+<span class="token comment">//NOTE: Complex types, like this, needs to be serialized as XML elements</span>
+<span class="token comment">//It is not possible to serialize these as attributes</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SubClass</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlText</span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Text <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//An abstract class, that will be used in an array</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">BaseItem</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span>AttributeName <span class="token operator">=</span> <span class="token string">"BaseString"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Value <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//A derived type</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Item1</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">BaseItem</span></span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span>AttributeName <span class="token operator">=</span> <span class="token string">"Item1Double"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">double</span></span> DoubleValue <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//Another derived type</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Item2</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">BaseItem</span></span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">XmlAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span>AttributeName <span class="token operator">=</span> <span class="token string">"Item2Int"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> IntValue <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p><strong>Note</strong>: The types that will be serialied must have <code>public</code> accessibility modifier.</p>
+<p><strong>Serialization code:</strong></p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ClassToSerialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Ignored <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">,</span>
+    MyAttribute <span class="token operator">=</span> <span class="token string">"attribute value"</span><span class="token punctuation">,</span>
+    SubClass <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SubClass</span>
+    <span class="token punctuation">{</span>
+        Text <span class="token operator">=</span> <span class="token string">"xml text"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    Array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">BaseItem<span class="token punctuation">[</span><span class="token punctuation">]</span></span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Item1</span>
+        <span class="token punctuation">{</span>
+            Value <span class="token operator">=</span> <span class="token string">"Item1 Value"</span><span class="token punctuation">,</span>
+            DoubleValue <span class="token operator">=</span> <span class="token number">42.42</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Item2</span>
+        <span class="token punctuation">{</span>
+            IntValue <span class="token operator">=</span> <span class="token number">1242</span><span class="token punctuation">,</span>
+            Value <span class="token operator">=</span> <span class="token string">"Item2 Value"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">XmlSerializer</span> serializer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">XmlSerializer</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">ClassToSerialize</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"namespaceName"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> stream <span class="token operator">=</span> File<span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span><span class="token string">"testfile.xml"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    serializer<span class="token punctuation">.</span><span class="token function">Serialize</span><span class="token punctuation">(</span>stream<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p><strong>Result XML:</strong></p>
+<pre><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rootName</span> 
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+  <span class="token attr-name"><span class="token namespace">xmlns:</span>xsd</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema<span class="token punctuation">"</span></span>
+  <span class="token attr-name">attribute</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>attribute value<span class="token punctuation">"</span></span>
+  <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>namespaceName<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>subElement</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myxmlNamespace<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>xml text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>subElement</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myxmlNamespace<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item1</span> 
+      <span class="token attr-name">BaseString</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Item1 Value<span class="token punctuation">"</span></span>
+      <span class="token attr-name">Item1Double</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>42.42<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item2</span> 
+      <span class="token attr-name">BaseString</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Item2 Value<span class="token punctuation">"</span></span>
+      <span class="token attr-name">Item2Int</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1242<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>rootName</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="json-serialization">JSON Serialization</h2>
+<p>The <code>System.Text.Json</code> serializer was introduced in .NET Core 3.0 as a NuGet package and it's inlcuded in .NET 5 and later releases by default. It's designed to be an efficient replacement for <code>Newtonsoft.Json</code>.</p>
+<p>Basic usage:</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">init</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Age <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">init</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name"><span class="token keyword">var</span></span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Person</span>
+<span class="token punctuation">{</span>
+    Name <span class="token operator">=</span> <span class="token string">"test"</span><span class="token punctuation">,</span>
+    Age <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name"><span class="token keyword">string</span></span> jsonString <span class="token operator">=</span> JsonSerializer<span class="token punctuation">.</span><span class="token function">Serialize</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">//deserialization:</span>
+<span class="token class-name">Person</span> deserializedPerson <span class="token operator">=</span> JsonSerializer<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Deserialize</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Person<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>jsonString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="json-serializer-options">JSON Serializer options</h3>
+<p>Serialization and de serialization options can be controlled via the <code>JsonSerializerOptions</code> class. Important properties:</p>
+<ul>
+<li><p><code>bool AllowTrailingCommas</code>:</p>
+<p>Get or sets a value that indicates whether an extra comma at the end of a list of JSON values in an object or array is allowed (and ignored) within the JSON payload being de-serialized.</p>
+</li>
+<li><p><code>bool WriteIndented</code>:</p>
+<p>Gets or sets a value that indicates whether JSON should use pretty printing. By default, JSON is serialized without any extra white space.</p>
+</li>
+<li><p><code>bool PropertyNameCaseInsensitive</code>:</p>
+<p>Gets or sets a value that indicates whether a property's name uses a case-insensitive comparison during deserialization. The default value is false.</p>
+</li>
+<li><p><code>JsonNamingPolicy? PropertyNamingPolicy</code>:</p>
+<p>Gets or sets a value that specifies the policy used to convert a property's name on an object to another format, such as camel-casing, or null to leave property  names unchanged.</p>
+<p>Possible built-in values, that can be set:</p>
+<ul>
+<li><p><code>JsonNamingPolicy.CamelCase</code> - <code>propertyName</code></p>
+</li>
+<li><p><code>JsonNamingPolicy.KebabCaseLower</code> - <code>property-name</code></p>
+</li>
+<li><p><code>JsonNamingPolicy.KebabCaseUpper</code> - <code>PROPERTY-NAME</code></p>
+</li>
+<li><p><code>JsonNamingPolicy.SnakeCaseLower</code> - <code>property_name</code></p>
+</li>
+<li><p><code>JsonNamingPolicy.SnakeCaseUpper</code> - <code>PROPERTY_NAME</code></p>
+<p>Custom values can be set, by implementing the <code>JsonNamingPolicy</code> class.</p>
+</li>
+</ul>
+</li>
+<li><p><code>bool IncludeFields</code>:</p>
+<p>Gets or sets a value that indicates whether fields are handled during serialization and de-serialization. The default value is false.</p>
+</li>
+<li><p><code>bool IgnoreReadOnlyProperties</code>:</p>
+<p>Gets or sets a value that indicates whether null values are ignored during serialization and de-serialization. The default value is false.</p>
+</li>
+<li><p><code>JsonCommentHandling ReadCommentHandling</code>:</p>
+<p>Gets or sets a value that defines how comments are handled during de-serialization.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code>JsonCommentHandling.Disallow</code></p>
+<p>Doesn't allow comments within the JSON input. Comments are treated as invalid JSON if found, and a <code>System.Text.Json.JsonException</code> is thrown. This is the default value.</p>
+</li>
+<li><p><code>JsonCommentHandling.Skip</code></p>
+<p>Allows comments within the JSON input and ignores them. The <code>System.Text.Json.Utf8JsonReader</code> behaves as if no comments are present.</p>
+</li>
+<li><p><code>JsonCommentHandling.Allow</code></p>
+<p>Allows comments within the JSON input and treats them as valid tokens. While reading, the caller can access the comment values.</p>
+</li>
+</ul>
+</li>
+<li><p><code>JsonNumberHandling NumberHandling</code>:</p>
+<p>Gets or sets an object that specifies how number types should be handled when serializing or de-serializing.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code>JsonNumberHandling.Strict</code></p>
+<p>Numbers will only be read from System.Text.Json.JsonTokenType.Number tokens and will only be written as JSON numbers (without quotes).</p>
+</li>
+<li><p><code>JsonNumberHandling.AllowReadingFromString</code></p>
+</li>
+</ul>
+<p>Numbers can be read from System.Text.Json.JsonTokenType.String tokens. Does not prevent numbers from being read from System.Text.Json.JsonTokenType.Number token.</p>
+<ul>
+<li><p><code>JsonNumberHandling.WriteAsString</code></p>
+<p>Numbers will be written as JSON strings (with quotes), not as JSON numbers.</p>
+</li>
+<li><p><code>JsonNumberHandling.AllowNamedFloatingPointLiterals</code></p>
+<p>The <code>NaN</code>, <code>Infinity</code> and <code>-Infinity</code> <code>System.Text.Json.JsonTokenType.String</code> tokens can be read as floating-point constants, and the <code>System.Single</code> and <code>System.Double</code> values for these constants will be written as their corresponding JSON string representations.</p>
+</li>
+</ul>
+</li>
+<li><p><code>JsonIgnoreCondition DefaultIgnoreCondition</code>:</p>
+<p>Gets or sets a value that determines when properties with default values are ignored during serialization or de-serialization. The default value is <code>JsonIgnoreCondition.Never</code>.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code>JsonIgnoreCondition.Never</code></p>
+<p>Property is always serialized and de-serialized, regardless of IgnoreNullValues configuration.</p>
+</li>
+<li><p><code>JsonIgnoreCondition.Always</code></p>
+<p>Property is always ignored.</p>
+</li>
+<li><p><code>JsonIgnoreCondition.WhenWritingDefault</code></p>
+<p>Property is ignored only if it equals the default value for its type.</p>
+</li>
+<li><p><code>JsonIgnoreCondition.WhenWritingNull</code></p>
+<p>Property is ignored if its value is null. This is applied only to reference-type properties and fields.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="converters">Converters</h3>
+<p>You can convert complex types into JSON representation, by implementing the <code>JsonConverter&lt;T&gt;</code> abstract class and then adding the converter to the <code>Converters</code> collection of your <code>JsonSerializerOptions</code> instance.</p>
+<p>An example converter:</p>
+<pre><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CultureInfoConverter</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">JsonConverter<span class="token punctuation">&lt;</span>CultureInfo<span class="token punctuation">></span></span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name">CultureInfo<span class="token punctuation">?</span></span> <span class="token function">Read</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Utf8JsonReader</span> reader<span class="token punctuation">,</span> 
+                                      <span class="token class-name">Type</span> typeToConvert<span class="token punctuation">,</span> 
+                                      <span class="token class-name">JsonSerializerOptions</span> options<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">CultureInfo</span><span class="token punctuation">(</span>reader<span class="token punctuation">.</span><span class="token function">GetString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+     <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Write</span><span class="token punctuation">(</span><span class="token class-name">Utf8JsonWriter</span> writer<span class="token punctuation">,</span>
+                                <span class="token class-name">CultureInfo</span> <span class="token keyword">value</span><span class="token punctuation">,</span> 
+                                <span class="token class-name">JsonSerializerOptions</span> options<span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+        writer<span class="token punctuation">.</span><span class="token function">WriteStringValue</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

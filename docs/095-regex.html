@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | Regular Expressions</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="regular-expressions">Regular Expressions</h1>
+<p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is commonly used for:</p>
+<ul>
+<li>Pattern Matching: Finding specific sequences in text (e.g., dates, phone numbers).</li>
+<li>Validation: Checking if a string meets a specific format (e.g., email addresses).</li>
+<li>Search and Replace: Modifying text by identifying and replacing patterns.</li>
+<li>Splitting Strings: Breaking strings into parts based on a pattern.</li>
+</ul>
+<p>The <code>System.Text.RegularExpressions</code> namespace provides the primary classes for regex operations.</p>
+<h2 id="anchors">Anchors</h2>
+<p>Anchors are special characters that allow you to specify where in the string a match should occur. They are useful for enforcing strict matching criteria and can be combined with other patterns to precisely define where a match should occur within the input string.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>^</code></td>
+<td style="text-align: center;">Start of string, or start of line in multi-line pattern</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\A</code></td>
+<td style="text-align: center;">Start of string</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>$</code></td>
+<td style="text-align: center;">End of string, or end of line in multi-line pattern</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\Z</code></td>
+<td style="text-align: center;">End of string</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\b</code></td>
+<td style="text-align: center;">Word boundary</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\B</code></td>
+<td style="text-align: center;">Not word boundary</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\&lt;</code></td>
+<td style="text-align: center;">Start of word</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\&gt;</code></td>
+<td style="text-align: center;">End of word</td>
+</tr>
+</tbody>
+</table>
+<h2 id="character-classes-and-special-chars">Character Classes and special chars</h2>
+<p>Character classes are patterns that match a single character from a specified set of characters.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\c</code></td>
+<td style="text-align: center;">Control character</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\s</code></td>
+<td style="text-align: center;">White space</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\S</code></td>
+<td style="text-align: center;">Not white space</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\d</code></td>
+<td style="text-align: center;">Digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\D</code></td>
+<td style="text-align: center;">Not digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\w</code></td>
+<td style="text-align: center;">Word</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\W</code></td>
+<td style="text-align: center;">Not word</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\x</code></td>
+<td style="text-align: center;">A Hexade­cimal digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\O</code></td>
+<td style="text-align: center;">Octal digit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\n</code></td>
+<td style="text-align: center;">New line</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\r</code></td>
+<td style="text-align: center;">Carriage return</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\t</code></td>
+<td style="text-align: center;">Tab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\v</code></td>
+<td style="text-align: center;">Vertical tab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\f</code></td>
+<td style="text-align: center;">Form feed</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\xxx</code></td>
+<td style="text-align: center;">Octal character xxx</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\xhh</code></td>
+<td style="text-align: center;">Hex character hh</td>
+</tr>
+</tbody>
+</table>
+<h2 id="groups-and-ranges">Groups and Ranges</h2>
+<p>Groups are used to create subpatterns within a larger pattern. They are enclosed in parentheses <code>()</code> and allow you to apply quantifiers or modifiers to multiple characters. Groups can be referenced later in the expression or used for capturing matches.</p>
+<p>Ranges specify a range of characters to match within square brackets <code>[]</code>. For instance, <code>[a-z]</code> matches any lowercase letter from <code>a</code> to <code>z</code>. They provide a concise way to match characters within a specific set or range. Together, groups and ranges enhance the power and flexibility of regular expressions for pattern matching tasks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>.</code></td>
+<td style="text-align: center;">Any character except new line (<code>\n</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(a \| b)</code></td>
+<td style="text-align: center;">a or b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(...)</code></td>
+<td style="text-align: center;">Group</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(?:...)</code></td>
+<td style="text-align: center;">Passive (non-c­apt­uring) group</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[abc]</code></td>
+<td style="text-align: center;">Range (a or b or c)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[^abc]</code></td>
+<td style="text-align: center;">Not (a or b or c)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[a-q]</code></td>
+<td style="text-align: center;">Lower case letter from a to q</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[A-Q]</code></td>
+<td style="text-align: center;">Upper case letter from A to Q</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[0-7]</code></td>
+<td style="text-align: center;">Digit from 0 to 7</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\x</code></td>
+<td style="text-align: center;">Group/­sub­pattern number &quot;­x&quot;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quantifiers">Quanti­fiers</h2>
+<p>Quantifiers specify the quantity of the preceding element in the pattern. They control how many times a character, group, or character class should be matched in the input string.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Regex</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: center;">0 or more</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{3}</code></td>
+<td style="text-align: center;">Exactly 3</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: center;">1 or more</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{3,}</code></td>
+<td style="text-align: center;">3 or more</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>?</code></td>
+<td style="text-align: center;">0 or 1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{3,5}</code></td>
+<td style="text-align: center;">3, 4 or 5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="regex-best-practices">Regex best practices</h2>
+<ol>
+<li><p>Avoid Overcomplication: Use simple patterns that are easy to understand. Complex regex can be hard to read and debug. E.g.: The Pattern <code>^([0-9]{4})-([0-1][0-9])-([0-3][0-9])$</code> matches the string <code>2024-12-06</code>, so does the <code>^\d{4}-\d{2}-\d{2}$</code> regex, but the later one is easier to understand.</p>
+</li>
+<li><p>Anchor Patterns to the Start and End: Use <code>^</code> (start) and <code>$</code> (end) when matching the entire input. This avoids unintended partial matches. E.g.: <code>\d+</code> matches <code>123</code> in <code>abc123</code>. With anchors <code>^\d+$</code> matches only <code>123</code></p>
+</li>
+<li><p>Escape Special Characters: Use <code>\</code> to escape special regex characters (<code>.</code>, <code>*</code>, <code>?</code>, etc.) when matching them literally.</p>
+</li>
+<li><p>Avoid Backtracking: Patterns with multiple overlapping possibilities (e.g.: <code>(.*)*</code>) can lead to inefficient backtracking.</p>
+</li>
+<li><p>Use Named Groups for Clarity.: Use named capture groups to improve readability and make extracted values easier to work with. E.g.: <code>(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})</code></p>
+</li>
+<li><p>Avoid Overuse: Use regex only when necessary. Simple string operations (e.g., <code>Contains</code>, <code>StartsWith</code>) are often more efficient for straightforward tasks.</p>
+</li>
+<li><p>Document Your Regex: Add comments or documentation explaining the purpose of complex patterns.</p>
+</li>
+<li><p>Use OWASP recommended patterns: The Open Web Application Security Project (OWASP) provides guidelines and patterns to avoid common security risks, particularly around input validation and avoiding vulnerabilities like ReDoS (Regular Expression Denial of Service). - <a href="https://owasp.org/www-community/OWASP_Validation_Regex_Repository">https://owasp.org/www-community/OWASP_Validation_Regex_Repository</a></p>
+</li>
+</ol>
+<h2 id="regex-operations">Regex operations</h2>
+<h3 id="match-a-string">Match a string</h3>
+<pre><code class="language-csharp"><span class="token class-name">Regex</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Regex</span><span class="token punctuation">(</span><span class="token string">@"^\$(a|b)$"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Match</span> match <span class="token operator">=</span> regex<span class="token punctuation">.</span><span class="token function">Match</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>match<span class="token punctuation">.</span>Success<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//input string matches pattern</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="multiple-matches">Multiple Matches</h3>
+<pre><code class="language-csharp"><span class="token class-name">Regex</span> pattern <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Regex</span><span class="token punctuation">(</span><span class="token string">@"^\$(a|b)$"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">Match</span> m <span class="token keyword">in</span> pattern<span class="token punctuation">.</span><span class="token function">Matches</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Match: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">m<span class="token punctuation">.</span>Value</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="check-for-match">Check for Match</h3>
+<pre><code class="language-csharp"><span class="token class-name">Regex</span> pattern <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Regex</span><span class="token punctuation">(</span><span class="token string">@"^\$(a|b)$"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">bool</span></span> isMatch <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">IsMatch</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="replacement">Replacement</h3>
+<pre><code class="language-csharp"><span class="token class-name">Regex</span> pattern <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Regex</span><span class="token punctuation">(</span><span class="token string">@"\d+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">string</span></span> result <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">Replace</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token string">"number"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="regex-modifiers">Regex Modifiers</h3>
+<p><code>RegexOptions</code> enum can be used as parameter when creating a Regex to modify the behaviour.</p>
+<ul>
+<li><p><code>RegexOptions.None</code></p>
+<p>Use default behavior.</p>
+</li>
+<li><p><code>RegexOptions.IgnoreCase</code></p>
+<p>Use case-insensitive matching.</p>
+</li>
+<li><p><code>RegexOptions.Multiline</code></p>
+<p>Use multiline mode, where <code>^</code> and <code>$</code> indicate the beginning and end of each line (instead of the beginning and end of the input string).</p>
+</li>
+<li><p><code>RegexOptions.Singleline</code></p>
+<p>Use single-line mode, where the period (<code>.</code>) matches every character (instead of every character except <code>\n</code>).</p>
+</li>
+<li><p><code>RegexOptions.ExplicitCapture</code></p>
+<p>Do not capture unnamed groups. The only valid captures are explicitly named or numbered groups of the form <code>(?&lt;</code><em>name</em><code>&gt;</code> <em>subexpression</em><code>)</code>.</p>
+</li>
+<li><p><code>RegexOptions.Compiled</code></p>
+<p>Compile the regular expression to an assembly.</p>
+</li>
+<li><p><code>RegexOptions.IgnorePatternWhitespace</code></p>
+<p>Exclude unescaped white space from the pattern, and enable comments after a number sign (<code>#</code>).</p>
+</li>
+<li><p><code>RegexOptions.RightToLeft</code></p>
+<p>Change the search direction. Search moves from right to left instead of from left to right.</p>
+</li>
+<li><p><code>RegexOptions.ECMAScript</code></p>
+<p>Enable ECMAScript-compliant behavior for the expression.</p>
+</li>
+<li><p><code>RegexOptions.CultureInvariant</code></p>
+<p>Ignore cultural differences in language.</p>
+</li>
+<li><p><code>RegexOptions.NonBacktracking</code></p>
+<p>Match using an approach that avoids backtracking and guarantees linear-time processing in the length of the input. (Available in .NET 7 and later versions.)</p>
+</li>
+</ul>
+<h2 id="generatedregex">GeneratedRegex</h2>
+<p>The <code>GeneratedRegex</code> attribute is a feature introduced in C# 10 (with .NET 7) that allows you to create source-generated regular expressions. It generates highly optimized, compile-time regex code, eliminating the overhead of interpreting or compiling regex patterns at runtime.</p>
+<p>This approach improves both performance and maintainability, especially for frequently used regex patterns.</p>
+<p>Example:</p>
+<pre><code class="language-csharp"><span class="token keyword">partial</span> <span class="token keyword">class</span> <span class="token class-name">Test</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Define a source-generated regex</span>
+    <span class="token punctuation">[</span><span class="token function">GeneratedRegex</span><span class="token punctuation">(</span><span class="token string">@"\b\d{4}-\d{2}-\d{2}\b"</span><span class="token punctuation">,</span> RegexOptions<span class="token punctuation">.</span>Compiled<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">partial</span> <span class="token return-type class-name">Regex</span> <span class="token function">DateRegex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>The <code>GeneratedRegex</code> attribute works only with a <code>partial</code> method declaration, which implies that the containing class must also have the <code>partial</code> modifier.</p>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

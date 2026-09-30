@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate .NET Cheatsheet | LINQ</title>
+    <link rel="stylesheet" type="text/css" href="./static/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
+
+<body>
+    <div class="layout">
+        <aside id="sidebar" class="sidebar" aria-label="Primary sidebar">
+            <div class="sidebar__inner">
+                <h1 class="sidebar__title">Navigation</h1>
+                <nav aria-label="Sidebar items">
+                    <ul class="sidebar__list">
+                        <li><a href="010-basiccommands.html">Dotnet basic commands</a></li>
+                        <li><a href="020-project.html">Project file XML settings</a></li>
+                        <li><a href="030-powershell.html">Usefull Powershell commands & scripts</a></li>
+                        <li><a href="035-csharpbasics.html">C# basics</a></li>
+                        <li><a href="040-types.html">Basic type system</a></li>
+                        <li><a href="045-type-interfaces.html">Important interfaces for types</a></li>
+                        <li><a href="060-strings.html">Strings</a></li>
+                        <li><a href="070-exceptions.html">Exceptions</a></li>
+                        <li><a href="075-generics.html">Generics</a></li>
+                        <li><a href="080-collections.html">Collections</a></li>
+                        <li><a href="090-linq.html">LINQ</a></li>
+                        <li><a href="095-regex.html">Regular Expressions</a></li>
+                        <li><a href="100-paternmatch.html">Pattern matching</a></li>
+                        <li><a href="105-tasks.html">Tasks</a></li>
+                        <li><a href="110-io.html">I/O</a></li>
+                        <li><a href="111-attribs.html">Attributes</a></li>
+                        <li><a href="112-serialization.html">Serialization</a></li>
+                        <li><a href="114-validation.html">Object validation</a></li>
+                        <li><a href="120-crypto.html">Cryptography</a></li>
+                        <li><a href="130-reflection.html">Reflection</a></li>
+                        <li><a href="135-di.html">Dependency Injection</a></li>
+                        <li><a href="140-ui.html">UI</a></li>
+                        <li><a href="150-nuget.html">Useful NuGet packages</a></li>
+                        <li><a href="155-shortcuts.html">Keyboard Shortcuts</a></li>
+                        <li><a href="160-csharp-versions.html">C# Version History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content">
+            <header class="menubar" aria-label="Top menubar">
+                <button id="menu-toggle" class="menubar__button menubar__button--menu" type="button"
+                    aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <nav class="menubar__actions" aria-label="Top actions">
+
+                    <div class="page-menu">
+                        <a href="#article-content" class="menubar__button page-menu__trigger" aria-haspopup="true">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                            <span>Chapters</span>
+                        </a>
+                        <ul id="article-headings" class="page-menu__dropdown" aria-label="Page headings"></ul>
+                    </div>
+
+                    <a href="index.html" class="menubar__button" aria-label="Home">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.5 9.5V21h11V9.5" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+
+                    <a href="changelog.html" class="menubar__button" aria-label="Change log">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 3h10l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M17 3v4h4M10 11h8M10 15h8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Change log</span>
+                    </a>
+
+                    <a href="https://github.com/webmaster442/ultimatedotnetcheatsheet" target="_blank"
+                        class="menubar__button" aria-label="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.48 9.48 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+
+                    <button id="print-button" type="button" class="menubar__button" aria-label="Print">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 8V3h10v5M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="4" y="9" width="16" height="8" rx="2" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+
+                    <button id="theme-toggle" type="button" class="menubar__button" aria-label="Toggle dark mode">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 3v2M12 19v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h2M19 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span>Theme</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main class="main" aria-label="Main content">
+                <section class="panel">
+                    <article id="article-content" class="text-container">
+                        <h1 id="linq">LINQ</h1>
+<p>Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. With LINQ, a query is a first-class language construct, just like classes, methods, and events.</p>
+<p>The LINQ to Objects works with any collection that implements the <code>IEnumerable&lt;T&gt;</code> interface.</p>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="1366.0" height="515.3" viewBox="0 0 1366 515.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >collections2</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: collections2
+	
+	[IEnumerable|
+	IEnumerator GetEnumerator ()] &lt;:--
+	
+	[IEnumerable&lt;out T&gt;|
+	IEnumerator&lt;out T&gt; GetEnumerator ()]
+	
+	
+	[IEnumerable&lt;out T&gt;] &lt;:-- [IOrderedEnumerable&lt;out TElement&gt;|
+	CreateOrderedEnumerable&lt;TKey&gt;(
+	Func&lt;out TElement,TKey&gt; keySelector,
+	IComparer&lt;TKey&gt;? comparer, 
+	bool descending)]
+	
+	[IEnumerable&lt;out T&gt;] &lt;:-- [IGrouping&lt;out TKey,out TElement&gt;|
+	TKey Key { get\; }] &lt;:-- [ILookup&lt;TKey,TElement&gt;|
+	int Count { get\; }
+	IEnumerable&lt;TElement&gt; this\[TKey key\] { get\; }|
+	bool Contains (TKey key)]
+	
+	[IEnumerable&lt;out T&gt;] &lt;:-- [IQueryable&lt;out T&gt;] &lt;:-- [IOrderedQueryable&lt;out T&gt;]
+	
+	[IEnumerable] &lt;:-- [IQueryable] &lt;:-- [IQueryable&lt;out T&gt;]
+	
+	[IQueryable |
+	Type ElementType { get\; }
+	Expression Expression { get\; }
+	IQueryProvider Provider { get\; }]
+	
+	
+	[IEnumerator|
+	object Current { get\; }
+	bool MoveNext()
+	void Reset()]
+	
+	[IEnumerator] &lt;:-- [IEnumerator&lt;out T&gt;|
+	T Current { get\; }]
+	
+	[IDisposable|
+	void Dispose()]
+	
+	[IDisposable] &lt;:-- [IEnumerator&lt;out T&gt;]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="515.3" width="1366.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#f4f6fb" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<g stroke-dasharray="6 6">
+						<path d="M233.8 163.9 L260 155 L265 155 L265.0 155.0 " fill="none"></path>
+					</g>
+					<path d="M232.1 158.9 L233.8 163.9 L235.5 169.0 L221.2 168.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M486.7 116.1 L585 56.5 L590 56.5 L590.0 56.5 " fill="none"></path>
+					</g>
+					<path d="M483.9 111.5 L486.7 116.1 L489.5 120.6 L475.3 123.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M593.3 155.0 L585 155 L607 155 L607.0 155.0 " fill="none"></path>
+					</g>
+					<path d="M593.3 149.7 L593.3 155.0 L593.3 160.3 L580.0 155.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M913.3 155.0 L922 155 L927 155 L927.0 155.0 " fill="none"></path>
+					</g>
+					<path d="M913.3 149.7 L913.3 155.0 L913.3 160.3 L900.0 155.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M548.4 190.6 L585 201 L686.5186335403727 225.25 L686.5 225.3 " fill="none"></path>
+					</g>
+					<path d="M549.8 185.5 L548.4 190.6 L546.9 195.8 L535.5 187.0 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M848.3 241.3 L922 241.25 L1004.5 241.25 L1004.5 241.3 " fill="none"></path>
+					</g>
+					<path d="M848.3 235.9 L848.3 241.3 L848.3 246.6 L835.0 241.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M232.3 236.6 L260 246.25 L291 246.25 L291.0 246.3 " fill="none"></path>
+					</g>
+					<path d="M234.0 231.6 L232.3 236.6 L230.5 241.7 L219.7 232.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M567.3 246.3 L585 246.25 L672 243.66839762611275 L672.0 243.7 " fill="none"></path>
+					</g>
+					<path d="M567.3 240.9 L567.3 246.3 L567.3 251.6 L554.0 246.3 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M233.3 336.8 L260 336.75 L336 357.9130769230769 L336.0 357.9 " fill="none"></path>
+					</g>
+					<path d="M233.3 331.4 L233.3 336.8 L233.3 342.1 L220.0 336.8 Z"></path>
+					<g stroke-dasharray="6 6">
+						<path d="M205.8 427.3 L260 427.25 L336 406.0869230769231 L336.0 406.1 " fill="none"></path>
+					</g>
+					<path d="M205.8 421.9 L205.8 427.3 L205.8 432.6 L192.5 427.3 Z"></path>
+					<g data-name="IEnumerable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable">
+							<rect x="0.0" y="168.3" height="64.0" width="255.0" data-name="IEnumerable"></rect>
+							<path d="M0.0 200.3 L255.0 200.3" fill="none" data-name="IEnumerable"></path>
+						</g>
+						<g transform="translate(0, 168.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable" data-compartment="0">
+								<text x="119.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable" data-compartment="0">IEnumerable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 200.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable" data-compartment="1">IEnumerator GetEnumerator ()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerable&lt;out T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerable&lt;out T&gt;">
+							<rect x="265.0" y="123.0" height="64.0" width="315.0" data-name="IEnumerable&lt;out T&gt;"></rect>
+							<path d="M265.0 155.0 L580.0 155.0" fill="none" data-name="IEnumerable&lt;out T&gt;"></path>
+						</g>
+						<g transform="translate(265, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">
+								<text x="149.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerable&lt;out T&gt;" data-compartment="0">IEnumerable&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(265, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerable&lt;out T&gt;" data-compartment="1">IEnumerator&lt;out T&gt; GetEnumerator ()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IOrderedEnumerable&lt;out TElement&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IOrderedEnumerable&lt;out TElement&gt;">
+							<rect x="590.0" y="0.0" height="113.0" width="327.0" data-name="IOrderedEnumerable&lt;out TElement&gt;"></rect>
+							<path d="M590.0 32.0 L917.0 32.0" fill="none" data-name="IOrderedEnumerable&lt;out TElement&gt;"></path>
+						</g>
+						<g transform="translate(590, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">
+								<text x="155.5" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="0">IOrderedEnumerable&lt;out TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(590, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">CreateOrderedEnumerable&lt;TKey&gt;(</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">Func&lt;out TElement,TKey&gt; keySelector,</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">IComparer&lt;TKey&gt;? comparer,</text>
+								<text x="0.0" y="62.7" stroke="none" data-name="IOrderedEnumerable&lt;out TElement&gt;" data-compartment="1">bool descending)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IGrouping&lt;out TKey,out TElement&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IGrouping&lt;out TKey,out TElement&gt;">
+							<rect x="607.0" y="123.0" height="64.0" width="293.0" data-name="IGrouping&lt;out TKey,out TElement&gt;"></rect>
+							<path d="M607.0 155.0 L900.0 155.0" fill="none" data-name="IGrouping&lt;out TKey,out TElement&gt;"></path>
+						</g>
+						<g transform="translate(607, 123)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">
+								<text x="138.5" y="14.1" stroke="none" text-anchor="middle" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="0">IGrouping&lt;out TKey,out TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(607, 155)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IGrouping&lt;out TKey,out TElement&gt;" data-compartment="1">TKey Key { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="ILookup&lt;TKey,TElement&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="ILookup&lt;TKey,TElement&gt;">
+							<rect x="927.0" y="99.0" height="112.0" width="383.0" data-name="ILookup&lt;TKey,TElement&gt;"></rect>
+							<path d="M927.0 131.0 L1310.0 131.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
+							<path d="M927.0 179.0 L1310.0 179.0" fill="none" data-name="ILookup&lt;TKey,TElement&gt;"></path>
+						</g>
+						<g transform="translate(927, 99)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">
+								<text x="183.5" y="14.1" stroke="none" text-anchor="middle" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="0">ILookup&lt;TKey,TElement&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(927, 131)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">int Count { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="1">IEnumerable&lt;TElement&gt; this[TKey key] { get; }</text>
+								
+							</g>
+						</g>
+						<g transform="translate(927, 179)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">
+								<text x="0.0" y="14.1" stroke="none" data-name="ILookup&lt;TKey,TElement&gt;" data-compartment="2">bool Contains (TKey key)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IQueryable&lt;out T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IQueryable&lt;out T&gt;">
+							<rect x="672.0" y="225.3" height="32.0" width="163.0" data-name="IQueryable&lt;out T&gt;"></rect>
+						</g>
+						<g transform="translate(672, 225.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable&lt;out T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IQueryable&lt;out T&gt;" data-compartment="0">
+								<text x="73.5" y="14.1" stroke="none" text-anchor="middle" data-name="IQueryable&lt;out T&gt;" data-compartment="0">IQueryable&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IOrderedQueryable&lt;out T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IOrderedQueryable&lt;out T&gt;">
+							<rect x="1004.5" y="225.3" height="32.0" width="228.0" data-name="IOrderedQueryable&lt;out T&gt;"></rect>
+						</g>
+						<g transform="translate(1004.5, 225.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">
+								<text x="106.0" y="14.1" stroke="none" text-anchor="middle" data-name="IOrderedQueryable&lt;out T&gt;" data-compartment="0">IOrderedQueryable&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IQueryable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IQueryable">
+							<rect x="291.0" y="197.8" height="97.0" width="263.0" data-name="IQueryable"></rect>
+							<path d="M291.0 229.8 L554.0 229.8" fill="none" data-name="IQueryable"></path>
+						</g>
+						<g transform="translate(291, 197.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IQueryable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IQueryable" data-compartment="0">
+								<text x="123.5" y="14.1" stroke="none" text-anchor="middle" data-name="IQueryable" data-compartment="0">IQueryable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(291, 229.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IQueryable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IQueryable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IQueryable" data-compartment="1">Type ElementType { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IQueryable" data-compartment="1">Expression Expression { get; }</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IQueryable" data-compartment="1">IQueryProvider Provider { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerator">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerator">
+							<rect x="35.0" y="288.3" height="97.0" width="185.0" data-name="IEnumerator"></rect>
+							<path d="M35.0 320.3 L220.0 320.3" fill="none" data-name="IEnumerator"></path>
+						</g>
+						<g transform="translate(35, 288.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator" data-compartment="0">
+								<text x="84.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator" data-compartment="0">IEnumerator</text>
+								
+							</g>
+						</g>
+						<g transform="translate(35, 320.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator" data-compartment="1">object Current { get; }</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="IEnumerator" data-compartment="1">bool MoveNext()</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="IEnumerator" data-compartment="1">void Reset()</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IEnumerator&lt;out T&gt;">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IEnumerator&lt;out T&gt;">
+							<rect x="336.0" y="350.0" height="64.0" width="173.0" data-name="IEnumerator&lt;out T&gt;"></rect>
+							<path d="M336.0 382.0 L509.0 382.0" fill="none" data-name="IEnumerator&lt;out T&gt;"></path>
+						</g>
+						<g transform="translate(336, 350)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">
+								<text x="78.5" y="14.1" stroke="none" text-anchor="middle" data-name="IEnumerator&lt;out T&gt;" data-compartment="0">IEnumerator&lt;out T&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(336, 382)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IEnumerator&lt;out T&gt;" data-compartment="1">T Current { get; }</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="IDisposable">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="IDisposable">
+							<rect x="62.5" y="395.3" height="64.0" width="130.0" data-name="IDisposable"></rect>
+							<path d="M62.5 427.3 L192.5 427.3" fill="none" data-name="IDisposable"></path>
+						</g>
+						<g transform="translate(62.5, 395.25)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IDisposable" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDisposable" data-compartment="0">
+								<text x="57.0" y="14.1" stroke="none" text-anchor="middle" data-name="IDisposable" data-compartment="0">IDisposable</text>
+								
+							</g>
+						</g>
+						<g transform="translate(62.5, 427.25)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDisposable" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDisposable" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="IDisposable" data-compartment="1">void Dispose()</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>The IEnumerable&lt;T&gt; interface</figcaption>
+</figure>
+<h2 id="filtering">Filtering</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> customerOrders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="select-with-anonymus-type">Select with anonymus type</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> ordersWithCost <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span>order <span class="token operator">=></span> <span class="token keyword">new</span>
+<span class="token punctuation">{</span>
+    OrderId <span class="token operator">=</span> order<span class="token punctuation">.</span>Id<span class="token punctuation">,</span>
+    Cost <span class="token operator">=</span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="distinct">Distinct</h2>
+<pre><code class="language-csharp"><span class="token comment">//The Distinct method requires equality implementation on the class or </span>
+<span class="token comment">//an IEqualityComparer as parameter</span>
+<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">Distinct</span><span class="token punctuation">(</span><span class="token punctuation">(</span>customerComparer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//DistinctBy requires a lambda</span>
+<span class="token class-name"><span class="token keyword">var</span></span> uniqueNames <span class="token operator">=</span> customer<span class="token punctuation">.</span><span class="token function">DistinctBy</span><span class="token punctuation">(</span>√ <span class="token operator">=></span> √<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+<h2 id="ordering">Ordering</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> ascendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> descendingOrder <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderByDescending</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name"><span class="token keyword">var</span></span> multipleOdering <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ThenBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Note: Result will be an <code>IOrderedEnumerable&lt;TElement&gt;</code>.</p>
+<h2 id="join">Join</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> joined <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>orders<span class="token punctuation">,</span> 
+                            customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> 
+                            order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId
+                            <span class="token punctuation">(</span>customer<span class="token punctuation">,</span> order<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span>
+                            <span class="token punctuation">{</span>
+                                CustomerId <span class="token operator">=</span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span>
+                                Name <span class="token operator">=</span> customer<span class="token punctuation">.</span>Name<span class="token punctuation">,</span>
+                                Cost <span class="token operator">=</span> order<span class="token punctuation">.</span>Cost<span class="token punctuation">,</span> 
+                            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="grouping">Grouping</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> grouped <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">GroupBy</span><span class="token punctuation">(</span>order <span class="token operator">=></span> CustomerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Note: Result will be an <code>IGrouping&lt;TKey,TElement&gt;</code></p>
+<h2 id="lookup">Lookup</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> packagesByCompany <span class="token operator">=</span> packages<span class="token punctuation">.</span><span class="token function">ToLookup</span><span class="token punctuation">(</span>oder <span class="token operator">=></span> oder<span class="token punctuation">.</span>Date<span class="token punctuation">,</span>  order <span class="token operator">=></span> order<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+
+<p>Note: Result will be an <code>ILookup&lt;TKey,TElement&gt;</code>, which is a one-to-many dictionary that maps keys to collections of values.</p>
+<h2 id="zip">Zip</h2>
+<p>Zip creates an Enumerable of tuples, where the first element of the tuple is the element from the first sequence and the second element is the element from the second sequence.</p>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> first <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> second <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//Returns [(1, "a"), (2, "b"), (3, "c")]</span>
+first<span class="token punctuation">.</span><span class="token function">Zip</span><span class="token punctuation">(</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre>
+<h2 id="skip-take">Skip &amp; Take</h2>
+<pre><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> take3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> ne√t3 <span class="token operator">=</span> orders<span class="token punctuation">.</span><span class="token function">Skip</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Take</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="element-operations">Element operations</h2>
+<pre><code class="language-csharp"><span class="token comment">//throws e√ception if element not found</span>
+<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">Last</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//returns default value if element not found. For refenrence types this is null!</span>
+<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//You can specify the default return value with the 2nd parameter:</span>
+<span class="token class-name"><span class="token keyword">var</span></span> firstCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">FirstOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Cutomer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name"><span class="token keyword">var</span></span> lastCustomer <span class="token operator">=</span> customers<span class="token punctuation">.</span><span class="token function">LastOrDefault</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id <span class="token operator">==</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Customer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="conversions">Conversions</h2>
+<pre><code class="language-csharp"><span class="token class-name">Order<span class="token punctuation">[</span><span class="token punctuation">]</span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">List<span class="token punctuation">&lt;</span>Order<span class="token punctuation">></span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">HashSet<span class="token punctuation">&lt;</span>Order<span class="token punctuation">></span></span> orders <span class="token operator">=</span> Orders<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>order <span class="token operator">=></span> order<span class="token punctuation">.</span>CustomerId <span class="token operator">==</span> <span class="token number">66</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToHashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span></span> customerDictionary
+     <span class="token operator">=</span> Customers<span class="token punctuation">.</span><span class="token function">ToDictionary</span><span class="token punctuation">(</span>customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Id<span class="token punctuation">,</span> customer <span class="token operator">=></span> customer<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="enumerable-class">Enumerable class</h2>
+<pre><code class="language-csharp"><span class="token comment">//Create a range of numbers from 0 to 9</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> range <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Create a sequence of 12 "foo" strings</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">></span></span> foos <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token function">Repeat</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Create an empty sequence of integers</span>
+<span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> empty <span class="token operator">=</span> Enumerable<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Empty</span><span class="token generic class-name"><span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="linq-execution">Linq Execution</h2>
+<figure>
+<p><svg version="1.1" baseProfile="full" width="869.0" height="283.8" viewBox="0 0 869 283.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >linq-execution</title>
+	<desc >#direction: right
+	#spacing: 10
+	#gravity: .8
+	#arrowSize: 4
+	#background: transparent
+	#fill: #f4f6fb
+	#title: linq-execution
+	
+	[Deferred|The operation isn&apos;t performed
+	at the point in the code where the 
+	query is declared]
+	
+	[Immediate|
+	The data source is read
+	and the operation is performed once]
+	
+	[Streaming|
+	Operations that desn&apos;t have to read all 
+	the source data before they yield element.]
+	
+	[Nonstreaming|
+	Operations that must read all the source 
+	data before they can yie
+	ld a result element]
+	
+	[LINQ Execution] - [Immediate]
+	[LINQ Execution] - [Deferred]
+	[Deferred] - [Streaming]
+	[Deferred] - [Nonstreaming]
+		</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="283.8" width="869.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M93.7 154.5 L144 187.75 L149 187.75 L149.0 187.8 " fill="none"></path>
+					<path d="M93.7 122.5 L144 89.25 L160.5 89.25 L160.5 89.3 " fill="none"></path>
+					<path d="M441.5 45.2 L458 40 L463 40 L463.0 40.0 " fill="none"></path>
+					<path d="M441.5 133.3 L458 138.5 L471 138.5 L471.0 138.5 " fill="none"></path>
+					<g data-name="Deferred">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Deferred">
+							<rect x="160.5" y="40.8" height="97.0" width="281.0" data-name="Deferred"></rect>
+							<path d="M160.5 72.8 L441.5 72.8" fill="none" data-name="Deferred"></path>
+						</g>
+						<g transform="translate(160.5, 40.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Deferred" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Deferred" data-compartment="0">
+								<text x="132.5" y="14.1" stroke="none" text-anchor="middle" data-name="Deferred" data-compartment="0">Deferred</text>
+								
+							</g>
+						</g>
+						<g transform="translate(160.5, 72.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Deferred" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Deferred" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Deferred" data-compartment="1">The operation isn&apos;t performed</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Deferred" data-compartment="1">at the point in the code where the</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Deferred" data-compartment="1">query is declared</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Immediate">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Immediate">
+							<rect x="149.0" y="147.8" height="80.0" width="304.0" data-name="Immediate"></rect>
+							<path d="M149.0 179.8 L453.0 179.8" fill="none" data-name="Immediate"></path>
+						</g>
+						<g transform="translate(149, 147.75)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Immediate" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Immediate" data-compartment="0">
+								<text x="144.0" y="14.1" stroke="none" text-anchor="middle" data-name="Immediate" data-compartment="0">Immediate</text>
+								
+							</g>
+						</g>
+						<g transform="translate(149, 179.75)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Immediate" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Immediate" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Immediate" data-compartment="1">The data source is read</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Immediate" data-compartment="1">and the operation is performed once</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Streaming">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Streaming">
+							<rect x="463.0" y="0.0" height="80.0" width="350.0" data-name="Streaming"></rect>
+							<path d="M463.0 32.0 L813.0 32.0" fill="none" data-name="Streaming"></path>
+						</g>
+						<g transform="translate(463, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Streaming" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Streaming" data-compartment="0">
+								<text x="167.0" y="14.1" stroke="none" text-anchor="middle" data-name="Streaming" data-compartment="0">Streaming</text>
+								
+							</g>
+						</g>
+						<g transform="translate(463, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Streaming" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Streaming" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Streaming" data-compartment="1">Operations that desn&apos;t have to read all</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Streaming" data-compartment="1">the source data before they yield element.</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Nonstreaming">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="Nonstreaming">
+							<rect x="471.0" y="90.0" height="97.0" width="334.0" data-name="Nonstreaming"></rect>
+							<path d="M471.0 122.0 L805.0 122.0" fill="none" data-name="Nonstreaming"></path>
+						</g>
+						<g transform="translate(471, 90)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Nonstreaming" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Nonstreaming" data-compartment="0">
+								<text x="159.0" y="14.1" stroke="none" text-anchor="middle" data-name="Nonstreaming" data-compartment="0">Nonstreaming</text>
+								
+							</g>
+						</g>
+						<g transform="translate(471, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Nonstreaming" data-compartment="1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Nonstreaming" data-compartment="1">
+								<text x="0.0" y="14.1" stroke="none" data-name="Nonstreaming" data-compartment="1">Operations that must read all the source</text>
+								<text x="0.0" y="30.3" stroke="none" data-name="Nonstreaming" data-compartment="1">data before they can yie</text>
+								<text x="0.0" y="46.5" stroke="none" data-name="Nonstreaming" data-compartment="1">ld a result element</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="LINQ Execution">
+						<g fill="#f4f6fb" stroke="#33322E" data-name="LINQ Execution">
+							<rect x="0.0" y="122.5" height="32.0" width="139.0" data-name="LINQ Execution"></rect>
+						</g>
+						<g transform="translate(0, 122.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LINQ Execution" data-compartment="0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LINQ Execution" data-compartment="0">
+								<text x="61.5" y="14.1" stroke="none" text-anchor="middle" data-name="LINQ Execution" data-compartment="0">LINQ Execution</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg></p>
+<figcaption>Classification of standard query operators by manner of execution</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Standard query operator</th>
+<th style="text-align: center;">Return type</th>
+<th style="text-align: center;">Immediate</th>
+<th style="text-align: center;">Deferred streaming</th>
+<th style="text-align: center;">Deferred nonstreaming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Aggregate</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">All</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Any</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">AsEnumerable</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Average</td>
+<td style="text-align: center;">Single numeric value</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Cast</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Concat</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Contains</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Count</td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">DefaultIfEmpty</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Distinct</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ElementAt</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ElementAtOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Empty</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">E√cept</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">First</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">FirstOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">GroupBy</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">GroupJoin</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Intersect</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Join</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Last</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">LastOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">LongCount</td>
+<td style="text-align: center;"><code>long</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Ma√</td>
+<td style="text-align: center;">Single numeric value, <code>TSource</code>, or <code>TResult?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Min</td>
+<td style="text-align: center;">Single numeric value, <code>TSource</code>, or <code>TResult?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">OfType</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">OrderBy</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">OrderByDescending</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Range</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Repeat</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Reverse</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">Select</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SelectMany</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SequenceEqual</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Single</td>
+<td style="text-align: center;"><code>TSource</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SingleOrDefault</td>
+<td style="text-align: center;"><code>TSource?</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Skip</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SkipWhile</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Sum</td>
+<td style="text-align: center;">Single numeric value</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Take</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">TakeWhile</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ThenBy</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">ThenByDescending</td>
+<td style="text-align: center;"><code>IOrderedEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+</tr>
+<tr>
+<td style="text-align: center;">ToArray</td>
+<td style="text-align: center;"><code>TSource[]</code> array</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ToDictionary</td>
+<td style="text-align: center;"><code>Dictionary&lt;TKey, TValue&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ToList</td>
+<td style="text-align: center;"><code>IList&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">ToLookup</td>
+<td style="text-align: center;"><code>ILookup&lt;T&gt;</code></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Union</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Where</td>
+<td style="text-align: center;"><code>IEnumerable&lt;T&gt;</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </section>
+            </main>
+
+            <button class="scroll-top" id="scroll-top-button" type="button" aria-label="Scroll to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>
