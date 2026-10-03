@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.10.03
+
+* Frontend improvements
+
 ## 2026.09.30
 
 * New layout
