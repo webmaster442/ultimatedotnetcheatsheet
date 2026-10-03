@@ -86,13 +86,23 @@
 }
 
 @keyframes fade-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 * {
@@ -339,7 +349,6 @@ pre[class*=language-] {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-1) var(--space-3);
-    background: transparent;
 }
 
 .menubar__actions {
@@ -348,6 +357,10 @@ pre[class*=language-] {
     gap: var(--space-1);
     min-width: 0;
     margin-left: auto;
+    background: var(--color-bg);
+    opacity: 0.9;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
 }
 
 .page-menu {
